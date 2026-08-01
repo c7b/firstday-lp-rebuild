@@ -90,4 +90,17 @@ decision below exists to close that gap. (Longer contrast at the end of this doc
   containment layer instead of nested). Diagnosed from the error, not by disabling things
   blindly.
 
+### Deploy pipeline — mirroring First Day's own workflow
+
+The dev store is connected to this repo via the **Shopify GitHub integration** (draft theme
+`firstday-lp-rebuild/main`): merge to `main` → the store's draft theme updates, no manual push.
+This isn't an arbitrary choice — First Day's production store already deploys exactly this way
+(a `*-shopify-theme-sync` repo is visible in their storefront's theme metadata), so the rebuild
+lands in the workflow the team already operates. Two working rules that come with it:
+
+1. Theme-editor changes sync **back** as commits on `main` — always pull before pushing.
+2. `main` must stay deployable; review happens before merge, not after.
+
+When the build stabilizes, a `production` branch mirrors their draft/production branch split.
+
 *(F3–F5 appended as they happen.)*

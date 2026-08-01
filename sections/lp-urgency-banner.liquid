@@ -1,0 +1,102 @@
+{{ 'lp-urgency-banner.css' | asset_url | stylesheet_tag }}
+
+{% comment %}
+  "July" is hardcoded month text in the original. As a setting it's editable; PLAN.md notes
+  the dynamic-month option that was deliberately NOT implemented — copy changes are out of scope.
+{% endcomment %}
+
+<section
+  id="{{ section.settings.anchor_id | default: section.id }}"
+  class="lp-urgency-banner__section color-{{ section.settings.color_scheme }} gradient"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="lp-urgency-banner__content">
+    <p class="lp-urgency-banner__text">
+      <span class="lp-urgency-banner__copy">{{ section.settings.text_before | escape }}</span>
+      <strong class="lp-urgency-banner__highlight">{{ section.settings.text_highlight | escape }}</strong>
+      <span class="lp-urgency-banner__copy">{{ section.settings.text_after | escape }}</span>
+      {% if section.settings.cta_label != blank and section.settings.cta_link != blank %}
+        <a class="lp-urgency-banner__cta" href="{{ section.settings.cta_link }}">
+          {{- section.settings.cta_label | escape -}}
+        </a>
+      {% endif %}
+    </p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LP urgency banner",
+  "tag": "section",
+  "class": "lp-urgency-banner__wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_before",
+      "label": "Text before highlight",
+      "default": "🚨 Due to the high demand,"
+    },
+    {
+      "type": "text",
+      "id": "text_highlight",
+      "label": "Highlighted text",
+      "default": "July"
+    },
+    {
+      "type": "text",
+      "id": "text_after",
+      "label": "Text after highlight",
+      "default": "has a very high risk of selling out!"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "default": "Claim Yours Now!"
+    },
+    {
+      "type": "text",
+      "id": "cta_link",
+      "label": "CTA link (URL or #anchor)",
+      "default": "#standalone-product-section",
+      "info": "In-page anchor to the buy box by default"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme_1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 12
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID"
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP urgency banner"
+    }
+  ]
+}
+{% endschema %}

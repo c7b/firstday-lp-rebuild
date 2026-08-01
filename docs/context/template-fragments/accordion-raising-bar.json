@@ -1,0 +1,27 @@
+{
+  "type": "lp-media-accordion",
+  "settings": {
+    "heading": "Raising the Bar on Your Child's Nutrition",
+    "show_media": true,
+    "image_url": "//firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=1500",
+    "media_position": "right",
+    "first_open": true,
+    "exclusive": true,
+    "cta_label": "Start Today",
+    "cta_link": "#standalone-product-section",
+    "guarantee_text": "45-Day Money Back Guarantee",
+    "color_scheme": "scheme-1",
+    "padding_top": 48,
+    "padding_bottom": 48,
+    "anchor_id": "accordion_block_QpghhN"
+  },
+  "blocks": {
+    "fights_hidden_hunger": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72", "icon_alt": "", "title": "Fights Hidden Hunger", "body": "<p>80% of children don't eat enough fruits and veggies, contributing to a nutrient deficiency known as hidden hunger. Our gummies fight hidden hunger with essential nutrients critical to development.</p>" } },
+    "harvard_yale_scientists": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/old-icon-microscope.avif?v=1771541426&width=72", "icon_alt": "", "title": "Developed Alongside Harvard & Yale Scientists", "body": "<p>Our product was crafted with input from leading scientists at Harvard and Yale, combining the latest research with high-quality ingredients to deliver a multivitamin parents can trust.</p>" } },
+    "modern_science": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/old-icon-atom-chemistry.avif?v=1771541426&width=72", "icon_alt": "", "title": "Backed by Modern Science", "body": "<p>Vitamin B6 supports natural energy regulation, promoting healthier sleep patterns and making it easier for kids to get restful sleep.*</p>" } },
+    "pediatrician_approved": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/old-icon-stethoscope.avif?v=1771541426&width=72", "icon_alt": "", "title": "Pediatrician-Approved", "body": "<p>Recommended by pediatricians, our multivitamin is designed to meet the unique needs of your family ensuring they get the support they need from a trusted source.</p>" } },
+    "clean_label": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/Rivo-Icon-Checkmark.svg?v=1762862239&width=72", "icon_alt": "A blue circle with a white check mark in the center, surrounded by a scalloped edge, resembling a verification badge.", "title": "Clean Label Project® Purity Award", "body": "<p>Our products were independently tested by Clean Label Project® for harmful chemicals like heavy metals, pesticides, and plasticizers, exceeding typical industry practices.</p>" } },
+    "ingredients_sourcing": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/icon-list-ingredients-sourcing.avif?v=1772658974&width=72", "icon_alt": "", "title": "Ingredients Sourcing and Dosage", "body": "<p>We source each ingredient with care, choosing only the highest quality vitamins and minerals. Our dosage is tailored for teens, providing safe and effective support without risking overuse or unwanted additives.</p>" } }
+  },
+  "block_order": ["fights_hidden_hunger", "harvard_yale_scientists", "modern_science", "pediatrician_approved", "clean_label", "ingredients_sourcing"]
+}

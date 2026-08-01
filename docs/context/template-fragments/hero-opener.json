@@ -1,0 +1,36 @@
+{
+  "type": "lp-hero",
+  "settings": {
+    "style": "product",
+    "badge_text": "4.8 stars from 12,322+ reviewers",
+    "heading": "The <em>Science-Backed Vitamin</em> for Grumpy, Tired, or Unfocused Teens",
+    "subheading": "<p>The only bio-matched multivitamin <strong>formulated specifically for teenagers</strong> with 12 nutrients &amp; 21 superfoods to support mood regulation, immunity, and growing bones.</p>",
+    "cta_label": "Unlock Better Nutrition 🍊💊",
+    "cta_link": "#standalone-product-section",
+    "guarantee_text": "Exclusive First Day 45 Day Money Back Guarantee**",
+    "image_url": "//firstday.com/cdn/shop/files/tdk-bts-clean-landsscapre-brady-bunch.jpg?v=1784071376&width=800",
+    "image_alt": "Hero image",
+    "image_mobile_url": "//firstday.com/cdn/shop/files/tdk-bts-clean-square-brady-bunch.jpg?v=1784071375&width=1000",
+    "image_mobile_alt": "Hero image",
+    "image_position": "right",
+    "stat_badge_text": "6,646 Gummies Sold Every 24h",
+    "stat_gif_url": "//firstday.com/cdn/shop/files/ebce1fea9a768a63cc6c95d28e1efa8e9818e9db.gif?v=1775682044&width=48",
+    "stat_icon_1_url": "//firstday.com/cdn/shop/files/gummy-orange-2.png?v=1775682044&width=100",
+    "stat_icon_2_url": "//firstday.com/cdn/shop/files/gummy-orange.png?v=1775682044&width=100",
+    "color_scheme": "scheme_1",
+    "padding_top": 32,
+    "padding_bottom": 32,
+    "anchor_id": ""
+  },
+  "blocks": {
+    "testimonial_alyssa": {
+      "type": "testimonial",
+      "settings": {
+        "quote": "<p>My son is VERY picky but gets so excited to eat these. I unfortunately tried hiya first &amp; wasted money because he would not eat them. I love that these are a gummy soft chewable.</p>",
+        "author": "Alyssa Blossom",
+        "avatar_url": "//firstday.com/cdn/shop/files/ugc-trmv-mom-feeding.avif?v=1772578684&width=192"
+      }
+    }
+  },
+  "block_order": ["testimonial_alyssa"]
+}

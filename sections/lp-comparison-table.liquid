@@ -1,0 +1,124 @@
+{{ 'lp-comparison-table.css' | asset_url | stylesheet_tag }}
+
+<section
+  id="{{ section.settings.anchor_id | default: section.id }}"
+  class="lp-comparison-table__section color-{{ section.settings.color_scheme }} gradient"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="lp-comparison-table__container">
+    <div class="lp-comparison-table__intro">
+      <h2 class="lp-comparison-table__heading">{{ section.settings.heading }}</h2>
+      <div class="lp-comparison-table__subheading rte">{{ section.settings.subheading }}</div>
+    </div>
+
+    {% if section.settings.image_mobile != blank or section.settings.image_mobile_url != blank %}
+      <div class="lp-comparison-table__mobile-image" aria-hidden="true">
+        {% if section.settings.image_mobile != blank %}
+          {{ section.settings.image_mobile | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300, 450, 600', sizes: '100vw', alt: '' }}
+        {% else %}
+          <img src="{{ section.settings.image_mobile_url | escape }}" alt="" loading="lazy">
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="lp-comparison-table__table-wrap">
+      <table class="lp-comparison-table__table">
+        <thead>
+          <tr>
+            <th class="lp-comparison-table__feature-header" scope="col">
+              <span class="lp-comparison-table__visually-hidden">Feature</span>
+            </th>
+            <th class="lp-comparison-table__brand-header" scope="col">
+              <span class="lp-comparison-table__brand-title">
+                {% if section.settings.brand_logo != blank %}
+                  {{ section.settings.brand_logo | image_url: width: 100 | image_tag: loading: 'lazy', widths: '50, 75, 100', sizes: '50px', alt: 'Logo', class: 'lp-comparison-table__brand-logo' }}
+                {% elsif section.settings.brand_logo_url != blank %}
+                  <img class="lp-comparison-table__brand-logo" src="{{ section.settings.brand_logo_url | escape }}" alt="Logo" loading="lazy">
+                {% endif %}
+                <span>{{ section.settings.brand_label | escape }}</span>
+              </span>
+            </th>
+            <th class="lp-comparison-table__competitor-header" scope="col">{{ section.settings.competitor_label | escape }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for block in section.blocks %}
+            <tr {{ block.shopify_attributes }}>
+              <th class="lp-comparison-table__feature" scope="row">{{ block.settings.label | escape }}</th>
+              <td class="lp-comparison-table__brand-cell">
+                <span class="lp-comparison-table__mark lp-comparison-table__mark--yes" role="img" aria-label="Yes">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5 9.5 17 19 7.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></svg>
+                </span>
+                {% if block.settings.us_note != blank %}<span class="lp-comparison-table__note">{{ block.settings.us_note | escape }}</span>{% endif %}
+              </td>
+              <td class="lp-comparison-table__competitor-cell">
+                <span class="lp-comparison-table__mark lp-comparison-table__mark--no" role="img" aria-label="No">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 8 8 8m0-8-8 8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"/></svg>
+                </span>
+                {% if block.settings.them_note != blank %}<span class="lp-comparison-table__note">{{ block.settings.them_note | escape }}</span>{% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    {% if section.settings.image_desktop != blank or section.settings.image_desktop_url != blank %}
+      <div class="lp-comparison-table__desktop-image" aria-hidden="true">
+        {% if section.settings.image_desktop != blank %}
+          {{ section.settings.image_desktop | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '352, 832, 1200', sizes: '(min-width: 990px) 30vw, 0px', alt: '' }}
+        {% else %}
+          <img src="{{ section.settings.image_desktop_url | escape }}" alt="" loading="lazy">
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LP comparison table",
+  "tag": "section",
+  "class": "lp-comparison-table__wrapper",
+  "settings": [
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Why Should You Choose First Day?" },
+    { "type": "richtext", "id": "subheading", "label": "Subheading", "default": "<p>Made for modern families living on modern diets, we’re here to fill the nutrition gaps that today’s food often leaves behind.</p>" },
+    { "type": "text", "id": "brand_label", "label": "Brand label", "default": "First Day" },
+    { "type": "image_picker", "id": "brand_logo", "label": "Brand logo" },
+    { "type": "text", "id": "brand_logo_url", "label": "Brand logo URL", "default": "//firstday.com/cdn/shop/files/round_logo.png?v=1720622822&width=100" },
+    { "type": "text", "id": "competitor_label", "label": "Competitor label", "default": "Other Multis" },
+    { "type": "image_picker", "id": "image_desktop", "label": "Desktop decorative image" },
+    { "type": "text", "id": "image_desktop_url", "label": "Desktop decorative image URL", "default": "//firstday.com/cdn/shop/files/desk_720.png?v=1763396549&width=1200" },
+    { "type": "image_picker", "id": "image_mobile", "label": "Mobile decorative image" },
+    { "type": "text", "id": "image_mobile_url", "label": "Mobile decorative image URL", "default": "//firstday.com/cdn/shop/files/mob-left_360.png?v=1763396560&width=300" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme_1" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 48 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 48 },
+    { "type": "text", "id": "anchor_id", "label": "Anchor ID" }
+  ],
+  "blocks": [
+    {
+      "type": "feature_row",
+      "name": "Feature row",
+      "limit": 10,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Feature", "default": "Clean Label Certified" },
+        { "type": "text", "id": "us_note", "label": "First Day note" },
+        { "type": "text", "id": "them_note", "label": "Competitor note" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP comparison table",
+      "blocks": [
+        { "type": "feature_row", "settings": { "label": "Clean Label Certified" } },
+        { "type": "feature_row", "settings": { "label": "Research Backed" } },
+        { "type": "feature_row", "settings": { "label": "Surprise Gift with Purchase" } },
+        { "type": "feature_row", "settings": { "label": "No Fillers or Fake Ingredients" } },
+        { "type": "feature_row", "settings": { "label": "Vegan, Gluten-Free, Non-GMO" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

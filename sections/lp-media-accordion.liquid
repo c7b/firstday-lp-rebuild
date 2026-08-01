@@ -1,0 +1,218 @@
+{{ 'lp-media-accordion.css' | asset_url | stylesheet_tag }}
+
+<section
+  id="{{ section.settings.anchor_id | default: section.id }}"
+  class="lp-media-accordion__section color-{{ section.settings.color_scheme }} gradient"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="lp-media-accordion__inner{% unless section.settings.show_media %} lp-media-accordion__inner--no-media{% endunless %}{% if section.settings.media_position == 'right' %} lp-media-accordion__inner--media-right{% endif %}">
+    <div class="lp-media-accordion__content">
+      {% if section.settings.heading != blank %}
+        <h2 class="lp-media-accordion__heading">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      <div class="lp-media-accordion__items">
+        {% for block in section.blocks %}
+          <details
+            class="lp-media-accordion__item"
+            {% if section.settings.first_open and forloop.first %}open{% endif %}
+            {% if section.settings.exclusive %}name="lp-media-accordion-{{ section.id }}"{% endif %}
+            {{ block.shopify_attributes }}
+          >
+            <summary class="lp-media-accordion__summary">
+              <span class="lp-media-accordion__item-header">
+                {% if block.settings.icon != blank %}
+                  {{ block.settings.icon | image_url: width: 144 | image_tag: class: 'lp-media-accordion__icon', widths: '40, 56, 72, 144', sizes: '56px', loading: 'lazy', alt: block.settings.icon_alt }}
+                {% elsif block.settings.icon_url != blank %}
+                  <img
+                    class="lp-media-accordion__icon"
+                    src="{{ block.settings.icon_url }}"
+                    alt="{{ block.settings.icon_alt | escape }}"
+                    width="72"
+                    height="72"
+                    loading="lazy"
+                  >
+                {% endif %}
+                <span class="lp-media-accordion__title">{{ block.settings.title | escape }}</span>
+              </span>
+              <span class="lp-media-accordion__chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="lp-media-accordion__body-wrap">
+              <div class="lp-media-accordion__body rte">{{ block.settings.body }}</div>
+            </div>
+          </details>
+        {% endfor %}
+      </div>
+
+      {% if section.settings.cta_label != blank and section.settings.cta_link != blank %}
+        <div class="lp-media-accordion__cta-block">
+          <a class="lp-media-accordion__cta" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label | escape }}</a>
+          {% if section.settings.guarantee_text != blank %}
+            <p class="lp-media-accordion__guarantee">{{ section.settings.guarantee_text | escape }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if section.settings.show_media %}
+      <div class="lp-media-accordion__media">
+        {% if section.settings.image != blank %}
+          {{ section.settings.image | image_url: width: 1500 | image_tag: class: 'lp-media-accordion__image', widths: '360, 535, 750, 1100, 1500', sizes: '(min-width: 990px) 50vw, 100vw', loading: 'lazy', alt: '' }}
+        {% elsif section.settings.image_url != blank %}
+          <img
+            class="lp-media-accordion__image"
+            src="{{ section.settings.image_url }}"
+            alt=""
+            width="1500"
+            height="1500"
+            loading="lazy"
+            aria-hidden="true"
+          >
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LP media accordion",
+  "tag": "section",
+  "class": "lp-media-accordion__wrapper",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Most Kids Are <span>Missing Key Nutrients</span>. Get Help in Just 2 Gummies."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_media",
+      "label": "Show media",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_url",
+      "label": "Image URL",
+      "default": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1500"
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "Media position on desktop",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "first_open",
+      "label": "Open first item",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "exclusive",
+      "label": "Only allow one open item",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA link",
+      "default": "#standalone-product-section"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_text",
+      "label": "Guarantee text",
+      "default": "45-Day Money Back Guarantee"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 48
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Accordion item",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "icon_url",
+          "label": "Icon URL"
+        },
+        {
+          "type": "text",
+          "id": "icon_alt",
+          "label": "Icon alt text"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP media accordion"
+    }
+  ]
+}
+{% endschema %}

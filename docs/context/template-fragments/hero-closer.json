@@ -1,0 +1,51 @@
+{
+  "type": "lp-hero",
+  "settings": {
+    "style": "founder",
+    "heading": "1 in 3 Families Have A Nutrient Deficiency.",
+    "subheading": "<p>I created First Day to address the massive concerns with todays diet and it's negative effects on our families.</p>",
+    "closing_text": "<p>After learning about the massive amounts of sugar that were in typical kids multivitamins I reached out to 2 of the top researchers at Harvard and Yale. I explained my story to them, how I wanted to revolutionize the vitamin industry. After consulting with these experts to help us carefully formulate our vitamins, we are now a best selling multivitamin nationwide.</p>",
+    "closing_text_2": "<p>That's why we’re so confident First Day will help you get the results you want. If within the first 45 days you find yourself not completely satisfied, we’ll give you your money back - no questions asked.</p>",
+    "cta_label": "Try Now",
+    "cta_link": "#standalone-product-section",
+    "image_url": "//firstday.com/cdn/shop/files/founder-alice.png?v=1686630957&width=1000",
+    "image_alt": "Hero image",
+    "image_mobile_url": "//firstday.com/cdn/shop/files/founder-alice.png?v=1686630957&width=800",
+    "image_mobile_alt": "Hero image",
+    "image_position": "right",
+    "color_scheme": "scheme_1",
+    "padding_top": 32,
+    "padding_bottom": 32,
+    "anchor_id": ""
+  },
+  "blocks": {
+    "stat_microplastics": {
+      "type": "stat_card",
+      "settings": {
+        "line_1": "The Average Person Consumes",
+        "value": "52 Credit Cards’",
+        "line_2": "Worth Of",
+        "line_3": "Microplastics Every Year."
+      }
+    },
+    "stat_additives": {
+      "type": "stat_card",
+      "settings": {
+        "line_1": "Artificial Food Additives",
+        "value": "59%",
+        "line_2": "Are Found In",
+        "line_3": "Of Foods Today"
+      }
+    },
+    "stat_nutrients": {
+      "type": "stat_card",
+      "settings": {
+        "line_1": "Fresh Fruits & Veggies Have",
+        "value": "Lost Up To 73%",
+        "line_2": "Of Their",
+        "line_3": "Nutrients"
+      }
+    }
+  },
+  "block_order": ["stat_microplastics", "stat_additives", "stat_nutrients"]
+}

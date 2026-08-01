@@ -1,0 +1,880 @@
+{{ 'lp-buy-box.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'lp-buy-box.js' | asset_url }}" defer="defer"></script>
+
+{% liquid
+  assign buy_product = section.settings.product
+  assign current_variant = buy_product.selected_or_first_available_variant
+  assign product_form_id = 'LpBuyBoxForm-' | append: section.id
+  assign fallback_media_count = 0
+  assign initial_quantity = 1
+  assign selected_quantity_found = false
+
+  for block in section.blocks
+    if block.type == 'carousel_image'
+      assign fallback_media_count = fallback_media_count | plus: 1
+    endif
+  endfor
+
+  assign quantity_index = 0
+  assign selected_quantity_found = false
+  for block in section.blocks
+    if block.type == 'qty_tier'
+      assign quantity_index = quantity_index | plus: 1
+      if block.settings.selected and selected_quantity_found == false
+        assign initial_quantity = quantity_index
+        assign selected_quantity_found = true
+      endif
+    endif
+  endfor
+%}
+
+{% comment %}
+  Subscription selection, gift progress, and upsell controls are static UI stubs (app
+  territory — see ASSUMPTIONS). The product form always adds the selected variant one-time.
+{% endcomment %}
+<lp-buy-box
+  id="{{ section.settings.anchor_id | default: section.id }}"
+  class="lp-buy-box__section color-{{ section.settings.color_scheme }} gradient"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="lp-buy-box__page-width">
+    <div class="lp-buy-box__layout">
+      <div class="lp-buy-box__media-column">
+        <div class="lp-buy-box__media-track" data-media-track>
+          {% if buy_product.media.size > 0 %}
+            {% for media in buy_product.media %}
+              <div
+                class="lp-buy-box__media-slide"
+                data-media-slide
+                data-media-index="{{ forloop.index0 }}"
+                id="LpBuyBoxMedia-{{ section.id }}-{{ forloop.index0 }}"
+              >
+                {% if media.media_type == 'image' %}
+                  {{
+                    media
+                    | image_url: width: 1400
+                    | image_tag:
+                      widths: '360, 540, 720, 960, 1200, 1400',
+                      sizes: '(min-width: 990px) 50vw, 100vw',
+                      class: 'lp-buy-box__media-image',
+                      loading: 'lazy'
+                  }}
+                {% else %}
+                  {{ media | media_tag: image_size: '1400x', controls: true, preload: 'metadata', class: 'lp-buy-box__media-model' }}
+                {% endif %}
+              </div>
+            {% endfor %}
+          {% else %}
+            {% assign media_index = 0 %}
+            {% for block in section.blocks %}
+              {% if block.type == 'carousel_image' %}
+                <div
+                  class="lp-buy-box__media-slide"
+                  data-media-slide
+                  data-media-index="{{ media_index }}"
+                  id="LpBuyBoxMedia-{{ section.id }}-{{ media_index }}"
+                  {{ block.shopify_attributes }}
+                >
+                  {% if block.settings.image != blank %}
+                    {{
+                      block.settings.image
+                      | image_url: width: 1400
+                      | image_tag:
+                        widths: '360, 540, 720, 960, 1200, 1400',
+                        sizes: '(min-width: 990px) 50vw, 100vw',
+                        class: 'lp-buy-box__media-image',
+                        loading: 'lazy',
+                        alt: block.settings.alt
+                    }}
+                  {% elsif block.settings.image_url != blank %}
+                    <img
+                      class="lp-buy-box__media-image"
+                      src="{{ block.settings.image_url | escape }}"
+                      alt="{{ block.settings.alt | escape }}"
+                      width="1200"
+                      height="1200"
+                      loading="lazy"
+                    >
+                  {% endif %}
+                </div>
+                {% assign media_index = media_index | plus: 1 %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        {% if buy_product.media.size > 1 or fallback_media_count > 1 %}
+          <div class="lp-buy-box__thumbnails" data-media-thumbnails>
+            {% if buy_product.media.size > 0 %}
+              {% for media in buy_product.media %}
+                <button
+                  class="lp-buy-box__thumbnail"
+                  type="button"
+                  data-media-thumb
+                  data-media-index="{{ forloop.index0 }}"
+                  aria-controls="LpBuyBoxMedia-{{ section.id }}-{{ forloop.index0 }}"
+                  aria-label="{{ media.alt | default: buy_product.title | escape }}"
+                  {% if forloop.first %}aria-current="true"{% else %}aria-current="false"{% endif %}
+                >
+                  {{
+                    media.preview_image
+                    | image_url: width: 180
+                    | image_tag:
+                      widths: '90, 180',
+                      sizes: '72px',
+                      class: 'lp-buy-box__thumbnail-image',
+                      loading: 'lazy'
+                  }}
+                </button>
+              {% endfor %}
+            {% else %}
+              {% assign media_index = 0 %}
+              {% for block in section.blocks %}
+                {% if block.type == 'carousel_image' %}
+                  <button
+                    class="lp-buy-box__thumbnail"
+                    type="button"
+                    data-media-thumb
+                    data-media-index="{{ media_index }}"
+                    aria-controls="LpBuyBoxMedia-{{ section.id }}-{{ media_index }}"
+                    aria-label="{{ block.settings.alt | escape }}"
+                    {% if media_index == 0 %}aria-current="true"{% else %}aria-current="false"{% endif %}
+                  >
+                    {% if block.settings.image != blank %}
+                      {{
+                        block.settings.image
+                        | image_url: width: 180
+                        | image_tag:
+                          widths: '90, 180',
+                          sizes: '72px',
+                          class: 'lp-buy-box__thumbnail-image',
+                          loading: 'lazy',
+                          alt: block.settings.alt
+                      }}
+                    {% elsif block.settings.image_url != blank %}
+                      <img
+                        class="lp-buy-box__thumbnail-image"
+                        src="{{ block.settings.image_url | escape }}"
+                        alt="{{ block.settings.alt | escape }}"
+                        width="90"
+                        height="90"
+                        loading="lazy"
+                      >
+                    {% endif %}
+                  </button>
+                  {% assign media_index = media_index | plus: 1 %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="lp-buy-box__buy-column">
+        {% assign product_tab_count = 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'product_tab' %}
+            {% assign product_tab_count = product_tab_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        {% if product_tab_count > 0 %}
+          <nav class="lp-buy-box__product-tabs" aria-label="{{ buy_product.title | escape }}">
+            {% for block in section.blocks %}
+              {% if block.type == 'product_tab' %}
+                {% if block.settings.url != blank %}
+                  <a
+                    class="lp-buy-box__product-tab"
+                    href="{{ block.settings.url }}"
+                    {% if block.settings.active %}aria-current="page"{% endif %}
+                    {{ block.shopify_attributes }}
+                  >
+                    {{- block.settings.label | escape -}}
+                  </a>
+                {% else %}
+                  <span
+                    class="lp-buy-box__product-tab"
+                    {% if block.settings.active %}aria-current="page"{% endif %}
+                    {{ block.shopify_attributes }}
+                  >
+                    {{- block.settings.label | escape -}}
+                  </span>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </nav>
+        {% endif %}
+
+        <div class="lp-buy-box__heading-group">
+          <h2 class="lp-buy-box__title">{{ buy_product.title | escape }}</h2>
+          {% if section.settings.subtitle != blank %}
+            <p class="lp-buy-box__subtitle">{{ section.settings.subtitle | escape }}</p>
+          {% endif %}
+        </div>
+
+        <div class="lp-buy-box__rating">
+          <svg class="lp-buy-box__rating-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="m12 2.4 2.8 5.7 6.3.9-4.5 4.4 1.1 6.2-5.7-3-5.7 3 1.1-6.2L2.9 9l6.3-.9L12 2.4Z" fill="currentColor"/>
+          </svg>
+          <span class="lp-buy-box__rating-value">{{ section.settings.rating_stars | escape }}</span>
+          <span class="lp-buy-box__rating-text">{{ section.settings.rating_text | escape }}</span>
+        </div>
+
+        {% if section.settings.description != blank %}
+          <p class="lp-buy-box__description">{{ section.settings.description | escape }}</p>
+        {% endif %}
+        {% if section.settings.flavor_text != blank %}
+          <p class="lp-buy-box__flavor">{{ section.settings.flavor_text | escape }}</p>
+        {% endif %}
+
+        <div class="lp-buy-box__benefits">
+          {% for block in section.blocks %}
+            {% if block.type == 'benefit' %}
+              <details class="lp-buy-box__benefit" {{ block.shopify_attributes }}>
+                <summary class="lp-buy-box__benefit-summary">
+                  <span class="lp-buy-box__benefit-heading">
+                    {% if block.settings.image != blank %}
+                      {{
+                        block.settings.image
+                        | image_url: width: 128
+                        | image_tag:
+                          widths: '64, 128',
+                          sizes: '48px',
+                          class: 'lp-buy-box__benefit-icon',
+                          loading: 'lazy',
+                          alt: block.settings.title
+                      }}
+                    {% elsif block.settings.image_url != blank %}
+                      <img
+                        class="lp-buy-box__benefit-icon"
+                        src="{{ block.settings.image_url | escape }}"
+                        alt="{{ block.settings.title | escape }}"
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                      >
+                    {% endif %}
+                    <span>{{ block.settings.title | escape }}</span>
+                  </span>
+                  <svg class="lp-buy-box__benefit-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                    <path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                  </svg>
+                </summary>
+                <div class="lp-buy-box__benefit-content">
+                  <strong class="lp-buy-box__benefit-stat">{{ block.settings.stat | escape }}</strong>
+                  <p class="lp-buy-box__benefit-text">{{ block.settings.text | escape }}</p>
+                </div>
+              </details>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% form 'product', buy_product, id: product_form_id, class: 'lp-buy-box__form' %}
+          <input
+            type="hidden"
+            name="id"
+            value="{{ current_variant.id }}"
+            {% if current_variant == blank %}disabled{% endif %}
+          >
+          <input type="hidden" name="quantity" value="{{ initial_quantity }}" data-quantity-input>
+
+          <fieldset class="lp-buy-box__fieldset lp-buy-box__delivery">
+            <legend class="lp-buy-box__legend">{{ section.settings.frequency_heading | escape }}</legend>
+
+            <div class="lp-buy-box__delivery-option">
+              <input
+                class="lp-buy-box__choice-input"
+                type="radio"
+                name="lp-delivery-{{ section.id }}"
+                id="LpDeliveryMonthly-{{ section.id }}"
+                value="monthly"
+                checked
+              >
+              <label class="lp-buy-box__delivery-card" for="LpDeliveryMonthly-{{ section.id }}">
+                <span class="lp-buy-box__delivery-top">
+                  <span class="lp-buy-box__radio-mark" aria-hidden="true"></span>
+                  <strong class="lp-buy-box__delivery-title">{{ section.settings.sub_title | escape }}</strong>
+                  <span class="lp-buy-box__delivery-prices">
+                    <s class="lp-buy-box__compare-price">{{ section.settings.sub_compare | escape }}</s>
+                    <strong class="lp-buy-box__price">{{ section.settings.sub_price | escape }}</strong>
+                  </span>
+                </span>
+                {% if section.settings.sub_perks != blank %}
+                  <div class="lp-buy-box__delivery-copy">{{ section.settings.sub_perks }}</div>
+                {% endif %}
+                {% if section.settings.sub_badge != blank %}
+                  <span class="lp-buy-box__delivery-badge">{{ section.settings.sub_badge | escape }}</span>
+                {% endif %}
+              </label>
+            </div>
+
+            <div class="lp-buy-box__delivery-option">
+              <input
+                class="lp-buy-box__choice-input"
+                type="radio"
+                name="lp-delivery-{{ section.id }}"
+                id="LpDeliveryOneTime-{{ section.id }}"
+                value="one-time"
+              >
+              <label class="lp-buy-box__delivery-card" for="LpDeliveryOneTime-{{ section.id }}">
+                <span class="lp-buy-box__delivery-top">
+                  <span class="lp-buy-box__radio-mark" aria-hidden="true"></span>
+                  <strong class="lp-buy-box__delivery-title">{{ section.settings.ot_title | escape }}</strong>
+                  <span class="lp-buy-box__delivery-prices">
+                    <s class="lp-buy-box__compare-price">{{ section.settings.ot_compare | escape }}</s>
+                    <strong class="lp-buy-box__price">{{ section.settings.ot_price | escape }}</strong>
+                    {% if section.settings.ot_note != blank %}
+                      <small class="lp-buy-box__price-note">{{ section.settings.ot_note | escape }}</small>
+                    {% endif %}
+                  </span>
+                </span>
+                {% if section.settings.ot_warning != blank %}
+                  <div class="lp-buy-box__delivery-copy lp-buy-box__delivery-copy--warning">
+                    {{- section.settings.ot_warning -}}
+                  </div>
+                {% endif %}
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="lp-buy-box__fieldset lp-buy-box__quantity">
+            <legend class="lp-buy-box__legend">{{ section.settings.quantity_heading | escape }}</legend>
+            <span class="lp-buy-box__quantity-note">{{ section.settings.qty_note | escape }}</span>
+            <div class="lp-buy-box__quantity-grid">
+              {% assign quantity_index = 0 %}
+              {% for block in section.blocks %}
+                {% if block.type == 'qty_tier' %}
+                  {% assign quantity_index = quantity_index | plus: 1 %}
+                  <div class="lp-buy-box__quantity-option" {{ block.shopify_attributes }}>
+                    <input
+                      class="lp-buy-box__choice-input"
+                      type="radio"
+                      name="lp-quantity-{{ section.id }}"
+                      id="LpQuantity-{{ section.id }}-{{ quantity_index }}"
+                      value="{{ quantity_index }}"
+                      data-quantity-radio
+                      data-quantity-value="{{ quantity_index }}"
+                      {% if quantity_index == initial_quantity %}checked{% endif %}
+                    >
+                    <label class="lp-buy-box__quantity-card" for="LpQuantity-{{ section.id }}-{{ quantity_index }}">
+                      <strong class="lp-buy-box__quantity-label">{{ block.settings.label | escape }}</strong>
+                      {% if block.settings.savings != blank %}
+                        <span class="lp-buy-box__savings">{{ block.settings.savings | escape }}</span>
+                      {% endif %}
+                    </label>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </fieldset>
+
+          <div class="lp-buy-box__gift">
+            <div class="lp-buy-box__gift-content">
+              <div class="lp-buy-box__gift-copy">
+                <h3 class="lp-buy-box__gift-heading">{{ section.settings.gift_heading | escape }}</h3>
+                <p class="lp-buy-box__gift-subtitle">{{ section.settings.gift_sub | escape }}</p>
+              </div>
+              <div class="lp-buy-box__gift-product">
+                {% if section.settings.gift_image != blank %}
+                  {{
+                    section.settings.gift_image
+                    | image_url: width: 440
+                    | image_tag:
+                      widths: '220, 440',
+                      sizes: '110px',
+                      class: 'lp-buy-box__gift-image',
+                      loading: 'lazy',
+                      alt: section.settings.gift_image_alt
+                  }}
+                {% elsif section.settings.gift_image_url != blank %}
+                  <img
+                    class="lp-buy-box__gift-image"
+                    src="{{ section.settings.gift_image_url | escape }}"
+                    alt="{{ section.settings.gift_image_alt | escape }}"
+                    width="220"
+                    height="220"
+                    loading="lazy"
+                  >
+                {% endif %}
+                <span class="lp-buy-box__gift-price">
+                  <s>{{ section.settings.gift_compare | escape }}</s>
+                  <strong>{{ section.settings.gift_price | escape }}</strong>
+                </span>
+              </div>
+            </div>
+            <p class="lp-buy-box__gift-progress-text">{{ section.settings.gift_progress_text | escape }}</p>
+            <div
+              class="lp-buy-box__progress"
+              role="progressbar"
+              aria-label="{{ section.settings.gift_progress_text | escape }}"
+              aria-valuemin="0"
+              aria-valuemax="75"
+              aria-valuenow="0"
+            >
+              <span class="lp-buy-box__progress-fill"></span>
+              <span class="lp-buy-box__progress-threshold">{{ section.settings.gift_threshold | escape }}</span>
+            </div>
+          </div>
+
+          <div class="lp-buy-box__upsells">
+            {% for block in section.blocks %}
+              {% if block.type == 'upsell' %}
+                <article class="lp-buy-box__upsell" {{ block.shopify_attributes }}>
+                  <div class="lp-buy-box__upsell-product">
+                    {% if block.settings.image != blank %}
+                      {{
+                        block.settings.image
+                        | image_url: width: 128
+                        | image_tag:
+                          widths: '64, 128',
+                          sizes: '64px',
+                          class: 'lp-buy-box__upsell-image',
+                          loading: 'lazy',
+                          alt: block.settings.alt
+                      }}
+                    {% elsif block.settings.image_url != blank %}
+                      <img
+                        class="lp-buy-box__upsell-image"
+                        src="{{ block.settings.image_url | escape }}"
+                        alt="{{ block.settings.alt | escape }}"
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                      >
+                    {% endif %}
+                    <div class="lp-buy-box__upsell-copy">
+                      <h3 class="lp-buy-box__upsell-title">{{ block.settings.title | escape }}</h3>
+                      <p class="lp-buy-box__upsell-subtitle">{{ block.settings.subtitle | escape }}</p>
+                    </div>
+                  </div>
+                  <div class="lp-buy-box__upsell-controls">
+                    <span class="lp-buy-box__upsell-prices">
+                      <s>{{ block.settings.compare_price | escape }}</s>
+                      <strong>{{ block.settings.price | escape }}</strong>
+                    </span>
+                    <button
+                      class="lp-buy-box__upsell-button"
+                      type="button"
+                      aria-label="{{ block.settings.title | escape }}"
+                      aria-disabled="true"
+                    >
+                      <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                        <path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          <div class="lp-buy-box__checkout">
+            <p class="lp-buy-box__urgency">{{ section.settings.urgency_text | escape }}</p>
+            <button
+              class="lp-buy-box__submit"
+              type="submit"
+              name="add"
+              {% unless current_variant.available %}disabled{% endunless %}
+            >
+              {{- section.settings.cta_label | escape -}}
+            </button>
+            <p class="lp-buy-box__guarantee">{{ section.settings.guarantee_text | escape }}</p>
+          </div>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</lp-buy-box>
+
+{% schema %}
+{
+  "name": "LP buy box",
+  "tag": "section",
+  "class": "lp-buy-box__wrapper",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "default": "standalone-product-section"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Daily Gummies For Improved Motivation & Mood"
+    },
+    {
+      "type": "text",
+      "id": "rating_text",
+      "label": "Rating text",
+      "default": "1394 reviews"
+    },
+    {
+      "type": "text",
+      "id": "rating_stars",
+      "label": "Rating stars",
+      "default": "4.7"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "A unique organic fruit and veggie blend, plus 12 key nutrients."
+    },
+    {
+      "type": "text",
+      "id": "flavor_text",
+      "label": "Flavor text",
+      "default": "Flavor: 🍊 Orange"
+    },
+    {
+      "type": "text",
+      "id": "frequency_heading",
+      "label": "Delivery heading",
+      "default": "Delivery Frequency"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Subscription title",
+      "default": "Monthly"
+    },
+    {
+      "type": "text",
+      "id": "sub_compare",
+      "label": "Subscription compare price",
+      "default": "$39"
+    },
+    {
+      "type": "text",
+      "id": "sub_price",
+      "label": "Subscription price",
+      "default": "$23.40"
+    },
+    {
+      "type": "richtext",
+      "id": "sub_perks",
+      "label": "Subscription perks",
+      "default": "<p>FREE Gift on orders +$75</p><p>FREE Shipping on first order</p><p>Cancel anytime, no questions asked</p>"
+    },
+    {
+      "type": "text",
+      "id": "sub_badge",
+      "label": "Subscription badge",
+      "default": "Lowest Price Anywhere!"
+    },
+    {
+      "type": "text",
+      "id": "ot_title",
+      "label": "One-time title",
+      "default": "One-Time"
+    },
+    {
+      "type": "text",
+      "id": "ot_compare",
+      "label": "One-time compare price",
+      "default": "$39"
+    },
+    {
+      "type": "text",
+      "id": "ot_price",
+      "label": "One-time price",
+      "default": "$27.30"
+    },
+    {
+      "type": "text",
+      "id": "ot_note",
+      "label": "One-time note",
+      "default": "with code FIREWORKS"
+    },
+    {
+      "type": "richtext",
+      "id": "ot_warning",
+      "label": "One-time warning",
+      "default": "<p>You're missing out on free shipping!</p><p>You're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!</p>"
+    },
+    {
+      "type": "text",
+      "id": "quantity_heading",
+      "label": "Quantity heading",
+      "default": "Quantity"
+    },
+    {
+      "type": "text",
+      "id": "qty_note",
+      "label": "Quantity note",
+      "default": "30 Servings Per Bottle"
+    },
+    {
+      "type": "text",
+      "id": "gift_heading",
+      "label": "Gift heading",
+      "default": "Unlock Your Free Gift"
+    },
+    {
+      "type": "text",
+      "id": "gift_sub",
+      "label": "Gift description",
+      "default": "12 Servings of Electrolyte Drink Mix For The Whole Family."
+    },
+    {
+      "type": "image_picker",
+      "id": "gift_image",
+      "label": "Gift image"
+    },
+    {
+      "type": "text",
+      "id": "gift_image_url",
+      "label": "Gift image URL",
+      "default": "//firstday.com/cdn/shop/files/hydration-12-pack.png?v=1781107632&width=220"
+    },
+    {
+      "type": "text",
+      "id": "gift_image_alt",
+      "label": "Gift image alt text",
+      "default": "Rapid Hydration Electrolyte Support - Gift"
+    },
+    {
+      "type": "text",
+      "id": "gift_compare",
+      "label": "Gift compare price",
+      "default": "$25.00"
+    },
+    {
+      "type": "text",
+      "id": "gift_price",
+      "label": "Gift price",
+      "default": "FREE"
+    },
+    {
+      "type": "text",
+      "id": "gift_progress_text",
+      "label": "Gift progress text",
+      "default": "You are $75 away, keep going!"
+    },
+    {
+      "type": "text",
+      "id": "gift_threshold",
+      "label": "Gift threshold",
+      "default": "$75"
+    },
+    {
+      "type": "text",
+      "id": "urgency_text",
+      "label": "Urgency text",
+      "default": "🔥 Limited-Time Offer 🔥 Flash Sale Ending Soon Get Up To 52% Off"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_text",
+      "label": "Guarantee text",
+      "default": "45 Day Money Back Guarantee"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "default": "Add To Cart"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme_1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 32
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_tab",
+      "name": "Product tab",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Teens'"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "active",
+          "label": "Active",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "image_url",
+          "label": "Image URL",
+          "default": "//firstday.com/cdn/shop/files/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png?v=1781709850&width=64"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Improve Overall Health & Nutrition"
+        },
+        {
+          "type": "text",
+          "id": "stat",
+          "label": "Statistic",
+          "default": "98%"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "of parents say First Day vitamins support their teen's overall health & nutrition.†"
+        }
+      ]
+    },
+    {
+      "type": "qty_tier",
+      "name": "Quantity tier",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "1‎ Bottle"
+        },
+        {
+          "type": "text",
+          "id": "savings",
+          "label": "Savings"
+        },
+        {
+          "type": "checkbox",
+          "id": "selected",
+          "label": "Selected",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "upsell",
+      "name": "Upsell",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "image_url",
+          "label": "Image URL"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Image alt text"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Teens' Daily Focus Brain Support"
+        },
+        {
+          "type": "textarea",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Support for focus, learning, and memory recall."
+        },
+        {
+          "type": "text",
+          "id": "compare_price",
+          "label": "Compare price",
+          "default": "$49.00"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$29.40"
+        }
+      ]
+    },
+    {
+      "type": "carousel_image",
+      "name": "Carousel image",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "image_url",
+          "label": "Image URL",
+          "default": "//firstday.com/cdn/shop/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1781036994&width=1200"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Image alt text",
+          "default": "The \"No Junk\"™ Teens’ Multi"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP buy box",
+      "blocks": [
+        { "type": "product_tab" },
+        { "type": "benefit" },
+        { "type": "qty_tier" },
+        { "type": "upsell" },
+        { "type": "carousel_image" }
+      ]
+    }
+  ]
+}
+{% endschema %}

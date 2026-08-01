@@ -1,0 +1,48 @@
+{
+  "type": "lp-comparison-table",
+  "settings": {
+    "heading": "Why Should You Choose First Day?",
+    "subheading": "<p>Made for modern families living on modern diets, we’re here to fill the nutrition gaps that today’s food often leaves behind.</p>",
+    "brand_label": "First Day",
+    "brand_logo": "",
+    "brand_logo_url": "//firstday.com/cdn/shop/files/round_logo.png?v=1720622822&width=100",
+    "competitor_label": "Other Multis",
+    "image_desktop": "",
+    "image_desktop_url": "//firstday.com/cdn/shop/files/desk_720.png?v=1763396549&width=1200",
+    "image_mobile": "",
+    "image_mobile_url": "//firstday.com/cdn/shop/files/mob-left_360.png?v=1763396560&width=300",
+    "color_scheme": "scheme_1",
+    "padding_top": 48,
+    "padding_bottom": 48,
+    "anchor_id": ""
+  },
+  "blocks": {
+    "feature_clean_label": {
+      "type": "feature_row",
+      "settings": { "label": "Clean Label Certified", "us_note": "", "them_note": "" }
+    },
+    "feature_research": {
+      "type": "feature_row",
+      "settings": { "label": "Research Backed", "us_note": "", "them_note": "" }
+    },
+    "feature_gift": {
+      "type": "feature_row",
+      "settings": { "label": "Surprise Gift with Purchase", "us_note": "", "them_note": "" }
+    },
+    "feature_no_fillers": {
+      "type": "feature_row",
+      "settings": { "label": "No Fillers or Fake Ingredients", "us_note": "", "them_note": "" }
+    },
+    "feature_vegan": {
+      "type": "feature_row",
+      "settings": { "label": "Vegan, Gluten-Free, Non-GMO", "us_note": "", "them_note": "" }
+    }
+  },
+  "block_order": [
+    "feature_clean_label",
+    "feature_research",
+    "feature_gift",
+    "feature_no_fillers",
+    "feature_vegan"
+  ]
+}

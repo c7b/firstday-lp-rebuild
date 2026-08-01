@@ -1,0 +1,153 @@
+{{ 'lp-trust-wall.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  #{{ section.settings.anchor_id | default: section.id }}.lp-trust-wall__section {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+<section
+  id="{{ section.settings.anchor_id | default: section.id }}"
+  class="lp-trust-wall__section color-{{ section.settings.color_scheme }} gradient"
+>
+  <div class="lp-trust-wall__container page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="lp-trust-wall__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    <div class="lp-trust-wall__wall">
+      {%- for block in section.blocks -%}
+        <article class="lp-trust-wall__card lp-trust-wall__card--{{ block.type }}" {{ block.shopify_attributes }}>
+          {%- case block.type -%}
+            {%- when 'doctor_card' -%}
+              <div class="lp-trust-wall__person">
+                {%- if block.settings.photo != blank -%}
+                  {{ block.settings.photo | image_url: width: 320 | image_tag: class: 'lp-trust-wall__avatar', widths: '80, 160, 240, 320', sizes: '80px', loading: 'lazy', alt: block.settings.name }}
+                {%- elsif block.settings.photo_url != blank -%}
+                  <img class="lp-trust-wall__avatar" src="{{ block.settings.photo_url }}" alt="{{ block.settings.name | escape }}" loading="lazy">
+                {%- endif -%}
+                <div class="lp-trust-wall__person-copy">
+                  {%- if block.settings.quote != blank -%}<div class="lp-trust-wall__quote rte">{{ block.settings.quote }}</div>{%- endif -%}
+                  {%- if block.settings.name != blank -%}<p class="lp-trust-wall__name">{{ block.settings.name }}</p>{%- endif -%}
+                  {%- if block.settings.credentials != blank -%}<p class="lp-trust-wall__caption">{{ block.settings.credentials }}</p>{%- endif -%}
+                </div>
+              </div>
+
+            {%- when 'media_card' -%}
+              <div class="lp-trust-wall__media">
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 1120 | image_tag: class: 'lp-trust-wall__media-image', widths: '352, 560, 750, 1120', sizes: '(min-width: 750px) 33vw, 100vw', loading: 'lazy', alt: block.settings.alt }}
+                {%- elsif block.settings.image_url != blank -%}
+                  <img class="lp-trust-wall__media-image" src="{{ block.settings.image_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy">
+                {%- endif -%}
+                {%- if block.settings.is_video -%}<span class="lp-trust-wall__play-badge" aria-hidden="true"></span>{%- endif -%}
+              </div>
+
+            {%- when 'customer_card' -%}
+              <div class="lp-trust-wall__person">
+                {%- if block.settings.avatar != blank -%}
+                  {{ block.settings.avatar | image_url: width: 320 | image_tag: class: 'lp-trust-wall__avatar', widths: '80, 160, 240, 320', sizes: '80px', loading: 'lazy', alt: block.settings.name }}
+                {%- elsif block.settings.avatar_url != blank -%}
+                  <img class="lp-trust-wall__avatar" src="{{ block.settings.avatar_url }}" alt="{{ block.settings.name | escape }}" loading="lazy">
+                {%- endif -%}
+                <div class="lp-trust-wall__person-copy">
+                  {%- if block.settings.quote != blank -%}<div class="lp-trust-wall__quote rte">{{ block.settings.quote }}</div>{%- endif -%}
+                  {%- if block.settings.name != blank -%}<p class="lp-trust-wall__name">{{ block.settings.name }}</p>{%- endif -%}
+                  {%- if block.settings.caption != blank -%}<p class="lp-trust-wall__caption">{{ block.settings.caption }}</p>{%- endif -%}
+                </div>
+              </div>
+
+            {%- when 'press_quote' -%}
+              {%- if block.settings.quote != blank -%}<p class="lp-trust-wall__press-quote">{{ block.settings.quote }}</p>{%- endif -%}
+              <div class="lp-trust-wall__press-footer">
+                {%- if block.settings.label != blank -%}<p class="lp-trust-wall__press-label">{{ block.settings.label }}</p>{%- endif -%}
+                {%- if block.settings.logo != blank -%}
+                  {{ block.settings.logo | image_url: width: 240 | image_tag: class: 'lp-trust-wall__logo', widths: '120, 240', sizes: '120px', loading: 'lazy', alt: '' }}
+                {%- elsif block.settings.logo_url != blank -%}
+                  <img class="lp-trust-wall__logo" src="{{ block.settings.logo_url }}" alt="" loading="lazy">
+                {%- endif -%}
+              </div>
+
+            {%- when 'stat_circle' -%}
+              <div class="lp-trust-wall__stat-circle">
+                {%- if block.settings.value != blank -%}<span class="lp-trust-wall__stat-value">{{ block.settings.value }}</span>{%- endif -%}
+              </div>
+              {%- if block.settings.text != blank -%}<p class="lp-trust-wall__stat-text">{{ block.settings.text }}</p>{%- endif -%}
+          {%- endcase -%}
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LP trust wall",
+  "tag": "section",
+  "class": "lp-trust-wall__section-wrapper",
+  "settings": [
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Life Changing Results from <strong>Doctors</strong> and <strong>Real Customers</strong>" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "text", "id": "anchor_id", "label": "Anchor ID" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 48 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 48 }
+  ],
+  "blocks": [
+    {
+      "type": "doctor_card",
+      "name": "Doctor card",
+      "settings": [
+        { "type": "image_picker", "id": "photo", "label": "Photo" },
+        { "type": "text", "id": "photo_url", "label": "Photo URL", "default": "//firstday.com/cdn/shop/files/der-lei-chen-medical-board.jpg?v=1775176611&width=160" },
+        { "type": "richtext", "id": "quote", "label": "Quote" },
+        { "type": "text", "id": "name", "label": "Name" },
+        { "type": "text", "id": "credentials", "label": "Credentials" }
+      ]
+    },
+    {
+      "type": "media_card",
+      "name": "Media card",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "image_url", "label": "Image URL", "default": "//firstday.com/cdn/shop/files/blue-bubble-social-grid.jpg?v=1781563733&width=560" },
+        { "type": "text", "id": "alt", "label": "Alt text" },
+        { "type": "checkbox", "id": "is_video", "label": "Show video play badge", "default": false }
+      ]
+    },
+    {
+      "type": "customer_card",
+      "name": "Customer card",
+      "settings": [
+        { "type": "image_picker", "id": "avatar", "label": "Avatar" },
+        { "type": "text", "id": "avatar_url", "label": "Avatar URL", "default": "//firstday.com/cdn/shop/files/ugc-4.png?v=1691706683&width=160" },
+        { "type": "richtext", "id": "quote", "label": "Quote" },
+        { "type": "text", "id": "name", "label": "Name" },
+        { "type": "text", "id": "caption", "label": "Caption" }
+      ]
+    },
+    {
+      "type": "press_quote",
+      "name": "Press quote",
+      "settings": [
+        { "type": "text", "id": "quote", "label": "Quote" },
+        { "type": "text", "id": "label", "label": "Label" },
+        { "type": "image_picker", "id": "logo", "label": "Logo" },
+        { "type": "text", "id": "logo_url", "label": "Logo URL", "default": "//firstday.com/cdn/shop/files/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png?v=1771298020&width=240" }
+      ]
+    },
+    {
+      "type": "stat_circle",
+      "name": "Stat circle",
+      "settings": [
+        { "type": "text", "id": "value", "label": "Value" },
+        { "type": "text", "id": "text", "label": "Text" }
+      ]
+    }
+  ],
+  "max_blocks": 16,
+  "presets": [
+    { "name": "LP trust wall" }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,711 @@
+.lp-buy-box__section {
+  display: block;
+  background: rgb(var(--color-background));
+  background: var(--gradient-background);
+  color: rgb(var(--color-foreground));
+}
+
+.lp-buy-box__page-width {
+  width: 100%;
+  max-width: 132rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+.lp-buy-box__layout {
+  display: grid;
+  gap: 3.2rem;
+}
+
+.lp-buy-box__media-column,
+.lp-buy-box__buy-column {
+  min-width: 0;
+}
+
+.lp-buy-box__media-track {
+  display: flex;
+  overflow-x: auto;
+  border-radius: 1.6rem;
+  background: rgba(var(--color-foreground), 0.04);
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.lp-buy-box__media-track::-webkit-scrollbar,
+.lp-buy-box__thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.lp-buy-box__media-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  aspect-ratio: 1;
+  overflow: hidden;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.lp-buy-box__media-image,
+.lp-buy-box__media-model,
+.lp-buy-box__media-model video,
+.lp-buy-box__media-model iframe,
+.lp-buy-box__media-model model-viewer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lp-buy-box__thumbnails {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  padding: 0.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.lp-buy-box__thumbnail {
+  flex: 0 0 6.8rem;
+  width: 6.8rem;
+  height: 6.8rem;
+  padding: 0;
+  overflow: hidden;
+  border: 0.2rem solid transparent;
+  border-radius: 0.8rem;
+  background: rgba(var(--color-foreground), 0.04);
+  color: currentColor;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.lp-buy-box__thumbnail[aria-current='true'] {
+  border-color: rgb(var(--color-foreground));
+}
+
+.lp-buy-box__thumbnail-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lp-buy-box__thumbnail:focus-visible,
+.lp-buy-box__product-tab:focus-visible,
+.lp-buy-box__benefit-summary:focus-visible,
+.lp-buy-box__upsell-button:focus-visible,
+.lp-buy-box__submit:focus-visible {
+  outline: 0.2rem solid rgb(var(--color-foreground));
+  outline-offset: 0.3rem;
+}
+
+.lp-buy-box__product-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.lp-buy-box__product-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 8.8rem;
+  min-height: 4.4rem;
+  padding: 0.8rem 1.6rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.25);
+  border-radius: 999rem;
+  color: currentColor;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.lp-buy-box__product-tab[aria-current='page'] {
+  border-color: rgb(var(--color-foreground));
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+}
+
+.lp-buy-box__heading-group {
+  margin-bottom: 1.2rem;
+}
+
+.lp-buy-box__title {
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 4.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.lp-buy-box__subtitle {
+  max-width: 48rem;
+  margin: 0.8rem 0 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.lp-buy-box__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.lp-buy-box__rating-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.lp-buy-box__rating-value {
+  font-weight: 800;
+}
+
+.lp-buy-box__rating-text {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.lp-buy-box__description,
+.lp-buy-box__flavor {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.lp-buy-box__flavor {
+  margin-top: 0.6rem;
+  font-weight: 700;
+}
+
+.lp-buy-box__benefits {
+  margin: 2rem 0 2.4rem;
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.18);
+}
+
+.lp-buy-box__benefit {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.18);
+}
+
+.lp-buy-box__benefit-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 6.4rem;
+  padding: 0.8rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.lp-buy-box__benefit-summary::-webkit-details-marker {
+  display: none;
+}
+
+.lp-buy-box__benefit-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding-right: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.lp-buy-box__benefit-icon {
+  flex: 0 0 4.4rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.lp-buy-box__benefit-chevron {
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  transition: transform 180ms ease;
+}
+
+.lp-buy-box__benefit[open] .lp-buy-box__benefit-chevron {
+  transform: rotate(180deg);
+}
+
+.lp-buy-box__benefit-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 1.2rem;
+  padding: 0.2rem 0 1.8rem 5.6rem;
+}
+
+.lp-buy-box__benefit-stat {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.lp-buy-box__benefit-text {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.lp-buy-box__form {
+  display: block;
+}
+
+.lp-buy-box__fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.lp-buy-box__legend {
+  width: 100%;
+  margin: 0 0 1.2rem;
+  padding: 0;
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.lp-buy-box__delivery {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.lp-buy-box__delivery-option,
+.lp-buy-box__quantity-option {
+  position: relative;
+}
+
+.lp-buy-box__choice-input {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lp-buy-box__delivery-card {
+  position: relative;
+  display: block;
+  min-height: 4.4rem;
+  padding: 1.6rem;
+  border: 0.15rem solid rgba(var(--color-foreground), 0.24);
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+.lp-buy-box__choice-input:checked + .lp-buy-box__delivery-card,
+.lp-buy-box__choice-input:checked + .lp-buy-box__quantity-card {
+  border-color: rgb(var(--color-foreground));
+  box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
+}
+
+.lp-buy-box__choice-input:focus-visible + .lp-buy-box__delivery-card,
+.lp-buy-box__choice-input:focus-visible + .lp-buy-box__quantity-card {
+  outline: 0.2rem solid rgb(var(--color-foreground));
+  outline-offset: 0.3rem;
+}
+
+.lp-buy-box__delivery-top {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 1rem;
+}
+
+.lp-buy-box__radio-mark {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.1rem;
+  border: 0.15rem solid rgba(var(--color-foreground), 0.45);
+  border-radius: 50%;
+}
+
+.lp-buy-box__choice-input:checked + .lp-buy-box__delivery-card .lp-buy-box__radio-mark::after {
+  position: absolute;
+  inset: 0.35rem;
+  border-radius: 50%;
+  background: rgb(var(--color-foreground));
+  content: '';
+}
+
+.lp-buy-box__delivery-title {
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.lp-buy-box__delivery-prices {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: baseline;
+  gap: 0.5rem;
+  text-align: right;
+}
+
+.lp-buy-box__compare-price {
+  color: rgba(var(--color-foreground), 0.58);
+  font-size: 1.3rem;
+}
+
+.lp-buy-box__price {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.lp-buy-box__price-note {
+  grid-column: 1 / -1;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.lp-buy-box__delivery-copy {
+  display: block;
+  margin: 1.2rem 0 0 3rem;
+  color: rgba(var(--color-foreground), 0.75);
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.lp-buy-box__delivery-copy p {
+  position: relative;
+  margin: 0.4rem 0;
+  padding-left: 1.5rem;
+}
+
+.lp-buy-box__delivery-copy p::before {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.1rem;
+  width: 0.7rem;
+  height: 0.4rem;
+  border-bottom: 0.15rem solid currentColor;
+  border-left: 0.15rem solid currentColor;
+  content: '';
+  transform: rotate(-45deg);
+}
+
+.lp-buy-box__delivery-copy--warning p::before {
+  top: 0.2rem;
+  left: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 0;
+  background:
+    linear-gradient(45deg, transparent 43%, currentColor 43%, currentColor 57%, transparent 57%),
+    linear-gradient(-45deg, transparent 43%, currentColor 43%, currentColor 57%, transparent 57%);
+  transform: none;
+}
+
+.lp-buy-box__delivery-badge {
+  display: inline-flex;
+  margin: 1.2rem 0 0 3rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999rem;
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.lp-buy-box__quantity {
+  margin-top: 2.4rem;
+}
+
+.lp-buy-box__quantity-note {
+  display: block;
+  width: fit-content;
+  margin: -4rem 0 1.2rem auto;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999rem;
+  background: rgba(var(--color-foreground), 0.08);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.lp-buy-box__quantity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.lp-buy-box__quantity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 7.2rem;
+  padding: 1rem 0.8rem;
+  border: 0.15rem solid rgba(var(--color-foreground), 0.24);
+  border-radius: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.lp-buy-box__quantity-label {
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.lp-buy-box__savings {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.lp-buy-box__gift {
+  margin-top: 2.4rem;
+  padding: 1.6rem;
+  border: 0.15rem solid rgba(var(--color-foreground), 0.2);
+  border-radius: 1.4rem;
+  background: rgba(var(--color-foreground), 0.04);
+}
+
+.lp-buy-box__gift-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lp-buy-box__gift-heading {
+  margin: 0;
+  font-size: 1.9rem;
+  line-height: 1.15;
+}
+
+.lp-buy-box__gift-subtitle {
+  max-width: 28rem;
+  margin: 0.6rem 0 0;
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.lp-buy-box__gift-product {
+  position: relative;
+  width: 10rem;
+}
+
+.lp-buy-box__gift-image {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+}
+
+.lp-buy-box__gift-price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.7rem;
+  background: rgb(var(--color-background));
+  font-size: 1rem;
+  line-height: 1.15;
+  box-shadow: 0 0.2rem 0.8rem rgba(var(--color-foreground), 0.12);
+}
+
+.lp-buy-box__gift-progress-text {
+  margin: 1.2rem 0 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.lp-buy-box__progress {
+  position: relative;
+  height: 1rem;
+  margin-right: 3.5rem;
+  border-radius: 999rem;
+  background: rgba(var(--color-foreground), 0.16);
+}
+
+.lp-buy-box__progress-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: rgb(var(--color-foreground));
+}
+
+.lp-buy-box__progress-threshold {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 0.8rem);
+  font-size: 1.1rem;
+  font-weight: 800;
+  transform: translateY(-50%);
+}
+
+.lp-buy-box__upsells {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.4rem;
+}
+
+.lp-buy-box__upsell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.18);
+  border-radius: 1rem;
+}
+
+.lp-buy-box__upsell-product {
+  display: grid;
+  grid-template-columns: 6.4rem minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.lp-buy-box__upsell-image {
+  display: block;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 0.7rem;
+  object-fit: cover;
+}
+
+.lp-buy-box__upsell-title {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.lp-buy-box__upsell-subtitle {
+  margin: 0.4rem 0 0;
+  color: rgba(var(--color-foreground), 0.7);
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.lp-buy-box__upsell-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.lp-buy-box__upsell-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+.lp-buy-box__upsell-prices s {
+  color: rgba(var(--color-foreground), 0.55);
+}
+
+.lp-buy-box__upsell-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: 1.1rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-background));
+  cursor: default;
+}
+
+.lp-buy-box__upsell-button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.lp-buy-box__checkout {
+  margin-top: 2.4rem;
+  text-align: center;
+}
+
+.lp-buy-box__urgency {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.lp-buy-box__submit {
+  width: 100%;
+  min-height: 5.6rem;
+  padding: 1.2rem 2rem;
+  border: 0;
+  border-radius: 999rem;
+  background: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+  font: inherit;
+  font-size: 1.7rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.lp-buy-box__submit:hover {
+  box-shadow: 0 0 0 0.2rem rgb(var(--color-button-text)), 0 0 0 0.4rem rgb(var(--color-button));
+}
+
+.lp-buy-box__submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.lp-buy-box__guarantee {
+  margin: 1rem 0 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 750px) {
+  .lp-buy-box__page-width {
+    padding: 0 3.2rem;
+  }
+
+  .lp-buy-box__quantity-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .lp-buy-box__layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(42rem, 0.95fr);
+    align-items: start;
+    gap: clamp(4rem, 6vw, 8rem);
+  }
+
+  .lp-buy-box__media-column {
+    position: sticky;
+    top: 2rem;
+  }
+
+  .lp-buy-box__title {
+    font-size: 4.4rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-buy-box__media-track {
+    scroll-behavior: auto;
+  }
+
+  .lp-buy-box__benefit-chevron {
+    transition: none;
+  }
+}

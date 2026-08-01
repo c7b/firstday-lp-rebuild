@@ -1,0 +1,218 @@
+{{ 'lp-science-tabs.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  if section.settings.claims.size > 0
+    assign science_items = section.settings.claims
+    assign use_metaobjects = true
+  else
+    assign science_items = section.blocks
+    assign use_metaobjects = false
+  endif
+%}
+
+<section
+  id="{{ section.settings.anchor_id | default: section.id }}"
+  class="lp-science-tabs__section color-{{ section.settings.color_scheme }} gradient"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <lp-science-tabs class="lp-science-tabs__component">
+    <div class="lp-science-tabs__content">
+      <h2 class="lp-science-tabs__heading">{{ section.settings.heading }}</h2>
+
+      {% if science_items.size > 0 %}
+        <div class="lp-science-tabs__tab-list" role="tablist" aria-label="{{ section.settings.heading | strip_html | escape }}">
+          {% for item in science_items %}
+            {% liquid
+              if use_metaobjects
+                assign label = item.label.value
+              else
+                assign label = item.settings.label
+              endif
+              assign panel_id = 'lp-science-tabs-panel-' | append: section.id | append: '-' | append: forloop.index0
+              assign tab_id = 'lp-science-tabs-tab-' | append: section.id | append: '-' | append: forloop.index0
+            %}
+            <button
+              id="{{ tab_id }}"
+              class="lp-science-tabs__tab{% if forloop.first %} lp-science-tabs__tab--active{% endif %}"
+              type="button"
+              role="tab"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              aria-controls="{{ panel_id }}"
+              tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+            >
+              {{ label | escape }}
+            </button>
+          {% endfor %}
+        </div>
+
+        <div class="lp-science-tabs__panels">
+          {% for item in science_items %}
+            {% liquid
+              if use_metaobjects
+                assign panel_heading = item.panel_heading.value
+                assign intro = item.intro.value
+                assign video_url = item.video_url.value
+                assign poster_url = item.poster_url.value
+                assign bullets = item.bullets
+              else
+                assign panel_heading = item.settings.panel_heading
+                assign intro = item.settings.intro
+                assign video_url = item.settings.video_url
+                assign poster_url = item.settings.poster_url
+                assign bullets = item.settings.bullets
+              endif
+              assign panel_id = 'lp-science-tabs-panel-' | append: section.id | append: '-' | append: forloop.index0
+              assign tab_id = 'lp-science-tabs-tab-' | append: section.id | append: '-' | append: forloop.index0
+            %}
+            <div
+              id="{{ panel_id }}"
+              class="lp-science-tabs__panel"
+              role="tabpanel"
+              aria-labelledby="{{ tab_id }}"
+              {% unless forloop.first %}hidden{% endunless %}
+            >
+              <div class="lp-science-tabs__media">
+                {% if video_url != blank %}
+                  <video
+                    class="lp-science-tabs__video"
+                    src="{{ video_url | escape }}"
+                    {% if poster_url != blank %}poster="{{ poster_url | escape }}"{% endif %}
+                    muted
+                    playsinline
+                    loop
+                    autoplay
+                    preload="{% if forloop.first %}metadata{% else %}none{% endif %}"
+                    aria-hidden="true"
+                  ></video>
+                {% endif %}
+              </div>
+              <div class="lp-science-tabs__panel-content">
+                {% if panel_heading != blank %}
+                  <h3 class="lp-science-tabs__panel-heading">{{ panel_heading | escape }}</h3>
+                {% endif %}
+                {% if intro != blank %}
+                  <div class="lp-science-tabs__intro">{{ intro | escape | newline_to_br }}</div>
+                {% endif %}
+                {% if bullets != blank %}
+                  <div class="lp-science-tabs__benefits">
+                    {% if use_metaobjects %}
+                      {{ bullets | metafield_tag }}
+                    {% else %}
+                      {{ bullets }}
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </lp-science-tabs>
+</section>
+
+<script src="{{ 'lp-science-tabs.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "LP science tabs",
+  "tag": "section",
+  "class": "lp-science-tabs__wrapper",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The Science Behind Our Multivitamin"
+    },
+    {
+      "type": "metaobject_list",
+      "id": "claims",
+      "label": "Science claims",
+      "metaobject_type": "science_claim",
+      "limit": 6
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme_1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 48
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "claim",
+      "name": "Science claim",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tab label",
+          "default": "Focus in Class"
+        },
+        {
+          "type": "text",
+          "id": "panel_heading",
+          "label": "Panel heading",
+          "default": "How This Helps*"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Introduction",
+          "default": "Low levels of certain B vitamins can affect brain function and attention. During busy school days, this can make it harder to concentrate, stay sharp, or process new info."
+        },
+        {
+          "type": "richtext",
+          "id": "bullets",
+          "label": "Nutrient bullets",
+          "default": "<p>🧠 <strong>Vitamin B1</strong> supports brain signaling and memory.</p><p>🪄 <strong>Vitamin B2</strong> helps maintain healthy nerve function.</p><p>🧬 <strong>Vitamin B6</strong> plays a role in neurotransmitter production.</p>"
+        },
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "Video URL",
+          "default": "//firstday.com/cdn/shop/videos/c/vp/a80235b58deb4ad08c567013e029e0a4/a80235b58deb4ad08c567013e029e0a4.HD-720p-4.5Mbps-79391373.mp4?v=0"
+        },
+        {
+          "type": "text",
+          "id": "poster_url",
+          "label": "Poster URL",
+          "default": "//firstday.com/cdn/shop/files/preview_images/a80235b58deb4ad08c567013e029e0a4.thumbnail.0000000000_small.jpg?v=1774380542"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP science tabs"
+    }
+  ]
+}
+{% endschema %}

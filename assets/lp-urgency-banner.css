@@ -1,0 +1,48 @@
+.lp-urgency-banner__section {
+  background: rgb(var(--color-background));
+  background: var(--gradient-background);
+  color: rgb(var(--color-foreground));
+}
+
+.lp-urgency-banner__content {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.lp-urgency-banner__text {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.lp-urgency-banner__highlight {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.12em;
+}
+
+.lp-urgency-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 4.4rem;
+  color: currentColor;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.12em;
+}
+
+.lp-urgency-banner__cta:focus-visible {
+  outline: 0.2rem solid currentColor;
+  outline-offset: 0.3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .lp-urgency-banner__text {
+    font-size: 1.6rem;
+  }
+}

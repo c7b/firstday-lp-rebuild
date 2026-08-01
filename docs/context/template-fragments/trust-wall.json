@@ -1,0 +1,122 @@
+{
+  "type": "lp-trust-wall",
+  "settings": {
+    "heading": "Life Changing Results from <strong>Doctors</strong> and <strong>Real Customers</strong>",
+    "color_scheme": "scheme-1",
+    "anchor_id": "",
+    "padding_top": 48,
+    "padding_bottom": 48
+  },
+  "blocks": {
+    "media_blue_bubble": {
+      "type": "media_card",
+      "settings": {
+        "image_url": "//firstday.com/cdn/shop/files/blue-bubble-social-grid.jpg?v=1781563733&width=560",
+        "alt": "",
+        "is_video": false
+      }
+    },
+    "doctor_lei_chen": {
+      "type": "doctor_card",
+      "settings": {
+        "photo_url": "//firstday.com/cdn/shop/files/der-lei-chen-medical-board.jpg?v=1775176611&width=160",
+        "quote": "<p>\"These vitamins are exactly what I recommend to parents looking for quality nutrition.\"</p>",
+        "name": "Dr. Lei Chen",
+        "credentials": "MD, MHS at Yale University"
+      }
+    },
+    "media_phils_my_pharmacist": {
+      "type": "media_card",
+      "settings": {
+        "image_url": "//firstday.com/cdn/shop/files/phils-my-pharmacist.png?v=1771540397&width=560",
+        "alt": "Video thumbnail",
+        "is_video": true
+      }
+    },
+    "media_womens_reviews": {
+      "type": "media_card",
+      "settings": {
+        "image_url": "//firstday.com/cdn/shop/files/Womens_daily_supercharge_ugc.png?v=1778595285&width=560",
+        "alt": "Collage of Women Reviews",
+        "is_video": false
+      }
+    },
+    "customer_diana": {
+      "type": "customer_card",
+      "settings": {
+        "avatar_url": "//firstday.com/cdn/shop/files/ugc-4.png?v=1691706683&width=160",
+        "quote": "<p>\"These are the best tasting vitamins I ever purchased. It feels like I am having a treat. These are the only ones so far that my kids like too.\"</p>",
+        "name": "Diana V.",
+        "caption": "Verified Purchaser"
+      }
+    },
+    "media_review_woman": {
+      "type": "media_card",
+      "settings": {
+        "image_url": "//firstday.com/cdn/shop/files/review-woman.png?v=1775176116&width=560",
+        "alt": "Video thumbnail",
+        "is_video": true
+      }
+    },
+    "press_yahoo_finance": {
+      "type": "press_quote",
+      "settings": {
+        "quote": "\"A revolutionary approach to children's health.\"",
+        "label": "As seen on",
+        "logo_url": "//firstday.com/cdn/shop/files/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png?v=1771298020&width=240"
+      }
+    },
+    "doctor_ed_giovannucci": {
+      "type": "doctor_card",
+      "settings": {
+        "photo_url": "//firstday.com/cdn/shop/files/dr-harvard-ed-medical-board.jpg?v=1775176611&width=160",
+        "quote": "<p>\"We choose partners carefully, and First Day’s dedication to research, formulation integrity, and transparent quality practices makes them a brand we’re proud to align with.\"</p>",
+        "name": "Dr. Ed Giovannucci",
+        "credentials": "MD, MPH, ScD at Harvard University"
+      }
+    },
+    "media_review_woman_2": {
+      "type": "media_card",
+      "settings": {
+        "image_url": "//firstday.com/cdn/shop/files/review-woman-2.png?v=1775176166&width=560",
+        "alt": "Video thumbnail",
+        "is_video": true
+      }
+    },
+    "stat_95": {
+      "type": "stat_circle",
+      "settings": {
+        "value": "95%",
+        "text": "of parents see improved health & wellness"
+      }
+    },
+    "stat_82": {
+      "type": "stat_circle",
+      "settings": {
+        "value": "82%",
+        "text": "of kids ask for their vitamins daily"
+      }
+    },
+    "stat_97": {
+      "type": "stat_circle",
+      "settings": {
+        "value": "97%",
+        "text": "customer satisfaction rate"
+      }
+    }
+  },
+  "block_order": [
+    "media_blue_bubble",
+    "doctor_lei_chen",
+    "media_phils_my_pharmacist",
+    "media_womens_reviews",
+    "customer_diana",
+    "media_review_woman",
+    "press_yahoo_finance",
+    "doctor_ed_giovannucci",
+    "media_review_woman_2",
+    "stat_95",
+    "stat_82",
+    "stat_97"
+  ]
+}

@@ -1,0 +1,240 @@
+{{ 'lp-reviews.css' | asset_url | stylesheet_tag }}
+
+{% capture lp_reviews_star %}
+  <svg class="lp-reviews__star" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M12 2.5l2.94 5.96 6.58.96-4.76 4.64 1.12 6.55L12 17.53l-5.88 3.08 1.12-6.55-4.76-4.64 6.58-.96L12 2.5z" />
+  </svg>
+{% endcapture %}
+
+<section
+  id="{{ section.settings.anchor_id | default: section.id }}"
+  class="lp-reviews__section color-{{ section.settings.color_scheme }} gradient"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="lp-reviews__container page-width">
+    <h2 class="lp-reviews__heading">{{ section.settings.heading | escape }}</h2>
+
+    <div class="lp-reviews__summary">
+      <div class="lp-reviews__score">
+        <p class="lp-reviews__average">{{ section.settings.average_rating | escape }}</p>
+        <div class="lp-reviews__stars" role="img" aria-label="{{ section.settings.average_rating | escape }} out of 5">
+          {% for star_index in (1..5) %}
+            {{ lp_reviews_star }}
+          {% endfor %}
+        </div>
+        <p class="lp-reviews__count">{{ section.settings.review_count | plus: 0 | number_with_delimiter }} reviews</p>
+      </div>
+
+      <div class="lp-reviews__histogram" aria-label="Rating distribution">
+        {% for rating in (1..5) reversed %}
+          {% assign histogram_setting = 'histogram_' | append: rating %}
+          <div class="lp-reviews__histogram-row">
+            <span class="lp-reviews__histogram-label">{{ rating }}</span>
+            <span class="lp-reviews__histogram-star" aria-hidden="true">{{ lp_reviews_star }}</span>
+            <span class="lp-reviews__histogram-track" aria-hidden="true">
+              <span class="lp-reviews__histogram-fill" style="width: {{ section.settings[histogram_setting] }}%;"></span>
+            </span>
+            <span class="lp-reviews__histogram-percent">{{ section.settings[histogram_setting] }}%</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if section.blocks.size > 0 %}
+      <div class="lp-reviews__grid">
+        {% for block in section.blocks %}
+          <article class="lp-reviews__card" {{ block.shopify_attributes }}>
+            <div class="lp-reviews__card-top">
+              <div class="lp-reviews__stars" role="img" aria-label="{{ block.settings.rating }} out of 5">
+                {% for star_index in (1..5) %}
+                  {% if star_index <= block.settings.rating %}
+                    {{ lp_reviews_star }}
+                  {% else %}
+                    <span class="lp-reviews__star--empty" aria-hidden="true">{{ lp_reviews_star }}</span>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              {% if block.settings.date != blank %}
+                <time class="lp-reviews__date">{{ block.settings.date | escape }}</time>
+              {% endif %}
+            </div>
+
+            {% if block.settings.title != blank %}
+              <h3 class="lp-reviews__title">{{ block.settings.title | escape }}</h3>
+            {% endif %}
+            {% if block.settings.body != blank %}
+              <div class="lp-reviews__body rte">{{ block.settings.body }}</div>
+            {% endif %}
+
+            <div class="lp-reviews__author-line">
+              {% if block.settings.author != blank %}
+                <span class="lp-reviews__author">{{ block.settings.author | escape }}</span>
+              {% endif %}
+              {% if block.settings.verified %}
+                <span class="lp-reviews__verified">Verified Buyer</span>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LP reviews",
+  "tag": "section",
+  "class": "lp-reviews__wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Customer Reviews"
+    },
+    {
+      "type": "text",
+      "id": "average_rating",
+      "label": "Average rating",
+      "default": "4.74"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Review count",
+      "default": "1394"
+    },
+    {
+      "type": "range",
+      "id": "histogram_5",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "5-star reviews",
+      "default": 87
+    },
+    {
+      "type": "range",
+      "id": "histogram_4",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "4-star reviews",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "histogram_3",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "3-star reviews",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "histogram_2",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "2-star reviews",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "histogram_1",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "1-star reviews",
+      "default": 3
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme_1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 48
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Rating",
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Review"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date"
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Verified buyer",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP reviews"
+    }
+  ]
+}
+{% endschema %}

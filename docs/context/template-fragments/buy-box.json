@@ -1,0 +1,278 @@
+{
+  "type": "lp-buy-box",
+  "settings": {
+    "product": "teens-multivitamin",
+    "anchor_id": "standalone-product-section",
+    "subtitle": "Daily Gummies For Improved Motivation & Mood",
+    "rating_text": "1394 reviews",
+    "rating_stars": "4.7",
+    "description": "A unique organic fruit and veggie blend, plus 12 key nutrients.",
+    "flavor_text": "Flavor: 🍊 Orange",
+    "frequency_heading": "Delivery Frequency",
+    "sub_title": "Monthly",
+    "sub_compare": "$39",
+    "sub_price": "$23.40",
+    "sub_perks": "<p>FREE Gift on orders +$75</p><p>FREE Shipping on first order</p><p>Cancel anytime, no questions asked</p>",
+    "sub_badge": "Lowest Price Anywhere!",
+    "ot_title": "One-Time",
+    "ot_compare": "$39",
+    "ot_price": "$27.30",
+    "ot_note": "with code FIREWORKS",
+    "ot_warning": "<p>You're missing out on free shipping!</p><p>You're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!</p>",
+    "quantity_heading": "Quantity",
+    "qty_note": "30 Servings Per Bottle",
+    "gift_heading": "Unlock Your Free Gift",
+    "gift_sub": "12 Servings of Electrolyte Drink Mix For The Whole Family.",
+    "gift_image": "",
+    "gift_image_url": "//firstday.com/cdn/shop/files/hydration-12-pack.png?v=1781107632&width=220",
+    "gift_image_alt": "Rapid Hydration Electrolyte Support - Gift",
+    "gift_compare": "$25.00",
+    "gift_price": "FREE",
+    "gift_progress_text": "You are $75 away, keep going!",
+    "gift_threshold": "$75",
+    "urgency_text": "🔥 Limited-Time Offer 🔥 Flash Sale Ending Soon Get Up To 52% Off",
+    "guarantee_text": "45 Day Money Back Guarantee",
+    "cta_label": "Add To Cart",
+    "color_scheme": "scheme_1",
+    "padding_top": 32,
+    "padding_bottom": 32
+  },
+  "blocks": {
+    "tab_toddlers": {
+      "type": "product_tab",
+      "settings": {
+        "label": "Toddlers'",
+        "url": "/products/the-no-junk-toddlers-multivitamin",
+        "active": false
+      }
+    },
+    "tab_kids": {
+      "type": "product_tab",
+      "settings": {
+        "label": "Kids'",
+        "url": "/products/kids-enrichment-vitamin",
+        "active": false
+      }
+    },
+    "tab_teens": {
+      "type": "product_tab",
+      "settings": {
+        "label": "Teens'",
+        "url": "",
+        "active": true
+      }
+    },
+    "benefit_health": {
+      "type": "benefit",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png?v=1781709850&width=64",
+        "title": "Improve Overall Health & Nutrition",
+        "stat": "98%",
+        "text": "of parents say First Day vitamins support their teen's overall health & nutrition.†"
+      }
+    },
+    "benefit_mood": {
+      "type": "benefit",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Vector_6.png?v=1781280482&width=64",
+        "title": "Boost Mood & Motivation",
+        "stat": "83%",
+        "text": "of customers say First Day vitamins support their teens' overall mood & behavior, and saw improved motivation for school.†"
+      }
+    },
+    "benefit_skin": {
+      "type": "benefit",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png?v=1781711382&width=64",
+        "title": "Promote Clear Skin",
+        "stat": "75%",
+        "text": "said they saw an improvement to skin health, including reduced acne.†"
+      }
+    },
+    "quantity_1": {
+      "type": "qty_tier",
+      "settings": {
+        "label": "1‎ Bottle",
+        "savings": "Save $15.80",
+        "selected": true
+      }
+    },
+    "quantity_2": {
+      "type": "qty_tier",
+      "settings": {
+        "label": "2‎ Bottles",
+        "savings": "Save $31.59",
+        "selected": false
+      }
+    },
+    "quantity_3": {
+      "type": "qty_tier",
+      "settings": {
+        "label": "3‎ Bottles",
+        "savings": "Save $47.39",
+        "selected": false
+      }
+    },
+    "quantity_4": {
+      "type": "qty_tier",
+      "settings": {
+        "label": "4‎ Bottles",
+        "savings": "Save $63.18",
+        "selected": false
+      }
+    },
+    "upsell_brain": {
+      "type": "upsell",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Product_Over_White.jpg?v=1759255674&width=64",
+        "alt": "The Teens' Daily Focus Brain Support dietary supplement features blue and teal packaging with 60 gummies per container and two yellow gummies in front, providing focus support designed specifically for teens.",
+        "title": "Teens' Daily Focus Brain Support",
+        "subtitle": "Support for focus, learning, and memory recall.",
+        "compare_price": "$49.00",
+        "price": "$29.40"
+      }
+    },
+    "upsell_magnesium": {
+      "type": "upsell",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/TeensMagnesiumPrimary.jpg?v=1763588577&width=64",
+        "alt": "A container labeled Teens’ Nighttime Reset Magnesium sits upright, with two berry-shaped red gummies beside it. The label states No Junk and the calming supplement for teens includes 60 magnesium gummies.",
+        "title": "Teens’ Nighttime Reset Magnesium",
+        "subtitle": "Melatonin-free support for relaxation & sleep.",
+        "compare_price": "$39.00",
+        "price": "$23.40"
+      }
+    },
+    "upsell_probiotic": {
+      "type": "upsell",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/GUEST_9c904f2b-66b3-4c5c-8a4e-454f8e3bbd90.avif?v=1785254909&width=64",
+        "alt": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
+        "title": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
+        "subtitle": "To support immunity, digestion, and skin health.",
+        "compare_price": "$49.00",
+        "price": "$29.40"
+      }
+    },
+    "carousel_01": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1781036994&width=1200",
+        "alt": "The \"No Junk\"™ Teens’ Multi"
+      }
+    },
+    "carousel_02": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Rebrand_Broad_Images_16.png?v=1762439551&width=3840",
+        "alt": "First Day Teens Multi + Superfoods dietary supplement packaging with a gummy on a white background"
+      }
+    },
+    "carousel_03": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg?v=1761070439&width=3840",
+        "alt": "Product packaging with text about &"
+      }
+    },
+    "carousel_04": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg?v=1770321932&width=3840",
+        "alt": "Gummy vitamins with health benefits listed on a blue background. Free of artificial dyes."
+      }
+    },
+    "carousel_05": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg?v=1761070439&width=3840",
+        "alt": "93% of kids don&"
+      }
+    },
+    "carousel_06": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg?v=1770321932&width=3840",
+        "alt": "Better health for the whole family. pictures of happy customers"
+      }
+    },
+    "carousel_07": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg?v=1779938218&width=3840",
+        "alt": "55 million gummies sold in 2024"
+      }
+    },
+    "carousel_08": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg?v=1754579903&width=3840",
+        "alt": "image of product packaging showing packaging has a new look"
+      }
+    },
+    "carousel_09": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg?v=1754579903&width=3840",
+        "alt": "Blue container with gummies and superfoods on a light blue background, featuring text about nutrition and product features."
+      }
+    },
+    "carousel_10": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg?v=1754579903&width=3840",
+        "alt": "97% of customers prefer first day"
+      }
+    },
+    "carousel_11": {
+      "type": "carousel_image",
+      "settings": {
+        "image": "",
+        "image_url": "//firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=3840",
+        "alt": "Supplement facts label with clean label project logo on a blue background"
+      }
+    }
+  },
+  "block_order": [
+    "tab_toddlers",
+    "tab_kids",
+    "tab_teens",
+    "benefit_health",
+    "benefit_mood",
+    "benefit_skin",
+    "quantity_1",
+    "quantity_2",
+    "quantity_3",
+    "quantity_4",
+    "upsell_brain",
+    "upsell_magnesium",
+    "upsell_probiotic",
+    "carousel_01",
+    "carousel_02",
+    "carousel_03",
+    "carousel_04",
+    "carousel_05",
+    "carousel_06",
+    "carousel_07",
+    "carousel_08",
+    "carousel_09",
+    "carousel_10",
+    "carousel_11"
+  ]
+}
