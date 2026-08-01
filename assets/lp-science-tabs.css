@@ -78,7 +78,7 @@
 .lp-science-tabs__media {
   width: min(100%, 35rem);
   margin: 0 auto;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 1.6rem;
   background: rgba(var(--color-foreground), 0.08);
@@ -141,14 +141,14 @@
   }
 
   .lp-science-tabs__panel {
-    grid-template-columns: minmax(0, 1fr) minmax(28rem, 35rem);
+    grid-template-columns: minmax(0, 1fr) minmax(26rem, 34rem);
     gap: 6.4rem;
     padding: 3.2rem;
   }
 
   .lp-science-tabs__media {
     width: 100%;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 1 / 1;
     grid-column: 2;
     grid-row: 1;
   }

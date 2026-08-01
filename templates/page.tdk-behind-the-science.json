@@ -211,7 +211,7 @@
           "type": "product_tab",
           "settings": {
             "label": "Toddlers'",
-            "url": "/products/the-no-junk-toddlers-multivitamin",
+            "url": "",
             "active": false
           }
         },
@@ -219,7 +219,7 @@
           "type": "product_tab",
           "settings": {
             "label": "Kids'",
-            "url": "/products/kids-enrichment-vitamin",
+            "url": "",
             "active": false
           }
         },
@@ -512,7 +512,8 @@
         "carousel_09",
         "carousel_10",
         "carousel_11"
-      ]
+      ],
+      "_note_tabs": "product_tab urls are empty in this demo store: in production they point to the sibling age-segment LPs (kde-/wds- handles in the sitemap), which only exist on firstday.com. The section renders a tab without a url as a static pill instead of a link, so nothing 404s here."
     },
     "urgency_banner": {
       "type": "lp-urgency-banner",

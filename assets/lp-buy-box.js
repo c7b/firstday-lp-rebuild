@@ -8,6 +8,17 @@ class LpBuyBox extends HTMLElement {
     this.mediaThumbs = Array.from(this.querySelectorAll('[data-media-thumb]'));
     this.quantityInput = this.querySelector('[data-quantity-input]');
     this.quantityRadios = Array.from(this.querySelectorAll('[data-quantity-radio]'));
+    this.prevButton = this.querySelector('[data-media-prev]');
+    this.nextButton = this.querySelector('[data-media-next]');
+    this.currentMedia = 0;
+
+    if (this.mediaSlides.length < 2) {
+      if (this.prevButton) this.prevButton.hidden = true;
+      if (this.nextButton) this.nextButton.hidden = true;
+    }
+
+    if (this.prevButton) this.prevButton.addEventListener('click', () => this.step(-1));
+    if (this.nextButton) this.nextButton.addEventListener('click', () => this.step(1));
 
     this.mediaThumbs.forEach((thumb) => {
       thumb.addEventListener('click', () => {
@@ -59,7 +70,24 @@ class LpBuyBox extends HTMLElement {
     if (this.mediaObserver) this.mediaObserver.disconnect();
   }
 
+  step(delta) {
+    const count = this.mediaSlides.length;
+    if (!count) return;
+
+    const next = (this.currentMedia + delta + count) % count;
+    const slide = this.mediaSlides[next];
+    if (!slide) return;
+
+    slide.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'nearest',
+      inline: 'start',
+    });
+    this.setCurrentMedia(next);
+  }
+
   setCurrentMedia(index) {
+    this.currentMedia = index;
     this.mediaThumbs.forEach((thumb) => {
       thumb.setAttribute('aria-current', String(Number(thumb.dataset.mediaIndex) === index));
     });

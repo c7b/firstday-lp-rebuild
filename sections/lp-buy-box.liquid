@@ -50,7 +50,14 @@
   <div class="lp-buy-box__page-width">
     <div class="lp-buy-box__layout">
       <div class="lp-buy-box__media-column">
-        <div class="lp-buy-box__media-track" data-media-track>
+        <div class="lp-buy-box__media-frame">
+          <button class="lp-buy-box__media-nav lp-buy-box__media-nav--prev" type="button" data-media-prev aria-label="Previous image">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="lp-buy-box__media-nav lp-buy-box__media-nav--next" type="button" data-media-next aria-label="Next image">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="lp-buy-box__media-track" data-media-track>
           {% if buy_product.media.size > 0 %}
             {% for media in buy_product.media %}
               <div
@@ -111,6 +118,7 @@
               {% endif %}
             {% endfor %}
           {% endif %}
+        </div>
         </div>
 
         {% if buy_product.media.size > 1 or fallback_media_count > 1 %}
