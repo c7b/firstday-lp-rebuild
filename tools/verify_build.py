@@ -20,7 +20,7 @@ CTX = ROOT / "docs" / "context" / "sections"
 
 EXEMPT_KEYS = {"cta_link", "color_scheme", "anchor_id", "url", "video_url", "poster_url",
                "media_position", "image_position", "style", "product"}
-URLISH = re.compile(r"^(#|https?:|//|/)|\.(png|jpg|jpeg|gif|webp|avif|svg|mp4|css|js)(\?|$)")
+URLISH = re.compile(r"^(gid://|https?:|//|/)|\.(png|jpg|jpeg|gif|webp|avif|svg|mp4|css|js)(\?|$)")
 
 
 def norm(s):
