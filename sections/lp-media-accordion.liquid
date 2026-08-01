@@ -21,17 +21,21 @@
           >
             <summary class="lp-media-accordion__summary">
               <span class="lp-media-accordion__item-header">
-                {% if block.settings.icon != blank %}
-                  {{ block.settings.icon | image_url: width: 144 | image_tag: class: 'lp-media-accordion__icon', widths: '40, 56, 72, 144', sizes: '56px', loading: 'lazy', alt: block.settings.icon_alt }}
-                {% elsif block.settings.icon_url != blank %}
-                  <img
-                    class="lp-media-accordion__icon"
-                    src="{{ block.settings.icon_url }}"
-                    alt="{{ block.settings.icon_alt | escape }}"
-                    width="72"
-                    height="72"
-                    loading="lazy"
-                  >
+                {% if block.settings.icon != blank or block.settings.icon_url != blank %}
+                  <span class="lp-media-accordion__icon-chip">
+                    {% if block.settings.icon != blank %}
+                      {{ block.settings.icon | image_url: width: 144 | image_tag: class: 'lp-media-accordion__icon', widths: '40, 56, 72, 144', sizes: '40px', loading: 'lazy', alt: block.settings.icon_alt }}
+                    {% elsif block.settings.icon_url != blank %}
+                      <img
+                        class="lp-media-accordion__icon"
+                        src="{{ block.settings.icon_url }}"
+                        alt="{{ block.settings.icon_alt | escape }}"
+                        width="72"
+                        height="72"
+                        loading="lazy"
+                      >
+                    {% endif %}
+                  </span>
                 {% endif %}
                 <span class="lp-media-accordion__title">{{ block.settings.title | escape }}</span>
               </span>

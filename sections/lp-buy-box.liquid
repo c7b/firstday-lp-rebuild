@@ -468,18 +468,85 @@
           </div>
 
           <div class="lp-buy-box__checkout">
-            <p class="lp-buy-box__urgency">{{ section.settings.urgency_text | escape }}</p>
+            <div class="lp-buy-box__urgency">
+              <span class="lp-buy-box__urgency-eyebrow">{{ section.settings.urgency_eyebrow | escape }}</span>
+              <strong class="lp-buy-box__urgency-headline">{{ section.settings.urgency_headline | escape }}</strong>
+              <span class="lp-buy-box__urgency-offer">{{ section.settings.urgency_offer | escape }}</span>
+            </div>
             <button
               class="lp-buy-box__submit"
               type="submit"
               name="add"
               {% unless current_variant.available %}disabled{% endunless %}
             >
-              {{- section.settings.cta_label | escape -}}
+              <svg class="lp-buy-box__submit-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M3 4h2l2.1 10.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L20 8H7M9.5 20a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18 20a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+              </svg>
+              <span>{{ section.settings.cta_label | escape }}</span>
             </button>
             <p class="lp-buy-box__guarantee">{{ section.settings.guarantee_text | escape }}</p>
           </div>
         {% endform %}
+
+        <div class="lp-buy-box__stamps">
+          {% for block in section.blocks %}
+            {% if block.type == 'stamp' %}
+              <div class="lp-buy-box__stamp" {{ block.shopify_attributes }}>
+                <span>{{ block.settings.line_1 | escape }}</span>
+                <strong>{{ block.settings.line_2 | escape }}</strong>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="lp-buy-box__info-items">
+          {% for block in section.blocks %}
+            {% if block.type == 'info_item' %}
+              <details class="lp-buy-box__info-item" {{ block.shopify_attributes }}>
+                <summary class="lp-buy-box__info-summary">
+                  <span>{{ block.settings.title | escape }}</span>
+                  <svg class="lp-buy-box__info-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                    <path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                  </svg>
+                </summary>
+                <div class="lp-buy-box__info-content">
+                  {% if block.settings.body != blank %}
+                    <div class="lp-buy-box__info-richtext">{{ block.settings.body }}</div>
+                  {% endif %}
+                  {% if block.settings.image_url != blank %}
+                    <img
+                      class="lp-buy-box__info-image"
+                      src="{{ block.settings.image_url | escape }}"
+                      alt="{{ block.settings.title | escape }}"
+                      width="900"
+                      height="900"
+                      loading="lazy"
+                    >
+                  {% endif %}
+                </div>
+              </details>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="lp-buy-box__ages">
+          {% if section.settings.ages_note != blank %}
+            <p class="lp-buy-box__ages-note">{{ section.settings.ages_note | escape }}</p>
+          {% endif %}
+          <div class="lp-buy-box__age-grid">
+            {% for block in section.blocks %}
+              {% if block.type == 'age_card' %}
+                <a class="lp-buy-box__age-card" href="{{ block.settings.url }}" {{ block.shopify_attributes }}>
+                  <span class="lp-buy-box__age-copy">
+                    <strong>{{ block.settings.label | escape }}</strong>
+                    <small>{{ block.settings.sub | escape }}</small>
+                  </span>
+                  <span class="lp-buy-box__age-arrow" aria-hidden="true">→</span>
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -665,9 +732,21 @@
     },
     {
       "type": "text",
-      "id": "urgency_text",
-      "label": "Urgency text",
-      "default": "🔥 Limited-Time Offer 🔥 Flash Sale Ending Soon Get Up To 52% Off"
+      "id": "urgency_eyebrow",
+      "label": "Urgency eyebrow",
+      "default": "🔥 Limited-Time Offer 🔥"
+    },
+    {
+      "type": "text",
+      "id": "urgency_headline",
+      "label": "Urgency headline",
+      "default": "Flash Sale Ending Soon"
+    },
+    {
+      "type": "text",
+      "id": "urgency_offer",
+      "label": "Urgency offer",
+      "default": "Get Up To 52% Off"
     },
     {
       "type": "text",
@@ -679,7 +758,13 @@
       "type": "text",
       "id": "cta_label",
       "label": "CTA label",
-      "default": "Add To Cart"
+      "default": "Add To Cart & View Gift"
+    },
+    {
+      "type": "text",
+      "id": "ages_note",
+      "label": "Age note",
+      "default": "This Product is For Teens Ages 13 - 17"
     },
     {
       "type": "color_scheme",
@@ -840,6 +925,72 @@
       ]
     },
     {
+      "type": "stamp",
+      "name": "Stamp",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "line_1",
+          "label": "Line 1",
+          "default": "MONEY BACK"
+        },
+        {
+          "type": "text",
+          "id": "line_2",
+          "label": "Line 2",
+          "default": "GUARANTEE"
+        }
+      ]
+    },
+    {
+      "type": "info_item",
+      "name": "Info item",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Ingredients"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body"
+        },
+        {
+          "type": "text",
+          "id": "image_url",
+          "label": "Image URL"
+        }
+      ]
+    },
+    {
+      "type": "age_card",
+      "name": "Age card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Toddlers"
+        },
+        {
+          "type": "text",
+          "id": "sub",
+          "label": "Age range",
+          "default": "Ages 2 - 3"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Link"
+        }
+      ]
+    },
+    {
       "type": "carousel_image",
       "name": "Carousel image",
       "limit": 12,
@@ -872,6 +1023,9 @@
         { "type": "benefit" },
         { "type": "qty_tier" },
         { "type": "upsell" },
+        { "type": "stamp" },
+        { "type": "info_item" },
+        { "type": "age_card" },
         { "type": "carousel_image" }
       ]
     }

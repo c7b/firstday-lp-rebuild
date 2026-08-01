@@ -8,15 +8,17 @@
     "closing_text_2": "<p>That's why we’re so confident First Day will help you get the results you want. If within the first 45 days you find yourself not completely satisfied, we’ll give you your money back - no questions asked.</p>",
     "cta_label": "Try Now",
     "cta_link": "#standalone-product-section",
-    "image_url": "//firstday.com/cdn/shop/files/founder-alice.png?v=1686630957&width=1000",
+    "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/founder-alice.png?v=1785622062",
     "image_alt": "Hero image",
-    "image_mobile_url": "//firstday.com/cdn/shop/files/founder-alice.png?v=1686630957&width=800",
+    "image_mobile_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/founder-alice_14c6e35b-382f-42de-95ef-2376518ef595.png?v=1785622062",
     "image_mobile_alt": "Hero image",
     "image_position": "right",
     "color_scheme": "scheme-1",
     "padding_top": 32,
     "padding_bottom": 32,
-    "anchor_id": ""
+    "anchor_id": "",
+    "image": "shopify://shop_images/founder-alice.png",
+    "image_mobile": "shopify://shop_images/founder-alice_14c6e35b-382f-42de-95ef-2376518ef595.png"
   },
   "blocks": {
     "stat_microplastics": {
@@ -47,5 +49,9 @@
       }
     }
   },
-  "block_order": ["stat_microplastics", "stat_additives", "stat_nutrients"]
+  "block_order": [
+    "stat_microplastics",
+    "stat_additives",
+    "stat_nutrients"
+  ]
 }

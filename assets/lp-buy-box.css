@@ -95,6 +95,8 @@
 .lp-buy-box__thumbnail:focus-visible,
 .lp-buy-box__product-tab:focus-visible,
 .lp-buy-box__benefit-summary:focus-visible,
+.lp-buy-box__info-summary:focus-visible,
+.lp-buy-box__age-card:focus-visible,
 .lp-buy-box__upsell-button:focus-visible,
 .lp-buy-box__submit:focus-visible {
   outline: 0.2rem solid rgb(var(--color-foreground));
@@ -160,6 +162,7 @@
 .lp-buy-box__rating-icon {
   width: 2rem;
   height: 2rem;
+  color: #f8b400;
 }
 
 .lp-buy-box__rating-value {
@@ -298,15 +301,17 @@
   display: block;
   min-height: 4.4rem;
   padding: 1.6rem;
-  border: 0.15rem solid rgba(var(--color-foreground), 0.24);
+  border: 0.1rem solid #d9d9d9;
   border-radius: 1.2rem;
+  background: #fff;
   cursor: pointer;
 }
 
 .lp-buy-box__choice-input:checked + .lp-buy-box__delivery-card,
 .lp-buy-box__choice-input:checked + .lp-buy-box__quantity-card {
-  border-color: rgb(var(--color-foreground));
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
+  border: 0.2rem solid #486ced;
+  background: #e4f5ff;
+  box-shadow: none;
 }
 
 .lp-buy-box__choice-input:focus-visible + .lp-buy-box__delivery-card,
@@ -327,7 +332,7 @@
   width: 2rem;
   height: 2rem;
   margin-top: 0.1rem;
-  border: 0.15rem solid rgba(var(--color-foreground), 0.45);
+  border: 0.15rem solid #b7b7b7;
   border-radius: 50%;
 }
 
@@ -335,8 +340,12 @@
   position: absolute;
   inset: 0.35rem;
   border-radius: 50%;
-  background: rgb(var(--color-foreground));
+  background: #486ced;
   content: '';
+}
+
+.lp-buy-box__choice-input:checked + .lp-buy-box__delivery-card .lp-buy-box__radio-mark {
+  border-color: #486ced;
 }
 
 .lp-buy-box__delivery-title {
@@ -411,8 +420,8 @@
   margin: 1.2rem 0 0 3rem;
   padding: 0.45rem 0.8rem;
   border-radius: 999rem;
-  background: rgb(var(--color-foreground));
-  color: rgb(var(--color-background));
+  background: #078942;
+  color: #fff;
   font-size: 1.1rem;
   font-weight: 800;
   line-height: 1;
@@ -444,22 +453,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-height: 7.2rem;
-  padding: 1rem 0.8rem;
-  border: 0.15rem solid rgba(var(--color-foreground), 0.24);
-  border-radius: 1rem;
+  padding: 1.2rem 0 0;
+  overflow: hidden;
+  border: 0.1rem solid #d9d9d9;
+  border-radius: 1.2rem;
+  background: #fff;
   cursor: pointer;
   text-align: center;
 }
 
 .lp-buy-box__quantity-label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 0 0.8rem 1rem;
   font-size: 1.35rem;
   line-height: 1.2;
 }
 
 .lp-buy-box__savings {
-  margin-top: 0.5rem;
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  padding: 0.55rem 0.5rem;
+  background: #078942;
+  color: #fff;
   font-size: 1.05rem;
   font-weight: 700;
   line-height: 1.2;
@@ -638,24 +658,41 @@
 }
 
 .lp-buy-box__urgency {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
   margin: 0 0 1rem;
   font-size: 1.2rem;
-  font-weight: 800;
   line-height: 1.35;
 }
 
+.lp-buy-box__urgency-headline {
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
 .lp-buy-box__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
   width: 100%;
   min-height: 5.6rem;
   padding: 1.2rem 2rem;
   border: 0;
   border-radius: 999rem;
-  background: rgb(var(--color-button));
-  color: rgb(var(--color-button-text));
+  background: #486ced;
+  color: #fff;
   font: inherit;
   font-size: 1.7rem;
   font-weight: 800;
   cursor: pointer;
+}
+
+.lp-buy-box__submit-icon {
+  width: 2.2rem;
+  height: 2.2rem;
 }
 
 .lp-buy-box__submit:hover {
@@ -671,6 +708,158 @@
   margin: 1rem 0 0;
   font-size: 1.2rem;
   font-weight: 700;
+}
+
+.lp-buy-box__stamps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.8rem, 3vw, 2rem);
+  margin-top: 2.4rem;
+}
+
+.lp-buy-box__stamp {
+  display: flex;
+  flex: 0 1 9.6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: clamp(8rem, 25vw, 9.6rem);
+  max-width: 9.6rem;
+  aspect-ratio: 1;
+  padding: 1rem 0.6rem;
+  border-radius: 50%;
+  background: #e4f5ff;
+  color: #2c3e50;
+  font-size: clamp(0.85rem, 2.3vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.lp-buy-box__stamp span {
+  transform: rotate(-3deg);
+}
+
+.lp-buy-box__stamp strong {
+  transform: rotate(3deg);
+}
+
+.lp-buy-box__info-items {
+  margin-top: 2.4rem;
+  border-bottom: 0.1rem solid #87adf5;
+}
+
+.lp-buy-box__info-item {
+  border-top: 0.1rem solid #87adf5;
+}
+
+.lp-buy-box__info-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 5.6rem;
+  padding: 0.8rem 0;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.lp-buy-box__info-summary::-webkit-details-marker {
+  display: none;
+}
+
+.lp-buy-box__info-chevron {
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  transition: transform 180ms ease;
+}
+
+.lp-buy-box__info-item[open] .lp-buy-box__info-chevron {
+  transform: rotate(180deg);
+}
+
+.lp-buy-box__info-content {
+  padding: 0 0 1.8rem;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.lp-buy-box__info-richtext > :first-child {
+  margin-top: 0;
+}
+
+.lp-buy-box__info-richtext > :last-child {
+  margin-bottom: 0;
+}
+
+.lp-buy-box__info-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 1.2rem;
+}
+
+.lp-buy-box__ages {
+  margin-top: 2.4rem;
+}
+
+.lp-buy-box__ages-note {
+  margin: 0;
+  padding: 1.2rem 1.6rem;
+  border-radius: 1rem;
+  background: #e4f5ff;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.lp-buy-box__age-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.lp-buy-box__age-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 7rem;
+  padding: 1.2rem;
+  border: 0.1rem solid #87adf5;
+  border-radius: 1rem;
+  background: #fff;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.lp-buy-box__age-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.lp-buy-box__age-copy strong {
+  font-size: 1.4rem;
+}
+
+.lp-buy-box__age-copy small {
+  font-size: 1.1rem;
+}
+
+.lp-buy-box__age-arrow {
+  color: #486ced;
+  font-size: 2rem;
+  line-height: 1;
 }
 
 @media screen and (min-width: 750px) {
@@ -705,7 +894,8 @@
     scroll-behavior: auto;
   }
 
-  .lp-buy-box__benefit-chevron {
+  .lp-buy-box__benefit-chevron,
+  .lp-buy-box__info-chevron {
     transition: none;
   }
 }

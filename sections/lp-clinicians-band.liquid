@@ -1,0 +1,88 @@
+{% comment %}
+  Navy trust band after the hero. On the original this is FrontRow MD script-injected content
+  (invisible in DOM dumps, renders on scroll) — rebuilt static, copy transplanted from the
+  rendered page. "Learn more" is a stub span: the target is the app's modal.
+{% endcomment %}
+
+<section
+  id="{{ section.settings.anchor_id | default: section.id }}"
+  class="lp-clinicians-band"
+>
+  <p class="lp-clinicians-band__title">❧ {{ section.settings.title | escape }} ☙</p>
+  <p class="lp-clinicians-band__text">
+    <strong>{{ section.settings.text_bold | escape }}</strong>{{ section.settings.text | escape }}
+    <span class="lp-clinicians-band__more">{{ section.settings.more_label | escape }}</span>
+  </p>
+</section>
+
+<style>
+  .lp-clinicians-band {
+    padding: 20px 24px;
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+  }
+
+  .lp-clinicians-band__title {
+    margin: 0 0 6px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+  }
+
+  .lp-clinicians-band__text {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    opacity: 0.95;
+  }
+
+  .lp-clinicians-band__more {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "LP clinicians band",
+  "tag": "section",
+  "class": "section-lp-clinicians-band",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Clinicians' Choice"
+    },
+    {
+      "type": "text",
+      "id": "text_bold",
+      "label": "Bold lead",
+      "default": "472 clinicians"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": ", including OB/GYNs, share First Day on FrontrowMD without compensation."
+    },
+    {
+      "type": "text",
+      "id": "more_label",
+      "label": "More label (stub)",
+      "default": "Learn more"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID"
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP clinicians band"
+    }
+  ]
+}
+{% endschema %}

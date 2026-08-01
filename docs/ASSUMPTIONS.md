@@ -16,12 +16,16 @@ per-page content lives in the template or in metaobjects.
 1. **19 original sections → 8 owned sections, 10 template instances.** The two Replo-exported
    heroes are one `lp-hero` with a `style` setting; the two accordions and the FAQ are three
    instances of one `lp-media-accordion`.
-2. **8 of the 19 original sections render no visible content** — verified twice: in the saved
+2. **7 of the 19 original sections render no visible content** — verified twice: in the saved
    snapshot AND in a rendered-DOM dump of the live page with JS executed (`_dropped.json`).
    They were not rebuilt: `temp_css` (722KB of injected CSS), `custom_liquid`, an empty
-   marquee, timeline, a-plus cards, image-with-text, benefits-split, and the FrontRow MD embed.
-   This is the frankenstein cleanup the exercise implies — deleting dead weight is a feature,
-   not missing scope.
+   marquee, timeline, a-plus cards, image-with-text, benefits-split. This is the frankenstein
+   cleanup the exercise implies — deleting dead weight is a feature, not missing scope.
+   **Correction logged during visual QA:** the FrontRow MD section was initially classed as
+   dead (1KB, empty in both dumps) — it's actually a cross-origin **iframe** that only paints
+   on scroll. Visual QA caught it; it's now rebuilt as a static section (`lp-clinician-reviews`)
+   with the iframe's real public content transplanted, keeping the "don't mirror app data"
+   rule as a documented exception with the reason: visible content on the target page wins.
 3. **The FAQ renders empty on the live page too.** Parity means we don't ship a FAQ either.
    The third `lp-media-accordion` instance exists as a ready fragment
    (`template-fragments/faq.json`) for when content exists.

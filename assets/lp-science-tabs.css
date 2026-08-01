@@ -66,6 +66,9 @@
   align-items: center;
   max-width: 94rem;
   margin: 0 auto;
+  padding: 2rem;
+  background: #f2fbff;
+  border-radius: 1.6rem;
 }
 
 .lp-science-tabs__panel[hidden] {
@@ -75,7 +78,7 @@
 .lp-science-tabs__media {
   width: min(100%, 35rem);
   margin: 0 auto;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   border-radius: 1.6rem;
   background: rgba(var(--color-foreground), 0.08);
@@ -138,11 +141,20 @@
   }
 
   .lp-science-tabs__panel {
-    grid-template-columns: minmax(28rem, 35rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(28rem, 35rem);
     gap: 6.4rem;
+    padding: 3.2rem;
   }
 
   .lp-science-tabs__media {
     width: 100%;
+    aspect-ratio: 9 / 16;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .lp-science-tabs__panel-content {
+    grid-column: 1;
+    grid-row: 1;
   }
 }

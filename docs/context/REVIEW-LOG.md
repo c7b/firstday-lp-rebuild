@@ -70,3 +70,28 @@ Also caught in the same pass: every `color_scheme` default said `scheme_1`; Dawn
 ids are `scheme-N` (dashed). Invalid scheme ids don't error — they silently fall back, which
 would have shown up as subtle color drift in visual QA. Fixed across schemas, fragments and
 the template.
+
+## Round 4 — visual QA (side-by-side screenshots, mobile 390px, 6 segments each)
+
+Method: our page fetched with the storefront password and screenshotted from file:// (assets
+are absolute CDN URLs); the original screenshotted from the snapshot the copy was transplanted
+from (the live site rate-limits headless loads), overlay dialogs stripped. Colors sampled
+by pixel from the original's screenshots: primary #486ced, border #87adf5, pale #e4f5ff,
+green #078942, yellow #f5b313, navy #2f4158/#2c3e50.
+
+**Structure verdict: section order, copy, science tabs, trust wall, accordions — match.**
+Fix list handed to builders:
+
+1. Hero: accent/CTA colors (ours drifted orange), CTA after media on mobile, sizes.
+2. Accordions: bordered-card items, blue full-width CTA pill.
+3. Buy box: selected-state colors (delivery + qty), default qty = 2 bottles, ATC label is
+   actually "Add To Cart & View Gift" + cart icon, and THREE missing tail blocks: trust
+   stamps, info accordions (Ingredients/Supplement Facts/Subscription Details), age-routing
+   panel ("This Product is For Teens Ages 13–17" + Toddlers/Kids cards).
+4. Urgency banner: yellow #f5b313 band + navy button, not a plain text strip.
+5. Trust wall stats: rows with outlined oval values (we'd invented rings — spec bug, mine).
+6. Reviews: blue stars, summary row layout, Verified chip, histogram mobile-hidden.
+7. **Miss caught: FrontRow MD clinician reviews render on the real page** (lazy iframe —
+   invisible to both DOM dumps, visible to a scrolled screenshot). New `lp-clinician-reviews`
+   static section, content transplanted from the iframe's public URL. ASSUMPTIONS corrected
+   (8 dead sections → 7 + 1 documented stub exception).

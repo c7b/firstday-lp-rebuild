@@ -13,6 +13,7 @@ FRAGMENTS = ROOT / "docs" / "context" / "template-fragments"
 # visible order of the original page, dead sections dropped
 ORDER = [
     ("hero_opener", "hero-opener.json"),
+    ("clinicians_band", "clinicians-band.json"),
     ("accordion_nutrients", "accordion-nutrients.json"),
     ("science_tabs", "science-tabs.json"),
     ("buy_box", "buy-box.json"),
@@ -20,6 +21,7 @@ ORDER = [
     ("trust_wall", "trust-wall.json"),
     ("accordion_raising_bar", "accordion-raising-bar.json"),
     ("comparison_table", "comparison-table.json"),
+    ("clinician_reviews", "clinician-reviews.json"),
     ("reviews", "reviews.json"),
     ("hero_closer", "hero-closer.json"),
 ]

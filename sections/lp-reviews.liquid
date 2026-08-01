@@ -16,13 +16,14 @@
 
     <div class="lp-reviews__summary">
       <div class="lp-reviews__score">
-        <p class="lp-reviews__average">{{ section.settings.average_rating | escape }}</p>
+        <p class="lp-reviews__average">{{ section.settings.average_rating | plus: 0 | round: 1 }}</p>
         <div class="lp-reviews__stars" role="img" aria-label="{{ section.settings.average_rating | escape }} out of 5">
           {% for star_index in (1..5) %}
             {{ lp_reviews_star }}
           {% endfor %}
         </div>
         <p class="lp-reviews__count">{{ section.settings.review_count | plus: 0 | number_with_delimiter }} reviews</p>
+        <span class="lp-reviews__summary-verified">Verified</span>
       </div>
 
       <div class="lp-reviews__histogram" aria-label="Rating distribution">
@@ -38,6 +39,9 @@
           </div>
         {% endfor %}
       </div>
+
+      {% comment %}The real button belongs to the review app.{% endcomment %}
+      <span class="lp-reviews__write-review" role="none">{{ section.settings.write_a_review | escape }}</span>
     </div>
 
     {% if section.blocks.size > 0 %}
@@ -104,6 +108,12 @@
       "id": "review_count",
       "label": "Review count",
       "default": "1394"
+    },
+    {
+      "type": "text",
+      "id": "write_a_review",
+      "label": "Write a review label",
+      "default": "Write a review"
     },
     {
       "type": "range",

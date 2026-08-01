@@ -221,3 +221,7 @@
     height: auto;
   }
 }
+
+/* functional marks: explicit colors — never scheme-dependent */
+.lp-comparison-table__mark--yes svg { color: #fff; }
+.lp-comparison-table__mark--no svg { color: #e34d42; }

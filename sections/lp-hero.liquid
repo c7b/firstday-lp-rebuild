@@ -14,6 +14,7 @@
 >
   <div class="lp-hero__container">
     <div class="lp-hero__content">
+      <div class="lp-hero__copy">
       {% if section.settings.style == 'product' %}
         {% if section.settings.badge_text != blank %}
           <div class="lp-hero__badge" aria-label="{{ section.settings.badge_text | escape }}">
@@ -55,13 +56,16 @@
           <div class="lp-hero__closing rte">{{ section.settings.closing_text_2 }}</div>
         {% endif %}
       {% endif %}
+      </div>
 
-      {% if section.settings.cta_label != blank and section.settings.cta_link != blank %}
-        <a class="lp-hero__cta" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label | escape }}</a>
-      {% endif %}
-      {% if section.settings.style == 'product' and section.settings.guarantee_text != blank %}
-        <p class="lp-hero__guarantee">{{ section.settings.guarantee_text | escape }}</p>
-      {% endif %}
+      <div class="lp-hero__actions">
+        {% if section.settings.cta_label != blank and section.settings.cta_link != blank %}
+          <a class="lp-hero__cta" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label | escape }}</a>
+        {% endif %}
+        {% if section.settings.style == 'product' and section.settings.guarantee_text != blank %}
+          <p class="lp-hero__guarantee">{{ section.settings.guarantee_text | escape }}</p>
+        {% endif %}
+      </div>
     </div>
 
     <div class="lp-hero__media">

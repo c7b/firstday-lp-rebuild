@@ -3,7 +3,7 @@
   "settings": {
     "heading": "Most Kids Are <span>Missing Key Nutrients</span>. Get Help in Just 2 Gummies.",
     "show_media": true,
-    "image_url": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1500",
+    "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/wheel-teens-multi-tdk.jpg?v=1785622045",
     "media_position": "left",
     "first_open": true,
     "exclusive": true,
@@ -13,16 +13,88 @@
     "color_scheme": "scheme-1",
     "padding_top": 48,
     "padding_bottom": 48,
-    "anchor_id": "accordion_block_driBft"
+    "anchor_id": "accordion_block_driBft",
+    "image": "shopify://shop_images/wheel-teens-multi-tdk.jpg"
   },
   "blocks": {
-    "stress_mood_swings": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/icon-stress-moody.webp?v=1772658265&width=72", "icon_alt": "Stressed Face Icon", "title": "Stress & Mood Swings", "body": "<p>With Vitamin B6 for mood regulation and Vitamin B12 for energy balance, these gummies help support emotional stability.*</p>" } },
-    "lack_motivation": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/icon-pencil.png?v=1772577796&width=72", "icon_alt": "", "title": "Lack of Motivation", "body": "<p>Packed with Vitamin B1 for brain health and Vitamin B2 for cognitive support - to help your teen stay on track while they balance school, sports, and everything in between.*</p>" } },
-    "bad_skin": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/icon-bad-skin.avif?v=1772658393&width=72", "icon_alt": "Skin with Pimple Icon.", "title": "Bad Skin", "body": "<p>Vitamin A and Vitamin E support skin health, helping teens maintain a clear and balanced complexion.</p>" } },
-    "weakened_immunity": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/icon-immunity.avif?v=1772577642&width=72", "icon_alt": "", "title": "Weakened Immunity", "body": "<p>With immune-supporting Vitamin C and D3, plus key B vitamins that help keep their systems running smoothly. Our formula helps build a strong foundation to tackle whatever the day throws at them.</p>" } },
-    "trouble_sleeping": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72", "icon_alt": "", "title": "Trouble Sleeping", "body": "<p>Vitamin D3 helps regulate melatonin, the hormone that controls sleep cycles. Combined with B6, it supports calmer bedtimes and better rest for growing toddlers.*</p>" } },
-    "poor_sleep_habits": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72", "icon_alt": "", "title": "Poor Sleep Habits", "body": "<p>Vitamin D3 and Magnesium work together to encourage restful sleep, so kids wake up refreshed and ready to conquer their goals.*</p>" } },
-    "picky_eating": { "type": "item", "settings": { "icon_url": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72", "icon_alt": "", "title": "Picky Eating", "body": "<p>Vitamin A and Vitamin B9 support cell growth and development, helping to fill in nutritional gaps that teens may have when they only want junk food or continue to skip meals.*</p>" } }
+    "stress_mood_swings": {
+      "type": "item",
+      "settings": {
+        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-stress-moody.png?v=1785622045",
+        "icon_alt": "Stressed Face Icon",
+        "title": "Stress & Mood Swings",
+        "body": "<p>With Vitamin B6 for mood regulation and Vitamin B12 for energy balance, these gummies help support emotional stability.*</p>",
+        "icon": "shopify://shop_images/icon-stress-moody.png"
+      }
+    },
+    "lack_motivation": {
+      "type": "item",
+      "settings": {
+        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-pencil.png?v=1785622046",
+        "icon_alt": "",
+        "title": "Lack of Motivation",
+        "body": "<p>Packed with Vitamin B1 for brain health and Vitamin B2 for cognitive support - to help your teen stay on track while they balance school, sports, and everything in between.*</p>",
+        "icon": "shopify://shop_images/icon-pencil.png"
+      }
+    },
+    "bad_skin": {
+      "type": "item",
+      "settings": {
+        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-bad-skin.png?v=1785622046",
+        "icon_alt": "Skin with Pimple Icon.",
+        "title": "Bad Skin",
+        "body": "<p>Vitamin A and Vitamin E support skin health, helping teens maintain a clear and balanced complexion.</p>",
+        "icon": "shopify://shop_images/icon-bad-skin.png"
+      }
+    },
+    "weakened_immunity": {
+      "type": "item",
+      "settings": {
+        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-immunity.png?v=1785622047",
+        "icon_alt": "",
+        "title": "Weakened Immunity",
+        "body": "<p>With immune-supporting Vitamin C and D3, plus key B vitamins that help keep their systems running smoothly. Our formula helps build a strong foundation to tackle whatever the day throws at them.</p>",
+        "icon": "shopify://shop_images/icon-immunity.png"
+      }
+    },
+    "trouble_sleeping": {
+      "type": "item",
+      "settings": {
+        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-moon.png?v=1785622047",
+        "icon_alt": "",
+        "title": "Trouble Sleeping",
+        "body": "<p>Vitamin D3 helps regulate melatonin, the hormone that controls sleep cycles. Combined with B6, it supports calmer bedtimes and better rest for growing toddlers.*</p>",
+        "icon": "shopify://shop_images/icon-moon.png"
+      }
+    },
+    "poor_sleep_habits": {
+      "type": "item",
+      "settings": {
+        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-moon.png?v=1785622047",
+        "icon_alt": "",
+        "title": "Poor Sleep Habits",
+        "body": "<p>Vitamin D3 and Magnesium work together to encourage restful sleep, so kids wake up refreshed and ready to conquer their goals.*</p>",
+        "icon": "shopify://shop_images/icon-moon.png"
+      }
+    },
+    "picky_eating": {
+      "type": "item",
+      "settings": {
+        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-broccoli.png?v=1785622047",
+        "icon_alt": "",
+        "title": "Picky Eating",
+        "body": "<p>Vitamin A and Vitamin B9 support cell growth and development, helping to fill in nutritional gaps that teens may have when they only want junk food or continue to skip meals.*</p>",
+        "icon": "shopify://shop_images/icon-broccoli.png"
+      }
+    }
   },
-  "block_order": ["stress_mood_swings", "lack_motivation", "bad_skin", "weakened_immunity", "trouble_sleeping", "poor_sleep_habits", "picky_eating"]
+  "block_order": [
+    "stress_mood_swings",
+    "lack_motivation",
+    "bad_skin",
+    "weakened_immunity",
+    "trouble_sleeping",
+    "poor_sleep_habits",
+    "picky_eating"
+  ]
 }

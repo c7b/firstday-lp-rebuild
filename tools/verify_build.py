@@ -49,9 +49,10 @@ def corpus_for(section_type):
         # live-reviews file has its own shape
         for r in data.get("reviews", []):
             parts.extend(str(v) for v in r.values())
-        for k in ("widget_heading", "product_avg", "product_count"):
+        for k in ("widget_heading", "product_avg", "product_count", "heading", "subheading", "intro"):
             if k in data:
                 parts.append(str(data[k]))
+        parts.extend(data.get("text_lines", []))
     return norm(" ".join(parts))
 
 
