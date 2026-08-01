@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "hero_opener": {
@@ -145,10 +136,10 @@
         "heading": "The Science Behind Our Multivitamin",
         "anchor_id": "",
         "claims": [
-          "gid://shopify/Metaobject/231412334784",
-          "gid://shopify/Metaobject/231412367552",
-          "gid://shopify/Metaobject/231412400320",
-          "gid://shopify/Metaobject/231412433088"
+          "focus-in-class",
+          "boosted-energy",
+          "balanced-moods",
+          "clear-skin"
         ]
       }
     },
