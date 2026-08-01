@@ -18,7 +18,8 @@
     "padding_bottom": 32,
     "anchor_id": "",
     "image": "shopify://shop_images/founder-alice.png",
-    "image_mobile": "shopify://shop_images/founder-alice_14c6e35b-382f-42de-95ef-2376518ef595.png"
+    "image_mobile": "shopify://shop_images/founder-alice_14c6e35b-382f-42de-95ef-2376518ef595.png",
+    "highlight_color": "#e53e3e"
   },
   "blocks": {
     "stat_microplastics": {

@@ -24,6 +24,10 @@
   <meta property="og:image:secure_url" content="https:{{ page_image | image_url }}">
   <meta property="og:image:width" content="{{ page_image.width }}">
   <meta property="og:image:height" content="{{ page_image.height }}">
+{%- else -%}
+  {%- comment -%} brand share card, same asset the live site serves {%- endcomment -%}
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0773/6511/7120/files/share-shopify-first-day-image.jpg?v=1785627109">
+  <meta property="og:image:secure_url" content="https://cdn.shopify.com/s/files/1/0773/6511/7120/files/share-shopify-first-day-image.jpg?v=1785627109">
 {%- endif -%}
 
 {%- if request.page_type == 'product' -%}
@@ -35,5 +39,6 @@
   <meta name="twitter:site" content="{{ settings.social_twitter_link | split: 'twitter.com/' | last | prepend: '@' }}">
 {%- endif -%}
 <meta name="twitter:card" content="summary_large_image">
+{%- unless page_image -%}<meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0773/6511/7120/files/share-shopify-first-day-image.jpg?v=1785627109">{%- endunless -%}
 <meta name="twitter:title" content="{{ og_title | escape }}">
 <meta name="twitter:description" content="{{ og_description | escape }}">

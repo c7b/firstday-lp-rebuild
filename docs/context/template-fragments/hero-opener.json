@@ -22,7 +22,8 @@
     "padding_bottom": 32,
     "anchor_id": "",
     "image": "shopify://shop_images/tdk-bts-clean-landsscapre-brady-bunch.jpg",
-    "image_mobile": "shopify://shop_images/tdk-bts-clean-square-brady-bunch.jpg"
+    "image_mobile": "shopify://shop_images/tdk-bts-clean-square-brady-bunch.jpg",
+    "highlight_color": "#486ced"
   },
   "blocks": {
     "testimonial_alyssa": {

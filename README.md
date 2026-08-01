@@ -47,9 +47,30 @@ tool, same box, same profile on both sides of the table.
   content, template fragments, review log)
 - `tools/` — deterministic extraction, template assembly, metaobject seeding, review gates
 
+## This is a reusable system, not one page
+
+Everything here is built to be used again by the next funnel, and by people who don't write
+Liquid:
+
+| Layer | What it is | Who owns it |
+|---|---|---|
+| `assets/lp-brand.css` | palette + type tokens (transplanted from the original's own CSS variables) | design / dev, once |
+| `sections/lp-*.liquid` | 11 generic sections, full schemas, presets — addable to any page in the theme editor | dev |
+| product **metafields** | facts that belong to the product (servings, age range, flavor) | merchandising, once per product |
+| **metaobjects** | content reused across LPs (`science_claim`) | content/compliance, once |
+| template JSON | which sections, in what order, with which copy | CRO / growth, per LP |
+
+**Live proof it composes:** `templates/page.kde-behind-the-science.json` is a second funnel
+(`/pages/kde-behind-the-science-lp`) built by `tools/build_template.py` from the same
+fragments with one override — a different product. Its buy box shows the Kids' product name,
+its own serving count, age range and flavor, because those come from that product's
+metafields. **No new Liquid, no new CSS, no new section.** That's the answer to 60 hand-cloned
+LPs.
+
 ## Creating a new LP variant (~15 min, no developer)
 
-1. `python3 tools/seed_metaobjects.py` with the variant's claims (or reuse existing entries —
-   `science_claim.product_scope` tags the product line)
-2. Copy the template fragments you want, adjust copy/URLs, run `python3 tools/build_template.py`
-3. Commit → the GitHub integration deploys; point a new page at the template
+1. Pick or seed the content: `python3 tools/seed_metaobjects.py` (science claims — reuse
+   entries via `product_scope`) and `python3 tools/seed_metafields.py` (product facts)
+2. Add a `variant(...)` block in `tools/build_template.py` with the overrides that differ,
+   then run it — the new template JSON is generated from the shared fragments
+3. Commit → the GitHub integration deploys; create the page and point it at the template

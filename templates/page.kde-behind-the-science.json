@@ -168,7 +168,7 @@
     "buy_box": {
       "type": "lp-buy-box",
       "settings": {
-        "product": "teens-multivitamin",
+        "product": "kids-multivitamin",
         "anchor_id": "standalone-product-section",
         "subtitle": "",
         "rating_text": "1394 reviews",

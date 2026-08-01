@@ -45,7 +45,7 @@
       "type": "product_tab",
       "settings": {
         "label": "Toddlers'",
-        "url": "",
+        "url": "/pages/toddlers-behind-the-science-lp",
         "active": false
       }
     },
@@ -53,7 +53,7 @@
       "type": "product_tab",
       "settings": {
         "label": "Kids'",
-        "url": "",
+        "url": "/pages/kde-behind-the-science-lp",
         "active": false
       }
     },
@@ -166,6 +166,8 @@
     "stamp_guarantee": {
       "type": "stamp",
       "settings": {
+        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/image_17.png?v=1785627107",
+        "alt": "money back guarantee",
         "line_1": "MONEY BACK",
         "line_2": "GUARANTEE"
       }
@@ -173,6 +175,8 @@
     "stamp_families": {
       "type": "stamp",
       "settings": {
+        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/image_18_23f2a83f-a228-4c73-be70-3ac38b5837dd.png?v=1785627108",
+        "alt": "1 million customers",
         "line_1": "1,000,000+",
         "line_2": "HAPPY FAMILIES"
       }
@@ -180,6 +184,8 @@
     "stamp_checkout": {
       "type": "stamp",
       "settings": {
+        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/image_23.png?v=1785627108",
+        "alt": "secure checkout",
         "line_1": "SECURE",
         "line_2": "CHECKOUT"
       }
@@ -347,6 +353,5 @@
     "carousel_10",
     "carousel_11"
   ],
-  "_note": "subtitle/description/flavor_text/qty_note/ages_note are intentionally empty: they resolve from product metafields (custom.*), seeded by tools/seed_metafields.py. Fill a setting only to override the product for one specific LP variant.",
-  "_note_tabs": "product_tab urls are empty in this demo store: in production they point to the sibling age-segment LPs (kde-/wds- handles in the sitemap), which only exist on firstday.com. The section renders a tab without a url as a static pill instead of a link, so nothing 404s here."
+  "_note": "subtitle/description/flavor_text/qty_note/ages_note are intentionally empty: they resolve from product metafields (custom.*), seeded by tools/seed_metafields.py. Fill a setting only to override the product for one specific LP variant."
 }

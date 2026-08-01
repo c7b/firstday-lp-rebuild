@@ -13,11 +13,23 @@ class LpScienceTabs extends HTMLElement {
       tab.addEventListener('keydown', (event) => this.handleKeydown(event, index));
     });
 
+    this.querySelectorAll('video').forEach((video) => {
+      video.addEventListener('click', () => {
+        if (video.paused) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+        video.closest('.lp-science-tabs__media')?.classList.toggle('is-paused', video.paused);
+      });
+    });
+
     this.reducedMotion.addEventListener('change', this.handleReducedMotion);
     this.activate(this.tabs.findIndex((tab) => tab.getAttribute('aria-selected') === 'true'));
   }
 
   disconnectedCallback() {
+    if (this.playObserver) this.playObserver.disconnect();
     if (this.reducedMotion) this.reducedMotion.removeEventListener('change', this.handleReducedMotion);
   }
 
@@ -59,13 +71,39 @@ class LpScienceTabs extends HTMLElement {
       const video = panel.querySelector('video');
       if (!video) return;
 
-      video.preload = selected ? 'metadata' : 'none';
-      if (!selected || this.reducedMotion.matches) {
+      if (!selected) {
         video.pause();
         video.removeAttribute('autoplay');
-      } else {
-        video.setAttribute('autoplay', '');
-        video.play().catch(() => {});
+        return;
+      }
+
+      // muted must be set as a PROPERTY (not just the attribute) or Chrome rejects
+      // programmatic play with NotAllowedError; preload none never fetches the data.
+      video.muted = true;
+      video.playsInline = true;
+      video.preload = 'auto';
+
+      if (this.reducedMotion.matches) {
+        video.pause();
+        return;
+      }
+
+      video.setAttribute('autoplay', '');
+      const attempt = video.play();
+      if (attempt && attempt.catch) {
+        attempt.catch(() => {
+          // autoplay blocked (data saver, battery saver): load the frames anyway and
+          // retry once the panel is actually on screen
+          video.load();
+          if (!this.playObserver) {
+            this.playObserver = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.play().catch(() => {});
+              });
+            }, { threshold: 0.25 });
+          }
+          this.playObserver.observe(video);
+        });
       }
     });
   }

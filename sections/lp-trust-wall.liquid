@@ -18,6 +18,7 @@
 
     <div class="lp-trust-wall__wall">
       {%- for block in section.blocks -%}
+        {%- unless block.type == 'stat_circle' -%}
         <article class="lp-trust-wall__card lp-trust-wall__card--{{ block.type }}" {{ block.shopify_attributes }}>
           {%- case block.type -%}
             {%- when 'doctor_card' -%}
@@ -69,13 +70,20 @@
                 {%- endif -%}
               </div>
 
-            {%- when 'stat_circle' -%}
-              <div class="lp-trust-wall__stat-circle">
-                {%- if block.settings.value != blank -%}<span class="lp-trust-wall__stat-value">{{ block.settings.value }}</span>{%- endif -%}
-              </div>
-              {%- if block.settings.text != blank -%}<p class="lp-trust-wall__stat-text">{{ block.settings.text }}</p>{%- endif -%}
           {%- endcase -%}
         </article>
+        {%- endunless -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="lp-trust-wall__stats">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'stat_circle' -%}
+          <article class="lp-trust-wall__card lp-trust-wall__card--stat_circle" {{ block.shopify_attributes }}>
+            {%- if block.settings.value != blank -%}<span class="lp-trust-wall__stat-value">{{ block.settings.value }}</span>{%- endif -%}
+            {%- if block.settings.text != blank -%}<p class="lp-trust-wall__stat-text">{{ block.settings.text }}</p>{%- endif -%}
+          </article>
+        {%- endif -%}
       {%- endfor -%}
     </div>
   </div>

@@ -51,3 +51,21 @@
 .lp-laurel--right {
   transform: scaleX(-1);
 }
+
+/* per-instance highlight colour: the original uses brand blue on the opening hero and red on
+   the founder-story hero, so it's a setting rather than a hardcoded value */
+.lp-hero__heading em,
+.lp-hero__heading strong,
+.lp-hero__heading span,
+.lp-hero__subheading strong,
+.lp-hero__closing strong,
+.lp-hero__stat-card strong {
+  color: var(--lp-hero-highlight, var(--lp-blue));
+  font-style: normal;
+}
+
+.lp-hero__stat-card strong {
+  display: block;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}

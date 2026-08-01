@@ -8,7 +8,7 @@
   id="{{ section.settings.anchor_id | default: section.id }}"
   class="lp-clinicians-band"
 >
-  <p class="lp-clinicians-band__title"><svg class="lp-laurel" viewBox="0 0 12 16" aria-hidden="true" focusable="false"><path d="M9.6 1c-2 .5-3.6 1.7-4.6 3.3C3.9 6 3.4 8 3.7 10c-.7-1-1.1-2.2-1.2-3.5-.7 1.5-.8 3-.3 4.5.5 1.5 1.5 2.7 2.9 3.5l.5.4.6-.9c-1-.6-1.8-1.4-2.3-2.4 1 .5 2 .7 3.1.6-1-.4-1.8-1-2.4-1.9 1 .2 2 .1 2.9-.3-1-.2-1.8-.6-2.5-1.3.9 0 1.8-.3 2.6-.8-.9-.1-1.7-.4-2.4-1 .9-.2 1.7-.6 2.3-1.2-.8 0-1.6-.2-2.3-.6.8-.4 1.5-.9 2-1.6-.7.2-1.5.2-2.2 0 .9-.7 2-1.2 3.1-1.3L9.6 1Z"/></svg> {{ section.settings.title | escape }} <svg class="lp-laurel lp-laurel--right" viewBox="0 0 12 16" aria-hidden="true" focusable="false"><path d="M9.6 1c-2 .5-3.6 1.7-4.6 3.3C3.9 6 3.4 8 3.7 10c-.7-1-1.1-2.2-1.2-3.5-.7 1.5-.8 3-.3 4.5.5 1.5 1.5 2.7 2.9 3.5l.5.4.6-.9c-1-.6-1.8-1.4-2.3-2.4 1 .5 2 .7 3.1.6-1-.4-1.8-1-2.4-1.9 1 .2 2 .1 2.9-.3-1-.2-1.8-.6-2.5-1.3.9 0 1.8-.3 2.6-.8-.9-.1-1.7-.4-2.4-1 .9-.2 1.7-.6 2.3-1.2-.8 0-1.6-.2-2.3-.6.8-.4 1.5-.9 2-1.6-.7.2-1.5.2-2.2 0 .9-.7 2-1.2 3.1-1.3L9.6 1Z"/></svg></p>
+  <p class="lp-clinicians-band__title">{{ section.settings.title | escape }}</p>
   <p class="lp-clinicians-band__text">
     <strong>{{ section.settings.text_bold | escape }}</strong>{{ section.settings.text | escape }}
     <span class="lp-clinicians-band__more">{{ section.settings.more_label | escape }}</span>

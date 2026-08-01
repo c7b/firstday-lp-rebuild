@@ -3,11 +3,13 @@
   background: var(--gradient-background);
   color: rgb(var(--color-foreground));
   overflow: hidden;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
 }
 
 .lp-hero__container {
   display: grid;
-  gap: 2.4rem;
+  gap: 1.6rem;
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -41,7 +43,7 @@
 
 .lp-hero__heading {
   max-width: 17ch;
-  margin: 1.2rem 0;
+  margin: .8rem 0;
   font-size: clamp(2.6rem, 6vw, 4.2rem);
   line-height: 1.06;
   letter-spacing: -.045em;
@@ -65,16 +67,16 @@
 
 .lp-hero__subheading p,
 .lp-hero__closing p {
-  margin: 0 0 1.6rem;
+  margin: 0 0 1rem;
 }
 
 .lp-hero__cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 4.8rem;
-  margin-top: .8rem;
-  padding: 1.2rem 2.4rem;
+  min-height: 4.4rem;
+  margin-top: .4rem;
+  padding: 1rem 2.2rem;
   border-radius: 999px;
   background: var(--lp-blue);
   color: #fff;
@@ -91,7 +93,7 @@
 }
 
 .lp-hero__guarantee {
-  margin: 1.2rem 0 0;
+  margin: .8rem 0 0;
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -147,8 +149,8 @@
   display: grid;
   grid-template-columns: 4rem 1fr;
   gap: .8rem 1.2rem;
-  margin: 1.2rem 0 0;
-  padding: 1.4rem;
+  margin: .8rem 0 0;
+  padding: 1.2rem;
   border-radius: 1.2rem;
   background: #fff;
   box-shadow: 0 .4rem 1.6rem rgb(0 0 0 / 10%);
@@ -181,11 +183,11 @@
 .lp-hero__stats {
   display: grid;
   gap: 1rem;
-  margin: 2.4rem 0;
+  margin: 1.6rem 0;
 }
 
 .lp-hero__stat-card {
-  padding: 1.6rem;
+  padding: 1.2rem;
   border: .1rem solid rgb(var(--color-foreground) / 18%);
   border-radius: 1.2rem;
 }
@@ -207,7 +209,7 @@
   .lp-hero__container {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-    gap: 4.8rem;
+    gap: 4rem;
     padding: 0 5rem;
   }
 
@@ -228,7 +230,7 @@
   }
 
   .lp-hero__section--founder .lp-hero__image {
-    min-height: 54rem;
+    min-height: 0;
   }
 }
 
@@ -269,7 +271,7 @@
 
 @media screen and (min-width: 990px) {
   .lp-hero__container {
-    gap: 7.2rem;
+    gap: 4rem;
   }
 
   .lp-hero__section--founder .lp-hero__content {
@@ -299,9 +301,9 @@
 .lp-hero__proof {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: .8rem;
   align-items: flex-start;
-  margin-top: 1.6rem;
+  margin-top: 1rem;
 }
 
 .lp-hero__proof .lp-hero__testimonial {
@@ -315,4 +317,16 @@
   height: 4rem;
   border-radius: 50%;
   object-fit: cover;
+}
+
+@media screen and (min-width: 750px) {
+  .lp-hero__media {
+    width: 100%;
+    max-width: 52rem;
+    justify-self: end;
+  }
+
+  .lp-hero__section--founder .lp-hero__image {
+    max-height: 48rem;
+  }
 }

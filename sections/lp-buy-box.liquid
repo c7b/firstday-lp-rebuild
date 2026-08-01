@@ -509,9 +509,32 @@
         <div class="lp-buy-box__stamps">
           {% for block in section.blocks %}
             {% if block.type == 'stamp' %}
-              <div class="lp-buy-box__stamp" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.line_1 | escape }}</span>
-                <strong>{{ block.settings.line_2 | escape }}</strong>
+              <div class="lp-buy-box__stamp{% if block.settings.image != blank or block.settings.image_url != blank %} lp-buy-box__stamp--image{% endif %}" {{ block.shopify_attributes }}>
+                {% assign stamp_alt = block.settings.alt | default: block.settings.line_1 | default: 'Stamp' %}
+                {% if block.settings.image != blank %}
+                  {{
+                    block.settings.image
+                    | image_url: width: 192
+                    | image_tag:
+                      widths: '96, 192',
+                      sizes: '96px',
+                      class: 'lp-buy-box__stamp-image',
+                      alt: stamp_alt,
+                      loading: 'lazy'
+                  }}
+                {% elsif block.settings.image_url != blank %}
+                  <img
+                    class="lp-buy-box__stamp-image"
+                    src="{{ block.settings.image_url | escape }}"
+                    alt="{{ stamp_alt | escape }}"
+                    width="96"
+                    height="96"
+                    loading="lazy"
+                  >
+                {% else %}
+                  <span>{{ block.settings.line_1 | escape }}</span>
+                  <strong>{{ block.settings.line_2 | escape }}</strong>
+                {% endif %}
               </div>
             {% endif %}
           {% endfor %}
@@ -954,14 +977,29 @@
       "settings": [
         {
           "type": "text",
+          "id": "image_url",
+          "label": "Image URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Image alt text"
+        },
+        {
+          "type": "text",
           "id": "line_1",
-          "label": "Line 1",
+          "label": "Fallback line 1",
           "default": "MONEY BACK"
         },
         {
           "type": "text",
           "id": "line_2",
-          "label": "Line 2",
+          "label": "Fallback line 2",
           "default": "GUARANTEE"
         }
       ]

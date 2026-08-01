@@ -9,6 +9,8 @@
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- else -%}
+      <link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0773/6511/7120/files/round_logo_2a2d7201-fe2c-47ec-b795-8fafd3df6e8d.png?v=1785627109&width=32&height=32&crop=center">
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}

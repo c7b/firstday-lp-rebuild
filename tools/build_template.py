@@ -27,6 +27,21 @@ ORDER = [
 ]
 
 
+def variant(template, overrides):
+    """A new LP variant is this function: same fragments, a few overrides, a new JSON file.
+
+    overrides = {"<section key>": {"settings": {...}}} — deep-merged onto the base template.
+    """
+    import copy
+    out = copy.deepcopy(template)
+    for key, patch in overrides.items():
+        if key not in out["sections"]:
+            continue
+        for group, values in patch.items():
+            out["sections"][key].setdefault(group, {}).update(values)
+    return out
+
+
 def main():
     sections, order, missing = {}, [], []
     for key, fname in ORDER:
@@ -46,6 +61,16 @@ def main():
     out = ROOT / "templates" / "page.tdk-behind-the-science.json"
     out.write_text(json.dumps(template, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"wrote {out.relative_to(ROOT)} with {len(order)} sections")
+
+    # --- variant demo: the Kids funnel. No new Liquid, no new CSS — a different product
+    # (whose metafields carry its own facts) and the offer copy that differs. Everything
+    # else is the same set of sections.
+    kids = variant(template, {
+        "buy_box": {"settings": {"product": "kids-multivitamin"}},
+    })
+    kids_out = ROOT / "templates" / "page.kde-behind-the-science.json"
+    kids_out.write_text(json.dumps(kids, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"wrote {kids_out.relative_to(ROOT)} (variant: product swapped, facts follow from its metafields)")
     if missing:
         print(f"MISSING fragments (not included): {', '.join(missing)}")
 

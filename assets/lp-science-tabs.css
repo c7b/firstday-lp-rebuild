@@ -2,6 +2,8 @@
   background: rgb(var(--color-background));
   background: var(--gradient-background);
   color: rgb(var(--color-foreground));
+  padding-top: 3.2rem !important;
+  padding-bottom: 3.2rem !important;
 }
 
 .lp-science-tabs__content {
@@ -12,7 +14,7 @@
 
 .lp-science-tabs__heading {
   max-width: 76rem;
-  margin: 0 auto 2.4rem;
+  margin: 0 auto 1.6rem;
   color: currentColor;
   font-size: clamp(2.8rem, 6vw, 4.8rem);
   line-height: 1.1;
@@ -21,10 +23,12 @@
 
 .lp-science-tabs__tab-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.8rem;
   max-width: 88rem;
-  margin: 0 auto 2.4rem;
-  overflow-x: auto;
+  margin: 0 auto 1.6rem;
+  overflow: visible;
   padding: 0.2rem;
   scrollbar-width: none;
 }
@@ -62,11 +66,11 @@
 
 .lp-science-tabs__panel {
   display: grid;
-  gap: 2.4rem;
+  gap: 1.6rem;
   align-items: center;
-  max-width: 94rem;
+  max-width: 88rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1.6rem;
   background: var(--lp-bg);
   border-radius: 1.6rem;
 }
@@ -76,7 +80,7 @@
 }
 
 .lp-science-tabs__media {
-  width: min(100%, 35rem);
+  width: min(100%, 26rem);
   margin: 0 auto;
   aspect-ratio: 1 / 1;
   overflow: hidden;
@@ -141,13 +145,15 @@
   }
 
   .lp-science-tabs__panel {
-    grid-template-columns: minmax(0, 1fr) minmax(26rem, 34rem);
-    gap: 6.4rem;
-    padding: 3.2rem;
+    grid-template-columns: minmax(0, 1fr) minmax(24rem, 30rem);
+    gap: 3.2rem;
+    max-width: 88rem;
+    padding: 2rem;
   }
 
   .lp-science-tabs__media {
     width: 100%;
+    max-width: 30rem;
     aspect-ratio: 1 / 1;
     grid-column: 2;
     grid-row: 1;
