@@ -76,6 +76,20 @@ per-page content lives in the template or in metaobjects.
 - **Dev store product** is a placeholder (`teens-multivitamin`) so the buy box renders a real
   product form; carousel falls back to CDN image blocks until real media is uploaded.
 
+## Color schemes: what they do and don't control here
+
+The scheme system is **Dawn's**, not First Day's — the original page doesn't use schemes at
+all; it's a fixed-palette design. Our sections consume Dawn schemes for *neutral* surfaces
+(section background, base text) as an operator convenience, while brand elements are
+deliberately fixed: CTAs `#486ced`, savings `#078942`, urgency `#f5b313`, functional SVG marks,
+and any asset that only reads against a specific background (e.g. the buy-box benefit icons
+are white glyphs on transparency — they sit on a brand-blue circle painted by CSS, never by
+the scheme). Practical rule: **scheme-1 is the intended scheme for this LP**; switching
+schemes recolors neutrals only and is expected to look "off" because the design itself is not
+scheme-native. Making the LP fully scheme-driven would mean re-tokenizing the brand palette
+into scheme slots — possible, out of scope, and of questionable value for an ad funnel with a
+locked brand look (noted in PLAN.md territory: not built, on purpose).
+
 ## Platform constraints hit during the build (documented because they cost time)
 
 - Shopify `url` settings don't take `#anchor` defaults → in-page anchors are `text` settings.

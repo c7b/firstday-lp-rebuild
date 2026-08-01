@@ -225,6 +225,10 @@
   height: 4.4rem;
   border-radius: 50%;
   object-fit: cover;
+  background: #486ced; /* white-glyph assets — circle must be brand blue, never scheme-driven */
+  padding: 1rem;
+  box-sizing: border-box;
+  object-fit: contain;
 }
 
 .lp-buy-box__benefit-chevron {
