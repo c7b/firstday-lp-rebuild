@@ -49,3 +49,24 @@ instance ships as a fragment but NOT in the template — original renders empty)
 - Pattern sweep (comments, loading attrs, semantics): accordion uses native details/summary,
   comparison table is a semantic `<table>` with `scope`, no stray comments, no console noise.
 - Deep visual verification deferred to the screenshot QA phase by design.
+
+## Round 3 — Shopify's own validation as the third reviewer
+
+The GitHub sync applied 17 of 18 theme files and **silently skipped
+`lp-media-accordion.liquid`** (no error surfaced anywhere in the repo). Direct Asset API
+upload of the template exposed the real message: *"Section type 'lp-media-accordion' does not
+refer to an existing section file"* → uploading the section itself would have said: `url`
+setting with `#anchor` default fails validation. Same spec bug as Round 1-2; this instance
+hid from the review grep because the `default` sat 3 lines below the `type` (grep -A2). Two
+lessons logged:
+
+1. **Grep-based review misses layout variance — the scan should have been structural from the
+   start.** Now it is: `verify_build`-style python over parsed schemas, not text matching.
+2. **Push → platform-validate → read the rejection** is a legitimate extra review gate when
+   the platform validates deterministically. The 422 told us in one line what three reviewers
+   missed.
+
+Also caught in the same pass: every `color_scheme` default said `scheme_1`; Dawn 15.5's real
+ids are `scheme-N` (dashed). Invalid scheme ids don't error — they silently fall back, which
+would have shown up as subtle color drift in visual QA. Fixed across schemas, fragments and
+the template.
