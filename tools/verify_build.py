@@ -19,7 +19,7 @@ FRAG = ROOT / "docs" / "context" / "template-fragments"
 CTX = ROOT / "docs" / "context" / "sections"
 
 EXEMPT_KEYS = {"cta_link", "color_scheme", "anchor_id", "url", "video_url", "poster_url",
-               "media_position", "image_position", "style", "product"}
+               "media_position", "image_position", "style", "product", "claims"}
 URLISH = re.compile(r"^(gid://|https?:|//|/)|\.(png|jpg|jpeg|gif|webp|avif|svg|mp4|css|js)(\?|$)")
 
 
@@ -117,7 +117,7 @@ def main():
             warns.append(f"fragments/{f.name}: no extraction corpus for {stype}")
             continue
         for path, val in iter_strings(frag.get("settings", {})):
-            key = path.rsplit(".", 1)[-1]
+            key = path.rsplit(".", 1)[-1].split("[")[0]
             if key in EXEMPT_KEYS or URLISH.search(val) or len(norm(val)) < 4:
                 continue
             if norm(val) not in haystack:
@@ -126,7 +126,7 @@ def main():
             if not isinstance(block, dict):
                 continue
             for path, val in iter_strings(block.get("settings", {})):
-                key = path.rsplit(".", 1)[-1]
+                key = path.rsplit(".", 1)[-1].split("[")[0]
                 if key in EXEMPT_KEYS or URLISH.search(val) or len(norm(val)) < 4:
                     continue
                 if norm(val) not in haystack:

@@ -86,10 +86,11 @@ def main():
             print(f"FAIL {handle}: {errs}", file=sys.stderr)
             sys.exit(1)
         gid = payload["metaobject"]["id"]
-        gids.append(gid)
+        gids.append((handle, gid))
         print(f"ok {handle}: {gid}")
-    print("\nclaims setting value for the template:")
-    print(json.dumps(gids, indent=1))
+    print("\nclaims setting value for the template (metaobject_list settings in JSON")
+    print("templates resolve by HANDLE — gids come back as an empty list):")
+    print(json.dumps([h for h, _ in gids], indent=1))
 
 
 if __name__ == "__main__":
