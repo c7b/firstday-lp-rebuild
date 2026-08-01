@@ -15,7 +15,8 @@
   class="lp-science-tabs__section color-{{ section.settings.color_scheme }} gradient"
   style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
 >
-  <lp-science-tabs class="lp-science-tabs__component">
+  <div style="display:none" id="dbg-mo">size=[{{ section.settings.claims.size }}] count=[{{ section.settings.claims.count }}] blank=[{% if section.settings.claims == blank %}yes{% else %}no{% endif %}] first_handle=[{{ section.settings.claims.first.system.handle }}] first_label=[{{ section.settings.claims.first.label.value }}] json=[{{ section.settings.claims | json | slice: 0, 200 }}]</div>
+<lp-science-tabs class="lp-science-tabs__component">
     <div class="lp-science-tabs__content">
       <h2 class="lp-science-tabs__heading">{{ section.settings.heading }}</h2>
 
