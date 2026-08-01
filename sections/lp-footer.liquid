@@ -1,0 +1,67 @@
+<footer class="lp-footer">
+  <p class="lp-footer__text">
+    {{ section.settings.text }}
+    {% if section.settings.link != blank and section.settings.label != blank %}
+      <a class="lp-footer__link" href="{{ section.settings.link }}">{{ section.settings.label }}</a>
+    {% endif %}
+  </p>
+</footer>
+
+<style>
+  .lp-footer {
+    padding: 20px 24px;
+    background: #fff;
+    text-align: center;
+  }
+
+  .lp-footer__text {
+    margin: 0;
+    color: rgb(0 0 0 / 56%);
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .lp-footer__link {
+    margin-left: 0.5em;
+    color: inherit;
+    text-underline-offset: 0.2em;
+  }
+
+  .lp-footer__link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "LP footer",
+  "tag": "section",
+  "class": "section-lp-footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "© First Day"
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "Link",
+      "default": "/pages/tdk-behind-the-science-lp"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Link label",
+      "default": "Back to the page"
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP footer"
+    }
+  ]
+}
+{% endschema %}

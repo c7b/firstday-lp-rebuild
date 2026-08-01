@@ -1,0 +1,77 @@
+<section class="lp-redirect" aria-labelledby="lp-redirect-{{ section.id }}">
+  <div class="lp-redirect__card">
+    <p id="lp-redirect-{{ section.id }}" class="lp-redirect__message">{{ section.settings.message }}</p>
+    <a class="lp-redirect__link" href="{{ section.settings.target }}">Continue</a>
+  </div>
+</section>
+
+<style>
+  .lp-redirect {
+    display: grid;
+    min-height: 100vh;
+    padding: 24px;
+    place-items: center;
+    background: #fff;
+  }
+
+  .lp-redirect__card {
+    width: min(100%, 360px);
+    padding: 32px 24px;
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgb(0 0 0 / 8%);
+  }
+
+  .lp-redirect__message {
+    margin: 0;
+    color: rgb(0 0 0 / 78%);
+  }
+
+  .lp-redirect__link {
+    display: inline-flex;
+    min-height: 44px;
+    margin-top: 16px;
+    align-items: center;
+    color: currentColor;
+    text-underline-offset: 0.2em;
+  }
+
+  .lp-redirect__link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+</style>
+
+{% unless request.design_mode %}
+  <script>
+    location.replace({{ section.settings.target | json }});
+  </script>
+{% endunless %}
+
+{% schema %}
+{
+  "name": "LP redirect",
+  "tag": "section",
+  "class": "section-lp-redirect",
+  "settings": [
+    {
+      "type": "text",
+      "id": "target",
+      "label": "Target",
+      "default": "/pages/tdk-behind-the-science-lp"
+    },
+    {
+      "type": "text",
+      "id": "message",
+      "label": "Message",
+      "default": "Taking you to the page…"
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP redirect"
+    }
+  ]
+}
+{% endschema %}

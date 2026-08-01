@@ -1,0 +1,79 @@
+<header class="lp-header">
+  <a class="lp-header__link" href="{{ section.settings.link }}" aria-label="First Day home">
+    <img
+      class="lp-header__logo"
+      src="{{ section.settings.logo_url }}"
+      alt="First Day"
+      width="{{ section.settings.logo_width }}"
+      height="{{ section.settings.logo_width }}"
+      loading="eager"
+    >
+  </a>
+</header>
+
+<style>
+  .lp-header {
+    display: flex;
+    min-height: 68px;
+    padding: 12px 24px;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+
+  .lp-header__link {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lp-header__logo {
+    display: block;
+    width: {{ section.settings.logo_width }}px;
+    height: auto;
+  }
+
+  .lp-header__link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "LP header",
+  "tag": "section",
+  "class": "section-lp-header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo_url",
+      "label": "Logo URL",
+      "default": "//firstday.com/cdn/shop/files/round_logo.png?v=1720622822&width=100"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo width",
+      "min": 24,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 44
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "Link",
+      "default": "/pages/tdk-behind-the-science-lp"
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP header"
+    }
+  ]
+}
+{% endschema %}
