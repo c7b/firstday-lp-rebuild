@@ -1,0 +1,673 @@
+{
+ "target_section": "lp-reviews",
+ "source_snapshot": "fd-lp.html",
+ "originals": [
+  {
+   "original_id": "1771530273b0a25f6d",
+   "raw_bytes": 31406,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__1771530273b0a25f6d\" class=\"shopify-section section\">",
+     "path": "",
+     "seq": 0
+    }
+   ],
+   "jdgm_data": {
+    "storeSummaryWidget": {
+     "average_rating": "4.75",
+     "number_of_reviews": 11027,
+     "ai_summary_text": "",
+     "keywords": [],
+     "histogram": [
+      {
+       "rating": 5,
+       "frequency": 9676,
+       "percentage": 88,
+       "extra_class": null
+      },
+      {
+       "rating": 4,
+       "frequency": 695,
+       "percentage": 6,
+       "extra_class": null
+      },
+      {
+       "rating": 3,
+       "frequency": 218,
+       "percentage": 2,
+       "extra_class": null
+      },
+      {
+       "rating": 2,
+       "frequency": 119,
+       "percentage": 1,
+       "extra_class": null
+      },
+      {
+       "rating": 1,
+       "frequency": 319,
+       "percentage": 3,
+       "extra_class": null
+      }
+     ],
+     "photo_gallery": [
+      {
+       "uuid": "4593744b-e22e-4901-9517-4ed3323b166b",
+       "reviewer_name": "Kara",
+       "reviewer_initial": "K",
+       "title": "They don’t refund",
+       "body_html": "<p>Just ordered, shortly after ordering I emailed and asked if I could cancel and get a refund. Just wanted to use a different card. She said that the order moves quickly. When I almost immediately emailed after I ordered. No way they move that fast. Disappointed and now canceling my subscription when I didn’t plan to.</p>",
+       "verified_buyer": false,
+       "location": "",
+       "video_external_ids": [],
+       "media_platform_hosted_video_infos": [],
+       "cf_answers": [],
+       "shop_reply_name": "First Day Life Inc.",
+       "product_title": "First Day Life Inc.",
+       "product_url": "https://firstday.com",
+       "product_url_with_utm": "https://firstday.com?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "rating": "1",
+       "created_at": "2026-06-26 16:42:38 UTC",
+       "pictures_urls": [
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1782492159__img_0987__original.png?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1782492159__img_0987__original.png?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1782492159__img_0987__original.png?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1782492159__img_0987__original.png?quality=80&width=1024"
+        }
+       ]
+      },
+      {
+       "uuid": "4d9da52c-3ccd-435d-8d29-2bdb787ba496",
+       "reviewer_name": "Lisa B.",
+       "reviewer_initial": "L",
+       "title": "Impossible to cancel and false advertisement",
+       "body_html": "<p>When I purchased there was a deal going on that I thought was great. What I thought was even more great was that the small print stated I would be charged the amount on the screen each renewal. However, the next month I was charged double. Then when I went in to cancel the subscription because I can get the same vitamins from Walmart (with no sugar), there was no option to cancel, only suspend for a month, change product or flavor.</p>",
+       "verified_buyer": true,
+       "location": "",
+       "video_external_ids": [],
+       "media_platform_hosted_video_infos": [],
+       "cf_answers": [],
+       "shop_reply_name": "First Day Life Inc.",
+       "product_title": "First Day Life Inc.",
+       "product_url": "https://firstday.com",
+       "product_url_with_utm": "https://firstday.com?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "rating": "1",
+       "created_at": "2026-06-25 11:26:13 UTC",
+       "pictures_urls": [
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1782386775__1000051780__original.jpg?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1782386775__1000051780__original.jpg?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1782386775__1000051780__original.jpg?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1782386775__1000051780__original.jpg?quality=80&width=1024"
+        }
+       ]
+      },
+      {
+       "uuid": "765a57be-97d7-4469-85e2-1c1a87e5ccea",
+       "reviewer_name": "Anery M.",
+       "reviewer_initial": "A",
+       "title": "Delicious",
+       "body_html": "<p>My son is autistic and also has ADHD. These have helped him calm down and wind down before bedtime. The hyperactivity really slows down and my son is able to just relax with me, do our nightly routine, and go to sleep. These are expensive but worth it!!</p>",
+       "verified_buyer": true,
+       "location": "",
+       "video_external_ids": [],
+       "media_platform_hosted_video_infos": [],
+       "cf_answers": [],
+       "shop_reply_name": "First Day Life Inc.",
+       "product_title": "Kids’ Nighttime Reset Magnesium",
+       "product_url": "https://firstday.com/products/kids-calming-magnesium",
+       "product_url_with_utm": "https://firstday.com/products/kids-calming-magnesium?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "rating": "4",
+       "created_at": "2026-06-22 13:50:09 UTC",
+       "pictures_urls": [
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1782136209__image__original.jpg?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1782136209__image__original.jpg?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1782136209__image__original.jpg?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1782136209__image__original.jpg?quality=80&width=1024"
+        }
+       ]
+      },
+      {
+       "uuid": "7e5564f4-814c-4d8d-9f95-c22a159d187c",
+       "reviewer_name": "Anonymous",
+       "reviewer_initial": "A",
+       "title": "False advertisement",
+       "body_html": "<p>This website is advertising a 45 day money back guarantee. Verbatim “ 45 Day Money-Back\n<br />Guarantee\n<br />We're confident this is the best vitamin you'll ever try. But we understand you may be skeptical. So give it a try...worry-free! If you're still not happy, just send it back.” I contacted to send them back and they said-  “ Unfortunately, due to food safety regulations, we’re unable to accept returns or issue refunds once an order has shipped. I truly apologize for any inconvenience this may cause.</p>\n\n<p>However, we can offer a store credit for the amount, which you can use toward a future purchase, or a one-time swap for a different variant” I told them I would leave this information in my review and gather my refund w my CC company behind me. You cannot advertise something and not follow through. They’ve lost any future business from me and hopefully this deters your purchase.</p>",
+       "verified_buyer": false,
+       "location": "",
+       "video_external_ids": [],
+       "media_platform_hosted_video_infos": [],
+       "cf_answers": [],
+       "shop_reply_name": "First Day Life Inc.",
+       "product_title": "The &quot;No Junk&quot;™ Teens’ Multi",
+       "product_url": "https://firstday.com/products/teens-kickstart-vitamin",
+       "product_url_with_utm": "https://firstday.com/products/teens-kickstart-vitamin?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "rating": "1",
+       "created_at": "2026-06-16 00:07:43 UTC",
+       "pictures_urls": [
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1781568463__img_6554__original.png?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1781568463__img_6554__original.png?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1781568463__img_6554__original.png?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1781568463__img_6554__original.png?quality=80&width=1024"
+        },
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1781568465__img_6553__original.png?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1781568465__img_6553__original.png?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1781568465__img_6553__original.png?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1781568465__img_6553__original.png?quality=80&width=1024"
+        }
+       ]
+      },
+      {
+       "uuid": "96c10150-dca2-4d9c-9eae-72aa209a7f8d",
+       "reviewer_name": "Lorann",
+       "reviewer_initial": "L",
+       "title": "Teen daughter approved",
+       "body_html": "<p>I got these for my fourteen year old and the first thing she did was comment on how cool the container was (not your typical vitamin container). This morning she was getting ready for school, when I came down and saw her helping herself  to her vitamin. This made my momma heart happy- she’s a volleyball player so she needs all the nutrients she can get :)!</p>",
+       "verified_buyer": false,
+       "location": "",
+       "video_external_ids": [],
+       "media_platform_hosted_video_infos": [],
+       "cf_answers": [],
+       "shop_reply_name": "First Day Life Inc.",
+       "product_title": "The &quot;No Junk&quot;™ Teens’ Multi",
+       "product_url": "https://firstday.com/products/teens-kickstart-vitamin",
+       "product_url_with_utm": "https://firstday.com/products/teens-kickstart-vitamin?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "rating": "5",
+       "created_at": "2026-03-03 17:54:23 UTC",
+       "pictures_urls": [
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1772560463__img_6007__original.jpeg?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1772560463__img_6007__original.jpeg?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1772560463__img_6007__original.jpeg?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1772560463__img_6007__original.jpeg?quality=80&width=1024"
+        }
+       ]
+      },
+      {
+       "uuid": "4abee463-0746-420b-a56b-e79c833524be",
+       "reviewer_name": "Antoinette M.P.",
+       "reviewer_initial": "A",
+       "title": "Best Vitamins",
+       "body_html": "<p>The best Five star vitamins around. My 10 yr old son has been taking these for 7 yrs now. He loves the gummies that dont have a bad taste. Said, they are like candy. But good for him.\n<br />I definitely recommend these to any new toddler Moms out there. No junk in these vitamins.</p>",
+       "verified_buyer": true,
+       "location": "",
+       "video_external_ids": [],
+       "media_platform_hosted_video_infos": [],
+       "cf_answers": [],
+       "shop_reply_name": "First Day Life Inc.",
+       "product_title": "The &quot;No Junk&quot;™ Kids’ Multi - Refill Pouch",
+       "product_url": "https://firstday.com/products/kids-enrichment-refill-pouch",
+       "product_url_with_utm": "https://firstday.com/products/kids-enrichment-refill-pouch?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "rating": "5",
+       "created_at": "2026-02-23 18:00:37 UTC",
+       "pictures_urls": [
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1771869637__1000007642__original.jpg?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1771869637__1000007642__original.jpg?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1771869637__1000007642__original.jpg?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1771869637__1000007642__original.jpg?quality=80&width=1024"
+        }
+       ]
+      },
+      {
+       "uuid": "b6849f1f-3da8-4e07-ad66-f7df32a4237d",
+       "reviewer_name": "Carroll M.",
+       "reviewer_initial": "C",
+       "title": "Enjoying benefits",
+       "body_html": "<p>I love the product, comes as subscribed, tastes great too.\n<br />I’m missing the disposable refill packs though and product coming all stuck together lately.</p>",
+       "verified_buyer": true,
+       "location": "",
+       "video_external_ids": [],
+       "media_platform_hosted_video_infos": [],
+       "cf_answers": [],
+       "shop_reply_name": "First Day Life Inc.",
+       "product_title": "Womens Daily Supercharge - Refill Pouch",
+       "product_url": "https://firstday.com/products/womens-daily-supercharge-refill-pouch",
+       "product_url_with_utm": "https://firstday.com/products/womens-daily-supercharge-refill-pouch?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "rating": "5",
+       "created_at": "2026-01-31 13:05:49 UTC",
+       "pictures_urls": [
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1769864750__image__original.jpg?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1769864750__image__original.jpg?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1769864750__image__original.jpg?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1769864750__image__original.jpg?quality=80&width=1024"
+        }
+       ]
+      },
+      {
+       "uuid": "6437a282-86a5-4b30-8bb5-44bf4c72cf26",
+       "reviewer_name": "Anonymous",
+       "reviewer_initial": "A",
+       "title": "My kids call it delicious",
+       "body_html": "<p>I was searching everywhere for a multi vitamin with vit D,K and folate in one gummy and finally found one worth my money! Kids love the taste and no fighting over it anymore! They say the gummies is delicious</p>",
+       "verified_buyer": true,
+       "location": "",
+       "video_external_ids": [],
+       "media_platform_hosted_video_infos": [],
+       "cf_answers": [],
+       "shop_reply_name": "First Day Life Inc.",
+       "product_title": "First Day Life Inc.",
+       "product_url": "https://firstday.com",
+       "product_url_with_utm": "https://firstday.com?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "rating": "5",
+       "created_at": "2026-01-10 05:26:22 UTC",
+       "pictures_urls": [
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1768022782__img_4877__original.jpeg?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1768022782__img_4877__original.jpeg?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1768022782__img_4877__original.jpeg?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1768022782__img_4877__original.jpeg?quality=80&width=1024"
+        }
+       ]
+      },
+      {
+       "uuid": "b8f48456-9c4d-4e6c-9144-db61e22b3318",
+       "reviewer_name": "Liz",
+       "reviewer_initial": "L",
+       "title": "Skeptic proven wrong",
+       "body_html": "<p>I didn’t think in a million years that a vitamin could help with my daughter’s teenage attitude, but she was out of vitamins and there was a sale so I thought hey, I’ll try it. I couldn’t believe my eyes (and ears). She was being sweet. She was thanking us for stuff. She was randomly telling us she loved us without us saying it first. I couldn’t believe how her attitude changed. I will continue buying these as long as I can!!</p>",
+       "verified_buyer": true,
+       "location": "",
+       "video_external_ids": [],
+       "media_platform_hosted_video_infos": [],
+       "cf_answers": [],
+       "shop_reply_name": "First Day Life Inc.",
+       "product_title": "The &quot;No Junk&quot;™ Teens’ Multi - Refill Pouch",
+       "product_url": "https://firstday.com/products/teens-daily-kickstart-refill-pouch",
+       "product_url_with_utm": "https://firstday.com/products/teens-daily-kickstart-refill-pouch?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "rating": "5",
+       "created_at": "2026-01-02 06:56:27 UTC",
+       "pictures_urls": [
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1767336987__img_6290__original.jpeg?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1767336987__img_6290__original.jpeg?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1767336987__img_6290__original.jpeg?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1767336987__img_6290__original.jpeg?quality=80&width=1024"
+        }
+       ]
+      },
+      {
+       "uuid": "52bea12a-e95d-419b-bbee-49e414240215",
+       "reviewer_name": "K",
+       "reviewer_initial": "K",
+       "title": "Too much sugar",
+       "body_html": "<p>Why all that sugar needed for kids why?</p>",
+       "verified_buyer": true,
+       "location": "",
+       "video_external_ids": [],
+       "media_platform_hosted_video_infos": [],
+       "cf_answers": [],
+       "shop_reply_name": "First Day Life Inc.",
+       "product_title": "The &quot;No Junk&quot;™ Kids’ Multi",
+       "product_url": "https://firstday.com/products/kids-enrichment-vitamin",
+       "product_url_with_utm": "https://firstday.com/products/kids-enrichment-vitamin?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "rating": "1",
+       "created_at": "2025-12-10 18:04:34 UTC",
+       "pictures_urls": [
+        {
+         "original": "https://review-images.judgeme.com/first-day-life-inc/1765389874__1000141129__original.jpg?quality=80&width=1024",
+         "small": "https://review-images.judgeme.com/first-day-life-inc/1765389874__1000141129__original.jpg?quality=80&width=160",
+         "compact": "https://review-images.judgeme.com/first-day-life-inc/1765389874__1000141129__original.jpg?quality=80&width=160",
+         "huge": "https://review-images.judgeme.com/first-day-life-inc/1765389874__1000141129__original.jpg?quality=80&width=1024"
+        }
+       ]
+      }
+     ],
+     "shop_medals": [
+      {
+       "type": "ver_rev",
+       "tier": "diamond",
+       "tier_key": 500,
+       "medal_image_url": "https://judgeme-public-images.imgix.net/judgeme/medals-v2-2025-rebranding/ver_rev/diamond.svg",
+       "title": "Diamond Verified Reviews Shop",
+       "description": "Obtained at least 1000 reviews submitted by genuine customers with proof of purchase history",
+       "value": "9982",
+       "value_is_long": true
+      },
+      {
+       "type": "mon_rec",
+       "tier": "diamond",
+       "tier_key": 500,
+       "medal_image_url": "https://judgeme-public-images.imgix.net/judgeme/medals-v2-2025-rebranding/mon_rec/diamond_hollow.svg",
+       "title": "Diamond Monthly Record Shop",
+       "description": "Achieved an all-time record of 322 published verified reviews within one calendar month.",
+       "value": "322",
+       "value_is_long": false
+      },
+      {
+       "type": "auth",
+       "tier": "silver",
+       "tier_key": 200,
+       "medal_image_url": "https://judgeme-public-images.imgix.net/judgeme/medals-v2-2025-rebranding/auth/silver.svg",
+       "title": "Silver Authentic Shop",
+       "description": "At least 90% of published reviews are verified reviews"
+      },
+      {
+       "type": "tran",
+       "tier": "bronze",
+       "tier_key": 100,
+       "medal_image_url": "https://judgeme-public-images.imgix.net/judgeme/medals-v2-2025-rebranding/tran/bronze.svg",
+       "title": "Bronze Transparent Shop",
+       "description": "Published at least 80% of verified reviews received in total"
+      },
+      {
+       "type": "tops",
+       "tier": "1 percent",
+       "tier_key": 90,
+       "medal_image_url": "https://judgeme-public-images.imgix.net/judgeme/medals-v2-2025-rebranding/tops/1-percent.svg",
+       "title": "Top 1% Shops",
+       "description": "Top 1% shops that obtained and published the most verified reviews of all time"
+      },
+      {
+       "type": "tops_trend",
+       "tier": "1 percent",
+       "tier_key": 90,
+       "medal_image_url": "https://judgeme-public-images.imgix.net/judgeme/medals-v2-2025-rebranding/tops_trend/1-percent.svg",
+       "title": "Top 1% Trending Shops",
+       "description": "Top 1% trending shops that obtained and published the most verified reviews in the last 30 days"
+      }
+     ]
+    },
+    "reviewWidget": {},
+    "reviewWidget[6610526765154]": {
+     "number_of_reviews": 1394,
+     "average_rating": "4.74",
+     "number_of_questions": 0,
+     "product_name": "The \"No Junk\"™ Teens’ Multi",
+     "product_external_id": 6610526765154,
+     "product_coupons_enabled": true,
+     "image_url": "https://cdn.shopify.com/s/files/1/0028/0533/4131/files/Rebrand_Broad_Images_16.png?v=1762439551",
+     "histogram": [
+      {
+       "rating": 5,
+       "frequency": 1219,
+       "percentage": 87,
+       "extra_class": null
+      },
+      {
+       "rating": 4,
+       "frequency": 85,
+       "percentage": 6,
+       "extra_class": null
+      },
+      {
+       "rating": 3,
+       "frequency": 28,
+       "percentage": 2,
+       "extra_class": null
+      },
+      {
+       "rating": 2,
+       "frequency": 21,
+       "percentage": 2,
+       "extra_class": null
+      },
+      {
+       "rating": 1,
+       "frequency": 41,
+       "percentage": 3,
+       "extra_class": null
+      }
+     ],
+     "review_keywords": null,
+     "product_medals": [],
+     "custom_form_filters_and_averages": null,
+     "photo_gallery": null,
+     "review_summary_text": "Based on 1394 reviews",
+     "ai_summary_text": "",
+     "sort_key": "highest_rating",
+     "multi_language_sorting_enabled": false,
+     "metafield_updated_at": "2026-07-29T23:57:43Z",
+     "reviews": [
+      {
+       "uuid": "c3a97f83-4638-4d3b-adbc-450fd91c3ed0",
+       "title": "Less Outbursts",
+       "rating": 5,
+       "body_html": "<p>It is starting to help with the outbursts.</p>",
+       "body": "It is starting to help with the outbursts.",
+       "verified_buyer": true,
+       "created_at": "2026-07-14T18:29:11.030Z",
+       "reviewer_name": "Jackie L.",
+       "reviewer_initial": "J",
+       "is_anonymous_reviewer": false,
+       "cf_answers": [],
+       "reply_content": null,
+       "pictures_urls": [],
+       "video_external_ids": [],
+       "thumb_up": 0,
+       "thumb_down": 0,
+       "location_country": "",
+       "location_country_code": "",
+       "location": "",
+       "source": null,
+       "product_title": "The &quot;No Junk&quot;™ Teens’ Multi",
+       "encoded_product_id": "y941NXvw",
+       "encoded_shop_id": "Ay42qJag",
+       "is_shopify_lite": false,
+       "product_url": "https://firstday.com/products/teens-kickstart-vitamin",
+       "product_url_with_utm": "https://firstday.com/products/teens-kickstart-vitamin?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "product_in_store": true,
+       "product_variant_title": "",
+       "profile_img_idx": 3,
+       "avatar_image_url": null,
+       "gravatar_hash": null,
+       "media_platform_hosted_video_infos": [],
+       "country_code_show_flag": null,
+       "pinned": null,
+       "in_a_group": true,
+       "can_pin": true,
+       "shop_reply_name": "First Day Life Inc.",
+       "transparency_badges": [
+        "review_collected_via_store_invitation"
+       ],
+       "language": null,
+       "is_for_product_from_group": false,
+       "product_variant_image_url": "https://cdn.shopify.com/s/files/1/0028/0533/4131/files/Rebrand_Broad_Images_16.png?v=1762439551",
+       "is_for_product_from_bundle": false,
+       "product_title_localized": null
+      },
+      {
+       "uuid": "161e3a5a-a890-4eb8-a668-7be51a98e789",
+       "title": "Canadian neighbours",
+       "rating": 5,
+       "body_html": "<p>We're in Canada, at first I thought these were a bit expensive with the exchange rate. So we tried them and then took a break for about six months and tried some other ones and right away realized that, these are exactly what my girls needed. So we're back and not leaving, only plan to transition from one age group up to the other.</p>",
+       "body": "We're in Canada, at first I thought these were a bit expensive with the exchange rate. So we tried them and then took a break for about six months and tried some other ones and right away realized that, these are exactly what my girls needed. So we're back and not leaving, only plan to transition from one age group up to the other.",
+       "verified_buyer": true,
+       "created_at": "2026-07-05T18:14:03.024Z",
+       "reviewer_name": "Susan",
+       "reviewer_initial": "S",
+       "is_anonymous_reviewer": false,
+       "cf_answers": [],
+       "reply_content": null,
+       "pictures_urls": [],
+       "video_external_ids": [],
+       "thumb_up": 0,
+       "thumb_down": 0,
+       "location_country": "",
+       "location_country_code": "",
+       "location": "",
+       "source": null,
+       "product_title": "The &quot;No Junk&quot;™ Teens’ Multi",
+       "encoded_product_id": "y941NXvw",
+       "encoded_shop_id": "Ay42qJag",
+       "is_shopify_lite": false,
+       "product_url": "https://firstday.com/products/teens-kickstart-vitamin",
+       "product_url_with_utm": "https://firstday.com/products/teens-kickstart-vitamin?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "product_in_store": true,
+       "product_variant_title": "",
+       "profile_img_idx": 7,
+       "avatar_image_url": null,
+       "gravatar_hash": null,
+       "media_platform_hosted_video_infos": [],
+       "country_code_show_flag": null,
+       "pinned": null,
+       "in_a_group": true,
+       "can_pin": true,
+       "shop_reply_name": "First Day Life Inc.",
+       "transparency_badges": [
+        "review_collected_via_store_invitation"
+       ],
+       "language": null,
+       "is_for_product_from_group": false,
+       "product_variant_image_url": "https://cdn.shopify.com/s/files/1/0028/0533/4131/files/Rebrand_Broad_Images_16.png?v=1762439551",
+       "is_for_product_from_bundle": false,
+       "product_title_localized": null
+      },
+      {
+       "uuid": "8eb5ea2c-3a85-4779-b1b9-cb7e6da67ec2",
+       "title": "Our 4 kids LOVE the taste of these gummies and",
+       "rating": 5,
+       "body_html": "<p>Our 4 kids LOVE the taste of these gummies and actually fight over who is going to take their MVIs first every day!</p>",
+       "body": "Our 4 kids LOVE the taste of these gummies and actually fight over who is going to take their MVIs first every day!",
+       "verified_buyer": true,
+       "created_at": "2026-07-03T21:49:35.160Z",
+       "reviewer_name": "Deborah B.",
+       "reviewer_initial": "D",
+       "is_anonymous_reviewer": false,
+       "cf_answers": [],
+       "reply_content": null,
+       "pictures_urls": [],
+       "video_external_ids": [],
+       "thumb_up": 0,
+       "thumb_down": 0,
+       "location_country": "",
+       "location_country_code": "",
+       "location": "",
+       "source": null,
+       "product_title": "The &quot;No Junk&quot;™ Teens’ Multi",
+       "encoded_product_id": "y941NXvw",
+       "encoded_shop_id": "Ay42qJag",
+       "is_shopify_lite": false,
+       "product_url": "https://firstday.com/products/teens-kickstart-vitamin",
+       "product_url_with_utm": "https://firstday.com/products/teens-kickstart-vitamin?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "product_in_store": true,
+       "product_variant_title": "",
+       "profile_img_idx": 2,
+       "avatar_image_url": null,
+       "gravatar_hash": null,
+       "media_platform_hosted_video_infos": [],
+       "country_code_show_flag": null,
+       "pinned": null,
+       "in_a_group": true,
+       "can_pin": true,
+       "shop_reply_name": "First Day Life Inc.",
+       "transparency_badges": [
+        "review_collected_via_store_invitation"
+       ],
+       "language": null,
+       "is_for_product_from_group": false,
+       "product_variant_image_url": "https://cdn.shopify.com/s/files/1/0028/0533/4131/files/Rebrand_Broad_Images_16.png?v=1762439551",
+       "is_for_product_from_bundle": false,
+       "product_title_localized": null
+      },
+      {
+       "uuid": "fb7e44f7-66f4-4f0c-b8bc-463e73df43ba",
+       "title": "Proof is in the Gummie.",
+       "rating": 5,
+       "body_html": "<p>I am an ex-pro athlete, far removed now, and a single father to 2 teenage young men. Fitness is part of my lifestyle. Nutrition goes hand in hand. My sons, unfortunately, not so much. They will rarely eat a vegetable or fruit. Both are aspiring soccer players. Both have been showing a lack of mental clarity and energy, issues with not sleeping enough or sleeping in way too much, and an overall lack of drive to be active. After both consistently starting a First Day routine, I have seen noticeable differences, and I am purchasing more after I leave this review.</p>",
+       "body": "I am an ex-pro athlete, far removed now, and a single father to 2 teenage young men. Fitness is part of my lifestyle. Nutrition goes hand in hand. My sons, unfortunately, not so much. They will rarely eat a vegetable or fruit. Both are aspiring soccer players. Both have been showing a lack of mental clarity and energy, issues with not sleeping enough or sleeping in way too much, and an overall lack of drive to be active. After both consistently starting a First Day routine, I have seen noticeable differences, and I am purchasing more after I leave this review.",
+       "verified_buyer": true,
+       "created_at": "2026-06-29T17:57:07.916Z",
+       "reviewer_name": "Thorne",
+       "reviewer_initial": "T",
+       "is_anonymous_reviewer": false,
+       "cf_answers": [],
+       "reply_content": null,
+       "pictures_urls": [],
+       "video_external_ids": [],
+       "thumb_up": 0,
+       "thumb_down": 0,
+       "location_country": "",
+       "location_country_code": "",
+       "location": "",
+       "source": null,
+       "product_title": "The &quot;No Junk&quot;™ Teens’ Multi",
+       "encoded_product_id": "y941NXvw",
+       "encoded_shop_id": "Ay42qJag",
+       "is_shopify_lite": false,
+       "product_url": "https://firstday.com/products/teens-kickstart-vitamin",
+       "product_url_with_utm": "https://firstday.com/products/teens-kickstart-vitamin?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "product_in_store": true,
+       "product_variant_title": "",
+       "profile_img_idx": 6,
+       "avatar_image_url": null,
+       "gravatar_hash": null,
+       "media_platform_hosted_video_infos": [],
+       "country_code_show_flag": null,
+       "pinned": null,
+       "in_a_group": true,
+       "can_pin": true,
+       "shop_reply_name": "First Day Life Inc.",
+       "transparency_badges": [
+        "review_collected_via_store_invitation"
+       ],
+       "language": null,
+       "is_for_product_from_group": false,
+       "product_variant_image_url": "https://cdn.shopify.com/s/files/1/0028/0533/4131/files/Rebrand_Broad_Images_16.png?v=1762439551",
+       "is_for_product_from_bundle": false,
+       "product_title_localized": null
+      },
+      {
+       "uuid": "779b1731-aae6-40e7-a22a-c7b14c6e257f",
+       "title": "Complete Game Changer!!",
+       "rating": 5,
+       "body_html": "<p>I was 100% skeptical and 1000% desperate to help our 13 yo son. First dose I noticed his mood completely shift. Thought I was crazy. Next day even more noticeable.  He was letting me touch him. Grabbing to hold my hand. Laughing.  Being kind, respectful and sweet. He loves the taste so I never have to remind him but more importantly he notices the difference.  I think this should be a must for most moody/anxious kids before you try any medication.  The difference is remarkable.  He wakes up happy. Sleeping better. Just all around better! Worth every penny.</p>",
+       "body": "I was 100% skeptical and 1000% desperate to help our 13 yo son. First dose I noticed his mood completely shift. Thought I was crazy. Next day even more noticeable.  He was letting me touch him. Grabbing to hold my hand. Laughing.  Being kind, respectful and sweet. He loves the taste so I never have to remind him but more importantly he notices the difference.  I think this should be a must for most moody/anxious kids before you try any medication.  The difference is remarkable.  He wakes up happy. Sleeping better. Just all around better! Worth every penny.",
+       "verified_buyer": true,
+       "created_at": "2026-06-28T12:45:46.234Z",
+       "reviewer_name": "K-Lee A.",
+       "reviewer_initial": "K",
+       "is_anonymous_reviewer": false,
+       "cf_answers": [],
+       "reply_content": null,
+       "pictures_urls": [],
+       "video_external_ids": [],
+       "thumb_up": 0,
+       "thumb_down": 0,
+       "location_country": "",
+       "location_country_code": "",
+       "location": "",
+       "source": null,
+       "product_title": "The &quot;No Junk&quot;™ Teens’ Multi",
+       "encoded_product_id": "y941NXvw",
+       "encoded_shop_id": "Ay42qJag",
+       "is_shopify_lite": false,
+       "product_url": "https://firstday.com/products/teens-kickstart-vitamin",
+       "product_url_with_utm": "https://firstday.com/products/teens-kickstart-vitamin?jdgm_referral_location=widget&ref=judge.me&utm_campaign=judgeme-review-site&utm_medium=referral&utm_source=judgeme",
+       "product_in_store": true,
+       "product_variant_title": "",
+       "profile_img_idx": 4,
+       "avatar_image_url": null,
+       "gravatar_hash": null,
+       "media_platform_hosted_video_infos": [],
+       "country_code_show_flag": null,
+       "pinned": null,
+       "in_a_group": true,
+       "can_pin": true,
+       "shop_reply_name": "First Day Life Inc.",
+       "transparency_badges": [
+        "review_collected_via_store_invitation"
+       ],
+       "language": null,
+       "is_for_product_from_group": false,
+       "product_variant_image_url": "https://cdn.shopify.com/s/files/1/0028/0533/4131/files/Rebrand_Broad_Images_16.png?v=1762439551",
+       "is_for_product_from_bundle": false,
+       "product_title_localized": null
+      }
+     ],
+     "pagination": {
+      "total_pages": 279,
+      "current_page": 1,
+      "per_page": 5
+     }
+    }
+   }
+  }
+ ]
+}

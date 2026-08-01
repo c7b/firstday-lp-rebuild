@@ -1,0 +1,1299 @@
+{
+ "target_section": "lp-buy-box",
+ "source_snapshot": "fd-lp.html",
+ "originals": [
+  {
+   "original_id": "standalone_product_PMRdVC",
+   "raw_bytes": 241795,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__standalone_product_PMRdVC\" class=\"shopify-section section\">",
+     "path": "",
+     "seq": 0
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1781036994&width=1200",
+     "srcset": "//firstday.com/cdn/shop/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1781036994&width=400 400w,\n                  //firstday.com/cdn/shop/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1781036994&width=600 600w,\n                  //firstday.com/cdn/shop/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1781036994&width=800 800w,\n                  //firstday.com/cdn/shop/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1781036994&width=",
+     "alt": "The \"No Junk\"™ Teens’ Multi",
+     "path": "div.grid__item>div.PBFCM-PDP-product-gallery>div.PBFCM-PDP-product-gallery__main>div.PBFCM-PDP-product-gallery__main-wrapper"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1781036994&width=150",
+     "srcset": "",
+     "alt": "The ",
+     "path": "div.PBFCM-PDP-product-gallery__thumbnails>div.PBFCM-PDP-product-gallery__thumbnail-container>div.PBFCM-PDP-product-gallery__thumbnail-track>button.PBFCM-PDP-product-gallery__thumbnail"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg?v=1761070439&width=150",
+     "srcset": "",
+     "alt": "Product packaging with text about 'Real Wholesome' nutrition gummies on a wooden surface. Nutrition, made easy.",
+     "path": "div.PBFCM-PDP-product-gallery__thumbnails>div.PBFCM-PDP-product-gallery__thumbnail-container>div.PBFCM-PDP-product-gallery__thumbnail-track>button.PBFCM-PDP-product-gallery__thumbnail"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg?v=1770321932&width=150",
+     "srcset": "",
+     "alt": "Gummy vitamins with health benefits listed on a blue background. Free of artificial dyes.",
+     "path": "div.PBFCM-PDP-product-gallery__thumbnails>div.PBFCM-PDP-product-gallery__thumbnail-container>div.PBFCM-PDP-product-gallery__thumbnail-track>button.PBFCM-PDP-product-gallery__thumbnail"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg?v=1761070439&width=150",
+     "srcset": "",
+     "alt": "93% of kids don't eat enough fruits or vegetables.",
+     "path": "div.PBFCM-PDP-product-gallery__thumbnails>div.PBFCM-PDP-product-gallery__thumbnail-container>div.PBFCM-PDP-product-gallery__thumbnail-track>button.PBFCM-PDP-product-gallery__thumbnail"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg?v=1770321932&width=150",
+     "srcset": "",
+     "alt": "Better health for the whole family. pictures of happy customers",
+     "path": "div.PBFCM-PDP-product-gallery__thumbnails>div.PBFCM-PDP-product-gallery__thumbnail-container>div.PBFCM-PDP-product-gallery__thumbnail-track>button.PBFCM-PDP-product-gallery__thumbnail"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg?v=1779938218&width=150",
+     "srcset": "",
+     "alt": "55 million gummies sold in 2024",
+     "path": "div.PBFCM-PDP-product-gallery__thumbnails>div.PBFCM-PDP-product-gallery__thumbnail-container>div.PBFCM-PDP-product-gallery__thumbnail-track>button.PBFCM-PDP-product-gallery__thumbnail"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg?v=1754579903&width=150",
+     "srcset": "",
+     "alt": "image of product packaging showing packaging has a new look",
+     "path": "div.PBFCM-PDP-product-gallery__thumbnails>div.PBFCM-PDP-product-gallery__thumbnail-container>div.PBFCM-PDP-product-gallery__thumbnail-track>button.PBFCM-PDP-product-gallery__thumbnail"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg?v=1754579903&width=150",
+     "srcset": "",
+     "alt": "Blue container with gummies and superfoods on a light blue background, featuring text about nutrition and product features.",
+     "path": "div.PBFCM-PDP-product-gallery__thumbnails>div.PBFCM-PDP-product-gallery__thumbnail-container>div.PBFCM-PDP-product-gallery__thumbnail-track>button.PBFCM-PDP-product-gallery__thumbnail"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg?v=1754579903&width=150",
+     "srcset": "",
+     "alt": "97% of customers prefer first day",
+     "path": "div.PBFCM-PDP-product-gallery__thumbnails>div.PBFCM-PDP-product-gallery__thumbnail-container>div.PBFCM-PDP-product-gallery__thumbnail-track>button.PBFCM-PDP-product-gallery__thumbnail"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=150",
+     "srcset": "",
+     "alt": "Supplement facts label with clean label project logo on a blue background",
+     "path": "div.PBFCM-PDP-product-gallery__thumbnails>div.PBFCM-PDP-product-gallery__thumbnail-container>div.PBFCM-PDP-product-gallery__thumbnail-track>button.PBFCM-PDP-product-gallery__thumbnail"
+    },
+    {
+     "type": "text",
+     "text": "The \"No Junk\"™ Teens’ Multi",
+     "path": "div.product__title>div.pdp-vanity>h1>span.vanity-demo-2",
+     "seq": 93
+    },
+    {
+     "type": "text",
+     "text": "Daily Gummies For",
+     "path": "div.product__title>div.pdp-vanity>h1>span.vanity-title",
+     "seq": 95
+    },
+    {
+     "type": "text",
+     "text": "Improved Motivation & Mood",
+     "path": "div.pdp-vanity>h1>span.vanity-title>span.vanity-title-highlight",
+     "seq": 96
+    },
+    {
+     "type": "text",
+     "text": "Toddlers'",
+     "path": "div.product__info-wrapper>div.product__info-container>div.multi-product-tabs-template--19023949758562__standalone_product_PMRdVC>button.multi-product-tab-template--19023949758562__standalone_product_PMRdVC",
+     "seq": 105
+    },
+    {
+     "type": "text",
+     "text": "Kids'",
+     "path": "div.product__info-wrapper>div.product__info-container>div.multi-product-tabs-template--19023949758562__standalone_product_PMRdVC>button.multi-product-tab-template--19023949758562__standalone_product_PMRdVC",
+     "seq": 107
+    },
+    {
+     "type": "text",
+     "text": "Teens'",
+     "path": "div.product__info-wrapper>div.product__info-container>div.multi-product-tabs-template--19023949758562__standalone_product_PMRdVC>button.multi-product-tab-template--19023949758562__standalone_product_PMRdVC",
+     "seq": 109
+    },
+    {
+     "type": "text",
+     "text": "1394 reviews",
+     "path": "div.shopify-block>div.jdgm-widget>div.jdgm-prev-badge>span.jdgm-prev-badge__text",
+     "seq": 129
+    },
+    {
+     "type": "text",
+     "text": "A unique organic fruit and veggie blend, plus 12 key nutrients.",
+     "path": "div.pdp-benefit-accordion-stats>div.pdp-benefit-accordion-stats__intro>div.metafield-rich_text_field>p",
+     "seq": 137
+    },
+    {
+     "type": "text",
+     "text": "Flavor: 🍊 Orange",
+     "path": "div.pdp-benefit-accordion-stats__intro>div.metafield-rich_text_field>p>strong",
+     "seq": 142
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png?v=1781709850&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png?v=1781709850&width=64 64w",
+     "alt": "Improve Overall Health & Nutrition",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Improve Overall Health & Nutrition",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 154
+    },
+    {
+     "type": "text",
+     "text": "98%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 165
+    },
+    {
+     "type": "text",
+     "text": "of parents say First Day vitamins support their teen's overall health & nutrition.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 169
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Vector_6.png?v=1781280482&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Vector_6.png?v=1781280482&width=64 64w",
+     "alt": "Boost Mood & Motivation",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Boost Mood & Motivation",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 181
+    },
+    {
+     "type": "text",
+     "text": "83%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 192
+    },
+    {
+     "type": "text",
+     "text": "of customers say First Day vitamins support their teens' overall mood & behavior, and saw improved motivation for school.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 196
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png?v=1781711382&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png?v=1781711382&width=64 64w",
+     "alt": "Promote Clear Skin",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Promote Clear Skin",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 208
+    },
+    {
+     "type": "text",
+     "text": "75%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 219
+    },
+    {
+     "type": "text",
+     "text": "said they saw an improvement to skin health, including reduced acne.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 223
+    },
+    {
+     "type": "text",
+     "text": "Delivery Frequency",
+     "path": "div.product-purchase-content>div.PBFCM-PDP-frequency-selector>div.PBFCM-PDP-quantity-selector__header>h2.PBFCM-PDP-frequency-selector__title",
+     "seq": 244
+    },
+    {
+     "type": "text",
+     "text": "Monthly",
+     "path": "div.PBFCM-PDP-frequency-selector__option>div.PBFCM-PDP-frequency-selector__top>div.PBFCM-PDP-frequency-selector__left>label.PBFCM-PDP-frequency-selector__label",
+     "seq": 265
+    },
+    {
+     "type": "text",
+     "text": "Original price $39, strikethrough",
+     "path": "div.PBFCM-PDP-frequency-selector__price-box>div.PBFCM-PDP-frequency-selector__price-row>div.PBFCM-PDP-frequency-selector__price-compare>span.sr-only",
+     "seq": 271
+    },
+    {
+     "type": "text",
+     "text": "$39",
+     "path": "div.PBFCM-PDP-frequency-selector__price-box>div.PBFCM-PDP-frequency-selector__price-row>div.PBFCM-PDP-frequency-selector__price-compare>span",
+     "seq": 273
+    },
+    {
+     "type": "text",
+     "text": "Sale price $23.40",
+     "path": "div.PBFCM-PDP-frequency-selector__price-box>div.PBFCM-PDP-frequency-selector__price-row>span.PBFCM-PDP-frequency-selector__price-final>span.sr-only",
+     "seq": 277
+    },
+    {
+     "type": "text",
+     "text": "$23.40",
+     "path": "div.PBFCM-PDP-frequency-selector__price-box>div.PBFCM-PDP-frequency-selector__price-row>span.PBFCM-PDP-frequency-selector__price-final>span",
+     "seq": 279
+    },
+    {
+     "type": "text",
+     "text": "FREE Gift on orders +$75",
+     "path": "div.PBFCM-PDP-frequency-selector__benefits>div.PBFCM-PDP-frequency-selector__benefit>p.PBFCM-PDP-frequency-selector__benefit-text>span",
+     "seq": 292
+    },
+    {
+     "type": "text",
+     "text": "FREE Shipping on first order",
+     "path": "div.PBFCM-PDP-frequency-selector__benefits>div.PBFCM-PDP-frequency-selector__benefit>p.PBFCM-PDP-frequency-selector__benefit-text>span",
+     "seq": 302
+    },
+    {
+     "type": "text",
+     "text": "Cancel anytime, no questions asked",
+     "path": "div.PBFCM-PDP-frequency-selector__option>div.PBFCM-PDP-frequency-selector__benefits>div.PBFCM-PDP-frequency-selector__benefit>p.PBFCM-PDP-frequency-selector__benefit-text",
+     "seq": 311
+    },
+    {
+     "type": "text",
+     "text": "Lowest Price",
+     "path": "div.PBFCM-PDP-frequency-selector__container>div.PBFCM-PDP-frequency-selector__option>div.PBFCM-PDP-frequency-selector__badge>p.PBFCM-PDP-frequency-selector__badge-text",
+     "seq": 316
+    },
+    {
+     "type": "text",
+     "text": "Anywhere!",
+     "path": "div.PBFCM-PDP-frequency-selector__option>div.PBFCM-PDP-frequency-selector__badge>p.PBFCM-PDP-frequency-selector__badge-text>strong",
+     "seq": 317
+    },
+    {
+     "type": "text",
+     "text": "One-Time",
+     "path": "div.PBFCM-PDP-frequency-selector__option>div.PBFCM-PDP-frequency-selector__top>div.PBFCM-PDP-frequency-selector__left>label.PBFCM-PDP-frequency-selector__label",
+     "seq": 339
+    },
+    {
+     "type": "text",
+     "text": "Original price $39, strikethrough",
+     "path": "div.PBFCM-PDP-frequency-selector__price-box>div.PBFCM-PDP-frequency-selector__price-row>span.PBFCM-PDP-frequency-selector__price-compare>span.sr-only",
+     "seq": 345
+    },
+    {
+     "type": "text",
+     "text": "$39",
+     "path": "div.PBFCM-PDP-frequency-selector__price-box>div.PBFCM-PDP-frequency-selector__price-row>span.PBFCM-PDP-frequency-selector__price-compare>span",
+     "seq": 347
+    },
+    {
+     "type": "text",
+     "text": "Sale price $27.30",
+     "path": "div.PBFCM-PDP-frequency-selector__price-box>div.PBFCM-PDP-frequency-selector__price-row>span.PBFCM-PDP-frequency-selector__price-final>span.sr-only",
+     "seq": 351
+    },
+    {
+     "type": "text",
+     "text": "$27.30",
+     "path": "div.PBFCM-PDP-frequency-selector__price-box>div.PBFCM-PDP-frequency-selector__price-row>span.PBFCM-PDP-frequency-selector__price-final>span",
+     "seq": 353
+    },
+    {
+     "type": "text",
+     "text": "with code FIREWORKS",
+     "path": "div.PBFCM-PDP-frequency-selector__option>div.PBFCM-PDP-frequency-selector__top>div.PBFCM-PDP-frequency-selector__price-box>span.PBFCM-PDP-frequency-selector__price-note",
+     "seq": 357
+    },
+    {
+     "type": "text",
+     "text": "Price $39",
+     "path": "div.PBFCM-PDP-frequency-selector__price-box>div.PBFCM-PDP-frequency-selector__price-row>span.PBFCM-PDP-frequency-selector__price-final>span.sr-only",
+     "seq": 363
+    },
+    {
+     "type": "text",
+     "text": "$39",
+     "path": "div.PBFCM-PDP-frequency-selector__price-box>div.PBFCM-PDP-frequency-selector__price-row>span.PBFCM-PDP-frequency-selector__price-final>span",
+     "seq": 365
+    },
+    {
+     "type": "text",
+     "text": "You're missing out on free shipping!",
+     "path": "div.PBFCM-PDP-frequency-selector__option>div.PBFCM-PDP-frequency-selector__benefits>div.PBFCM-PDP-frequency-selector__benefit>p.PBFCM-PDP-frequency-selector__benefit-text",
+     "seq": 377
+    },
+    {
+     "type": "text",
+     "text": "You're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!",
+     "path": "div.PBFCM-PDP-frequency-selector__option>div.PBFCM-PDP-frequency-selector__benefits>div.PBFCM-PDP-frequency-selector__benefit>p.PBFCM-PDP-frequency-selector__benefit-text",
+     "seq": 385
+    },
+    {
+     "type": "text",
+     "text": "Higher Cost",
+     "path": "div.PBFCM-PDP-frequency-selector__container>div.PBFCM-PDP-frequency-selector__option>div.PBFCM-PDP-frequency-selector__badge>p.PBFCM-PDP-frequency-selector__badge-text",
+     "seq": 390
+    },
+    {
+     "type": "text",
+     "text": "Quantity",
+     "path": "div.product-purchase-content>div.PBFCM-PDP-quantity-selector>div.PBFCM-PDP-quantity-selector__header>h2.PBFCM-PDP-quantity-selector__title",
+     "seq": 414
+    },
+    {
+     "type": "text",
+     "text": "30 Servings Per Bottle",
+     "path": "div.PBFCM-PDP-quantity-selector>div.PBFCM-PDP-quantity-selector__header>div.PBFCM-PDP-quantity-selector__servings-badge>p.PBFCM-PDP-quantity-selector__servings-text",
+     "seq": 417
+    },
+    {
+     "type": "text",
+     "text": "1‎ Bottle",
+     "path": "div.PBFCM-PDP-quantity-selector__grid>div.PBFCM-PDP-quantity-selector__item>div.PBFCM-PDP-quantity-selector__item-content>p.PBFCM-PDP-quantity-selector__item-label",
+     "seq": 424
+    },
+    {
+     "type": "text",
+     "text": "Save $15.80",
+     "path": "div.PBFCM-PDP-quantity-selector__item>div.PBFCM-PDP-quantity-selector__item-content>div.PBFCM-PDP-quantity-selector__savings-badge>p.PBFCM-PDP-quantity-selector__savings-text",
+     "seq": 427
+    },
+    {
+     "type": "text",
+     "text": "2‎ Bottles",
+     "path": "div.PBFCM-PDP-quantity-selector__grid>div.PBFCM-PDP-quantity-selector__item>div.PBFCM-PDP-quantity-selector__item-content>p.PBFCM-PDP-quantity-selector__item-label",
+     "seq": 434
+    },
+    {
+     "type": "text",
+     "text": "Save $31.59",
+     "path": "div.PBFCM-PDP-quantity-selector__item>div.PBFCM-PDP-quantity-selector__item-content>div.PBFCM-PDP-quantity-selector__savings-badge>p.PBFCM-PDP-quantity-selector__savings-text",
+     "seq": 437
+    },
+    {
+     "type": "text",
+     "text": "3‎ Bottles",
+     "path": "div.PBFCM-PDP-quantity-selector__grid>div.PBFCM-PDP-quantity-selector__item>div.PBFCM-PDP-quantity-selector__item-content>p.PBFCM-PDP-quantity-selector__item-label",
+     "seq": 444
+    },
+    {
+     "type": "text",
+     "text": "Save $47.39",
+     "path": "div.PBFCM-PDP-quantity-selector__item>div.PBFCM-PDP-quantity-selector__item-content>div.PBFCM-PDP-quantity-selector__savings-badge>p.PBFCM-PDP-quantity-selector__savings-text",
+     "seq": 447
+    },
+    {
+     "type": "text",
+     "text": "4‎ Bottles",
+     "path": "div.PBFCM-PDP-quantity-selector__grid>div.PBFCM-PDP-quantity-selector__item>div.PBFCM-PDP-quantity-selector__item-content>p.PBFCM-PDP-quantity-selector__item-label",
+     "seq": 454
+    },
+    {
+     "type": "text",
+     "text": "Save $63.18",
+     "path": "div.PBFCM-PDP-quantity-selector__item>div.PBFCM-PDP-quantity-selector__item-content>div.PBFCM-PDP-quantity-selector__savings-badge>p.PBFCM-PDP-quantity-selector__savings-text",
+     "seq": 457
+    },
+    {
+     "type": "text",
+     "text": "Unlock Your",
+     "path": "div.PBFCM-PDP-gift-progress__top>div.PBFCM-PDP-gift-progress__text-container>div.PBFCM-PDP-gift-progress__header>h3.PBFCM-PDP-gift-progress__title",
+     "seq": 471
+    },
+    {
+     "type": "text",
+     "text": "Free Gift",
+     "path": "div.PBFCM-PDP-gift-progress__text-container>div.PBFCM-PDP-gift-progress__header>h3.PBFCM-PDP-gift-progress__title>span.PBFCM-PDP-gift-progress__title-highlight",
+     "seq": 472
+    },
+    {
+     "type": "text",
+     "text": "12 Servings of",
+     "path": "div.PBFCM-PDP-gift-progress__top>div.PBFCM-PDP-gift-progress__text-container>div.PBFCM-PDP-gift-progress__header>p.PBFCM-PDP-gift-progress__description",
+     "seq": 475
+    },
+    {
+     "type": "text",
+     "text": "Electrolyte Drink Mix",
+     "path": "div.PBFCM-PDP-gift-progress__text-container>div.PBFCM-PDP-gift-progress__header>p.PBFCM-PDP-gift-progress__description>strong",
+     "seq": 476
+    },
+    {
+     "type": "text",
+     "text": "For The Whole Family.",
+     "path": "div.PBFCM-PDP-gift-progress__top>div.PBFCM-PDP-gift-progress__text-container>div.PBFCM-PDP-gift-progress__header>p.PBFCM-PDP-gift-progress__description",
+     "seq": 477
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/hydration-12-pack.png?v=1781107632&width=220",
+     "srcset": "//firstday.com/cdn/shop/files/hydration-12-pack.png?v=1781107632&width=220 1x, //firstday.com/cdn/shop/files/hydration-12-pack.png?v=1781107632&width=440 2x",
+     "alt": "Rapid Hydration Electrolyte Support - Gift",
+     "path": "div.pdp-gift-ab-target>div.PBFCM-PDP-gift-progress>div.PBFCM-PDP-gift-progress__top>div.PBFCM-PDP-gift-progress__image-container"
+    },
+    {
+     "type": "text",
+     "text": "Original price $25.00, strikethrough",
+     "path": "div.PBFCM-PDP-gift-progress__image-container>div.PBFCM-PDP-gift-progress__badge>span.PBFCM-PDP-gift-progress__badge-original>span.sr-only",
+     "seq": 485
+    },
+    {
+     "type": "text",
+     "text": "$25.00",
+     "path": "div.PBFCM-PDP-gift-progress__image-container>div.PBFCM-PDP-gift-progress__badge>span.PBFCM-PDP-gift-progress__badge-original>span",
+     "seq": 487
+    },
+    {
+     "type": "text",
+     "text": "Sale price FREE",
+     "path": "div.PBFCM-PDP-gift-progress__image-container>div.PBFCM-PDP-gift-progress__badge>span.PBFCM-PDP-gift-progress__badge-sale>span.sr-only",
+     "seq": 491
+    },
+    {
+     "type": "text",
+     "text": "FREE",
+     "path": "div.PBFCM-PDP-gift-progress__image-container>div.PBFCM-PDP-gift-progress__badge>span.PBFCM-PDP-gift-progress__badge-sale>span",
+     "seq": 493
+    },
+    {
+     "type": "text",
+     "text": "You are $75 away, keep going!",
+     "path": "div.pdp-gift-ab-target>div.PBFCM-PDP-gift-progress>div.PBFCM-PDP-gift-progress__progress-wrap>p.PBFCM-PDP-gift-progress__status",
+     "seq": 500
+    },
+    {
+     "type": "text",
+     "text": "$0.00",
+     "path": "div.PBFCM-PDP-gift-progress__bar-wrapper>div.PBFCM-PDP-gift-progress__bar-fill>div.PBFCM-PDP-gift-progress__tooltip>span.PBFCM-PDP-gift-progress__tooltip-original",
+     "seq": 510
+    },
+    {
+     "type": "text",
+     "text": "$0.00",
+     "path": "div.PBFCM-PDP-gift-progress__bar-wrapper>div.PBFCM-PDP-gift-progress__bar-fill>div.PBFCM-PDP-gift-progress__tooltip>span.PBFCM-PDP-gift-progress__tooltip-sale",
+     "seq": 512
+    },
+    {
+     "type": "text",
+     "text": "$75",
+     "path": "div.PBFCM-PDP-gift-progress>div.PBFCM-PDP-gift-progress__progress-wrap>div.PBFCM-PDP-gift-progress__bar-container>div.PBFCM-PDP-gift-progress__bar-goal",
+     "seq": 519
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Product_Over_White.jpg?v=1759255674&width=64",
+     "srcset": "",
+     "alt": "The Teens' Daily Focus Brain Support dietary supplement features blue and teal packaging with 60 gummies per container and two yellow gummies in front, providing focus support designed specifically for teens.",
+     "path": "div.PBFCM-PDP-upsell-container__list>div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__product>div.PBFCM-PDP-upsell-card__image"
+    },
+    {
+     "type": "text",
+     "text": "Teens' Daily Focus Brain Support",
+     "path": "div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__product>div.PBFCM-PDP-upsell-card__info>h3.PBFCM-PDP-upsell-card__title",
+     "seq": 537
+    },
+    {
+     "type": "text",
+     "text": "Support for focus, learning, and memory recall.",
+     "path": "div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__product>div.PBFCM-PDP-upsell-card__info>p.PBFCM-PDP-upsell-card__description",
+     "seq": 539
+    },
+    {
+     "type": "text",
+     "text": "Original price $49.00, strikethrough",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-compare>span.sr-only",
+     "seq": 546
+    },
+    {
+     "type": "text",
+     "text": "$49.00",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-compare>span",
+     "seq": 548
+    },
+    {
+     "type": "text",
+     "text": "Sale price $29.40",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-final>span.sr-only",
+     "seq": 552
+    },
+    {
+     "type": "text",
+     "text": "$29.40",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-final>span",
+     "seq": 554
+    },
+    {
+     "type": "text",
+     "text": "0",
+     "path": "div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__quantity>span.PBFCM-PDP-upsell-card__qty-display",
+     "seq": 565
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/TeensMagnesiumPrimary.jpg?v=1763588577&width=64",
+     "srcset": "",
+     "alt": "A container labeled Teens’ Nighttime Reset Magnesium sits upright, with two berry-shaped red gummies beside it. The label states No Junk and the calming supplement for teens includes 60 magnesium gummies.",
+     "path": "div.PBFCM-PDP-upsell-container__list>div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__product>div.PBFCM-PDP-upsell-card__image"
+    },
+    {
+     "type": "text",
+     "text": "Teens’ Nighttime Reset Magnesium",
+     "path": "div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__product>div.PBFCM-PDP-upsell-card__info>h3.PBFCM-PDP-upsell-card__title",
+     "seq": 585
+    },
+    {
+     "type": "text",
+     "text": "Melatonin-free support for relaxation & sleep.",
+     "path": "div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__product>div.PBFCM-PDP-upsell-card__info>p.PBFCM-PDP-upsell-card__description",
+     "seq": 587
+    },
+    {
+     "type": "text",
+     "text": "Original price $39.00, strikethrough",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-compare>span.sr-only",
+     "seq": 594
+    },
+    {
+     "type": "text",
+     "text": "$39.00",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-compare>span",
+     "seq": 596
+    },
+    {
+     "type": "text",
+     "text": "Sale price $23.40",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-final>span.sr-only",
+     "seq": 600
+    },
+    {
+     "type": "text",
+     "text": "$23.40",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-final>span",
+     "seq": 602
+    },
+    {
+     "type": "text",
+     "text": "0",
+     "path": "div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__quantity>span.PBFCM-PDP-upsell-card__qty-display",
+     "seq": 613
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/GUEST_9c904f2b-66b3-4c5c-8a4e-454f8e3bbd90.avif?v=1785254909&width=64",
+     "srcset": "",
+     "alt": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
+     "path": "div.PBFCM-PDP-upsell-container__list>div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__product>div.PBFCM-PDP-upsell-card__image"
+    },
+    {
+     "type": "text",
+     "text": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
+     "path": "div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__product>div.PBFCM-PDP-upsell-card__info>h3.PBFCM-PDP-upsell-card__title",
+     "seq": 633
+    },
+    {
+     "type": "text",
+     "text": "To support immunity, digestion, and skin health.",
+     "path": "div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__product>div.PBFCM-PDP-upsell-card__info>p.PBFCM-PDP-upsell-card__description",
+     "seq": 635
+    },
+    {
+     "type": "text",
+     "text": "Original price $49.00, strikethrough",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-compare>span.sr-only",
+     "seq": 642
+    },
+    {
+     "type": "text",
+     "text": "$49.00",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-compare>span",
+     "seq": 644
+    },
+    {
+     "type": "text",
+     "text": "Sale price $29.40",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-final>span.sr-only",
+     "seq": 648
+    },
+    {
+     "type": "text",
+     "text": "$29.40",
+     "path": "div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__price-box>span.PBFCM-PDP-upsell-card__price-final>span",
+     "seq": 650
+    },
+    {
+     "type": "text",
+     "text": "0",
+     "path": "div.PBFCM-PDP-upsell-card>div.PBFCM-PDP-upsell-card__controls>div.PBFCM-PDP-upsell-card__quantity>span.PBFCM-PDP-upsell-card__qty-display",
+     "seq": 661
+    },
+    {
+     "type": "text",
+     "text": "Try Before You Buy",
+     "path": "div.product-purchase-content>div.PBFCM-PDP-cart-summary>button.PBFCM-PDP-cart-summary__button>strong.PBFCM-PDP-cart-summary__button-text",
+     "seq": 697
+    },
+    {
+     "type": "text",
+     "text": "Add To Cart",
+     "path": "div.PBFCM-PDP-cart-summary>div.PBFCM-PDP-cart-summary__breakdown>button.PBFCM-PDP-cart-summary__button>strong.PBFCM-PDP-cart-summary__button-text",
+     "seq": 706
+    },
+    {
+     "type": "text",
+     "text": "Subtotal",
+     "path": "div.PBFCM-PDP-cart-summary__breakdown>div.PBFCM-PDP-cart-summary_container_breakdown>div.PBFCM-PDP-cart-summary__line>span.PBFCM-PDP-cart-summary__line-label",
+     "seq": 711
+    },
+    {
+     "type": "text",
+     "text": "Original price $78, strikethrough",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-compare>span.sr-only",
+     "seq": 715
+    },
+    {
+     "type": "text",
+     "text": "$78",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-compare>span",
+     "seq": 717
+    },
+    {
+     "type": "text",
+     "text": "Sale price $66.30",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-final>span.sr-only",
+     "seq": 721
+    },
+    {
+     "type": "text",
+     "text": "$66.30",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-final>span",
+     "seq": 723
+    },
+    {
+     "type": "text",
+     "text": "You are saving a total of $48.08!",
+     "path": "div.PBFCM-PDP-cart-summary__breakdown>div.PBFCM-PDP-cart-summary_container_breakdown>div.PBFCM-PDP-cart-summary__savings-badge>p.PBFCM-PDP-cart-summary__savings-text",
+     "seq": 729
+    },
+    {
+     "type": "text",
+     "text": "The \"No Junk\"™ Teens’ Multi (2x)",
+     "path": "div.PBFCM-PDP-cart-summary__breakdown>div.PBFCM-PDP-cart-summary_container_breakdown>div.PBFCM-PDP-cart-summary__line>span.PBFCM-PDP-cart-summary__line-label",
+     "seq": 735
+    },
+    {
+     "type": "text",
+     "text": "Original price $78, strikethrough",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-compare>span.sr-only",
+     "seq": 739
+    },
+    {
+     "type": "text",
+     "text": "$78",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-compare>span",
+     "seq": 741
+    },
+    {
+     "type": "text",
+     "text": "Sale price $66.30",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-final>span.sr-only",
+     "seq": 745
+    },
+    {
+     "type": "text",
+     "text": "$66.30",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-final>span",
+     "seq": 747
+    },
+    {
+     "type": "text",
+     "text": "Shipping",
+     "path": "div.PBFCM-PDP-cart-summary__breakdown>div.PBFCM-PDP-cart-summary_container_breakdown>div.PBFCM-PDP-cart-summary__line>span.PBFCM-PDP-cart-summary__line-label",
+     "seq": 757
+    },
+    {
+     "type": "text",
+     "text": "Original shipping price $5.00, strikethrough",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-compare>span.sr-only",
+     "seq": 761
+    },
+    {
+     "type": "text",
+     "text": "$5.00",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-compare>span",
+     "seq": 763
+    },
+    {
+     "type": "text",
+     "text": "Free shipping",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-final>span.sr-only",
+     "seq": 767
+    },
+    {
+     "type": "text",
+     "text": "FREE",
+     "path": "div.PBFCM-PDP-cart-summary__line>div.PBFCM-PDP-cart-summary__line-price>span.PBFCM-PDP-cart-summary__line-final>span",
+     "seq": 769
+    },
+    {
+     "type": "text",
+     "text": "Loading, please wait...",
+     "path": "div.product-purchase-content>div.PBFCM-PDP-cart-summary>div.PBFCM-PDP-cart-summary__loading>span.visually-hidden",
+     "seq": 779
+    },
+    {
+     "type": "text",
+     "text": "🔥 Limited-Time Offer 🔥",
+     "path": "div.PBFCM-PDP-sticky-atc>div.PBFCM-PDP-sticky-atc__inner>div.PBFCM-PDP-sticky-atc__content>p.PBFCM-PDP-sticky-atc__eyebrow",
+     "seq": 785
+    },
+    {
+     "type": "text",
+     "text": "Flash Sale Ending Soon",
+     "path": "div.PBFCM-PDP-sticky-atc>div.PBFCM-PDP-sticky-atc__inner>div.PBFCM-PDP-sticky-atc__content>p.PBFCM-PDP-sticky-atc__headline",
+     "seq": 787
+    },
+    {
+     "type": "text",
+     "text": "Get Up To 52% Off",
+     "path": "div.PBFCM-PDP-sticky-atc>div.PBFCM-PDP-sticky-atc__inner>button.PBFCM-PDP-sticky-atc__button>span.PBFCM-PDP-sticky-atc__cta-text",
+     "seq": 791
+    },
+    {
+     "type": "text",
+     "text": "45 Day Money Back Guarantee",
+     "path": "div.PBFCM-PDP-cart-summary>div.PBFCM-PDP-sticky-atc>div.PBFCM-PDP-sticky-atc__inner>p.PBFCM-PDP-sticky-atc__note",
+     "seq": 794
+    },
+    {
+     "type": "img",
+     "src": "https://cdn.shopify.com/s/files/1/0028/0533/4131/files/image_17.png",
+     "srcset": "",
+     "alt": "money back guarantee",
+     "path": "div.product__info-container>div.product__custom-liquid>div.usprow>div.usp"
+    },
+    {
+     "type": "img",
+     "src": "https://cdn.shopify.com/s/files/1/0028/0533/4131/files/image_18_23f2a83f-a228-4c73-be70-3ac38b5837dd.png",
+     "srcset": "",
+     "alt": "1 million customers",
+     "path": "div.product__info-container>div.product__custom-liquid>div.usprow>div.usp"
+    },
+    {
+     "type": "img",
+     "src": "https://cdn.shopify.com/s/files/1/0028/0533/4131/files/image_23.png",
+     "srcset": "",
+     "alt": "secure checkout",
+     "path": "div.product__info-container>div.product__custom-liquid>div.usprow>div.usp"
+    },
+    {
+     "type": "text",
+     "text": "Ingredients",
+     "path": "details>summary>span.summary__title>span.accordion__title",
+     "seq": 835
+    },
+    {
+     "type": "text",
+     "text": "We are thoughtful about the ingredients we select, use REAL organic fruits & vegetables, and keep out long lists of ingredients that can't even be pronounced.",
+     "path": "details>div.accordion__content>div.metafield-rich_text_field>p",
+     "seq": 845
+    },
+    {
+     "type": "text",
+     "text": "Organic Superfood Blend:",
+     "path": "div.accordion__content>div.metafield-rich_text_field>p>strong",
+     "seq": 848
+    },
+    {
+     "type": "text",
+     "text": "Organic Superfood Blend: Apple, Kale, Broccoli, Spinach, Carrot, Parsley, Beet, Green Cabbage, Raspberry, Blueberry, Strawberry, Tomato, Aronia Berry, Chlorella, Maca, Moringa, Reishi Mushroom, Cordyceps Mushroom, Lion's Mane Mushroom, Turmeric, Ginger",
+     "path": "details>div.accordion__content>div.metafield-rich_text_field>p",
+     "seq": 849
+    },
+    {
+     "type": "text",
+     "text": "Other Ingredients:",
+     "path": "div.accordion__content>div.metafield-rich_text_field>p>strong",
+     "seq": 852
+    },
+    {
+     "type": "text",
+     "text": "Tapioca Syrup‡, Cane Sugar‡, Water, Pectin, Citric Acid, Natural Flavors, Superfood Powdered Blend‡ (Apple‡, Kale‡, Broccoli‡, Spinach‡, Carrot‡, Parsley‡, Beet‡, Green Cabbage‡, Raspberry‡, Blueberry‡, Strawberry‡, Tomato‡, Aronia Berry‡, Chlorella‡, Maca‡, Moringa‡, Reishi Mushroom‡, Cordyceps Mushroom‡, Lion's Mane Mushroom‡, Turmeric‡, Ginger‡), Carrot and Blackcurrant and Red Bell Pepper Juice for Color.",
+     "path": "details>div.accordion__content>div.metafield-rich_text_field>p",
+     "seq": 853
+    },
+    {
+     "type": "text",
+     "text": "‡Organic",
+     "path": "details>div.accordion__content>div.metafield-rich_text_field>p",
+     "seq": 855
+    },
+    {
+     "type": "text",
+     "text": "Free From The Top 9 Allergens:",
+     "path": "div.accordion__content>div.metafield-rich_text_field>p>strong",
+     "seq": 858
+    },
+    {
+     "type": "text",
+     "text": "We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, shellfish-free, and sesame-free.",
+     "path": "details>div.accordion__content>div.metafield-rich_text_field>p",
+     "seq": 859
+    },
+    {
+     "type": "text",
+     "text": "Supplement Facts",
+     "path": "details>summary>span.summary__title>span.accordion__title",
+     "seq": 881
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=900",
+     "srcset": "//firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=352 352w, //firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=832 832w, //firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=900 900w",
+     "alt": "Supplement Facts",
+     "path": "div.product__info-container>accordion-tab.product__accordion>details>div.accordion__content"
+    },
+    {
+     "type": "text",
+     "text": "Subscription Details",
+     "path": "details>summary>span.summary__title>span.accordion__title",
+     "seq": 904
+    },
+    {
+     "type": "text",
+     "text": "You'll receive a stylish refillable bottle on your first order, then receive our eco-friendly refill pouches every 30 days on a physician-recommended schedule.",
+     "path": "details>div.accordion__content>div.metafield-rich_text_field>p",
+     "seq": 914
+    },
+    {
+     "type": "text",
+     "text": "Plus, you'll receive these benefits:",
+     "path": "details>div.accordion__content>div.metafield-rich_text_field>p",
+     "seq": 918
+    },
+    {
+     "type": "text",
+     "text": "Savings every single month.",
+     "path": "div.accordion__content>div.metafield-rich_text_field>ul>li",
+     "seq": 921
+    },
+    {
+     "type": "text",
+     "text": "Free shipping on your first order.",
+     "path": "div.accordion__content>div.metafield-rich_text_field>ul>li",
+     "seq": 923
+    },
+    {
+     "type": "text",
+     "text": "Easy management - skip or pause whenever you need.",
+     "path": "div.accordion__content>div.metafield-rich_text_field>ul>li",
+     "seq": 925
+    },
+    {
+     "type": "text",
+     "text": "VIP access to sales, gifts, early access & more.",
+     "path": "div.accordion__content>div.metafield-rich_text_field>ul>li",
+     "seq": 927
+    },
+    {
+     "type": "text",
+     "text": "Cancel anytime.",
+     "path": "div.accordion__content>div.metafield-rich_text_field>ul>li",
+     "seq": 929
+    },
+    {
+     "type": "text",
+     "text": "This Product is For Teens Ages",
+     "path": "div.product__info-container>div.crosslinks-container>div.crosslinks-header>span.crosslinks-header__age",
+     "seq": 938
+    },
+    {
+     "type": "text",
+     "text": "13 - 17",
+     "path": "div.crosslinks-container>div.crosslinks-header>span.crosslinks-header__age>b",
+     "seq": 939
+    },
+    {
+     "type": "a-open",
+     "href": "/products/the-no-junk-toddlers-multivitamin",
+     "path": "div.product__info-container>div.crosslinks-container>div.crosslinks-cards>a.crosslinks-card"
+    },
+    {
+     "type": "text",
+     "text": "Toddlers",
+     "path": "div.crosslinks-cards>a.crosslinks-card>div.crosslinks-card__content>span.crosslinks-card__title",
+     "seq": 946
+    },
+    {
+     "type": "text",
+     "text": "Ages 2 - 3",
+     "path": "div.crosslinks-cards>a.crosslinks-card>div.crosslinks-card__content>span.crosslinks-card__subtitle",
+     "seq": 948
+    },
+    {
+     "type": "a-open",
+     "href": "/products/kids-enrichment-vitamin",
+     "path": "div.product__info-container>div.crosslinks-container>div.crosslinks-cards>a.crosslinks-card"
+    },
+    {
+     "type": "text",
+     "text": "Kids",
+     "path": "div.crosslinks-cards>a.crosslinks-card>div.crosslinks-card__content>span.crosslinks-card__title",
+     "seq": 958
+    },
+    {
+     "type": "text",
+     "text": "Ages 4 - 12",
+     "path": "div.crosslinks-cards>a.crosslinks-card>div.crosslinks-card__content>span.crosslinks-card__subtitle",
+     "seq": 960
+    },
+    {
+     "type": "text",
+     "text": "Worried about your toddler’s eating habits? Meet the toddler multivitamin that’s giving little ones a nutrition boost! Made with 10 nutrients and a blend of 21 organic superfoods in a formula designed just for 2 & 3 year olds.",
+     "path": "div>div.pdp-benefit-accordion-stats__intro>div.metafield-rich_text_field>p",
+     "seq": 977
+    },
+    {
+     "type": "text",
+     "text": "Flavor: Strawberry & Orange",
+     "path": "div.pdp-benefit-accordion-stats__intro>div.metafield-rich_text_field>p>strong",
+     "seq": 982
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Untitled_design_6_c5d8fdab-5f5c-4e08-80e0-45b7de988e78.png?v=1781710049&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Untitled_design_6_c5d8fdab-5f5c-4e08-80e0-45b7de988e78.png?v=1781710049&width=64 64w",
+     "alt": " Enhanced Nutrition & Immunity",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Enhanced Nutrition & Immunity",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 996
+    },
+    {
+     "type": "text",
+     "text": "95%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 1007
+    },
+    {
+     "type": "text",
+     "text": "of parents say First Day vitamins support their child's overall health & immunity.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 1011
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Vector_6.png?v=1781280482&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Vector_6.png?v=1781280482&width=64 64w",
+     "alt": " Improved Behavior ",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Improved Behavior",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 1023
+    },
+    {
+     "type": "text",
+     "text": "83%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 1034
+    },
+    {
+     "type": "text",
+     "text": "of customers say First Day vitamins support their child's overall mood & behavior.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 1038
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Group_1_2_c9058c0e-c38b-4b19-b4b5-60cb21c06b06.png?v=1781280422&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Group_1_2_c9058c0e-c38b-4b19-b4b5-60cb21c06b06.png?v=1781280422&width=64 64w",
+     "alt": " Better Sleep Routines ",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Better Sleep Routines",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 1050
+    },
+    {
+     "type": "text",
+     "text": "82%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 1061
+    },
+    {
+     "type": "text",
+     "text": "said these vitamins are improving their child's overall bedtime routines & sleep quality.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 1065
+    },
+    {
+     "type": "text",
+     "text": "Deliciously nutritious daily multivitamin gummies packed with 21 organic superfoods and 9 essential vitamins.",
+     "path": "div>div.pdp-benefit-accordion-stats__intro>div.metafield-rich_text_field>p",
+     "seq": 1076
+    },
+    {
+     "type": "text",
+     "text": "Flavor: 🍓 Strawberry & 🍊 Orange",
+     "path": "div.pdp-benefit-accordion-stats__intro>div.metafield-rich_text_field>p>strong",
+     "seq": 1081
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Vector_6.png?v=1781280482&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Vector_6.png?v=1781280482&width=64 64w",
+     "alt": " Enhanced Nutrition & Immunity",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Enhanced Nutrition & Immunity",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 1093
+    },
+    {
+     "type": "text",
+     "text": "95%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 1104
+    },
+    {
+     "type": "text",
+     "text": "of parents say First Day vitamins support their child's overall health & immunity.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 1108
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Group_1_2a81b8f9-d0db-4ade-8584-5c9e3134e0ae.png?v=1781280422&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Group_1_2a81b8f9-d0db-4ade-8584-5c9e3134e0ae.png?v=1781280422&width=64 64w",
+     "alt": " Improved Behavior ",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Improved Behavior",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 1120
+    },
+    {
+     "type": "text",
+     "text": "83%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 1131
+    },
+    {
+     "type": "text",
+     "text": "of customers say First Day vitamins support their child's overall mood & behavior.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 1135
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Group_1_2_c9058c0e-c38b-4b19-b4b5-60cb21c06b06.png?v=1781280422&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Group_1_2_c9058c0e-c38b-4b19-b4b5-60cb21c06b06.png?v=1781280422&width=64 64w",
+     "alt": " Better Sleep Routines ",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Better Sleep Routines",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 1147
+    },
+    {
+     "type": "text",
+     "text": "82%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 1158
+    },
+    {
+     "type": "text",
+     "text": "said these vitamins are improving their child's overall bedtime routines & sleep quality.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 1162
+    },
+    {
+     "type": "text",
+     "text": "A unique organic fruit and veggie blend, plus 12 key nutrients.",
+     "path": "div>div.pdp-benefit-accordion-stats__intro>div.metafield-rich_text_field>p",
+     "seq": 1173
+    },
+    {
+     "type": "text",
+     "text": "Flavor: 🍊 Orange",
+     "path": "div.pdp-benefit-accordion-stats__intro>div.metafield-rich_text_field>p>strong",
+     "seq": 1178
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png?v=1781709850&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png?v=1781709850&width=64 64w",
+     "alt": "Improve Overall Health & Nutrition",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Improve Overall Health & Nutrition",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 1190
+    },
+    {
+     "type": "text",
+     "text": "98%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 1201
+    },
+    {
+     "type": "text",
+     "text": "of parents say First Day vitamins support their teen's overall health & nutrition.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 1205
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Vector_6.png?v=1781280482&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Vector_6.png?v=1781280482&width=64 64w",
+     "alt": "Boost Mood & Motivation",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Boost Mood & Motivation",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 1217
+    },
+    {
+     "type": "text",
+     "text": "83%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 1228
+    },
+    {
+     "type": "text",
+     "text": "of customers say First Day vitamins support their teens' overall mood & behavior, and saw improved motivation for school.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 1232
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png?v=1781711382&width=64",
+     "srcset": "//firstday.com/cdn/shop/files/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png?v=1781711382&width=64 64w",
+     "alt": "Promote Clear Skin",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__icon"
+    },
+    {
+     "type": "text",
+     "text": "Promote Clear Skin",
+     "path": "details.pdp-benefit-accordion-stats__item>summary.pdp-benefit-accordion-stats__summary>span.pdp-benefit-accordion-stats__summary-left>span.pdp-benefit-accordion-stats__heading",
+     "seq": 1244
+    },
+    {
+     "type": "text",
+     "text": "75%",
+     "path": "div.pdp-benefit-accordion-stats__items>details.pdp-benefit-accordion-stats__item>div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__percent",
+     "seq": 1255
+    },
+    {
+     "type": "text",
+     "text": "said they saw an improvement to skin health, including reduced acne.†",
+     "path": "div.pdp-benefit-accordion-stats__content>div.pdp-benefit-accordion-stats__copy>div.metafield-rich_text_field>p",
+     "seq": 1259
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Rebrand_Broad_Images_16.png?v=1762439551&width=3840",
+     "srcset": "//firstday.com/cdn/shop/files/Rebrand_Broad_Images_16.png?v=1762439551&width=375 375w, //firstday.com/cdn/shop/files/Rebrand_Broad_Images_16.png?v=1762439551&width=750 750w, //firstday.com/cdn/shop/files/Rebrand_Broad_Images_16.png?v=1762439551&width=1100 1100w, //firstday.com/cdn/shop/files/Rebrand_Broad_Images_16.png?v=1762439551&width=1500 1500w, //firstday.com/cdn/shop/files/Rebrand_Broad_Images_16.png?v=1762439551&width=1780 1780w, //firstday.com/cdn/shop/files/Rebrand_Broad_Images_16.png?v",
+     "alt": "First Day Teens Multi + Superfoods dietary supplement packaging with a gummy on a white background",
+     "path": "div>div.product-media-modal__content>div.media-wrapper>div.media"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg?v=1761070439&width=3840",
+     "srcset": "//firstday.com/cdn/shop/files/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg?v=1761070439&width=375 375w, //firstday.com/cdn/shop/files/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg?v=1761070439&width=750 750w, //firstday.com/cdn/shop/files/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg?v=1761070439&width=1100 1100w, //firstday.com/cdn/shop/files/Directions_with_product-in-use_image_cd32a596-def2-4e61-8",
+     "alt": "Product packaging with text about &",
+     "path": "div>div.product-media-modal__content>div.media-wrapper>div.media"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg?v=1770321932&width=3840",
+     "srcset": "//firstday.com/cdn/shop/files/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg?v=1770321932&width=375 375w, //firstday.com/cdn/shop/files/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg?v=1770321932&width=750 750w, //firstday.com/cdn/shop/files/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg?v=1770321932&width=1100 1100w, //firstday.com/cdn/shop/files/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg?v=1770321932&width=",
+     "alt": "Gummy vitamins with health benefits listed on a blue background. Free of artificial dyes.",
+     "path": "div>div.product-media-modal__content>div.media-wrapper>div.media"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg?v=1761070439&width=3840",
+     "srcset": "//firstday.com/cdn/shop/files/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg?v=1761070439&width=375 375w, //firstday.com/cdn/shop/files/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg?v=1761070439&width=750 750w, //firstday.com/cdn/shop/files/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg?v=1761070439&width=1100 1100w, //firstday.com/cdn/shop/files/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg?v=1761070439&width=1500 1500w, //firstday.com/cdn/shop/files/Product_UVP_26ec31",
+     "alt": "93% of kids don&",
+     "path": "div>div.product-media-modal__content>div.media-wrapper>div.media"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg?v=1770321932&width=3840",
+     "srcset": "//firstday.com/cdn/shop/files/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg?v=1770321932&width=375 375w, //firstday.com/cdn/shop/files/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg?v=1770321932&width=750 750w, //firstday.com/cdn/shop/files/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg?v=1770321932&width=1100 1100w, //firstday.com/cdn/shop/files/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg?v=1770321932&width=1500 1500w, //firstday.com/cdn/shop/files/Testimonials_6",
+     "alt": "Better health for the whole family. pictures of happy customers",
+     "path": "div>div.product-media-modal__content>div.media-wrapper>div.media"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg?v=1779938218&width=3840",
+     "srcset": "//firstday.com/cdn/shop/files/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg?v=1779938218&width=375 375w, //firstday.com/cdn/shop/files/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg?v=1779938218&width=750 750w, //firstday.com/cdn/shop/files/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg?v=1779938218&width=1100 1100w, //firstday.com/cdn/shop/files/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg?v=1779938218&width=1500 1500w, //firstd",
+     "alt": "55 million gummies sold in 2024",
+     "path": "div>div.product-media-modal__content>div.media-wrapper>div.media"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg?v=1754579903&width=3840",
+     "srcset": "//firstday.com/cdn/shop/files/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg?v=1754579903&width=375 375w, //firstday.com/cdn/shop/files/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg?v=1754579903&width=750 750w, //firstday.com/cdn/shop/files/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg?v=1754579903&width=1100 1100w, //firstday.com/cdn/shop/files/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-",
+     "alt": "image of product packaging showing packaging has a new look",
+     "path": "div>div.product-media-modal__content>div.media-wrapper>div.media"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg?v=1754579903&width=3840",
+     "srcset": "//firstday.com/cdn/shop/files/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg?v=1754579903&width=375 375w, //firstday.com/cdn/shop/files/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg?v=1754579903&width=750 750w, //firstday.com/cdn/shop/files/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg?v=1754579903&width=1100 1100w, //firstday.com/cdn/shop/files/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg?v=1754579903&width=1500 1500w, ",
+     "alt": "Blue container with gummies and superfoods on a light blue background, featuring text about nutrition and product features.",
+     "path": "div>div.product-media-modal__content>div.media-wrapper>div.media"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg?v=1754579903&width=3840",
+     "srcset": "//firstday.com/cdn/shop/files/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg?v=1754579903&width=375 375w, //firstday.com/cdn/shop/files/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg?v=1754579903&width=750 750w, //firstday.com/cdn/shop/files/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg?v=1754579903&width=1100 1100w, //firstday.com/cdn/shop/files/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg?v=1754579903&width=1500 1500w, //firstday.com/cdn/shop/files/Social",
+     "alt": "97% of customers prefer first day",
+     "path": "div>div.product-media-modal__content>div.media-wrapper>div.media"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=3840",
+     "srcset": "//firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=375 375w, //firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=750 750w, //firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=1100 1100w, //firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=177032193",
+     "alt": "Supplement facts label with clean label project logo on a blue background",
+     "path": "div>div.product-media-modal__content>div.media-wrapper>div.media"
+    }
+   ]
+  }
+ ]
+}

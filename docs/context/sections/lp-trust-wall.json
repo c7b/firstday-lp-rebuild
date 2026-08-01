@@ -1,0 +1,243 @@
+{
+ "target_section": "lp-trust-wall",
+ "source_snapshot": "fd-lp.html",
+ "originals": [
+  {
+   "original_id": "homepage_trust_section_YfPXT3",
+   "raw_bytes": 56944,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__homepage_trust_section_YfPXT3\" class=\"shopify-section section\">",
+     "path": "",
+     "seq": 0
+    },
+    {
+     "type": "text",
+     "text": "Life Changing Results from",
+     "path": "section.homepage-trust-section-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__container-template--19023949758562__homepage_trust_section_YfPXT3>h2.homepage-trust-section__title-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 5
+    },
+    {
+     "type": "text",
+     "text": "Doctors",
+     "path": "section.homepage-trust-section-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__container-template--19023949758562__homepage_trust_section_YfPXT3>h2.homepage-trust-section__title-template--19023949758562__homepage_trust_section_YfPXT3>strong",
+     "seq": 6
+    },
+    {
+     "type": "text",
+     "text": "and",
+     "path": "section.homepage-trust-section-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__container-template--19023949758562__homepage_trust_section_YfPXT3>h2.homepage-trust-section__title-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 7
+    },
+    {
+     "type": "text",
+     "text": "Real Customers",
+     "path": "section.homepage-trust-section-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__container-template--19023949758562__homepage_trust_section_YfPXT3>h2.homepage-trust-section__title-template--19023949758562__homepage_trust_section_YfPXT3>strong",
+     "seq": 8
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/blue-bubble-social-grid.jpg?v=1781563733&width=560",
+     "srcset": "//firstday.com/cdn/shop/files/blue-bubble-social-grid.jpg?v=1781563733&width=352 352w, //firstday.com/cdn/shop/files/blue-bubble-social-grid.jpg?v=1781563733&width=560 560w",
+     "alt": "",
+     "path": "div.homepage-trust-section__carousel-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/der-lei-chen-medical-board.jpg?v=1775176611&width=160",
+     "srcset": "//firstday.com/cdn/shop/files/der-lei-chen-medical-board.jpg?v=1775176611&width=160 160w",
+     "alt": "Dr. Lei Chen",
+     "path": "div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__expert-image-template--19023949758562__homepage_trust_section_YfPXT3"
+    },
+    {
+     "type": "text",
+     "text": "\"These vitamins are exactly what I recommend to parents looking for quality nutrition.\"",
+     "path": "div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__expert-quote-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 21
+    },
+    {
+     "type": "text",
+     "text": "Dr. Lei Chen",
+     "path": "div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__expert-info-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__expert-name-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 24
+    },
+    {
+     "type": "text",
+     "text": "MD, MHS at Yale University",
+     "path": "div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__expert-info-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__expert-credentials-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 26
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/phils-my-pharmacist.png?v=1771540397&width=560",
+     "srcset": "//firstday.com/cdn/shop/files/phils-my-pharmacist.png?v=1771540397&width=352 352w, //firstday.com/cdn/shop/files/phils-my-pharmacist.png?v=1771540397&width=560 560w",
+     "alt": "Video thumbnail",
+     "path": "div.homepage-trust-section__carousel-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/Womens_daily_supercharge_ugc.png?v=1778595285&width=560",
+     "srcset": "//firstday.com/cdn/shop/files/Womens_daily_supercharge_ugc.png?v=1778595285&width=352 352w, //firstday.com/cdn/shop/files/Womens_daily_supercharge_ugc.png?v=1778595285&width=560 560w",
+     "alt": "Collage of Women Reviews",
+     "path": "div.homepage-trust-section__carousel-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/ugc-4.png?v=1691706683&width=160",
+     "srcset": "//firstday.com/cdn/shop/files/ugc-4.png?v=1691706683&width=160 160w",
+     "alt": "Diana V.",
+     "path": "div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__expert-image-template--19023949758562__homepage_trust_section_YfPXT3"
+    },
+    {
+     "type": "text",
+     "text": "\"These are the best tasting vitamins I ever purchased. It feels like I am having a treat. These are the only ones so far that my kids like too.\"",
+     "path": "div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__expert-quote-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 48
+    },
+    {
+     "type": "text",
+     "text": "Diana V.",
+     "path": "div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__expert-info-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__expert-name-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 51
+    },
+    {
+     "type": "text",
+     "text": "Verified Purchaser",
+     "path": "div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__expert-info-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__expert-credentials-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 53
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/review-woman.png?v=1775176116&width=560",
+     "srcset": "//firstday.com/cdn/shop/files/review-woman.png?v=1775176116&width=352 352w, //firstday.com/cdn/shop/files/review-woman.png?v=1775176116&width=560 560w",
+     "alt": "Video thumbnail",
+     "path": "div.homepage-trust-section__carousel-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3"
+    },
+    {
+     "type": "text",
+     "text": "\"A revolutionary approach to children's health.\"",
+     "path": "div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__media-quote-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 69
+    },
+    {
+     "type": "text",
+     "text": "As seen on",
+     "path": "div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__media-footer-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__media-label-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 72
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png?v=1771298020&width=240",
+     "srcset": "//firstday.com/cdn/shop/files/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png?v=1771298020&width=240 240w",
+     "alt": "",
+     "path": "div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__media-footer-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__media-logo-template--19023949758562__homepage_trust_section_YfPXT3"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/dr-harvard-ed-medical-board.jpg?v=1775176611&width=160",
+     "srcset": "//firstday.com/cdn/shop/files/dr-harvard-ed-medical-board.jpg?v=1775176611&width=160 160w",
+     "alt": "Dr. Ed Giovannucci",
+     "path": "div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__expert-image-template--19023949758562__homepage_trust_section_YfPXT3"
+    },
+    {
+     "type": "text",
+     "text": "\"We choose partners carefully, and First Day’s dedication to research, formulation integrity, and transparent quality practices makes them a brand we’re proud to align with.\"",
+     "path": "div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__expert-quote-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 83
+    },
+    {
+     "type": "text",
+     "text": "Dr. Ed Giovannucci",
+     "path": "div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__expert-info-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__expert-name-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 86
+    },
+    {
+     "type": "text",
+     "text": "MD, MPH, ScD at Harvard University",
+     "path": "div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__expert-info-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__expert-credentials-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 88
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/review-woman-2.png?v=1775176166&width=560",
+     "srcset": "//firstday.com/cdn/shop/files/review-woman-2.png?v=1775176166&width=352 352w, //firstday.com/cdn/shop/files/review-woman-2.png?v=1775176166&width=560 560w",
+     "alt": "Video thumbnail",
+     "path": "div.homepage-trust-section__carousel-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-viewport-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__carousel-track-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__item-template--19023949758562__homepage_trust_section_YfPXT3"
+    },
+    {
+     "type": "text",
+     "text": "95%",
+     "path": "div.homepage-trust-section__stat-content-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-row-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-badge-template--19023949758562__homepage_trust_section_YfPXT3>span",
+     "seq": 127
+    },
+    {
+     "type": "text",
+     "text": "of parents see",
+     "path": "div.homepage-trust-section__stat-card-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-content-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-row-template--19023949758562__homepage_trust_section_YfPXT3>span.homepage-trust-section__stat-text-line1-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 130
+    },
+    {
+     "type": "text",
+     "text": "improved health & wellness",
+     "path": "div.homepage-trust-section__stats-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-card-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-content-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__stat-text-line2-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 133
+    },
+    {
+     "type": "text",
+     "text": "95%",
+     "path": "div.homepage-trust-section__stats-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-card-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-value-template--19023949758562__homepage_trust_section_YfPXT3>span",
+     "seq": 143
+    },
+    {
+     "type": "text",
+     "text": "82%",
+     "path": "div.homepage-trust-section__stat-content-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-row-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-badge-template--19023949758562__homepage_trust_section_YfPXT3>span",
+     "seq": 151
+    },
+    {
+     "type": "text",
+     "text": "of kids ask for",
+     "path": "div.homepage-trust-section__stat-card-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-content-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-row-template--19023949758562__homepage_trust_section_YfPXT3>span.homepage-trust-section__stat-text-line1-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 154
+    },
+    {
+     "type": "text",
+     "text": "their vitamins daily",
+     "path": "div.homepage-trust-section__stats-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-card-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-content-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__stat-text-line2-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 157
+    },
+    {
+     "type": "text",
+     "text": "82%",
+     "path": "div.homepage-trust-section__stats-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-card-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-value-template--19023949758562__homepage_trust_section_YfPXT3>span",
+     "seq": 167
+    },
+    {
+     "type": "text",
+     "text": "97%",
+     "path": "div.homepage-trust-section__stat-content-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-row-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-badge-template--19023949758562__homepage_trust_section_YfPXT3>span",
+     "seq": 175
+    },
+    {
+     "type": "text",
+     "text": "customer",
+     "path": "div.homepage-trust-section__stat-card-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-content-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-row-template--19023949758562__homepage_trust_section_YfPXT3>span.homepage-trust-section__stat-text-line1-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 178
+    },
+    {
+     "type": "text",
+     "text": "satisfaction rate",
+     "path": "div.homepage-trust-section__stats-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-card-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-content-template--19023949758562__homepage_trust_section_YfPXT3>p.homepage-trust-section__stat-text-line2-template--19023949758562__homepage_trust_section_YfPXT3",
+     "seq": 181
+    },
+    {
+     "type": "text",
+     "text": "97%",
+     "path": "div.homepage-trust-section__stats-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-card-template--19023949758562__homepage_trust_section_YfPXT3>div.homepage-trust-section__stat-value-template--19023949758562__homepage_trust_section_YfPXT3>span",
+     "seq": 191
+    }
+   ]
+  }
+ ]
+}

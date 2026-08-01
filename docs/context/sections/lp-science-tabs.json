@@ -1,0 +1,340 @@
+{
+ "target_section": "lp-science-tabs",
+ "source_snapshot": "fd-lp.html",
+ "originals": [
+  {
+   "original_id": "temp_science_module_mqM7QH",
+   "raw_bytes": 22772,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__temp_science_module_mqM7QH\" class=\"shopify-section science-tabs-section\">",
+     "path": "",
+     "seq": 0
+    },
+    {
+     "type": "text",
+     "text": "The Science Behind Our Multivitamin",
+     "path": "section.science-tabs>div.science-tabs__wrapper>h2.science-tabs__heading>p",
+     "seq": 4
+    },
+    {
+     "type": "text",
+     "text": "Focus in Class",
+     "path": "div.science-tabs__container>div.science-tabs__tab-bar>button.science-tabs__tab>span.science-tabs__tab-label",
+     "seq": 10
+    },
+    {
+     "type": "text",
+     "text": "Boosted Energy",
+     "path": "div.science-tabs__container>div.science-tabs__tab-bar>button.science-tabs__tab>span.science-tabs__tab-label",
+     "seq": 14
+    },
+    {
+     "type": "text",
+     "text": "Balanced Moods",
+     "path": "div.science-tabs__container>div.science-tabs__tab-bar>button.science-tabs__tab>span.science-tabs__tab-label",
+     "seq": 18
+    },
+    {
+     "type": "text",
+     "text": "Clear Skin",
+     "path": "div.science-tabs__container>div.science-tabs__tab-bar>button.science-tabs__tab>span.science-tabs__tab-label",
+     "seq": 22
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/preview_images/a80235b58deb4ad08c567013e029e0a4.thumbnail.0000000000_small.jpg?v=1774380542",
+     "srcset": "",
+     "alt": "",
+     "path": "div.science-tabs__panels>div.science-tabs__panel>div.science-tabs__panel-media>video.science-tabs__video"
+    },
+    {
+     "type": "text",
+     "text": "How This Helps*",
+     "path": "div.science-tabs__panel>div.science-tabs__panel-content>div.science-tabs__panel-top>h3.science-tabs__content-title",
+     "seq": 36
+    },
+    {
+     "type": "text",
+     "text": "Low levels of certain B vitamins can affect brain function and attention. During busy school days, this can make it harder to concentrate, stay sharp, or process new info.",
+     "path": "div.science-tabs__panel-top>div.science-tabs__content-desc>div.metafield-rich_text_field>p",
+     "seq": 40
+    },
+    {
+     "type": "text",
+     "text": "🧠",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 48
+    },
+    {
+     "type": "text",
+     "text": "Vitamin B1",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 49
+    },
+    {
+     "type": "text",
+     "text": "supports brain signaling and memory.",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 50
+    },
+    {
+     "type": "text",
+     "text": "🪄",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 52
+    },
+    {
+     "type": "text",
+     "text": "Vitamin B2",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 53
+    },
+    {
+     "type": "text",
+     "text": "helps maintain healthy nerve function.",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 54
+    },
+    {
+     "type": "text",
+     "text": "🧬",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 56
+    },
+    {
+     "type": "text",
+     "text": "Vitamin B6",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 57
+    },
+    {
+     "type": "text",
+     "text": "plays a role in neurotransmitter production.",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 58
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/preview_images/9e9ff2355ccf4cc9b95da1f7f7c943e3.thumbnail.0000000000_small.jpg?v=1774380537",
+     "srcset": "",
+     "alt": "",
+     "path": "div.science-tabs__panels>div.science-tabs__panel>div.science-tabs__panel-media>video.science-tabs__video"
+    },
+    {
+     "type": "text",
+     "text": "How This Helps*",
+     "path": "div.science-tabs__panel>div.science-tabs__panel-content>div.science-tabs__panel-top>h3.science-tabs__content-title",
+     "seq": 74
+    },
+    {
+     "type": "text",
+     "text": "When key vitamins like B6 or B12 run low, your teen's cells can’t make enough energy — leading to tiredness, brain fog, or feeling “off.” It’s common during growth, late nights, or busy school days.",
+     "path": "div.science-tabs__panel-top>div.science-tabs__content-desc>div.metafield-rich_text_field>p",
+     "seq": 78
+    },
+    {
+     "type": "text",
+     "text": "⚡️",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 86
+    },
+    {
+     "type": "text",
+     "text": "Vitamin B6",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 87
+    },
+    {
+     "type": "text",
+     "text": "helps convert food into fuel.",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 88
+    },
+    {
+     "type": "text",
+     "text": "🩸",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 90
+    },
+    {
+     "type": "text",
+     "text": "Vitamin B12",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 91
+    },
+    {
+     "type": "text",
+     "text": "supports red blood cells that carry oxygen.",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 92
+    },
+    {
+     "type": "text",
+     "text": "🍊",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 94
+    },
+    {
+     "type": "text",
+     "text": "Vitamin C",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 95
+    },
+    {
+     "type": "text",
+     "text": "boosts iron absorption and energy metabolism.",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 96
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/preview_images/cc10ff9ae6804bdf9ff1723916a187ac.thumbnail.0000000000_small.jpg?v=1774380526",
+     "srcset": "",
+     "alt": "",
+     "path": "div.science-tabs__panels>div.science-tabs__panel>div.science-tabs__panel-media>video.science-tabs__video"
+    },
+    {
+     "type": "text",
+     "text": "How This Helps*",
+     "path": "div.science-tabs__panel>div.science-tabs__panel-content>div.science-tabs__panel-top>h3.science-tabs__content-title",
+     "seq": 112
+    },
+    {
+     "type": "text",
+     "text": "Vitamin deficiencies can throw off the brain’s natural mood regulators, making teens feel irritable, anxious, or just not like themselves.",
+     "path": "div.science-tabs__panel-top>div.science-tabs__content-desc>div.metafield-rich_text_field>p",
+     "seq": 116
+    },
+    {
+     "type": "text",
+     "text": "🧠",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 124
+    },
+    {
+     "type": "text",
+     "text": "Vitamin B6",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 125
+    },
+    {
+     "type": "text",
+     "text": "— supports serotonin and dopamine production",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 126
+    },
+    {
+     "type": "text",
+     "text": "💭",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 128
+    },
+    {
+     "type": "text",
+     "text": "Vitamin B12",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 129
+    },
+    {
+     "type": "text",
+     "text": "helps regulate mood and nervous system function",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 130
+    },
+    {
+     "type": "text",
+     "text": "🌿",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 132
+    },
+    {
+     "type": "text",
+     "text": "Magnesium",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 133
+    },
+    {
+     "type": "text",
+     "text": "promotes calm and emotional balance",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 134
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/preview_images/434e19b2f80f4966a32568ff377de125.thumbnail.0000000000_small.jpg?v=1774380539",
+     "srcset": "",
+     "alt": "",
+     "path": "div.science-tabs__panels>div.science-tabs__panel>div.science-tabs__panel-media>video.science-tabs__video"
+    },
+    {
+     "type": "text",
+     "text": "How This Helps*",
+     "path": "div.science-tabs__panel>div.science-tabs__panel-content>div.science-tabs__panel-top>h3.science-tabs__content-title",
+     "seq": 150
+    },
+    {
+     "type": "text",
+     "text": "Teen breakouts can be triggered by hormonal changes and nutrient gaps. Especially when skin-supporting vitamins like A and C are running low.",
+     "path": "div.science-tabs__panel-top>div.science-tabs__content-desc>div.metafield-rich_text_field>p",
+     "seq": 154
+    },
+    {
+     "type": "text",
+     "text": "🍑",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 162
+    },
+    {
+     "type": "text",
+     "text": "Vitamin A",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 163
+    },
+    {
+     "type": "text",
+     "text": "supports healthy skin cell turnover",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 164
+    },
+    {
+     "type": "text",
+     "text": "🍊",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 166
+    },
+    {
+     "type": "text",
+     "text": "Vitamin C",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 167
+    },
+    {
+     "type": "text",
+     "text": "helps with collagen production and healing",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 168
+    },
+    {
+     "type": "text",
+     "text": "🛡️",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 170
+    },
+    {
+     "type": "text",
+     "text": "Zinc",
+     "path": "div.science-tabs__benefits-list>div.metafield-rich_text_field>p>strong",
+     "seq": 171
+    },
+    {
+     "type": "text",
+     "text": "fights inflammation and supports clear skin",
+     "path": "div.science-tabs__benefits>div.science-tabs__benefits-list>div.metafield-rich_text_field>p",
+     "seq": 172
+    }
+   ]
+  }
+ ]
+}

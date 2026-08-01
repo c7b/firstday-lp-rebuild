@@ -1,0 +1,1140 @@
+{
+ "target_section": "_dropped",
+ "source_snapshot": "fd-lp.html",
+ "originals": [
+  {
+   "original_id": "temp_marquee_VcwMAg",
+   "raw_bytes": 141,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__temp_marquee_VcwMAg\" class=\"shopify-section section-announcement-ticker\">",
+     "path": "",
+     "seq": 0
+    }
+   ]
+  },
+  {
+   "original_id": "custom_liquid_rkHyT8",
+   "raw_bytes": 1146,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__custom_liquid_rkHyT8\" class=\"shopify-section section custom-liquid-outer-container\">",
+     "path": "",
+     "seq": 0
+    }
+   ]
+  },
+  {
+   "original_id": "timeline_section_N69qEe",
+   "raw_bytes": 141,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__timeline_section_N69qEe\" class=\"shopify-section section-kids-timeline\">",
+     "path": "",
+     "seq": 0
+    }
+   ]
+  },
+  {
+   "original_id": "image_with_text_Fc3pAp",
+   "raw_bytes": 12560,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__image_with_text_Fc3pAp\" class=\"shopify-section section\">",
+     "path": "",
+     "seq": 0
+    }
+   ]
+  },
+  {
+   "original_id": "temp_a_plus_cards_xn333q",
+   "raw_bytes": 116,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__temp_a_plus_cards_xn333q\" class=\"shopify-section\">",
+     "path": "",
+     "seq": 0
+    }
+   ]
+  },
+  {
+   "original_id": "temp_benefits_split_kngUgC",
+   "raw_bytes": 5872,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__temp_benefits_split_kngUgC\" class=\"shopify-section section\">",
+     "path": "",
+     "seq": 0
+    }
+   ]
+  },
+  {
+   "original_id": "frontrowmd_clinicians_reviews_z8btGd",
+   "raw_bytes": 1284,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__frontrowmd_clinicians_reviews_z8btGd\" class=\"shopify-section section\">",
+     "path": "",
+     "seq": 0
+    }
+   ]
+  },
+  {
+   "original_id": "temp_css_XVHj4R",
+   "raw_bytes": 739598,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__temp_css_XVHj4R\" class=\"shopify-section\">",
+     "path": "",
+     "seq": 0
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/logo-first-day-white-font_ee8ef403-a5e8-4b91-a356-40b2460ff87d.png?v=1687236964&width=120",
+     "srcset": "//firstday.com/cdn/shop/files/logo-first-day-white-font_ee8ef403-a5e8-4b91-a356-40b2460ff87d.png?v=1687236964&width=120, //firstday.com/cdn/shop/files/logo-first-day-white-font_ee8ef403-a5e8-4b91-a356-40b2460ff87d.png?v=1687236964&width=240 2x",
+     "alt": "FirstDay logo white with transparent background",
+     "path": "div.footer__blocks-wrapper>footer-accordion.accordion>details>div.footer-block__details-content"
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/pages/sale",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Shop",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 52
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/pages/making-our-vitamin",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "How We're Made",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 56
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/pages/about-us",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "About Us",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 60
+    },
+    {
+     "type": "a-open",
+     "href": "/pages/loyalty-program#rivo",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Rewards",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 64
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/pages/reviews",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Reviews",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 68
+    },
+    {
+     "type": "a-open",
+     "href": "https://account.firstday.com/orders?locale=en®ion_country=US&buyer_flags=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmaXJzdC1kYXktaW5jLm15c2hvcGlmeS5jb20iLCJmbGFncyI6W10sImV4cCI6MTc4MzYwODgyMywibmJmIjoxNzgzMDA0MDIzfQ.6tY8fbsmCaGlKUTtRn0KtIACBzhTtXx0YANwZ5T8mfM",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Account Login",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 72
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/blogs/news",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Blog",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 76
+    },
+    {
+     "type": "a-open",
+     "href": "/pages/refer-a-friend",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Refer A Friend",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 80
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/pages/careers",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Careers",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 84
+    },
+    {
+     "type": "a-open",
+     "href": "https://hifirstday-egrhl1h2ylb.gorgias.help/",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "FAQ",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 88
+    },
+    {
+     "type": "a-open",
+     "href": "/pages/contact-us",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Contact Us",
+     "path": "div.footer-block>ul.footer-mobile-menu>li>a.link",
+     "seq": 92
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/pages/sale",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Shop",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 109
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/pages/making-our-vitamin",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "How We're Made",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 113
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/pages/about-us",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "About Us",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 117
+    },
+    {
+     "type": "a-open",
+     "href": "/pages/loyalty-program#rivo",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Rewards",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 121
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/pages/reviews",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Reviews",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 139
+    },
+    {
+     "type": "a-open",
+     "href": "https://account.firstday.com/orders?locale=en®ion_country=US&buyer_flags=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmaXJzdC1kYXktaW5jLm15c2hvcGlmeS5jb20iLCJmbGFncyI6W10sImV4cCI6MTc4MzYwODgyMywibmJmIjoxNzgzMDA0MDIzfQ.6tY8fbsmCaGlKUTtRn0KtIACBzhTtXx0YANwZ5T8mfM",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Account Login",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 143
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/blogs/news",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Blog",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 147
+    },
+    {
+     "type": "a-open",
+     "href": "/pages/refer-a-friend",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Refer A Friend",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 151
+    },
+    {
+     "type": "a-open",
+     "href": "https://firstday.com/pages/careers",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Careers",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 169
+    },
+    {
+     "type": "a-open",
+     "href": "https://hifirstday-egrhl1h2ylb.gorgias.help/",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "FAQ",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 173
+    },
+    {
+     "type": "a-open",
+     "href": "/pages/contact-us",
+     "path": "details>ul.footer-block__details-content>li>a.link"
+    },
+    {
+     "type": "text",
+     "text": "Contact Us",
+     "path": "details>ul.footer-block__details-content>li>a.link",
+     "seq": 177
+    },
+    {
+     "type": "text",
+     "text": "Join The First Day Family!",
+     "path": "footer-accordion.accordion>details>summary>p.h4",
+     "seq": 195
+    },
+    {
+     "type": "text",
+     "text": "Enter your email",
+     "path": "div.footer-block__newsletter>form.footer__newsletter>div.field>label.visually-hidden",
+     "seq": 220
+    },
+    {
+     "type": "a-open",
+     "href": "https://facebook.com/firstday",
+     "path": "div.footer__social-row>ul.footer__list-social>li.list-social__item>a.list-social__link"
+    },
+    {
+     "type": "a-open",
+     "href": "https://instagram.com/firstday",
+     "path": "div.footer__social-row>ul.footer__list-social>li.list-social__item>a.list-social__link"
+    },
+    {
+     "type": "text",
+     "text": "Follow us on social media!",
+     "path": "div.footer-block__details-content>div.footer__social-row>ul.footer__list-social>li.list-social__item--placeholder",
+     "seq": 253
+    },
+    {
+     "type": "text",
+     "text": "*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.",
+     "path": "div.shopify-section>footer.footer>div.disclaimer>p",
+     "seq": 266
+    },
+    {
+     "type": "text",
+     "text": "Use only as directed. The information provided herein is intended for informational purposes only and should not be considered as a substitute for professional medical advice. Always consult a qualified healthcare professional before starting any new dietary supplement regimen or making changes to you or your child's existing healthcare routine. Some Medical Professionals appearing on this site may have been compensated for their opinions. Results claimed by our customers above are based on individual experiences that are unique and cannot be guaranteed.",
+     "path": "div.shopify-section>footer.footer>div.disclaimer2>p",
+     "seq": 270
+    },
+    {
+     "type": "text",
+     "text": "* We offer a 45-day satisfaction guarantee for returns. It covers 45 days starting from the day that you place an order and includes only the very first purchase of any product so that families can try our gummies - for any reason you aren't happy with your vitamins. Please note that we will refund up to $100 so that you can try up to 3 bottles of our gummies risk free. If you would like to order more than 3 bottles in your first order, we recommend that you ordering less so that your family can try them first.",
+     "path": "div.shopify-section>footer.footer>div.disclaimer2>p",
+     "seq": 272
+    },
+    {
+     "type": "text",
+     "text": "† Based on a survey of First Day customers.",
+     "path": "div.shopify-section>footer.footer>div.disclaimer2>p",
+     "seq": 276
+    },
+    {
+     "type": "text",
+     "text": "© 2026,",
+     "path": "div.footer__content-bottom-wrapper>div.footer__column>div.footer__copyright>small.copyright__content",
+     "seq": 283
+    },
+    {
+     "type": "a-open",
+     "href": "/",
+     "path": "div.footer__column>div.footer__copyright>small.copyright__content>a"
+    },
+    {
+     "type": "text",
+     "text": "First Day Life Inc.",
+     "path": "div.footer__column>div.footer__copyright>small.copyright__content>a",
+     "seq": 284
+    },
+    {
+     "type": "text",
+     "text": "All rights reserved.",
+     "path": "div.footer__content-bottom-wrapper>div.footer__column>div.footer__copyright>small.copyright__content",
+     "seq": 285
+    },
+    {
+     "type": "text",
+     "text": "|",
+     "path": "div.footer__column>div.footer__copyright>small.copyright__content>small.copyright__content",
+     "seq": 286
+    },
+    {
+     "type": "a-open",
+     "href": "/policies/refund-policy",
+     "path": "div.footer__copyright>small.copyright__content>small.copyright__content>a"
+    },
+    {
+     "type": "text",
+     "text": "Refund policy",
+     "path": "div.footer__copyright>small.copyright__content>small.copyright__content>a",
+     "seq": 287
+    },
+    {
+     "type": "text",
+     "text": "|",
+     "path": "div.footer__column>div.footer__copyright>small.copyright__content>small.copyright__content",
+     "seq": 290
+    },
+    {
+     "type": "a-open",
+     "href": "/policies/privacy-policy",
+     "path": "div.footer__copyright>small.copyright__content>small.copyright__content>a"
+    },
+    {
+     "type": "text",
+     "text": "Privacy policy",
+     "path": "div.footer__copyright>small.copyright__content>small.copyright__content>a",
+     "seq": 291
+    },
+    {
+     "type": "text",
+     "text": "|",
+     "path": "div.footer__column>div.footer__copyright>small.copyright__content>small.copyright__content",
+     "seq": 294
+    },
+    {
+     "type": "a-open",
+     "href": "/policies/terms-of-service",
+     "path": "div.footer__copyright>small.copyright__content>small.copyright__content>a"
+    },
+    {
+     "type": "text",
+     "text": "Terms of service",
+     "path": "div.footer__copyright>small.copyright__content>small.copyright__content>a",
+     "seq": 295
+    },
+    {
+     "type": "text",
+     "text": "|",
+     "path": "div.footer__column>div.footer__copyright>small.copyright__content>small.copyright__content",
+     "seq": 298
+    },
+    {
+     "type": "a-open",
+     "href": "/policies/shipping-policy",
+     "path": "div.footer__copyright>small.copyright__content>small.copyright__content>a"
+    },
+    {
+     "type": "text",
+     "text": "Shipping policy",
+     "path": "div.footer__copyright>small.copyright__content>small.copyright__content>a",
+     "seq": 299
+    },
+    {
+     "type": "text",
+     "text": "|",
+     "path": "div.footer__column>div.footer__copyright>small.copyright__content>small.copyright__content",
+     "seq": 302
+    },
+    {
+     "type": "a-open",
+     "href": "/policies/subscription-policy",
+     "path": "div.footer__copyright>small.copyright__content>small.copyright__content>a"
+    },
+    {
+     "type": "text",
+     "text": "Cancellation policy",
+     "path": "div.footer__copyright>small.copyright__content>small.copyright__content>a",
+     "seq": 303
+    },
+    {
+     "type": "text",
+     "text": "LIMITED OFFERS",
+     "path": "div.sale-dialog__scrollable>div.sale-dialog__header>div>h2.sale-dialog__heading",
+     "seq": 333
+    },
+    {
+     "type": "text",
+     "text": "EXCLUSIVE TO FIRSTDAY.COM",
+     "path": "div.sale-dialog__scrollable>div.sale-dialog__header>div>p.sale-dialog__subheading",
+     "seq": 335
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/hydration-sticks-more.jpg?v=1775596139&width=800",
+     "srcset": "\n                        //firstday.com/cdn/shop/files/hydration-sticks-more.jpg?v=1775596139&width=400 400w,\n                        //firstday.com/cdn/shop/files/hydration-sticks-more.jpg?v=1775596139&width=600 600w,\n                        //firstday.com/cdn/shop/files/hydration-sticks-more.jpg?v=1775596139&width=800 800w\n                      ",
+     "alt": "",
+     "path": "div.sale-dialog__content>div.sale-dialog__offers>div.sale-offer-card>div.sale-offer-card__image"
+    },
+    {
+     "type": "a-open",
+     "href": "/products/rapid-hydration-electrolyte-support",
+     "path": "div.sale-dialog__offers>div.sale-offer-card>div.sale-offer-card__image>a.sale-offer-card__button"
+    },
+    {
+     "type": "text",
+     "text": "Learn More",
+     "path": "div.sale-dialog__offers>div.sale-offer-card>div.sale-offer-card__image>a.sale-offer-card__button",
+     "seq": 350
+    },
+    {
+     "type": "text",
+     "text": "Free Hydration Gift ($25 Value)",
+     "path": "div.sale-offer-card>div.sale-offer-card__content>div.sale-offer-card__text>h3.sale-offer-card__title",
+     "seq": 355
+    },
+    {
+     "type": "text",
+     "text": "Get 12 hydrating electrolyte sticks FREE",
+     "path": "div.sale-offer-card__content>div.sale-offer-card__text>div.sale-offer-card__description>p",
+     "seq": 358
+    },
+    {
+     "type": "text",
+     "text": "on orders $75+ with code .FIREWORKS",
+     "path": "div.sale-offer-card__content>div.sale-offer-card__text>div.sale-offer-card__description>p",
+     "seq": 360
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/freeshipping.png?v=1777063358&width=800",
+     "srcset": "\n                        //firstday.com/cdn/shop/files/freeshipping.png?v=1777063358&width=400 400w,\n                        //firstday.com/cdn/shop/files/freeshipping.png?v=1777063358&width=600 600w,\n                        //firstday.com/cdn/shop/files/freeshipping.png?v=1777063358&width=800 800w\n                      ",
+     "alt": "Free shipping text with a box icon on a blue background",
+     "path": "div.sale-dialog__content>div.sale-dialog__offers>div.sale-offer-card>div.sale-offer-card__image"
+    },
+    {
+     "type": "text",
+     "text": "Free Shipping",
+     "path": "div.sale-offer-card>div.sale-offer-card__content>div.sale-offer-card__text>h3.sale-offer-card__title",
+     "seq": 372
+    },
+    {
+     "type": "text",
+     "text": "When you subscribe, you'll receive FREE shipping on your first order!",
+     "path": "div.sale-offer-card__content>div.sale-offer-card__text>div.sale-offer-card__description>p",
+     "seq": 375
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/fd-rewards.png?v=1777062264&width=800",
+     "srcset": "\n                        //firstday.com/cdn/shop/files/fd-rewards.png?v=1777062264&width=400 400w,\n                        //firstday.com/cdn/shop/files/fd-rewards.png?v=1777062264&width=600 600w,\n                        //firstday.com/cdn/shop/files/fd-rewards.png?v=1777062264&width=800 800w\n                      ",
+     "alt": "First Day Rewards logo with two colorful buttons on a light blue background",
+     "path": "div.sale-dialog__content>div.sale-dialog__offers>div.sale-offer-card>div.sale-offer-card__image"
+    },
+    {
+     "type": "text",
+     "text": "More VIP Perks",
+     "path": "div.sale-offer-card>div.sale-offer-card__content>div.sale-offer-card__text>h3.sale-offer-card__title",
+     "seq": 387
+    },
+    {
+     "type": "text",
+     "text": "Earn Reward Points on every purchase when you join our VIP Program!",
+     "path": "div.sale-offer-card__content>div.sale-offer-card__text>div.sale-offer-card__description>p",
+     "seq": 390
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/gummies-vertical-blue.jpg?v=1771472314&width=800",
+     "srcset": "\n                        //firstday.com/cdn/shop/files/gummies-vertical-blue.jpg?v=1771472314&width=400 400w,\n                        //firstday.com/cdn/shop/files/gummies-vertical-blue.jpg?v=1771472314&width=600 600w,\n                        //firstday.com/cdn/shop/files/gummies-vertical-blue.jpg?v=1771472314&width=800 800w\n                      ",
+     "alt": "",
+     "path": "div.sale-dialog__content>div.sale-dialog__offers>div.sale-offer-card>div.sale-offer-card__image"
+    },
+    {
+     "type": "a-open",
+     "href": "/pages/sale",
+     "path": "div.sale-dialog__offers>div.sale-offer-card>div.sale-offer-card__image>a.sale-offer-card__button"
+    },
+    {
+     "type": "text",
+     "text": "Shop",
+     "path": "div.sale-dialog__offers>div.sale-offer-card>div.sale-offer-card__image>a.sale-offer-card__button",
+     "seq": 399
+    },
+    {
+     "type": "text",
+     "text": "Flash Sale: Save Up To 52%",
+     "path": "div.sale-offer-card>div.sale-offer-card__content>div.sale-offer-card__text>h3.sale-offer-card__title",
+     "seq": 404
+    },
+    {
+     "type": "text",
+     "text": "Use code",
+     "path": "div.sale-offer-card__content>div.sale-offer-card__text>div.sale-offer-card__description>p",
+     "seq": 407
+    },
+    {
+     "type": "text",
+     "text": "FIREWORKS to save up to 52% when you subscribe",
+     "path": "div.sale-offer-card__content>div.sale-offer-card__text>div.sale-offer-card__description>p",
+     "seq": 409
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/2a2967f5a38ffa9e807bf0a0c3ab9c1e9d5f3a88.png?v=1763396609&width=1000",
+     "srcset": "",
+     "alt": "A wooden crate filled with fresh fruits and vegetables sits by a pool, with a red checkered cloth draped inside. In front, five First Day multivitamin bottles are lined up on the pool’s edge.",
+     "path": "div.otp-convert-dialog__overlay>div.otp-convert-dialog__container>div.otp-convert-dialog__scrollable>div.otp-convert-dialog__image-wrapper"
+    },
+    {
+     "type": "text",
+     "text": "Never Run Out Of Vitamins & Supplements!",
+     "path": "div.otp-convert-dialog__scrollable>div.otp-convert-dialog__content>div.otp-convert-dialog__text>h2.otp-convert-dialog__title",
+     "seq": 448
+    },
+    {
+     "type": "text",
+     "text": "Get it delivered to your home every month and enjoy all the subscription perks.",
+     "path": "div.otp-convert-dialog__scrollable>div.otp-convert-dialog__content>div.otp-convert-dialog__text>p.otp-convert-dialog__description",
+     "seq": 450
+    },
+    {
+     "type": "text",
+     "text": "Your first order ships free",
+     "path": "div.otp-convert-dialog__content>ul.otp-convert-dialog__advantages>li.otp-convert-dialog__advantage>span.otp-convert-dialog__advantage-text",
+     "seq": 461
+    },
+    {
+     "type": "text",
+     "text": "Get 15% off on every purchase",
+     "path": "div.otp-convert-dialog__content>ul.otp-convert-dialog__advantages>li.otp-convert-dialog__advantage>span.otp-convert-dialog__advantage-text",
+     "seq": 471
+    },
+    {
+     "type": "text",
+     "text": "Earn reward points for every order",
+     "path": "div.otp-convert-dialog__content>ul.otp-convert-dialog__advantages>li.otp-convert-dialog__advantage>span.otp-convert-dialog__advantage-text",
+     "seq": 481
+    },
+    {
+     "type": "text",
+     "text": "Cancel anytime",
+     "path": "div.otp-convert-dialog__content>ul.otp-convert-dialog__advantages>li.otp-convert-dialog__advantage>span.otp-convert-dialog__advantage-text",
+     "seq": 491
+    },
+    {
+     "type": "text",
+     "text": "Subscribe & Save 15%",
+     "path": "div.otp-convert-dialog__overlay>div.otp-convert-dialog__container>div.otp-convert-dialog__ctas>button.otp-convert-dialog__btn-primary",
+     "seq": 498
+    },
+    {
+     "type": "text",
+     "text": "Not Now",
+     "path": "div.otp-convert-dialog__overlay>div.otp-convert-dialog__container>div.otp-convert-dialog__ctas>button.otp-convert-dialog__btn-secondary",
+     "seq": 500
+    },
+    {
+     "type": "text",
+     "text": "FREE — Real Hydration, No Junk.",
+     "path": "div.upsell-dialog__overlay>div.upsell-dialog__container>div.upsell-dialog__header>h2.upsell-dialog__header-title",
+     "seq": 530
+    },
+    {
+     "type": "text",
+     "text": "Free 12 Pack of",
+     "path": "div.upsell-dialog__gift-section>div.upsell-dialog__gift-top>div.upsell-dialog__gift-text>h3.upsell-dialog__gift-title",
+     "seq": 543
+    },
+    {
+     "type": "text",
+     "text": "Hydration Support ⓘ",
+     "path": "div.upsell-dialog__gift-top>div.upsell-dialog__gift-text>h3.upsell-dialog__gift-title>span.upsell-dialog__gift-title-highlight",
+     "seq": 544
+    },
+    {
+     "type": "text",
+     "text": "For families who need flexible, rapid hydration. Four ingredients, nothing extra. Plus a full day's vitamin C.",
+     "path": "div.upsell-dialog__gift-section>div.upsell-dialog__gift-top>div.upsell-dialog__gift-text>p.upsell-dialog__gift-description",
+     "seq": 547
+    },
+    {
+     "type": "text",
+     "text": "You are $75.00 away, keep going!",
+     "path": "div.upsell-dialog__gift-top>div.upsell-dialog__gift-text>div.upsell-dialog__gift-progress-wrap>p.upsell-dialog__gift-status",
+     "seq": 550
+    },
+    {
+     "type": "text",
+     "text": "$75",
+     "path": "div.upsell-dialog__gift-text>div.upsell-dialog__gift-progress-wrap>div.upsell-dialog__gift-bar-container>div.upsell-dialog__gift-bar-goal",
+     "seq": 559
+    },
+    {
+     "type": "text",
+     "text": "Plus, A Free",
+     "path": "div.upsell-dialog__gift-section>div.upsell-dialog__gift-top>div.upsell-dialog__gift-text>h3.upsell-dialog__gift-title",
+     "seq": 571
+    },
+    {
+     "type": "text",
+     "text": "Women's Multivitamin",
+     "path": "div.upsell-dialog__gift-top>div.upsell-dialog__gift-text>h3.upsell-dialog__gift-title>span.upsell-dialog__gift-title-highlight",
+     "seq": 572
+    },
+    {
+     "type": "text",
+     "text": "Formulated specifically for women to support healthier skin, better energy, and boosted immunity.",
+     "path": "div.upsell-dialog__gift-section>div.upsell-dialog__gift-top>div.upsell-dialog__gift-text>p.upsell-dialog__gift-description",
+     "seq": 575
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/womens-multi-flat.png?v=1751040680&width=200",
+     "srcset": "",
+     "alt": "Multivitamin container labeled 'first day' on a light surface with a plant and jewelry.",
+     "path": "div.upsell-dialog__scrollable>div.upsell-dialog__gift-section>div.upsell-dialog__gift-top>div.upsell-dialog__gift-image-container"
+    },
+    {
+     "type": "text",
+     "text": "⚡️ Maximize Your Savings with These Deals ⚡️",
+     "path": "div.upsell-dialog__container>div.upsell-dialog__scrollable>div.upsell-dialog__upsell-section>h3.upsell-dialog__upsell-header",
+     "seq": 584
+    },
+    {
+     "type": "text",
+     "text": "No products in this category.",
+     "path": "div.upsell-dialog__container>div.upsell-dialog__scrollable>div.upsell-dialog__upsell-section>p.upsell-dialog__demo-empty",
+     "seq": 590
+    },
+    {
+     "type": "text",
+     "text": "$0.00",
+     "path": "div.upsell-dialog__footer>button.upsell-dialog__btn-primary>span.upsell-dialog__btn-primary-price>span.upsell-dialog__btn-primary-compare",
+     "seq": 599
+    },
+    {
+     "type": "text",
+     "text": "$0.00",
+     "path": "div.upsell-dialog__footer>button.upsell-dialog__btn-primary>span.upsell-dialog__btn-primary-price>span.upsell-dialog__btn-primary-final",
+     "seq": 601
+    },
+    {
+     "type": "text",
+     "text": "Add to cart",
+     "path": "div.upsell-dialog__container>div.upsell-dialog__footer>button.upsell-dialog__btn-primary>span",
+     "seq": 604
+    },
+    {
+     "type": "text",
+     "text": "→",
+     "path": "div.upsell-dialog__container>div.upsell-dialog__footer>button.upsell-dialog__btn-primary>span.upsell-dialog__btn-primary-arrow",
+     "seq": 606
+    },
+    {
+     "type": "text",
+     "text": "No thanks, continue",
+     "path": "div.upsell-dialog__container>div.upsell-dialog__footer>button.upsell-dialog__btn-secondary>span",
+     "seq": 610
+    },
+    {
+     "type": "text",
+     "text": "Choosing a selection results in a full page refresh.",
+     "path": "ul>li",
+     "seq": 619
+    },
+    {
+     "type": "a-open",
+     "href": "#checkoutButton",
+     "path": "section.shopify-section>div.js-menu__context>aside.js-menu>a.skip-to-checkout"
+    },
+    {
+     "type": "text",
+     "text": "Skip to checkout",
+     "path": "section.shopify-section>div.js-menu__context>aside.js-menu>a.skip-to-checkout",
+     "seq": 659
+    },
+    {
+     "type": "text",
+     "text": "Shopping cart drawer containing your selected items, quantity controls, and checkout options.",
+     "path": "section.shopify-section>div.js-menu__context>aside.js-menu>p.visually-hidden",
+     "seq": 661
+    },
+    {
+     "type": "text",
+     "text": "Your Cart",
+     "path": "div.firstday-cart__flyout>div.firstday-cart__flyout-header>div.firstday-cart__flyout-heading>h2.firstday-cart__flyout-title",
+     "seq": 666
+    },
+    {
+     "type": "text",
+     "text": "45-day money-back guarantee*",
+     "path": "div.firstday-cart__flyout>div.firstday-cart__flyout-header>div.firstday-cart__flyout-heading>span.firstday-cart__flyout-guarantee",
+     "seq": 668
+    },
+    {
+     "type": "text",
+     "text": "Subscription Benefits",
+     "path": "div.firstday-cart__flyout>div.firstday-cart__flyout-header>section.upsell-ui-container>h3.visually-hidden",
+     "seq": 680
+    },
+    {
+     "type": "text",
+     "text": "Unlock Your",
+     "path": "div.PBFCM-minicart-gift-progress__card>div.PBFCM-minicart-gift-progress__top>div.PBFCM-minicart-gift-progress__text-container>h3.PBFCM-minicart-gift-progress__title",
+     "seq": 701
+    },
+    {
+     "type": "text",
+     "text": "Free Gift",
+     "path": "div.PBFCM-minicart-gift-progress__top>div.PBFCM-minicart-gift-progress__text-container>h3.PBFCM-minicart-gift-progress__title>span.PBFCM-minicart-gift-progress__title-highlight",
+     "seq": 702
+    },
+    {
+     "type": "text",
+     "text": "Get a free Rapid Hydration Electrolyte with a $75 order.",
+     "path": "div.PBFCM-minicart-gift-progress__card>div.PBFCM-minicart-gift-progress__top>div.PBFCM-minicart-gift-progress__text-container>p.PBFCM-minicart-gift-progress__description",
+     "seq": 705
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/hydration-12-pack.png?v=1781107632&width=130",
+     "srcset": "//firstday.com/cdn/shop/files/hydration-12-pack.png?v=1781107632&width=130 1x, //firstday.com/cdn/shop/files/hydration-12-pack.png?v=1781107632&width=260 2x",
+     "alt": "Rapid Hydration Electrolyte Support - Gift",
+     "path": "div.PBFCM-minicart-gift-progress__legacy>div.PBFCM-minicart-gift-progress__card>div.PBFCM-minicart-gift-progress__top>div.PBFCM-minicart-gift-progress__image-container"
+    },
+    {
+     "type": "text",
+     "text": "You are $ away, keep going!75",
+     "path": "div.PBFCM-minicart-gift-progress__legacy>div.PBFCM-minicart-gift-progress__card>div.PBFCM-minicart-gift-progress__bottom>p.PBFCM-minicart-gift-progress__status",
+     "seq": 713
+    },
+    {
+     "type": "text",
+     "text": "$0.00",
+     "path": "div.PBFCM-minicart-gift-progress__bar-wrapper>div.PBFCM-minicart-gift-progress__bar-fill>div.PBFCM-minicart-gift-progress__tooltip>span.PBFCM-minicart-gift-progress__tooltip-original",
+     "seq": 723
+    },
+    {
+     "type": "text",
+     "text": "$0.00",
+     "path": "div.PBFCM-minicart-gift-progress__bar-wrapper>div.PBFCM-minicart-gift-progress__bar-fill>div.PBFCM-minicart-gift-progress__tooltip>span.PBFCM-minicart-gift-progress__tooltip-sale",
+     "seq": 725
+    },
+    {
+     "type": "text",
+     "text": "$75",
+     "path": "div.PBFCM-minicart-gift-progress__card>div.PBFCM-minicart-gift-progress__bottom>div.PBFCM-minicart-gift-progress__bar-container>div.PBFCM-minicart-gift-progress__bar-goal",
+     "seq": 732
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/t/569/assets/icon-gwp-discount-fill.svg?v=64284360902050930731784211258",
+     "srcset": "",
+     "alt": "",
+     "path": "div.PBFCM-minicart-gift-progress__ab>div.PBFCM-minicart-gift-progress__ab-wrap>div.PBFCM-minicart-gift-progress__ab-header>div.PBFCM-minicart-gift-progress__ab-headline"
+    },
+    {
+     "type": "text",
+     "text": "$0.00",
+     "path": "div.PBFCM-minicart-gift-progress__ab-header>div.PBFCM-minicart-gift-progress__ab-headline>span.PBFCM-minicart-gift-progress__ab-headline-text>strong",
+     "seq": 744
+    },
+    {
+     "type": "text",
+     "text": "away from a FREE $25 GIFT!",
+     "path": "div.PBFCM-minicart-gift-progress__ab-wrap>div.PBFCM-minicart-gift-progress__ab-header>div.PBFCM-minicart-gift-progress__ab-headline>span.PBFCM-minicart-gift-progress__ab-headline-text",
+     "seq": 745
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/t/569/assets/icon-gwp-collapse.svg?v=13207927078010197251784211258",
+     "srcset": "",
+     "alt": "",
+     "path": "div.PBFCM-minicart-gift-progress__ab>div.PBFCM-minicart-gift-progress__ab-wrap>div.PBFCM-minicart-gift-progress__ab-header>button.PBFCM-minicart-gift-progress__ab-toggle"
+    },
+    {
+     "type": "text",
+     "text": "Almost there...",
+     "path": "div.firstday-cart__flyout-content>div.firstday-cart__flyout-placeholder-container>div.firstday-cart__flyout-empty-cart-loading>h4.loading-heading",
+     "seq": 781
+    },
+    {
+     "type": "text",
+     "text": "Your health-smart cart is getting ready!",
+     "path": "div.firstday-cart__flyout-content>div.firstday-cart__flyout-placeholder-container>div.firstday-cart__flyout-empty-cart-loading>p.loading-text",
+     "seq": 783
+    },
+    {
+     "type": "text",
+     "text": "Your cart is empty!",
+     "path": "div.firstday-cart__flyout-content>div.firstday-cart__flyout-placeholder-container>div.firstday-cart__flyout-empty-cart>h4.ql-align-center",
+     "seq": 787
+    },
+    {
+     "type": "text",
+     "text": "Start with our bestsellers below, or shop all products.",
+     "path": "div.firstday-cart__flyout-content>div.firstday-cart__flyout-placeholder-container>div.firstday-cart__flyout-empty-cart>p.ql-align-center",
+     "seq": 789
+    },
+    {
+     "type": "a-open",
+     "href": "/pages/subscribe-and-save-15",
+     "path": "div.firstday-cart__flyout-placeholder-container>div.firstday-cart__flyout-empty-cart>p.ql-align-center>a"
+    },
+    {
+     "type": "text",
+     "text": "Shop Now",
+     "path": "div.firstday-cart__flyout-placeholder-container>div.firstday-cart__flyout-empty-cart>p.ql-align-center>a",
+     "seq": 792
+    },
+    {
+     "type": "text",
+     "text": "Choose a nonprofit to support",
+     "path": "div.firstday-cart__flyout-content>div.beam-side-cart>section.beam-side-cart>h3.visually-hidden",
+     "seq": 805
+    },
+    {
+     "type": "text",
+     "text": "Add-Ons for Better Nutrition",
+     "path": "div.firstday-widget>div.firstday-widget-container>div.firstday-widget-content>h4.primary-title",
+     "seq": 818
+    },
+    {
+     "type": "text",
+     "text": "Healthy kids need healthy parents. Grab your daily essentials and keep the family energy high.",
+     "path": "div.firstday-widget>div.firstday-widget-container>div.firstday-widget-content>div.firstday-cart__flyout-recommendations-subtitle",
+     "seq": 820
+    },
+    {
+     "type": "text",
+     "text": "For Kids",
+     "path": "div.firstday-widget-container>div.firstday-widget-content>div.firstday-cart__flyout-recommendations__tabs>button.fd-tabs-v3__item",
+     "seq": 823
+    },
+    {
+     "type": "text",
+     "text": "For Teens",
+     "path": "div.firstday-widget-container>div.firstday-widget-content>div.firstday-cart__flyout-recommendations__tabs>button.fd-tabs-v3__item",
+     "seq": 825
+    },
+    {
+     "type": "text",
+     "text": "For Parents",
+     "path": "div.firstday-widget-container>div.firstday-widget-content>div.firstday-cart__flyout-recommendations__tabs>button.fd-tabs-v3__item",
+     "seq": 827
+    },
+    {
+     "type": "text",
+     "text": "You added all recommendations!",
+     "path": "div.firstday-widget>div.firstday-widget-container>div.firstday-widget-content>p.firstday-cart__flyout-recommendations__empty",
+     "seq": 832
+    },
+    {
+     "type": "text",
+     "text": "Package Protection",
+     "path": "div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-label>span.total-item-count",
+     "seq": 845
+    },
+    {
+     "type": "text",
+     "text": "for $2.98",
+     "path": "div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-label>span.visually-hidden",
+     "seq": 847
+    },
+    {
+     "type": "text",
+     "text": "Enable package protection for $2.98",
+     "path": "div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.switch_box>label.visually-hidden",
+     "seq": 857
+    },
+    {
+     "type": "text",
+     "text": "Add package protection for $2.98 to protect against loss or damage during shipping",
+     "path": "div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.switch_box>span.visually-hidden",
+     "seq": 860
+    },
+    {
+     "type": "text",
+     "text": "Total:",
+     "path": "div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-label>span.total-item-count",
+     "seq": 866
+    },
+    {
+     "type": "text",
+     "text": "Original price $0.00, strikethrough",
+     "path": "div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-amount>del.mini-cart-original-price>span.sr-only",
+     "seq": 871
+    },
+    {
+     "type": "text",
+     "text": "$0.00",
+     "path": "div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-amount>del.mini-cart-original-price>span",
+     "seq": 873
+    },
+    {
+     "type": "text",
+     "text": "Sale price $0.00",
+     "path": "div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-amount>span.mini-cart-price>span.sr-only",
+     "seq": 877
+    },
+    {
+     "type": "text",
+     "text": "Shipping:",
+     "path": "div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-label>span.total-item-count",
+     "seq": 886
+    },
+    {
+     "type": "text",
+     "text": "Shipping:",
+     "path": "div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-label>span.total-item-count",
+     "seq": 898
+    },
+    {
+     "type": "text",
+     "text": "Calculated at checkout",
+     "path": "div.firstday-cart__flyout>div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-amount",
+     "seq": 901
+    },
+    {
+     "type": "text",
+     "text": "Total Savings:",
+     "path": "div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-label>span.total-item-count",
+     "seq": 906
+    },
+    {
+     "type": "text",
+     "text": "$0.00",
+     "path": "div.firstday-cart__flyout>div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-amount",
+     "seq": 909
+    },
+    {
+     "type": "text",
+     "text": "Your Price:",
+     "path": "div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-label>span.total-item-count",
+     "seq": 914
+    },
+    {
+     "type": "text",
+     "text": "$0.00",
+     "path": "div.firstday-cart__flyout>div.firstday-cart__flyout-footer>div.firstday-cart__flyout-subtotal>div.firstday-cart__flyout-subtotal-amount",
+     "seq": 917
+    },
+    {
+     "type": "text",
+     "text": "Checkout options",
+     "path": "div.firstday-cart__flyout-actions>form>fieldset>legend.visually-hidden",
+     "seq": 923
+    },
+    {
+     "type": "text",
+     "text": "SECURE CHECKOUT",
+     "path": "fieldset>button.firstday-button>span>b",
+     "seq": 936
+    },
+    {
+     "type": "text",
+     "text": "Proceed to secure checkout to complete your purchase",
+     "path": "div.firstday-cart__flyout-actions>form>fieldset>span.visually-hidden",
+     "seq": 940
+    },
+    {
+     "type": "text",
+     "text": "Account",
+     "path": "div.rivo-slideout__overlay>div.rivo-slideout__container>header.rivo-slideout__header>h2.rivo-visually-hidden",
+     "seq": 1012
+    },
+    {
+     "type": "a-open",
+     "href": "#rivo",
+     "path": "div.rivo-slideout__overlay>div.rivo-slideout__container>header.rivo-slideout__header>a.rivo-aw-logo"
+    },
+    {
+     "type": "text",
+     "text": "Skip",
+     "path": "div.rivo-slideout__container>header.rivo-slideout__header>div.rivo-survey-progress-bar-container>button.rivo-survey-skip-question",
+     "seq": 1023
+    },
+    {
+     "type": "a-open",
+     "href": "https://rivo.io?utm_source=widget&utm_campaign=powered-by",
+     "path": "main.rivo-slideout__content>template>div.rivo-powered-by>a"
+    },
+    {
+     "type": "text",
+     "text": "Powered by",
+     "path": "template>div.rivo-powered-by>a>span.rivo-powered-by-text",
+     "seq": 1033
+    },
+    {
+     "type": "a-open",
+     "href": "#rivo",
+     "path": "div.rivo-slideout__container>footer.rivo-slideout-section>div.rivo-slideout-navigation>a"
+    },
+    {
+     "type": "a-open",
+     "href": "#rivo-orders",
+     "path": "div.rivo-slideout__container>footer.rivo-slideout-section>div.rivo-slideout-navigation>a"
+    },
+    {
+     "type": "a-open",
+     "href": "#rivo-profile",
+     "path": "div.rivo-slideout__container>footer.rivo-slideout-section>div.rivo-slideout-navigation>a"
+    },
+    {
+     "type": "a-open",
+     "href": "#rivo-community",
+     "path": "footer.rivo-slideout-section>div.rivo-slideout-navigation>template>a"
+    }
+   ]
+  }
+ ]
+}

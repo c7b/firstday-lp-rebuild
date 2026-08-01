@@ -1,0 +1,93 @@
+{
+ "target_section": "lp-comparison-table",
+ "source_snapshot": "fd-lp.html",
+ "originals": [
+  {
+   "original_id": "pbfcm_comparison_table_iVgR7T",
+   "raw_bytes": 47130,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__pbfcm_comparison_table_iVgR7T\" class=\"shopify-section pbfcm-comparison-table\">",
+     "path": "",
+     "seq": 0
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/desk_720.png?v=1763396549&width=1200",
+     "srcset": "//firstday.com/cdn/shop/files/desk_720.png?v=1763396549&width=352 352w, //firstday.com/cdn/shop/files/desk_720.png?v=1763396549&width=832 832w, //firstday.com/cdn/shop/files/desk_720.png?v=1763396549&width=1200 1200w",
+     "alt": "",
+     "path": "div.pbfcm-comparison-section-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-container-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-wrapper-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-desktop-image-template--19023949758562__pbfcm_comparison_table_iVgR7T"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/mob-left_360.png?v=1763396560&width=300",
+     "srcset": "//firstday.com/cdn/shop/files/mob-left_360.png?v=1763396560&width=300 300w",
+     "alt": "",
+     "path": "div.pbfcm-comparison-section-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-container-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-wrapper-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-mobile-image-left-template--19023949758562__pbfcm_comparison_table_iVgR7T"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/round_logo.png?v=1720622822&width=100",
+     "srcset": "//firstday.com/cdn/shop/files/round_logo.png?v=1720622822&width=100 100w",
+     "alt": "Logo",
+     "path": "div.pbfcm-comparison-container-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-wrapper-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-left-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-logo-template--19023949758562__pbfcm_comparison_table_iVgR7T"
+    },
+    {
+     "type": "text",
+     "text": "Why Should You Choose First Day?",
+     "path": "div.pbfcm-comparison-container-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-wrapper-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-left-template--19023949758562__pbfcm_comparison_table_iVgR7T>h2.pbfcm-comparison-title-template--19023949758562__pbfcm_comparison_table_iVgR7T",
+     "seq": 18
+    },
+    {
+     "type": "text",
+     "text": "Made for modern families living on modern diets, we’re here to fill the nutrition gaps that today’s food often leaves behind.",
+     "path": "div.pbfcm-comparison-container-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-wrapper-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-left-template--19023949758562__pbfcm_comparison_table_iVgR7T>p.pbfcm-comparison-description-template--19023949758562__pbfcm_comparison_table_iVgR7T",
+     "seq": 20
+    },
+    {
+     "type": "text",
+     "text": "First Day",
+     "path": "div.pbfcm-comparison-wrapper-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-table-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-header-row-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-subscribers-header-template--19023949758562__pbfcm_comparison_table_iVgR7T",
+     "seq": 27
+    },
+    {
+     "type": "text",
+     "text": "Other Multis",
+     "path": "div.pbfcm-comparison-wrapper-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-table-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-header-row-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-onetime-header-template--19023949758562__pbfcm_comparison_table_iVgR7T",
+     "seq": 29
+    },
+    {
+     "type": "text",
+     "text": "Clean Label Certified",
+     "path": "div.pbfcm-comparison-table-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-benefits-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-row-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-benefit-template--19023949758562__pbfcm_comparison_table_iVgR7T",
+     "seq": 34
+    },
+    {
+     "type": "text",
+     "text": "Research Backed",
+     "path": "div.pbfcm-comparison-table-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-benefits-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-row-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-benefit-template--19023949758562__pbfcm_comparison_table_iVgR7T",
+     "seq": 50
+    },
+    {
+     "type": "text",
+     "text": "Surprise Gift with Purchase",
+     "path": "div.pbfcm-comparison-table-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-benefits-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-row-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-benefit-template--19023949758562__pbfcm_comparison_table_iVgR7T",
+     "seq": 66
+    },
+    {
+     "type": "text",
+     "text": "No Fillers or Fake Ingredients",
+     "path": "div.pbfcm-comparison-table-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-benefits-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-row-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-benefit-template--19023949758562__pbfcm_comparison_table_iVgR7T",
+     "seq": 82
+    },
+    {
+     "type": "text",
+     "text": "Vegan, Gluten-Free, Non-GMO",
+     "path": "div.pbfcm-comparison-table-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-benefits-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-row-template--19023949758562__pbfcm_comparison_table_iVgR7T>div.pbfcm-comparison-benefit-template--19023949758562__pbfcm_comparison_table_iVgR7T",
+     "seq": 98
+    }
+   ]
+  }
+ ]
+}

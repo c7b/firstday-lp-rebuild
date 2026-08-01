@@ -1,0 +1,476 @@
+{
+ "target_section": "lp-hero",
+ "source_snapshot": "fd-lp.html",
+ "originals": [
+  {
+   "original_id": "temp_replo_hero_RkYkXc",
+   "raw_bytes": 49511,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__temp_replo_hero_RkYkXc\" class=\"shopify-section v1-hero-block-section\">",
+     "path": "",
+     "seq": 0
+    },
+    {
+     "type": "text",
+     "text": "4.8 stars from 12,322+ reviewers",
+     "path": "div.v1-hero-left-content>div.v1-hero-text-section>div.v1-hero-reviews-row>span.v1-hero-reviews-text",
+     "seq": 44
+    },
+    {
+     "type": "text",
+     "text": "The",
+     "path": "div.v1-hero-container>div.v1-hero-left-content>div.v1-hero-text-section>h1.v1-hero-headline",
+     "seq": 47
+    },
+    {
+     "type": "text",
+     "text": "Science-Backed Vitamin",
+     "path": "div.v1-hero-left-content>div.v1-hero-text-section>h1.v1-hero-headline>span.v1-hero-headline-highlight",
+     "seq": 48
+    },
+    {
+     "type": "text",
+     "text": "for Grumpy, Tired, or Unfocused Teens",
+     "path": "div.v1-hero-container>div.v1-hero-left-content>div.v1-hero-text-section>h1.v1-hero-headline",
+     "seq": 49
+    },
+    {
+     "type": "text",
+     "text": "The only bio-matched multivitamin",
+     "path": "div.v1-hero-description>p>div.metafield-rich_text_field>p",
+     "seq": 54
+    },
+    {
+     "type": "text",
+     "text": "formulated specifically for teenagers",
+     "path": "p>div.metafield-rich_text_field>p>span.v1-hero-description-highlight",
+     "seq": 55
+    },
+    {
+     "type": "text",
+     "text": "with 12 nutrients & 21 superfoods to support mood regulation, immunity, and growing bones.",
+     "path": "div.v1-hero-description>p>div.metafield-rich_text_field>p",
+     "seq": 56
+    },
+    {
+     "type": "a-open",
+     "href": "#standalone-product-section",
+     "path": "section.v1-hero-section>div.v1-hero-container>div.v1-hero-left-content>a.v1-hero-cta"
+    },
+    {
+     "type": "text",
+     "text": "Unlock Better Nutrition 🍊💊",
+     "path": "div.v1-hero-container>div.v1-hero-left-content>a.v1-hero-cta>span.v1-hero-cta-text",
+     "seq": 63
+    },
+    {
+     "type": "text",
+     "text": "Exclusive First Day 45 Day Money Back Guarantee**",
+     "path": "div.v1-hero-highlights>div.shopify-block>div.v1-hero-list-item>span.v1-hero-list-text",
+     "seq": 79
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/ebce1fea9a768a63cc6c95d28e1efa8e9818e9db.gif?v=1775682044&width=48",
+     "srcset": "",
+     "alt": "",
+     "path": "div.v1-hero-highlights>div.shopify-block>div.social-proof-bar-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3>div.social-proof-bar__left-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3"
+    },
+    {
+     "type": "text",
+     "text": "6,646 Gummies",
+     "path": "div.social-proof-bar-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3>div.social-proof-bar__left-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3>p.social-proof-bar__text-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3>span.social-proof-bar__bold-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3",
+     "seq": 90
+    },
+    {
+     "type": "text",
+     "text": "Sold Every 24h",
+     "path": "div.shopify-block>div.social-proof-bar-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3>div.social-proof-bar__left-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3>p.social-proof-bar__text-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3",
+     "seq": 91
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/gummy-orange-2.png?v=1775682044&width=100",
+     "srcset": "",
+     "alt": "",
+     "path": "div.v1-hero-highlights>div.shopify-block>div.social-proof-bar-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3>div.social-proof-bar__images-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/gummy-orange.png?v=1775682044&width=100",
+     "srcset": "",
+     "alt": "",
+     "path": "div.v1-hero-highlights>div.shopify-block>div.social-proof-bar-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3>div.social-proof-bar__images-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/ugc-trmv-mom-feeding.avif?v=1772578684&width=192",
+     "srcset": "",
+     "alt": "Alyssa Blossom",
+     "path": "div.v1-hero-highlights>div.shopify-block>div.tc-card>div.tc-card__avatar-wrap"
+    },
+    {
+     "type": "text",
+     "text": "My son is VERY picky but gets so excited to eat these. I unfortunately tried hiya first & wasted money because he would not eat them. I love that these are a gummy soft chewable.",
+     "path": "div.tc-card__body>blockquote.tc-card__quote>div.metafield-rich_text_field>p",
+     "seq": 108
+    },
+    {
+     "type": "text",
+     "text": "Alyssa Blossom",
+     "path": "div.tc-card__body>div.tc-card__footer>div.tc-card__author>span.tc-card__name",
+     "seq": 114
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/tdk-bts-clean-square-brady-bunch.jpg?v=1784071375&width=1000",
+     "srcset": "",
+     "alt": "Hero image",
+     "path": "section.v1-hero-section>div.v1-hero-container>div.v1-hero-image-wrap>div.v1-hero-image-inner"
+    },
+    {
+     "type": "text",
+     "text": "The only bio-matched multivitamin",
+     "path": "div.v1-hero-description>p>div.metafield-rich_text_field>p",
+     "seq": 160
+    },
+    {
+     "type": "text",
+     "text": "formulated specifically for teenagers",
+     "path": "p>div.metafield-rich_text_field>p>span.v1-hero-description-highlight",
+     "seq": 161
+    },
+    {
+     "type": "text",
+     "text": "with 12 nutrients & 21 superfoods to support mood regulation, immunity, and growing bones.",
+     "path": "div.v1-hero-description>p>div.metafield-rich_text_field>p",
+     "seq": 162
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/tdk-bts-clean-landsscapre-brady-bunch.jpg?v=1784071376&width=800",
+     "srcset": "",
+     "alt": "Hero image",
+     "path": "div.v1-hero-container>div.v1-hero-mobile-content>div.v1-hero-image-wrap-mobile>div.v1-hero-image-inner"
+    },
+    {
+     "type": "a-open",
+     "href": "#standalone-product-section",
+     "path": "section.v1-hero-section>div.v1-hero-container>div.v1-hero-mobile-content>a.v1-hero-cta"
+    },
+    {
+     "type": "text",
+     "text": "Unlock Better Nutrition 🍊💊",
+     "path": "div.v1-hero-container>div.v1-hero-mobile-content>a.v1-hero-cta>span.v1-hero-cta-text",
+     "seq": 173
+    },
+    {
+     "type": "text",
+     "text": "Exclusive First Day 45 Day Money Back Guarantee**",
+     "path": "div.v1-hero-highlights>div.shopify-block>div.v1-hero-list-item>span.v1-hero-list-text",
+     "seq": 189
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/ebce1fea9a768a63cc6c95d28e1efa8e9818e9db.gif?v=1775682044&width=48",
+     "srcset": "",
+     "alt": "",
+     "path": "div.v1-hero-highlights>div.shopify-block>div.social-proof-bar-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1>div.social-proof-bar__left-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1"
+    },
+    {
+     "type": "text",
+     "text": "6,646 Gummies",
+     "path": "div.social-proof-bar-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1>div.social-proof-bar__left-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1>p.social-proof-bar__text-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1>span.social-proof-bar__bold-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1",
+     "seq": 200
+    },
+    {
+     "type": "text",
+     "text": "Sold Every 24h",
+     "path": "div.shopify-block>div.social-proof-bar-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1>div.social-proof-bar__left-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1>p.social-proof-bar__text-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1",
+     "seq": 201
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/gummy-orange-2.png?v=1775682044&width=100",
+     "srcset": "",
+     "alt": "",
+     "path": "div.v1-hero-highlights>div.shopify-block>div.social-proof-bar-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1>div.social-proof-bar__images-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/gummy-orange.png?v=1775682044&width=100",
+     "srcset": "",
+     "alt": "",
+     "path": "div.v1-hero-highlights>div.shopify-block>div.social-proof-bar-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1>div.social-proof-bar__images-ASzVUa2o2cFlDOXJ4e__temp_social_proof_8ycHY3-1"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/ugc-trmv-mom-feeding.avif?v=1772578684&width=192",
+     "srcset": "",
+     "alt": "Alyssa Blossom",
+     "path": "div.v1-hero-highlights>div.shopify-block>div.tc-card>div.tc-card__avatar-wrap"
+    },
+    {
+     "type": "text",
+     "text": "My son is VERY picky but gets so excited to eat these. I unfortunately tried hiya first & wasted money because he would not eat them. I love that these are a gummy soft chewable.",
+     "path": "div.tc-card__body>blockquote.tc-card__quote>div.metafield-rich_text_field>p",
+     "seq": 218
+    },
+    {
+     "type": "text",
+     "text": "Alyssa Blossom",
+     "path": "div.tc-card__body>div.tc-card__footer>div.tc-card__author>span.tc-card__name",
+     "seq": 224
+    }
+   ]
+  },
+  {
+   "original_id": "temp_replo_hero_3dPiJD",
+   "raw_bytes": 36670,
+   "nodes": [
+    {
+     "type": "text",
+     "text": "id=\"shopify-section-template--19023949758562__temp_replo_hero_3dPiJD\" class=\"shopify-section v1-hero-block-section\">",
+     "path": "",
+     "seq": 0
+    },
+    {
+     "type": "text",
+     "text": "1 in 3 Families Have A Nutrient Deficiency.",
+     "path": "div.v1-hero-container>div.v1-hero-left-content>div.v1-hero-text-section>h1.v1-hero-headline",
+     "seq": 45
+    },
+    {
+     "type": "text",
+     "text": "I created First Day to address the massive concerns with todays diet and it's negative effects on our families.",
+     "path": "div.v1-hero-text-section>div.v1-hero-description>div.metafield-rich_text_field>p",
+     "seq": 49
+    },
+    {
+     "type": "text",
+     "text": "The Average Person Consumes",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 52
+    },
+    {
+     "type": "text",
+     "text": "52 Credit Cards’",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 53
+    },
+    {
+     "type": "text",
+     "text": "Worth Of",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 54
+    },
+    {
+     "type": "text",
+     "text": "Microplastics",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 55
+    },
+    {
+     "type": "text",
+     "text": "Every Year.",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 56
+    },
+    {
+     "type": "text",
+     "text": "Artificial Food Additives",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 59
+    },
+    {
+     "type": "text",
+     "text": "Are Found In",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 60
+    },
+    {
+     "type": "text",
+     "text": "59%",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 61
+    },
+    {
+     "type": "text",
+     "text": "Of Foods Today",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 62
+    },
+    {
+     "type": "text",
+     "text": "Fresh Fruits & Veggies Have",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 64
+    },
+    {
+     "type": "text",
+     "text": "Lost Up To 73%",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 65
+    },
+    {
+     "type": "text",
+     "text": "Of Their",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 66
+    },
+    {
+     "type": "text",
+     "text": "Nutrients",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 67
+    },
+    {
+     "type": "text",
+     "text": "After learning about the massive amounts of sugar that were in typical kids multivitamins I reached out to 2 of the top researchers at Harvard and Yale. I explained my story to them, how I wanted to revolutionize the vitamin industry. After consulting with these experts to help us carefully formulate our vitamins, we are now a best selling multivitamin nationwide.",
+     "path": "div.v1-hero-text-section>div.v1-hero-description>div.metafield-rich_text_field>p",
+     "seq": 71
+    },
+    {
+     "type": "text",
+     "text": "That's why we’re so confident First Day will help you get the results you want. If within the first 45 days you find yourself not completely satisfied, we’ll give you your money back - no questions asked.",
+     "path": "div.v1-hero-text-section>div.v1-hero-description>div.metafield-rich_text_field>p",
+     "seq": 73
+    },
+    {
+     "type": "a-open",
+     "href": "#standalone-product-section",
+     "path": "section.v1-hero-section>div.v1-hero-container>div.v1-hero-left-content>a.v1-hero-cta"
+    },
+    {
+     "type": "text",
+     "text": "Try Now",
+     "path": "div.v1-hero-container>div.v1-hero-left-content>a.v1-hero-cta>span.v1-hero-cta-text",
+     "seq": 79
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/founder-alice.png?v=1686630957&width=1000",
+     "srcset": "",
+     "alt": "Hero image",
+     "path": "section.v1-hero-section>div.v1-hero-container>div.v1-hero-image-wrap>div.v1-hero-image-inner"
+    },
+    {
+     "type": "img",
+     "src": "//firstday.com/cdn/shop/files/founder-alice.png?v=1686630957&width=800",
+     "srcset": "",
+     "alt": "Hero image",
+     "path": "div.v1-hero-container>div.v1-hero-mobile-content>div.v1-hero-image-wrap-mobile>div.v1-hero-image-inner"
+    },
+    {
+     "type": "text",
+     "text": "I created First Day to address the massive concerns with todays diet and it's negative effects on our families.",
+     "path": "div.v1-hero-mobile-content>div.v1-hero-description>div.metafield-rich_text_field>p",
+     "seq": 102
+    },
+    {
+     "type": "text",
+     "text": "The Average Person Consumes",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 105
+    },
+    {
+     "type": "text",
+     "text": "52 Credit Cards’",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 106
+    },
+    {
+     "type": "text",
+     "text": "Worth Of",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 107
+    },
+    {
+     "type": "text",
+     "text": "Microplastics",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 108
+    },
+    {
+     "type": "text",
+     "text": "Every Year.",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 109
+    },
+    {
+     "type": "text",
+     "text": "Artificial Food Additives",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 112
+    },
+    {
+     "type": "text",
+     "text": "Are Found In",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 113
+    },
+    {
+     "type": "text",
+     "text": "59%",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 114
+    },
+    {
+     "type": "text",
+     "text": "Of Foods Today",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 115
+    },
+    {
+     "type": "text",
+     "text": "Fresh Fruits & Veggies Have",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 117
+    },
+    {
+     "type": "text",
+     "text": "Lost Up To 73%",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 118
+    },
+    {
+     "type": "text",
+     "text": "Of Their",
+     "path": "div.v1-hero-description>div.metafield-rich_text_field>ul>li",
+     "seq": 119
+    },
+    {
+     "type": "text",
+     "text": "Nutrients",
+     "path": "div.metafield-rich_text_field>ul>li>span.v1-hero-description-highlight",
+     "seq": 120
+    },
+    {
+     "type": "text",
+     "text": "After learning about the massive amounts of sugar that were in typical kids multivitamins I reached out to 2 of the top researchers at Harvard and Yale. I explained my story to them, how I wanted to revolutionize the vitamin industry. After consulting with these experts to help us carefully formulate our vitamins, we are now a best selling multivitamin nationwide.",
+     "path": "div.v1-hero-mobile-content>div.v1-hero-description>div.metafield-rich_text_field>p",
+     "seq": 124
+    },
+    {
+     "type": "text",
+     "text": "That's why we’re so confident First Day will help you get the results you want. If within the first 45 days you find yourself not completely satisfied, we’ll give you your money back - no questions asked.",
+     "path": "div.v1-hero-mobile-content>div.v1-hero-description>div.metafield-rich_text_field>p",
+     "seq": 126
+    },
+    {
+     "type": "a-open",
+     "href": "#standalone-product-section",
+     "path": "section.v1-hero-section>div.v1-hero-container>div.v1-hero-mobile-content>a.v1-hero-cta"
+    },
+    {
+     "type": "text",
+     "text": "Try Now",
+     "path": "div.v1-hero-container>div.v1-hero-mobile-content>a.v1-hero-cta>span.v1-hero-cta-text",
+     "seq": 131
+    }
+   ]
+  }
+ ]
+}
