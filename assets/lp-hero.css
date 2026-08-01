@@ -42,7 +42,7 @@
 .lp-hero__heading {
   max-width: 17ch;
   margin: 1.2rem 0;
-  font-size: clamp(3.4rem, 9vw, 6.6rem);
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
   line-height: .98;
   letter-spacing: -.045em;
 }
@@ -285,4 +285,13 @@
   .lp-hero__section--founder .lp-hero__content {
     padding: 2rem 0;
   }
+}
+
+/* picker-rendered imgs ship intrinsic width/height attrs — never overflow the column */
+.lp-hero__media img,
+.lp-hero__media picture {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
