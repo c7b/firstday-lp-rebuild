@@ -1,0 +1,859 @@
+{
+  "sections": {
+    "hero_opener": {
+      "type": "lp-hero",
+      "settings": {
+        "style": "product",
+        "badge_text": "4.8 stars from 12,322+ reviewers",
+        "heading": "The <em>Science-Backed Vitamin</em> for Grumpy, Tired, or Unfocused Teens",
+        "subheading": "<p>The only bio-matched multivitamin <strong>formulated specifically for teenagers</strong> with 12 nutrients &amp; 21 superfoods to support mood regulation, immunity, and growing bones.</p>",
+        "cta_label": "Unlock Better Nutrition 🍊💊",
+        "cta_link": "#standalone-product-section",
+        "guarantee_text": "Exclusive First Day 45 Day Money Back Guarantee**",
+        "image_url": "//firstday.com/cdn/shop/files/tdk-bts-clean-landsscapre-brady-bunch.jpg?v=1784071376&width=800",
+        "image_alt": "Hero image",
+        "image_mobile_url": "//firstday.com/cdn/shop/files/tdk-bts-clean-square-brady-bunch.jpg?v=1784071375&width=1000",
+        "image_mobile_alt": "Hero image",
+        "image_position": "right",
+        "stat_badge_text": "6,646 Gummies Sold Every 24h",
+        "stat_gif_url": "//firstday.com/cdn/shop/files/ebce1fea9a768a63cc6c95d28e1efa8e9818e9db.gif?v=1775682044&width=48",
+        "stat_icon_1_url": "//firstday.com/cdn/shop/files/gummy-orange-2.png?v=1775682044&width=100",
+        "stat_icon_2_url": "//firstday.com/cdn/shop/files/gummy-orange.png?v=1775682044&width=100",
+        "color_scheme": "scheme_1",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "anchor_id": ""
+      },
+      "blocks": {
+        "testimonial_alyssa": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "<p>My son is VERY picky but gets so excited to eat these. I unfortunately tried hiya first &amp; wasted money because he would not eat them. I love that these are a gummy soft chewable.</p>",
+            "author": "Alyssa Blossom",
+            "avatar_url": "//firstday.com/cdn/shop/files/ugc-trmv-mom-feeding.avif?v=1772578684&width=192"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_alyssa"
+      ]
+    },
+    "accordion_nutrients": {
+      "type": "lp-media-accordion",
+      "settings": {
+        "heading": "Most Kids Are <span>Missing Key Nutrients</span>. Get Help in Just 2 Gummies.",
+        "show_media": true,
+        "image_url": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1500",
+        "media_position": "left",
+        "first_open": true,
+        "exclusive": true,
+        "cta_label": "Shop Now",
+        "cta_link": "#standalone-product-section",
+        "guarantee_text": "45-Day Money Back Guarantee",
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "anchor_id": "accordion_block_driBft"
+      },
+      "blocks": {
+        "stress_mood_swings": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/icon-stress-moody.webp?v=1772658265&width=72",
+            "icon_alt": "Stressed Face Icon",
+            "title": "Stress & Mood Swings",
+            "body": "<p>With Vitamin B6 for mood regulation and Vitamin B12 for energy balance, these gummies help support emotional stability.*</p>"
+          }
+        },
+        "lack_motivation": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/icon-pencil.png?v=1772577796&width=72",
+            "icon_alt": "",
+            "title": "Lack of Motivation",
+            "body": "<p>Packed with Vitamin B1 for brain health and Vitamin B2 for cognitive support - to help your teen stay on track while they balance school, sports, and everything in between.*</p>"
+          }
+        },
+        "bad_skin": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/icon-bad-skin.avif?v=1772658393&width=72",
+            "icon_alt": "Skin with Pimple Icon.",
+            "title": "Bad Skin",
+            "body": "<p>Vitamin A and Vitamin E support skin health, helping teens maintain a clear and balanced complexion.</p>"
+          }
+        },
+        "weakened_immunity": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/icon-immunity.avif?v=1772577642&width=72",
+            "icon_alt": "",
+            "title": "Weakened Immunity",
+            "body": "<p>With immune-supporting Vitamin C and D3, plus key B vitamins that help keep their systems running smoothly. Our formula helps build a strong foundation to tackle whatever the day throws at them.</p>"
+          }
+        },
+        "trouble_sleeping": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72",
+            "icon_alt": "",
+            "title": "Trouble Sleeping",
+            "body": "<p>Vitamin D3 helps regulate melatonin, the hormone that controls sleep cycles. Combined with B6, it supports calmer bedtimes and better rest for growing toddlers.*</p>"
+          }
+        },
+        "poor_sleep_habits": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72",
+            "icon_alt": "",
+            "title": "Poor Sleep Habits",
+            "body": "<p>Vitamin D3 and Magnesium work together to encourage restful sleep, so kids wake up refreshed and ready to conquer their goals.*</p>"
+          }
+        },
+        "picky_eating": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72",
+            "icon_alt": "",
+            "title": "Picky Eating",
+            "body": "<p>Vitamin A and Vitamin B9 support cell growth and development, helping to fill in nutritional gaps that teens may have when they only want junk food or continue to skip meals.*</p>"
+          }
+        }
+      },
+      "block_order": [
+        "stress_mood_swings",
+        "lack_motivation",
+        "bad_skin",
+        "weakened_immunity",
+        "trouble_sleeping",
+        "poor_sleep_habits",
+        "picky_eating"
+      ]
+    },
+    "science_tabs": {
+      "type": "lp-science-tabs",
+      "settings": {
+        "heading": "The Science Behind Our Multivitamin",
+        "anchor_id": "",
+        "claims": [
+          "gid://shopify/Metaobject/231412334784",
+          "gid://shopify/Metaobject/231412367552",
+          "gid://shopify/Metaobject/231412400320",
+          "gid://shopify/Metaobject/231412433088"
+        ]
+      }
+    },
+    "buy_box": {
+      "type": "lp-buy-box",
+      "settings": {
+        "product": "teens-multivitamin",
+        "anchor_id": "standalone-product-section",
+        "subtitle": "Daily Gummies For Improved Motivation & Mood",
+        "rating_text": "1394 reviews",
+        "rating_stars": "4.7",
+        "description": "A unique organic fruit and veggie blend, plus 12 key nutrients.",
+        "flavor_text": "Flavor: 🍊 Orange",
+        "frequency_heading": "Delivery Frequency",
+        "sub_title": "Monthly",
+        "sub_compare": "$39",
+        "sub_price": "$23.40",
+        "sub_perks": "<p>FREE Gift on orders +$75</p><p>FREE Shipping on first order</p><p>Cancel anytime, no questions asked</p>",
+        "sub_badge": "Lowest Price Anywhere!",
+        "ot_title": "One-Time",
+        "ot_compare": "$39",
+        "ot_price": "$27.30",
+        "ot_note": "with code FIREWORKS",
+        "ot_warning": "<p>You're missing out on free shipping!</p><p>You're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!</p>",
+        "quantity_heading": "Quantity",
+        "qty_note": "30 Servings Per Bottle",
+        "gift_heading": "Unlock Your Free Gift",
+        "gift_sub": "12 Servings of Electrolyte Drink Mix For The Whole Family.",
+        "gift_image": "",
+        "gift_image_url": "//firstday.com/cdn/shop/files/hydration-12-pack.png?v=1781107632&width=220",
+        "gift_image_alt": "Rapid Hydration Electrolyte Support - Gift",
+        "gift_compare": "$25.00",
+        "gift_price": "FREE",
+        "gift_progress_text": "You are $75 away, keep going!",
+        "gift_threshold": "$75",
+        "urgency_text": "🔥 Limited-Time Offer 🔥 Flash Sale Ending Soon Get Up To 52% Off",
+        "guarantee_text": "45 Day Money Back Guarantee",
+        "cta_label": "Add To Cart",
+        "color_scheme": "scheme_1",
+        "padding_top": 32,
+        "padding_bottom": 32
+      },
+      "blocks": {
+        "tab_toddlers": {
+          "type": "product_tab",
+          "settings": {
+            "label": "Toddlers'",
+            "url": "/products/the-no-junk-toddlers-multivitamin",
+            "active": false
+          }
+        },
+        "tab_kids": {
+          "type": "product_tab",
+          "settings": {
+            "label": "Kids'",
+            "url": "/products/kids-enrichment-vitamin",
+            "active": false
+          }
+        },
+        "tab_teens": {
+          "type": "product_tab",
+          "settings": {
+            "label": "Teens'",
+            "url": "",
+            "active": true
+          }
+        },
+        "benefit_health": {
+          "type": "benefit",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png?v=1781709850&width=64",
+            "title": "Improve Overall Health & Nutrition",
+            "stat": "98%",
+            "text": "of parents say First Day vitamins support their teen's overall health & nutrition.†"
+          }
+        },
+        "benefit_mood": {
+          "type": "benefit",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Vector_6.png?v=1781280482&width=64",
+            "title": "Boost Mood & Motivation",
+            "stat": "83%",
+            "text": "of customers say First Day vitamins support their teens' overall mood & behavior, and saw improved motivation for school.†"
+          }
+        },
+        "benefit_skin": {
+          "type": "benefit",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png?v=1781711382&width=64",
+            "title": "Promote Clear Skin",
+            "stat": "75%",
+            "text": "said they saw an improvement to skin health, including reduced acne.†"
+          }
+        },
+        "quantity_1": {
+          "type": "qty_tier",
+          "settings": {
+            "label": "1‎ Bottle",
+            "savings": "Save $15.80",
+            "selected": true
+          }
+        },
+        "quantity_2": {
+          "type": "qty_tier",
+          "settings": {
+            "label": "2‎ Bottles",
+            "savings": "Save $31.59",
+            "selected": false
+          }
+        },
+        "quantity_3": {
+          "type": "qty_tier",
+          "settings": {
+            "label": "3‎ Bottles",
+            "savings": "Save $47.39",
+            "selected": false
+          }
+        },
+        "quantity_4": {
+          "type": "qty_tier",
+          "settings": {
+            "label": "4‎ Bottles",
+            "savings": "Save $63.18",
+            "selected": false
+          }
+        },
+        "upsell_brain": {
+          "type": "upsell",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Product_Over_White.jpg?v=1759255674&width=64",
+            "alt": "The Teens' Daily Focus Brain Support dietary supplement features blue and teal packaging with 60 gummies per container and two yellow gummies in front, providing focus support designed specifically for teens.",
+            "title": "Teens' Daily Focus Brain Support",
+            "subtitle": "Support for focus, learning, and memory recall.",
+            "compare_price": "$49.00",
+            "price": "$29.40"
+          }
+        },
+        "upsell_magnesium": {
+          "type": "upsell",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/TeensMagnesiumPrimary.jpg?v=1763588577&width=64",
+            "alt": "A container labeled Teens’ Nighttime Reset Magnesium sits upright, with two berry-shaped red gummies beside it. The label states No Junk and the calming supplement for teens includes 60 magnesium gummies.",
+            "title": "Teens’ Nighttime Reset Magnesium",
+            "subtitle": "Melatonin-free support for relaxation & sleep.",
+            "compare_price": "$39.00",
+            "price": "$23.40"
+          }
+        },
+        "upsell_probiotic": {
+          "type": "upsell",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/GUEST_9c904f2b-66b3-4c5c-8a4e-454f8e3bbd90.avif?v=1785254909&width=64",
+            "alt": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
+            "title": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
+            "subtitle": "To support immunity, digestion, and skin health.",
+            "compare_price": "$49.00",
+            "price": "$29.40"
+          }
+        },
+        "carousel_01": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1781036994&width=1200",
+            "alt": "The \"No Junk\"™ Teens’ Multi"
+          }
+        },
+        "carousel_02": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Rebrand_Broad_Images_16.png?v=1762439551&width=3840",
+            "alt": "First Day Teens Multi + Superfoods dietary supplement packaging with a gummy on a white background"
+          }
+        },
+        "carousel_03": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg?v=1761070439&width=3840",
+            "alt": "Product packaging with text about &"
+          }
+        },
+        "carousel_04": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg?v=1770321932&width=3840",
+            "alt": "Gummy vitamins with health benefits listed on a blue background. Free of artificial dyes."
+          }
+        },
+        "carousel_05": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg?v=1761070439&width=3840",
+            "alt": "93% of kids don&"
+          }
+        },
+        "carousel_06": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg?v=1770321932&width=3840",
+            "alt": "Better health for the whole family. pictures of happy customers"
+          }
+        },
+        "carousel_07": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg?v=1779938218&width=3840",
+            "alt": "55 million gummies sold in 2024"
+          }
+        },
+        "carousel_08": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg?v=1754579903&width=3840",
+            "alt": "image of product packaging showing packaging has a new look"
+          }
+        },
+        "carousel_09": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg?v=1754579903&width=3840",
+            "alt": "Blue container with gummies and superfoods on a light blue background, featuring text about nutrition and product features."
+          }
+        },
+        "carousel_10": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg?v=1754579903&width=3840",
+            "alt": "97% of customers prefer first day"
+          }
+        },
+        "carousel_11": {
+          "type": "carousel_image",
+          "settings": {
+            "image": "",
+            "image_url": "//firstday.com/cdn/shop/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1770321932&width=3840",
+            "alt": "Supplement facts label with clean label project logo on a blue background"
+          }
+        }
+      },
+      "block_order": [
+        "tab_toddlers",
+        "tab_kids",
+        "tab_teens",
+        "benefit_health",
+        "benefit_mood",
+        "benefit_skin",
+        "quantity_1",
+        "quantity_2",
+        "quantity_3",
+        "quantity_4",
+        "upsell_brain",
+        "upsell_magnesium",
+        "upsell_probiotic",
+        "carousel_01",
+        "carousel_02",
+        "carousel_03",
+        "carousel_04",
+        "carousel_05",
+        "carousel_06",
+        "carousel_07",
+        "carousel_08",
+        "carousel_09",
+        "carousel_10",
+        "carousel_11"
+      ]
+    },
+    "urgency_banner": {
+      "type": "lp-urgency-banner",
+      "settings": {
+        "text_before": "🚨 Due to the high demand,",
+        "text_highlight": "July",
+        "text_after": "has a very high risk of selling out!",
+        "cta_label": "Claim Yours Now!",
+        "cta_link": "#standalone-product-section",
+        "color_scheme": "scheme_1",
+        "padding_top": 12,
+        "padding_bottom": 12,
+        "anchor_id": ""
+      }
+    },
+    "trust_wall": {
+      "type": "lp-trust-wall",
+      "settings": {
+        "heading": "Life Changing Results from <strong>Doctors</strong> and <strong>Real Customers</strong>",
+        "color_scheme": "scheme-1",
+        "anchor_id": "",
+        "padding_top": 48,
+        "padding_bottom": 48
+      },
+      "blocks": {
+        "media_blue_bubble": {
+          "type": "media_card",
+          "settings": {
+            "image_url": "//firstday.com/cdn/shop/files/blue-bubble-social-grid.jpg?v=1781563733&width=560",
+            "alt": "",
+            "is_video": false
+          }
+        },
+        "doctor_lei_chen": {
+          "type": "doctor_card",
+          "settings": {
+            "photo_url": "//firstday.com/cdn/shop/files/der-lei-chen-medical-board.jpg?v=1775176611&width=160",
+            "quote": "<p>\"These vitamins are exactly what I recommend to parents looking for quality nutrition.\"</p>",
+            "name": "Dr. Lei Chen",
+            "credentials": "MD, MHS at Yale University"
+          }
+        },
+        "media_phils_my_pharmacist": {
+          "type": "media_card",
+          "settings": {
+            "image_url": "//firstday.com/cdn/shop/files/phils-my-pharmacist.png?v=1771540397&width=560",
+            "alt": "Video thumbnail",
+            "is_video": true
+          }
+        },
+        "media_womens_reviews": {
+          "type": "media_card",
+          "settings": {
+            "image_url": "//firstday.com/cdn/shop/files/Womens_daily_supercharge_ugc.png?v=1778595285&width=560",
+            "alt": "Collage of Women Reviews",
+            "is_video": false
+          }
+        },
+        "customer_diana": {
+          "type": "customer_card",
+          "settings": {
+            "avatar_url": "//firstday.com/cdn/shop/files/ugc-4.png?v=1691706683&width=160",
+            "quote": "<p>\"These are the best tasting vitamins I ever purchased. It feels like I am having a treat. These are the only ones so far that my kids like too.\"</p>",
+            "name": "Diana V.",
+            "caption": "Verified Purchaser"
+          }
+        },
+        "media_review_woman": {
+          "type": "media_card",
+          "settings": {
+            "image_url": "//firstday.com/cdn/shop/files/review-woman.png?v=1775176116&width=560",
+            "alt": "Video thumbnail",
+            "is_video": true
+          }
+        },
+        "press_yahoo_finance": {
+          "type": "press_quote",
+          "settings": {
+            "quote": "\"A revolutionary approach to children's health.\"",
+            "label": "As seen on",
+            "logo_url": "//firstday.com/cdn/shop/files/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png?v=1771298020&width=240"
+          }
+        },
+        "doctor_ed_giovannucci": {
+          "type": "doctor_card",
+          "settings": {
+            "photo_url": "//firstday.com/cdn/shop/files/dr-harvard-ed-medical-board.jpg?v=1775176611&width=160",
+            "quote": "<p>\"We choose partners carefully, and First Day’s dedication to research, formulation integrity, and transparent quality practices makes them a brand we’re proud to align with.\"</p>",
+            "name": "Dr. Ed Giovannucci",
+            "credentials": "MD, MPH, ScD at Harvard University"
+          }
+        },
+        "media_review_woman_2": {
+          "type": "media_card",
+          "settings": {
+            "image_url": "//firstday.com/cdn/shop/files/review-woman-2.png?v=1775176166&width=560",
+            "alt": "Video thumbnail",
+            "is_video": true
+          }
+        },
+        "stat_95": {
+          "type": "stat_circle",
+          "settings": {
+            "value": "95%",
+            "text": "of parents see improved health & wellness"
+          }
+        },
+        "stat_82": {
+          "type": "stat_circle",
+          "settings": {
+            "value": "82%",
+            "text": "of kids ask for their vitamins daily"
+          }
+        },
+        "stat_97": {
+          "type": "stat_circle",
+          "settings": {
+            "value": "97%",
+            "text": "customer satisfaction rate"
+          }
+        }
+      },
+      "block_order": [
+        "media_blue_bubble",
+        "doctor_lei_chen",
+        "media_phils_my_pharmacist",
+        "media_womens_reviews",
+        "customer_diana",
+        "media_review_woman",
+        "press_yahoo_finance",
+        "doctor_ed_giovannucci",
+        "media_review_woman_2",
+        "stat_95",
+        "stat_82",
+        "stat_97"
+      ]
+    },
+    "accordion_raising_bar": {
+      "type": "lp-media-accordion",
+      "settings": {
+        "heading": "Raising the Bar on Your Child's Nutrition",
+        "show_media": true,
+        "image_url": "//firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=1500",
+        "media_position": "right",
+        "first_open": true,
+        "exclusive": true,
+        "cta_label": "Start Today",
+        "cta_link": "#standalone-product-section",
+        "guarantee_text": "45-Day Money Back Guarantee",
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "anchor_id": "accordion_block_QpghhN"
+      },
+      "blocks": {
+        "fights_hidden_hunger": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72",
+            "icon_alt": "",
+            "title": "Fights Hidden Hunger",
+            "body": "<p>80% of children don't eat enough fruits and veggies, contributing to a nutrient deficiency known as hidden hunger. Our gummies fight hidden hunger with essential nutrients critical to development.</p>"
+          }
+        },
+        "harvard_yale_scientists": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/old-icon-microscope.avif?v=1771541426&width=72",
+            "icon_alt": "",
+            "title": "Developed Alongside Harvard & Yale Scientists",
+            "body": "<p>Our product was crafted with input from leading scientists at Harvard and Yale, combining the latest research with high-quality ingredients to deliver a multivitamin parents can trust.</p>"
+          }
+        },
+        "modern_science": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/old-icon-atom-chemistry.avif?v=1771541426&width=72",
+            "icon_alt": "",
+            "title": "Backed by Modern Science",
+            "body": "<p>Vitamin B6 supports natural energy regulation, promoting healthier sleep patterns and making it easier for kids to get restful sleep.*</p>"
+          }
+        },
+        "pediatrician_approved": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/old-icon-stethoscope.avif?v=1771541426&width=72",
+            "icon_alt": "",
+            "title": "Pediatrician-Approved",
+            "body": "<p>Recommended by pediatricians, our multivitamin is designed to meet the unique needs of your family ensuring they get the support they need from a trusted source.</p>"
+          }
+        },
+        "clean_label": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/Rivo-Icon-Checkmark.svg?v=1762862239&width=72",
+            "icon_alt": "A blue circle with a white check mark in the center, surrounded by a scalloped edge, resembling a verification badge.",
+            "title": "Clean Label Project® Purity Award",
+            "body": "<p>Our products were independently tested by Clean Label Project® for harmful chemicals like heavy metals, pesticides, and plasticizers, exceeding typical industry practices.</p>"
+          }
+        },
+        "ingredients_sourcing": {
+          "type": "item",
+          "settings": {
+            "icon_url": "//firstday.com/cdn/shop/files/icon-list-ingredients-sourcing.avif?v=1772658974&width=72",
+            "icon_alt": "",
+            "title": "Ingredients Sourcing and Dosage",
+            "body": "<p>We source each ingredient with care, choosing only the highest quality vitamins and minerals. Our dosage is tailored for teens, providing safe and effective support without risking overuse or unwanted additives.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "fights_hidden_hunger",
+        "harvard_yale_scientists",
+        "modern_science",
+        "pediatrician_approved",
+        "clean_label",
+        "ingredients_sourcing"
+      ]
+    },
+    "comparison_table": {
+      "type": "lp-comparison-table",
+      "settings": {
+        "heading": "Why Should You Choose First Day?",
+        "subheading": "<p>Made for modern families living on modern diets, we’re here to fill the nutrition gaps that today’s food often leaves behind.</p>",
+        "brand_label": "First Day",
+        "brand_logo": "",
+        "brand_logo_url": "//firstday.com/cdn/shop/files/round_logo.png?v=1720622822&width=100",
+        "competitor_label": "Other Multis",
+        "image_desktop": "",
+        "image_desktop_url": "//firstday.com/cdn/shop/files/desk_720.png?v=1763396549&width=1200",
+        "image_mobile": "",
+        "image_mobile_url": "//firstday.com/cdn/shop/files/mob-left_360.png?v=1763396560&width=300",
+        "color_scheme": "scheme_1",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "anchor_id": ""
+      },
+      "blocks": {
+        "feature_clean_label": {
+          "type": "feature_row",
+          "settings": {
+            "label": "Clean Label Certified",
+            "us_note": "",
+            "them_note": ""
+          }
+        },
+        "feature_research": {
+          "type": "feature_row",
+          "settings": {
+            "label": "Research Backed",
+            "us_note": "",
+            "them_note": ""
+          }
+        },
+        "feature_gift": {
+          "type": "feature_row",
+          "settings": {
+            "label": "Surprise Gift with Purchase",
+            "us_note": "",
+            "them_note": ""
+          }
+        },
+        "feature_no_fillers": {
+          "type": "feature_row",
+          "settings": {
+            "label": "No Fillers or Fake Ingredients",
+            "us_note": "",
+            "them_note": ""
+          }
+        },
+        "feature_vegan": {
+          "type": "feature_row",
+          "settings": {
+            "label": "Vegan, Gluten-Free, Non-GMO",
+            "us_note": "",
+            "them_note": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_clean_label",
+        "feature_research",
+        "feature_gift",
+        "feature_no_fillers",
+        "feature_vegan"
+      ]
+    },
+    "reviews": {
+      "type": "lp-reviews",
+      "settings": {
+        "heading": "Customer Reviews",
+        "average_rating": "4.74",
+        "review_count": "1394",
+        "histogram_5": 87,
+        "histogram_4": 6,
+        "histogram_3": 2,
+        "histogram_2": 2,
+        "histogram_1": 3,
+        "color_scheme": "scheme_1",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "anchor_id": ""
+      },
+      "blocks": {
+        "review_jackie_l": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Less Outbursts",
+            "body": "<p>It is starting to help with the outbursts.</p>",
+            "author": "Jackie L.",
+            "date": "2026-07-14",
+            "verified": true
+          }
+        },
+        "review_susan": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Canadian neighbours",
+            "body": "<p>We're in Canada, at first I thought these were a bit expensive with the exchange rate. So we tried them and then took a break for about six months and tried some other ones and right away realized that, these are exactly what my girls needed. So we're back and not leaving, only plan to transition from one age group up to the other.</p>",
+            "author": "Susan",
+            "date": "2026-07-05",
+            "verified": true
+          }
+        },
+        "review_deborah_b": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Our 4 kids LOVE the taste of these gummies and",
+            "body": "<p>Our 4 kids LOVE the taste of these gummies and actually fight over who is going to take their MVIs first every day!</p>",
+            "author": "Deborah B.",
+            "date": "2026-07-03",
+            "verified": true
+          }
+        },
+        "review_thorne": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Proof is in the Gummie.",
+            "body": "<p>I am an ex-pro athlete, far removed now, and a single father to 2 teenage young men. Fitness is part of my lifestyle. Nutrition goes hand in hand. My sons, unfortunately, not so much. They will rarely eat a vegetable or fruit. Both are aspiring soccer players. Both have been showing a lack of mental clarity and energy, issues with not sleeping enough or sleeping in way too much, and an overall lack of drive to be active. After both consistently starting a First Day routine, I have seen noticeable differences, and I am purchasing more after I leave this review.</p>",
+            "author": "Thorne",
+            "date": "2026-06-29",
+            "verified": true
+          }
+        },
+        "review_k_lee_a": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "title": "Complete Game Changer!!",
+            "body": "<p>I was 100% skeptical and 1000% desperate to help our 13 yo son. First dose I noticed his mood completely shift. Thought I was crazy. Next day even more noticeable.  He was letting me touch him. Grabbing to hold my hand. Laughing.  Being kind, respectful and sweet. He loves the taste so I never have to remind him but more importantly he notices the difference.  I think this should be a must for most moody/anxious kids before you try any medication.  The difference is remarkable.  He wakes up happy. Sleeping better. Just all around better! Worth every penny.</p>",
+            "author": "K-Lee A.",
+            "date": "2026-06-28",
+            "verified": true
+          }
+        }
+      },
+      "block_order": [
+        "review_jackie_l",
+        "review_susan",
+        "review_deborah_b",
+        "review_thorne",
+        "review_k_lee_a"
+      ]
+    },
+    "hero_closer": {
+      "type": "lp-hero",
+      "settings": {
+        "style": "founder",
+        "heading": "1 in 3 Families Have A Nutrient Deficiency.",
+        "subheading": "<p>I created First Day to address the massive concerns with todays diet and it's negative effects on our families.</p>",
+        "closing_text": "<p>After learning about the massive amounts of sugar that were in typical kids multivitamins I reached out to 2 of the top researchers at Harvard and Yale. I explained my story to them, how I wanted to revolutionize the vitamin industry. After consulting with these experts to help us carefully formulate our vitamins, we are now a best selling multivitamin nationwide.</p>",
+        "closing_text_2": "<p>That's why we’re so confident First Day will help you get the results you want. If within the first 45 days you find yourself not completely satisfied, we’ll give you your money back - no questions asked.</p>",
+        "cta_label": "Try Now",
+        "cta_link": "#standalone-product-section",
+        "image_url": "//firstday.com/cdn/shop/files/founder-alice.png?v=1686630957&width=1000",
+        "image_alt": "Hero image",
+        "image_mobile_url": "//firstday.com/cdn/shop/files/founder-alice.png?v=1686630957&width=800",
+        "image_mobile_alt": "Hero image",
+        "image_position": "right",
+        "color_scheme": "scheme_1",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "anchor_id": ""
+      },
+      "blocks": {
+        "stat_microplastics": {
+          "type": "stat_card",
+          "settings": {
+            "line_1": "The Average Person Consumes",
+            "value": "52 Credit Cards’",
+            "line_2": "Worth Of",
+            "line_3": "Microplastics Every Year."
+          }
+        },
+        "stat_additives": {
+          "type": "stat_card",
+          "settings": {
+            "line_1": "Artificial Food Additives",
+            "value": "59%",
+            "line_2": "Are Found In",
+            "line_3": "Of Foods Today"
+          }
+        },
+        "stat_nutrients": {
+          "type": "stat_card",
+          "settings": {
+            "line_1": "Fresh Fruits & Veggies Have",
+            "value": "Lost Up To 73%",
+            "line_2": "Of Their",
+            "line_3": "Nutrients"
+          }
+        }
+      },
+      "block_order": [
+        "stat_microplastics",
+        "stat_additives",
+        "stat_nutrients"
+      ]
+    }
+  },
+  "order": [
+    "hero_opener",
+    "accordion_nutrients",
+    "science_tabs",
+    "buy_box",
+    "urgency_banner",
+    "trust_wall",
+    "accordion_raising_bar",
+    "comparison_table",
+    "reviews",
+    "hero_closer"
+  ]
+}

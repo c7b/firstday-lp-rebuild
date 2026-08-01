@@ -2,7 +2,13 @@
   "type": "lp-science-tabs",
   "settings": {
     "heading": "The Science Behind Our Multivitamin",
-    "anchor_id": ""
+    "anchor_id": "",
+    "claims": [
+      "gid://shopify/Metaobject/231412334784",
+      "gid://shopify/Metaobject/231412367552",
+      "gid://shopify/Metaobject/231412400320",
+      "gid://shopify/Metaobject/231412433088"
+    ]
   },
   "blocks": {},
   "block_order": []
