@@ -35,6 +35,28 @@ per-page content lives in the template or in metaobjects.
    variant via settings/blocks so CRO can tune per audience without a developer. Copy itself:
    transplanted byte-for-byte, zero changes (out of scope by brief).
 
+## Where each piece of content lives: metaobject vs metafield vs section setting
+
+The rule this repo follows, and the reason each one exists:
+
+| Store it as | When | Here |
+|---|---|---|
+| **Metaobject** | a standalone content entity reused across pages, with its own fields | `science_claim` ×4 — the same claims appear on all 18 behind-the-science LPs |
+| **Metafield** | data that belongs to an existing resource (a product), not to a page | `custom.servings_per_bottle`, `age_range`, `flavor`, `subtitle`, `short_description` on the product |
+| **Section setting / block** | copy that is genuinely per-page: a variant's headline, its offer badge, its CTA | everything else on the page |
+
+The metafield case is the one that shows up at scale. Those product facts started as section
+settings; that means "30 Servings Per Bottle" gets retyped on every LP selling that product —
+~18 of them — and drifts the first time the pack size changes. On the product, it's edited once
+and every LP follows. The buy box resolves each fact as
+`section.settings.X | default: product.metafields.custom.Y`, so a single variant page can still
+override the product when the funnel genuinely needs different words. The template fragment
+ships those settings **empty on purpose** — the product is the source of truth.
+
+The mirror-image mistake is just as real: putting per-LP copy in metafields would force a
+developer (or an API call) into every marketing edit. Neither is "more advanced" — they answer
+different questions: *who owns this fact?*
+
 ## Metaobjects: one case, and why not more
 
 - **`science_claim`** (label, panel_heading, intro, bullets rich-text, video_url, poster_url,

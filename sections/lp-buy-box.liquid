@@ -3,6 +3,16 @@
 
 {% liquid
   assign buy_product = section.settings.product
+
+  # Product facts live on the PRODUCT (metafields), not on the page: the same product sells
+  # across ~18 behind-the-science LPs, so one edit propagates instead of 18. A section setting
+  # still wins when a specific variant page must say something different.
+  assign mf = buy_product.metafields.custom
+  assign fact_subtitle = section.settings.subtitle | default: mf.subtitle.value
+  assign fact_description = section.settings.description | default: mf.short_description.value
+  assign fact_flavor = section.settings.flavor_text | default: mf.flavor.value
+  assign fact_qty_note = section.settings.qty_note | default: mf.servings_per_bottle.value
+  assign fact_ages_note = section.settings.ages_note | default: mf.age_range.value
   assign current_variant = buy_product.selected_or_first_available_variant
   assign product_form_id = 'LpBuyBoxForm-' | append: section.id
   assign fallback_media_count = 0
@@ -206,8 +216,8 @@
 
         <div class="lp-buy-box__heading-group">
           <h2 class="lp-buy-box__title">{{ buy_product.title | escape }}</h2>
-          {% if section.settings.subtitle != blank %}
-            <p class="lp-buy-box__subtitle">{{ section.settings.subtitle | escape }}</p>
+          {% if fact_subtitle != blank %}
+            <p class="lp-buy-box__subtitle">{{ fact_subtitle | escape }}</p>
           {% endif %}
         </div>
 
@@ -219,11 +229,11 @@
           <span class="lp-buy-box__rating-text">{{ section.settings.rating_text | escape }}</span>
         </div>
 
-        {% if section.settings.description != blank %}
-          <p class="lp-buy-box__description">{{ section.settings.description | escape }}</p>
+        {% if fact_description != blank %}
+          <p class="lp-buy-box__description">{{ fact_description | escape }}</p>
         {% endif %}
-        {% if section.settings.flavor_text != blank %}
-          <p class="lp-buy-box__flavor">{{ section.settings.flavor_text | escape }}</p>
+        {% if fact_flavor != blank %}
+          <p class="lp-buy-box__flavor">{{ fact_flavor | escape }}</p>
         {% endif %}
 
         <div class="lp-buy-box__benefits">
@@ -338,7 +348,7 @@
 
           <fieldset class="lp-buy-box__fieldset lp-buy-box__quantity">
             <legend class="lp-buy-box__legend">{{ section.settings.quantity_heading | escape }}</legend>
-            <span class="lp-buy-box__quantity-note">{{ section.settings.qty_note | escape }}</span>
+            <span class="lp-buy-box__quantity-note">{{ fact_qty_note | escape }}</span>
             <div class="lp-buy-box__quantity-grid">
               {% assign quantity_index = 0 %}
               {% for block in section.blocks %}
@@ -530,8 +540,8 @@
         </div>
 
         <div class="lp-buy-box__ages">
-          {% if section.settings.ages_note != blank %}
-            <p class="lp-buy-box__ages-note">{{ section.settings.ages_note | escape }}</p>
+          {% if fact_ages_note != blank %}
+            <p class="lp-buy-box__ages-note">{{ fact_ages_note | escape }}</p>
           {% endif %}
           <div class="lp-buy-box__age-grid">
             {% for block in section.blocks %}
@@ -573,7 +583,8 @@
       "type": "text",
       "id": "subtitle",
       "label": "Subtitle",
-      "default": "Daily Gummies For Improved Motivation & Mood"
+      "default": "Daily Gummies For Improved Motivation & Mood",
+      "info": "Overrides product metafield custom.subtitle — leave empty to use the product's value"
     },
     {
       "type": "text",
@@ -591,13 +602,15 @@
       "type": "text",
       "id": "description",
       "label": "Description",
-      "default": "A unique organic fruit and veggie blend, plus 12 key nutrients."
+      "default": "A unique organic fruit and veggie blend, plus 12 key nutrients.",
+      "info": "Overrides product metafield custom.short_description — leave empty to use the product's value"
     },
     {
       "type": "text",
       "id": "flavor_text",
       "label": "Flavor text",
-      "default": "Flavor: 🍊 Orange"
+      "default": "Flavor: 🍊 Orange",
+      "info": "Overrides product metafield custom.flavor — leave empty to use the product's value"
     },
     {
       "type": "text",
@@ -675,7 +688,8 @@
       "type": "text",
       "id": "qty_note",
       "label": "Quantity note",
-      "default": "30 Servings Per Bottle"
+      "default": "30 Servings Per Bottle",
+      "info": "Overrides product metafield custom.servings_per_bottle — leave empty to use the product's value"
     },
     {
       "type": "text",
@@ -764,7 +778,8 @@
       "type": "text",
       "id": "ages_note",
       "label": "Age note",
-      "default": "This Product is For Teens Ages 13 - 17"
+      "default": "This Product is For Teens Ages 13 - 17",
+      "info": "Overrides product metafield custom.age_range — leave empty to use the product's value"
     },
     {
       "type": "color_scheme",

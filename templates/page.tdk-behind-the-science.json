@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "hero_opener": {
@@ -178,11 +169,11 @@
       "settings": {
         "product": "teens-multivitamin",
         "anchor_id": "standalone-product-section",
-        "subtitle": "Daily Gummies For Improved Motivation & Mood",
+        "subtitle": "",
         "rating_text": "1394 reviews",
         "rating_stars": "4.7",
-        "description": "A unique organic fruit and veggie blend, plus 12 key nutrients.",
-        "flavor_text": "Flavor: 🍊 Orange",
+        "description": "",
+        "flavor_text": "",
         "frequency_heading": "Delivery Frequency",
         "sub_title": "Monthly",
         "sub_compare": "$39",
@@ -195,7 +186,7 @@
         "ot_note": "with code FIREWORKS",
         "ot_warning": "<p>You're missing out on free shipping!</p><p>You're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!</p>",
         "quantity_heading": "Quantity",
-        "qty_note": "30 Servings Per Bottle",
+        "qty_note": "",
         "gift_heading": "Unlock Your Free Gift",
         "gift_sub": "12 Servings of Electrolyte Drink Mix For The Whole Family.",
         "gift_image": "shopify://shop_images/hydration-12-pack.png",
@@ -210,7 +201,7 @@
         "urgency_offer": "Get Up To 52% Off",
         "guarantee_text": "45 Day Money Back Guarantee",
         "cta_label": "Add To Cart & View Gift",
-        "ages_note": "This Product is For Teens Ages 13 - 17",
+        "ages_note": "",
         "color_scheme": "scheme-1",
         "padding_top": 32,
         "padding_bottom": 32
