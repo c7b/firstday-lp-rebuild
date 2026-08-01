@@ -103,4 +103,24 @@ lands in the workflow the team already operates. Two working rules that come wit
 
 When the build stabilizes, a `production` branch mirrors their draft/production branch split.
 
-*(F3–F5 appended as they happen.)*
+### F3 — Template assembly + metaobjects (where the platform pushed back)
+
+- `tools/build_template.py` assembles the page template from the 10 reviewed fragments in the
+  original's visible order; `tools/seed_metaobjects.py` upserts the 4 `science_claim` entries
+  (idempotent — rerunnable per variant), converting HTML bullets to Shopify's rich-text AST
+  and absolutizing protocol-relative URLs (both rejected otherwise).
+- **Debug story worth telling in the debrief** — the science tabs rendered empty despite the
+  template carrying the 4 metaobject references:
+  1. The GitHub sync had silently skipped one section file; a direct Asset API upload
+     surfaced the validation error the sync never showed (`url` setting + `#anchor` default).
+  2. With the section fixed, a hidden Liquid probe read through the **section rendering API**
+     (bypassing page cache) showed: `shop.metaobjects` sees all 4 entries, but the
+     `metaobject_list` setting resolves to `[]` — access was fine, the reference format wasn't.
+  3. Empirical test: **JSON templates resolve metaobject_list values by HANDLE; gid references
+     (the format the theme editor displays) come back as an empty list.** Switched to handles →
+     4 tabs, 4 videos, all from metaobjects.
+- Also learned live: the GitHub integration commits manual Asset API edits *back* to `main`
+  ("Update from Shopify" commits) — debugging on a connected theme belongs in git commits, not
+  API writes, or the two write paths race each other.
+
+*(F4–F5 appended as they happen.)*
