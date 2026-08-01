@@ -4,7 +4,9 @@
   "sections": {
     "lp_header": {
       "type": "lp-header",
-      "settings": {}
+      "settings": {
+        "logo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/round_logo.png?v=1785622060"
+      }
     }
   },
   "order": [
