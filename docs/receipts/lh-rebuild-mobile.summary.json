@@ -1,0 +1,16 @@
+{
+ "note": "Lighthouse receipt \u2014 REBUILD, mobile emulation, local run 2026-08-01. Same CLI/profile/machine as the original baseline. Fetched with the storefront password cookie + Shopify web-bot-auth crawler signature.",
+ "url": "https://firstday-lp-rebuild.myshopify.com/pages/tdk-behind-the-science-lp",
+ "lighthouseVersion": "13.4.1",
+ "fetchTime": "2026-08-01T22:31:28.874Z",
+ "performance_score": 0.73,
+ "metrics": {
+  "first-contentful-paint": "1.8\u00a0s",
+  "largest-contentful-paint": "3.8\u00a0s",
+  "total-blocking-time": "570\u00a0ms",
+  "cumulative-layout-shift": "0.032",
+  "speed-index": "3.1\u00a0s",
+  "interactive": "7.2\u00a0s"
+ },
+ "total_byte_weight": "Total size was 15,462\u00a0KiB"
+}

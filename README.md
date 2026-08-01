@@ -18,13 +18,18 @@ Shopify GitHub integration from `main` — the same pipeline First Day productio
 
 ## Performance (Lighthouse mobile, local run, same machine & profile both sides)
 
-| Metric | Original | Rebuild |
-|---|---|---|
-| Performance score | 26 | _pending final run_ |
-| LCP | 8.4 s | _pending_ |
-| Total blocking time | 20,860 ms | _pending_ |
-| Speed Index | 37.5 s | _pending_ |
-| Page weight | 32 MB | _pending_ |
+| Metric | Original | Rebuild | |
+|---|---|---|---|
+| Performance score | 26 | **73** | 2.8× |
+| First Contentful Paint | 5.3 s | **1.8 s** | 2.9× |
+| LCP | 8.4 s | **3.8 s** | 2.2× |
+| Total blocking time | 20,860 ms | **570 ms** | 36× |
+| Speed Index | 37.5 s | **3.1 s** | 12× |
+| Page weight | 32 MB | **15.4 MB** | 2× |
+
+Remaining weight is dominated by the four science videos (same assets the original plays,
+now self-hosted) — the next perf step is deferring video fetch until the tabs scroll into
+view (PLAN.md).
 
 Receipts: `docs/receipts/`. Methodology note: local Lighthouse CLI (mobile emulation,
 throttled) against both pages because PSI can't reach a password-protected dev store — same

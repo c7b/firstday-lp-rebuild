@@ -123,4 +123,30 @@ When the build stabilizes, a `production` branch mirrors their draft/production 
   ("Update from Shopify" commits) — debugging on a connected theme belongs in git commits, not
   API writes, or the two write paths race each other.
 
-*(F4–F5 appended as they happen.)*
+### F4 — Visual QA (where screenshots beat DOM dumps)
+
+- Method: full-page screenshots at 390px and 1440px, both pages, segmented and compared
+  section by section; original colors sampled per-pixel and fed to the fix builders as exact
+  hexes. The live site rate-limits headless browsers, so the original was shot from the saved
+  snapshot (the same bytes the copy was transplanted from) with its overlay dialogs stripped.
+- The fix round was 4 parallel builder agents on disjoint file sets, same cross-model review
+  loop. Structural verdict before fixes: order, copy and layout matched; the drift was
+  styling (palette, selected states, one wrong element type) plus three missing buy-box tail
+  blocks the spec had cut short.
+- **Two content misses only screenshots caught** — both invisible to static AND rendered DOM
+  dumps because they're lazy third-party embeds: the FrontRow MD clinician evaluations
+  (cross-origin iframe → rebuilt static from the iframe's public content) and the navy
+  "472 clinicians" band (script-injected). Lesson recorded: for parity work, scrolled
+  screenshots are a required verification layer, not a nice-to-have.
+- Asset follow-through from review feedback: all 52 images + 4 videos + posters migrated to
+  the store's own Files (originalSource fetch at source resolution; videos via staged
+  uploads), fragments switched to real `image_picker` refs, functional SVGs and
+  background-dependent glyphs pinned to explicit brand colors so Dawn color schemes can't
+  wash them out.
+
+### F5 — Receipts
+
+- Lighthouse (same CLI, same machine, same mobile profile, both pages; the dev store fetch
+  authenticated with the storefront password cookie + Shopify's web-bot-auth crawler
+  signature): **26 → 73 performance, TBT 20,860ms → 570ms, Speed Index 37.5s → 3.1s, LCP
+  8.4s → 3.8s, 32MB → 15.4MB.** Full summaries in `docs/receipts/`.
