@@ -1,0 +1,17 @@
+{
+ "note": "Lighthouse receipt \u2014 original page, mobile emulation, local run 2026-07-31. Full JSON kept out of the repo for size; this is the audited summary.",
+ "url": "https://firstday.com/pages/tdk-behind-the-science-lp",
+ "lighthouseVersion": "13.4.1",
+ "fetchTime": "2026-08-01T01:12:07.948Z",
+ "performance_score": 0.26,
+ "metrics": {
+  "first-contentful-paint": "5.3\u00a0s",
+  "largest-contentful-paint": "8.4\u00a0s",
+  "total-blocking-time": "20,860\u00a0ms",
+  "cumulative-layout-shift": "0.009",
+  "speed-index": "37.5\u00a0s",
+  "interactive": "78.1\u00a0s"
+ },
+ "total_byte_weight": "Total size was 32,013\u00a0KiB",
+ "network_requests": 981
+}

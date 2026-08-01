@@ -1,0 +1,80 @@
+{
+ "source": "live rendered DOM 2026-07-31 (inline jdgm.data.reviewWidget)",
+ "widget_heading": "Customer Reviews",
+ "product_avg": "4.74",
+ "product_count": 1394,
+ "reviews": [
+  {
+   "rating": 5,
+   "title": "Less Outbursts",
+   "body": "It is starting to help with the outbursts.",
+   "author": "Jackie L.",
+   "date": "2026-07-14",
+   "verified": true
+  },
+  {
+   "rating": 5,
+   "title": "Canadian neighbours",
+   "body": "We're in Canada, at first I thought these were a bit expensive with the exchange rate. So we tried them and then took a break for about six months and tried some other ones and right away realized that, these are exactly what my girls needed. So we're back and not leaving, only plan to transition from one age group up to the other.",
+   "author": "Susan",
+   "date": "2026-07-05",
+   "verified": true
+  },
+  {
+   "rating": 5,
+   "title": "Our 4 kids LOVE the taste of these gummies and",
+   "body": "Our 4 kids LOVE the taste of these gummies and actually fight over who is going to take their MVIs first every day!",
+   "author": "Deborah B.",
+   "date": "2026-07-03",
+   "verified": true
+  },
+  {
+   "rating": 5,
+   "title": "Proof is in the Gummie.",
+   "body": "I am an ex-pro athlete, far removed now, and a single father to 2 teenage young men. Fitness is part of my lifestyle. Nutrition goes hand in hand. My sons, unfortunately, not so much. They will rarely eat a vegetable or fruit. Both are aspiring soccer players. Both have been showing a lack of mental clarity and energy, issues with not sleeping enough or sleeping in way too much, and an overall lack of drive to be active. After both consistently starting a First Day routine, I have seen noticeable differences, and I am purchasing more after I leave this review.",
+   "author": "Thorne",
+   "date": "2026-06-29",
+   "verified": true
+  },
+  {
+   "rating": 5,
+   "title": "Complete Game Changer!!",
+   "body": "I was 100% skeptical and 1000% desperate to help our 13 yo son. First dose I noticed his mood completely shift. Thought I was crazy. Next day even more noticeable.  He was letting me touch him. Grabbing to hold my hand. Laughing.  Being kind, respectful and sweet. He loves the taste so I never have to remind him but more importantly he notices the difference.  I think this should be a must for most moody/anxious kids before you try any medication.  The difference is remarkable.  He wakes up happy. Sleeping better. Just all around better! Worth every penny.",
+   "author": "K-Lee A.",
+   "date": "2026-06-28",
+   "verified": true
+  }
+ ],
+ "histogram": [
+  {
+   "rating": 5,
+   "frequency": 1219,
+   "percentage": 87,
+   "extra_class": null
+  },
+  {
+   "rating": 4,
+   "frequency": 85,
+   "percentage": 6,
+   "extra_class": null
+  },
+  {
+   "rating": 3,
+   "frequency": 28,
+   "percentage": 2,
+   "extra_class": null
+  },
+  {
+   "rating": 2,
+   "frequency": 21,
+   "percentage": 2,
+   "extra_class": null
+  },
+  {
+   "rating": 1,
+   "frequency": 41,
+   "percentage": 3,
+   "extra_class": null
+  }
+ ]
+}
