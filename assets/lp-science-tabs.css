@@ -44,7 +44,7 @@
   font: inherit;
   font-size: 1.4rem;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
   padding: 1.1rem 1.6rem;
 }
 
@@ -67,7 +67,7 @@
   max-width: 94rem;
   margin: 0 auto;
   padding: 2rem;
-  background: #f2fbff;
+  background: var(--lp-bg);
   border-radius: 1.6rem;
 }
 

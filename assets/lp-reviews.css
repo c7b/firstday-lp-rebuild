@@ -1,6 +1,6 @@
 .lp-reviews__section {
-  background: #e4f5ff;
-  color: #2c3e50;
+  background: var(--lp-bg-alt);
+  color: var(--lp-navy);
 }
 
 .lp-reviews__container {
@@ -56,7 +56,7 @@
 .lp-reviews__stars {
   display: inline-flex;
   gap: 0.2rem;
-  color: #486ced;
+  color: var(--lp-blue);
 }
 
 .lp-reviews__star {
@@ -91,7 +91,7 @@
 .lp-reviews__histogram-star .lp-reviews__star {
   width: 1.4rem;
   height: 1.4rem;
-  color: #486ced;
+  color: var(--lp-blue);
 }
 
 .lp-reviews__histogram-track {
@@ -106,7 +106,7 @@
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: #486ced;
+  background: var(--lp-blue);
 }
 
 .lp-reviews__histogram-percent {
@@ -173,7 +173,7 @@
 
 .lp-reviews__verified {
   padding: 0.35rem 0.8rem;
-  border: 0.1rem solid #2c3e50;
+  border: 0.1rem solid var(--lp-navy);
   border-radius: 99rem;
   background: transparent;
   font-size: 1.2rem;
@@ -195,7 +195,7 @@
   width: 100%;
   padding: 1.2rem 2.8rem;
   border-radius: 999px;
-  background: #486ced;
+  background: var(--lp-blue);
   color: #fff;
   font-weight: 700;
   line-height: 1.2;

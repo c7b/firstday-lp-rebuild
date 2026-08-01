@@ -67,7 +67,7 @@
 
 .lp-comparison-table__table {
   width: 100%;
-  min-width: 510px;
+  min-width: 0;
   border-collapse: separate;
   border-spacing: 0;
   background: rgb(var(--color-background));
@@ -224,4 +224,20 @@
 
 /* functional marks: explicit colors — never scheme-dependent */
 .lp-comparison-table__mark--yes svg { color: #fff; }
-.lp-comparison-table__mark--no svg { color: #e34d42; }
+.lp-comparison-table__mark--no svg { color: var(--lp-critical); }
+
+/* table must fit 390px without horizontal scroll */
+.lp-comparison-table__table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+@media screen and (max-width: 749px) {
+  .lp-comparison-table__table th,
+  .lp-comparison-table__table td {
+    padding-left: .6rem;
+    padding-right: .6rem;
+    font-size: 1.3rem;
+    word-break: break-word;
+  }
+}

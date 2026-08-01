@@ -41,7 +41,7 @@
       </div>
 
       {% comment %}The real button belongs to the review app.{% endcomment %}
-      <span class="lp-reviews__write-review" role="none">{{ section.settings.write_a_review | escape }}</span>
+      <button type="button" class="lp-reviews__write-review">{{ section.settings.write_a_review | escape }}</button>
     </div>
 
     {% if section.blocks.size > 0 %}

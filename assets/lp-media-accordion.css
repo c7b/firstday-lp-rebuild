@@ -18,7 +18,7 @@
   color: rgb(var(--color-foreground));
   font-size: clamp(2.8rem, 7vw, 5rem);
   letter-spacing: -0.04em;
-  line-height: 1.03;
+  line-height: 1.12;
   margin: 0 0 2rem;
 }
 
@@ -44,7 +44,7 @@
 .lp-media-accordion__item {
   margin-bottom: 1.2rem;
   padding: .4rem 1.6rem;
-  border: 1px solid #87adf5;
+  border: 1px solid var(--lp-border);
   border-radius: 1.2rem;
   background: #fff;
 }
@@ -84,7 +84,7 @@
   justify-content: center;
   height: 4rem;
   border-radius: 50%;
-  background: #f2fbff;
+  background: var(--lp-bg);
   overflow: hidden;
   width: 4rem;
 }
@@ -100,7 +100,7 @@
   color: rgb(var(--color-foreground));
   font-size: 1.7rem;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .lp-media-accordion__chevron {
@@ -148,8 +148,8 @@
 
 .lp-media-accordion__cta {
   align-items: center;
-  background: #486ced;
-  border: 1px solid #486ced;
+  background: var(--lp-blue);
+  border: 1px solid var(--lp-blue);
   border-radius: 999px;
   color: #fff;
   display: inline-flex;

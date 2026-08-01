@@ -122,7 +122,7 @@
   color: currentColor;
   font-size: 1.4rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.3;
   text-decoration: none;
 }
 
@@ -162,7 +162,7 @@
 .lp-buy-box__rating-icon {
   width: 2rem;
   height: 2rem;
-  color: #f8b400;
+  color: var(--lp-star);
 }
 
 .lp-buy-box__rating-value {
@@ -216,7 +216,7 @@
   padding-right: 1.2rem;
   font-size: 1.5rem;
   font-weight: 750;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .lp-buy-box__benefit-icon {
@@ -225,7 +225,7 @@
   height: 4.4rem;
   border-radius: 50%;
   object-fit: cover;
-  background: #486ced; /* white-glyph assets — circle must be brand blue, never scheme-driven */
+  background: var(--lp-blue); /* white-glyph assets — circle must be brand blue, never scheme-driven */
   padding: 1rem;
   box-sizing: border-box;
   object-fit: contain;
@@ -252,7 +252,7 @@
 
 .lp-buy-box__benefit-stat {
   font-size: 2.4rem;
-  line-height: 1;
+  line-height: 1.3;
 }
 
 .lp-buy-box__benefit-text {
@@ -278,7 +278,7 @@
   padding: 0;
   font-size: 1.7rem;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .lp-buy-box__delivery {
@@ -313,8 +313,8 @@
 
 .lp-buy-box__choice-input:checked + .lp-buy-box__delivery-card,
 .lp-buy-box__choice-input:checked + .lp-buy-box__quantity-card {
-  border: 0.2rem solid #486ced;
-  background: #e4f5ff;
+  border: 0.2rem solid var(--lp-blue);
+  background: var(--lp-bg-alt);
   box-shadow: none;
 }
 
@@ -344,12 +344,12 @@
   position: absolute;
   inset: 0.35rem;
   border-radius: 50%;
-  background: #486ced;
+  background: var(--lp-blue);
   content: '';
 }
 
 .lp-buy-box__choice-input:checked + .lp-buy-box__delivery-card .lp-buy-box__radio-mark {
-  border-color: #486ced;
+  border-color: var(--lp-blue);
 }
 
 .lp-buy-box__delivery-title {
@@ -372,13 +372,13 @@
 
 .lp-buy-box__price {
   font-size: 1.8rem;
-  line-height: 1;
+  line-height: 1.3;
 }
 
 .lp-buy-box__price-note {
   grid-column: 1 / -1;
-  font-size: 1.05rem;
-  line-height: 1.2;
+  font-size: 1.2rem;
+  line-height: 1.3;
 }
 
 .lp-buy-box__delivery-copy {
@@ -424,11 +424,11 @@
   margin: 1.2rem 0 0 3rem;
   padding: 0.45rem 0.8rem;
   border-radius: 999rem;
-  background: #078942;
+  background: var(--lp-green);
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  line-height: 1;
+  line-height: 1.3;
 }
 
 .lp-buy-box__quantity {
@@ -438,13 +438,13 @@
 .lp-buy-box__quantity-note {
   display: block;
   width: fit-content;
-  margin: -4rem 0 1.2rem auto;
+  margin: 0 0 1.2rem auto;
   padding: 0.5rem 0.9rem;
   border-radius: 999rem;
   background: rgba(var(--color-foreground), 0.08);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .lp-buy-box__quantity-grid {
@@ -474,7 +474,7 @@
   align-items: center;
   padding: 0 0.8rem 1rem;
   font-size: 1.35rem;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .lp-buy-box__savings {
@@ -482,11 +482,11 @@
   width: 100%;
   margin-top: 0;
   padding: 0.55rem 0.5rem;
-  background: #078942;
+  background: var(--lp-green);
   color: #fff;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .lp-buy-box__gift {
@@ -507,7 +507,7 @@
 .lp-buy-box__gift-heading {
   margin: 0;
   font-size: 1.9rem;
-  line-height: 1.15;
+  line-height: 1.3;
 }
 
 .lp-buy-box__gift-subtitle {
@@ -538,8 +538,8 @@
   padding: 0.5rem 0.7rem;
   border-radius: 0.7rem;
   background: rgb(var(--color-background));
-  font-size: 1rem;
-  line-height: 1.15;
+  font-size: 1.2rem;
+  line-height: 1.3;
   box-shadow: 0 0.2rem 0.8rem rgba(var(--color-foreground), 0.12);
 }
 
@@ -569,7 +569,7 @@
   position: absolute;
   top: 50%;
   left: calc(100% + 0.8rem);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 800;
   transform: translateY(-50%);
 }
@@ -609,13 +609,13 @@
 .lp-buy-box__upsell-title {
   margin: 0;
   font-size: 1.3rem;
-  line-height: 1.25;
+  line-height: 1.3;
 }
 
 .lp-buy-box__upsell-subtitle {
   margin: 0.4rem 0 0;
   color: rgba(var(--color-foreground), 0.7);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 1.3;
 }
 
@@ -629,8 +629,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  font-size: 1.1rem;
-  line-height: 1.2;
+  font-size: 1.2rem;
+  line-height: 1.3;
 }
 
 .lp-buy-box__upsell-prices s {
@@ -686,7 +686,7 @@
   padding: 1.2rem 2rem;
   border: 0;
   border-radius: 999rem;
-  background: #486ced;
+  background: var(--lp-blue);
   color: #fff;
   font: inherit;
   font-size: 1.7rem;
@@ -733,12 +733,12 @@
   aspect-ratio: 1;
   padding: 1rem 0.6rem;
   border-radius: 50%;
-  background: #e4f5ff;
-  color: #2c3e50;
-  font-size: clamp(0.85rem, 2.3vw, 1.05rem);
+  background: var(--lp-bg-alt);
+  color: var(--lp-navy);
+  font-size: clamp(1.2rem, 2.3vw, 1.3rem);
   font-weight: 700;
   letter-spacing: 0.08em;
-  line-height: 1.15;
+  line-height: 1.3;
   text-align: center;
 }
 
@@ -752,11 +752,11 @@
 
 .lp-buy-box__info-items {
   margin-top: 2.4rem;
-  border-bottom: 0.1rem solid #87adf5;
+  border-bottom: 0.1rem solid var(--lp-border);
 }
 
 .lp-buy-box__info-item {
-  border-top: 0.1rem solid #87adf5;
+  border-top: 0.1rem solid var(--lp-border);
 }
 
 .lp-buy-box__info-summary {
@@ -765,7 +765,7 @@
   justify-content: space-between;
   min-height: 5.6rem;
   padding: 0.8rem 0;
-  color: #2c3e50;
+  color: var(--lp-navy);
   font-size: 1.4rem;
   font-weight: 800;
   cursor: pointer;
@@ -789,7 +789,7 @@
 
 .lp-buy-box__info-content {
   padding: 0 0 1.8rem;
-  color: #2c3e50;
+  color: var(--lp-navy);
   font-size: 1.3rem;
   line-height: 1.5;
 }
@@ -818,8 +818,8 @@
   margin: 0;
   padding: 1.2rem 1.6rem;
   border-radius: 1rem;
-  background: #e4f5ff;
-  color: #2c3e50;
+  background: var(--lp-bg-alt);
+  color: var(--lp-navy);
   font-size: 1.4rem;
   font-weight: 800;
   text-align: center;
@@ -839,10 +839,10 @@
   gap: 1rem;
   min-height: 7rem;
   padding: 1.2rem;
-  border: 0.1rem solid #87adf5;
+  border: 0.1rem solid var(--lp-border);
   border-radius: 1rem;
   background: #fff;
-  color: #2c3e50;
+  color: var(--lp-navy);
   text-decoration: none;
 }
 
@@ -857,13 +857,13 @@
 }
 
 .lp-buy-box__age-copy small {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .lp-buy-box__age-arrow {
-  color: #486ced;
+  color: var(--lp-blue);
   font-size: 2rem;
-  line-height: 1;
+  line-height: 1.3;
 }
 
 @media screen and (min-width: 750px) {

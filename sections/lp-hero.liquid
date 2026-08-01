@@ -66,6 +66,41 @@
           <p class="lp-hero__guarantee">{{ section.settings.guarantee_text | escape }}</p>
         {% endif %}
       </div>
+
+      {%- comment -%}
+        Social proof sits in normal flow under the CTA — same as the original. It used to be
+        absolutely positioned over the media, where the badge and the testimonial collided.
+      {%- endcomment -%}
+      {% if section.settings.style == 'product' %}
+        <div class="lp-hero__proof">
+          {% if section.settings.stat_badge_text != blank %}
+            <div class="lp-hero__stat-badge">
+              {% if section.settings.stat_gif_url != blank %}
+                <img class="lp-hero__stat-gif" src="{{ section.settings.stat_gif_url }}" alt="" aria-hidden="true" width="24" height="24" loading="lazy">
+              {% endif %}
+              <span>{{ section.settings.stat_badge_text | escape }}</span>
+              <span class="lp-hero__stat-icons" aria-hidden="true">
+                {% if section.settings.stat_icon_1_url != blank %}<img src="{{ section.settings.stat_icon_1_url }}" alt="" width="26" height="26" loading="lazy">{% endif %}
+                {% if section.settings.stat_icon_2_url != blank %}<img src="{{ section.settings.stat_icon_2_url }}" alt="" width="26" height="26" loading="lazy">{% endif %}
+              </span>
+            </div>
+          {% endif %}
+
+          {% for block in section.blocks %}
+            {% if block.type == 'testimonial' %}
+              <figure class="lp-hero__testimonial" {{ block.shopify_attributes }}>
+                {% if block.settings.avatar != blank %}
+                  {{ block.settings.avatar | image_url: width: 192 | image_tag: class: 'lp-hero__avatar', widths: '96, 192', sizes: '48px', loading: 'lazy', alt: block.settings.author }}
+                {% elsif block.settings.avatar_url != blank %}
+                  <img class="lp-hero__avatar" src="{{ block.settings.avatar_url }}" alt="{{ block.settings.author | escape }}" width="48" height="48" loading="lazy">
+                {% endif %}
+                <blockquote class="rte">{{ block.settings.quote }}</blockquote>
+                {% if block.settings.author != blank %}<figcaption>{{ block.settings.author | escape }}</figcaption>{% endif %}
+              </figure>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
 
     <div class="lp-hero__media">
@@ -82,34 +117,6 @@
         {% endif %}
       </picture>
 
-      {% if section.settings.style == 'product' and section.settings.stat_badge_text != blank %}
-        <div class="lp-hero__stat-badge">
-          {% if section.settings.stat_gif_url != blank %}
-            <img class="lp-hero__stat-gif" src="{{ section.settings.stat_gif_url }}" alt="" aria-hidden="true" loading="lazy">
-          {% endif %}
-          <span>{{ section.settings.stat_badge_text | escape }}</span>
-          <span class="lp-hero__stat-icons" aria-hidden="true">
-            {% if section.settings.stat_icon_1_url != blank %}<img src="{{ section.settings.stat_icon_1_url }}" alt="" loading="lazy">{% endif %}
-            {% if section.settings.stat_icon_2_url != blank %}<img src="{{ section.settings.stat_icon_2_url }}" alt="" loading="lazy">{% endif %}
-          </span>
-        </div>
-      {% endif %}
-
-      {% if section.settings.style == 'product' %}
-        {% for block in section.blocks %}
-          {% if block.type == 'testimonial' %}
-            <figure class="lp-hero__testimonial" {{ block.shopify_attributes }}>
-              {% if block.settings.avatar != blank %}
-                {{ block.settings.avatar | image_url: width: 192 | image_tag: class: 'lp-hero__avatar', widths: '96, 192', sizes: '48px', loading: 'lazy', alt: block.settings.author }}
-              {% elsif block.settings.avatar_url != blank %}
-                <img class="lp-hero__avatar" src="{{ block.settings.avatar_url }}" alt="{{ block.settings.author | escape }}" loading="lazy">
-              {% endif %}
-              <blockquote class="rte">{{ block.settings.quote }}</blockquote>
-              {% if block.settings.author != blank %}<figcaption>{{ block.settings.author | escape }}</figcaption>{% endif %}
-            </figure>
-          {% endif %}
-        {% endfor %}
-      {% endif %}
     </div>
   </div>
 </section>

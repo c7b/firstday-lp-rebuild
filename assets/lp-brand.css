@@ -1,0 +1,53 @@
+/* Brand tokens for the LP sections — single source of truth for the funnel's palette and
+   typography. Values transplanted from the original page's own CSS variables (see
+   docs/ASSUMPTIONS.md "Typography and palette"). */
+
+:root {
+  /* palette — names are First Day's own, from the original stylesheet */
+  --lp-blue: #486ced;              /* brand "noon blue", CTAs and links */
+  --lp-blue-deep: #5368c2;         /* late-noon blue */
+  --lp-navy: #2c3e50;              /* base text + dark bands */
+  --lp-bg: #f2fbff;                /* page background */
+  --lp-bg-alt: #e4f5ff;            /* selected/quiet surfaces */
+  --lp-bg-deep: #c9eeff;           /* background-dark */
+  --lp-border: #87adf5;            /* keyboard-focus / card borders */
+  --lp-green: #078942;             /* savings + success */
+  --lp-yellow: #f5b313;            /* urgency band */
+  --lp-star: #ffb511;              /* review stars */
+  --lp-sale: #ff6f4c;              /* sale price */
+  --lp-critical: #d72c0d;
+
+  /* typography — the brand faces are licensed per-domain through Adobe Fonts, so they're
+     named FIRST and fall back to the closest Shopify-hosted families. On First Day's own
+     store the kit is already loaded, so these sections inherit the real brand type with no
+     code change; here they render in the fallbacks. */
+  --lp-font-body: 'sofia-pro', var(--font-body-family), system-ui, sans-serif;
+  --lp-font-heading: 'gelica', var(--font-heading-family), Georgia, serif;
+}
+
+.shopify-section[class*='lp-'] {
+  font-family: var(--lp-font-body);
+}
+
+.shopify-section[class*='lp-'] h1,
+.shopify-section[class*='lp-'] h2,
+.shopify-section[class*='lp-'] h3,
+.shopify-section[class*='lp-'] .lp-hero__heading,
+.shopify-section[class*='lp-'] .lp-buy-box__title {
+  font-family: var(--lp-font-heading);
+  font-weight: 700;
+}
+
+/* decorative laurel used by the clinician sections — inline SVG, never a unicode glyph
+   (unicode ornaments fall back to colour emoji on Windows/Android) */
+.lp-laurel {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.6rem;
+  vertical-align: -0.2rem;
+  fill: currentColor;
+}
+
+.lp-laurel--right {
+  transform: scaleX(-1);
+}

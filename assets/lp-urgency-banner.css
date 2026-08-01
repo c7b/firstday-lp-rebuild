@@ -1,6 +1,6 @@
 .lp-urgency-banner__section {
-  background: #f5b313;
-  color: #2c3e50;
+  background: var(--lp-yellow);
+  color: var(--lp-navy);
 }
 
 .lp-urgency-banner__content {
@@ -25,12 +25,14 @@
 }
 
 .lp-urgency-banner__cta {
+  min-height: 4.4rem;
+  justify-content: center;
   display: block;
   max-width: 28rem;
   margin: 1.2rem auto 0;
   padding: 1.2rem 2.8rem;
   border-radius: 999px;
-  background: #2f4158;
+  background: var(--lp-navy);
   color: #fff;
   font-weight: 700;
   line-height: 1.2;

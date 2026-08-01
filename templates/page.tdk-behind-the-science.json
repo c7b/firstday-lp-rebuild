@@ -828,7 +828,7 @@
     "clinician_reviews": {
       "type": "lp-clinician-reviews",
       "settings": {
-        "heading": "⚕ Clinician Reviews",
+        "heading": "Clinician Reviews",
         "subheading": "Independent Clinician Evaluations",
         "intro": "<p>Clinicians can receive product samples and are <em>never compensated</em> to submit evaluations.</p>",
         "learn_more_label": "Learn more",
