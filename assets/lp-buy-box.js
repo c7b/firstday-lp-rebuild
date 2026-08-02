@@ -22,6 +22,7 @@ class LpBuyBox extends HTMLElement {
     if (this.nextButton) this.nextButton.addEventListener('click', () => this.step(1));
 
     this.bindProductTabs();
+    this.bindDeliveryChoice();
 
     this.mediaThumbs.forEach((thumb) => {
       thumb.addEventListener('click', () => {
@@ -170,6 +171,27 @@ class LpBuyBox extends HTMLElement {
 
     const currentThumb = this.mediaThumbs[index];
     if (currentThumb) currentThumb.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  }
+
+  /**
+   * Monthly vs One-time is a real Shopify selling plan, not a picture of one: choosing
+   * One-time removes the selling_plan from the form, so the line that reaches checkout is a
+   * one-off. Choosing Monthly puts it back and checkout receives a subscription line.
+   */
+  bindDeliveryChoice() {
+    const planInput = this.querySelector('[data-selling-plan-input]');
+    if (!planInput) return;
+    this.planId = this.planId || planInput.value;
+
+    this.querySelectorAll('[data-delivery-radio]').forEach((radio) => {
+      radio.addEventListener('change', () => {
+        if (!radio.checked) return;
+        const subscribing = radio.value !== 'one-time';
+        planInput.value = subscribing ? this.planId : '';
+        planInput.disabled = !subscribing;
+        this.updateQuantitySavings();
+      });
+    });
   }
 
   updateQuantitySavings() {

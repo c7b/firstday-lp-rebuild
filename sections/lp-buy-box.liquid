@@ -17,6 +17,24 @@
   assign fact_flavor = section.settings.flavor_text | default: mf.flavor.value
   assign fact_qty_note = section.settings.qty_note | default: mf.servings_per_bottle.value
   assign fact_ages_note = section.settings.ages_note | default: mf.age_range.value
+
+  # Real Shopify selling plans, when the product has them. The subscription card stops being a
+  # picture of an offer and becomes the offer: its price comes from the plan's own pricing
+  # policy and the form posts selling_plan, so checkout receives a subscription line.
+  assign plan_group = buy_product.selling_plan_groups | first
+  assign selling_plan = nil
+  if plan_group != blank
+    assign selling_plan = plan_group.selling_plans | first
+  endif
+  assign plan_variant = nil
+  if selling_plan != blank and current_variant != blank
+    for allocation in current_variant.selling_plan_allocations
+      if allocation.selling_plan.id == selling_plan.id
+        assign plan_variant = allocation
+        break
+      endif
+    endfor
+  endif
   assign product_benefits = mf.benefits.value
   assign current_variant = buy_product.selected_or_first_available_variant
   assign product_form_id = 'LpBuyBoxForm-' | append: section.id
@@ -362,6 +380,9 @@
             {% if current_variant == blank %}disabled{% endif %}
           >
           <input type="hidden" name="quantity" value="{{ initial_quantity }}" data-quantity-input>
+          {%- if selling_plan != blank -%}
+            <input type="hidden" name="selling_plan" value="{{ selling_plan.id }}" data-selling-plan-input>
+          {%- endif -%}
 
           <fieldset class="lp-buy-box__fieldset lp-buy-box__delivery">
             <legend class="lp-buy-box__legend">{{ section.settings.frequency_heading | escape }}</legend>
@@ -379,10 +400,15 @@
               <label class="lp-buy-box__delivery-card" for="LpDeliveryMonthly-{{ section.id }}">
                 <span class="lp-buy-box__delivery-top">
                   <span class="lp-buy-box__radio-mark" aria-hidden="true"></span>
-                  <strong class="lp-buy-box__delivery-title">{{ section.settings.sub_title | escape }}</strong>
+                  <strong class="lp-buy-box__delivery-title">{{ selling_plan.name | default: section.settings.sub_title | escape }}</strong>
                   <span class="lp-buy-box__delivery-prices">
-                    <s class="lp-buy-box__compare-price">{{ section.settings.sub_compare | escape }}</s>
-                    <strong class="lp-buy-box__price">{{ section.settings.sub_price | escape }}</strong>
+                    {%- if plan_variant != blank -%}
+                      <s class="lp-buy-box__compare-price">{{ plan_variant.compare_at_price | default: current_variant.price | money }}</s>
+                      <strong class="lp-buy-box__price">{{ plan_variant.price | money }}</strong>
+                    {%- else -%}
+                      <s class="lp-buy-box__compare-price">{{ section.settings.sub_compare | escape }}</s>
+                      <strong class="lp-buy-box__price">{{ section.settings.sub_price | escape }}</strong>
+                    {%- endif -%}
                   </span>
                 </span>
                 {% if section.settings.sub_perks != blank %}
@@ -408,8 +434,15 @@
                   <span class="lp-buy-box__radio-mark" aria-hidden="true"></span>
                   <strong class="lp-buy-box__delivery-title">{{ section.settings.ot_title | escape }}</strong>
                   <span class="lp-buy-box__delivery-prices">
-                    <s class="lp-buy-box__compare-price">{{ section.settings.ot_compare | escape }}</s>
-                    <strong class="lp-buy-box__price">{{ section.settings.ot_price | escape }}</strong>
+                    {%- if current_variant != blank -%}
+                      {%- if current_variant.compare_at_price > current_variant.price -%}
+                        <s class="lp-buy-box__compare-price">{{ current_variant.compare_at_price | money }}</s>
+                      {%- endif -%}
+                      <strong class="lp-buy-box__price">{{ current_variant.price | money }}</strong>
+                    {%- else -%}
+                      <s class="lp-buy-box__compare-price">{{ section.settings.ot_compare | escape }}</s>
+                      <strong class="lp-buy-box__price">{{ section.settings.ot_price | escape }}</strong>
+                    {%- endif -%}
                     {% if section.settings.ot_note != blank %}
                       <small class="lp-buy-box__price-note">{{ section.settings.ot_note | escape }}</small>
                     {% endif %}
