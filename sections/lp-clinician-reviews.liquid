@@ -29,45 +29,72 @@
         {% for block in section.blocks %}
           {% if block.type == 'clinician_card' %}
             <article class="lp-clinician-reviews__card" {{ block.shopify_attributes }}>
-            <header class="lp-clinician-reviews__card-header">
-              {% if block.settings.name != blank %}
-                <h3 class="lp-clinician-reviews__name">{{ block.settings.name | escape }}</h3>
+              <div class="lp-clinician-reviews__profile">
+                {% if block.settings.avatar != blank %}
+                  {{
+                    block.settings.avatar
+                    | image_url: width: 160
+                    | image_tag:
+                      widths: '80, 160',
+                      sizes: '64px',
+                      class: 'lp-clinician-reviews__avatar',
+                      loading: 'lazy',
+                      alt: block.settings.name
+                  }}
+                {% elsif block.settings.avatar_url != blank %}
+                  <img class="lp-clinician-reviews__avatar" src="{{ block.settings.avatar_url | escape }}" alt="{{ block.settings.name | escape }}" width="64" height="64" loading="lazy">
+                {% else %}
+                  <span class="lp-clinician-reviews__avatar lp-clinician-reviews__avatar--placeholder" aria-hidden="true">MD</span>
+                {% endif %}
+                <header class="lp-clinician-reviews__card-header">
+                  {% if block.settings.name != blank %}
+                    <h3 class="lp-clinician-reviews__name">{{ block.settings.name | escape }}</h3>
+                  {% endif %}
+                  {% if block.settings.verified_label != blank %}
+                    <p class="lp-clinician-reviews__verified">
+                      <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 1.8 12 3l2.3-.1 1 2.1 2 1.2-.1 2.3 1.2 2-1.2 2 .1 2.3-2 1.2-1 2.1-2.3-.1-2 1.2-2-1.2-2.3.1-1-2.1-2-1.2.1-2.3-1.2-2 1.2-2-.1-2.3 2-1.2 1-2.1L8 3l2-1.2Z" fill="currentColor"/><path d="m6.8 10.2 2 2 4.4-4.5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+                      {{ block.settings.verified_label | escape }}
+                    </p>
+                  {% endif %}
+                </header>
+              </div>
+
+              <dl class="lp-clinician-reviews__meta">
+                {% if block.settings.specialty != blank %}
+                  <div class="lp-clinician-reviews__meta-row">
+                    <dt>Specialty</dt>
+                    <dd>{{ block.settings.specialty | escape }}</dd>
+                  </div>
+                {% endif %}
+                {% if block.settings.years != blank %}
+                  <div class="lp-clinician-reviews__meta-row">
+                    <dt>Years in practice</dt>
+                    <dd>{{ block.settings.years | escape }}</dd>
+                  </div>
+                {% endif %}
+              </dl>
+
+              {% if block.settings.title != blank %}
+                <h4 class="lp-clinician-reviews__title">{{ block.settings.title | escape }}</h4>
               {% endif %}
-              {% if block.settings.verified_label != blank %}
-                <p class="lp-clinician-reviews__verified">{{ block.settings.verified_label | escape }}</p>
+
+              {% if block.settings.highlights != blank %}
+                <div class="lp-clinician-reviews__highlights rte">{{ block.settings.highlights }}</div>
               {% endif %}
-            </header>
 
-            <dl class="lp-clinician-reviews__meta">
-              {% if block.settings.specialty != blank %}
-                <div class="lp-clinician-reviews__meta-row">
-                  <dt>Specialty</dt>
-                  <dd>{{ block.settings.specialty | escape }}</dd>
-                </div>
+              {% if block.settings.body != blank %}
+                <details class="lp-clinician-reviews__evaluation">
+                  <summary>Read full evaluation</summary>
+                  <div class="lp-clinician-reviews__body rte">{{ block.settings.body }}</div>
+                </details>
               {% endif %}
-              {% if block.settings.years != blank %}
-                <div class="lp-clinician-reviews__meta-row">
-                  <dt>Years in practice</dt>
-                  <dd>{{ block.settings.years | escape }}</dd>
-                </div>
+
+              {% if block.settings.sources_note != blank %}
+                <details class="lp-clinician-reviews__sources">
+                  <summary>View cited sources</summary>
+                  <div class="lp-clinician-reviews__sources-content rte">{{ block.settings.sources_note }}</div>
+                </details>
               {% endif %}
-            </dl>
-
-            {% if block.settings.title != blank %}
-              <h4 class="lp-clinician-reviews__title">{{ block.settings.title | escape }}</h4>
-            {% endif %}
-
-            {% if block.settings.body != blank %}
-              <div class="lp-clinician-reviews__body rte">{{ block.settings.body }}</div>
-            {% endif %}
-
-            {% if block.settings.sources_note != blank %}
-              <div class="lp-clinician-reviews__sources rte">{{ block.settings.sources_note }}</div>
-            {% endif %}
-
-            {% if block.settings.highlights != blank %}
-              <div class="lp-clinician-reviews__highlights rte">{{ block.settings.highlights }}</div>
-            {% endif %}
             </article>
           {% endif %}
         {% endfor %}
@@ -179,6 +206,16 @@
       "name": "Clinician card",
       "limit": 6,
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Clinician photo"
+        },
+        {
+          "type": "text",
+          "id": "avatar_url",
+          "label": "Clinician photo URL"
+        },
         {
           "type": "text",
           "id": "name",

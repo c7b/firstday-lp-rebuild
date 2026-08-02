@@ -13,6 +13,23 @@ class LpScienceTabs extends HTMLElement {
       tab.addEventListener('keydown', (event) => this.handleKeydown(event, index));
     });
 
+    this.querySelectorAll('[data-video]').forEach((video) => {
+      const panel = video.closest('[role="tabpanel"]');
+      const toggle = panel && panel.querySelector('[data-video-toggle]');
+      const toggleVideo = () => this.toggleVideo(video);
+
+      video.addEventListener('click', toggleVideo);
+      video.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        toggleVideo();
+      });
+      if (toggle) toggle.addEventListener('click', toggleVideo);
+      video.addEventListener('play', () => this.updateVideoToggle(video));
+      video.addEventListener('pause', () => this.updateVideoToggle(video));
+      this.updateVideoToggle(video);
+    });
+
     // These loops are decorative and must run on their own — no click-to-pause, and if the
     // browser (power saver, background tab, blocked autoplay) stops one, resume it as soon as
     // it is on screen again.
@@ -36,10 +53,36 @@ class LpScienceTabs extends HTMLElement {
   }
 
   ensurePlaying(video) {
-    if (!video || video.offsetParent === null || this.reducedMotion.matches) return;
+    if (!video || video.offsetParent === null || this.reducedMotion.matches || video.dataset.userPaused === 'true') return;
     video.muted = true;
     video.playsInline = true;
     if (video.paused) video.play().catch(() => {});
+  }
+
+  toggleVideo(video) {
+    if (!video) return;
+
+    if (video.paused) {
+      video.dataset.userPaused = 'false';
+      video.play().catch(() => this.updateVideoToggle(video));
+    } else {
+      video.dataset.userPaused = 'true';
+      video.pause();
+    }
+    this.updateVideoToggle(video);
+  }
+
+  updateVideoToggle(video) {
+    const panel = video && video.closest('[role="tabpanel"]');
+    const toggle = panel && panel.querySelector('[data-video-toggle]');
+    if (!toggle) return;
+
+    const paused = video.paused;
+    toggle.setAttribute('aria-label', `${paused ? 'Play' : 'Pause'} video`);
+    const playIcon = toggle.querySelector('.lp-science-tabs__play-icon');
+    const pauseIcon = toggle.querySelector('.lp-science-tabs__pause-icon');
+    if (playIcon) playIcon.hidden = !paused;
+    if (pauseIcon) pauseIcon.hidden = paused;
   }
 
   disconnectedCallback() {
@@ -101,6 +144,12 @@ class LpScienceTabs extends HTMLElement {
 
       if (this.reducedMotion.matches) {
         video.pause();
+        return;
+      }
+
+      if (video.dataset.userPaused === 'true') {
+        video.pause();
+        this.updateVideoToggle(video);
         return;
       }
 

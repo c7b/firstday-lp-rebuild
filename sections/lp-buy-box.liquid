@@ -17,6 +17,7 @@
   assign fact_flavor = section.settings.flavor_text | default: mf.flavor.value
   assign fact_qty_note = section.settings.qty_note | default: mf.servings_per_bottle.value
   assign fact_ages_note = section.settings.ages_note | default: mf.age_range.value
+  assign product_benefits = mf.benefits.value
   assign current_variant = buy_product.selected_or_first_available_variant
   assign product_form_id = 'LpBuyBoxForm-' | append: section.id
   assign fallback_media_count = 0
@@ -253,45 +254,67 @@
         {% endif %}
 
         <div class="lp-buy-box__benefits">
-          {% for block in section.blocks %}
-            {% if block.type == 'benefit' %}
-              <details class="lp-buy-box__benefit" {{ block.shopify_attributes }}>
+          {% if product_benefits != blank %}
+            {% for benefit in product_benefits %}
+              <details class="lp-buy-box__benefit">
                 <summary class="lp-buy-box__benefit-summary">
                   <span class="lp-buy-box__benefit-heading">
-                    {% if block.settings.image != blank %}
-                      {{
-                        block.settings.image
-                        | image_url: width: 128
-                        | image_tag:
-                          widths: '64, 128',
-                          sizes: '48px',
-                          class: 'lp-buy-box__benefit-icon',
-                          loading: 'lazy',
-                          alt: block.settings.title
-                      }}
-                    {% elsif block.settings.image_url != blank %}
-                      <img
-                        class="lp-buy-box__benefit-icon"
-                        src="{{ block.settings.image_url | escape }}"
-                        alt="{{ block.settings.title | escape }}"
-                        width="64"
-                        height="64"
-                        loading="lazy"
-                      >
-                    {% endif %}
-                    <span>{{ block.settings.title | escape }}</span>
+                    <span class="lp-buy-box__benefit-icon lp-buy-box__benefit-icon--symbol" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2.8 4.8 5.5v5.8c0 4.1 2.4 7.3 7.2 9.9 4.8-2.6 7.2-5.8 7.2-9.9V5.5L12 2.8Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m8.5 12 2.2 2.2 4.8-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg>
+                    </span>
+                    <span>{{ benefit.title | escape }}</span>
                   </span>
                   <svg class="lp-buy-box__benefit-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
                     <path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
                   </svg>
                 </summary>
                 <div class="lp-buy-box__benefit-content">
-                  <strong class="lp-buy-box__benefit-stat">{{ block.settings.stat | escape }}</strong>
-                  <p class="lp-buy-box__benefit-text">{{ block.settings.text | escape }}</p>
+                  <strong class="lp-buy-box__benefit-stat">{{ benefit.stat | escape }}</strong>
+                  <p class="lp-buy-box__benefit-text">{{ benefit.text | escape }}</p>
                 </div>
               </details>
-            {% endif %}
-          {% endfor %}
+            {% endfor %}
+          {% else %}
+            {% for block in section.blocks %}
+              {% if block.type == 'benefit' %}
+                <details class="lp-buy-box__benefit" {{ block.shopify_attributes }}>
+                  <summary class="lp-buy-box__benefit-summary">
+                    <span class="lp-buy-box__benefit-heading">
+                      {% if block.settings.image != blank %}
+                        {{
+                          block.settings.image
+                          | image_url: width: 128
+                          | image_tag:
+                            widths: '64, 128',
+                            sizes: '48px',
+                            class: 'lp-buy-box__benefit-icon',
+                            loading: 'lazy',
+                            alt: block.settings.title
+                        }}
+                      {% elsif block.settings.image_url != blank %}
+                        <img
+                          class="lp-buy-box__benefit-icon"
+                          src="{{ block.settings.image_url | escape }}"
+                          alt="{{ block.settings.title | escape }}"
+                          width="64"
+                          height="64"
+                          loading="lazy"
+                        >
+                      {% endif %}
+                      <span>{{ block.settings.title | escape }}</span>
+                    </span>
+                    <svg class="lp-buy-box__benefit-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                      <path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+                    </svg>
+                  </summary>
+                  <div class="lp-buy-box__benefit-content">
+                    <strong class="lp-buy-box__benefit-stat">{{ block.settings.stat | escape }}</strong>
+                    <p class="lp-buy-box__benefit-text">{{ block.settings.text | escape }}</p>
+                  </div>
+                </details>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
         </div>
 
         {% form 'product', buy_product, id: product_form_id, class: 'lp-buy-box__form' %}

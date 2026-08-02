@@ -1,10 +1,10 @@
 .lp-clinician-reviews__section {
-  background: rgb(var(--color-background));
-  color: rgb(var(--color-foreground));
+  background: #f6f8fb;
+  color: #172a45;
 }
 
 .lp-clinician-reviews__container {
-  max-width: 76rem;
+  max-width: 112rem;
 }
 
 .lp-clinician-reviews__eyebrow,
@@ -15,65 +15,98 @@
 }
 
 .lp-clinician-reviews__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
   color: #172a45;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.3rem;
-  font-variant: small-caps;
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   line-height: 1.3;
 }
 
+.lp-laurel {
+  width: 1.2rem;
+  height: 1.6rem;
+  fill: currentColor;
+}
+
+.lp-laurel--right {
+  transform: scaleX(-1);
+}
+
 .lp-clinician-reviews__heading {
-  margin-top: 0.8rem;
-  color: #172a45;
+  max-width: 70rem;
+  margin: 1rem auto 0;
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2.8rem, 8vw, 4.2rem);
+  font-size: clamp(3rem, 7vw, 4.8rem);
   font-weight: 400;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.035em;
   line-height: 1.08;
 }
 
 .lp-clinician-reviews__intro {
-  max-width: 48rem;
-  margin: 1.6rem auto 3.2rem;
-  color: rgba(23, 42, 69, 0.78);
+  max-width: 58rem;
+  margin: 1.4rem auto 3.2rem;
+  color: rgba(23, 42, 69, 0.74);
   font-size: 1.5rem;
-  line-height: 1.45;
+  line-height: 1.55;
   text-align: center;
 }
 
 .lp-clinician-reviews__intro p,
 .lp-clinician-reviews__body p,
-.lp-clinician-reviews__sources p,
+.lp-clinician-reviews__sources-content p,
 .lp-clinician-reviews__disclaimer p {
   margin: 0;
 }
 
 .lp-clinician-reviews__cards {
-  overflow: hidden;
-  background: #fff;
-  border: 0.1rem solid rgba(23, 42, 69, 0.14);
-  border-radius: 0.8rem;
-  box-shadow: 0 0.4rem 1.6rem rgba(23, 42, 69, 0.05);
+  display: grid;
+  gap: 1.8rem;
 }
 
 .lp-clinician-reviews__card {
+  min-width: 0;
   padding: 2.4rem 2rem;
+  overflow: hidden;
+  border: 0.1rem solid rgba(23, 42, 69, 0.13);
+  border-radius: 2rem;
   background: #fff;
   color: #172a45;
+  box-shadow: 0 0.8rem 2.8rem rgba(23, 42, 69, 0.07);
 }
 
-.lp-clinician-reviews__card + .lp-clinician-reviews__card {
-  border-top: 0.1rem solid rgba(23, 42, 69, 0.14);
+.lp-clinician-reviews__profile {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 0.1rem solid rgba(23, 42, 69, 0.1);
+}
+
+.lp-clinician-reviews__avatar {
+  flex: 0 0 6.4rem;
+  width: 6.4rem;
+  height: 6.4rem;
+  border: 0.1rem solid rgba(23, 42, 69, 0.12);
+  border-radius: 50%;
+  background: #eef2f7;
+  object-fit: cover;
+}
+
+.lp-clinician-reviews__avatar--placeholder {
+  display: grid;
+  place-items: center;
+  color: rgba(23, 42, 69, 0.65);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.6rem;
 }
 
 .lp-clinician-reviews__card-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.5rem 1.2rem;
+  min-width: 0;
 }
 
 .lp-clinician-reviews__name,
@@ -83,33 +116,47 @@
 }
 
 .lp-clinician-reviews__name {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 750;
   line-height: 1.3;
-  text-decoration: underline;
-  text-decoration-thickness: 0.1rem;
-  text-underline-offset: 0.24em;
 }
 
 .lp-clinician-reviews__verified {
-  color: rgba(23, 42, 69, 0.64);
-  font-size: 1.2rem;
-  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  color: rgba(23, 42, 69, 0.65);
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.lp-clinician-reviews__verified svg {
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .lp-clinician-reviews__meta {
   display: grid;
-  gap: 0.5rem;
-  margin: 1.8rem 0 2.2rem;
+  gap: 0;
+  margin: 1.8rem 0;
+  padding: 0 1.4rem;
+  border-radius: 1.2rem;
+  background: #f6f8fb;
 }
 
 .lp-clinician-reviews__meta-row {
   display: grid;
   grid-template-columns: minmax(11.5rem, 1fr) minmax(0, 1fr);
   gap: 1.2rem;
-  color: rgba(23, 42, 69, 0.64);
+  padding: 1.1rem 0;
+  color: rgba(23, 42, 69, 0.62);
   font-size: 1.3rem;
   line-height: 1.4;
+}
+
+.lp-clinician-reviews__meta-row + .lp-clinician-reviews__meta-row {
+  border-top: 0.1rem solid rgba(23, 42, 69, 0.09);
 }
 
 .lp-clinician-reviews__meta dt,
@@ -119,54 +166,111 @@
 
 .lp-clinician-reviews__meta dd {
   color: #172a45;
+  font-weight: 650;
   text-align: right;
 }
 
 .lp-clinician-reviews__title {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 400;
-  line-height: 1.25;
-}
-
-.lp-clinician-reviews__body {
-  margin-top: 1.2rem;
-  font-size: 1.45rem;
-  line-height: 1.55;
-}
-
-.lp-clinician-reviews__sources {
-  margin-top: 2rem;
-  color: rgba(23, 42, 69, 0.62);
-  font-size: 1.2rem;
-  line-height: 1.45;
-}
-
-.lp-clinician-reviews__sources p + p {
-  margin-top: 0.8rem;
-}
-
-.lp-clinician-reviews__sources p:first-child {
-  color: #172a45;
-  font-weight: 700;
+  line-height: 1.3;
 }
 
 .lp-clinician-reviews__highlights {
-  margin-top: 2rem;
-  font-size: 1.35rem;
-  line-height: 1.45;
+  margin-top: 1.8rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
 }
 
 .lp-clinician-reviews__highlights p {
-  margin: 0 0 0.7rem;
-  font-weight: 700;
+  margin: 0 0 0.8rem;
+  font-weight: 750;
 }
 
 .lp-clinician-reviews__highlights ul {
-  display: grid;
-  gap: 0.45rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
   margin: 0;
-  padding-left: 1.8rem;
+  padding: 0;
+  list-style: none;
+}
+
+.lp-clinician-reviews__highlights li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: #edf4ff;
+  color: #294c78;
+}
+
+.lp-clinician-reviews__highlights li::before {
+  content: '\2713';
+  font-weight: 800;
+}
+
+.lp-clinician-reviews__evaluation,
+.lp-clinician-reviews__sources {
+  margin-top: 1.8rem;
+  border-top: 0.1rem solid rgba(23, 42, 69, 0.11);
+}
+
+.lp-clinician-reviews__evaluation summary,
+.lp-clinician-reviews__sources summary {
+  position: relative;
+  padding: 1.5rem 3rem 0 0;
+  color: #294c78;
+  cursor: pointer;
+  font-size: 1.35rem;
+  font-weight: 750;
+  list-style: none;
+}
+
+.lp-clinician-reviews__evaluation summary::-webkit-details-marker,
+.lp-clinician-reviews__sources summary::-webkit-details-marker {
+  display: none;
+}
+
+.lp-clinician-reviews__evaluation summary::after,
+.lp-clinician-reviews__sources summary::after {
+  content: '+';
+  position: absolute;
+  right: 0.3rem;
+  color: #172a45;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.lp-clinician-reviews__evaluation[open] summary::after,
+.lp-clinician-reviews__sources[open] summary::after {
+  content: '−';
+}
+
+.lp-clinician-reviews__body {
+  margin-top: 1.3rem;
+  color: rgba(23, 42, 69, 0.83);
+  font-size: 1.4rem;
+  line-height: 1.65;
+}
+
+.lp-clinician-reviews__sources-content {
+  margin-top: 1.2rem;
+  color: rgba(23, 42, 69, 0.62);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.lp-clinician-reviews__sources-content p + p {
+  margin-top: 0.9rem;
+}
+
+.lp-clinician-reviews__sources-content p:first-child {
+  color: #172a45;
+  font-weight: 750;
 }
 
 .lp-clinician-reviews__learn-more {
@@ -199,7 +303,7 @@
 }
 
 .lp-clinician-reviews__disclaimer {
-  max-width: 58rem;
+  max-width: 72rem;
   margin: 1.6rem auto 0;
   color: rgba(23, 42, 69, 0.58);
   font-size: 1.2rem;
@@ -209,11 +313,11 @@
 }
 
 @media screen and (min-width: 750px) {
-  .lp-clinician-reviews__card {
-    padding: 3.2rem;
+  .lp-clinician-reviews__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .lp-clinician-reviews__meta {
-    max-width: 38rem;
+  .lp-clinician-reviews__card {
+    padding: 3rem;
   }
 }

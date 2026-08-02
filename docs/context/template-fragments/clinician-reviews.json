@@ -16,6 +16,7 @@
     "clinician_enza_caputo": {
       "type": "clinician_card",
       "settings": {
+        "avatar_url": "https://assets.app.thefrontrowhealth.com/qp5jngl05tsjlwbi65fhg1swj8os",
         "name": "Dr. Enza Caputo, MD",
         "verified_label": "Verified clinician",
         "specialty": "Pediatrics",
@@ -29,6 +30,7 @@
     "clinician_andreas_nikolaidis": {
       "type": "clinician_card",
       "settings": {
+        "avatar_url": "https://assets.app.thefrontrowhealth.com/5xb6ex7x00p07wwhzprtmp018055",
         "name": "Dr. Andreas Nikolaidis, MD",
         "verified_label": "Verified clinician",
         "specialty": "Pediatrics",

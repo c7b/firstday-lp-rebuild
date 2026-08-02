@@ -109,6 +109,9 @@ async function snapshot(page) {
     visible: [...document.querySelectorAll('[role="tabpanel"],details,dialog')]
       .map((el) => (el.hasAttribute('hidden') || el.hasAttribute('open') === false ? '0' : '1')).join(''),
     checked: [...document.querySelectorAll('input')].map((i) => (i.checked ? '1' : '0')).join(''),
+    video: [...document.querySelectorAll('video')]
+      .map((video) => `${video.paused ? 'paused' : 'playing'}:${video.dataset.userPaused || ''}`)
+      .join('|'),
     text: document.body.innerText.replace(/\s+/g, ' ').slice(0, 4000),
     scrollY: Math.round(window.scrollY),
   }));
@@ -223,6 +226,7 @@ async function auditClickables(page, consoleErrors) {
     if (before.aria !== after.aria) changed.push('aria');
     if (before.visible !== after.visible) changed.push('visibility');
     if (before.checked !== after.checked) changed.push('checked');
+    if (before.video !== after.video) changed.push('video');
     if (before.text !== after.text) changed.push('content');
     const newErrors = consoleErrors.slice(errorsBefore);
     let activeAfter = false;

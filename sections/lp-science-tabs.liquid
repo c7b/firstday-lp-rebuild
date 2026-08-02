@@ -75,6 +75,7 @@
                 {% if video_url != blank %}
                   <video
                     class="lp-science-tabs__video"
+                    data-video
                     src="{{ video_url | escape }}"
                     {% if poster_url != blank %}poster="{{ poster_url | escape }}"{% endif %}
                     muted
@@ -82,8 +83,18 @@
                     loop
                     autoplay
                     preload="{% if forloop.first %}metadata{% else %}none{% endif %}"
-                    aria-hidden="true"
+                    tabindex="0"
+                    aria-label="Play or pause {{ label | escape }} video"
                   ></video>
+                  <button
+                    class="lp-science-tabs__video-toggle"
+                    type="button"
+                    data-video-toggle
+                    aria-label="Pause {{ label | escape }} video"
+                  >
+                    <svg class="lp-science-tabs__pause-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 6v12M16 6v12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.4"/></svg>
+                    <svg class="lp-science-tabs__play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" hidden><path d="m9 6 9 6-9 6V6Z" fill="currentColor"/></svg>
+                  </button>
                 {% endif %}
               </div>
               <div class="lp-science-tabs__panel-content">
