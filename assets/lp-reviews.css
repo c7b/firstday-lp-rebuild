@@ -200,6 +200,11 @@
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
+  text-decoration: none;
+}
+
+.lp-reviews__app {
+  margin-top: 3.2rem;
 }
 
 @media screen and (max-width: 749px) {

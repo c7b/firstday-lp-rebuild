@@ -11,6 +11,12 @@
   class="lp-reviews__section color-{{ section.settings.color_scheme }} gradient"
   style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
 >
+  {% assign has_app_block = false %}
+  {% for block in section.blocks %}
+    {% if block.type == '@app' %}
+      {% assign has_app_block = true %}
+    {% endif %}
+  {% endfor %}
   <div class="lp-reviews__container page-width">
     <h2 class="lp-reviews__heading">{{ section.settings.heading | escape }}</h2>
 
@@ -40,14 +46,16 @@
         {% endfor %}
       </div>
 
-      {% comment %}The real button belongs to the review app.{% endcomment %}
-      <button type="button" class="lp-reviews__write-review">{{ section.settings.write_a_review | escape }}</button>
+      {% if has_app_block and section.settings.write_a_review != blank %}
+        <a class="lp-reviews__write-review" href="#LpReviewsApp-{{ section.id }}">{{ section.settings.write_a_review | escape }}</a>
+      {% endif %}
     </div>
 
     {% if section.blocks.size > 0 %}
       <div class="lp-reviews__grid">
         {% for block in section.blocks %}
-          <article class="lp-reviews__card" {{ block.shopify_attributes }}>
+          {% if block.type == 'review' %}
+            <article class="lp-reviews__card" {{ block.shopify_attributes }}>
             <div class="lp-reviews__card-top">
               <div class="lp-reviews__stars" role="img" aria-label="{{ block.settings.rating }} out of 5">
                 {% for star_index in (1..5) %}
@@ -78,7 +86,18 @@
                 <span class="lp-reviews__verified">Verified Buyer</span>
               {% endif %}
             </div>
-          </article>
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if has_app_block %}
+      <div id="LpReviewsApp-{{ section.id }}" class="lp-reviews__app">
+        {% for block in section.blocks %}
+          {% if block.type == '@app' %}
+            {% render block %}
+          {% endif %}
         {% endfor %}
       </div>
     {% endif %}
