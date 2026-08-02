@@ -163,7 +163,7 @@ class LpScienceTabs extends HTMLElement {
           if (!this.playObserver) {
             this.playObserver = new IntersectionObserver((entries) => {
               entries.forEach((entry) => {
-                if (entry.isIntersecting) entry.target.play().catch(() => {});
+                if (entry.isIntersecting) this.ensurePlaying(entry.target);
               });
             }, { threshold: 0.25 });
           }

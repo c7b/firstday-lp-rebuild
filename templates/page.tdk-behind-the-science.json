@@ -279,6 +279,7 @@
           "settings": {
             "label": "1‎ Bottle",
             "savings": "Save $15.80",
+            "one_time_savings": "Save $11.70",
             "selected": false
           }
         },
@@ -287,6 +288,7 @@
           "settings": {
             "label": "2‎ Bottles",
             "savings": "Save $31.59",
+            "one_time_savings": "Save $23.40",
             "selected": true
           }
         },
@@ -295,6 +297,7 @@
           "settings": {
             "label": "3‎ Bottles",
             "savings": "Save $47.39",
+            "one_time_savings": "Save $35.10",
             "selected": false
           }
         },
@@ -303,6 +306,7 @@
           "settings": {
             "label": "4‎ Bottles",
             "savings": "Save $63.18",
+            "one_time_savings": "Save $46.80",
             "selected": false
           }
         },

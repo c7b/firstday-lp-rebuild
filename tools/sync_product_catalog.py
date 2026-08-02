@@ -14,7 +14,7 @@ import os
 import time
 import urllib.request
 
-API = "2024-10"
+API = "2025-10"
 
 PRODUCTS = {
     "toddlers-multivitamin": {
@@ -247,11 +247,16 @@ def sync_product(handle, config):
     ]})["metafieldsSet"]
     check_errors(handle, result)
 
-    existing = {item.get("alt") for item in product["media"]["nodes"]}
+    existing = {}
+    for item in product["media"]["nodes"]:
+        existing.setdefault(item.get("alt"), []).append(item.get("status"))
     missing = []
     for index, source in enumerate(config["images"], 1):
         alt = f"LP reference gallery: {handle} {index:02d}"
-        if alt not in existing:
+        # A failed import is not a successful dedupe match: a later run must be able to
+        # self-heal it. UPLOADED/PROCESSING are retained so an immediate rerun does not
+        # create duplicates while Shopify is still processing the image.
+        if not any(status != "FAILED" for status in existing.get(alt, [])):
             missing.append({"originalSource": source, "mediaContentType": "IMAGE", "alt": alt})
     if missing:
         result = gql(CREATE_MEDIA, {"productId": product_id, "media": missing})["productCreateMedia"]

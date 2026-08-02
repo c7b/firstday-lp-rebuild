@@ -67,6 +67,7 @@
           <div class="lp-buy-box__media-track" data-media-track>
           {% if buy_product.media.size > 0 %}
             {% for media in buy_product.media %}
+              {% assign gallery_alt = buy_product.title | append: ' — product image ' | append: forloop.index | append: ' of ' | append: buy_product.media.size %}
               <div
                 class="lp-buy-box__media-slide"
                 data-media-slide
@@ -81,7 +82,8 @@
                       widths: '360, 540, 720, 960, 1200, 1400',
                       sizes: '(min-width: 990px) 50vw, 100vw',
                       class: 'lp-buy-box__media-image',
-                      loading: 'lazy'
+                      loading: 'lazy',
+                      alt: gallery_alt
                   }}
                 {% else %}
                   {{ media | media_tag: image_size: '1400x', controls: true, preload: 'metadata', class: 'lp-buy-box__media-model' }}
@@ -132,13 +134,14 @@
           <div class="lp-buy-box__thumbnails" data-media-thumbnails>
             {% if buy_product.media.size > 0 %}
               {% for media in buy_product.media %}
+                {% assign thumbnail_alt = buy_product.title | append: ' — view product image ' | append: forloop.index | append: ' of ' | append: buy_product.media.size %}
                 <button
                   class="lp-buy-box__thumbnail"
                   type="button"
                   data-media-thumb
                   data-media-index="{{ forloop.index0 }}"
                   aria-controls="LpBuyBoxMedia-{{ section.id }}-{{ forloop.index0 }}"
-                  aria-label="{{ media.alt | default: buy_product.title | escape }}"
+                  aria-label="{{ thumbnail_alt | escape }}"
                   {% if forloop.first %}aria-current="true"{% else %}aria-current="false"{% endif %}
                 >
                   {{
@@ -148,7 +151,8 @@
                       widths: '90, 180',
                       sizes: '72px',
                       class: 'lp-buy-box__thumbnail-image',
-                      loading: 'lazy'
+                      loading: 'lazy',
+                      alt: thumbnail_alt
                   }}
                 </button>
               {% endfor %}
@@ -206,10 +210,11 @@
           <nav class="lp-buy-box__product-tabs" aria-label="{{ buy_product.title | escape }}">
             {% for block in section.blocks %}
               {% if block.type == 'product_tab' %}
-                {% if block.settings.url != blank %}
+                {% assign product_tab_url = block.settings.url | default: block.settings.product.url %}
+                {% if product_tab_url != blank %}
                   <a
                     class="lp-buy-box__product-tab"
-                    href="{{ block.settings.url }}"
+                    href="{{ product_tab_url }}"
                     {% if block.settings.product != blank %}data-product-handle="{{ block.settings.product.handle }}"{% endif %}
                     {% if block.settings.active %}aria-current="page"{% endif %}
                     {{ block.shopify_attributes }}
@@ -337,6 +342,7 @@
                 id="LpDeliveryMonthly-{{ section.id }}"
                 value="monthly"
                 checked
+                data-delivery-radio
               >
               <label class="lp-buy-box__delivery-card" for="LpDeliveryMonthly-{{ section.id }}">
                 <span class="lp-buy-box__delivery-top">
@@ -363,6 +369,7 @@
                 name="lp-delivery-{{ section.id }}"
                 id="LpDeliveryOneTime-{{ section.id }}"
                 value="one-time"
+                data-delivery-radio
               >
               <label class="lp-buy-box__delivery-card" for="LpDeliveryOneTime-{{ section.id }}">
                 <span class="lp-buy-box__delivery-top">
@@ -407,7 +414,12 @@
                     <label class="lp-buy-box__quantity-card" for="LpQuantity-{{ section.id }}-{{ quantity_index }}">
                       <strong class="lp-buy-box__quantity-label">{{ block.settings.label | escape }}</strong>
                       {% if block.settings.savings != blank %}
-                        <span class="lp-buy-box__savings">{{ block.settings.savings | escape }}</span>
+                        <span
+                          class="lp-buy-box__savings"
+                          data-quantity-savings
+                          data-subscription-savings="{{ block.settings.savings | escape }}"
+                          data-one-time-savings="{{ block.settings.one_time_savings | default: block.settings.savings | escape }}"
+                        >{{ block.settings.savings | escape }}</span>
                       {% endif %}
                     </label>
                   </div>
@@ -952,6 +964,11 @@
           "type": "text",
           "id": "savings",
           "label": "Savings"
+        },
+        {
+          "type": "text",
+          "id": "one_time_savings",
+          "label": "One-time savings"
         },
         {
           "type": "checkbox",

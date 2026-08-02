@@ -8,6 +8,7 @@ class LpBuyBox extends HTMLElement {
     this.mediaThumbs = Array.from(this.querySelectorAll('[data-media-thumb]'));
     this.quantityInput = this.querySelector('[data-quantity-input]');
     this.quantityRadios = Array.from(this.querySelectorAll('[data-quantity-radio]'));
+    this.deliveryRadios = Array.from(this.querySelectorAll('[data-delivery-radio]'));
     this.prevButton = this.querySelector('[data-media-prev]');
     this.nextButton = this.querySelector('[data-media-next]');
     this.currentMedia = 0;
@@ -46,6 +47,14 @@ class LpBuyBox extends HTMLElement {
         this.quantityInput.dispatchEvent(new Event('change', { bubbles: true }));
       });
     });
+
+    this.deliveryRadios.forEach((radio) => {
+      radio.addEventListener('change', () => {
+        if (radio.checked) this.updateQuantitySavings(radio.value);
+      });
+    });
+    const selectedDelivery = this.deliveryRadios.find((radio) => radio.checked);
+    this.updateQuantitySavings(selectedDelivery?.value || 'monthly');
 
     if (this.mediaTrack && this.mediaSlides.length > 1 && 'IntersectionObserver' in window) {
       this.mediaObserver = new IntersectionObserver(
@@ -98,6 +107,7 @@ class LpBuyBox extends HTMLElement {
     this.swapping = true;
     this.classList.add('is-swapping');
     try {
+      const restoreFocus = this.contains(document.activeElement);
       const response = await fetch(`/products/${handle}?section_id=${encodeURIComponent(sectionId)}`);
       if (!response.ok) throw new Error(`section render ${response.status}`);
 
@@ -119,6 +129,9 @@ class LpBuyBox extends HTMLElement {
 
       this.initialized = false;
       this.connectedCallback();
+      if (restoreFocus) {
+        this.querySelector(`[data-product-handle="${CSS.escape(handle)}"]`)?.focus({ preventScroll: true });
+      }
       window.history.replaceState({}, '', tab.getAttribute('href') || window.location.pathname);
       // keep the module visually anchored where the user was looking
       const scrollAfter = this.getBoundingClientRect().top;
@@ -157,6 +170,13 @@ class LpBuyBox extends HTMLElement {
 
     const currentThumb = this.mediaThumbs[index];
     if (currentThumb) currentThumb.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  }
+
+  updateQuantitySavings(delivery) {
+    const key = delivery === 'one-time' ? 'oneTimeSavings' : 'subscriptionSavings';
+    this.querySelectorAll('[data-quantity-savings]').forEach((label) => {
+      if (label.dataset[key]) label.textContent = label.dataset[key];
+    });
   }
 }
 

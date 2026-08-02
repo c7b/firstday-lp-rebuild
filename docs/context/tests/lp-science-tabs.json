@@ -107,6 +107,13 @@
       "why": "The original's videos self-run; the visible panel's video must actually be advancing (not paused on its poster), which no screenshot can prove."
     },
     {
+      "id": "active-panel-video-can-pause-and-replay",
+      "type": "video-toggle",
+      "selector": ".lp-science-tabs__panel:not([hidden]) [data-video-toggle]",
+      "video_selector": ".lp-science-tabs__panel:not([hidden]) video.lp-science-tabs__video",
+      "why": "The visible video must respond to a user click: first pause and then resume, while preserving the explicit user-paused state against autoplay recovery."
+    },
+    {
       "id": "no-horizontal-overflow-390",
       "type": "no-horizontal-overflow",
       "why": "Four pill tabs plus a 1:1 media card are the likely overflow culprits at 390px; the original keeps everything inside the viewport."

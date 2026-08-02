@@ -298,6 +298,57 @@ async function runTests(page, file) {
         }, t.selector);
         pass = !!v && !v.paused && v.t > 0.1;
         detail = JSON.stringify(v);
+      } else if (t.type === 'video-toggle') {
+        const toggle = page.locator(t.selector).first();
+        const videoSelector = t.video_selector || '.lp-science-tabs__panel:not([hidden]) video';
+        const video = page.locator(videoSelector).first();
+        await toggle.click();
+        await page.waitForTimeout(150);
+        const paused = await video.evaluate((el) => el.paused && el.dataset.userPaused === 'true');
+        await toggle.click();
+        await page.waitForTimeout(450);
+        const replayed = await video.evaluate((el) => !el.paused && el.dataset.userPaused === 'false');
+        pass = paused && replayed;
+        detail = `paused=${paused} replayed=${replayed}`;
+      } else if (t.type === 'product-switch') {
+        const selector = t.selector || 'lp-buy-box';
+        const root = page.locator(selector).first();
+        const states = [];
+        for (const handle of t.handles) {
+          await root.locator(`[data-product-handle="${handle}"]`).click();
+          await page.waitForFunction(
+            ({ rootSelector, current }) => document.querySelector(rootSelector)?.dataset.currentHandle === current,
+            { rootSelector: selector, current: handle }
+          );
+          states.push(await root.evaluate((el) => ({
+            handle: el.dataset.currentHandle,
+            focusedHandle: el.querySelector(':focus')?.dataset.productHandle || '',
+            title: el.querySelector('.lp-buy-box__title')?.textContent.trim(),
+            subtitle: el.querySelector('.lp-buy-box__subtitle')?.textContent.trim(),
+            flavor: el.querySelector('.lp-buy-box__flavor')?.textContent.trim(),
+            hero: el.querySelector('[data-media-slide] img')?.currentSrc || '',
+            slides: el.querySelectorAll('[data-media-slide]').length,
+            prices: [...el.querySelectorAll('.lp-buy-box__price')].map((node) => node.textContent.trim()),
+            benefits: [...el.querySelectorAll('.lp-buy-box__benefit-heading')]
+              .map((node) => node.textContent.replace(/\s+/g, ' ').trim()),
+          })));
+        }
+        const uniqueHeroes = new Set(states.map((state) => state.hero)).size;
+        const expectedCopy = !t.expected || states.every((state) => {
+          const expected = t.expected[state.handle];
+          return expected
+            && state.title === expected.title
+            && state.subtitle === expected.subtitle
+            && state.flavor === expected.flavor
+            && state.benefits.includes(expected.first_benefit);
+        });
+        pass = states.length === t.handles.length
+          && states.every((state) => state.slides === (t.media_count || 10))
+          && states.every((state) => t.prices.every((price) => state.prices.includes(price)))
+          && states.every((state) => state.focusedHandle === state.handle)
+          && uniqueHeroes === t.handles.length
+          && expectedCopy;
+        detail = JSON.stringify({ uniqueHeroes, expectedCopy, states });
       } else if (t.type === 'no-broken-links') {
         const bad = await page.evaluate(async () => {
           const out = [];
