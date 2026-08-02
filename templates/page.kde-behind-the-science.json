@@ -587,6 +587,7 @@
             "alt": "Video thumbnail",
             "is_video": true,
             "video_url": "https://cdn.shopify.com/videos/c/o/v/aecd515a10d444158c4daf44fa5763f6.mov",
+            "video_label": "Dr. Lei Chen testimonial video",
             "image": "shopify://shop_images/phils-my-pharmacist.png"
           }
         },
@@ -616,6 +617,7 @@
             "alt": "Video thumbnail",
             "is_video": true,
             "video_url": "https://cdn.shopify.com/videos/c/o/v/37827354069a403e9ad7a5b203afe326.mp4",
+            "video_label": "Diana V. testimonial video",
             "image": "shopify://shop_images/review-woman.png"
           }
         },
@@ -645,6 +647,7 @@
             "alt": "Video thumbnail",
             "is_video": true,
             "video_url": "https://cdn.shopify.com/videos/c/o/v/254cebfaf76545bbaf344675fd8c13bc.mp4",
+            "video_label": "Dr. Ed Giovannucci testimonial video",
             "image": "shopify://shop_images/review-woman-2.png"
           }
         },

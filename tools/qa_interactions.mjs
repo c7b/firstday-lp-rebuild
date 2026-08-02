@@ -301,6 +301,15 @@ async function runTests(page, file) {
         }, t.selector);
         pass = !!v && !v.paused && v.t > 0.1;
         detail = JSON.stringify(v);
+      } else if (t.type === 'video-click-keeps-playing') {
+        const video = page.locator(t.selector).first();
+        await video.scrollIntoViewIfNeeded();
+        const before = await video.evaluate((el) => el.currentTime);
+        await video.click();
+        await page.waitForTimeout(450);
+        const after = await video.evaluate((el) => ({ paused: el.paused, currentTime: el.currentTime }));
+        pass = !after.paused && after.currentTime > before + 0.1;
+        detail = JSON.stringify({ before, after });
       } else if (t.type === 'video-toggle') {
         const toggle = page.locator(t.selector).first();
         const videoSelector = t.video_selector || '.lp-science-tabs__panel:not([hidden]) video';
@@ -340,6 +349,21 @@ async function runTests(page, file) {
           && states.length === expected
           && states.every((state) => !state.paused && state.currentTime > 0.05 && state.source);
         detail = JSON.stringify({ count, expected, states });
+      } else if (t.type === 'video-metadata') {
+        const metadata = await page.locator(t.selector).evaluateAll((videos) => videos.map((video) => ({
+          source: video.querySelector('source')?.getAttribute('src') || '',
+          poster: video.getAttribute('poster') || '',
+        })));
+        const sources = metadata.map((item) => item.source);
+        const posters = metadata.map((item) => item.poster);
+        const sourcesMatch = JSON.stringify(sources) === JSON.stringify(t.expected_sources);
+        const postersMatch = posters.length === t.expected_poster_fragments.length
+          && posters.every((poster, index) => poster.includes(t.expected_poster_fragments[index]));
+        pass = sourcesMatch
+          && new Set(sources).size === sources.length
+          && postersMatch
+          && new Set(posters).size === posters.length;
+        detail = JSON.stringify({ sourcesMatch, postersMatch, metadata });
       } else if (t.type === 'product-switch') {
         const selector = t.selector || 'lp-buy-box';
         const root = page.locator(selector).first();

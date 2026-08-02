@@ -3,11 +3,20 @@
   "notes": "Masonry trust wall with three real, user-started testimonial videos. Each poster has a custom play button backed by a native controlled video, not a decorative badge.",
   "assertions": [
     {
-      "id": "three-real-videos",
-      "type": "count",
-      "selector": ".lp-trust-wall__media-video[data-trust-video] source[src]",
-      "equals": 3,
-      "why": "Dr. Lei, Diana, and Dr. Ed each map to a distinct source URL recovered from the original storefront."
+      "id": "exact-original-video-metadata",
+      "type": "video-metadata",
+      "selector": ".lp-trust-wall__media-video[data-trust-video]",
+      "expected_sources": [
+        "https://cdn.shopify.com/videos/c/o/v/aecd515a10d444158c4daf44fa5763f6.mov",
+        "https://cdn.shopify.com/videos/c/o/v/37827354069a403e9ad7a5b203afe326.mp4",
+        "https://cdn.shopify.com/videos/c/o/v/254cebfaf76545bbaf344675fd8c13bc.mp4"
+      ],
+      "expected_poster_fragments": [
+        "phils-my-pharmacist.png",
+        "review-woman.png",
+        "review-woman-2.png"
+      ],
+      "why": "The exact three distinct source URLs and matching distinct posters must be the ones recovered from the original storefront."
     },
     {
       "id": "three-play-buttons-work",
@@ -23,6 +32,13 @@
       "selector": ".lp-trust-wall__media-video[controls][playsinline][poster]",
       "equals": 3,
       "why": "After the poster overlay disappears, native playback controls keep pause, seek, volume, and captions affordances usable."
+    },
+    {
+      "id": "distinct-accessible-video-labels",
+      "type": "count",
+      "selector": "[data-trust-video-play][aria-label=\"Play Dr. Lei Chen testimonial video\"], [data-trust-video-play][aria-label=\"Play Diana V. testimonial video\"], [data-trust-video-play][aria-label=\"Play Dr. Ed Giovannucci testimonial video\"]",
+      "equals": 3,
+      "why": "A screen-reader user can identify which doctor's or customer's video each play button starts."
     }
   ]
 }

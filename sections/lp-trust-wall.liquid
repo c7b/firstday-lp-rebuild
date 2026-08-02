@@ -53,11 +53,11 @@
                     playsinline
                     preload="metadata"
                     {% if media_poster != blank %}poster="{{ media_poster }}"{% endif %}
-                    aria-label="{{ block.settings.alt | default: 'Customer video' | escape }}"
+                    aria-label="{{ block.settings.video_label | default: block.settings.alt | default: 'Customer testimonial video' | escape }}"
                   >
                     <source src="{{ block.settings.video_url | escape }}">
                   </video>
-                  <button class="lp-trust-wall__play-button" type="button" data-trust-video-play aria-label="Play video">
+                  <button class="lp-trust-wall__play-button" type="button" data-trust-video-play aria-label="Play {{ block.settings.video_label | default: 'customer testimonial video' | escape }}">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 9 6-9 6V6Z" fill="currentColor"/></svg>
                   </button>
                 {%- elsif block.settings.image != blank -%}
@@ -219,6 +219,12 @@
           "type": "text",
           "id": "video_url",
           "label": "Video URL"
+        },
+        {
+          "type": "text",
+          "id": "video_label",
+          "label": "Accessible video label",
+          "default": "Customer testimonial video"
         }
       ]
     },

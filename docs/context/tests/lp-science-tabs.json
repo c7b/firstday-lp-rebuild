@@ -114,6 +114,12 @@
       "why": "Science videos are always-playing decorative loops, so no play, pause, or stop control may be rendered."
     },
     {
+      "id": "click-cannot-pause-science-video",
+      "type": "video-click-keeps-playing",
+      "selector": ".lp-science-tabs__panel:not([hidden]) video.lp-science-tabs__video",
+      "why": "The video itself is also non-interactive: clicking its frames must not pause the always-playing loop."
+    },
+    {
       "id": "no-horizontal-overflow-390",
       "type": "no-horizontal-overflow",
       "why": "Four pill tabs plus a 1:1 media card are the likely overflow culprits at 390px; the original keeps everything inside the viewport."
