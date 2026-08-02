@@ -72,15 +72,17 @@ def main():
     out.write_text(GENERATED_HEADER + json.dumps(template, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"wrote {out.relative_to(ROOT)} with {len(order)} sections")
 
-    # --- variant demo: the Kids funnel. No new Liquid, no new CSS — a different product
-    # (whose metafields carry its own facts) and the offer copy that differs. Everything
-    # else is the same set of sections.
-    kids = variant(template, {
-        "buy_box": {"settings": {"product": "kids-multivitamin"}},
-    })
-    kids_out = ROOT / "templates" / "page.kde-behind-the-science.json"
-    kids_out.write_text(GENERATED_HEADER + json.dumps(kids, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"wrote {kids_out.relative_to(ROOT)} (variant: product swapped, facts follow from its metafields)")
+    # --- variant demos: the Kids and Toddlers funnels. No new Liquid, no new CSS — a
+    # different product, whose own metafields carry its facts. Everything else is the same
+    # set of sections. This is what "a new LP variant" costs in this architecture.
+    for product_handle, filename in [
+        ("kids-multivitamin", "page.kde-behind-the-science.json"),
+        ("toddlers-multivitamin", "page.toddlers-behind-the-science.json"),
+    ]:
+        v = variant(template, {"buy_box": {"settings": {"product": product_handle}}})
+        vout = ROOT / "templates" / filename
+        vout.write_text(GENERATED_HEADER + json.dumps(v, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(f"wrote {vout.relative_to(ROOT)} (variant: {product_handle})")
     if missing:
         print(f"MISSING fragments (not included): {', '.join(missing)}")
 

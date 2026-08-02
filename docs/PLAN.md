@@ -15,6 +15,25 @@ was actually designed for.
 | **Image migration to Files** | CDN hotlinks give byte-exact parity today; migration is mechanical | Script: download → upload via Files API → swap `image_url` settings for `image_picker` values (every section already supports both) | ~1h scripted |
 | **FAQ content** | The original's FAQ section renders empty on the live page (verified in rendered DOM) — nothing to transplant | The third `lp-media-accordion` instance is a ready fragment; paste real Q&A into blocks when it exists | ~15min |
 
+## Two things the brief names that this page deliberately does not do
+
+**Checkout extensions.** The brief lists them as fair game ("can be anything, we use react"),
+and the interview drew the opposite line: checkout and cart are off limits. Both are right —
+the line is *this page*. Where an extension would genuinely earn its place is the promise this
+funnel already makes: "FREE Gift on orders +$75" and the gift progress bar. Today that promise
+lives in the theme and nothing enforces it after the customer leaves the page. A Checkout UI
+extension that shows the same threshold and the same gift in checkout closes that loop, and a
+Shopify Function is what actually adds the gift. Estimate: ~1 day for the pair, plus review —
+and it's a conversation with whoever owns promotions, not a developer's unilateral call.
+
+**The quiz.** The brief says "the quiz needs to route all of these cleanly" — it isn't on this
+page, but the same routing question is: the Toddlers/Kids/Teens tabs are the funnel-level
+version of it. Right now the tabs carry their product as a block setting. The scalable shape is
+one segment model — product line × age band — that both the quiz and these tabs read from, so
+adding a segment doesn't mean editing links in 18 templates. That model is a metaobject
+(`segment`) with the product reference on it; the tabs become "render the segments for this
+product line". Half a day, and it's the prerequisite for the quiz work rather than a detour.
+
 ## The real roadmap: the variant factory (why the architecture looks like this)
 
 The sitemap has **60 `-lp` pages, 18 of them behind-the-science variants** — today each one is
