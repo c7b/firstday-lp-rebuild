@@ -34,11 +34,25 @@
       "why": "After the poster overlay disappears, native playback controls keep pause, seek, volume, and captions affordances usable."
     },
     {
-      "id": "distinct-accessible-video-labels",
+      "id": "dr-lei-accessible-video-label",
       "type": "count",
-      "selector": "[data-trust-video-play][aria-label=\"Play Dr. Lei Chen testimonial video\"], [data-trust-video-play][aria-label=\"Play Diana V. testimonial video\"], [data-trust-video-play][aria-label=\"Play Dr. Ed Giovannucci testimonial video\"]",
-      "equals": 3,
-      "why": "A screen-reader user can identify which doctor's or customer's video each play button starts."
+      "selector": "[data-trust-video-play][aria-label=\"Play Dr. Lei Chen testimonial video\"]",
+      "equals": 1,
+      "why": "Dr. Lei's play button has one unique screen-reader label."
+    },
+    {
+      "id": "diana-accessible-video-label",
+      "type": "count",
+      "selector": "[data-trust-video-play][aria-label=\"Play Diana V. testimonial video\"]",
+      "equals": 1,
+      "why": "Diana's play button has one unique screen-reader label."
+    },
+    {
+      "id": "dr-ed-accessible-video-label",
+      "type": "count",
+      "selector": "[data-trust-video-play][aria-label=\"Play Dr. Ed Giovannucci testimonial video\"]",
+      "equals": 1,
+      "why": "Dr. Ed's play button has one unique screen-reader label."
     }
   ]
 }
