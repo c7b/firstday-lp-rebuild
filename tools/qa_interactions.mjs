@@ -43,14 +43,14 @@ async function openPage(browser) {
       'Cache-Control': 'no-cache',
       Pragma: 'no-cache',
     },
-    userAgent: VIEWPORT.width < 700
-      ? 'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36'
-      : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
   });
   const page = await context.newPage();
   const consoleErrors = [];
   page.on('console', (m) => m.type() === 'error' && consoleErrors.push(m.text().slice(0, 200).trim()));
   page.on('pageerror', (e) => consoleErrors.push(('pageerror: ' + String(e).slice(0, 200)).trim()));
+  page.on('response', (response) => {
+    if (response.status() >= 400) consoleErrors.push(`HTTP ${response.status()}: ${response.url().slice(0, 180)}`);
+  });
 
   if (PASSWORD) {
     await page.goto(`${BASE}/password`, { waitUntil: 'domcontentloaded' });
@@ -225,12 +225,19 @@ async function auditClickables(page, consoleErrors) {
     if (before.checked !== after.checked) changed.push('checked');
     if (before.text !== after.text) changed.push('content');
     const newErrors = consoleErrors.slice(errorsBefore);
+    let activeAfter = false;
+    try {
+      activeAfter = await el.evaluate((node) => {
+        const ariaCurrent = node.getAttribute('aria-current');
+        return node.matches(':checked') || (ariaCurrent != null && ariaCurrent !== 'false') || node.getAttribute('aria-selected') === 'true';
+      });
+    } catch { /* navigation or a section swap can replace the clicked node */ }
 
     results.push({
       ...info,
       kind: 'control',
       verdict: !clicked ? 'NOT CLICKABLE'
-        : changed.length === 0 && info.active ? 'already active'
+        : changed.length === 0 && (info.active || activeAfter) ? 'already active'
         : changed.length === 0 ? 'NO-OP (nothing changed)'
         : changed.join('+'),
       jsErrors: newErrors.length ? newErrors : undefined,
@@ -247,6 +254,11 @@ async function auditClickables(page, consoleErrors) {
         } catch { /* retry */ }
       }
       await page.waitForLoadState('networkidle', { timeout: 20000 }).catch(() => {});
+      if (REFRESH_SECTIONS.length) {
+        const recoveryRefresh = await refreshSections(page, REFRESH_SECTIONS);
+        const failed = recoveryRefresh.filter((item) => !item.ok);
+        if (failed.length) throw new Error(`post-navigation section refresh failed: ${JSON.stringify(failed)}`);
+      }
     }
   }
   return results;
@@ -308,9 +320,9 @@ async function runTests(page, file) {
 
 const browser = await chromium.launch({ executablePath: CHROME, args: ['--no-sandbox', '--autoplay-policy=document-user-activation-required'] });
 const { page, context, consoleErrors } = await openPage(browser);
+const refreshed = REFRESH_SECTIONS.length ? await refreshSections(page, REFRESH_SECTIONS) : [];
 
 if (TESTS_FILE) {
-  const refreshed = REFRESH_SECTIONS.length ? await refreshSections(page, REFRESH_SECTIONS) : [];
   const refreshFailures = refreshed
     .filter((item) => !item.ok)
     .map((item) => ({
@@ -326,17 +338,27 @@ if (TESTS_FILE) {
   process.exit(failed.length ? 1 : 0);
 }
 
+const failedRefreshes = refreshed.filter((item) => !item.ok);
+if (failedRefreshes.length) {
+  console.error('Section refresh failed:', JSON.stringify(failedRefreshes));
+  await browser.close();
+  process.exit(1);
+}
+
 const videos = await auditVideos(page);
 const clickables = await auditClickables(page, consoleErrors);
 await browser.close();
 
 const problems = clickables.filter((c) => /NO-OP|MISSING|LINK [45]|EMPTY|NOT CLICKABLE/.test(c.verdict));
 const staticVideos = videos.filter((v) => v.displayed && v.paused);
+const reportedConsoleErrors = [...new Set(consoleErrors)]
+  .filter((error) => !error.includes('otlp-http-production.shopifysvc.com'));
 
 const md = [
   `# Interaction audit — ${VIEWPORT.width}px viewport`,
   '',
   `Page: ${PAGE_PATH}. Every visible control was clicked and the page state diffed before/after.`,
+  refreshed.length ? `Current section instances refreshed before audit: ${refreshed.map((item) => item.suffix).join(', ')}.` : '',
   '',
   '## Videos',
   '',
@@ -357,7 +379,7 @@ const md = [
   '|---|---|---|---|---|',
   ...clickables.map((c) => `| ${c.section} | ${c.tag}.${c.cls.split(' ')[0]} | ${c.label} | ${c.size} | ${c.verdict} |`),
   '',
-  consoleErrors.length ? '## Console errors\n\n' + consoleErrors.map((e) => `- ${e}`).join('\n') : '',
+  reportedConsoleErrors.length ? '## Console errors\n\n' + reportedConsoleErrors.map((e) => `- ${e}`).join('\n') : '',
 ].join('\n');
 
 const outFile = path.join('docs', 'receipts', `interaction-audit-${VIEWPORT.width}.md`);
