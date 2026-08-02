@@ -247,3 +247,39 @@ lp-trust-wall-player {
     font-size: 1.3rem;
   }
 }
+
+/* --- testimonial video badge states -------------------------------------------------
+   While playing the badge fades out and only returns on hover / keyboard focus, as a PAUSE
+   control. Paused or ended, it is always visible so the state can be read at a glance.
+   Touch devices have no hover, so there the badge stays reachable while playing. */
+.lp-trust-wall__play-button {
+  transition: opacity 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.lp-trust-wall__play-icon,
+.lp-trust-wall__pause-icon {
+  grid-area: 1 / 1;
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.lp-trust-wall__pause-icon { display: none; }
+
+.lp-trust-wall__play-button.is-playing .lp-trust-wall__play-icon { display: none; }
+.lp-trust-wall__play-button.is-playing .lp-trust-wall__pause-icon { display: block; }
+
+@media (hover: hover) {
+  .lp-trust-wall__play-button.is-playing {
+    opacity: 0;
+  }
+
+  .lp-trust-wall__media.is-playing:hover .lp-trust-wall__play-button.is-playing,
+  .lp-trust-wall__play-button.is-playing:focus-visible {
+    opacity: 1;
+  }
+}
+
+/* keep the badge clear of the native control bar once controls are on */
+.lp-trust-wall__media.is-playing .lp-trust-wall__play-button {
+  top: 42%;
+}

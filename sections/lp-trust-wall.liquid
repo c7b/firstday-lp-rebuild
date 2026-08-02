@@ -46,10 +46,13 @@
                   endif
                 -%}
                 {%- if block.settings.is_video and block.settings.video_url != blank -%}
+                  {%- comment -%}
+                    No native controls at rest: the poster stays clean and the badge is the only
+                    affordance. Controls are switched on at first play, when they are useful.
+                  {%- endcomment -%}
                   <video
                     class="lp-trust-wall__media-video"
                     data-trust-video
-                    controls
                     playsinline
                     preload="metadata"
                     {% if media_poster != blank %}poster="{{ media_poster }}"{% endif %}
@@ -57,8 +60,9 @@
                   >
                     <source src="{{ block.settings.video_url | escape }}">
                   </video>
-                  <button class="lp-trust-wall__play-button" type="button" data-trust-video-play aria-label="Play {{ block.settings.video_label | default: 'customer testimonial video' | escape }}">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 9 6-9 6V6Z" fill="currentColor"/></svg>
+                  <button class="lp-trust-wall__play-button" type="button" data-trust-video-play aria-label="Play {{ block.settings.video_label | default: 'customer testimonial video' | escape }}" aria-pressed="false">
+                    <svg class="lp-trust-wall__play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 9 6-9 6V6Z" fill="currentColor"/></svg>
+                    <svg class="lp-trust-wall__pause-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5h3v14H8zM13 5h3v14h-3z" fill="currentColor"/></svg>
                   </button>
                 {%- elsif block.settings.image != blank -%}
                   {{ block.settings.image | image_url: width: 1120 | image_tag: class: 'lp-trust-wall__media-image', widths: '352, 560, 750, 1120', sizes: '(min-width: 750px) 33vw, 100vw', loading: 'lazy', alt: block.settings.alt }}
