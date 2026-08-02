@@ -167,6 +167,13 @@
     },
     {
       "type": "richtext",
+      "id": "highlights",
+      "label": "Highlight list",
+      "info": "Founder layout: the bulleted statistics. Bold text uses the highlight color.",
+      "visible_if": "{{ section.settings.style == 'founder' }}"
+    },
+    {
+      "type": "richtext",
       "id": "closing_text",
       "label": "Closing text",
       "visible_if": "{{ section.settings.style == 'founder' }}"
@@ -278,7 +285,7 @@
       "type": "color",
       "id": "highlight_color",
       "label": "Highlight color",
-      "info": "Colors the emphasised words in the heading and the stat values",
+      "info": "Colors the emphasised words in the heading and founder highlights",
       "default": "#486ced"
     },
     {
@@ -338,33 +345,6 @@
           "type": "text",
           "id": "avatar_url",
           "label": "Avatar URL"
-        }
-      ]
-    },
-    {
-      "type": "stat_card",
-      "name": "Statistic card",
-      "limit": 4,
-      "settings": [
-        {
-          "type": "text",
-          "id": "line_1",
-          "label": "First line"
-        },
-        {
-          "type": "text",
-          "id": "value",
-          "label": "Highlighted value"
-        },
-        {
-          "type": "text",
-          "id": "line_2",
-          "label": "Second line"
-        },
-        {
-          "type": "text",
-          "id": "line_3",
-          "label": "Third line"
         }
       ]
     }

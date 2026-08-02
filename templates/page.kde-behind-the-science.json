@@ -1,7 +1,30 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_opener": {
       "type": "lp-hero",
+      "blocks": {
+        "testimonial_alyssa": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "<p>My son is VERY picky but gets so excited to eat these. I unfortunately tried hiya first &amp; wasted money because he would not eat them. I love that these are a gummy soft chewable.</p>",
+            "author": "Alyssa Blossom",
+            "avatar": "shopify://shop_images/ugc-trmv-mom-feeding.jpg",
+            "avatar_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/ugc-trmv-mom-feeding.jpg?v=1785622065"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_alyssa"
+      ],
       "settings": {
         "style": "product",
         "badge_text": "4.8 stars from 12,322+ reviewers",
@@ -10,8 +33,10 @@
         "cta_label": "Unlock Better Nutrition 🍊💊",
         "cta_link": "#standalone-product-section",
         "guarantee_text": "Exclusive First Day 45 Day Money Back Guarantee**",
+        "image": "shopify://shop_images/tdk-bts-clean-landsscapre-brady-bunch.jpg",
         "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/tdk-bts-clean-landsscapre-brady-bunch.jpg?v=1785622063",
         "image_alt": "Hero image",
+        "image_mobile": "shopify://shop_images/tdk-bts-clean-square-brady-bunch.jpg",
         "image_mobile_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/tdk-bts-clean-square-brady-bunch.jpg?v=1785622063",
         "image_mobile_alt": "Hero image",
         "image_position": "right",
@@ -19,28 +44,12 @@
         "stat_gif_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/ebce1fea9a768a63cc6c95d28e1efa8e9818e9db.gif?v=1785622064",
         "stat_icon_1_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/gummy-orange-2.png?v=1785622064",
         "stat_icon_2_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/gummy-orange.png?v=1785622065",
+        "highlight_color": "#486ced",
         "color_scheme": "scheme-1",
         "padding_top": 32,
         "padding_bottom": 32,
-        "anchor_id": "",
-        "image": "shopify://shop_images/tdk-bts-clean-landsscapre-brady-bunch.jpg",
-        "image_mobile": "shopify://shop_images/tdk-bts-clean-square-brady-bunch.jpg",
-        "highlight_color": "#486ced"
-      },
-      "blocks": {
-        "testimonial_alyssa": {
-          "type": "testimonial",
-          "settings": {
-            "quote": "<p>My son is VERY picky but gets so excited to eat these. I unfortunately tried hiya first &amp; wasted money because he would not eat them. I love that these are a gummy soft chewable.</p>",
-            "author": "Alyssa Blossom",
-            "avatar_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/ugc-trmv-mom-feeding.jpg?v=1785622065",
-            "avatar": "shopify://shop_images/ugc-trmv-mom-feeding.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_alyssa"
-      ]
+        "anchor_id": ""
+      }
     },
     "clinicians_band": {
       "type": "lp-clinicians-band",
@@ -54,91 +63,75 @@
     },
     "accordion_nutrients": {
       "type": "lp-media-accordion",
-      "settings": {
-        "heading": "Most Kids Are <span>Missing Key Nutrients</span>. Get Help in Just 2 Gummies.",
-        "show_media": true,
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/wheel-teens-multi-tdk.jpg?v=1785622045",
-        "media_position": "left",
-        "first_open": true,
-        "exclusive": true,
-        "cta_label": "Shop Now",
-        "cta_link": "#standalone-product-section",
-        "guarantee_text": "45-Day Money Back Guarantee",
-        "color_scheme": "scheme-1",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "anchor_id": "accordion_block_driBft",
-        "image": "shopify://shop_images/wheel-teens-multi-tdk.jpg"
-      },
       "blocks": {
         "stress_mood_swings": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/icon-stress-moody.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-stress-moody.png?v=1785622045",
             "icon_alt": "Stressed Face Icon",
             "title": "Stress & Mood Swings",
-            "body": "<p>With Vitamin B6 for mood regulation and Vitamin B12 for energy balance, these gummies help support emotional stability.*</p>",
-            "icon": "shopify://shop_images/icon-stress-moody.png"
+            "body": "<p>With Vitamin B6 for mood regulation and Vitamin B12 for energy balance, these gummies help support emotional stability.*</p>"
           }
         },
         "lack_motivation": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/icon-pencil.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-pencil.png?v=1785622046",
             "icon_alt": "",
             "title": "Lack of Motivation",
-            "body": "<p>Packed with Vitamin B1 for brain health and Vitamin B2 for cognitive support - to help your teen stay on track while they balance school, sports, and everything in between.*</p>",
-            "icon": "shopify://shop_images/icon-pencil.png"
+            "body": "<p>Packed with Vitamin B1 for brain health and Vitamin B2 for cognitive support - to help your teen stay on track while they balance school, sports, and everything in between.*</p>"
           }
         },
         "bad_skin": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/icon-bad-skin.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-bad-skin.png?v=1785622046",
             "icon_alt": "Skin with Pimple Icon.",
             "title": "Bad Skin",
-            "body": "<p>Vitamin A and Vitamin E support skin health, helping teens maintain a clear and balanced complexion.</p>",
-            "icon": "shopify://shop_images/icon-bad-skin.png"
+            "body": "<p>Vitamin A and Vitamin E support skin health, helping teens maintain a clear and balanced complexion.</p>"
           }
         },
         "weakened_immunity": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/icon-immunity.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-immunity.png?v=1785622047",
             "icon_alt": "",
             "title": "Weakened Immunity",
-            "body": "<p>With immune-supporting Vitamin C and D3, plus key B vitamins that help keep their systems running smoothly. Our formula helps build a strong foundation to tackle whatever the day throws at them.</p>",
-            "icon": "shopify://shop_images/icon-immunity.png"
+            "body": "<p>With immune-supporting Vitamin C and D3, plus key B vitamins that help keep their systems running smoothly. Our formula helps build a strong foundation to tackle whatever the day throws at them.</p>"
           }
         },
         "trouble_sleeping": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/icon-moon.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-moon.png?v=1785622047",
             "icon_alt": "",
             "title": "Trouble Sleeping",
-            "body": "<p>Vitamin D3 helps regulate melatonin, the hormone that controls sleep cycles. Combined with B6, it supports calmer bedtimes and better rest for growing toddlers.*</p>",
-            "icon": "shopify://shop_images/icon-moon.png"
+            "body": "<p>Vitamin D3 helps regulate melatonin, the hormone that controls sleep cycles. Combined with B6, it supports calmer bedtimes and better rest for growing toddlers.*</p>"
           }
         },
         "poor_sleep_habits": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/icon-moon.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-moon.png?v=1785622047",
             "icon_alt": "",
             "title": "Poor Sleep Habits",
-            "body": "<p>Vitamin D3 and Magnesium work together to encourage restful sleep, so kids wake up refreshed and ready to conquer their goals.*</p>",
-            "icon": "shopify://shop_images/icon-moon.png"
+            "body": "<p>Vitamin D3 and Magnesium work together to encourage restful sleep, so kids wake up refreshed and ready to conquer their goals.*</p>"
           }
         },
         "picky_eating": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/icon-broccoli.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-broccoli.png?v=1785622047",
             "icon_alt": "",
             "title": "Picky Eating",
-            "body": "<p>Vitamin A and Vitamin B9 support cell growth and development, helping to fill in nutritional gaps that teens may have when they only want junk food or continue to skip meals.*</p>",
-            "icon": "shopify://shop_images/icon-broccoli.png"
+            "body": "<p>Vitamin A and Vitamin B9 support cell growth and development, helping to fill in nutritional gaps that teens may have when they only want junk food or continue to skip meals.*</p>"
           }
         }
       },
@@ -150,89 +143,65 @@
         "trouble_sleeping",
         "poor_sleep_habits",
         "picky_eating"
-      ]
+      ],
+      "settings": {
+        "heading": "Most Kids Are <span>Missing Key Nutrients</span>. Get Help in Just 2 Gummies.",
+        "show_media": true,
+        "image": "shopify://shop_images/wheel-teens-multi-tdk.jpg",
+        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/wheel-teens-multi-tdk.jpg?v=1785622045",
+        "media_position": "left",
+        "first_open": true,
+        "exclusive": true,
+        "cta_label": "Shop Now",
+        "cta_link": "#standalone-product-section",
+        "guarantee_text": "45-Day Money Back Guarantee",
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "anchor_id": "accordion_block_driBft"
+      }
     },
     "science_tabs": {
       "type": "lp-science-tabs",
       "settings": {
         "heading": "The Science Behind Our Multivitamin",
-        "anchor_id": "",
         "claims": [
           "focus-in-class",
           "boosted-energy",
           "balanced-moods",
           "clear-skin"
-        ]
+        ],
+        "anchor_id": ""
       }
     },
     "buy_box": {
       "type": "lp-buy-box",
-      "settings": {
-        "product": "kids-multivitamin",
-        "anchor_id": "standalone-product-section",
-        "subtitle": "",
-        "rating_text": "1394 reviews",
-        "rating_stars": "4.7",
-        "description": "",
-        "flavor_text": "",
-        "frequency_heading": "Delivery Frequency",
-        "sub_title": "Monthly",
-        "sub_compare": "$39",
-        "sub_price": "$23.40",
-        "sub_perks": "<p>FREE Gift on orders +$75</p><p>FREE Shipping on first order</p><p>Cancel anytime, no questions asked</p>",
-        "sub_badge": "Lowest Price Anywhere!",
-        "ot_title": "One-Time",
-        "ot_compare": "$39",
-        "ot_price": "$27.30",
-        "ot_note": "with code FIREWORKS",
-        "ot_warning": "<p>You're missing out on free shipping!</p><p>You're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!</p>",
-        "quantity_heading": "Quantity",
-        "qty_note": "",
-        "gift_heading": "Unlock Your Free Gift",
-        "gift_sub": "12 Servings of Electrolyte Drink Mix For The Whole Family.",
-        "gift_image": "shopify://shop_images/hydration-12-pack.png",
-        "gift_image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/hydration-12-pack.png?v=1785622051",
-        "gift_image_alt": "Rapid Hydration Electrolyte Support - Gift",
-        "gift_compare": "$25.00",
-        "gift_price": "FREE",
-        "gift_progress_text": "You are $75 away, keep going!",
-        "gift_threshold": "$75",
-        "urgency_eyebrow": "🔥 Limited-Time Offer 🔥",
-        "urgency_headline": "Flash Sale Ending Soon",
-        "urgency_offer": "Get Up To 52% Off",
-        "guarantee_text": "45 Day Money Back Guarantee",
-        "cta_label": "Add To Cart & View Gift",
-        "ages_note": "",
-        "color_scheme": "scheme-1",
-        "padding_top": 32,
-        "padding_bottom": 32
-      },
       "blocks": {
         "tab_toddlers": {
           "type": "product_tab",
           "settings": {
+            "product": "toddlers-multivitamin",
             "label": "Toddlers'",
             "url": "/pages/toddlers-behind-the-science-lp",
-            "active": false,
-            "product": "toddlers-multivitamin"
+            "active": false
           }
         },
         "tab_kids": {
           "type": "product_tab",
           "settings": {
+            "product": "kids-multivitamin",
             "label": "Kids'",
             "url": "/pages/kde-behind-the-science-lp",
-            "active": false,
-            "product": "kids-multivitamin"
+            "active": false
           }
         },
         "tab_teens": {
           "type": "product_tab",
           "settings": {
+            "product": "teens-multivitamin",
             "label": "Teens'",
             "url": "",
-            "active": true,
-            "product": "teens-multivitamin"
+            "active": true
           }
         },
         "benefit_health": {
@@ -522,7 +491,47 @@
         "carousel_09",
         "carousel_10",
         "carousel_11"
-      ]
+      ],
+      "settings": {
+        "product": "kids-multivitamin",
+        "anchor_id": "standalone-product-section",
+        "subtitle": "",
+        "rating_text": "1394 reviews",
+        "rating_stars": "4.7",
+        "description": "",
+        "flavor_text": "",
+        "frequency_heading": "Delivery Frequency",
+        "sub_title": "Monthly",
+        "sub_compare": "$39",
+        "sub_price": "$23.40",
+        "sub_perks": "<p>FREE Gift on orders +$75</p><p>FREE Shipping on first order</p><p>Cancel anytime, no questions asked</p>",
+        "sub_badge": "Lowest Price Anywhere!",
+        "ot_title": "One-Time",
+        "ot_compare": "$39",
+        "ot_price": "$27.30",
+        "ot_note": "with code FIREWORKS",
+        "ot_warning": "<p>You're missing out on free shipping!</p><p>You're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!</p>",
+        "quantity_heading": "Quantity",
+        "qty_note": "",
+        "gift_heading": "Unlock Your Free Gift",
+        "gift_sub": "12 Servings of Electrolyte Drink Mix For The Whole Family.",
+        "gift_image": "shopify://shop_images/hydration-12-pack.png",
+        "gift_image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/hydration-12-pack.png?v=1785622051",
+        "gift_image_alt": "Rapid Hydration Electrolyte Support - Gift",
+        "gift_compare": "$25.00",
+        "gift_price": "FREE",
+        "gift_progress_text": "You are $75 away, keep going!",
+        "gift_threshold": "$75",
+        "urgency_eyebrow": "🔥 Limited-Time Offer 🔥",
+        "urgency_headline": "Flash Sale Ending Soon",
+        "urgency_offer": "Get Up To 52% Off",
+        "guarantee_text": "45 Day Money Back Guarantee",
+        "cta_label": "Add To Cart & View Gift",
+        "ages_note": "",
+        "color_scheme": "scheme-1",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
     },
     "urgency_banner": {
       "type": "lp-urgency-banner",
@@ -540,68 +549,61 @@
     },
     "trust_wall": {
       "type": "lp-trust-wall",
-      "settings": {
-        "heading": "Life Changing Results from <strong>Doctors</strong> and <strong>Real Customers</strong>",
-        "color_scheme": "scheme-1",
-        "anchor_id": "",
-        "padding_top": 48,
-        "padding_bottom": 48
-      },
       "blocks": {
         "media_blue_bubble": {
           "type": "media_card",
           "settings": {
+            "image": "shopify://shop_images/blue-bubble-social-grid.jpg",
             "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/blue-bubble-social-grid.jpg?v=1785622065",
             "alt": "",
-            "is_video": false,
-            "image": "shopify://shop_images/blue-bubble-social-grid.jpg"
+            "is_video": false
           }
         },
         "doctor_lei_chen": {
           "type": "doctor_card",
           "settings": {
+            "photo": "shopify://shop_images/der-lei-chen-medical-board.jpg",
             "photo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/der-lei-chen-medical-board.jpg?v=1785622066",
             "quote": "<p>\"These vitamins are exactly what I recommend to parents looking for quality nutrition.\"</p>",
             "name": "Dr. Lei Chen",
-            "credentials": "MD, MHS at Yale University",
-            "photo": "shopify://shop_images/der-lei-chen-medical-board.jpg"
+            "credentials": "MD, MHS at Yale University"
           }
         },
         "media_phils_my_pharmacist": {
           "type": "media_card",
           "settings": {
+            "image": "shopify://shop_images/phils-my-pharmacist.png",
             "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/phils-my-pharmacist.png?v=1785622067",
             "alt": "Video thumbnail",
-            "is_video": true,
-            "image": "shopify://shop_images/phils-my-pharmacist.png"
+            "is_video": true
           }
         },
         "media_womens_reviews": {
           "type": "media_card",
           "settings": {
+            "image": "shopify://shop_images/Womens_daily_supercharge_ugc.png",
             "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Womens_daily_supercharge_ugc.png?v=1785622067",
             "alt": "Collage of Women Reviews",
-            "is_video": false,
-            "image": "shopify://shop_images/Womens_daily_supercharge_ugc.png"
+            "is_video": false
           }
         },
         "customer_diana": {
           "type": "customer_card",
           "settings": {
+            "avatar": "shopify://shop_images/ugc-4.png",
             "avatar_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/ugc-4.png?v=1785622068",
             "quote": "<p>\"These are the best tasting vitamins I ever purchased. It feels like I am having a treat. These are the only ones so far that my kids like too.\"</p>",
             "name": "Diana V.",
-            "caption": "Verified Purchaser",
-            "avatar": "shopify://shop_images/ugc-4.png"
+            "caption": "Verified Purchaser"
           }
         },
         "media_review_woman": {
           "type": "media_card",
           "settings": {
+            "image": "shopify://shop_images/review-woman.png",
             "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/review-woman.png?v=1785622068",
             "alt": "Video thumbnail",
-            "is_video": true,
-            "image": "shopify://shop_images/review-woman.png"
+            "is_video": true
           }
         },
         "press_yahoo_finance": {
@@ -609,27 +611,27 @@
           "settings": {
             "quote": "\"A revolutionary approach to children's health.\"",
             "label": "As seen on",
-            "logo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png?v=1785622068",
-            "logo": "shopify://shop_images/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png"
+            "logo": "shopify://shop_images/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png",
+            "logo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png?v=1785622068"
           }
         },
         "doctor_ed_giovannucci": {
           "type": "doctor_card",
           "settings": {
+            "photo": "shopify://shop_images/dr-harvard-ed-medical-board.jpg",
             "photo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/dr-harvard-ed-medical-board.jpg?v=1785622069",
             "quote": "<p>\"We choose partners carefully, and First Day’s dedication to research, formulation integrity, and transparent quality practices makes them a brand we’re proud to align with.\"</p>",
             "name": "Dr. Ed Giovannucci",
-            "credentials": "MD, MPH, ScD at Harvard University",
-            "photo": "shopify://shop_images/dr-harvard-ed-medical-board.jpg"
+            "credentials": "MD, MPH, ScD at Harvard University"
           }
         },
         "media_review_woman_2": {
           "type": "media_card",
           "settings": {
+            "image": "shopify://shop_images/review-woman-2.png",
             "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/review-woman-2.png?v=1785622070",
             "alt": "Video thumbnail",
-            "is_video": true,
-            "image": "shopify://shop_images/review-woman-2.png"
+            "is_video": true
           }
         },
         "stat_95": {
@@ -667,85 +669,76 @@
         "stat_95",
         "stat_82",
         "stat_97"
-      ]
+      ],
+      "settings": {
+        "heading": "Life Changing Results from <strong>Doctors</strong> and <strong>Real Customers</strong>",
+        "color_scheme": "scheme-1",
+        "anchor_id": "",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
     },
     "accordion_raising_bar": {
       "type": "lp-media-accordion",
-      "settings": {
-        "heading": "Raising the Bar on Your Child's Nutrition",
-        "show_media": true,
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/teens-multi-holding-tdk.jpg?v=1785622048",
-        "media_position": "left",
-        "first_open": true,
-        "exclusive": true,
-        "cta_label": "Start Today",
-        "cta_link": "#standalone-product-section",
-        "guarantee_text": "45-Day Money Back Guarantee",
-        "color_scheme": "scheme-1",
-        "padding_top": 48,
-        "padding_bottom": 48,
-        "anchor_id": "accordion_block_QpghhN",
-        "image": "shopify://shop_images/teens-multi-holding-tdk.jpg"
-      },
       "blocks": {
         "fights_hidden_hunger": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/icon-broccoli.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-broccoli.png?v=1785622047",
             "icon_alt": "",
             "title": "Fights Hidden Hunger",
-            "body": "<p>80% of children don't eat enough fruits and veggies, contributing to a nutrient deficiency known as hidden hunger. Our gummies fight hidden hunger with essential nutrients critical to development.</p>",
-            "icon": "shopify://shop_images/icon-broccoli.png"
+            "body": "<p>80% of children don't eat enough fruits and veggies, contributing to a nutrient deficiency known as hidden hunger. Our gummies fight hidden hunger with essential nutrients critical to development.</p>"
           }
         },
         "harvard_yale_scientists": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/old-icon-microscope.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/old-icon-microscope.png?v=1785622049",
             "icon_alt": "",
             "title": "Developed Alongside Harvard & Yale Scientists",
-            "body": "<p>Our product was crafted with input from leading scientists at Harvard and Yale, combining the latest research with high-quality ingredients to deliver a multivitamin parents can trust.</p>",
-            "icon": "shopify://shop_images/old-icon-microscope.png"
+            "body": "<p>Our product was crafted with input from leading scientists at Harvard and Yale, combining the latest research with high-quality ingredients to deliver a multivitamin parents can trust.</p>"
           }
         },
         "modern_science": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/old-icon-atom-chemistry.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/old-icon-atom-chemistry.png?v=1785622049",
             "icon_alt": "",
             "title": "Backed by Modern Science",
-            "body": "<p>Vitamin B6 supports natural energy regulation, promoting healthier sleep patterns and making it easier for kids to get restful sleep.*</p>",
-            "icon": "shopify://shop_images/old-icon-atom-chemistry.png"
+            "body": "<p>Vitamin B6 supports natural energy regulation, promoting healthier sleep patterns and making it easier for kids to get restful sleep.*</p>"
           }
         },
         "pediatrician_approved": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/old-icon-stethoscope.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/old-icon-stethoscope.png?v=1785622050",
             "icon_alt": "",
             "title": "Pediatrician-Approved",
-            "body": "<p>Recommended by pediatricians, our multivitamin is designed to meet the unique needs of your family ensuring they get the support they need from a trusted source.</p>",
-            "icon": "shopify://shop_images/old-icon-stethoscope.png"
+            "body": "<p>Recommended by pediatricians, our multivitamin is designed to meet the unique needs of your family ensuring they get the support they need from a trusted source.</p>"
           }
         },
         "clean_label": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/Rivo-Icon-Checkmark.svg",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Rivo-Icon-Checkmark.svg?v=1785622050",
             "icon_alt": "A blue circle with a white check mark in the center, surrounded by a scalloped edge, resembling a verification badge.",
             "title": "Clean Label Project® Purity Award",
-            "body": "<p>Our products were independently tested by Clean Label Project® for harmful chemicals like heavy metals, pesticides, and plasticizers, exceeding typical industry practices.</p>",
-            "icon": "shopify://shop_images/Rivo-Icon-Checkmark.svg"
+            "body": "<p>Our products were independently tested by Clean Label Project® for harmful chemicals like heavy metals, pesticides, and plasticizers, exceeding typical industry practices.</p>"
           }
         },
         "ingredients_sourcing": {
           "type": "item",
           "settings": {
+            "icon": "shopify://shop_images/icon-list-ingredients-sourcing.png",
             "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-list-ingredients-sourcing.png?v=1785622051",
             "icon_alt": "",
             "title": "Ingredients Sourcing and Dosage",
-            "body": "<p>We source each ingredient with care, choosing only the highest quality vitamins and minerals. Our dosage is tailored for teens, providing safe and effective support without risking overuse or unwanted additives.</p>",
-            "icon": "shopify://shop_images/icon-list-ingredients-sourcing.png"
+            "body": "<p>We source each ingredient with care, choosing only the highest quality vitamins and minerals. Our dosage is tailored for teens, providing safe and effective support without risking overuse or unwanted additives.</p>"
           }
         }
       },
@@ -756,26 +749,26 @@
         "pediatrician_approved",
         "clean_label",
         "ingredients_sourcing"
-      ]
-    },
-    "comparison_table": {
-      "type": "lp-comparison-table",
+      ],
       "settings": {
-        "heading": "Why Should You Choose First Day?",
-        "subheading": "<p>Made for modern families living on modern diets, we’re here to fill the nutrition gaps that today’s food often leaves behind.</p>",
-        "brand_label": "First Day",
-        "brand_logo": "shopify://shop_images/round_logo.png",
-        "brand_logo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/round_logo.png?v=1785622060",
-        "competitor_label": "Other Multis",
-        "image_desktop": "shopify://shop_images/desk_720.png",
-        "image_desktop_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/desk_720.png?v=1785622061",
-        "image_mobile": "shopify://shop_images/mob-left_360.png",
-        "image_mobile_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/mob-left_360.png?v=1785622061",
+        "heading": "Raising the Bar on Your Child's Nutrition",
+        "show_media": true,
+        "image": "shopify://shop_images/teens-multi-holding-tdk.jpg",
+        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/teens-multi-holding-tdk.jpg?v=1785622048",
+        "media_position": "left",
+        "first_open": true,
+        "exclusive": true,
+        "cta_label": "Start Today",
+        "cta_link": "#standalone-product-section",
+        "guarantee_text": "45-Day Money Back Guarantee",
         "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 48,
-        "anchor_id": ""
-      },
+        "anchor_id": "accordion_block_QpghhN"
+      }
+    },
+    "comparison_table": {
+      "type": "lp-comparison-table",
       "blocks": {
         "feature_clean_label": {
           "type": "feature_row",
@@ -824,22 +817,26 @@
         "feature_gift",
         "feature_no_fillers",
         "feature_vegan"
-      ]
-    },
-    "clinician_reviews": {
-      "type": "lp-clinician-reviews",
+      ],
       "settings": {
-        "heading": "Clinician Reviews",
-        "subheading": "Independent Clinician Evaluations",
-        "intro": "<p>Clinicians can receive product samples and are <em>never compensated</em> to submit evaluations.</p>",
-        "learn_more_label": "Learn more",
-        "footer_text": "Clinician reviews powered by frontrowMD",
-        "disclaimer": "<p>†This clinician wants to clarify that larger-scale research to support their product claims is still developing. These statements have not been reviewed by the FDA and are not intended to be medical advice.</p>",
+        "heading": "Why Should You Choose First Day?",
+        "subheading": "<p>Made for modern families living on modern diets, we’re here to fill the nutrition gaps that today’s food often leaves behind.</p>",
+        "brand_label": "First Day",
+        "brand_logo": "shopify://shop_images/round_logo.png",
+        "brand_logo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/round_logo.png?v=1785622060",
+        "competitor_label": "Other Multis",
+        "image_desktop": "shopify://shop_images/desk_720.png",
+        "image_desktop_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/desk_720.png?v=1785622061",
+        "image_mobile": "shopify://shop_images/mob-left_360.png",
+        "image_mobile_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/mob-left_360.png?v=1785622061",
         "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 48,
         "anchor_id": ""
-      },
+      }
+    },
+    "clinician_reviews": {
+      "type": "lp-clinician-reviews",
       "blocks": {
         "clinician_enza_caputo": {
           "type": "clinician_card",
@@ -871,24 +868,22 @@
       "block_order": [
         "clinician_enza_caputo",
         "clinician_andreas_nikolaidis"
-      ]
-    },
-    "reviews": {
-      "type": "lp-reviews",
+      ],
       "settings": {
-        "heading": "Customer Reviews",
-        "average_rating": "4.74",
-        "review_count": "1394",
-        "histogram_5": 87,
-        "histogram_4": 6,
-        "histogram_3": 2,
-        "histogram_2": 2,
-        "histogram_1": 3,
+        "heading": "Clinician Reviews",
+        "subheading": "Independent Clinician Evaluations",
+        "intro": "<p>Clinicians can receive product samples and are <em>never compensated</em> to submit evaluations.</p>",
+        "learn_more_label": "Learn more",
+        "footer_text": "Clinician reviews powered by frontrowMD",
+        "disclaimer": "<p>†This clinician wants to clarify that larger-scale research to support their product claims is still developing. These statements have not been reviewed by the FDA and are not intended to be medical advice.</p>",
         "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 48,
         "anchor_id": ""
-      },
+      }
+    },
+    "reviews": {
+      "type": "lp-reviews",
       "blocks": {
         "review_jackie_l": {
           "type": "review",
@@ -952,7 +947,21 @@
         "review_deborah_b",
         "review_thorne",
         "review_k_lee_a"
-      ]
+      ],
+      "settings": {
+        "heading": "Customer Reviews",
+        "average_rating": "4.74",
+        "review_count": "1394",
+        "histogram_5": 87,
+        "histogram_4": 6,
+        "histogram_3": 2,
+        "histogram_2": 2,
+        "histogram_1": 3,
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "anchor_id": ""
+      }
     },
     "hero_closer": {
       "type": "lp-hero",
@@ -964,19 +973,18 @@
         "closing_text_2": "<p>That's why we’re so confident First Day will help you get the results you want. If within the first 45 days you find yourself not completely satisfied, we’ll give you your money back - no questions asked.</p>",
         "cta_label": "Try Now",
         "cta_link": "#standalone-product-section",
+        "image": "shopify://shop_images/founder-alice.png",
         "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/founder-alice.png?v=1785622062",
         "image_alt": "Hero image",
+        "image_mobile": "shopify://shop_images/founder-alice_14c6e35b-382f-42de-95ef-2376518ef595.png",
         "image_mobile_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/founder-alice_14c6e35b-382f-42de-95ef-2376518ef595.png?v=1785622062",
         "image_mobile_alt": "Hero image",
         "image_position": "right",
+        "highlight_color": "#e53e3e",
         "color_scheme": "scheme-1",
         "padding_top": 32,
         "padding_bottom": 32,
-        "anchor_id": "",
-        "image": "shopify://shop_images/founder-alice.png",
-        "image_mobile": "shopify://shop_images/founder-alice_14c6e35b-382f-42de-95ef-2376518ef595.png",
-        "highlight_color": "#e53e3e",
-        "highlights": "<ul><li>The Average Person Consumes <strong>52 Credit Cards’</strong> Worth Of <strong>Microplastics</strong> Every Year. </li><li> <strong>Artificial Food Additives</strong> Are Found In <strong>59%</strong> Of Foods Today</li><li>Fresh Fruits &amp; Veggies Have <strong>Lost Up To 73%</strong> Of Their <strong>Nutrients</strong></li></ul>"
+        "anchor_id": ""
       }
     }
   },
