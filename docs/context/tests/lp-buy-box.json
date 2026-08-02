@@ -1,0 +1,22 @@
+{
+ "section": "lp-buy-box",
+ "notes": "The main PDP-style buy box: 11-image gallery with thumbnails, 3 age-group product tabs (Teens' active), title/rating, 3 benefit accordions with stat copy hidden inside closed <details>, delivery + quantity selectors with preselected defaults (Monthly, 2 Bottles — the original's cart summary prices '(2x)'), gift progress, 3 upsells, 3 info accordions and age crosslink cards. Easy to miss: the checked defaults, the accordion copy that body innerText never shows, and that description/flavor/ages copy resolves from product metafields — if seeding failed the section renders but silently drops that copy.",
+ "assertions": [
+  {"id": "product-tabs-count", "type": "count", "selector": ".lp-buy-box__product-tab", "equals": 3, "why": "Original has exactly three age-group tabs above the title: Toddlers', Kids', Teens'."},
+  {"id": "teens-tab-active", "type": "exists", "selector": ".lp-buy-box__product-tab[aria-current=\"page\"][data-product-handle=\"teens-multivitamin\"]", "min": 1, "why": "The Teens' tab must be marked active and carry the product handle that powers in-place buy-box swapping."},
+  {"id": "title-copy", "type": "text", "selector": "body", "contains": "The \"No Junk\"™ Teens’ Multi", "why": "Product title byte-for-byte, including the ™ glyph and the typographic apostrophe a retype would lose."},
+  {"id": "reviews-copy", "type": "text", "selector": "body", "contains": "1394 reviews", "why": "The rating row must show the original review count."},
+  {"id": "metafield-description", "type": "text", "selector": "body", "contains": "A unique organic fruit and veggie blend, plus 12 key nutrients.", "why": "Description comes from product metafield custom.short_description (the section setting is intentionally empty) — catches a missing metafield seed."},
+  {"id": "metafield-flavor", "type": "text", "selector": "body", "contains": "Flavor: 🍊 Orange", "why": "Flavor line comes from metafield custom.flavor and includes the orange emoji the original renders."},
+  {"id": "benefit-accordions-count", "type": "count", "selector": ".lp-buy-box__benefit", "equals": 3, "why": "Original has exactly three benefit accordions: Health & Nutrition, Mood & Motivation, Clear Skin."},
+  {"id": "benefit-hidden-copy", "type": "text", "selector": ".lp-buy-box__benefit-content", "contains": "of parents say First Day vitamins support their teen's overall health & nutrition.†", "why": "The 98% stat copy lives inside a closed <details> — a screenshot and body innerText both miss it, so assert on the element itself."},
+  {"id": "qty-tiers-count", "type": "count", "selector": "input[data-quantity-radio]", "equals": 4, "why": "Original offers exactly four quantity tiers (1–4 bottles)."},
+  {"id": "qty-default-two-bottles", "type": "exists", "selector": "input[data-quantity-radio][value=\"2\"]:checked", "min": 1, "why": "The original preselects 2 Bottles — its cart summary prices the multi '(2x)'. A screenshot can't prove which radio is checked."},
+  {"id": "one-time-code-copy", "type": "text", "selector": "body", "contains": "with code FIREWORKS", "why": "The One-Time option's promo-code note is distinctive copy that is easy to drop when rebuilding the delivery selector."},
+  {"id": "gallery-thumbnails", "type": "exists", "selector": ".lp-buy-box__thumbnail", "min": 11, "why": "The original gallery has 11 media (main hero plus 10 more) each reachable via a thumbnail button."},
+  {"id": "upsells-count", "type": "count", "selector": ".lp-buy-box__upsell", "equals": 3, "why": "Original shows exactly three upsell cards: Focus Brain Support, Nighttime Reset Magnesium, 3-in-1 Probiotic."},
+  {"id": "ingredients-hidden-copy", "type": "text", "selector": ".lp-buy-box__info-richtext", "contains": "Organic Superfood Blend: Apple, Kale, Broccoli, Spinach, Carrot, Parsley, Beet, Green Cabbage, Raspberry, Blueberry, Strawberry, Tomato, Aronia Berry, Chlorella, Maca, Moringa, Reishi Mushroom, Cordyceps Mushroom, Lion's Mane Mushroom, Turmeric, Ginger", "why": "The full superfood list sits inside the closed Ingredients accordion; asserting the whole list catches truncated rich text."},
+  {"id": "no-horizontal-overflow", "type": "no-horizontal-overflow", "why": "The 4-tier quantity grid, thumbnail strip and delivery cards are the widest content on the page — none may overflow at 390px."},
+  {"id": "no-broken-links", "type": "no-broken-links", "why": "Product tabs and age crosslink cards link to sibling LP pages; every relative href must resolve 200."}
+ ]
+}

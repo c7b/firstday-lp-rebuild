@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "hero_opener": {
@@ -984,42 +975,9 @@
         "anchor_id": "",
         "image": "shopify://shop_images/founder-alice.png",
         "image_mobile": "shopify://shop_images/founder-alice_14c6e35b-382f-42de-95ef-2376518ef595.png",
-        "highlight_color": "#e53e3e"
-      },
-      "blocks": {
-        "stat_microplastics": {
-          "type": "stat_card",
-          "settings": {
-            "line_1": "The Average Person Consumes",
-            "value": "52 Credit Cards’",
-            "line_2": "Worth Of",
-            "line_3": "Microplastics Every Year."
-          }
-        },
-        "stat_additives": {
-          "type": "stat_card",
-          "settings": {
-            "line_1": "Artificial Food Additives",
-            "value": "59%",
-            "line_2": "Are Found In",
-            "line_3": "Of Foods Today"
-          }
-        },
-        "stat_nutrients": {
-          "type": "stat_card",
-          "settings": {
-            "line_1": "Fresh Fruits & Veggies Have",
-            "value": "Lost Up To 73%",
-            "line_2": "Of Their",
-            "line_3": "Nutrients"
-          }
-        }
-      },
-      "block_order": [
-        "stat_microplastics",
-        "stat_additives",
-        "stat_nutrients"
-      ]
+        "highlight_color": "#e53e3e",
+        "highlights": "<ul><li>The Average Person Consumes <strong>52 Credit Cards’</strong> Worth Of <strong>Microplastics</strong> Every Year. </li><li> <strong>Artificial Food Additives</strong> Are Found In <strong>59%</strong> Of Foods Today</li><li>Fresh Fruits &amp; Veggies Have <strong>Lost Up To 73%</strong> Of Their <strong>Nutrients</strong></li></ul>"
+      }
     }
   },
   "order": [

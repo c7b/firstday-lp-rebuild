@@ -1,0 +1,116 @@
+{
+  "section": "lp-hero",
+  "notes": "One section type renders both replaced originals: the product opener (5-star review badge, teen-vitamin H1, subheading, anchor CTA, guarantee line, animated sales badge with 3 images, Alyssa testimonial card) and the founder closer (deficiency headline, three stat cards, Try Now CTA). Easy to miss: the original duplicated desktop+mobile DOM, so the rebuild's single responsive DOM must show exactly 2 CTAs page-wide (not 4), both pure anchors to #standalone-product-section which must exist for clicks to do anything; and the founder stats are sentences with a strict reading order — 'Are Found In' precedes '59%' — that a value-first card layout silently garbles. No videos and no path links in this section, so video-playing and no-broken-links are intentionally omitted in favor of the anchor-target check.",
+  "assertions": [
+    {
+      "id": "two-ctas-deep-link-to-buy-box",
+      "type": "count",
+      "selector": ".lp-hero__cta[href=\"#standalone-product-section\"]",
+      "equals": 2,
+      "why": "Both original heroes' CTAs link to #standalone-product-section (extraction a-open nodes); exactly one CTA per hero instance in the responsive DOM — 0/1 means a hero is missing, >2 means duplicated instances or leftover desktop+mobile DOM."
+    },
+    {
+      "id": "cta-anchor-target-exists",
+      "type": "exists",
+      "selector": "#standalone-product-section",
+      "min": 1,
+      "why": "Behaviour: clicking either hero CTA must scroll to the buy box. no-broken-links never checks # anchors, so without this the CTAs could be silent no-ops that look perfect in a screenshot."
+    },
+    {
+      "id": "five-review-stars-in-product-badge",
+      "type": "count",
+      "selector": ".lp-hero__section--product .lp-hero__stars svg",
+      "equals": 5,
+      "why": "The original review badge draws 5 star icons; a screenshot won't count them. Scoping to --product also proves the opener instance uses the product style (the founder hero has no badge)."
+    },
+    {
+      "id": "review-badge-copy",
+      "type": "text",
+      "selector": "body",
+      "contains": "4.8 stars from 12,322+ reviewers",
+      "why": "Trust-badge copy byte-for-byte from the extraction (seq 44), including the comma-formatted count and the plus sign."
+    },
+    {
+      "id": "product-headline-is-h1-with-copy",
+      "type": "text",
+      "selector": "h1.lp-hero__heading",
+      "contains": "The Science-Backed Vitamin for Grumpy, Tired, or Unfocused Teens",
+      "why": "The opener headline must be an H1 (only the product hero uses H1) and carry the three extraction fragments (seq 47-49) joined in original order, including the highlighted middle span's text."
+    },
+    {
+      "id": "product-subheading-copy",
+      "type": "text",
+      "selector": "body",
+      "contains": "The only bio-matched multivitamin formulated specifically for teenagers with 12 nutrients & 21 superfoods to support mood regulation, immunity, and growing bones.",
+      "why": "Full subheading sentence assembled from extraction seq 54-56 in order, including the literal ampersand and the exact nutrient/superfood counts."
+    },
+    {
+      "id": "product-cta-copy-with-emoji",
+      "type": "text",
+      "selector": "body",
+      "contains": "Unlock Better Nutrition 🍊💊",
+      "why": "CTA label byte-for-byte from the extraction (seq 63) — the two emoji are the first thing a retyped label or encoding bug drops."
+    },
+    {
+      "id": "guarantee-copy-with-double-asterisk",
+      "type": "text",
+      "selector": "body",
+      "contains": "Exclusive First Day 45 Day Money Back Guarantee**",
+      "why": "Guarantee line under the product CTA (seq 79) including the trailing double asterisk that ties to the page's fine print."
+    },
+    {
+      "id": "sales-badge-copy",
+      "type": "text",
+      "selector": "body",
+      "contains": "6,646 Gummies Sold Every 24h",
+      "why": "Social-proof sales badge copy assembled byte-for-byte from extraction seq 90-91 (bold count + plain suffix read as one phrase)."
+    },
+    {
+      "id": "sales-badge-three-images",
+      "type": "count",
+      "selector": ".lp-hero__section--product .lp-hero__stat-badge img",
+      "equals": 3,
+      "why": "The original badge carries an animated GIF plus two overlapping gummy icons (3 img nodes in the extraction) — small decorations a compressed screenshot hides and a sizing bug can blow up full-width."
+    },
+    {
+      "id": "testimonial-quote-and-author",
+      "type": "text",
+      "selector": ".lp-hero__testimonial",
+      "contains": "My son is VERY picky but gets so excited to eat these. I unfortunately tried hiya first & wasted money because he would not eat them. I love that these are a gummy soft chewable. Alyssa Blossom",
+      "why": "Full testimonial quote byte-for-byte from the extraction (seq 108) immediately followed by the author name (seq 114) inside the same card — proves quote, attribution, and their order in one check."
+    },
+    {
+      "id": "founder-headline-copy",
+      "type": "text",
+      "selector": "body",
+      "contains": "1 in 3 Families Have A Nutrient Deficiency.",
+      "why": "Founder-closer headline byte-for-byte from the second original (seq 45) — proves the second instance carries its own content, not a copy of the first."
+    },
+    {
+      "id": "three-founder-stat-cards",
+      "type": "count",
+      "selector": ".lp-hero__section--founder .lp-hero__stat-card",
+      "equals": 3,
+      "why": "The original founder hero lists exactly 3 statistics (microplastics / additives / lost nutrients); the scoped selector also proves the closer instance uses the founder style."
+    },
+    {
+      "id": "microplastics-stat-reading-order",
+      "type": "text",
+      "selector": "body",
+      "contains": "The Average Person Consumes 52 Credit Cards’ Worth Of Microplastics Every Year.",
+      "why": "First stat sentence assembled from extraction seq 52-56 in order — the curly apostrophe in Cards’ (U+2019) is byte-for-byte and exactly what retyping silently loses."
+    },
+    {
+      "id": "additives-stat-reading-order",
+      "type": "text",
+      "selector": "body",
+      "contains": "Artificial Food Additives Are Found In 59% Of Foods Today",
+      "why": "The original bullet reads plain/highlight interleaved in THIS order (seq 59-62): 'Are Found In' before '59%'. A card layout that always renders the highlighted value second garbles the sentence — the sequence must be contiguous in the rendered text."
+    },
+    {
+      "id": "no-horizontal-overflow-390",
+      "type": "no-horizontal-overflow",
+      "why": "The hero image, pill CTA with emoji, sales badge, and 3-card stat row are the likely 390px overflow culprits; the original keeps both hero instances inside the viewport."
+    }
+  ]
+}

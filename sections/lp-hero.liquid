@@ -35,6 +35,9 @@
         {% if section.settings.subheading != blank %}
           <div class="lp-hero__subheading rte">{{ section.settings.subheading }}</div>
         {% endif %}
+        {% if section.settings.highlights != blank %}
+          <div class="lp-hero__highlights rte">{{ section.settings.highlights }}</div>
+        {% endif %}
         {% if section.blocks.size > 0 %}
           <div class="lp-hero__stats">
             {% for block in section.blocks %}
