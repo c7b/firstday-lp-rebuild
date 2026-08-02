@@ -321,3 +321,8 @@
     padding: 3rem;
   }
 }
+
+.lp-clinician-reviews__powered-brand {
+  font-weight: 700;
+  letter-spacing: .01em;
+}

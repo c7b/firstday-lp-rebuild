@@ -172,11 +172,11 @@ class LpBuyBox extends HTMLElement {
     if (currentThumb) currentThumb.scrollIntoView({ block: 'nearest', inline: 'nearest' });
   }
 
-  updateQuantitySavings(delivery) {
-    const key = delivery === 'one-time' ? 'oneTimeSavings' : 'subscriptionSavings';
-    this.querySelectorAll('[data-quantity-savings]').forEach((label) => {
-      if (label.dataset[key]) label.textContent = label.dataset[key];
-    });
+  updateQuantitySavings() {
+    // Intentionally a no-op. The savings figures are transplanted from the original page,
+    // which shows them for the subscription offer. A one-time equivalent would have to be
+    // COMPUTED, i.e. invented — and invented prices are the one thing a rebuild must never
+    // ship. Real per-plan pricing arrives with the selling plans (see docs/PLAN.md).
   }
 }
 

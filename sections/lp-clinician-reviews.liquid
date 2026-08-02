@@ -117,7 +117,14 @@
 
     <footer class="lp-clinician-reviews__footer">
       {% if section.settings.footer_text != blank %}
-        <p class="lp-clinician-reviews__powered-by">{{ section.settings.footer_text | escape }}</p>
+        <p class="lp-clinician-reviews__powered-by">
+          {{ section.settings.footer_text | escape }}
+          {%- if section.settings.footer_brand != blank %}
+            {%- comment -%} the original shows the vendor's wordmark as a logo image; we render
+            the name as text rather than re-hosting their brand asset {%- endcomment -%}
+            <span class="lp-clinician-reviews__powered-brand">{{ section.settings.footer_brand | escape }}</span>
+          {%- endif -%}
+        </p>
       {% endif %}
       {% if section.settings.disclaimer != blank %}
         <div id="LpClinicianDisclaimer-{{ section.id }}" class="lp-clinician-reviews__disclaimer rte">{{ section.settings.disclaimer }}</div>
@@ -161,6 +168,12 @@
       "id": "footer_text",
       "label": "Footer text",
       "default": "Clinician reviews powered by frontrowMD"
+    },
+    {
+      "type": "text",
+      "id": "footer_brand",
+      "label": "Vendor wordmark",
+      "default": "frontrowMD"
     },
     {
       "type": "richtext",

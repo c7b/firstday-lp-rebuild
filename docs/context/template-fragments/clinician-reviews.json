@@ -5,12 +5,13 @@
     "subheading": "Independent Clinician Evaluations",
     "intro": "<p>Clinicians can receive product samples and are <em>never compensated</em> to submit evaluations.</p>",
     "learn_more_label": "Learn more",
-    "footer_text": "Clinician reviews powered by frontrowMD",
+    "footer_text": "Clinician reviews powered by",
     "disclaimer": "<p>†This clinician wants to clarify that larger-scale research to support their product claims is still developing. These statements have not been reviewed by the FDA and are not intended to be medical advice.</p>",
     "color_scheme": "scheme-1",
     "padding_top": 48,
     "padding_bottom": 48,
-    "anchor_id": ""
+    "anchor_id": "",
+    "footer_brand": "frontrowMD"
   },
   "blocks": {
     "clinician_enza_caputo": {

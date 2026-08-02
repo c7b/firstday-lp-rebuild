@@ -19,7 +19,8 @@ FRAG = ROOT / "docs" / "context" / "template-fragments"
 CTX = ROOT / "docs" / "context" / "sections"
 
 EXEMPT_KEYS = {"cta_link", "color_scheme", "anchor_id", "url", "video_url", "poster_url",
-               "media_position", "image_position", "style", "product", "claims"}
+               "media_position", "image_position", "style", "product", "claims",
+               "highlight_color", "video_label", "footer_brand"}
 URLISH = re.compile(r"^(gid://|https?:|//|/)|\.(png|jpg|jpeg|gif|webp|avif|svg|mp4|css|js)(\?|$)")
 
 
@@ -54,6 +55,19 @@ def corpus_for(section_type):
                 parts.append(str(data[k]))
         parts.extend(data.get("text_lines", []))
     return norm(" ".join(parts))
+
+
+def squash(s):
+    """Whitespace-free form: the original's text arrives as separate DOM nodes, so a string
+    that spans two of them differs only in the space we inserted when joining."""
+    return re.sub(r"[\s\u200e\u00a0]+", "", s)
+
+
+def rich_chunks(val):
+    """Rich text spans several extracted nodes; compare block by block, not as one blob."""
+    parts = re.split(r"</(?:p|li|h[1-6])>", val)
+    chunks = [norm(p) for p in parts]
+    return [c for c in chunks if len(c) >= 4] or ([norm(val)] if len(norm(val)) >= 4 else [])
 
 
 def iter_strings(obj, path=""):
@@ -121,8 +135,9 @@ def main():
             key = path.rsplit(".", 1)[-1].split("[")[0]
             if key in EXEMPT_KEYS or URLISH.search(val) or len(norm(val)) < 4:
                 continue
-            if norm(val) not in haystack:
-                warns.append(f"fragments/{f.name}: settings.{path} text not found in extraction: {val[:60]!r}")
+            missing = [c for c in rich_chunks(val) if c not in haystack and squash(c) not in squash(haystack)]
+            if missing:
+                warns.append(f"fragments/{f.name}: settings.{path} text not found in extraction: {missing[0][:60]!r}")
         for bid, block in frag.get("blocks", {}).items():
             if not isinstance(block, dict):
                 continue
@@ -130,8 +145,9 @@ def main():
                 key = path.rsplit(".", 1)[-1].split("[")[0]
                 if key in EXEMPT_KEYS or URLISH.search(val) or len(norm(val)) < 4:
                     continue
-                if norm(val) not in haystack:
-                    warns.append(f"fragments/{f.name}: blocks.{bid}.{path} not found in extraction: {val[:60]!r}")
+                missing = [c for c in rich_chunks(val) if c not in haystack and squash(c) not in squash(haystack)]
+                if missing:
+                    warns.append(f"fragments/{f.name}: blocks.{bid}.{path} not found in extraction: {missing[0][:60]!r}")
 
     print(f"sections with valid schema: {len(schemas)}/{len(list(SEC.glob('lp-*.liquid')))}")
     for x in fails:

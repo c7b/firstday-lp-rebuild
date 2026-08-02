@@ -450,7 +450,6 @@
                           class="lp-buy-box__savings"
                           data-quantity-savings
                           data-subscription-savings="{{ block.settings.savings | escape }}"
-                          data-one-time-savings="{{ block.settings.one_time_savings | default: block.settings.savings | escape }}"
                         >{{ block.settings.savings | escape }}</span>
                       {% endif %}
                     </label>
@@ -996,11 +995,6 @@
           "type": "text",
           "id": "savings",
           "label": "Savings"
-        },
-        {
-          "type": "text",
-          "id": "one_time_savings",
-          "label": "One-time savings"
         },
         {
           "type": "checkbox",

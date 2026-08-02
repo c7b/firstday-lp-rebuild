@@ -276,7 +276,6 @@
           "settings": {
             "label": "1‎ Bottle",
             "savings": "Save $15.80",
-            "one_time_savings": "Save $11.70",
             "selected": false
           }
         },
@@ -285,7 +284,6 @@
           "settings": {
             "label": "2‎ Bottles",
             "savings": "Save $31.59",
-            "one_time_savings": "Save $23.40",
             "selected": true
           }
         },
@@ -294,7 +292,6 @@
           "settings": {
             "label": "3‎ Bottles",
             "savings": "Save $47.39",
-            "one_time_savings": "Save $35.10",
             "selected": false
           }
         },
@@ -303,7 +300,6 @@
           "settings": {
             "label": "4‎ Bottles",
             "savings": "Save $63.18",
-            "one_time_savings": "Save $46.80",
             "selected": false
           }
         },
@@ -357,8 +353,8 @@
           "settings": {
             "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/image_18_23f2a83f-a228-4c73-be70-3ac38b5837dd.png?v=1785627108",
             "alt": "1 million customers",
-            "line_1": "1,000,000+",
-            "line_2": "HAPPY FAMILIES"
+            "line_1": "1 million",
+            "line_2": "customers"
           }
         },
         "stamp_checkout": {
@@ -849,12 +845,13 @@
         "subheading": "Independent Clinician Evaluations",
         "intro": "<p>Clinicians can receive product samples and are <em>never compensated</em> to submit evaluations.</p>",
         "learn_more_label": "Learn more",
-        "footer_text": "Clinician reviews powered by frontrowMD",
+        "footer_text": "Clinician reviews powered by",
         "disclaimer": "<p>†This clinician wants to clarify that larger-scale research to support their product claims is still developing. These statements have not been reviewed by the FDA and are not intended to be medical advice.</p>",
         "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 48,
-        "anchor_id": ""
+        "anchor_id": "",
+        "footer_brand": "frontrowMD"
       },
       "blocks": {
         "clinician_enza_caputo": {
