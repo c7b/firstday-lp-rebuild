@@ -1,0 +1,115 @@
+{
+  "section": "lp-science-tabs",
+  "notes": "Four-tab science module: a pill tab bar (Focus in Class / Boosted Energy / Balanced Moods / Clear Skin) switches panels that each hold a looping square autoplay video with a poster frame, a 'How This Helps*' heading, an intro paragraph, and exactly three emoji-led nutrient bullets. Easy to miss: only one panel is un-hidden at a time, so hidden-panel content is invisible to innerText and must be asserted via DOM counts (12 bullet paragraphs across 4 panels), and the videos are decorative muted loops that must actually be running, not just present with a poster. The section contains no anchor links, so link checks are intentionally omitted.",
+  "assertions": [
+    {
+      "id": "tablist-inside-custom-element",
+      "type": "exists",
+      "selector": "lp-science-tabs .lp-science-tabs__tab-list[role=\"tablist\"]",
+      "min": 1,
+      "why": "The rebuild hangs all behaviour off the <lp-science-tabs> custom element; the ARIA tablist must exist inside it or the JS never wires the tabs."
+    },
+    {
+      "id": "four-tabs",
+      "type": "count",
+      "selector": ".lp-science-tabs__tab[role=\"tab\"]",
+      "equals": 4,
+      "why": "The original has exactly 4 tab buttons; scoped to this section's class so the page's other tab UIs (age tabs) can't satisfy it."
+    },
+    {
+      "id": "four-panels",
+      "type": "count",
+      "selector": ".lp-science-tabs__panel[role=\"tabpanel\"]",
+      "equals": 4,
+      "why": "One tabpanel per claim must be rendered in the DOM even though three are hidden — a screenshot only ever shows one."
+    },
+    {
+      "id": "exactly-one-visible-panel",
+      "type": "count",
+      "selector": ".lp-science-tabs__panel:not([hidden])",
+      "equals": 1,
+      "why": "Tab behaviour: exactly one panel un-hidden at a time. 0 means the JS hid everything; >1 means panels stack instead of switching."
+    },
+    {
+      "id": "exactly-one-selected-tab",
+      "type": "count",
+      "selector": ".lp-science-tabs__tab[aria-selected=\"true\"]",
+      "equals": 1,
+      "why": "The active-pill state must be unique; the JS sets aria-selected which also drives the active styling."
+    },
+    {
+      "id": "four-videos",
+      "type": "count",
+      "selector": ".lp-science-tabs__video",
+      "equals": 4,
+      "why": "Every panel in the original carries its own video (4 distinct preview posters in the extraction), including the hidden ones."
+    },
+    {
+      "id": "videos-are-muted-looping-with-poster",
+      "type": "count",
+      "selector": ".lp-science-tabs__video[muted][playsinline][loop][poster]",
+      "equals": 4,
+      "why": "The originals are decorative muted inline loops with a poster frame; missing any of these attributes breaks autoplay or shows a black box before load."
+    },
+    {
+      "id": "heading-copy",
+      "type": "text",
+      "selector": "body",
+      "contains": "The Science Behind Our Multivitamin",
+      "why": "Section heading, byte-for-byte from the extraction."
+    },
+    {
+      "id": "tab-labels-in-original-order",
+      "type": "text",
+      "selector": ".lp-science-tabs__tab-list",
+      "contains": "Focus in Class Boosted Energy Balanced Moods Clear Skin",
+      "why": "All four tab labels present and in the original order (extraction seq 10, 14, 18, 22); whitespace-normalized innerText of the tab bar must match this sequence."
+    },
+    {
+      "id": "panel-title-copy",
+      "type": "text",
+      "selector": "body",
+      "contains": "How This Helps*",
+      "why": "Every panel's h3 title including the trailing asterisk that ties to the supplement disclaimer; the visible panel must show it."
+    },
+    {
+      "id": "focus-intro-copy",
+      "type": "text",
+      "selector": "body",
+      "contains": "Low levels of certain B vitamins can affect brain function and attention. During busy school days, this can make it harder to concentrate, stay sharp, or process new info.",
+      "why": "Full intro paragraph of the default (Focus in Class) panel, byte-for-byte from the extraction."
+    },
+    {
+      "id": "focus-bullet-b1-with-emoji",
+      "type": "text",
+      "selector": "body",
+      "contains": "🧠 Vitamin B1 supports brain signaling and memory.",
+      "why": "First nutrient bullet of the default panel including its emoji icon — screenshots and plain-copy checks routinely drop the emoji."
+    },
+    {
+      "id": "focus-bullet-b6-with-emoji",
+      "type": "text",
+      "selector": "body",
+      "contains": "🧬 Vitamin B6 plays a role in neurotransmitter production.",
+      "why": "Third bullet of the default panel with its emoji, proving the whole bullet list rendered, not just the first line."
+    },
+    {
+      "id": "twelve-bullets-across-all-panels",
+      "type": "count",
+      "selector": ".lp-science-tabs__benefits p",
+      "equals": 12,
+      "why": "4 panels x 3 nutrient bullets. Hidden panels contribute no innerText, so this DOM count is the only way to catch a hidden panel with missing or truncated bullets."
+    },
+    {
+      "id": "active-panel-video-playing",
+      "type": "video-playing",
+      "selector": ".lp-science-tabs__panel:not([hidden]) video.lp-science-tabs__video",
+      "why": "The original's videos self-run; the visible panel's video must actually be advancing (not paused on its poster), which no screenshot can prove."
+    },
+    {
+      "id": "no-horizontal-overflow-390",
+      "type": "no-horizontal-overflow",
+      "why": "Four pill tabs plus a 1:1 media card are the likely overflow culprits at 390px; the original keeps everything inside the viewport."
+    }
+  ]
+}
