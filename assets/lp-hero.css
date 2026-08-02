@@ -333,7 +333,7 @@
 
 /* founder layout: the original renders these stats as a bulleted rich-text list with the
    emphasised words in the highlight colour — not as separate cards */
-.lp-hero__highlights ul {
+.lp-hero__highlights {
   margin: 1.2rem 0 0;
   padding-left: 2rem;
   list-style: disc;

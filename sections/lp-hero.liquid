@@ -35,22 +35,20 @@
         {% if section.settings.subheading != blank %}
           <div class="lp-hero__subheading rte">{{ section.settings.subheading }}</div>
         {% endif %}
-        {% if section.settings.highlights != blank %}
-          <div class="lp-hero__highlights rte">{{ section.settings.highlights }}</div>
-        {% endif %}
-        {% if section.blocks.size > 0 %}
-          <div class="lp-hero__stats">
+        {% assign highlight_count = 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'highlight' %}
+            {% assign highlight_count = highlight_count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+        {% if highlight_count > 0 %}
+          <ul class="lp-hero__highlights">
             {% for block in section.blocks %}
-              {% if block.type == 'stat_card' %}
-                <article class="lp-hero__stat-card" {{ block.shopify_attributes }}>
-                  {% if block.settings.line_1 != blank %}<p>{{ block.settings.line_1 | escape }}</p>{% endif %}
-                  {% if block.settings.value != blank %}<strong>{{ block.settings.value | escape }}</strong>{% endif %}
-                  {% if block.settings.line_2 != blank %}<p>{{ block.settings.line_2 | escape }}</p>{% endif %}
-                  {% if block.settings.line_3 != blank %}<p>{{ block.settings.line_3 | escape }}</p>{% endif %}
-                </article>
+              {% if block.type == 'highlight' %}
+                <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
               {% endif %}
             {% endfor %}
-          </div>
+          </ul>
         {% endif %}
         {% if section.settings.closing_text != blank %}
           <div class="lp-hero__closing rte">{{ section.settings.closing_text }}</div>
@@ -164,13 +162,6 @@
       "id": "subheading",
       "label": "Subheading",
       "default": "<p>The only bio-matched multivitamin <strong>formulated specifically for teenagers</strong> with 12 nutrients &amp; 21 superfoods to support mood regulation, immunity, and growing bones.</p>"
-    },
-    {
-      "type": "richtext",
-      "id": "highlights",
-      "label": "Highlight list",
-      "info": "Founder layout: the bulleted statistics. Bold text uses the highlight color.",
-      "visible_if": "{{ section.settings.style == 'founder' }}"
     },
     {
       "type": "richtext",
@@ -345,6 +336,18 @@
           "type": "text",
           "id": "avatar_url",
           "label": "Avatar URL"
+        }
+      ]
+    },
+    {
+      "type": "highlight",
+      "name": "Founder highlight",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "label": "Text"
         }
       ]
     }
