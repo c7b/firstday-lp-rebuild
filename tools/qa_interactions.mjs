@@ -11,6 +11,7 @@
  * Usage:
  *   node tools/qa_interactions.mjs                     # audit, writes docs/receipts/interaction-audit.md
  *   node tools/qa_interactions.mjs --tests <file.json> # run assertions, exit 1 on failure, prints JSON
+ *   node tools/qa_interactions.mjs --tests <file.json> --refresh-sections hero_opener,hero_closer
  *
  * Env: SHOPIFY_FLAG_STORE, STOREFRONT_PASSWORD (from ../.env)
  */
@@ -23,10 +24,14 @@ const PASSWORD = process.env.STOREFRONT_PASSWORD;
 const CHROME = process.env.CHROME_PATH || '/home/lcam/.cache/ms-playwright/chromium-1217/chrome-linux64/chrome';
 const PAGE_PATH = process.env.QA_PAGE || '/pages/tdk-behind-the-science-lp';
 const BASE = `https://${STORE}.myshopify.com`;
+const PAGE_URL = new URL(PAGE_PATH, BASE);
+PAGE_URL.searchParams.set('_qa', Date.now().toString());
 
 const argv = process.argv.slice(2);
 const testsFlag = argv.indexOf('--tests');
 const TESTS_FILE = testsFlag > -1 ? argv[testsFlag + 1] : null;
+const refreshFlag = argv.indexOf('--refresh-sections');
+const REFRESH_SECTIONS = refreshFlag > -1 ? argv[refreshFlag + 1].split(',').filter(Boolean) : [];
 const VIEWPORT = argv.includes('--desktop') ? { width: 1440, height: 900 } : { width: 390, height: 844 };
 
 async function openPage(browser) {
@@ -34,14 +39,18 @@ async function openPage(browser) {
     viewport: VIEWPORT,
     isMobile: VIEWPORT.width < 700,
     hasTouch: VIEWPORT.width < 700,
+    extraHTTPHeaders: {
+      'Cache-Control': 'no-cache',
+      Pragma: 'no-cache',
+    },
     userAgent: VIEWPORT.width < 700
       ? 'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36'
       : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
   });
   const page = await context.newPage();
   const consoleErrors = [];
-  page.on('console', (m) => m.type() === 'error' && consoleErrors.push(m.text().slice(0, 200)));
-  page.on('pageerror', (e) => consoleErrors.push('pageerror: ' + String(e).slice(0, 200)));
+  page.on('console', (m) => m.type() === 'error' && consoleErrors.push(m.text().slice(0, 200).trim()));
+  page.on('pageerror', (e) => consoleErrors.push(('pageerror: ' + String(e).slice(0, 200)).trim()));
 
   if (PASSWORD) {
     await page.goto(`${BASE}/password`, { waitUntil: 'domcontentloaded' });
@@ -52,8 +61,42 @@ async function openPage(browser) {
       await page.waitForLoadState('domcontentloaded');
     }
   }
-  await page.goto(BASE + PAGE_PATH, { waitUntil: 'networkidle', timeout: 60000 });
+  // Ask both browser and edge caches to revalidate. Shopify can still serve a
+  // stale full-page variant briefly; Section Rendering API receipts distinguish
+  // that propagation delay from the current section asset.
+  await page.goto(PAGE_URL.href, { waitUntil: 'networkidle', timeout: 60000 });
   return { page, context, consoleErrors };
+}
+
+/** Replace named template instances with Shopify's current Section Rendering API output. */
+async function refreshSections(page, suffixes) {
+  const refreshed = [];
+  for (const suffix of suffixes) {
+    const result = await page.evaluate(async (instanceSuffix) => {
+      const wrapper = [...document.querySelectorAll('[id^="shopify-section-template--"]')]
+        .find((el) => el.id.endsWith(`__${instanceSuffix}`));
+      if (!wrapper) return { suffix: instanceSuffix, ok: false, detail: 'wrapper not found' };
+
+      const sectionId = wrapper.id.replace(/^shopify-section-/, '');
+      const url = new URL(location.href);
+      url.search = '';
+      url.searchParams.set('sections', sectionId);
+      url.searchParams.set('_qa', Date.now().toString());
+      const response = await fetch(url, { headers: { 'Cache-Control': 'no-cache' } });
+      if (!response.ok) return { suffix: instanceSuffix, ok: false, detail: `HTTP ${response.status}` };
+
+      const html = (await response.json())[sectionId];
+      if (!html) return { suffix: instanceSuffix, ok: false, detail: 'empty section HTML' };
+      const template = document.createElement('template');
+      template.innerHTML = html.trim();
+      const fresh = template.content.firstElementChild;
+      if (!fresh) return { suffix: instanceSuffix, ok: false, detail: 'unparseable section HTML' };
+      wrapper.replaceWith(fresh);
+      return { suffix: instanceSuffix, ok: true, detail: sectionId };
+    }, suffix);
+    refreshed.push(result);
+  }
+  return refreshed;
 }
 
 /** Snapshot enough state to tell whether a click did anything at all. */
@@ -103,12 +146,15 @@ async function auditClickables(page, consoleErrors) {
     try {
       info = await el.evaluate((node) => {
       const r = node.getBoundingClientRect();
+      const ariaCurrent = node.getAttribute('aria-current');
       return {
         tag: node.tagName.toLowerCase(),
         cls: (node.className || '').toString().slice(0, 60),
         label: (node.innerText || node.getAttribute('aria-label') || node.value || '').replace(/\s+/g, ' ').trim().slice(0, 48),
         href: node.getAttribute('href') || '',
         type: node.getAttribute('type') || '',
+        active: node.matches(':checked') || (ariaCurrent != null && ariaCurrent !== 'false') || node.getAttribute('aria-selected') === 'true',
+        disabled: node.matches(':disabled') || node.getAttribute('aria-disabled') === 'true',
         visible: r.width > 0 && r.height > 0 && node.offsetParent !== null,
         size: `${Math.round(r.width)}x${Math.round(r.height)}`,
         section: node.closest('[id^="shopify-section"]')?.id.replace(/^shopify-section-template--\d+__/, '') || '',
@@ -116,6 +162,11 @@ async function auditClickables(page, consoleErrors) {
       });
     } catch { continue; }
     if (!info.visible) continue;
+
+    if (info.disabled) {
+      results.push({ ...info, kind: 'control', verdict: 'disabled (intentional)' });
+      continue;
+    }
 
     // links: verify the destination instead of navigating away
     if (info.tag === 'a' && info.href) {
@@ -179,6 +230,7 @@ async function auditClickables(page, consoleErrors) {
       ...info,
       kind: 'control',
       verdict: !clicked ? 'NOT CLICKABLE'
+        : changed.length === 0 && info.active ? 'already active'
         : changed.length === 0 ? 'NO-OP (nothing changed)'
         : changed.join('+'),
       jsErrors: newErrors.length ? newErrors : undefined,
@@ -190,7 +242,7 @@ async function auditClickables(page, consoleErrors) {
       for (let attempt = 0; attempt < 4; attempt += 1) {
         try {
           await page.waitForTimeout(600);
-          await page.goto(BASE + PAGE_PATH, { waitUntil: 'domcontentloaded', timeout: 30000 });
+          await page.goto(PAGE_URL.href, { waitUntil: 'domcontentloaded', timeout: 30000 });
           break;
         } catch { /* retry */ }
       }
@@ -216,8 +268,11 @@ async function runTests(page, file) {
         pass = n === t.equals;
         detail = `count=${n} expected=${t.equals}`;
       } else if (t.type === 'text') {
-        const body = await page.locator(t.selector || 'body').first().innerText();
-        pass = body.replace(/\s+/g, ' ').includes(t.contains.replace(/\s+/g, ' '));
+        const target = page.locator(t.selector || 'body').first();
+        // Hidden copy is opt-in so visible-state assertions cannot be satisfied
+        // by an inactive tab or a closed disclosure elsewhere in the DOM.
+        const body = t.include_hidden ? await target.textContent() : await target.innerText();
+        pass = (body || '').replace(/\s+/g, ' ').includes(t.contains.replace(/\s+/g, ' '));
         detail = pass ? 'found' : `missing: ${t.contains.slice(0, 60)}`;
       } else if (t.type === 'video-playing') {
         await page.waitForTimeout(3000);
@@ -255,9 +310,18 @@ const browser = await chromium.launch({ executablePath: CHROME, args: ['--no-san
 const { page, context, consoleErrors } = await openPage(browser);
 
 if (TESTS_FILE) {
-  const results = await runTests(page, TESTS_FILE);
+  const refreshed = REFRESH_SECTIONS.length ? await refreshSections(page, REFRESH_SECTIONS) : [];
+  const refreshFailures = refreshed
+    .filter((item) => !item.ok)
+    .map((item) => ({
+      id: `refresh-${item.suffix}`,
+      type: 'section-refresh',
+      pass: false,
+      detail: item.detail,
+    }));
+  const results = [...refreshFailures, ...await runTests(page, TESTS_FILE)];
   const failed = results.filter((r) => !r.pass);
-  console.log(JSON.stringify({ passed: results.length - failed.length, failed: failed.length, results }, null, 1));
+  console.log(JSON.stringify({ passed: results.length - failed.length, failed: failed.length, refreshed, results }, null, 1));
   await browser.close();
   process.exit(failed.length ? 1 : 0);
 }
@@ -298,5 +362,5 @@ const md = [
 
 const outFile = path.join('docs', 'receipts', `interaction-audit-${VIEWPORT.width}.md`);
 fs.mkdirSync(path.dirname(outFile), { recursive: true });
-fs.writeFileSync(outFile, md);
+fs.writeFileSync(outFile, md + '\n');
 console.log(`${videos.length} videos, ${clickables.length} controls, ${problems.length} problems, ${staticVideos.length} static videos -> ${outFile}`);

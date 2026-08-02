@@ -984,9 +984,33 @@
         "anchor_id": "",
         "image": "shopify://shop_images/founder-alice.png",
         "image_mobile": "shopify://shop_images/founder-alice_14c6e35b-382f-42de-95ef-2376518ef595.png",
-        "highlight_color": "#e53e3e",
-        "highlights": "<p>Schema probe</p>"
-      }
+        "highlight_color": "#e53e3e"
+      },
+      "blocks": {
+        "highlight_microplastics": {
+          "type": "highlight",
+          "settings": {
+            "text": "The Average Person Consumes <strong>52 Credit Cards’</strong> Worth Of <strong>Microplastics</strong> Every Year."
+          }
+        },
+        "highlight_additives": {
+          "type": "highlight",
+          "settings": {
+            "text": "<strong>Artificial Food Additives</strong> Are Found In <strong>59%</strong> Of Foods Today"
+          }
+        },
+        "highlight_nutrients": {
+          "type": "highlight",
+          "settings": {
+            "text": "Fresh Fruits &amp; Veggies Have <strong>Lost Up To 73%</strong> Of Their <strong>Nutrients</strong>"
+          }
+        }
+      },
+      "block_order": [
+        "highlight_microplastics",
+        "highlight_additives",
+        "highlight_nutrients"
+      ]
     }
   },
   "order": [

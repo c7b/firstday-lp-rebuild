@@ -9,6 +9,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FRAGMENTS = ROOT / "docs" / "context" / "template-fragments"
+GENERATED_HEADER = """/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+"""
 
 # visible order of the original page, dead sections dropped
 ORDER = [
@@ -59,7 +69,7 @@ def main():
 
     template = {"sections": sections, "order": order}
     out = ROOT / "templates" / "page.tdk-behind-the-science.json"
-    out.write_text(json.dumps(template, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    out.write_text(GENERATED_HEADER + json.dumps(template, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"wrote {out.relative_to(ROOT)} with {len(order)} sections")
 
     # --- variant demo: the Kids funnel. No new Liquid, no new CSS — a different product
@@ -69,7 +79,7 @@ def main():
         "buy_box": {"settings": {"product": "kids-multivitamin"}},
     })
     kids_out = ROOT / "templates" / "page.kde-behind-the-science.json"
-    kids_out.write_text(json.dumps(kids, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    kids_out.write_text(GENERATED_HEADER + json.dumps(kids, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"wrote {kids_out.relative_to(ROOT)} (variant: product swapped, facts follow from its metafields)")
     if missing:
         print(f"MISSING fragments (not included): {', '.join(missing)}")

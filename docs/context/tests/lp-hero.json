@@ -1,6 +1,6 @@
 {
   "section": "lp-hero",
-  "notes": "One section type renders both replaced originals: the product opener (5-star review badge, teen-vitamin H1, subheading, anchor CTA, guarantee line, animated sales badge with 3 images, Alyssa testimonial card) and the founder closer (deficiency headline, three stat cards, Try Now CTA). Easy to miss: the original duplicated desktop+mobile DOM, so the rebuild's single responsive DOM must show exactly 2 CTAs page-wide (not 4), both pure anchors to #standalone-product-section which must exist for clicks to do anything; and the founder stats are sentences with a strict reading order — 'Are Found In' precedes '59%' — that a value-first card layout silently garbles. No videos and no path links in this section, so video-playing and no-broken-links are intentionally omitted in favor of the anchor-target check.",
+  "notes": "One section type renders both replaced originals: the product opener (5-star review badge, teen-vitamin H1, subheading, anchor CTA, guarantee line, animated sales badge with 3 images, Alyssa testimonial card) and the founder closer (deficiency headline, three rich-text highlight bullets, Try Now CTA). Easy to miss: the original duplicated desktop+mobile DOM, so the rebuild's single responsive DOM must show exactly 2 CTAs page-wide (not 4), both pure anchors to #standalone-product-section which must exist for clicks to do anything; and the founder highlights are sentences with a strict reading order — 'Are Found In' precedes '59%' — that a value-first card layout silently garbles. No videos and no path links in this section, so video-playing and no-broken-links are intentionally omitted in favor of the anchor-target check.",
   "assertions": [
     {
       "id": "two-ctas-deep-link-to-buy-box",
@@ -87,11 +87,11 @@
       "why": "Founder-closer headline byte-for-byte from the second original (seq 45) — proves the second instance carries its own content, not a copy of the first."
     },
     {
-      "id": "three-founder-stat-cards",
+      "id": "three-founder-highlight-items",
       "type": "count",
-      "selector": ".lp-hero__section--founder .lp-hero__stat-card",
+      "selector": ".lp-hero__section--founder .lp-hero__highlights > li",
       "equals": 3,
-      "why": "The original founder hero lists exactly 3 statistics (microplastics / additives / lost nutrients); the scoped selector also proves the closer instance uses the founder style."
+      "why": "The original founder hero renders exactly 3 bulleted rich-text highlights (microplastics / additives / lost nutrients); the scoped selector rejects the invented stat-card layout and proves the closer uses the founder style."
     },
     {
       "id": "microplastics-stat-reading-order",
@@ -110,7 +110,7 @@
     {
       "id": "no-horizontal-overflow-390",
       "type": "no-horizontal-overflow",
-      "why": "The hero image, pill CTA with emoji, sales badge, and 3-card stat row are the likely 390px overflow culprits; the original keeps both hero instances inside the viewport."
+      "why": "The hero image, pill CTA with emoji, sales badge, and 3-item highlight list are the likely 390px overflow culprits; the original keeps both hero instances inside the viewport."
     }
   ]
 }

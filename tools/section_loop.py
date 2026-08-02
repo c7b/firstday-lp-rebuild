@@ -54,6 +54,21 @@ SECTION_SOURCES = {
     "lp-clinician-reviews": ["frontrowmd_clinicians_reviews_z8btGd"],
 }
 
+# Template instance keys refreshed through Shopify's Section Rendering API before each
+# objective run. The full page can retain stale user-agent variants for several minutes
+# after a connected-theme deploy even though the current section assets are already live.
+SECTION_INSTANCES = {
+    "lp-hero": ["hero_opener", "hero_closer"],
+    "lp-media-accordion": ["accordion_nutrients", "accordion_raising_bar"],
+    "lp-science-tabs": ["science_tabs"],
+    "lp-buy-box": ["buy_box"],
+    "lp-urgency-banner": ["urgency_banner"],
+    "lp-trust-wall": ["trust_wall"],
+    "lp-comparison-table": ["comparison_table"],
+    "lp-reviews": ["reviews"],
+    "lp-clinician-reviews": ["clinician_reviews"],
+}
+
 ANALYST_PROMPT = """You are the ANALYST in a build loop for a Shopify landing page rebuild.
 
 Target section: {section}
@@ -155,7 +170,11 @@ def runner(section):
     spec = TESTS / f"{section}.json"
     if not spec.exists():
         return {"error": f"no test spec at {spec}"}
-    r = run(["node", "tools/qa_interactions.mjs", "--tests", str(spec)], timeout=900)
+    cmd = ["node", "tools/qa_interactions.mjs", "--tests", str(spec)]
+    instances = SECTION_INSTANCES.get(section, [])
+    if instances:
+        cmd.extend(["--refresh-sections", ",".join(instances)])
+    r = run(cmd, timeout=900)
     try:
         return json.loads(r.stdout)
     except json.JSONDecodeError:
