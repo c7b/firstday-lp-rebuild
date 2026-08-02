@@ -107,11 +107,11 @@
       "why": "The original's videos self-run; the visible panel's video must actually be advancing (not paused on its poster), which no screenshot can prove."
     },
     {
-      "id": "active-panel-video-can-pause-and-replay",
-      "type": "video-toggle",
-      "selector": ".lp-science-tabs__panel:not([hidden]) [data-video-toggle]",
-      "video_selector": ".lp-science-tabs__panel:not([hidden]) video.lp-science-tabs__video",
-      "why": "The visible video must respond to a user click: first pause and then resume, while preserving the explicit user-paused state against autoplay recovery."
+      "id": "videos-have-no-playback-controls",
+      "type": "count",
+      "selector": ".lp-science-tabs__video[controls], .lp-science-tabs__video-toggle, [data-video-toggle]",
+      "equals": 0,
+      "why": "Science videos are always-playing decorative loops, so no play, pause, or stop control may be rendered."
     },
     {
       "id": "no-horizontal-overflow-390",

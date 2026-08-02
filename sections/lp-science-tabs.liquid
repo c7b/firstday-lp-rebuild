@@ -1,5 +1,5 @@
 {{ 'lp-science-tabs.css' | asset_url | stylesheet_tag }}
-{% comment %}Interactive playback and autoplay recovery are managed by lp-science-tabs.js.{% endcomment %}
+{% comment %}The selected tab's muted video is an always-playing decorative loop.{% endcomment %}
 
 {% liquid
   if section.settings.claims.size > 0
@@ -84,18 +84,8 @@
                     loop
                     autoplay
                     preload="{% if forloop.first %}metadata{% else %}none{% endif %}"
-                    tabindex="0"
-                    aria-label="Play or pause {{ label | escape }} video"
+                    aria-hidden="true"
                   ></video>
-                  <button
-                    class="lp-science-tabs__video-toggle"
-                    type="button"
-                    data-video-toggle
-                    aria-label="Pause {{ label | escape }} video"
-                  >
-                    <svg class="lp-science-tabs__pause-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 6v12M16 6v12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.4"/></svg>
-                    <svg class="lp-science-tabs__play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" hidden><path d="m9 6 9 6-9 6V6Z" fill="currentColor"/></svg>
-                  </button>
                 {% endif %}
               </div>
               <div class="lp-science-tabs__panel-content">

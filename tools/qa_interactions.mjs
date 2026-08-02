@@ -310,6 +310,33 @@ async function runTests(page, file) {
         const replayed = await video.evaluate((el) => !el.paused && el.dataset.userPaused === 'false');
         pass = paused && replayed;
         detail = `paused=${paused} replayed=${replayed}`;
+      } else if (t.type === 'video-play-buttons') {
+        const buttons = page.locator(t.selector);
+        const videos = page.locator(t.video_selector);
+        const count = await buttons.count();
+        const expected = t.equals || count;
+        const states = [];
+        for (let index = 0; index < count; index += 1) {
+          await buttons.nth(index).click();
+          await page.waitForFunction(
+            ({ selector, item }) => {
+              const video = document.querySelectorAll(selector)[item];
+              return video && !video.paused && video.currentTime > 0.05;
+            },
+            { selector: t.video_selector, item: index },
+            { timeout: 10000 }
+          );
+          states.push(await videos.nth(index).evaluate((video) => ({
+            paused: video.paused,
+            currentTime: video.currentTime,
+            source: video.currentSrc,
+          })));
+          await videos.nth(index).evaluate((video) => video.pause());
+        }
+        pass = count === expected
+          && states.length === expected
+          && states.every((state) => !state.paused && state.currentTime > 0.05 && state.source);
+        detail = JSON.stringify({ count, expected, states });
       } else if (t.type === 'product-switch') {
         const selector = t.selector || 'lp-buy-box';
         const root = page.locator(selector).first();

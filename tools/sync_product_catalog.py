@@ -43,9 +43,9 @@ PRODUCTS = {
             "https://firstday.com/cdn/shop/files/trmv_10_-_Back_Panel_-_Toddlers_Multi_result.webp?v=1785441482&width=1200",
         ],
         "benefits": [
-            {"title": "Enhanced Nutrition & Immunity", "stat": "95%", "text": "of parents say First Day vitamins support their child's overall health & immunity.†"},
-            {"title": "Improved Behavior", "stat": "83%", "text": "of customers say First Day vitamins support their child's overall mood & behavior.†"},
-            {"title": "Better Sleep Routines", "stat": "82%", "text": "said these vitamins are improving their child's overall bedtime routines & sleep quality.†"},
+            {"icon": "immunity", "title": "Enhanced Nutrition & Immunity", "stat": "95%", "text": "of parents say First Day vitamins support their child's overall health & immunity.†"},
+            {"icon": "behavior", "title": "Improved Behavior", "stat": "83%", "text": "of customers say First Day vitamins support their child's overall mood & behavior.†"},
+            {"icon": "sleep", "title": "Better Sleep Routines", "stat": "82%", "text": "said these vitamins are improving their child's overall bedtime routines & sleep quality.†"},
         ],
     },
     "kids-multivitamin": {
@@ -70,9 +70,9 @@ PRODUCTS = {
             "https://firstday.com/cdn/shop/files/10_-_Back_Panel_-_Kids_Multi_result.webp?v=1785440735&width=1200",
         ],
         "benefits": [
-            {"title": "Enhanced Nutrition & Immunity", "stat": "95%", "text": "of parents say First Day vitamins support their child's overall health & immunity.†"},
-            {"title": "Improved Behavior", "stat": "83%", "text": "of customers say First Day vitamins support their child's overall mood & behavior.†"},
-            {"title": "Better Sleep Routines", "stat": "82%", "text": "said these vitamins are improving their child's overall bedtime routines & sleep quality.†"},
+            {"icon": "immunity", "title": "Enhanced Nutrition & Immunity", "stat": "95%", "text": "of parents say First Day vitamins support their child's overall health & immunity.†"},
+            {"icon": "behavior", "title": "Improved Behavior", "stat": "83%", "text": "of customers say First Day vitamins support their child's overall mood & behavior.†"},
+            {"icon": "sleep", "title": "Better Sleep Routines", "stat": "82%", "text": "said these vitamins are improving their child's overall bedtime routines & sleep quality.†"},
         ],
     },
     "teens-multivitamin": {
@@ -97,9 +97,9 @@ PRODUCTS = {
             "https://firstday.com/cdn/shop/files/tdk_10_-_Back_Panel_-_Teens_Multi_result.webp?v=1785441210&width=1200",
         ],
         "benefits": [
-            {"title": "Improve Overall Health & Nutrition", "stat": "98%", "text": "of parents say First Day vitamins support their teen's overall health & nutrition.†"},
-            {"title": "Boost Mood & Motivation", "stat": "83%", "text": "of customers say First Day vitamins support their teens' overall mood & behavior, and saw improved motivation for school.†"},
-            {"title": "Promote Clear Skin", "stat": "75%", "text": "said they saw an improvement to skin health, including reduced acne.†"},
+            {"icon": "health", "title": "Improve Overall Health & Nutrition", "stat": "98%", "text": "of parents say First Day vitamins support their teen's overall health & nutrition.†"},
+            {"icon": "mood", "title": "Boost Mood & Motivation", "stat": "83%", "text": "of customers say First Day vitamins support their teens' overall mood & behavior, and saw improved motivation for school.†"},
+            {"icon": "skin", "title": "Promote Clear Skin", "stat": "75%", "text": "said they saw an improvement to skin health, including reduced acne.†"},
         ],
     },
 }

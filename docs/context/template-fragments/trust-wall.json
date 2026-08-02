@@ -33,6 +33,7 @@
         "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/phils-my-pharmacist.png?v=1785622067",
         "alt": "Video thumbnail",
         "is_video": true,
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/aecd515a10d444158c4daf44fa5763f6.mov",
         "image": "shopify://shop_images/phils-my-pharmacist.png"
       }
     },
@@ -61,6 +62,7 @@
         "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/review-woman.png?v=1785622068",
         "alt": "Video thumbnail",
         "is_video": true,
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/37827354069a403e9ad7a5b203afe326.mp4",
         "image": "shopify://shop_images/review-woman.png"
       }
     },
@@ -89,6 +91,7 @@
         "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/review-woman-2.png?v=1785622070",
         "alt": "Video thumbnail",
         "is_video": true,
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/254cebfaf76545bbaf344675fd8c13bc.mp4",
         "image": "shopify://shop_images/review-woman-2.png"
       }
     },

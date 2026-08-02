@@ -32,20 +32,6 @@
         <span class="lp-reviews__summary-verified">Verified</span>
       </div>
 
-      <div class="lp-reviews__histogram" aria-label="Rating distribution">
-        {% for rating in (1..5) reversed %}
-          {% assign histogram_setting = 'histogram_' | append: rating %}
-          <div class="lp-reviews__histogram-row">
-            <span class="lp-reviews__histogram-label">{{ rating }}</span>
-            <span class="lp-reviews__histogram-star" aria-hidden="true">{{ lp_reviews_star }}</span>
-            <span class="lp-reviews__histogram-track" aria-hidden="true">
-              <span class="lp-reviews__histogram-fill" style="width: {{ section.settings[histogram_setting] }}%;"></span>
-            </span>
-            <span class="lp-reviews__histogram-percent">{{ section.settings[histogram_setting] }}%</span>
-          </div>
-        {% endfor %}
-      </div>
-
       {% if has_app_block and section.settings.write_a_review != blank %}
         <a class="lp-reviews__write-review" href="#LpReviewsApp-{{ section.id }}">{{ section.settings.write_a_review | escape }}</a>
       {% endif %}
@@ -133,56 +119,6 @@
       "id": "write_a_review",
       "label": "Write a review label",
       "default": "Write a review"
-    },
-    {
-      "type": "range",
-      "id": "histogram_5",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "5-star reviews",
-      "default": 87
-    },
-    {
-      "type": "range",
-      "id": "histogram_4",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "4-star reviews",
-      "default": 6
-    },
-    {
-      "type": "range",
-      "id": "histogram_3",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "3-star reviews",
-      "default": 2
-    },
-    {
-      "type": "range",
-      "id": "histogram_2",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "2-star reviews",
-      "default": 2
-    },
-    {
-      "type": "range",
-      "id": "histogram_1",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "1-star reviews",
-      "default": 3
     },
     {
       "type": "color_scheme",

@@ -1,0 +1,20 @@
+{
+  "section": "lp-reviews",
+  "notes": "Compact review summary keeps the score, count, verification label, and individual reviews without the five-row rating distribution.",
+  "assertions": [
+    {
+      "id": "review-summary-copy",
+      "type": "text",
+      "selector": ".lp-reviews__score",
+      "contains": "4.7 1394 reviews Verified",
+      "why": "The requested high-level review proof remains visible after simplifying the block."
+    },
+    {
+      "id": "rating-histogram-removed",
+      "type": "count",
+      "selector": ".lp-reviews__histogram, .lp-reviews__histogram-row",
+      "equals": 0,
+      "why": "The 5/4/3/2/1 percentage distribution was explicitly removed."
+    }
+  ]
+}

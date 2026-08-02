@@ -1,0 +1,28 @@
+{
+  "section": "lp-trust-wall",
+  "notes": "Masonry trust wall with three real, user-started testimonial videos. Each poster has a custom play button backed by a native controlled video, not a decorative badge.",
+  "assertions": [
+    {
+      "id": "three-real-videos",
+      "type": "count",
+      "selector": ".lp-trust-wall__media-video[data-trust-video] source[src]",
+      "equals": 3,
+      "why": "Dr. Lei, Diana, and Dr. Ed each map to a distinct source URL recovered from the original storefront."
+    },
+    {
+      "id": "three-play-buttons-work",
+      "type": "video-play-buttons",
+      "selector": ".lp-trust-wall__play-button[data-trust-video-play]",
+      "video_selector": ".lp-trust-wall__media-video[data-trust-video]",
+      "equals": 3,
+      "why": "Clicking every visible play button must start and advance its corresponding video."
+    },
+    {
+      "id": "native-controls-remain-available",
+      "type": "count",
+      "selector": ".lp-trust-wall__media-video[controls][playsinline][poster]",
+      "equals": 3,
+      "why": "After the poster overlay disappears, native playback controls keep pause, seek, volume, and captions affordances usable."
+    }
+  ]
+}

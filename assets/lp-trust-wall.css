@@ -2,6 +2,10 @@
   overflow: hidden;
 }
 
+lp-trust-wall-player {
+  display: block;
+}
+
 .lp-trust-wall__container {
   max-width: 1440px;
 }
@@ -98,34 +102,51 @@
   line-height: 0;
 }
 
-.lp-trust-wall__media-image {
+.lp-trust-wall__media-image,
+.lp-trust-wall__media-video {
+  display: block;
   width: 100%;
   height: auto;
 }
 
-.lp-trust-wall__play-badge {
+.lp-trust-wall__media-video {
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: var(--lp-navy);
+}
+
+.lp-trust-wall__play-button {
   position: absolute;
   top: 50%;
   left: 50%;
+  display: grid;
+  place-items: center;
   width: 5.6rem;
   height: 5.6rem;
+  padding: 0;
   border: 0.2rem solid rgb(255 255 255 / 0.9);
   border-radius: 50%;
   background: rgb(0 0 0 / 0.35);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.8rem rgb(0 0 0 / 0.25);
   transform: translate(-50%, -50%);
+  transition: background 160ms ease, transform 160ms ease;
 }
 
-.lp-trust-wall__play-badge::after {
-  position: absolute;
-  top: 50%;
-  left: 54%;
-  width: 0;
-  height: 0;
-  border-top: 0.9rem solid transparent;
-  border-bottom: 0.9rem solid transparent;
-  border-left: 1.4rem solid #fff;
-  content: '';
-  transform: translate(-50%, -50%);
+.lp-trust-wall__play-button:hover {
+  background: rgb(0 0 0 / 0.58);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.lp-trust-wall__play-button:focus-visible {
+  outline: 0.3rem solid #fff;
+  outline-offset: 0.3rem;
+}
+
+.lp-trust-wall__play-button svg {
+  width: 2.6rem;
+  height: 2.6rem;
 }
 
 .lp-trust-wall__card--press_quote {

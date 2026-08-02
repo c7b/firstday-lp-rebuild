@@ -5,36 +5,16 @@ class LpScienceTabs extends HTMLElement {
     this.initialized = true;
     this.tabs = Array.from(this.querySelectorAll('[role="tab"]'));
     this.panels = Array.from(this.querySelectorAll('[role="tabpanel"]'));
-    this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    this.handleReducedMotion = this.handleReducedMotion.bind(this);
-
     this.tabs.forEach((tab, index) => {
       tab.addEventListener('click', () => this.activate(index));
       tab.addEventListener('keydown', (event) => this.handleKeydown(event, index));
     });
 
-    this.querySelectorAll('[data-video]').forEach((video) => {
-      const panel = video.closest('[role="tabpanel"]');
-      const toggle = panel && panel.querySelector('[data-video-toggle]');
-      const toggleVideo = () => this.toggleVideo(video);
-
-      video.addEventListener('click', toggleVideo);
-      video.addEventListener('keydown', (event) => {
-        if (event.key !== 'Enter' && event.key !== ' ') return;
-        event.preventDefault();
-        toggleVideo();
-      });
-      if (toggle) toggle.addEventListener('click', toggleVideo);
-      video.addEventListener('play', () => this.updateVideoToggle(video));
-      video.addEventListener('pause', () => this.updateVideoToggle(video));
-      this.updateVideoToggle(video);
-    });
-
-    // These loops start on their own. If the browser (power saver, background tab, blocked
-    // autoplay) stops one, resume it when visible unless the user explicitly paused it.
+    // These are intentionally non-interactive visual loops. Recover playback whenever the
+    // active one comes back on screen or the browser restores a background tab.
     this.resumeObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && !this.reducedMotion.matches) this.ensurePlaying(entry.target);
+        if (entry.isIntersecting) this.ensurePlaying(entry.target);
       });
     }, { threshold: 0.2 });
     this.querySelectorAll('video').forEach((video) => this.resumeObserver.observe(video));
@@ -47,48 +27,20 @@ class LpScienceTabs extends HTMLElement {
     };
     document.addEventListener('visibilitychange', this.handleVisibility);
 
-    this.reducedMotion.addEventListener('change', this.handleReducedMotion);
     this.activate(this.tabs.findIndex((tab) => tab.getAttribute('aria-selected') === 'true'));
   }
 
   ensurePlaying(video) {
-    if (!video || video.offsetParent === null || this.reducedMotion.matches || video.dataset.userPaused === 'true') return;
+    if (!video || video.offsetParent === null) return;
     video.muted = true;
     video.playsInline = true;
     if (video.paused) video.play().catch(() => {});
-  }
-
-  toggleVideo(video) {
-    if (!video) return;
-
-    if (video.paused) {
-      video.dataset.userPaused = 'false';
-      video.play().catch(() => this.updateVideoToggle(video));
-    } else {
-      video.dataset.userPaused = 'true';
-      video.pause();
-    }
-    this.updateVideoToggle(video);
-  }
-
-  updateVideoToggle(video) {
-    const panel = video && video.closest('[role="tabpanel"]');
-    const toggle = panel && panel.querySelector('[data-video-toggle]');
-    if (!toggle) return;
-
-    const paused = video.paused;
-    toggle.setAttribute('aria-label', `${paused ? 'Play' : 'Pause'} video`);
-    const playIcon = toggle.querySelector('.lp-science-tabs__play-icon');
-    const pauseIcon = toggle.querySelector('.lp-science-tabs__pause-icon');
-    if (playIcon) playIcon.hidden = !paused;
-    if (pauseIcon) pauseIcon.hidden = paused;
   }
 
   disconnectedCallback() {
     if (this.resumeObserver) this.resumeObserver.disconnect();
     document.removeEventListener('visibilitychange', this.handleVisibility);
     if (this.playObserver) this.playObserver.disconnect();
-    if (this.reducedMotion) this.reducedMotion.removeEventListener('change', this.handleReducedMotion);
   }
 
   handleKeydown(event, index) {
@@ -105,11 +57,6 @@ class LpScienceTabs extends HTMLElement {
 
     this.activate(nextIndex);
     this.tabs[nextIndex].focus();
-  }
-
-  handleReducedMotion() {
-    const selectedIndex = this.tabs.findIndex((tab) => tab.getAttribute('aria-selected') === 'true');
-    this.activate(selectedIndex);
   }
 
   activate(index) {
@@ -140,17 +87,6 @@ class LpScienceTabs extends HTMLElement {
       video.muted = true;
       video.playsInline = true;
       video.preload = 'auto';
-
-      if (this.reducedMotion.matches) {
-        video.pause();
-        return;
-      }
-
-      if (video.dataset.userPaused === 'true') {
-        video.pause();
-        this.updateVideoToggle(video);
-        return;
-      }
 
       video.setAttribute('autoplay', '');
       const attempt = video.play();

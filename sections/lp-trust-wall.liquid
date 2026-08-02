@@ -1,4 +1,5 @@
 {{ 'lp-trust-wall.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'lp-trust-wall.js' | asset_url }}" defer="defer"></script>
 
 {%- style -%}
   #{{ section.settings.anchor_id | default: section.id }}.lp-trust-wall__section {
@@ -11,6 +12,7 @@
   id="{{ section.settings.anchor_id | default: section.id }}"
   class="lp-trust-wall__section color-{{ section.settings.color_scheme }} gradient"
 >
+  <lp-trust-wall-player>
   <div class="lp-trust-wall__container page-width">
     {%- if section.settings.heading != blank -%}
       <h2 class="lp-trust-wall__heading">{{ section.settings.heading }}</h2>
@@ -37,12 +39,32 @@
 
             {%- when 'media_card' -%}
               <div class="lp-trust-wall__media">
-                {%- if block.settings.image != blank -%}
+                {%- liquid
+                  assign media_poster = block.settings.image_url
+                  if block.settings.image != blank
+                    assign media_poster = block.settings.image | image_url: width: 1120
+                  endif
+                -%}
+                {%- if block.settings.is_video and block.settings.video_url != blank -%}
+                  <video
+                    class="lp-trust-wall__media-video"
+                    data-trust-video
+                    controls
+                    playsinline
+                    preload="metadata"
+                    {% if media_poster != blank %}poster="{{ media_poster }}"{% endif %}
+                    aria-label="{{ block.settings.alt | default: 'Customer video' | escape }}"
+                  >
+                    <source src="{{ block.settings.video_url | escape }}">
+                  </video>
+                  <button class="lp-trust-wall__play-button" type="button" data-trust-video-play aria-label="Play video">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 6 9 6-9 6V6Z" fill="currentColor"/></svg>
+                  </button>
+                {%- elsif block.settings.image != blank -%}
                   {{ block.settings.image | image_url: width: 1120 | image_tag: class: 'lp-trust-wall__media-image', widths: '352, 560, 750, 1120', sizes: '(min-width: 750px) 33vw, 100vw', loading: 'lazy', alt: block.settings.alt }}
                 {%- elsif block.settings.image_url != blank -%}
                   <img class="lp-trust-wall__media-image" src="{{ block.settings.image_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy">
                 {%- endif -%}
-                {%- if block.settings.is_video -%}<span class="lp-trust-wall__play-badge" aria-hidden="true"></span>{%- endif -%}
               </div>
 
             {%- when 'customer_card' -%}
@@ -87,6 +109,7 @@
       {%- endfor -%}
     </div>
   </div>
+  </lp-trust-wall-player>
 </section>
 
 {% schema %}
@@ -189,8 +212,13 @@
         {
           "type": "checkbox",
           "id": "is_video",
-          "label": "Show video play badge",
+          "label": "Enable video",
           "default": false
+        },
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "Video URL"
         }
       ]
     },

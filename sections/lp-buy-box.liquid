@@ -261,11 +261,43 @@
         <div class="lp-buy-box__benefits">
           {% if product_benefits != blank %}
             {% for benefit in product_benefits %}
+              {% liquid
+                assign benefit_icon = benefit.icon
+                if benefit_icon == blank
+                  case benefit.title
+                    when 'Improve Overall Health & Nutrition'
+                      assign benefit_icon = 'health'
+                    when 'Boost Mood & Motivation'
+                      assign benefit_icon = 'mood'
+                    when 'Promote Clear Skin'
+                      assign benefit_icon = 'skin'
+                    when 'Enhanced Nutrition & Immunity'
+                      assign benefit_icon = 'immunity'
+                    when 'Improved Behavior'
+                      assign benefit_icon = 'behavior'
+                    when 'Better Sleep Routines'
+                      assign benefit_icon = 'sleep'
+                  endcase
+                endif
+              %}
               <details class="lp-buy-box__benefit">
                 <summary class="lp-buy-box__benefit-summary">
                   <span class="lp-buy-box__benefit-heading">
-                    <span class="lp-buy-box__benefit-icon lp-buy-box__benefit-icon--symbol" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2.8 4.8 5.5v5.8c0 4.1 2.4 7.3 7.2 9.9 4.8-2.6 7.2-5.8 7.2-9.9V5.5L12 2.8Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m8.5 12 2.2 2.2 4.8-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg>
+                    <span class="lp-buy-box__benefit-icon lp-buy-box__benefit-icon--symbol" data-benefit-icon="{{ benefit_icon | escape }}" aria-hidden="true">
+                      {% case benefit_icon %}
+                        {% when 'health' %}
+                          <svg viewBox="0 0 24 24" focusable="false"><path d="M20.4 5.8a5.1 5.1 0 0 0-7.2 0L12 7l-1.2-1.2a5.1 5.1 0 0 0-7.2 7.2L12 21l8.4-8a5.1 5.1 0 0 0 0-7.2Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"/><path d="M5.5 12h3l1.4-2.7 2.4 5.5 1.6-2.8h4.6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/></svg>
+                        {% when 'mood' %}
+                          <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="6.3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9.3 13.1c.7 1.4 1.6 2 2.7 2s2-.6 2.7-2M9.4 10h.1m5 0h.1M12 2.2v2M12 19.8v2M2.2 12h2M19.8 12h2M5 5l1.4 1.4M17.6 17.6 19 19M19 5l-1.4 1.4M6.4 17.6 5 19" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>
+                        {% when 'skin' %}
+                          <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3.1c-3 3.6-5 6.4-5 9.2a5 5 0 0 0 10 0c0-2.8-2-5.6-5-9.2Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M17.7 3.2v3.6M15.9 5h3.6M19.2 9.2v2.6M17.9 10.5h2.6M9.6 14.8c.6.8 1.4 1.2 2.4 1.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>
+                        {% when 'behavior' %}
+                          <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="8.8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.4 10h.1m7 0h.1M8.4 14c1 1.5 2.2 2.2 3.6 2.2s2.6-.7 3.6-2.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/></svg>
+                        {% when 'sleep' %}
+                          <svg viewBox="0 0 24 24" focusable="false"><path d="M18.2 15.8A7.4 7.4 0 0 1 8.2 5.7a7.8 7.8 0 1 0 10 10.1Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"/><path d="m16.9 4 .5 1.1 1.2.2-.9.8.2 1.2-1-.6-1 .6.2-1.2-.9-.8 1.2-.2.5-1.1Z" fill="currentColor"/></svg>
+                        {% else %}
+                          <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2.8 4.8 5.5v5.8c0 4.1 2.4 7.3 7.2 9.9 4.8-2.6 7.2-5.8 7.2-9.9V5.5L12 2.8Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v7M8.5 11.5h7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/></svg>
+                      {% endcase %}
                     </span>
                     <span>{{ benefit.title | escape }}</span>
                   </span>
