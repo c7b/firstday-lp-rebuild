@@ -20,6 +20,8 @@ class LpBuyBox extends HTMLElement {
     if (this.prevButton) this.prevButton.addEventListener('click', () => this.step(-1));
     if (this.nextButton) this.nextButton.addEventListener('click', () => this.step(1));
 
+    this.bindProductTabs();
+
     this.mediaThumbs.forEach((thumb) => {
       thumb.addEventListener('click', () => {
         const index = Number(thumb.dataset.mediaIndex);
@@ -68,6 +70,67 @@ class LpBuyBox extends HTMLElement {
 
   disconnectedCallback() {
     if (this.mediaObserver) this.mediaObserver.disconnect();
+  }
+
+  /**
+   * Age-group tabs swap the product in place. The markup stays a real <a> to the sibling LP so
+   * it works without JS and is crawlable; with JS we intercept and re-render just this section
+   * through Shopify's Section Rendering API — no navigation, no flash of an empty page.
+   */
+  bindProductTabs() {
+    this.querySelectorAll('[data-product-handle]').forEach((tab) => {
+      tab.addEventListener('click', async (event) => {
+        const handle = tab.dataset.productHandle;
+        if (!handle || handle === this.dataset.currentHandle) {
+          event.preventDefault();
+          return;
+        }
+        event.preventDefault();
+        await this.swapProduct(handle, tab);
+      });
+    });
+  }
+
+  async swapProduct(handle, tab) {
+    const sectionId = this.dataset.sectionId;
+    if (!sectionId || this.swapping) return;
+
+    this.swapping = true;
+    this.classList.add('is-swapping');
+    try {
+      const response = await fetch(`/products/${handle}?section_id=${encodeURIComponent(sectionId)}`);
+      if (!response.ok) throw new Error(`section render ${response.status}`);
+
+      const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
+      const fresh = doc.querySelector('lp-buy-box') || doc.querySelector('[data-section-id]');
+      if (!fresh) throw new Error('no buy box in response');
+
+      const scrollBefore = this.getBoundingClientRect().top;
+      this.innerHTML = fresh.innerHTML;
+      this.dataset.currentHandle = handle;
+
+      // the re-rendered markup carries the section's own tab state, so re-apply the choice
+      this.querySelectorAll('[data-product-handle]').forEach((t) => {
+        const isCurrent = t.dataset.productHandle === handle;
+        t.classList.toggle('is-active', isCurrent);
+        if (isCurrent) t.setAttribute('aria-current', 'page');
+        else t.removeAttribute('aria-current');
+      });
+
+      this.initialized = false;
+      this.connectedCallback();
+      window.history.replaceState({}, '', tab.getAttribute('href') || window.location.pathname);
+      // keep the module visually anchored where the user was looking
+      const scrollAfter = this.getBoundingClientRect().top;
+      window.scrollBy(0, scrollAfter - scrollBefore);
+    } catch (error) {
+      // never leave the user stuck: fall back to the link the tab already points at
+      const href = tab.getAttribute('href');
+      if (href) window.location.assign(href);
+    } finally {
+      this.swapping = false;
+      this.classList.remove('is-swapping');
+    }
   }
 
   step(delta) {

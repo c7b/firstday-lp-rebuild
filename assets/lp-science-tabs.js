@@ -13,22 +13,38 @@ class LpScienceTabs extends HTMLElement {
       tab.addEventListener('keydown', (event) => this.handleKeydown(event, index));
     });
 
-    this.querySelectorAll('video').forEach((video) => {
-      video.addEventListener('click', () => {
-        if (video.paused) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-        video.closest('.lp-science-tabs__media')?.classList.toggle('is-paused', video.paused);
+    // These loops are decorative and must run on their own — no click-to-pause, and if the
+    // browser (power saver, background tab, blocked autoplay) stops one, resume it as soon as
+    // it is on screen again.
+    this.resumeObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !this.reducedMotion.matches) this.ensurePlaying(entry.target);
       });
-    });
+    }, { threshold: 0.2 });
+    this.querySelectorAll('video').forEach((video) => this.resumeObserver.observe(video));
+
+    this.handleVisibility = () => {
+      if (document.visibilityState !== 'visible') return;
+      this.panels.forEach((panel, i) => {
+        if (!panel.hidden) this.ensurePlaying(panel.querySelector('video'));
+      });
+    };
+    document.addEventListener('visibilitychange', this.handleVisibility);
 
     this.reducedMotion.addEventListener('change', this.handleReducedMotion);
     this.activate(this.tabs.findIndex((tab) => tab.getAttribute('aria-selected') === 'true'));
   }
 
+  ensurePlaying(video) {
+    if (!video || video.offsetParent === null || this.reducedMotion.matches) return;
+    video.muted = true;
+    video.playsInline = true;
+    if (video.paused) video.play().catch(() => {});
+  }
+
   disconnectedCallback() {
+    if (this.resumeObserver) this.resumeObserver.disconnect();
+    document.removeEventListener('visibilitychange', this.handleVisibility);
     if (this.playObserver) this.playObserver.disconnect();
     if (this.reducedMotion) this.reducedMotion.removeEventListener('change', this.handleReducedMotion);
   }

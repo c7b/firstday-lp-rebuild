@@ -967,3 +967,19 @@
   .lp-buy-box__media-nav--prev { left: -2.2rem; }
   .lp-buy-box__media-nav--next { right: -2.2rem; }
 }
+
+/* in-place product swap: fade instead of a flash of empty markup */
+.lp-buy-box__section {
+  transition: opacity 160ms ease;
+}
+
+.lp-buy-box__section.is-swapping {
+  opacity: .55;
+  pointer-events: none;
+}
+
+.lp-buy-box__product-tab.is-active,
+.lp-buy-box__product-tab[aria-current='page'] {
+  background: var(--lp-navy);
+  color: #fff;
+}

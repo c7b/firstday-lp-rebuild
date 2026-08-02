@@ -213,7 +213,8 @@
           "settings": {
             "label": "Toddlers'",
             "url": "/pages/toddlers-behind-the-science-lp",
-            "active": false
+            "active": false,
+            "product": "toddlers-multivitamin"
           }
         },
         "tab_kids": {
@@ -221,7 +222,8 @@
           "settings": {
             "label": "Kids'",
             "url": "/pages/kde-behind-the-science-lp",
-            "active": false
+            "active": false,
+            "product": "kids-multivitamin"
           }
         },
         "tab_teens": {
@@ -229,7 +231,8 @@
           "settings": {
             "label": "Teens'",
             "url": "",
-            "active": true
+            "active": true,
+            "product": "teens-multivitamin"
           }
         },
         "benefit_health": {

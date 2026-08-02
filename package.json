@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/c7b/firstday-lp-rebuild#readme",
   "devDependencies": {
-    "lighthouse": "^13.4.1"
+    "lighthouse": "^13.4.1",
+    "playwright": "^1.62.1"
   }
 }
