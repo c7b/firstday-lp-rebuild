@@ -1,4 +1,5 @@
 {{ 'lp-science-tabs.css' | asset_url | stylesheet_tag }}
+{% comment %}Interactive playback and autoplay recovery are managed by lp-science-tabs.js.{% endcomment %}
 
 {% liquid
   if section.settings.claims.size > 0
