@@ -64,7 +64,10 @@ async function openPage(browser) {
   // Ask both browser and edge caches to revalidate. Shopify can still serve a
   // stale full-page variant briefly; Section Rendering API receipts distinguish
   // that propagation delay from the current section asset.
-  await page.goto(PAGE_URL.href, { waitUntil: 'networkidle', timeout: 60000 });
+  // Shopify storefronts keep analytics/app requests alive, so `networkidle` is not a
+  // reliable readiness signal. DOMContentLoaded plus a short hydration window is stable.
+  await page.goto(PAGE_URL.href, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await page.waitForTimeout(2500);
   return { page, context, consoleErrors };
 }
 
