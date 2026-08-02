@@ -19,12 +19,36 @@ was actually designed for.
 
 **Checkout extensions.** The brief lists them as fair game ("can be anything, we use react"),
 and the interview drew the opposite line: checkout and cart are off limits. Both are right —
-the line is *this page*. Where an extension would genuinely earn its place is the promise this
-funnel already makes: "FREE Gift on orders +$75" and the gift progress bar. Today that promise
-lives in the theme and nothing enforces it after the customer leaves the page. A Checkout UI
-extension that shows the same threshold and the same gift in checkout closes that loop, and a
-Shopify Function is what actually adds the gift. Estimate: ~1 day for the pair, plus review —
-and it's a conversation with whoever owns promotions, not a developer's unilateral call.
+the line is *this page*, and the distinction matters more than it looks:
+
+> A checkout UI extension **cannot live in this repository.** It is not theme code. It ships
+> inside an app: React from `@shopify/ui-extensions-react/checkout`, declared in
+> `shopify.extension.toml` against a target such as `purchase.checkout.block.render`, built
+> with Node and released with `shopify app deploy` — a different artifact, a different
+> pipeline, a different review path from the theme's GitHub sync. Putting it here would be the
+> wrong answer even if there were time.
+
+Where one would genuinely earn its place is the promise this funnel already makes: **"FREE
+Gift on orders +$75"** and the gift progress bar. Today that promise lives in the theme and
+nothing carries it past the buy button. The complete shape:
+
+| Piece | What it does | Where it lives |
+|---|---|---|
+| Checkout UI extension | shows the same threshold and gift state the LP showed, so the story doesn't break at the handoff | extension-only app |
+| Shopify Function (cart transform / product discount) | actually adds the gift line at $75 — a UI extension can display, it cannot grant | same app |
+| Product metafields | the threshold and gift product, read by both, so marketing changes them once | already modelled here (`custom.*`) |
+
+**Two constraints to settle before estimating for real**, and this is exactly the kind of thing
+worth surfacing early rather than discovering mid-sprint:
+
+1. **Plan.** Extensions on the *checkout* page require Shopify Plus; the Thank-you and
+   Order-status pages are available on every plan. If First Day isn't Plus, the gift reminder
+   lands post-purchase, which is a different (still useful) feature — confirm the plan first.
+2. **Ownership.** The gift is a promotions decision, not a developer's unilateral call. Whoever
+   owns the offer decides whether the gift is a discount, a free line item, or an app's job.
+
+Estimate once those are answered: ~1 day for the UI extension plus the function, plus review.
+Until then it stays here rather than half-built in the theme.
 
 **The quiz.** The brief says "the quiz needs to route all of these cleanly" — it isn't on this
 page, but the same routing question is: the Toddlers/Kids/Teens tabs are the funnel-level

@@ -53,11 +53,19 @@ performance receipts, Playwright for the QA runner).
 
 > "Checkout Extensions (can be anything, we use react)"
 
-**Deliberately not used.** In the interview the hiring manager drew the line explicitly —
-checkout and cart are not to be touched — so the only cart interaction here is a standard
-`{% form 'product' %}` add-to-cart. `docs/PLAN.md` records where a checkout UI extension
-*would* earn its place (the free-gift threshold that this funnel promises but checkout has to
-honour), so the omission is a decision rather than a gap.
+**Deliberately not used, and it would not belong in this repository if it were.** A checkout UI
+extension isn't theme code: it's React (`@shopify/ui-extensions-react/checkout`) declared in
+`shopify.extension.toml` against a target like `purchase.checkout.block.render`, shipped inside
+an app with `shopify app deploy` — a separate artifact and a separate pipeline from the theme's
+GitHub sync. The mention in the brief reads as a test of *knowing where each thing lives*, and
+the hiring manager drew the line for this task explicitly: checkout and cart are not to be
+touched. So the only cart interaction here is a standard `{% form 'product' %}` add-to-cart.
+
+`docs/PLAN.md` carries the full shape of the one case that would earn an extension — the "FREE
+Gift on orders +$75" promise this funnel makes and nothing enforces after the buy button —
+including the piece a UI extension *cannot* do (granting the gift needs a Shopify Function) and
+the two questions to settle first: whether the plan supports checkout-page extensions at all
+(Plus-only; Thank-you and Order-status are available on every plan), and who owns the offer.
 
 ## Business context the brief supplies (and expects to see used)
 
