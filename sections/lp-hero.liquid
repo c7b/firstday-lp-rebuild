@@ -127,49 +127,267 @@
   "tag": "section",
   "class": "lp-hero__wrapper",
   "settings": [
-    { "type": "select", "id": "style", "label": "Hero style", "default": "product", "options": [{ "value": "product", "label": "Product" }, { "value": "founder", "label": "Founder story" }] },
-    { "type": "text", "id": "badge_text", "label": "Review badge text", "default": "4.8 stars from 12,322+ reviewers" },
-    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "The <em>Science-Backed Vitamin</em> for Grumpy, Tired, or Unfocused Teens" },
-    { "type": "richtext", "id": "subheading", "label": "Subheading", "default": "<p>The only bio-matched multivitamin <strong>formulated specifically for teenagers</strong> with 12 nutrients &amp; 21 superfoods to support mood regulation, immunity, and growing bones.</p>" },
-    { "type": "richtext", "id": "closing_text", "label": "Closing text" },
-    { "type": "richtext", "id": "closing_text_2", "label": "Second closing text" },
-    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Unlock Better Nutrition 🍊💊" },
-    { "type": "text", "id": "cta_link", "label": "CTA link (URL or #anchor)", "default": "#standalone-product-section" },
-    { "type": "text", "id": "guarantee_text", "label": "Guarantee text", "default": "Exclusive First Day 45 Day Money Back Guarantee**" },
-    { "type": "image_picker", "id": "image", "label": "Desktop image" },
-    { "type": "text", "id": "image_url", "label": "Desktop image URL", "default": "//firstday.com/cdn/shop/files/tdk-bts-clean-landsscapre-brady-bunch.jpg?v=1784071376&width=800" },
-    { "type": "text", "id": "image_alt", "label": "Desktop image alt text", "default": "Hero image" },
-    { "type": "image_picker", "id": "image_mobile", "label": "Mobile image" },
-    { "type": "text", "id": "image_mobile_url", "label": "Mobile image URL", "default": "//firstday.com/cdn/shop/files/tdk-bts-clean-square-brady-bunch.jpg?v=1784071375&width=1000" },
-    { "type": "text", "id": "image_mobile_alt", "label": "Mobile image alt text", "default": "Hero image" },
-    { "type": "select", "id": "image_position", "label": "Desktop image position", "default": "right", "options": [{ "value": "left", "label": "Left" }, { "value": "right", "label": "Right" }] },
-    { "type": "text", "id": "stat_badge_text", "label": "Sales badge text", "default": "6,646 Gummies Sold Every 24h" },
-    { "type": "text", "id": "stat_gif_url", "label": "Sales badge GIF URL", "default": "//firstday.com/cdn/shop/files/ebce1fea9a768a63cc6c95d28e1efa8e9818e9db.gif?v=1775682044&width=48" },
-    { "type": "text", "id": "stat_icon_1_url", "label": "Sales badge icon 1 URL", "default": "//firstday.com/cdn/shop/files/gummy-orange-2.png?v=1775682044&width=100" },
-    { "type": "text", "id": "stat_icon_2_url", "label": "Sales badge icon 2 URL", "default": "//firstday.com/cdn/shop/files/gummy-orange.png?v=1775682044&width=100" },
-    { "type": "color", "id": "highlight_color", "label": "Highlight color", "info": "Colors the emphasised words in the heading and the stat values", "default": "#486ced" },
-    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 32 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 32 },
-    { "type": "text", "id": "anchor_id", "label": "Anchor ID" }
+    {
+      "type": "select",
+      "id": "style",
+      "label": "Hero style",
+      "default": "product",
+      "options": [
+        {
+          "value": "product",
+          "label": "Product"
+        },
+        {
+          "value": "founder",
+          "label": "Founder story"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Review badge text",
+      "default": "4.8 stars from 12,322+ reviewers",
+      "visible_if": "{{ section.settings.style == 'product' }}"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The <em>Science-Backed Vitamin</em> for Grumpy, Tired, or Unfocused Teens"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>The only bio-matched multivitamin <strong>formulated specifically for teenagers</strong> with 12 nutrients &amp; 21 superfoods to support mood regulation, immunity, and growing bones.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "closing_text",
+      "label": "Closing text",
+      "visible_if": "{{ section.settings.style == 'founder' }}"
+    },
+    {
+      "type": "richtext",
+      "id": "closing_text_2",
+      "label": "Second closing text",
+      "visible_if": "{{ section.settings.style == 'founder' }}"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "CTA label",
+      "default": "Unlock Better Nutrition 🍊💊"
+    },
+    {
+      "type": "text",
+      "id": "cta_link",
+      "label": "CTA link (URL or #anchor)",
+      "default": "#standalone-product-section"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_text",
+      "label": "Guarantee text",
+      "default": "Exclusive First Day 45 Day Money Back Guarantee**",
+      "visible_if": "{{ section.settings.style == 'product' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "text",
+      "id": "image_url",
+      "label": "Desktop image URL",
+      "default": "//firstday.com/cdn/shop/files/tdk-bts-clean-landsscapre-brady-bunch.jpg?v=1784071376&width=800"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Desktop image alt text",
+      "default": "Hero image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile image"
+    },
+    {
+      "type": "text",
+      "id": "image_mobile_url",
+      "label": "Mobile image URL",
+      "default": "//firstday.com/cdn/shop/files/tdk-bts-clean-square-brady-bunch.jpg?v=1784071375&width=1000"
+    },
+    {
+      "type": "text",
+      "id": "image_mobile_alt",
+      "label": "Mobile image alt text",
+      "default": "Hero image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Desktop image position",
+      "default": "right",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "stat_badge_text",
+      "label": "Sales badge text",
+      "default": "6,646 Gummies Sold Every 24h",
+      "visible_if": "{{ section.settings.style == 'product' }}"
+    },
+    {
+      "type": "text",
+      "id": "stat_gif_url",
+      "label": "Sales badge GIF URL",
+      "default": "//firstday.com/cdn/shop/files/ebce1fea9a768a63cc6c95d28e1efa8e9818e9db.gif?v=1775682044&width=48",
+      "visible_if": "{{ section.settings.style == 'product' }}"
+    },
+    {
+      "type": "text",
+      "id": "stat_icon_1_url",
+      "label": "Sales badge icon 1 URL",
+      "default": "//firstday.com/cdn/shop/files/gummy-orange-2.png?v=1775682044&width=100",
+      "visible_if": "{{ section.settings.style == 'product' }}"
+    },
+    {
+      "type": "text",
+      "id": "stat_icon_2_url",
+      "label": "Sales badge icon 2 URL",
+      "default": "//firstday.com/cdn/shop/files/gummy-orange.png?v=1775682044&width=100",
+      "visible_if": "{{ section.settings.style == 'product' }}"
+    },
+    {
+      "type": "color",
+      "id": "highlight_color",
+      "label": "Highlight color",
+      "info": "Colors the emphasised words in the heading and the stat values",
+      "default": "#486ced"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 32
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID"
+    }
   ],
   "blocks": [
-    { "type": "testimonial", "name": "Testimonial", "limit": 2, "settings": [
-      { "type": "richtext", "id": "quote", "label": "Quote" },
-      { "type": "text", "id": "author", "label": "Author" },
-      { "type": "image_picker", "id": "avatar", "label": "Avatar" },
-      { "type": "text", "id": "avatar_url", "label": "Avatar URL" }
-    ] },
-    { "type": "stat_card", "name": "Statistic card", "limit": 4, "settings": [
-      { "type": "text", "id": "line_1", "label": "First line" },
-      { "type": "text", "id": "value", "label": "Highlighted value" },
-      { "type": "text", "id": "line_2", "label": "Second line" },
-      { "type": "text", "id": "line_3", "label": "Third line" }
-    ] }
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "Quote"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Avatar"
+        },
+        {
+          "type": "text",
+          "id": "avatar_url",
+          "label": "Avatar URL"
+        }
+      ]
+    },
+    {
+      "type": "stat_card",
+      "name": "Statistic card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "line_1",
+          "label": "First line"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Highlighted value"
+        },
+        {
+          "type": "text",
+          "id": "line_2",
+          "label": "Second line"
+        },
+        {
+          "type": "text",
+          "id": "line_3",
+          "label": "Third line"
+        }
+      ]
+    }
   ],
   "presets": [
-    { "name": "LP Hero — product", "settings": { "style": "product" } },
-    { "name": "LP Hero — founder story", "settings": { "style": "founder", "heading": "1 in 3 Families Have A Nutrient Deficiency.", "cta_label": "Try Now" } }
-  ]
+    {
+      "name": "LP Hero — product",
+      "settings": {
+        "style": "product"
+      }
+    },
+    {
+      "name": "LP Hero — founder story",
+      "settings": {
+        "style": "founder",
+        "heading": "1 in 3 Families Have A Nutrient Deficiency.",
+        "cta_label": "Try Now"
+      }
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "page",
+      "index",
+      "product"
+    ]
+  }
 }
 {% endschema %}

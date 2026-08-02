@@ -99,23 +99,32 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Image"
+      "label": "Image",
+      "visible_if": "{{ section.settings.show_media }}"
     },
     {
       "type": "text",
       "id": "image_url",
       "label": "Image URL",
-      "default": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1500"
+      "default": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1500",
+      "visible_if": "{{ section.settings.show_media }}"
     },
     {
       "type": "select",
       "id": "media_position",
       "label": "Media position on desktop",
       "options": [
-        { "value": "left", "label": "Left" },
-        { "value": "right", "label": "Right" }
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
       ],
-      "default": "left"
+      "default": "left",
+      "visible_if": "{{ section.settings.show_media }}"
     },
     {
       "type": "checkbox",
@@ -217,6 +226,13 @@
     {
       "name": "LP media accordion"
     }
-  ]
+  ],
+  "enabled_on": {
+    "templates": [
+      "page",
+      "index",
+      "product"
+    ]
+  }
 }
 {% endschema %}

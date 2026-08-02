@@ -81,20 +81,94 @@
   "tag": "section",
   "class": "lp-comparison-table__wrapper",
   "settings": [
-    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Why Should You Choose First Day?" },
-    { "type": "richtext", "id": "subheading", "label": "Subheading", "default": "<p>Made for modern families living on modern diets, we’re here to fill the nutrition gaps that today’s food often leaves behind.</p>" },
-    { "type": "text", "id": "brand_label", "label": "Brand label", "default": "First Day" },
-    { "type": "image_picker", "id": "brand_logo", "label": "Brand logo" },
-    { "type": "text", "id": "brand_logo_url", "label": "Brand logo URL", "default": "//firstday.com/cdn/shop/files/round_logo.png?v=1720622822&width=100" },
-    { "type": "text", "id": "competitor_label", "label": "Competitor label", "default": "Other Multis" },
-    { "type": "image_picker", "id": "image_desktop", "label": "Desktop decorative image" },
-    { "type": "text", "id": "image_desktop_url", "label": "Desktop decorative image URL", "default": "//firstday.com/cdn/shop/files/desk_720.png?v=1763396549&width=1200" },
-    { "type": "image_picker", "id": "image_mobile", "label": "Mobile decorative image" },
-    { "type": "text", "id": "image_mobile_url", "label": "Mobile decorative image URL", "default": "//firstday.com/cdn/shop/files/mob-left_360.png?v=1763396560&width=300" },
-    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
-    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Top padding", "default": 48 },
-    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "Bottom padding", "default": 48 },
-    { "type": "text", "id": "anchor_id", "label": "Anchor ID" }
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why Should You Choose First Day?"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Made for modern families living on modern diets, we’re here to fill the nutrition gaps that today’s food often leaves behind.</p>"
+    },
+    {
+      "type": "text",
+      "id": "brand_label",
+      "label": "Brand label",
+      "default": "First Day"
+    },
+    {
+      "type": "image_picker",
+      "id": "brand_logo",
+      "label": "Brand logo"
+    },
+    {
+      "type": "text",
+      "id": "brand_logo_url",
+      "label": "Brand logo URL",
+      "default": "//firstday.com/cdn/shop/files/round_logo.png?v=1720622822&width=100"
+    },
+    {
+      "type": "text",
+      "id": "competitor_label",
+      "label": "Competitor label",
+      "default": "Other Multis"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Desktop decorative image"
+    },
+    {
+      "type": "text",
+      "id": "image_desktop_url",
+      "label": "Desktop decorative image URL",
+      "default": "//firstday.com/cdn/shop/files/desk_720.png?v=1763396549&width=1200"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile decorative image"
+    },
+    {
+      "type": "text",
+      "id": "image_mobile_url",
+      "label": "Mobile decorative image URL",
+      "default": "//firstday.com/cdn/shop/files/mob-left_360.png?v=1763396560&width=300"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 48
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID"
+    }
   ],
   "blocks": [
     {
@@ -102,9 +176,22 @@
       "name": "Feature row",
       "limit": 10,
       "settings": [
-        { "type": "text", "id": "label", "label": "Feature", "default": "Clean Label Certified" },
-        { "type": "text", "id": "us_note", "label": "First Day note" },
-        { "type": "text", "id": "them_note", "label": "Competitor note" }
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Feature",
+          "default": "Clean Label Certified"
+        },
+        {
+          "type": "text",
+          "id": "us_note",
+          "label": "First Day note"
+        },
+        {
+          "type": "text",
+          "id": "them_note",
+          "label": "Competitor note"
+        }
       ]
     }
   ],
@@ -112,13 +199,45 @@
     {
       "name": "LP comparison table",
       "blocks": [
-        { "type": "feature_row", "settings": { "label": "Clean Label Certified" } },
-        { "type": "feature_row", "settings": { "label": "Research Backed" } },
-        { "type": "feature_row", "settings": { "label": "Surprise Gift with Purchase" } },
-        { "type": "feature_row", "settings": { "label": "No Fillers or Fake Ingredients" } },
-        { "type": "feature_row", "settings": { "label": "Vegan, Gluten-Free, Non-GMO" } }
+        {
+          "type": "feature_row",
+          "settings": {
+            "label": "Clean Label Certified"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "label": "Research Backed"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "label": "Surprise Gift with Purchase"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "label": "No Fillers or Fake Ingredients"
+          }
+        },
+        {
+          "type": "feature_row",
+          "settings": {
+            "label": "Vegan, Gluten-Free, Non-GMO"
+          }
+        }
       ]
     }
-  ]
+  ],
+  "enabled_on": {
+    "templates": [
+      "page",
+      "index",
+      "product"
+    ]
+  }
 }
 {% endschema %}

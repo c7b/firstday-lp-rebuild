@@ -853,7 +853,12 @@
       "name": "Product tab",
       "limit": 4,
       "settings": [
-        { "type": "product", "id": "product", "label": "Product", "info": "Lets the tab swap the buy box in place, without a page load" },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product",
+          "info": "Lets the tab swap the buy box in place, without a page load"
+        },
         {
           "type": "text",
           "id": "label",
@@ -1089,16 +1094,39 @@
     {
       "name": "LP buy box",
       "blocks": [
-        { "type": "product_tab" },
-        { "type": "benefit" },
-        { "type": "qty_tier" },
-        { "type": "upsell" },
-        { "type": "stamp" },
-        { "type": "info_item" },
-        { "type": "age_card" },
-        { "type": "carousel_image" }
+        {
+          "type": "product_tab"
+        },
+        {
+          "type": "benefit"
+        },
+        {
+          "type": "qty_tier"
+        },
+        {
+          "type": "upsell"
+        },
+        {
+          "type": "stamp"
+        },
+        {
+          "type": "info_item"
+        },
+        {
+          "type": "age_card"
+        },
+        {
+          "type": "carousel_image"
+        }
       ]
     }
-  ]
+  ],
+  "enabled_on": {
+    "templates": [
+      "page",
+      "index",
+      "product"
+    ]
+  }
 }
 {% endschema %}
