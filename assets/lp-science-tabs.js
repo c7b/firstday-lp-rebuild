@@ -30,9 +30,8 @@ class LpScienceTabs extends HTMLElement {
       this.updateVideoToggle(video);
     });
 
-    // These loops are decorative and must run on their own — no click-to-pause, and if the
-    // browser (power saver, background tab, blocked autoplay) stops one, resume it as soon as
-    // it is on screen again.
+    // These loops start on their own. If the browser (power saver, background tab, blocked
+    // autoplay) stops one, resume it when visible unless the user explicitly paused it.
     this.resumeObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !this.reducedMotion.matches) this.ensurePlaying(entry.target);
