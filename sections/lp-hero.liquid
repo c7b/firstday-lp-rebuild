@@ -76,13 +76,13 @@
         <div class="lp-hero__proof">
           {% if section.settings.stat_badge_text != blank %}
             <div class="lp-hero__stat-badge">
-              {% if section.settings.stat_gif_url != blank %}
-                <img class="lp-hero__stat-gif" src="{{ section.settings.stat_gif_url }}" alt="" aria-hidden="true" width="24" height="24" loading="lazy">
+              {% if section.settings.stat_gif != blank %}
+                {{ section.settings.stat_gif | image_url: width: 48 | image_tag: class: 'lp-hero__stat-gif', widths: '24, 48', sizes: '24px', loading: 'lazy', alt: '' }}
               {% endif %}
               <span>{{ section.settings.stat_badge_text | escape }}</span>
               <span class="lp-hero__stat-icons" aria-hidden="true">
-                {% if section.settings.stat_icon_1_url != blank %}<img src="{{ section.settings.stat_icon_1_url }}" alt="" width="26" height="26" loading="lazy">{% endif %}
-                {% if section.settings.stat_icon_2_url != blank %}<img src="{{ section.settings.stat_icon_2_url }}" alt="" width="26" height="26" loading="lazy">{% endif %}
+                {% if section.settings.stat_icon_1 != blank %}{{ section.settings.stat_icon_1 | image_url: width: 52 | image_tag: widths: '26, 52', sizes: '26px', loading: 'lazy', alt: '' }}{% endif %}
+                {% if section.settings.stat_icon_2 != blank %}{{ section.settings.stat_icon_2 | image_url: width: 52 | image_tag: widths: '26, 52', sizes: '26px', loading: 'lazy', alt: '' }}{% endif %}
               </span>
             </div>
           {% endif %}
@@ -92,8 +92,6 @@
               <figure class="lp-hero__testimonial" {{ block.shopify_attributes }}>
                 {% if block.settings.avatar != blank %}
                   {{ block.settings.avatar | image_url: width: 192 | image_tag: class: 'lp-hero__avatar', widths: '96, 192', sizes: '48px', loading: 'lazy', alt: block.settings.author }}
-                {% elsif block.settings.avatar_url != blank %}
-                  <img class="lp-hero__avatar" src="{{ block.settings.avatar_url }}" alt="{{ block.settings.author | escape }}" width="48" height="48" loading="lazy">
                 {% endif %}
                 <blockquote class="rte">{{ block.settings.quote }}</blockquote>
                 {% if block.settings.author != blank %}<figcaption>{{ block.settings.author | escape }}</figcaption>{% endif %}
@@ -108,13 +106,9 @@
       <picture>
         {% if section.settings.image_mobile != blank %}
           <source media="(max-width: 749px)" srcset="{{ section.settings.image_mobile | image_url: width: 1000 }}">
-        {% elsif section.settings.image_mobile_url != blank %}
-          <source media="(max-width: 749px)" srcset="{{ section.settings.image_mobile_url }}">
         {% endif %}
         {% if section.settings.image != blank %}
           {{ section.settings.image | image_url: width: 1600 | image_tag: class: 'lp-hero__image', widths: '375, 550, 750, 1000, 1600', sizes: '(min-width: 750px) 50vw, 100vw', loading: media_loading, alt: section.settings.image_alt }}
-        {% elsif section.settings.image_url != blank %}
-          <img class="lp-hero__image" src="{{ section.settings.image_url }}" alt="{{ section.settings.image_alt | escape }}" loading="{{ media_loading }}">
         {% endif %}
       </picture>
 
@@ -201,12 +195,6 @@
     },
     {
       "type": "text",
-      "id": "image_url",
-      "label": "Desktop image URL",
-      "default": "//firstday.com/cdn/shop/files/tdk-bts-clean-landsscapre-brady-bunch.jpg?v=1784071376&width=800"
-    },
-    {
-      "type": "text",
       "id": "image_alt",
       "label": "Desktop image alt text",
       "default": "Hero image"
@@ -215,12 +203,6 @@
       "type": "image_picker",
       "id": "image_mobile",
       "label": "Mobile image"
-    },
-    {
-      "type": "text",
-      "id": "image_mobile_url",
-      "label": "Mobile image URL",
-      "default": "//firstday.com/cdn/shop/files/tdk-bts-clean-square-brady-bunch.jpg?v=1784071375&width=1000"
     },
     {
       "type": "text",
@@ -252,24 +234,21 @@
       "visible_if": "{{ section.settings.style == 'product' }}"
     },
     {
-      "type": "text",
-      "id": "stat_gif_url",
-      "label": "Sales badge GIF URL",
-      "default": "//firstday.com/cdn/shop/files/ebce1fea9a768a63cc6c95d28e1efa8e9818e9db.gif?v=1775682044&width=48",
+      "type": "image_picker",
+      "id": "stat_gif",
+      "label": "Sales badge GIF",
       "visible_if": "{{ section.settings.style == 'product' }}"
     },
     {
-      "type": "text",
-      "id": "stat_icon_1_url",
-      "label": "Sales badge icon 1 URL",
-      "default": "//firstday.com/cdn/shop/files/gummy-orange-2.png?v=1775682044&width=100",
+      "type": "image_picker",
+      "id": "stat_icon_1",
+      "label": "Sales badge icon 1",
       "visible_if": "{{ section.settings.style == 'product' }}"
     },
     {
-      "type": "text",
-      "id": "stat_icon_2_url",
-      "label": "Sales badge icon 2 URL",
-      "default": "//firstday.com/cdn/shop/files/gummy-orange.png?v=1775682044&width=100",
+      "type": "image_picker",
+      "id": "stat_icon_2",
+      "label": "Sales badge icon 2",
       "visible_if": "{{ section.settings.style == 'product' }}"
     },
     {
@@ -331,11 +310,6 @@
           "type": "image_picker",
           "id": "avatar",
           "label": "Avatar"
-        },
-        {
-          "type": "text",
-          "id": "avatar_url",
-          "label": "Avatar URL"
         }
       ]
     },

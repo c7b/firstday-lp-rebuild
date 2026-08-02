@@ -73,6 +73,27 @@
       "why": "The original badge carries an animated GIF plus two overlapping gummy icons (3 img nodes in the extraction) — small decorations a compressed screenshot hides and a sizing bug can blow up full-width."
     },
     {
+      "id": "selected-sales-badge-gif",
+      "type": "count",
+      "selector": ".lp-hero__stat-gif[src*=\"ebce1fea9a768a63cc6c95d28e1efa8e9818e9db\"]",
+      "equals": 1,
+      "why": "The animated sales asset is selected through its image picker and renders the intended Shopify file."
+    },
+    {
+      "id": "selected-sales-badge-icon-one",
+      "type": "count",
+      "selector": ".lp-hero__stat-icons img[src*=\"gummy-orange-2.png\"]",
+      "equals": 1,
+      "why": "The first gummy is selected through its image picker."
+    },
+    {
+      "id": "selected-sales-badge-icon-two",
+      "type": "count",
+      "selector": ".lp-hero__stat-icons img[src*=\"gummy-orange.png\"]",
+      "equals": 1,
+      "why": "The second gummy is selected through its image picker."
+    },
+    {
       "id": "testimonial-quote-and-author",
       "type": "text",
       "selector": ".lp-hero__testimonial",
