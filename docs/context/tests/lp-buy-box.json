@@ -28,7 +28,7 @@
    "media_count": 10,
    "prices": [
     "$23.40",
-    "$27.30"
+    "$39.00"
    ],
    "expected": {
     "toddlers-multivitamin": {
@@ -51,7 +51,8 @@
     }
    },
    "why": "Clicking each age tab must replace the complete product context without a page load: all three have ten product-specific gallery images and the extracted title, subtitle, flavor, benefits, and monthly/one-time offer prices, with three distinct hero images.",
-   "source_note": "Toddlers facts come from the live Toddlers PDP (docs/context/sections/toddlers-variant-facts.json); Kids from its LP. The Toddlers PDP writes the flavour without emoji — transplanted as-is rather than borrowing the Kids LP's emoji styling."
+   "source_note": "Toddlers facts come from the live Toddlers PDP (docs/context/sections/toddlers-variant-facts.json); Kids from its LP. The Toddlers PDP writes the flavour without emoji — transplanted as-is rather than borrowing the Kids LP's emoji styling.",
+   "price_note": "Subscription price now comes from the real selling plan (40% off $39.00 = $23.40, the same figure the original shows). The one-time card shows the real variant price: the original's $27.30 is a promo-code price, and inventing a discount to match it would be faking the offer."
   },
   {
    "id": "title-copy",

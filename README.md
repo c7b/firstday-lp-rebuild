@@ -8,6 +8,30 @@ build step, non-headless), built as a hiring take-home for First Day.
 (store password in the submission notes; the homepage redirects here). Deploys via the
 Shopify GitHub integration from `main` — the same pipeline First Day production uses.
 
+## About the timebox — read this before the commit history
+
+The brief says ~3–4 hours. The history spans three evenings, so here is exactly what is in it.
+
+**`git checkout timebox`** is the deliverable as briefed: the LP rebuilt, `docs/` written,
+Lighthouse receipts captured. That tag sits on the commit where the brief's checklist was
+complete. Commit timestamps show the work behind it: two sittings, Friday evening and Saturday
+afternoon.
+
+Everything after the tag is **extended work, and it is separable on purpose**:
+
+| After the tag | Why it exists |
+|---|---|
+| `tools/qa_interactions.mjs` — clicks every control, diffs page state | it found controls that changed nothing, which no screenshot catches |
+| `tools/section_loop.py` — analyze → build → verify, with a test runner between the models | the debrief is about process; this is the process as a runnable thing rather than a description |
+| Kids and Toddlers variants | the claim "a new variant is data, not code" is worth more demonstrated than asserted |
+| Real selling plans, in-place product switching | the last stubs on the page, closed |
+| Parity fixes | the loop and the audits kept finding real defects; leaving them in to protect a tag would be the wrong call |
+
+I would rather show the timebox honestly than compress the log. If the question is "can this
+person ship inside a box", the tag answers it. If the question is "what does this person do when
+the box is open", the rest answers that — and for a role where the engineer is the whole
+engineering team, that seemed worth answering too.
+
 ## What the original was, and what it became
 
 | | Original | Rebuild |
