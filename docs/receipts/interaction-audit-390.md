@@ -7,7 +7,7 @@ Page: /pages/tdk-behind-the-science-lp?preview_theme_id=155343814848. Every visi
 
 | # | src | autoplay attr | muted | paused | currentTime | readyState | displayed |
 |---|---|---|---|---|---|---|---|
-| 0 | 86529cc4b8b94176a087225d420f1186.HD-720p | true | true | false | 6.01 | 4 | true |
+| 0 | 86529cc4b8b94176a087225d420f1186.HD-720p | true | true | false | 5.88 | 4 | true |
 | 1 | 70b449145a3a43d9a1ab80b504ad74f2.HD-720p | false | true | true | 0 | 4 | false |
 | 2 | d39e8ab1a70345f9b8fa90bb9074134e.HD-720p | false | true | true | 0 | 4 | false |
 | 3 | 1103d2646f9a4e42b9dc7442d874cd83.HD-720p | false | true | true | 0 | 4 | false |
@@ -45,7 +45,7 @@ _none_
 | buy_box | button.lp-buy-box__media-nav | Previous image | 36x36 | aria |
 | buy_box | button.lp-buy-box__media-nav | Next image | 36x36 | aria |
 | buy_box | button.lp-buy-box__thumbnail | The "No Junk"™ Teens’ Multi — view product image | 68x68 | aria |
-| buy_box | button.lp-buy-box__thumbnail | The "No Junk"™ Teens’ Multi — view product image | 68x68 | already active |
+| buy_box | button.lp-buy-box__thumbnail | The "No Junk"™ Teens’ Multi — view product image | 68x68 | aria |
 | buy_box | button.lp-buy-box__thumbnail | The "No Junk"™ Teens’ Multi — view product image | 68x68 | aria |
 | buy_box | button.lp-buy-box__thumbnail | The "No Junk"™ Teens’ Multi — view product image | 68x68 | aria |
 | buy_box | button.lp-buy-box__thumbnail | The "No Junk"™ Teens’ Multi — view product image | 68x68 | aria |
@@ -56,7 +56,6 @@ _none_
 | buy_box | button.lp-buy-box__thumbnail | The "No Junk"™ Teens’ Multi — view product image | 68x68 | aria |
 | buy_box | a.lp-buy-box__product-tab | Toddlers' | 105x44 | link 200 |
 | buy_box | a.lp-buy-box__product-tab | Kids' | 88x44 | link 200 |
-| buy_box | a.lp-buy-box__product-tab | Teens' | 88x44 | link 200 |
 | buy_box | summary.lp-buy-box__benefit-summary | Improve Overall Health & Nutrition | 358x64 | aria+visibility+content |
 | buy_box | summary.lp-buy-box__benefit-summary | Boost Mood & Motivation | 358x64 | aria+visibility+content |
 | buy_box | summary.lp-buy-box__benefit-summary | Promote Clear Skin | 358x64 | aria+visibility+content |
@@ -97,8 +96,7 @@ _none_
 - Failed to load resource: the server responded with a status of 404 ()
 - Failed to load resource: net::ERR_FAILED
 - pageerror: TypeError: shown.set is not a function
-- HTTP 403: https://shop.app/pay/hop?analytics_trace_id=1da4f5b4-c3dc-4d8d-bace-e1e5987d6c7f&target_origin=https%3A%2F%2Ffirstday-lp-rebuild.myshopify.com&client_handle=firstday-lp-rebuild.mys
-- Framing 'https://shop.app/' violates the following Content Security Policy directive: "frame-ancestors 'self' https://shop.app https://admin.shopify.com". The request has been blocked.
+- HTTP 403: https://shop.app/pay/hop?analytics_trace_id=3492e0f8-e907-4d75-872f-3a2f7227503b&target_origin=https%3A%2F%2Ffirstday-lp-rebuild.myshopify.com&client_handle=firstday-lp-rebuild.mys
 - Failed to load resource: the server responded with a status of 403 ()
 - pageerror: TypeError: Failed to fetch
 - Access to XMLHttpRequest at 'https://error-analytics-sessions-production.shopifysvc.com/' from origin 'https://cdn.shopify.com' has been blocked by CORS policy: Request header field pragma is not allo
