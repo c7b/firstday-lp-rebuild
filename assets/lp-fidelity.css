@@ -27,6 +27,15 @@
   --lp-navy: #2c3d50;
 }
 
+/* Most text does not read --lp-navy at all: it reads --color-foreground, which Dawn sets per
+   colour scheme from settings_data.json. Correcting the token alone left the wrong colour
+   everywhere it actually mattered. Only the two light schemes are touched — scheme-3 is the
+   dark band and its foreground is white by design. */
+.color-scheme-1,
+.color-scheme-2 {
+  --color-foreground: 44, 61, 80;
+}
+
 /* ---------------------------------------------------------------------------
    2. Headings — the original runs them lighter, tighter and untracked.
    --------------------------------------------------------------------------- */
@@ -42,10 +51,7 @@
 .shopify-section[class*='lp-'] .lp-hero__heading,
 .shopify-section[class*='lp-'] .lp-media-accordion__heading,
 .shopify-section[class*='lp-'] .lp-science-tabs__heading,
-.shopify-section[class*='lp-'] .lp-science-tabs__content-title {
-  font-weight: 600;
-  letter-spacing: normal;
-}
+
 
 /* Hero h1 — measured 28px, 28px line-height, capitalize. Ours ran 42px at desktop. */
 .lp-hero__heading {
@@ -54,24 +60,34 @@
   text-transform: capitalize;
 }
 
-/* Section h2 — measured 38px / 38px / capitalize / centred. */
-.lp-media-accordion__heading,
-.lp-science-tabs__heading {
+/* The two section h2s look like one role and are not. Measured at 1440: the accordion's is
+   38px on a 38px line and capitalized; the tabs' is 38px on a 53.2px line with no transform.
+   Grouping them cost a line-height and a text-transform in the previous pass. */
+.lp-media-accordion__heading {
   font-size: 3.8rem;
   line-height: 3.8rem;
   text-transform: capitalize;
   text-align: center;
 }
 
-/* Tab panel title — measured 24px / 33.6px, centred. */
-.lp-science-tabs__content-title {
+.lp-science-tabs__heading {
+  font-size: 3.8rem;
+  line-height: 5.32rem;
+  text-transform: none;
+  text-align: center;
+}
+
+/* Tab panel title — measured 24px / 33.6px, centred. The class is __panel-heading; the
+   previous pass guessed __content-title and silently styled nothing. */
+.shopify-section[class*='lp-'] .lp-science-tabs__panel-heading {
   font-size: 2.4rem;
+  font-weight: 600;
   line-height: 3.36rem;
+  letter-spacing: normal;
   text-align: center;
 }
 
 /* Tab panel body — measured 18px / 25.2px. */
-.lp-science-tabs__content-desc,
 .lp-science-tabs__panel-content p {
   font-size: 1.8rem;
   line-height: 2.52rem;
@@ -82,10 +98,12 @@
    --------------------------------------------------------------------------- */
 
 /* CTA label measured 18px / 600 / 25.2px. */
+/* The original ranges the CTA label rather than centring it. */
 .lp-hero__cta {
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 2.52rem;
+  text-align: start;
 }
 
 /* Review line measured 14px / 400 / 19.6px — ours was 13px and bold, which made a quiet
@@ -243,7 +261,7 @@
   color: var(--lp-navy);
   background: #f2fbff;
   padding: 0.4rem 1.2rem;
-  border-radius: 0.4rem;
+  border-radius: 0;
 }
 
 /* ---------------------------------------------------------------------------
@@ -252,4 +270,54 @@
 
 .lp-fidelity-overrides {
   display: none;
+}
+
+/* ---------------------------------------------------------------------------
+   7. Mobile. The reference is not a scaled-down desktop — it resets type at 390px, and
+   fixed desktop values above would otherwise ship a phone page that is too large
+   everywhere. All measured at 390px.
+   --------------------------------------------------------------------------- */
+
+@media screen and (max-width: 749px) {
+  .lp-media-accordion__heading {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+  }
+
+  .lp-science-tabs__heading {
+    font-size: 2.4rem;
+    line-height: 3.36rem;
+  }
+
+  .lp-media-accordion__title {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+
+  .lp-media-accordion__cta {
+    line-height: 1.8rem;
+  }
+
+  .lp-science-tabs__tab {
+    font-size: 1.6rem;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    /* The tab keeps a hairline border on mobile and drops it at desktop. */
+    border: 1px solid currentColor;
+  }
+
+  .shopify-section[class*='lp-'] .lp-science-tabs__panel-heading {
+    font-size: 2.2rem;
+    line-height: 3.08rem;
+  }
+
+  .lp-science-tabs__panel-content p {
+    font-size: 1.6rem;
+    line-height: 2.24rem;
+  }
+
+  .lp-buy-box__quantity-label {
+    font-size: 1.4rem;
+    line-height: 1.96rem;
+  }
 }

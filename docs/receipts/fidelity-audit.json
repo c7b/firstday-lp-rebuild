@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T23:18:52.518Z",
+ "generated": "2026-08-03T23:28:39.487Z",
  "original": "http://127.0.0.1:8777/fd-lp.html",
  "rebuild": "https://firstday-lp-rebuild.myshopify.com/pages/tdk-behind-the-science-lp-v2",
  "viewports": {
@@ -9,31 +9,6 @@
     "origText": "The \nScience-Backed Vitamin for Grumpy, Tired, o",
     "ourText": "The Science-Backed Vitamin for Grumpy, Tired, or",
     "diffs": [
-     {
-      "property": "font-family",
-      "original": "sofia-pro, sans-serif",
-      "rebuild": "gelica, Bitter, serif, Georgia, serif"
-     },
-     {
-      "property": "font-size",
-      "original": "28px",
-      "rebuild": "26px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "-1.17px"
-     },
-     {
-      "property": "text-transform",
-      "original": "capitalize",
-      "rebuild": "none"
-     },
      {
       "property": "color",
       "original": "rgb(44, 61, 80)",
@@ -47,21 +22,6 @@
     "ourText": "Unlock Better Nutrition 🍊💊",
     "diffs": [
      {
-      "property": "font-size",
-      "original": "18px",
-      "rebuild": "16px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "25.2px",
-      "rebuild": "19.2px"
-     },
-     {
       "property": "text-align",
       "original": "start",
       "rebuild": "center"
@@ -73,21 +33,6 @@
     "origText": "4.8 stars from 12,322+ reviewers",
     "ourText": "4.8 stars from 12,322+ reviewers",
     "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "13px"
-     },
-     {
-      "property": "font-weight",
-      "original": "400",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "16.9px"
-     },
      {
       "property": "color",
       "original": "rgb(44, 61, 80)",
@@ -101,39 +46,14 @@
     "ourText": "Most Kids Are Missing Key Nutrients. Get Help in",
     "diffs": [
      {
-      "property": "font-family",
-      "original": "sofia-pro, sans-serif",
-      "rebuild": "gelica, Bitter, serif, Georgia, serif"
-     },
-     {
       "property": "font-size",
       "original": "24px",
-      "rebuild": "28px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
+      "rebuild": "38px"
      },
      {
       "property": "line-height",
       "original": "24px",
-      "rebuild": "31.36px"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "-1.12px"
-     },
-     {
-      "property": "text-transform",
-      "original": "capitalize",
-      "rebuild": "none"
-     },
-     {
-      "property": "text-align",
-      "original": "center",
-      "rebuild": "start"
+      "rebuild": "38px"
      }
     ]
    },
@@ -145,27 +65,12 @@
      {
       "property": "font-size",
       "original": "16px",
-      "rebuild": "17px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
+      "rebuild": "18px"
      },
      {
       "property": "line-height",
       "original": "16px",
-      "rebuild": "22.1px"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "0.6px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(26, 26, 26)",
-      "rebuild": "rgb(44, 62, 80)"
+      "rebuild": "18px"
      }
     ]
    },
@@ -175,14 +80,9 @@
     "ourText": "Shop Now",
     "diffs": [
      {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
       "property": "line-height",
       "original": "18px",
-      "rebuild": "27px"
+      "rebuild": "19.2px"
      }
     ]
    },
@@ -190,75 +90,13 @@
     "role": "accordion / cta box",
     "origText": "Shop Now",
     "ourText": "Shop Now",
-    "diffs": [
-     {
-      "property": "padding-top",
-      "original": "14px",
-      "rebuild": "10px"
-     },
-     {
-      "property": "padding-bottom",
-      "original": "14px",
-      "rebuild": "10px"
-     },
-     {
-      "property": "padding-left",
-      "original": "32px",
-      "rebuild": "24px"
-     },
-     {
-      "property": "padding-right",
-      "original": "32px",
-      "rebuild": "24px"
-     },
-     {
-      "property": "border-radius",
-      "original": "8px",
-      "rebuild": "999px"
-     },
-     {
-      "property": "border-top-width",
-      "original": "0px",
-      "rebuild": "1px"
-     },
-     {
-      "property": "border-bottom-width",
-      "original": "0px",
-      "rebuild": "1px"
-     },
-     {
-      "property": "box-shadow",
-      "original": "rgb(168, 232, 226) 0px 0px 0px 0px",
-      "rebuild": "none"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / guarantee",
     "origText": "45-Day Money Back Guarantee",
     "ourText": "45-Day Money Back Guarantee",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "font-weight",
-      "original": "500",
-      "rebuild": "400"
-     },
-     {
-      "property": "line-height",
-      "original": "18.2px",
-      "rebuild": "21.6px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(51, 51, 51)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "tabs / heading",
@@ -266,29 +104,19 @@
     "ourText": "The Science Behind Our Multivitamin",
     "diffs": [
      {
-      "property": "font-family",
-      "original": "sofia-pro, sans-serif",
-      "rebuild": "gelica, Bitter, serif, Georgia, serif"
-     },
-     {
       "property": "font-size",
       "original": "24px",
-      "rebuild": "28px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
+      "rebuild": "38px"
      },
      {
       "property": "line-height",
       "original": "33.6px",
-      "rebuild": "30.8px"
+      "rebuild": "38px"
      },
      {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "0.6px"
+      "property": "text-transform",
+      "original": "none",
+      "rebuild": "capitalize"
      },
      {
       "property": "color",
@@ -306,16 +134,6 @@
       "property": "font-size",
       "original": "16px",
       "rebuild": "14px"
-     },
-     {
-      "property": "font-weight",
-      "original": "400",
-      "rebuild": "600"
-     },
-     {
-      "property": "line-height",
-      "original": "22.4px",
-      "rebuild": "18.2px"
      }
     ]
    },
@@ -332,32 +150,22 @@
      {
       "property": "padding-top",
       "original": "18px",
-      "rebuild": "11px"
+      "rebuild": "12px"
      },
      {
       "property": "padding-bottom",
       "original": "18px",
-      "rebuild": "11px"
+      "rebuild": "12px"
      },
      {
-      "property": "padding-left",
-      "original": "20px",
-      "rebuild": "16px"
+      "property": "border-top-width",
+      "original": "1px",
+      "rebuild": "0px"
      },
      {
-      "property": "padding-right",
-      "original": "20px",
-      "rebuild": "16px"
-     },
-     {
-      "property": "border-radius",
-      "original": "1000px",
-      "rebuild": "999px"
-     },
-     {
-      "property": "gap",
-      "original": "8px",
-      "rebuild": "normal"
+      "property": "border-bottom-width",
+      "original": "1px",
+      "rebuild": "0px"
      }
     ]
    },
@@ -366,11 +174,6 @@
     "origText": "How This Helps*",
     "ourText": "How This Helps*",
     "diffs": [
-     {
-      "property": "font-family",
-      "original": "sofia-pro, sans-serif",
-      "rebuild": "gelica, Bitter, serif, Georgia, serif"
-     },
      {
       "property": "font-size",
       "original": "22px",
@@ -411,7 +214,12 @@
      {
       "property": "font-size",
       "original": "16px",
-      "rebuild": "15px"
+      "rebuild": "18px"
+     },
+     {
+      "property": "line-height",
+      "original": "22.4px",
+      "rebuild": "25.2px"
      },
      {
       "property": "color",
@@ -424,18 +232,7 @@
     "role": "buy box / gallery image",
     "origText": "",
     "ourText": "",
-    "diffs": [
-     {
-      "property": "object-fit",
-      "original": "contain",
-      "rebuild": "cover"
-     },
-     {
-      "property": "aspect-ratio",
-      "original": "auto",
-      "rebuild": "auto 1400 / 1400"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / group legend",
@@ -443,24 +240,9 @@
     "ourText": "Delivery Frequency",
     "diffs": [
      {
-      "property": "font-size",
-      "original": "20px",
-      "rebuild": "17px"
-     },
-     {
       "property": "font-weight",
       "original": "708",
-      "rebuild": "800"
-     },
-     {
-      "property": "line-height",
-      "original": "28px",
-      "rebuild": "22.1px"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "0.6px"
+      "rebuild": "700"
      },
      {
       "property": "color",
@@ -480,11 +262,6 @@
       "rebuild": "700"
      },
      {
-      "property": "line-height",
-      "original": "22.4px",
-      "rebuild": "20.8px"
-     },
-     {
       "property": "color",
       "original": "rgb(44, 61, 80)",
       "rebuild": "rgb(44, 62, 80)"
@@ -500,16 +277,6 @@
       "property": "font-weight",
       "original": "708",
       "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "25.2px",
-      "rebuild": "23.4px"
-     },
-     {
-      "property": "text-align",
-      "original": "start",
-      "rebuild": "right"
      }
     ]
    },
@@ -517,131 +284,31 @@
     "role": "buy box / price compare",
     "origText": "Original price $39, strikethrough\n              ",
     "ourText": "$39",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "13px"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "23.4px"
-     },
-     {
-      "property": "text-align",
-      "original": "start",
-      "rebuild": "right"
-     },
-     {
-      "property": "color",
-      "original": "rgb(115, 115, 115)",
-      "rebuild": "rgba(44, 62, 80, 0.58)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / price note",
     "origText": "with code FIREWORKS",
     "ourText": "with code FIREWORKS",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "15.6px"
-     },
-     {
-      "property": "text-align",
-      "original": "start",
-      "rebuild": "right"
-     },
-     {
-      "property": "color",
-      "original": "rgb(115, 115, 115)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / plan benefit",
     "origText": "FREE Gift on orders +$75",
     "ourText": "FREE Gift on orders +$75FREE Shipping on first o",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12.5px"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "16.875px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgba(44, 62, 80, 0.75)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / plan badge text",
     "origText": "Lowest Price Anywhere!",
     "ourText": "Lowest Price Anywhere!",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "font-weight",
-      "original": "400",
-      "rebuild": "800"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "15.6px"
-     },
-     {
-      "property": "text-align",
-      "original": "center",
-      "rebuild": "start"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / plan badge box",
     "origText": "Lowest Price Anywhere!",
     "ourText": "Lowest Price Anywhere!",
-    "diffs": [
-     {
-      "property": "margin-top",
-      "original": "0px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "padding-left",
-      "original": "12px",
-      "rebuild": "8px"
-     },
-     {
-      "property": "padding-right",
-      "original": "12px",
-      "rebuild": "8px"
-     },
-     {
-      "property": "border-radius",
-      "original": "200px",
-      "rebuild": "9990px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / servings text",
@@ -652,26 +319,6 @@
       "property": "font-family",
       "original": "\"Sofia Sans\", sofia-pro, sofia-pro, -apple-system, sans-serif",
       "rebuild": "sofia-pro, Poppins, sans-serif, system-ui, sans-serif"
-     },
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "font-weight",
-      "original": "400",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "15.6px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(255, 255, 255)",
-      "rebuild": "rgb(44, 62, 80)"
      }
     ]
    },
@@ -679,49 +326,18 @@
     "role": "buy box / servings box",
     "origText": "30 Servings Per Bottle",
     "ourText": "30 Servings Per Bottle",
-    "diffs": [
-     {
-      "property": "background-color",
-      "original": "rgb(113, 118, 126)",
-      "rebuild": "rgba(44, 62, 80, 0.08)"
-     },
-     {
-      "property": "margin-bottom",
-      "original": "0px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "padding-top",
-      "original": "4px",
-      "rebuild": "5px"
-     },
-     {
-      "property": "padding-bottom",
-      "original": "4px",
-      "rebuild": "5px"
-     },
-     {
-      "property": "padding-left",
-      "original": "12px",
-      "rebuild": "9px"
-     },
-     {
-      "property": "padding-right",
-      "original": "12px",
-      "rebuild": "9px"
-     },
-     {
-      "property": "border-radius",
-      "original": "4px",
-      "rebuild": "9990px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / qty label",
     "origText": "1‎ Bottle",
     "ourText": "1‎ Bottle",
     "diffs": [
+     {
+      "property": "font-size",
+      "original": "14px",
+      "rebuild": "16px"
+     },
      {
       "property": "font-weight",
       "original": "708",
@@ -730,7 +346,7 @@
      {
       "property": "line-height",
       "original": "19.6px",
-      "rebuild": "17.55px"
+      "rebuild": "22.4px"
      },
      {
       "property": "color",
@@ -743,28 +359,7 @@
     "role": "buy box / qty savings text",
     "origText": "Save $15.80",
     "ourText": "Save $15.80",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "font-weight",
-      "original": "400",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "15.6px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(255, 255, 255)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / qty savings box",
@@ -772,29 +367,9 @@
     "ourText": "Save $15.80",
     "diffs": [
      {
-      "property": "background-color",
-      "original": "rgb(242, 251, 255)",
-      "rebuild": "rgb(7, 137, 66)"
-     },
-     {
-      "property": "padding-top",
-      "original": "4px",
-      "rebuild": "5.5px"
-     },
-     {
-      "property": "padding-bottom",
-      "original": "4px",
-      "rebuild": "5.5px"
-     },
-     {
-      "property": "padding-left",
-      "original": "12px",
-      "rebuild": "5px"
-     },
-     {
-      "property": "padding-right",
-      "original": "12px",
-      "rebuild": "5px"
+      "property": "border-radius",
+      "original": "0px",
+      "rebuild": "4px"
      }
     ]
    }
@@ -805,36 +380,6 @@
     "origText": "The \nScience-Backed Vitamin for Grumpy, Tired, o",
     "ourText": "The Science-Backed Vitamin for Grumpy, Tired, or",
     "diffs": [
-     {
-      "property": "font-family",
-      "original": "sofia-pro, sans-serif",
-      "rebuild": "gelica, Bitter, serif, Georgia, serif"
-     },
-     {
-      "property": "font-size",
-      "original": "28px",
-      "rebuild": "42px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "28px",
-      "rebuild": "44.52px"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "-1.89px"
-     },
-     {
-      "property": "text-transform",
-      "original": "capitalize",
-      "rebuild": "none"
-     },
      {
       "property": "color",
       "original": "rgb(44, 61, 80)",
@@ -848,21 +393,6 @@
     "ourText": "Unlock Better Nutrition 🍊💊",
     "diffs": [
      {
-      "property": "font-size",
-      "original": "18px",
-      "rebuild": "16px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "25.2px",
-      "rebuild": "19.2px"
-     },
-     {
       "property": "text-align",
       "original": "start",
       "rebuild": "center"
@@ -875,21 +405,6 @@
     "ourText": "4.8 stars from 12,322+ reviewers",
     "diffs": [
      {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "13px"
-     },
-     {
-      "property": "font-weight",
-      "original": "400",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "16.9px"
-     },
-     {
       "property": "color",
       "original": "rgb(44, 61, 80)",
       "rebuild": "rgb(44, 62, 80)"
@@ -900,166 +415,31 @@
     "role": "accordion / heading",
     "origText": "Most Kids Are \nMissing Key Nutrients. Get Help i",
     "ourText": "Most Kids Are Missing Key Nutrients. Get Help in",
-    "diffs": [
-     {
-      "property": "font-family",
-      "original": "sofia-pro, sans-serif",
-      "rebuild": "gelica, Bitter, serif, Georgia, serif"
-     },
-     {
-      "property": "font-size",
-      "original": "38px",
-      "rebuild": "50px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "38px",
-      "rebuild": "56px"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "-2px"
-     },
-     {
-      "property": "text-transform",
-      "original": "capitalize",
-      "rebuild": "none"
-     },
-     {
-      "property": "text-align",
-      "original": "center",
-      "rebuild": "start"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / item title",
     "origText": "Stress & Mood Swings",
     "ourText": "Stress & Mood Swings",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "18px",
-      "rebuild": "20px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "18px",
-      "rebuild": "26px"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "0.6px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(26, 26, 26)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / cta label",
     "origText": "Shop Now",
     "ourText": "Shop Now",
-    "diffs": [
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "19.2px",
-      "rebuild": "28.8px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / cta box",
     "origText": "Shop Now",
     "ourText": "Shop Now",
-    "diffs": [
-     {
-      "property": "padding-top",
-      "original": "14px",
-      "rebuild": "10px"
-     },
-     {
-      "property": "padding-bottom",
-      "original": "14px",
-      "rebuild": "10px"
-     },
-     {
-      "property": "padding-left",
-      "original": "32px",
-      "rebuild": "24px"
-     },
-     {
-      "property": "padding-right",
-      "original": "32px",
-      "rebuild": "24px"
-     },
-     {
-      "property": "border-radius",
-      "original": "8px",
-      "rebuild": "999px"
-     },
-     {
-      "property": "border-top-width",
-      "original": "0px",
-      "rebuild": "1px"
-     },
-     {
-      "property": "border-bottom-width",
-      "original": "0px",
-      "rebuild": "1px"
-     },
-     {
-      "property": "box-shadow",
-      "original": "rgb(168, 232, 226) 0px 0px 0px 0px",
-      "rebuild": "none"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / guarantee",
     "origText": "45-Day Money Back Guarantee",
     "ourText": "45-Day Money Back Guarantee",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "font-weight",
-      "original": "500",
-      "rebuild": "400"
-     },
-     {
-      "property": "line-height",
-      "original": "18.2px",
-      "rebuild": "21.6px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(51, 51, 51)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "tabs / heading",
@@ -1067,24 +447,14 @@
     "ourText": "The Science Behind Our Multivitamin",
     "diffs": [
      {
-      "property": "font-family",
-      "original": "sofia-pro, sans-serif",
-      "rebuild": "gelica, Bitter, serif, Georgia, serif"
+      "property": "line-height",
+      "original": "53.2px",
+      "rebuild": "38px"
      },
      {
-      "property": "font-size",
-      "original": "38px",
-      "rebuild": "48px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "0.6px"
+      "property": "text-transform",
+      "original": "none",
+      "rebuild": "capitalize"
      },
      {
       "property": "color",
@@ -1097,18 +467,7 @@
     "role": "tabs / tab label",
     "origText": "Focus in Class",
     "ourText": "Focus in Class",
-    "diffs": [
-     {
-      "property": "font-weight",
-      "original": "400",
-      "rebuild": "600"
-     },
-     {
-      "property": "line-height",
-      "original": "22.4px",
-      "rebuild": "20.8px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "tabs / tab box",
@@ -1119,46 +478,6 @@
       "property": "background-color",
       "original": "rgb(44, 61, 80)",
       "rebuild": "rgb(44, 62, 80)"
-     },
-     {
-      "property": "padding-top",
-      "original": "12px",
-      "rebuild": "11px"
-     },
-     {
-      "property": "padding-bottom",
-      "original": "12px",
-      "rebuild": "11px"
-     },
-     {
-      "property": "padding-left",
-      "original": "20px",
-      "rebuild": "24px"
-     },
-     {
-      "property": "padding-right",
-      "original": "20px",
-      "rebuild": "24px"
-     },
-     {
-      "property": "border-radius",
-      "original": "1000px",
-      "rebuild": "999px"
-     },
-     {
-      "property": "border-top-width",
-      "original": "0px",
-      "rebuild": "1px"
-     },
-     {
-      "property": "border-bottom-width",
-      "original": "0px",
-      "rebuild": "1px"
-     },
-     {
-      "property": "gap",
-      "original": "8px",
-      "rebuild": "normal"
      }
     ]
    },
@@ -1167,11 +486,6 @@
     "origText": "How This Helps*",
     "ourText": "How This Helps*",
     "diffs": [
-     {
-      "property": "font-family",
-      "original": "sofia-pro, sans-serif",
-      "rebuild": "gelica, Bitter, serif, Georgia, serif"
-     },
      {
       "property": "font-size",
       "original": "24px",
@@ -1210,16 +524,6 @@
     "ourText": "🧠 Vitamin B1 supports brain signaling and memor",
     "diffs": [
      {
-      "property": "font-size",
-      "original": "18px",
-      "rebuild": "15px"
-     },
-     {
-      "property": "line-height",
-      "original": "25.2px",
-      "rebuild": "21.75px"
-     },
-     {
       "property": "color",
       "original": "rgb(44, 61, 80)",
       "rebuild": "rgb(44, 62, 80)"
@@ -1230,18 +534,7 @@
     "role": "buy box / gallery image",
     "origText": "",
     "ourText": "",
-    "diffs": [
-     {
-      "property": "object-fit",
-      "original": "contain",
-      "rebuild": "cover"
-     },
-     {
-      "property": "aspect-ratio",
-      "original": "auto",
-      "rebuild": "auto 1400 / 1400"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / group legend",
@@ -1249,24 +542,9 @@
     "ourText": "Delivery Frequency",
     "diffs": [
      {
-      "property": "font-size",
-      "original": "20px",
-      "rebuild": "17px"
-     },
-     {
       "property": "font-weight",
       "original": "708",
-      "rebuild": "800"
-     },
-     {
-      "property": "line-height",
-      "original": "28px",
-      "rebuild": "22.1px"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "0.6px"
+      "rebuild": "700"
      },
      {
       "property": "color",
@@ -1286,11 +564,6 @@
       "rebuild": "700"
      },
      {
-      "property": "line-height",
-      "original": "22.4px",
-      "rebuild": "20.8px"
-     },
-     {
       "property": "color",
       "original": "rgb(44, 61, 80)",
       "rebuild": "rgb(44, 62, 80)"
@@ -1306,16 +579,6 @@
       "property": "font-weight",
       "original": "708",
       "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "25.2px",
-      "rebuild": "23.4px"
-     },
-     {
-      "property": "text-align",
-      "original": "start",
-      "rebuild": "right"
      }
     ]
    },
@@ -1323,131 +586,31 @@
     "role": "buy box / price compare",
     "origText": "Original price $39, strikethrough\n              ",
     "ourText": "$39",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "13px"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "23.4px"
-     },
-     {
-      "property": "text-align",
-      "original": "start",
-      "rebuild": "right"
-     },
-     {
-      "property": "color",
-      "original": "rgb(115, 115, 115)",
-      "rebuild": "rgba(44, 62, 80, 0.58)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / price note",
     "origText": "with code FIREWORKS",
     "ourText": "with code FIREWORKS",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "15.6px"
-     },
-     {
-      "property": "text-align",
-      "original": "start",
-      "rebuild": "right"
-     },
-     {
-      "property": "color",
-      "original": "rgb(115, 115, 115)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / plan benefit",
     "origText": "FREE Gift on orders +$75",
     "ourText": "FREE Gift on orders +$75FREE Shipping on first o",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12.5px"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "16.875px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgba(44, 62, 80, 0.75)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / plan badge text",
     "origText": "Lowest Price Anywhere!",
     "ourText": "Lowest Price Anywhere!",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "font-weight",
-      "original": "400",
-      "rebuild": "800"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "15.6px"
-     },
-     {
-      "property": "text-align",
-      "original": "center",
-      "rebuild": "start"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / plan badge box",
     "origText": "Lowest Price Anywhere!",
     "ourText": "Lowest Price Anywhere!",
-    "diffs": [
-     {
-      "property": "margin-top",
-      "original": "0px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "padding-left",
-      "original": "12px",
-      "rebuild": "8px"
-     },
-     {
-      "property": "padding-right",
-      "original": "12px",
-      "rebuild": "8px"
-     },
-     {
-      "property": "border-radius",
-      "original": "200px",
-      "rebuild": "9990px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / servings text",
@@ -1458,26 +621,6 @@
       "property": "font-family",
       "original": "\"Sofia Sans\", sofia-pro, sofia-pro, -apple-system, sans-serif",
       "rebuild": "sofia-pro, Poppins, sans-serif, system-ui, sans-serif"
-     },
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "font-weight",
-      "original": "400",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "15.6px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(255, 255, 255)",
-      "rebuild": "rgb(44, 62, 80)"
      }
     ]
    },
@@ -1485,43 +628,7 @@
     "role": "buy box / servings box",
     "origText": "30 Servings Per Bottle",
     "ourText": "30 Servings Per Bottle",
-    "diffs": [
-     {
-      "property": "background-color",
-      "original": "rgb(113, 118, 126)",
-      "rebuild": "rgba(44, 62, 80, 0.08)"
-     },
-     {
-      "property": "margin-bottom",
-      "original": "0px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "padding-top",
-      "original": "4px",
-      "rebuild": "5px"
-     },
-     {
-      "property": "padding-bottom",
-      "original": "4px",
-      "rebuild": "5px"
-     },
-     {
-      "property": "padding-left",
-      "original": "12px",
-      "rebuild": "9px"
-     },
-     {
-      "property": "padding-right",
-      "original": "12px",
-      "rebuild": "9px"
-     },
-     {
-      "property": "border-radius",
-      "original": "4px",
-      "rebuild": "9990px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / qty label",
@@ -1529,19 +636,9 @@
     "ourText": "1‎ Bottle",
     "diffs": [
      {
-      "property": "font-size",
-      "original": "16px",
-      "rebuild": "13.5px"
-     },
-     {
       "property": "font-weight",
       "original": "708",
       "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "22.4px",
-      "rebuild": "17.55px"
      },
      {
       "property": "color",
@@ -1554,28 +651,7 @@
     "role": "buy box / qty savings text",
     "origText": "Save $15.80",
     "ourText": "Save $15.80",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "font-weight",
-      "original": "400",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "15.6px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(255, 255, 255)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / qty savings box",
@@ -1583,29 +659,9 @@
     "ourText": "Save $15.80",
     "diffs": [
      {
-      "property": "background-color",
-      "original": "rgb(242, 251, 255)",
-      "rebuild": "rgb(7, 137, 66)"
-     },
-     {
-      "property": "padding-top",
-      "original": "4px",
-      "rebuild": "5.5px"
-     },
-     {
-      "property": "padding-bottom",
-      "original": "4px",
-      "rebuild": "5.5px"
-     },
-     {
-      "property": "padding-left",
-      "original": "12px",
-      "rebuild": "5px"
-     },
-     {
-      "property": "padding-right",
-      "original": "12px",
-      "rebuild": "5px"
+      "property": "border-radius",
+      "original": "0px",
+      "rebuild": "4px"
      }
     ]
    }

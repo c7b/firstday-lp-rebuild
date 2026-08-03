@@ -116,10 +116,12 @@ const browser = await chromium.launch({ executablePath: CHROME, args: ['--no-san
 const report = { generated: new Date().toISOString(), original: ORIGINAL, rebuild: REBUILD, viewports: {} };
 
 for (const width of VIEWPORTS) {
+  /* No userAgent override. Shopify's edge varies its page cache by UA, and a spoofed one was
+     reliably served a render from before the last deploy — which made two real CSS changes
+     look like no change at all. The default Chromium UA gets the current render. */
   const ctx = await browser.newContext({
     viewport: { width, height: 1000 },
     isMobile: width < 700,
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
   });
   const a = await ctx.newPage();          // original
   const b = await ctx.newPage();          // rebuild
@@ -140,6 +142,15 @@ for (const width of VIEWPORTS) {
   const bust = `${REBUILD}${REBUILD.includes('?') ? '&' : '?'}_fid=${Date.now()}`;
   await b.goto(bust, { waitUntil: 'domcontentloaded', timeout: 90000 });
   await b.waitForTimeout(4500);
+
+  /* State check before any measurement: a harness that silently measured the password screen
+     would report the rebuild as wildly different and be believed. */
+  const state = await b.evaluate(() => ({
+    url: location.href,
+    css: ([...document.querySelectorAll('link')].map((l) => l.href).find((h) => h.includes('lp-fidelity')) || 'NONE').split('/').pop(),
+    heading: getComputedStyle(document.querySelector('.lp-hero__heading') || document.body).fontFamily.split(',')[0],
+  }));
+  console.log(`  [${width}px] rebuild at ${state.url.slice(-46)} | ${state.css.slice(0, 40)} | h1 ${state.heading}`);
 
   const rows = [];
   for (const [role, origSel, ourSel, group] of PAIRS) {
