@@ -472,6 +472,12 @@
             </div>
           </fieldset>
 
+          {%- comment -%}
+            Empty heading switches the whole gift bar off — no empty frame, no dead progress
+            bar. The behaviour below stays wired, so turning it back on is a setting, not a
+            deploy.
+          {%- endcomment -%}
+          {% if section.settings.gift_heading != blank %}
           <div class="lp-buy-box__gift">
             <div class="lp-buy-box__gift-content">
               <div class="lp-buy-box__gift-copy">
@@ -520,7 +526,15 @@
               <span class="lp-buy-box__progress-threshold">{{ section.settings.gift_threshold | escape }}</span>
             </div>
           </div>
+          {% endif %}
 
+          {%- assign upsell_count = 0 -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'upsell' -%}
+              {%- assign upsell_count = upsell_count | plus: 1 -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {% if upsell_count > 0 %}
           <div class="lp-buy-box__upsells">
             {% for block in section.blocks %}
               {% if block.type == 'upsell' %}
@@ -583,13 +597,16 @@
               {% endif %}
             {% endfor %}
           </div>
+          {% endif %}
 
           <div class="lp-buy-box__checkout">
-            <div class="lp-buy-box__urgency">
-              <span class="lp-buy-box__urgency-eyebrow">{{ section.settings.urgency_eyebrow | escape }}</span>
-              <strong class="lp-buy-box__urgency-headline">{{ section.settings.urgency_headline | escape }}</strong>
-              <span class="lp-buy-box__urgency-offer">{{ section.settings.urgency_offer | escape }}</span>
-            </div>
+            {% if section.settings.urgency_headline != blank %}
+              <div class="lp-buy-box__urgency">
+                <span class="lp-buy-box__urgency-eyebrow">{{ section.settings.urgency_eyebrow | escape }}</span>
+                <strong class="lp-buy-box__urgency-headline">{{ section.settings.urgency_headline | escape }}</strong>
+                <span class="lp-buy-box__urgency-offer">{{ section.settings.urgency_offer | escape }}</span>
+              </div>
+            {% endif %}
             <button
               class="lp-buy-box__submit"
               type="submit"
