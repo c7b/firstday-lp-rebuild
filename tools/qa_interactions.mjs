@@ -22,7 +22,12 @@ import path from 'node:path';
 const STORE = process.env.SHOPIFY_FLAG_STORE;
 const PASSWORD = process.env.STOREFRONT_PASSWORD;
 const CHROME = process.env.CHROME_PATH || '/home/lcam/.cache/ms-playwright/chromium-1217/chrome-linux64/chrome';
-const PAGE_PATH = process.env.QA_PAGE || '/pages/tdk-behind-the-science-lp';
+// Default to the preview-theme URL: the published storefront can serve a stale COMPILED
+// template for a while after a sync, so the plain URL sometimes tests yesterday's theme.
+// preview_theme_id always renders what is actually in the theme right now.
+const THEME_ID = process.env.QA_THEME_ID || '155343814848';
+const PAGE_PATH = process.env.QA_PAGE
+  || `/pages/tdk-behind-the-science-lp?preview_theme_id=${THEME_ID}`;
 const BASE = `https://${STORE}.myshopify.com`;
 const PAGE_URL = new URL(PAGE_PATH, BASE);
 PAGE_URL.searchParams.set('_qa', Date.now().toString());
