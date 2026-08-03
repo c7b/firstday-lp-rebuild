@@ -52,7 +52,7 @@
   display: block;
 }
 
-.lp-founder-story__lede {
+.lp-founder-story__lede p {
   margin: 0 0 1.4rem;
   font-size: 2.4rem;
   line-height: 1.25;
@@ -88,7 +88,7 @@
     margin-inline: auto;
   }
 
-  .lp-founder-story__lede {
+  .lp-founder-story__lede p {
     font-size: 3rem;
   }
 }
