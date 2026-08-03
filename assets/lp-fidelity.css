@@ -33,11 +33,16 @@
 
 /* Measured across every heading role: weight 600, letter-spacing normal. We shipped 700 with
    negative tracking at display sizes, which made them read as a different typeface before the
-   family is even considered. */
-.lp-hero__heading,
-.lp-media-accordion__heading,
-.lp-science-tabs__heading,
-.lp-science-tabs__content-title {
+   family is even considered.
+
+   The selector carries the section prefix on purpose. lp-brand.css sets the 700 through
+   `.shopify-section[class*="lp-"] h1` — specificity 0,2,1 — so a bare class here loses even
+   though this file loads last. Matching the shape beats it at 0,3,0 without reaching for
+   !important, which would only move the problem to whoever overrides this next. */
+.shopify-section[class*='lp-'] .lp-hero__heading,
+.shopify-section[class*='lp-'] .lp-media-accordion__heading,
+.shopify-section[class*='lp-'] .lp-science-tabs__heading,
+.shopify-section[class*='lp-'] .lp-science-tabs__content-title {
   font-weight: 600;
   letter-spacing: normal;
 }
