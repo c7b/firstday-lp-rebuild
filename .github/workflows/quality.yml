@@ -1,0 +1,76 @@
+name: Quality gates
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  schema:
+    name: Schema
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify section schemas and setting references
+        run: python3 tools/verify_build.py
+
+  template:
+    name: Generated templates
+    needs: schema
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild templates
+        run: python3 tools/build_template.py
+      - name: Require committed templates to match the generator
+        run: git diff --exit-code templates/
+
+  copy-fidelity:
+    name: Copy fidelity and warnings
+    needs: template
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify copy fidelity and summarize warnings
+        shell: bash
+        run: |
+          set +e
+          output="$(python3 tools/verify_build.py 2>&1)"
+          status=$?
+          set -e
+
+          printf '%s\n' "$output"
+          warnings="$(printf '%s\n' "$output" | grep 'WARN' || true)"
+
+          {
+            echo '### Copy-fidelity warnings'
+            echo
+            if [ -n "$warnings" ]; then
+              echo '```text'
+              printf '%s\n' "$warnings"
+              echo '```'
+            else
+              echo 'No WARN lines.'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          exit "$status"

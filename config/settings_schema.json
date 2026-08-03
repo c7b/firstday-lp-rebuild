@@ -1400,6 +1400,17 @@
     ]
   },
   {
+    "name": "LP analytics",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_analytics",
+        "label": "Enable LP analytics",
+        "default": true
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.cart.name",
     "settings": [
       {

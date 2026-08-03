@@ -39,7 +39,7 @@
 
       {% if section.settings.cta_label != blank and section.settings.cta_link != blank %}
         <div class="lp-media-accordion__cta-block">
-          <a class="lp-media-accordion__cta" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label | escape }}</a>
+          <a class="lp-media-accordion__cta" href="{{ section.settings.cta_link }}" data-lp-cta>{{ section.settings.cta_label | escape }}</a>
           {% if section.settings.guarantee_text != blank %}
             <p class="lp-media-accordion__guarantee">{{ section.settings.guarantee_text | escape }}</p>
           {% endif %}

@@ -16,7 +16,7 @@
   <div class="lp-urgency-banner__content">
     <div class="lp-urgency-banner__text rte">{{ section.settings.text }}</div>
     {% if section.settings.cta_label != blank and section.settings.cta_link != blank %}
-      <a class="lp-urgency-banner__cta" href="{{ section.settings.cta_link }}">
+      <a class="lp-urgency-banner__cta" href="{{ section.settings.cta_link }}" data-lp-cta>
         {{- section.settings.cta_label | escape -}}
       </a>
     {% endif %}

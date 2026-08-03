@@ -61,7 +61,7 @@
 
       <div class="lp-hero__actions">
         {% if section.settings.cta_label != blank and section.settings.cta_link != blank %}
-          <a class="lp-hero__cta" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label | escape }}</a>
+          <a class="lp-hero__cta" href="{{ section.settings.cta_link }}" data-lp-cta>{{ section.settings.cta_label | escape }}</a>
         {% endif %}
         {% if section.settings.style == 'product' and section.settings.guarantee_text != blank %}
           <p class="lp-hero__guarantee">{{ section.settings.guarantee_text | escape }}</p>

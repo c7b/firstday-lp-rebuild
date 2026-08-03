@@ -1,0 +1,70 @@
+name: Lighthouse performance budget
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    name: Lighthouse budget
+    runs-on: ubuntu-latest
+    env:
+      PREVIEW_URL: https://firstday-lp-rebuild.myshopify.com/pages/tdk-behind-the-science-lp
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install repository dev dependencies
+        run: npm ci
+      - name: Run Lighthouse against the live theme preview
+        run: >-
+          npx --no-install lighthouse "$PREVIEW_URL"
+          --output=json
+          --output-path=lighthouse-report.json
+          --chrome-flags="--headless --no-sandbox"
+      - name: Enforce and summarize the performance budget
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+
+          const budget = JSON.parse(fs.readFileSync('docs/receipts/perf-budget.json', 'utf8'));
+          const report = JSON.parse(fs.readFileSync('lighthouse-report.json', 'utf8'));
+          const performance = report.categories.performance.score * 100;
+          const totalBlockingTime = report.audits['total-blocking-time'].numericValue;
+          const largestContentfulPaint = report.audits['largest-contentful-paint'].numericValue;
+
+          const summary = [
+            '### Lighthouse performance budget',
+            '',
+            '| Metric | Result | Budget |',
+            '| --- | ---: | ---: |',
+            `| Performance | ${performance.toFixed(0)} | ≥ ${budget.performance} |`,
+            `| Total blocking time | ${totalBlockingTime.toFixed(0)} ms | ≤ ${budget['total-blocking-time_ms']} ms |`,
+            `| Largest contentful paint | ${largestContentfulPaint.toFixed(0)} ms | ≤ ${budget['largest-contentful-paint_ms']} ms |`,
+            '',
+          ].join('\n');
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary);
+
+          const failures = [];
+          if (performance < budget.performance) {
+            failures.push(`performance ${performance.toFixed(0)} is below ${budget.performance}`);
+          }
+          if (totalBlockingTime > budget['total-blocking-time_ms']) {
+            failures.push(`total blocking time ${totalBlockingTime.toFixed(0)} ms exceeds ${budget['total-blocking-time_ms']} ms`);
+          }
+          if (largestContentfulPaint > budget['largest-contentful-paint_ms']) {
+            failures.push(`largest contentful paint ${largestContentfulPaint.toFixed(0)} ms exceeds ${budget['largest-contentful-paint_ms']} ms`);
+          }
+
+          if (failures.length > 0) {
+            throw new Error(`Lighthouse budget failed: ${failures.join('; ')}`);
+          }
+          NODE

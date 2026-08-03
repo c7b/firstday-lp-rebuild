@@ -1,0 +1,3375 @@
+{
+  "generated": "2026-08-03T02:27:54.811440+00:00",
+  "reference": "tdk-behind-the-science-lp",
+  "pages": {
+    "tdk-behind-the-science-lp": {
+      "bytes": 2092969,
+      "weight_kb": 2043.9,
+      "sections": [
+        "template--19023949758562__temp_marquee_VcwMAg",
+        "template--19023949758562__temp_replo_hero_RkYkXc",
+        "template--19023949758562__custom_liquid_rkHyT8",
+        "template--19023949758562__accordion_block_driBft",
+        "template--19023949758562__temp_science_module_mqM7QH",
+        "template--19023949758562__standalone_product_PMRdVC",
+        "template--19023949758562__temp_sellout_notice_WQzDBM",
+        "template--19023949758562__timeline_section_N69qEe",
+        "template--19023949758562__image_with_text_Fc3pAp",
+        "template--19023949758562__temp_a_plus_cards_xn333q",
+        "template--19023949758562__homepage_trust_section_YfPXT3",
+        "template--19023949758562__temp_benefits_split_kngUgC",
+        "template--19023949758562__accordion_block_QpghhN",
+        "template--19023949758562__pbfcm_comparison_table_iVgR7T",
+        "template--19023949758562__frontrowmd_clinicians_reviews_z8btGd",
+        "template--19023949758562__1771530273b0a25f6d",
+        "template--19023949758562__faq_yFdkhp",
+        "template--19023949758562__temp_replo_hero_3dPiJD",
+        "template--19023949758562__temp_css_XVHj4R"
+      ],
+      "template_sections": 19,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 47,
+      "images": 112,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-behind-the-science-lp",
+      "url": "https://firstday.com/pages/tdk-behind-the-science-lp",
+      "family": "tdk",
+      "funnel": "behind-the-science",
+      "offer_flags": [],
+      "shared_with_reference": 19,
+      "overlap_pct": 100,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2043.9
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 47
+          }
+        },
+        {
+          "id": "migrate-to-shared-sections",
+          "title": "Migrate to shared sections",
+          "impact": "high",
+          "effort": "S",
+          "agent": "theme",
+          "evidence": {
+            "overlap_pct": 100
+          }
+        }
+      ]
+    },
+    "1c3f47-behind-the-science-lp": {
+      "bytes": 2299148,
+      "weight_kb": 2245.3,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 86,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "1c3f47-behind-the-science-lp",
+      "url": "https://firstday.com/pages/1c3f47-behind-the-science-lp",
+      "family": "unknown",
+      "funnel": "1c3f47-behind-the-science",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2245.3
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "333333-behind-the-science-lp": {
+      "bytes": 2294257,
+      "weight_kb": 2240.5,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 86,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "333333-behind-the-science-lp",
+      "url": "https://firstday.com/pages/333333-behind-the-science-lp",
+      "family": "unknown",
+      "funnel": "333333-behind-the-science",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2240.5
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "catalog-multis-3-dangerous-ingredients-lp": {
+      "bytes": 1996559,
+      "weight_kb": 1949.8,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 56,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "catalog-multis-3-dangerous-ingredients-lp",
+      "url": "https://firstday.com/pages/catalog-multis-3-dangerous-ingredients-lp",
+      "family": "catalog",
+      "funnel": "multis-3-dangerous-ingredients",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1949.8
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "kcm-sale-producthero-lp": {
+      "bytes": 2054243,
+      "weight_kb": 2006.1,
+      "sections": [
+        "template--19023949758562__temp_marquee_VcwMAg",
+        "template--19023949758562__temp_replo_hero_RkYkXc",
+        "template--19023949758562__custom_liquid_rkHyT8",
+        "template--19023949758562__accordion_block_driBft",
+        "template--19023949758562__temp_science_module_mqM7QH",
+        "template--19023949758562__standalone_product_PMRdVC",
+        "template--19023949758562__temp_sellout_notice_WQzDBM",
+        "template--19023949758562__timeline_section_N69qEe",
+        "template--19023949758562__image_with_text_Fc3pAp",
+        "template--19023949758562__temp_a_plus_cards_xn333q",
+        "template--19023949758562__homepage_trust_section_YfPXT3",
+        "template--19023949758562__temp_benefits_split_kngUgC",
+        "template--19023949758562__accordion_block_QpghhN",
+        "template--19023949758562__pbfcm_comparison_table_iVgR7T",
+        "template--19023949758562__frontrowmd_clinicians_reviews_z8btGd",
+        "template--19023949758562__1771530273b0a25f6d",
+        "template--19023949758562__faq_yFdkhp",
+        "template--19023949758562__temp_replo_hero_3dPiJD",
+        "template--19023949758562__temp_css_XVHj4R"
+      ],
+      "template_sections": 19,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 47,
+      "images": 98,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "kcm-sale-producthero-lp",
+      "url": "https://firstday.com/pages/kcm-sale-producthero-lp",
+      "family": "kcm",
+      "funnel": "sale-producthero",
+      "offer_flags": [],
+      "shared_with_reference": 19,
+      "overlap_pct": 100,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2006.1
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 47
+          }
+        },
+        {
+          "id": "migrate-to-shared-sections",
+          "title": "Migrate to shared sections",
+          "impact": "high",
+          "effort": "S",
+          "agent": "theme",
+          "evidence": {
+            "overlap_pct": 100
+          }
+        }
+      ]
+    },
+    "kcm-sales-melatonin-lp": {
+      "bytes": 2050798,
+      "weight_kb": 2002.7,
+      "sections": [
+        "template--19023949758562__temp_marquee_VcwMAg",
+        "template--19023949758562__temp_replo_hero_RkYkXc",
+        "template--19023949758562__custom_liquid_rkHyT8",
+        "template--19023949758562__accordion_block_driBft",
+        "template--19023949758562__temp_science_module_mqM7QH",
+        "template--19023949758562__standalone_product_PMRdVC",
+        "template--19023949758562__temp_sellout_notice_WQzDBM",
+        "template--19023949758562__timeline_section_N69qEe",
+        "template--19023949758562__image_with_text_Fc3pAp",
+        "template--19023949758562__temp_a_plus_cards_xn333q",
+        "template--19023949758562__homepage_trust_section_YfPXT3",
+        "template--19023949758562__temp_benefits_split_kngUgC",
+        "template--19023949758562__accordion_block_QpghhN",
+        "template--19023949758562__pbfcm_comparison_table_iVgR7T",
+        "template--19023949758562__frontrowmd_clinicians_reviews_z8btGd",
+        "template--19023949758562__1771530273b0a25f6d",
+        "template--19023949758562__faq_yFdkhp",
+        "template--19023949758562__temp_replo_hero_3dPiJD",
+        "template--19023949758562__temp_css_XVHj4R"
+      ],
+      "template_sections": 19,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 47,
+      "images": 92,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "kcm-sales-melatonin-lp",
+      "url": "https://firstday.com/pages/kcm-sales-melatonin-lp",
+      "family": "kcm",
+      "funnel": "sales-melatonin",
+      "offer_flags": [],
+      "shared_with_reference": 19,
+      "overlap_pct": 100,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2002.7
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 47
+          }
+        },
+        {
+          "id": "migrate-to-shared-sections",
+          "title": "Migrate to shared sections",
+          "impact": "high",
+          "effort": "S",
+          "agent": "theme",
+          "evidence": {
+            "overlap_pct": 100
+          }
+        }
+      ]
+    },
+    "kde-3-red-flags-lp": {
+      "bytes": 2282393,
+      "weight_kb": 2228.9,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 78,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-3-red-flags-lp",
+      "url": "https://firstday.com/pages/kde-3-red-flags-lp",
+      "family": "kde",
+      "funnel": "3-red-flags",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2228.9
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "kde-anti-gummy-lp": {
+      "bytes": 1713492,
+      "weight_kb": 1673.3,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 38,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-anti-gummy-lp",
+      "url": "https://firstday.com/pages/kde-anti-gummy-lp",
+      "family": "kde",
+      "funnel": "anti-gummy",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1673.3
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "kde-behind-the-science-lp": {
+      "bytes": 2121165,
+      "weight_kb": 2071.5,
+      "sections": [
+        "template--19023949758562__temp_marquee_VcwMAg",
+        "template--19023949758562__temp_replo_hero_RkYkXc",
+        "template--19023949758562__custom_liquid_rkHyT8",
+        "template--19023949758562__accordion_block_driBft",
+        "template--19023949758562__temp_science_module_mqM7QH",
+        "template--19023949758562__standalone_product_PMRdVC",
+        "template--19023949758562__temp_sellout_notice_WQzDBM",
+        "template--19023949758562__timeline_section_N69qEe",
+        "template--19023949758562__image_with_text_Fc3pAp",
+        "template--19023949758562__temp_a_plus_cards_xn333q",
+        "template--19023949758562__homepage_trust_section_YfPXT3",
+        "template--19023949758562__temp_benefits_split_kngUgC",
+        "template--19023949758562__accordion_block_QpghhN",
+        "template--19023949758562__pbfcm_comparison_table_iVgR7T",
+        "template--19023949758562__frontrowmd_clinicians_reviews_z8btGd",
+        "template--19023949758562__1771530273b0a25f6d",
+        "template--19023949758562__faq_yFdkhp",
+        "template--19023949758562__temp_replo_hero_3dPiJD",
+        "template--19023949758562__temp_css_XVHj4R"
+      ],
+      "template_sections": 19,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 48,
+      "images": 118,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-behind-the-science-lp",
+      "url": "https://firstday.com/pages/kde-behind-the-science-lp",
+      "family": "kde",
+      "funnel": "behind-the-science",
+      "offer_flags": [],
+      "shared_with_reference": 19,
+      "overlap_pct": 100,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2071.5
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 48
+          }
+        },
+        {
+          "id": "migrate-to-shared-sections",
+          "title": "Migrate to shared sections",
+          "impact": "high",
+          "effort": "S",
+          "agent": "theme",
+          "evidence": {
+            "overlap_pct": 100
+          }
+        }
+      ]
+    },
+    "kde-behind-the-science-pdp-lp": {
+      "bytes": 2160003,
+      "weight_kb": 2109.4,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 79,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-behind-the-science-pdp-lp",
+      "url": "https://firstday.com/pages/kde-behind-the-science-pdp-lp",
+      "family": "kde",
+      "funnel": "behind-the-science-pdp",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2109.4
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "kde-behind-the-science-spanish-lp": {
+      "bytes": 2157178,
+      "weight_kb": 2106.6,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 77,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-behind-the-science-spanish-lp",
+      "url": "https://firstday.com/pages/kde-behind-the-science-spanish-lp",
+      "family": "kde",
+      "funnel": "behind-the-science",
+      "offer_flags": [
+        "spanish"
+      ],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2106.6
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "kde-dr-lp": {
+      "bytes": 1895458,
+      "weight_kb": 1851.0,
+      "sections": [
+        "template--19023948087394__bt_lp_dr_benefits_bt_ewFpRY",
+        "template--19023948087394__temp_marquee_zwfwY4",
+        "template--19023948087394__bt_lp_dr_deficiency_symptons_wDxTjG",
+        "template--19023948087394__bt_lp_dr_results_J9mNdK",
+        "template--19023948087394__bt_lp_dr_countdown_xfKpEW",
+        "template--19023948087394__standalone_product_zekD98",
+        "template--19023948087394__timeline_section_R3Cfwb",
+        "template--19023948087394__temp_sellout_notice_pEVzqk",
+        "template--19023948087394__temp_trust_collage_jjEKYx",
+        "template--19023948087394__pbfcm_comparison_table_x8ALxh",
+        "template--19023948087394__frontrowmd_clinicians_reviews_G8aTFH"
+      ],
+      "template_sections": 11,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 46,
+      "images": 107,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-dr-lp",
+      "url": "https://firstday.com/pages/kde-dr-lp",
+      "family": "kde",
+      "funnel": "dr",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1851.0
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 46
+          }
+        }
+      ]
+    },
+    "kde-elevated-lp": {
+      "bytes": 2484391,
+      "weight_kb": 2426.2,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 86,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-elevated-lp",
+      "url": "https://firstday.com/pages/kde-elevated-lp",
+      "family": "kde",
+      "funnel": "elevated",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2426.2
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "kde-global-deficiency-among-kids-lp": {
+      "bytes": 1838344,
+      "weight_kb": 1795.3,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 61,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-global-deficiency-among-kids-lp",
+      "url": "https://firstday.com/pages/kde-global-deficiency-among-kids-lp",
+      "family": "kde",
+      "funnel": "global-deficiency-among-kids",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1795.3
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "kde-hidden-hunger-advertorial-lp": {
+      "bytes": 1558044,
+      "weight_kb": 1521.5,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 38,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-hidden-hunger-advertorial-lp",
+      "url": "https://firstday.com/pages/kde-hidden-hunger-advertorial-lp",
+      "family": "kde",
+      "funnel": "hidden-hunger-advertorial",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1521.5
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "kde-listicle-product-5reasons-lp": {
+      "bytes": 1793760,
+      "weight_kb": 1751.7,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 34,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-listicle-product-5reasons-lp",
+      "url": "https://firstday.com/pages/kde-listicle-product-5reasons-lp",
+      "family": "kde",
+      "funnel": "listicle-product-5reasons",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1751.7
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "kde-recommended-by-philsmypharmacist-lp": {
+      "bytes": 2086435,
+      "weight_kb": 2037.5,
+      "sections": [
+        "template--19023952511074__temp_replo_hero_RkYkXc",
+        "template--19023952511074__custom_liquid_rkHyT8",
+        "template--19023952511074__temp_trust_collage_QRrffU",
+        "template--19023952511074__image_with_text_YnERTx",
+        "template--19023952511074__temp_marquee_VcwMAg",
+        "template--19023952511074__standalone_product_PMRdVC",
+        "template--19023952511074__timeline_section_7NhEwH",
+        "template--19023952511074__temp_sellout_notice_WQzDBM",
+        "template--19023952511074__accordion_block_driBft",
+        "template--19023952511074__temp_science_module_mqM7QH",
+        "template--19023952511074__temp_benefits_split_kngUgC",
+        "template--19023952511074__temp_a_plus_cards_xn333q",
+        "template--19023952511074__accordion_block_QpghhN",
+        "template--19023952511074__pbfcm_comparison_table_iVgR7T",
+        "template--19023952511074__frontrowmd_clinicians_reviews_z8btGd",
+        "template--19023952511074__1771530273b0a25f6d",
+        "template--19023952511074__faq_yFdkhp",
+        "template--19023952511074__temp_replo_hero_3dPiJD",
+        "template--19023952511074__temp_sticky_footer_drawer_TQYNUE",
+        "template--19023952511074__temp_css_XVHj4R"
+      ],
+      "template_sections": 20,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 47,
+      "images": 113,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-recommended-by-philsmypharmacist-lp",
+      "url": "https://firstday.com/pages/kde-recommended-by-philsmypharmacist-lp",
+      "family": "kde",
+      "funnel": "recommended-by-philsmypharmacist",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2037.5
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 47
+          }
+        }
+      ]
+    },
+    "kde-sales-behavior-hiddenhunger-lp": {
+      "bytes": 2171328,
+      "weight_kb": 2120.4,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 69,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-sales-behavior-hiddenhunger-lp",
+      "url": "https://firstday.com/pages/kde-sales-behavior-hiddenhunger-lp",
+      "family": "kde",
+      "funnel": "sales-behavior-hiddenhunger",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2120.4
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "kde-sales-behavior-hiddenhunger-spanish-lp": {
+      "bytes": 2012378,
+      "weight_kb": 1965.2,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 65,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-sales-behavior-hiddenhunger-spanish-lp",
+      "url": "https://firstday.com/pages/kde-sales-behavior-hiddenhunger-spanish-lp",
+      "family": "kde",
+      "funnel": "sales-behavior-hiddenhunger",
+      "offer_flags": [
+        "spanish"
+      ],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1965.2
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "kde-science-kids-lp": {
+      "bytes": 2437882,
+      "weight_kb": 2380.7,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 87,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "kde-science-kids-lp",
+      "url": "https://firstday.com/pages/kde-science-kids-lp",
+      "family": "kde",
+      "funnel": "science-kids",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2380.7
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "mcm-cortisol-lp": {
+      "bytes": 2053433,
+      "weight_kb": 2005.3,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 65,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "mcm-cortisol-lp",
+      "url": "https://firstday.com/pages/mcm-cortisol-lp",
+      "family": "mcm",
+      "funnel": "cortisol",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2005.3
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "mdp-sale-producthero-lp": {
+      "bytes": 2306023,
+      "weight_kb": 2252.0,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 97,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "mdp-sale-producthero-lp",
+      "url": "https://firstday.com/pages/mdp-sale-producthero-lp",
+      "family": "mdp",
+      "funnel": "sale-producthero",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2252.0
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "multi-behind-the-science-lp": {
+      "bytes": 2635889,
+      "weight_kb": 2574.1,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 114,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "multi-behind-the-science-lp",
+      "url": "https://firstday.com/pages/multi-behind-the-science-lp",
+      "family": "multi",
+      "funnel": "behind-the-science",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2574.1
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "tdk-5-reasons-why-listicle-lp": {
+      "bytes": 1914246,
+      "weight_kb": 1869.4,
+      "sections": [
+        "template--19023954116706__rich_text_JMbQpC",
+        "template--19023954116706__temp_author_jRMxfN",
+        "template--19023954116706__temp_listicle_img_txt_block_nFrbNw",
+        "template--19023954116706__temp_listicle_img_txt_block_P39eEG",
+        "template--19023954116706__temp_listicle_img_txt_block_YJc6MH",
+        "template--19023954116706__temp_listicle_img_txt_block_wa9Xri",
+        "template--19023954116706__temp_listicle_img_txt_block_7cWfyf",
+        "template--19023954116706__standalone_product_cQrEYr",
+        "template--19023954116706__timeline_section_wXGGEV",
+        "template--19023954116706__accordion_block_XHkncp",
+        "template--19023954116706__frontrowmd_clinicians_reviews_jD4y9K",
+        "template--19023954116706__homepage_trust_section_hk8kB9",
+        "template--19023954116706__1775012228b453c4a6",
+        "template--19023954116706__temp_replo_hero_b8wyje",
+        "template--19023954116706__utm_toast_notification_LzHzaU"
+      ],
+      "template_sections": 15,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 47,
+      "images": 87,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-5-reasons-why-listicle-lp",
+      "url": "https://firstday.com/pages/tdk-5-reasons-why-listicle-lp",
+      "family": "tdk",
+      "funnel": "5-reasons-why-listicle",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1869.4
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 47
+          }
+        }
+      ]
+    },
+    "tdk-behind-the-science-gift-lp": {
+      "bytes": 2517918,
+      "weight_kb": 2458.9,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 116,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-behind-the-science-gift-lp",
+      "url": "https://firstday.com/pages/tdk-behind-the-science-gift-lp",
+      "family": "tdk",
+      "funnel": "behind-the-science",
+      "offer_flags": [
+        "gift"
+      ],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2458.9
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "tdk-behind-the-science-mthfr-lp": {
+      "bytes": 2093500,
+      "weight_kb": 2044.4,
+      "sections": [
+        "template--19023949758562__temp_marquee_VcwMAg",
+        "template--19023949758562__temp_replo_hero_RkYkXc",
+        "template--19023949758562__custom_liquid_rkHyT8",
+        "template--19023949758562__accordion_block_driBft",
+        "template--19023949758562__temp_science_module_mqM7QH",
+        "template--19023949758562__standalone_product_PMRdVC",
+        "template--19023949758562__temp_sellout_notice_WQzDBM",
+        "template--19023949758562__timeline_section_N69qEe",
+        "template--19023949758562__image_with_text_Fc3pAp",
+        "template--19023949758562__temp_a_plus_cards_xn333q",
+        "template--19023949758562__homepage_trust_section_YfPXT3",
+        "template--19023949758562__temp_benefits_split_kngUgC",
+        "template--19023949758562__accordion_block_QpghhN",
+        "template--19023949758562__pbfcm_comparison_table_iVgR7T",
+        "template--19023949758562__frontrowmd_clinicians_reviews_z8btGd",
+        "template--19023949758562__1771530273b0a25f6d",
+        "template--19023949758562__faq_yFdkhp",
+        "template--19023949758562__temp_replo_hero_3dPiJD",
+        "template--19023949758562__temp_css_XVHj4R"
+      ],
+      "template_sections": 19,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 47,
+      "images": 111,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-behind-the-science-mthfr-lp",
+      "url": "https://firstday.com/pages/tdk-behind-the-science-mthfr-lp",
+      "family": "tdk",
+      "funnel": "behind-the-science-mthfr",
+      "offer_flags": [],
+      "shared_with_reference": 19,
+      "overlap_pct": 100,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2044.4
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 47
+          }
+        },
+        {
+          "id": "migrate-to-shared-sections",
+          "title": "Migrate to shared sections",
+          "impact": "high",
+          "effort": "S",
+          "agent": "theme",
+          "evidence": {
+            "overlap_pct": 100
+          }
+        }
+      ]
+    },
+    "tdk-behind-the-science-sub-lp": {
+      "bytes": 2649280,
+      "weight_kb": 2587.2,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 117,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-behind-the-science-sub-lp",
+      "url": "https://firstday.com/pages/tdk-behind-the-science-sub-lp",
+      "family": "tdk",
+      "funnel": "behind-the-science",
+      "offer_flags": [
+        "sub"
+      ],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2587.2
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "tdk-behind-the-science-trusted-lp": {
+      "bytes": 2682479,
+      "weight_kb": 2619.6,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 114,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-behind-the-science-trusted-lp",
+      "url": "https://firstday.com/pages/tdk-behind-the-science-trusted-lp",
+      "family": "tdk",
+      "funnel": "behind-the-science",
+      "offer_flags": [
+        "trusted"
+      ],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2619.6
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "tdk-sales-behavior-hiddenhunger-2026-lp": {
+      "bytes": 2358565,
+      "weight_kb": 2303.3,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 88,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-sales-behavior-hiddenhunger-2026-lp",
+      "url": "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-2026-lp",
+      "family": "tdk",
+      "funnel": "sales-behavior-hiddenhunger-2026",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2303.3
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "tdk-sales-behavior-hiddenhunger-brain-lp": {
+      "bytes": 2367402,
+      "weight_kb": 2311.9,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 86,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-sales-behavior-hiddenhunger-brain-lp",
+      "url": "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-brain-lp",
+      "family": "tdk",
+      "funnel": "sales-behavior-hiddenhunger-brain",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2311.9
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "tdk-sales-behavior-hiddenhunger-lp": {
+      "bytes": 2065091,
+      "weight_kb": 2016.7,
+      "sections": [
+        "template--19023949758562__temp_marquee_VcwMAg",
+        "template--19023949758562__temp_replo_hero_RkYkXc",
+        "template--19023949758562__custom_liquid_rkHyT8",
+        "template--19023949758562__accordion_block_driBft",
+        "template--19023949758562__temp_science_module_mqM7QH",
+        "template--19023949758562__standalone_product_PMRdVC",
+        "template--19023949758562__temp_sellout_notice_WQzDBM",
+        "template--19023949758562__timeline_section_N69qEe",
+        "template--19023949758562__image_with_text_Fc3pAp",
+        "template--19023949758562__temp_a_plus_cards_xn333q",
+        "template--19023949758562__homepage_trust_section_YfPXT3",
+        "template--19023949758562__temp_benefits_split_kngUgC",
+        "template--19023949758562__accordion_block_QpghhN",
+        "template--19023949758562__pbfcm_comparison_table_iVgR7T",
+        "template--19023949758562__frontrowmd_clinicians_reviews_z8btGd",
+        "template--19023949758562__1771530273b0a25f6d",
+        "template--19023949758562__faq_yFdkhp",
+        "template--19023949758562__temp_replo_hero_3dPiJD",
+        "template--19023949758562__temp_css_XVHj4R"
+      ],
+      "template_sections": 19,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 47,
+      "images": 111,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-sales-behavior-hiddenhunger-lp",
+      "url": "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-lp",
+      "family": "tdk",
+      "funnel": "sales-behavior-hiddenhunger",
+      "offer_flags": [],
+      "shared_with_reference": 19,
+      "overlap_pct": 100,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2016.7
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 47
+          }
+        },
+        {
+          "id": "migrate-to-shared-sections",
+          "title": "Migrate to shared sections",
+          "impact": "high",
+          "effort": "S",
+          "agent": "theme",
+          "evidence": {
+            "overlap_pct": 100
+          }
+        }
+      ]
+    },
+    "tdk-sales-behavior-hiddenhunger-tbgift-lp": {
+      "bytes": 2245148,
+      "weight_kb": 2192.5,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 88,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-sales-behavior-hiddenhunger-tbgift-lp",
+      "url": "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-tbgift-lp",
+      "family": "tdk",
+      "funnel": "sales-behavior-hiddenhunger-tbgift",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2192.5
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "tdk-school-lp": {
+      "bytes": 2025413,
+      "weight_kb": 1977.9,
+      "sections": [
+        "template--19023949758562__temp_marquee_VcwMAg",
+        "template--19023949758562__temp_replo_hero_RkYkXc",
+        "template--19023949758562__custom_liquid_rkHyT8",
+        "template--19023949758562__accordion_block_driBft",
+        "template--19023949758562__temp_science_module_mqM7QH",
+        "template--19023949758562__standalone_product_PMRdVC",
+        "template--19023949758562__temp_sellout_notice_WQzDBM",
+        "template--19023949758562__timeline_section_N69qEe",
+        "template--19023949758562__image_with_text_Fc3pAp",
+        "template--19023949758562__temp_a_plus_cards_xn333q",
+        "template--19023949758562__homepage_trust_section_YfPXT3",
+        "template--19023949758562__temp_benefits_split_kngUgC",
+        "template--19023949758562__accordion_block_QpghhN",
+        "template--19023949758562__pbfcm_comparison_table_iVgR7T",
+        "template--19023949758562__frontrowmd_clinicians_reviews_z8btGd",
+        "template--19023949758562__1771530273b0a25f6d",
+        "template--19023949758562__faq_yFdkhp",
+        "template--19023949758562__temp_replo_hero_3dPiJD",
+        "template--19023949758562__temp_css_XVHj4R"
+      ],
+      "template_sections": 19,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 48,
+      "images": 97,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "tdk-school-lp",
+      "url": "https://firstday.com/pages/tdk-school-lp",
+      "family": "tdk",
+      "funnel": "school",
+      "offer_flags": [],
+      "shared_with_reference": 19,
+      "overlap_pct": 100,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1977.9
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 48
+          }
+        },
+        {
+          "id": "migrate-to-shared-sections",
+          "title": "Migrate to shared sections",
+          "impact": "high",
+          "effort": "S",
+          "agent": "theme",
+          "evidence": {
+            "overlap_pct": 100
+          }
+        }
+      ]
+    },
+    "trmv-behind-the-science-lp": {
+      "bytes": 2098984,
+      "weight_kb": 2049.8,
+      "sections": [
+        "template--19023949758562__temp_marquee_VcwMAg",
+        "template--19023949758562__temp_replo_hero_RkYkXc",
+        "template--19023949758562__custom_liquid_rkHyT8",
+        "template--19023949758562__accordion_block_driBft",
+        "template--19023949758562__temp_science_module_mqM7QH",
+        "template--19023949758562__standalone_product_PMRdVC",
+        "template--19023949758562__temp_sellout_notice_WQzDBM",
+        "template--19023949758562__timeline_section_N69qEe",
+        "template--19023949758562__image_with_text_Fc3pAp",
+        "template--19023949758562__temp_a_plus_cards_xn333q",
+        "template--19023949758562__homepage_trust_section_YfPXT3",
+        "template--19023949758562__temp_benefits_split_kngUgC",
+        "template--19023949758562__accordion_block_QpghhN",
+        "template--19023949758562__pbfcm_comparison_table_iVgR7T",
+        "template--19023949758562__frontrowmd_clinicians_reviews_z8btGd",
+        "template--19023949758562__1771530273b0a25f6d",
+        "template--19023949758562__faq_yFdkhp",
+        "template--19023949758562__temp_replo_hero_3dPiJD",
+        "template--19023949758562__temp_css_XVHj4R"
+      ],
+      "template_sections": 19,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 47,
+      "images": 110,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "trmv-behind-the-science-lp",
+      "url": "https://firstday.com/pages/trmv-behind-the-science-lp",
+      "family": "trmv",
+      "funnel": "behind-the-science",
+      "offer_flags": [],
+      "shared_with_reference": 19,
+      "overlap_pct": 100,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2049.8
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 47
+          }
+        },
+        {
+          "id": "migrate-to-shared-sections",
+          "title": "Migrate to shared sections",
+          "impact": "high",
+          "effort": "S",
+          "agent": "theme",
+          "evidence": {
+            "overlap_pct": 100
+          }
+        }
+      ]
+    },
+    "wds-3-red-flags-lander-lp": {
+      "bytes": 1962100,
+      "weight_kb": 1916.1,
+      "sections": [
+        "template--19023954116706__rich_text_JMbQpC",
+        "template--19023954116706__temp_author_jRMxfN",
+        "template--19023954116706__temp_listicle_img_txt_block_nFrbNw",
+        "template--19023954116706__temp_listicle_img_txt_block_P39eEG",
+        "template--19023954116706__temp_listicle_img_txt_block_YJc6MH",
+        "template--19023954116706__temp_listicle_img_txt_block_wa9Xri",
+        "template--19023954116706__temp_listicle_img_txt_block_7cWfyf",
+        "template--19023954116706__standalone_product_cQrEYr",
+        "template--19023954116706__timeline_section_wXGGEV",
+        "template--19023954116706__accordion_block_XHkncp",
+        "template--19023954116706__frontrowmd_clinicians_reviews_jD4y9K",
+        "template--19023954116706__homepage_trust_section_hk8kB9",
+        "template--19023954116706__1775012228b453c4a6",
+        "template--19023954116706__temp_replo_hero_b8wyje",
+        "template--19023954116706__utm_toast_notification_LzHzaU"
+      ],
+      "template_sections": 15,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 83,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "sections",
+      "status": 200,
+      "source": "network",
+      "handle": "wds-3-red-flags-lander-lp",
+      "url": "https://firstday.com/pages/wds-3-red-flags-lander-lp",
+      "family": "wds",
+      "funnel": "3-red-flags-lander",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1916.1
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "wds-3-red-flags-lp": {
+      "bytes": 2306785,
+      "weight_kb": 2252.7,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 88,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "wds-3-red-flags-lp",
+      "url": "https://firstday.com/pages/wds-3-red-flags-lp",
+      "family": "wds",
+      "funnel": "3-red-flags",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2252.7
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "wds-listicle-product-5reasons-lp": {
+      "bytes": 1791065,
+      "weight_kb": 1749.1,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 33,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "wds-listicle-product-5reasons-lp",
+      "url": "https://firstday.com/pages/wds-listicle-product-5reasons-lp",
+      "family": "wds",
+      "funnel": "listicle-product-5reasons",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 1749.1
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "wds-sales-behavior-exhaustion-hero-2-lp": {
+      "bytes": 2232622,
+      "weight_kb": 2180.3,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 78,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "wds-sales-behavior-exhaustion-hero-2-lp",
+      "url": "https://firstday.com/pages/wds-sales-behavior-exhaustion-hero-2-lp",
+      "family": "wds",
+      "funnel": "sales-behavior-exhaustion-hero",
+      "offer_flags": [
+        "2"
+      ],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2180.3
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "wds-sales-exhaustion-lp": {
+      "bytes": 2683079,
+      "weight_kb": 2620.2,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 122,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "wds-sales-exhaustion-lp",
+      "url": "https://firstday.com/pages/wds-sales-exhaustion-lp",
+      "family": "wds",
+      "funnel": "sales-exhaustion",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2620.2
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "wds-sales-exhaustion-mystery-gifts-lp": {
+      "bytes": 2183326,
+      "weight_kb": 2132.2,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 77,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "wds-sales-exhaustion-mystery-gifts-lp",
+      "url": "https://firstday.com/pages/wds-sales-exhaustion-mystery-gifts-lp",
+      "family": "wds",
+      "funnel": "sales-exhaustion-gifts",
+      "offer_flags": [
+        "mystery"
+      ],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2132.2
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "wds-wellness-beauty-gift-offer-lp": {
+      "bytes": 2430424,
+      "weight_kb": 2373.5,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 113,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "wds-wellness-beauty-gift-offer-lp",
+      "url": "https://firstday.com/pages/wds-wellness-beauty-gift-offer-lp",
+      "family": "wds",
+      "funnel": "wellness-beauty-offer",
+      "offer_flags": [
+        "gift"
+      ],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2373.5
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    },
+    "wds-wellness-beauty-lp": {
+      "bytes": 2443120,
+      "weight_kb": 2385.9,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 114,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "wds-wellness-beauty-lp",
+      "url": "https://firstday.com/pages/wds-wellness-beauty-lp",
+      "family": "wds",
+      "funnel": "wellness-beauty",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2385.9
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "wds-wellness-beauty-try-lp": {
+      "bytes": 2422535,
+      "weight_kb": 2365.8,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 44,
+      "images": 113,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "wds-wellness-beauty-try-lp",
+      "url": "https://firstday.com/pages/wds-wellness-beauty-try-lp",
+      "family": "wds",
+      "funnel": "wellness-beauty-try",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2365.8
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 44
+          }
+        }
+      ]
+    },
+    "wds-wellness-bundle-lp": {
+      "bytes": 2135590,
+      "weight_kb": 2085.5,
+      "sections": [],
+      "template_sections": 0,
+      "group_sections": 2,
+      "empty_sections": 0,
+      "scripts": 45,
+      "images": 66,
+      "vendors": [
+        "Attentive",
+        "Beam",
+        "Blotout",
+        "FrontRow MD",
+        "GTM",
+        "Gorgias",
+        "Impact",
+        "Intelligems",
+        "Judge.me reviews",
+        "Klaviyo",
+        "MS Clarity",
+        "Northbeam",
+        "Opensend",
+        "Pandectes",
+        "Replo",
+        "SavedBy",
+        "Stay AI",
+        "Weglot"
+      ],
+      "build_type": "replo",
+      "status": 200,
+      "source": "network",
+      "handle": "wds-wellness-bundle-lp",
+      "url": "https://firstday.com/pages/wds-wellness-bundle-lp",
+      "family": "wds",
+      "funnel": "wellness-bundle",
+      "offer_flags": [],
+      "shared_with_reference": 0,
+      "overlap_pct": 0,
+      "backlog": [
+        {
+          "id": "migrate-off-page-builder",
+          "title": "Migrate off page builder",
+          "impact": "high",
+          "effort": "L",
+          "agent": "migration",
+          "evidence": {
+            "build_type": "replo"
+          }
+        },
+        {
+          "id": "reduce-page-weight",
+          "title": "Reduce page weight",
+          "impact": "high",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "weight_kb": 2085.5
+          }
+        },
+        {
+          "id": "audit-third-party-scripts",
+          "title": "Audit third-party scripts",
+          "impact": "medium",
+          "effort": "M",
+          "agent": "performance",
+          "evidence": {
+            "scripts": 45
+          }
+        }
+      ]
+    }
+  }
+}
