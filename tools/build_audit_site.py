@@ -121,6 +121,19 @@ def main():
         n["advertised"] = n["ad_occurrences"] > 0
         n["migrated"] = n["handle"] in {"tdk-behind-the-science-lp", "kde-behind-the-science-lp"}
 
+    # Paid destinations the estate crawl never measured, because "landing page" was defined as
+    # a sitemap handle ending in -lp. They belong on the map — a map of where the money lands
+    # that omits nine of the places it lands is the wrong map. They stay OUT of `nodes` so the
+    # measured tables keep meaning "the 44 that were actually crawled".
+    measured = {n["handle"] for n in nodes}
+    ad_only = [
+        {"handle": h, "url": f"https://firstday.com/pages/{h}", "ad_occurrences": n,
+         "advertised": True, "off_estate": True, "build_type": "unmeasured",
+         "weight_kb": 0, "scripts": 0, "backlog": [], "migrated": False}
+        for h, n in sorted(ad_by_handle.items(), key=lambda kv: -kv[1])
+        if h not in measured
+    ]
+
     # vendors, with a real icon and a category
     vendors = []
     for v in intel.get("tech_stack", {}).get("vendors", []):
@@ -150,6 +163,7 @@ def main():
 
     payload = {
         "nodes": nodes,
+        "ad_only_nodes": ad_only,
         "edges": graph.get("edges", []),
         "vendors": vendors,
         "products": prods,
@@ -165,6 +179,7 @@ def main():
         "sections": sum(1 for n in nodes if n["build_type"] == "sections"),
         "mb": round(sum(n["weight_kb"] for n in nodes) / 1024),
         "advertised": sum(1 for n in nodes if n["advertised"]),
+        "ad_only": len(ad_only),
         "vendors": len(vendors),
         "products": len(prods),
         "tests": sum(1 for p in prods if p["is_test"]),
