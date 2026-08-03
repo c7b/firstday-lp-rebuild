@@ -154,7 +154,6 @@ def main():
         "vendors": vendors,
         "products": prods,
         "ads": ads.get("destinations", []),
-        "ad_queries": ads.get("queries", []),
         "sitemap": intel.get("sitemap", {}),
         "collections": intel.get("collections", {}).get("items", []),
         "generated": intel.get("generated", ""),
@@ -173,6 +172,7 @@ def main():
         "urls": intel.get("sitemap", {}).get("total_urls", 0),
         "stale": intel.get("sitemap", {}).get("not_touched_since_2025", 0),
         "backlog": sum(len(n.get("backlog", [])) for n in nodes),
+        "pct_sections": (ads.get("totals", {}) or {}).get("pct_lp_links_to_sections_pages", 0),
     }
 
     html = (ROOT / "tools" / "audit_site_template.html").read_text()

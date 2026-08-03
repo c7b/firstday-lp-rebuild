@@ -31,9 +31,19 @@ So this repo answers two questions, and they are separable:
    **no new Liquid, no new CSS.** `/pages/kde-behind-the-science-lp` and
    `/pages/toddlers-behind-the-science-lp` are that claim, running.
 
-And the ordering that makes it a plan rather than a list: only **3 of the 44** carry active
-Meta ads. Two of those three are the pages rebuilt here. Migrating a page nobody sends traffic
-to buys nothing.
+And the finding that turns it into an ordering rather than a list. Reading 413 of First Day's
+~520 active ads out of Meta's public library and counting where each one sends people:
+
+**92% of paid landing-page traffic already goes to the section-built pages, not the Replo
+ones.** The Replo majority is a maintenance cost, not a revenue surface. So the plan is not
+"rewrite 32 pages" — it is: the pages carrying the spend are already sections, and the work
+that pays is making *those* excellent and reusable first, then retiring the Replo tail as the
+brand or the claims force a touch.
+
+The top two paid landing pages are `kde-behind-the-science-lp` (111 ad links) and
+`tdk-behind-the-science-lp` (49) — the page assigned here, and the Kids sibling built as the
+variant demo. The single biggest destination on the whole account is neither: it is the
+`teens-kickstart-vitamin` product page, at 108.
 
 ---
 

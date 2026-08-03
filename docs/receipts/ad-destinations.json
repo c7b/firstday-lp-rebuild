@@ -1,103 +1,220 @@
 {
- "generated": "2026-08-03T03:10:21.289Z",
- "method": "Public Meta Ad Library, active + US, several keyword queries, outbound links decoded from l.facebook.com wrappers and counted by occurrence in the loaded results.",
- "limits": "Occurrences are link appearances in the loaded portion of results — not impressions, spend or ad count. Presence is strong evidence; absence is weak.",
- "queries": [
-  "firstday.com",
-  "\"First Day\"",
-  "\"No Junk\"",
-  "multivitamin gummies kids"
- ],
- "perQuery": {
-  "firstday.com": {
-   "counts": {
-    "https://www.facebook.com/ads/library": 2,
-    "https://firstday.com/pages/tdk-behind-the-science-lp": 5,
-    "https://firstday.com/pages/5-reasons-pediatricians-recommend-first-day": 1,
-    "https://firstday.com/products/teens-kickstart-vitamin": 8,
-    "https://firstday.com/products/kids-enrichment-vitamin": 4,
-    "https://firstday.com/pages/kde-behind-the-science-lp": 3,
-    "https://reviews.firstday.com/pages/4-Vitamins-I-Wish-I-Never-Bought": 2,
-    "https://firstday.com/pages/kde-bfcm-behind-the-science-lp": 2,
-    "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-lp": 1
-   },
-   "results": "~3,500 results"
-  },
-  "\"First Day\"": {
-   "counts": {},
-   "results": "50,000 results"
-  },
-  "\"No Junk\"": {
-   "counts": {
-    "https://firstday.com/pages/tdk-behind-the-science-lp": 2
-   },
-   "results": "50,000 results"
-  },
-  "multivitamin gummies kids": {
-   "counts": {
-    "https://firstday.com/pages/kde-behind-the-science-lp": 3,
-    "https://firstday.com/pages/5-reasons-pediatricians-recommend-first-day": 2,
-    "https://firstday.com/products/teens-kickstart-vitamin": 2,
-    "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-lp": 2,
-    "https://firstday.com/pages/brain-bts-kids-teens": 1
-   },
-   "results": "~710 results"
-  }
+ "generated": "2026-08-03T07:03:03.184Z",
+ "source": "Meta Ad Library, advertiser page view (page id 375215066258824), active ads, country=ALL, sorted by total impressions.",
+ "method": "Outbound links decoded from the l.facebook.com/l.php?u= wrapper and counted by occurrence across every loaded ad card, then joined to lp-estate.json for build type.",
+ "limits": "Occurrences are link appearances, not spend, impressions or ad count. The library lazy-loads, so shares are representative rather than exhaustive. Presence is strong evidence; absence is weak.",
+ "supersedes": "An earlier keyword-based crawl (4 keywords, US only) that saw 9 destinations and understated the estate badly.",
+ "ads_captured": 413,
+ "ads_reported_by_meta": "~520 results",
+ "totals": {
+  "destinations": 25,
+  "link_occurrences": 431,
+  "landing_page_destinations": 20,
+  "product_page_destinations": 4,
+  "lp_links_to_sections_pages": 203,
+  "lp_links_to_replo_pages": 17,
+  "pct_lp_links_to_sections_pages": 92
  },
  "destinations": [
   {
-   "url": "https://firstday.com/products/teens-kickstart-vitamin",
-   "occurrences": 10,
-   "type": "product",
-   "handle": null
-  },
-  {
-   "url": "https://firstday.com/pages/tdk-behind-the-science-lp",
-   "occurrences": 7,
-   "type": "landing-page",
-   "handle": "tdk-behind-the-science-lp"
-  },
-  {
    "url": "https://firstday.com/pages/kde-behind-the-science-lp",
-   "occurrences": 6,
+   "occurrences": 111,
    "type": "landing-page",
-   "handle": "kde-behind-the-science-lp"
+   "handle": "kde-behind-the-science-lp",
+   "build_type": "sections",
+   "in_measured_estate": true
+  },
+  {
+   "url": "https://firstday.com/products/teens-kickstart-vitamin",
+   "occurrences": 108,
+   "type": "product",
+   "handle": null,
+   "build_type": null,
+   "in_measured_estate": false
   },
   {
    "url": "https://firstday.com/products/kids-enrichment-vitamin",
-   "occurrences": 4,
+   "occurrences": 57,
    "type": "product",
-   "handle": null
+   "handle": null,
+   "build_type": null,
+   "in_measured_estate": false
   },
   {
-   "url": "https://firstday.com/pages/5-reasons-pediatricians-recommend-first-day",
-   "occurrences": 3,
+   "url": "https://firstday.com/pages/tdk-behind-the-science-lp",
+   "occurrences": 49,
    "type": "landing-page",
-   "handle": "5-reasons-pediatricians-recommend-first-day"
+   "handle": "tdk-behind-the-science-lp",
+   "build_type": "sections",
+   "in_measured_estate": true
+  },
+  {
+   "url": "https://firstday.com/pages/is-your-family-nutrient-deficient",
+   "occurrences": 12,
+   "type": "landing-page",
+   "handle": "is-your-family-nutrient-deficient",
+   "build_type": null,
+   "in_measured_estate": false
   },
   {
    "url": "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-lp",
-   "occurrences": 3,
+   "occurrences": 11,
    "type": "landing-page",
-   "handle": "tdk-sales-behavior-hiddenhunger-lp"
+   "handle": "tdk-sales-behavior-hiddenhunger-lp",
+   "build_type": "sections",
+   "in_measured_estate": true
   },
   {
-   "url": "https://reviews.firstday.com/pages/4-Vitamins-I-Wish-I-Never-Bought",
-   "occurrences": 2,
+   "url": "https://firstday.com/pages/trmv-behind-the-science-lp",
+   "occurrences": 10,
    "type": "landing-page",
-   "handle": "4-Vitamins-I-Wish-I-Never-Bought"
+   "handle": "trmv-behind-the-science-lp",
+   "build_type": "sections",
+   "in_measured_estate": true
   },
   {
-   "url": "https://firstday.com/pages/kde-bfcm-behind-the-science-lp",
-   "occurrences": 2,
+   "url": "https://firstday.com/pages/tdk-behind-the-science-mthfr-lp",
+   "occurrences": 9,
    "type": "landing-page",
-   "handle": "kde-bfcm-behind-the-science-lp"
+   "handle": "tdk-behind-the-science-mthfr-lp",
+   "build_type": "sections",
+   "in_measured_estate": true
+  },
+  {
+   "url": "https://firstday.com/pages/kde-3-red-flags-lp",
+   "occurrences": 8,
+   "type": "landing-page",
+   "handle": "kde-3-red-flags-lp",
+   "build_type": "replo",
+   "in_measured_estate": true
+  },
+  {
+   "url": "https://firstday.com/pages/kcm-sales-melatonin-lp",
+   "occurrences": 8,
+   "type": "landing-page",
+   "handle": "kcm-sales-melatonin-lp",
+   "build_type": "sections",
+   "in_measured_estate": true
   },
   {
    "url": "https://firstday.com/pages/brain-bts-kids-teens",
+   "occurrences": 7,
+   "type": "landing-page",
+   "handle": "brain-bts-kids-teens",
+   "build_type": null,
+   "in_measured_estate": false
+  },
+  {
+   "url": "https://firstday.com/pages/5-reasons-pediatricians-recommend-first-day",
+   "occurrences": 7,
+   "type": "landing-page",
+   "handle": "5-reasons-pediatricians-recommend-first-day",
+   "build_type": null,
+   "in_measured_estate": false
+  },
+  {
+   "url": "https://firstday.com/pages/kcm-sale-producthero-lp",
+   "occurrences": 5,
+   "type": "landing-page",
+   "handle": "kcm-sale-producthero-lp",
+   "build_type": "sections",
+   "in_measured_estate": true
+  },
+  {
+   "url": "https://firstday.com/pages/kde-5-reasons-why-listicle-lp",
+   "occurrences": 5,
+   "type": "landing-page",
+   "handle": "kde-5-reasons-why-listicle-lp",
+   "build_type": null,
+   "in_measured_estate": false
+  },
+  {
+   "url": "http://firstday.com/pages/sale",
+   "occurrences": 4,
+   "type": "landing-page",
+   "handle": "sale",
+   "build_type": null,
+   "in_measured_estate": false
+  },
+  {
+   "url": "https://firstday.com/pages/mdp-sale-producthero-lp",
+   "occurrences": 4,
+   "type": "landing-page",
+   "handle": "mdp-sale-producthero-lp",
+   "build_type": "replo",
+   "in_measured_estate": true
+  },
+  {
+   "url": "https://firstday.com/pages/wds-3-red-flags-lp",
+   "occurrences": 4,
+   "type": "landing-page",
+   "handle": "wds-3-red-flags-lp",
+   "build_type": "replo",
+   "in_measured_estate": true
+  },
+  {
+   "url": "https://firstday.com/pages/wcm-sale-producthero-lp",
+   "occurrences": 2,
+   "type": "landing-page",
+   "handle": "wcm-sale-producthero-lp",
+   "build_type": null,
+   "in_measured_estate": false
+  },
+  {
+   "url": "https://firstday.com/pages/wds-5-reasons-why-listicle-lp",
+   "occurrences": 2,
+   "type": "landing-page",
+   "handle": "wds-5-reasons-why-listicle-lp",
+   "build_type": null,
+   "in_measured_estate": false
+  },
+  {
+   "url": "https://firstday.com/products/teens-kickstart-vitamin-gummy",
+   "occurrences": 2,
+   "type": "product",
+   "handle": null,
+   "build_type": null,
+   "in_measured_estate": false
+  },
+  {
+   "url": "https://firstday.com",
+   "occurrences": 2,
+   "type": "other",
+   "handle": null,
+   "build_type": null,
+   "in_measured_estate": false
+  },
+  {
+   "url": "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-spanish-lp",
    "occurrences": 1,
    "type": "landing-page",
-   "handle": "brain-bts-kids-teens"
+   "handle": "tdk-sales-behavior-hiddenhunger-spanish-lp",
+   "build_type": null,
+   "in_measured_estate": false
+  },
+  {
+   "url": "https://firstday.com/products/womens-good-gut",
+   "occurrences": 1,
+   "type": "product",
+   "handle": null,
+   "build_type": null,
+   "in_measured_estate": false
+  },
+  {
+   "url": "https://firstday.com/pages/kde-behind-the-science-spanish-lp",
+   "occurrences": 1,
+   "type": "landing-page",
+   "handle": "kde-behind-the-science-spanish-lp",
+   "build_type": "replo",
+   "in_measured_estate": true
+  },
+  {
+   "url": "https://firstday.com/pages/sale",
+   "occurrences": 1,
+   "type": "landing-page",
+   "handle": "sale",
+   "build_type": null,
+   "in_measured_estate": false
   }
  ]
 }

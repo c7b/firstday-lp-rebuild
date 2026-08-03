@@ -121,6 +121,9 @@
   /* Right-aligned columns drop their right padding so digits line up on the edge; they need
      left padding instead or the header before them runs into this one. */
   td.n,th.n{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;padding-right:0;padding-left:16px}
+  /* Values keep the flush-right edge; only the header gets breathing room, or the
+     label before it runs straight into the next one. */
+  th.n{padding-right:14px}
   tbody tr:hover{background:var(--raise)}
   .hcell{font-family:var(--mono);font-size:12.5px}
 
@@ -253,9 +256,11 @@
             this assignment, marked so you can tell the work from the survey. Everything else
             on this page is First Day's, untouched.</dd></div>
         <div><dt><i class="ring"></i>ring = active ads</dt>
-          <dd>Meta's public Ad Library currently shows at least one live US ad pointing here.
-            Three pages out of 44. This is the ordering that matters: rebuilding a page nobody
-            is sending traffic to buys nothing.</dd></div>
+          <dd>Meta's public Ad Library shows at least one live ad pointing here. <b>11 of the
+            44</b>, and they are overwhelmingly the section-built ones: 92% of paid
+            landing-page traffic lands on a page that already has sections. The Replo majority
+            is a maintenance cost, not a revenue surface — which is what turns this map into an
+            ordering rather than a backlog.</dd></div>
       </dl>
     </div>
         <div class="prov"><b>source</b><span>44 landing pages fetched once each from firstday.com on 2 Aug 2026, 7s apart, and parsed for section IDs, script tags and byte weight. Build type is decided by whether the HTML contains Shopify template sections at all.</span></div>
@@ -268,32 +273,37 @@
         results — not spend, not impressions. Presence is strong evidence; absence is weak.</p>
       <div class="replay">
         <b>check it yourself</b>
-        <p>These are the exact four searches this table was built from. Each link opens Meta's
-          public Ad Library on the same query, country and status filter — no login, no ad
-          account. The Ad Library is live, so numbers drift as campaigns change.</p>
-        <div class="qlinks" id="adqueries"></div>
+        <p>This table was built from one source, and this is it — First Day's own advertiser
+          page in Meta's public Ad Library, active ads, all countries, sorted by impressions.
+          No login and no ad account. The library is live, so the numbers drift as campaigns
+          change; the snapshot this table was counted from is committed in the repo.</p>
+        <div class="qlinks">
+          <a class="qlink" target="_blank" rel="noopener"
+             href="https://www.facebook.com/ads/library/?active_status=active&amp;ad_type=all&amp;country=ALL&amp;is_targeted_country=false&amp;media_type=all&amp;search_type=page&amp;sort_data[direction]=desc&amp;sort_data[mode]=total_impressions&amp;view_all_page_id=375215066258824">First Day — all active ads</a>
+        </div>
       </div>
 
       <div class="replay">
-        <b>nine destinations here, three rings on the map — where the other six went</b>
-        <p>The map covers the 44 landing pages, which this audit defined as sitemap handles
-          ending in <code>-lp</code>. Six advertised destinations fall outside that net, and
-          each one is worth naming:</p>
-        <p><b>Two are product pages.</b> <code>teens-kickstart-vitamin</code> carries 10 ad
-          links — more than any landing page. The biggest paid destination on the whole store
-          is a PDP, not an LP.<br>
-          <b>Three are pages whose handle has no <code>-lp</code> suffix</b> — including
-          <code>5-reasons-pediatricians-recommend-first-day</code>, which is in the sitemap and
-          is plainly a landing page. The suffix is a naming convention, not a definition, and
-          this is where that shortcut costs coverage.<br>
-          <b>One is on another host.</b> <code>reviews.firstday.com</code> is a separate
-          property outside this crawl entirely.</p>
-        <p>And one advertised page, <code>kde-bfcm-behind-the-science-lp</code>, does not
-          appear in the supplied sitemap at all — live paid traffic pointing at a page their own
-          sitemap does not list.</p>
+        <b>what this changes, and what it does not reach</b>
+        <p>Read across 413 of the ~520 active ads Meta reports for the account, the ranking
+          overturns the obvious conclusion. <b>92% of paid landing-page traffic lands on a page
+          that already has Shopify sections</b>, not on a Replo export. The Replo majority in
+          the map above is real and it is expensive to maintain — but it is not where the money
+          is going. The work that pays is the section-built pages that carry the spend.</p>
+        <p>The single biggest destination on the account is not a landing page at all:
+          <code>teens-kickstart-vitamin</code>, a PDP, at 108 link occurrences — just ahead of
+          the top LP.</p>
+        <p><b>What this does not reach.</b> Nine advertised landing pages fall outside the 44,
+          because this audit defined a landing page as a sitemap handle ending in
+          <code>-lp</code> — a naming convention, not a definition.
+          <code>is-your-family-nutrient-deficient</code> and
+          <code>5-reasons-pediatricians-recommend-first-day</code> are plainly landing pages and
+          plainly advertised; neither matches the pattern. Widening the crawl is the first item
+          on the plan. Two Spanish variants are also running paid traffic, which is its own
+          conversation.</p>
       </div>
     </div>
-        <div class="prov"><b>source</b><span>Meta’s public Ad Library, filtered to active + United States, queried on four keywords. Outbound links are unwrapped from the l.facebook.com redirect and counted where they appear in the loaded results.</span></div>
+        <div class="prov"><b>source</b><span>Meta’s public Ad Library, advertiser page view, active ads, all countries, sorted by impressions — the rendered page scrolled to exhaustion and saved, then every outbound link unwrapped from the l.facebook.com redirect and counted. 413 of the ~520 ads Meta reports were captured, so shares are representative rather than exhaustive.</span></div>
     </section>
 
   <section id="s-stack">
@@ -371,7 +381,8 @@ const TILES = [
   ['page-builder pages', S.replo + '/' + S.pages, 'warn', 'replo', 's-pages', 'pages whose HTML contains no Shopify section at all'],
   ['html shipped', S.mb + ' MB', 'warn', null, 's-pages', 'sum of the HTML documents, images and video excluded'],
   ['tools per page', S.vendors, 'warn', null, 's-stack', 'script fingerprints found on every page measured'],
-  ['pages with ads', S.advertised, 'ok', 'advertised', 's-ads', 'Meta Ad Library, active + US'],
+  ['lp pages with ads', S.advertised, 'ok', 'advertised', 's-ads', 'Meta Ad Library, active, all countries'],
+  ['ad links to sections pages', S.pct_sections + '%', 'ok', null, 's-ads', 'share of paid LP traffic landing on a page that already has sections'],
   ['products', S.products, '', null, 's-prod', "Shopify's public products.json"],
   ['typed “Test”', S.tests, 'warn', 'test', 's-prod', "the store's own product_type field"],
   ['untouched since 2024', S.stale, '', null, 's-site', 'lastmod dates in the sitemap'],
@@ -422,13 +433,6 @@ $('#tads').innerHTML = `<thead><tr><th>Destination</th><th>Type</th><th class="n
       <td class="n">${a.occurrences}</td>
       <td><span class="bar ok" style="display:inline-block;width:110px"><i style="width:${Math.round(100*a.occurrences/max)}%"></i></span></td></tr>`;
   }).join('') + '</tbody>';
-
-/* The exact searches, rebuilt as links. Same params the crawler used, so anyone can reopen
-   the source instead of trusting the table. */
-$('#adqueries').innerHTML = (D.ad_queries || []).map(q =>
-  `<a class="qlink" target="_blank" rel="noopener"
-      href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=US&q=${encodeURIComponent(q)}&search_type=keyword_unordered&media_type=all">${esc(q)}</a>`
-).join('');
 
 /* ---------- vendors ---------- */
 const vends = D.vendors || [];
