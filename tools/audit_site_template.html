@@ -174,7 +174,13 @@
   .legend{position:absolute;top:10px;left:12px;display:flex;gap:6px;flex-wrap:wrap}
   .lg{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#CBD5E1;background:rgba(15,23,42,.72);border:1px solid #334155;padding:3px 8px;border-radius:99px}
   .dot{width:8px;height:8px;border-radius:50%}
-  .nodeinfo{position:absolute;right:12px;top:12px;width:250px;background:rgba(15,23,42,.94);border:1px solid #334155;border-radius:10px;padding:12px;color:#E2E8F0;font-size:12.5px;display:none}
+  /* The panel sits over the canvas, so it must never take the pointer — otherwise hovering a
+     node in its corner hides the node under the very box that describes it, and the two
+     fight each other. It also flips to the far side of whichever node you are on. */
+  .nodeinfo{position:absolute;top:12px;width:250px;background:rgba(15,23,42,.94);border:1px solid #334155;border-radius:10px;padding:12px;color:#E2E8F0;font-size:12.5px;display:none;pointer-events:none}
+  .nodeinfo.on{right:12px;left:auto}
+  /* Flipped left it would sit on the legend, so it drops below that row. */
+  .nodeinfo.on.flip{left:12px;right:auto;top:52px}
   .nodeinfo.on{display:block}
   .nodeinfo h4{margin:0 0 6px;font-size:13px;font-family:var(--mono);overflow-wrap:anywhere}
   .nodeinfo .kv{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:#94A3B8;padding:2px 0}
@@ -589,13 +595,35 @@ function draw(){
   }
 }
 function loop(){if(alpha>.02)step();draw();requestAnimationFrame(loop);}
+/* Nodes are draggable: a force layout parks things where the physics wants them, not where
+   you need them to compare two. Dragging pins the node under the cursor and lets the rest
+   settle around it. */
+let drag=null,dragMoved=false;
+const at=(ev)=>{const r=cv.getBoundingClientRect();return {mx:ev.clientX-r.left,my:ev.clientY-r.top};};
+cv.addEventListener('mousedown',ev=>{
+  const {mx,my}=at(ev);
+  drag=N.find(n=>!n.dim&&Math.hypot(n.x-mx,n.y-my)<=n.r+6)||null;
+  dragMoved=false;
+  if(drag){ev.preventDefault();cv.style.cursor='grabbing';}
+});
+addEventListener('mouseup',()=>{if(drag){drag=null;cv.style.cursor='default';alpha=Math.max(alpha,.12);}});
 cv.addEventListener('mousemove',ev=>{
-  const r=cv.getBoundingClientRect(),mx=ev.clientX-r.left,my=ev.clientY-r.top;
-  hover=N.find(n=>!n.dim&&Math.hypot(n.x-mx,n.y-my)<=n.r+4)||null;
-  cv.style.cursor=hover?'pointer':'default';
+  const {mx,my}=at(ev);
+  if(drag){
+    dragMoved=true;
+    drag.x=Math.max(drag.r,Math.min(W-drag.r,mx));
+    drag.y=Math.max(drag.r,Math.min(H-drag.r,my));
+    drag.vx=drag.vy=0;
+    alpha=Math.max(alpha,.08);          // nudge neighbours out of the way
+    hover=drag;
+  } else {
+    hover=N.find(n=>!n.dim&&Math.hypot(n.x-mx,n.y-my)<=n.r+4)||null;
+    cv.style.cursor=hover?'grab':'default';
+  }
   const box=$('#ni');
   if(!hover){box.classList.remove('on');return;}
   box.classList.add('on');
+  box.classList.toggle('flip', hover.x > W*0.62);   // keep the panel off the node
   box.innerHTML=`<h4>${esc(hover.handle)}</h4>
     ${hover.off_estate
       ? `<div class="kv"><span>built with</span><span>not measured</span></div>
@@ -607,7 +635,7 @@ cv.addEventListener('mousemove',ev=>{
     ${(hover.backlog||[]).map(j=>`<div class="job">${esc(j.title)} · <span style="opacity:.7">${esc(j.impact)} / ${esc(j.effort)}</span></div>`).join('')}`;
 });
 cv.addEventListener('mouseleave',()=>{hover=null;$('#ni').classList.remove('on');});
-cv.addEventListener('click',()=>{ if(hover) window.open(hover.url,'_blank','noopener'); });
+cv.addEventListener('click',()=>{ if(hover && !dragMoved) window.open(hover.url,'_blank','noopener'); });
 let mFilter=null,mQuery='';
 function applyMap(){N.forEach(n=>{const t=!mFilter||(mFilter==='advertised'?n.advertised:n.build_type===mFilter);const q=!mQuery||n.handle.includes(mQuery);n.dim=!(t&&q);});alpha=Math.max(alpha,.25);}
 document.querySelectorAll('[data-f]').forEach(b=>b.addEventListener('click',()=>{
