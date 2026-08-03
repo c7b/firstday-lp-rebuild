@@ -70,6 +70,12 @@
   margin: 0 0 1rem;
 }
 
+/* Two closing blocks are two paragraphs to the reader — without this they butt up against
+   each other and read as one run-on block. */
+.lp-hero__closing + .lp-hero__closing {
+  margin-top: 1.2rem;
+}
+
 .lp-hero__cta {
   display: inline-flex;
   align-items: center;
