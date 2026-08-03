@@ -5,15 +5,22 @@
 <title>First Day — storefront audit</title>
 <style>
   :root{
-    --ink:#0F172A; --ink2:#475569; --mute:#64748B; --faint:#94A3B8;
-    --line:#E2E8F0; --line2:#CBD5E1; --wash:#F1F5F9; --wash2:#EDF2F7; --card:#fff; --bg:#F8FAFC;
-    --ok:#10B981; --okd:#065F46; --okw:#D1FAE5;
-    --warn:#F59E0B; --warnd:#78350F; --warnw:#FEF3C7;
-    --bad:#EF4444; --badd:#B91C1C; --badw:#FEE2E2;
-    --info:#1D4ED8; --info2:#3B82F6; --infow:#DBEAFE;
+    /* Four hues, deliberately far apart so a glance separates them:
+       violet = interface state, orange = what it costs, green = where value is,
+       blue = neutral measurement. Nothing carries two meanings. */
+    --bg:#F4F6F8; --surface:#fff; --raise:#FBFCFD;
+    --ink:#0B0F14; --ink2:#3D4752; --mute:#6B7785; --faint:#98A3AF;
+    --line:#E1E6EB; --line2:#CBD3DB;
+
+    --sel:#5B34D6; --sel-w:#EEE9FE; --sel-b:#C4B5FD;
+    --cost:#C2410C; --cost-w:#FDEDE4; --cost-b:#F5B896;
+    --live:#047857; --live-w:#DCF2EA; --live-b:#7FCBB0;
+    --info:#1E4E8C; --info-w:#E4EDF8; --info-b:#9FC0E4;
+
     --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    --sh:0 1px 2px rgba(15,23,42,.05),0 6px 18px rgba(15,23,42,.04);
+    --sh:0 1px 2px rgba(11,15,20,.04),0 4px 14px rgba(11,15,20,.05);
+    --sh-lift:0 2px 6px rgba(11,15,20,.07),0 14px 34px rgba(11,15,20,.09);
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
@@ -28,19 +35,33 @@
 
   /* metric tiles */
   .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:18px 0 8px}
-  .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--sh);cursor:pointer;transition:transform .12s ease,border-color .12s ease}
-  .tile:hover{transform:translateY(-1px);border-color:var(--line2)}
-  .tile.on{border-color:var(--info);box-shadow:0 0 0 2px var(--infow)}
+  .tile{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--sh);cursor:pointer;text-align:left;font:inherit;color:inherit;
+    transition:transform .16s ease,border-color .16s ease,filter .22s ease,opacity .22s ease,box-shadow .16s ease}
+  .tile:hover{transform:translateY(-2px);border-color:var(--line2);box-shadow:var(--sh-lift)}
+  .tile:focus-visible{outline:2px solid var(--sel);outline-offset:2px}
+  /* focus mode: picking one tile pushes every other one back so the selection is unmistakable */
+  .metrics.focused .tile{filter:grayscale(1);opacity:.38}
+  .metrics.focused .tile.on{filter:none;opacity:1;border-color:var(--sel);box-shadow:0 0 0 3px var(--sel-w),var(--sh-lift);transform:translateY(-2px)}
+  .tile .src{display:block;margin-top:8px;padding-top:7px;border-top:1px dashed var(--line);font-family:var(--mono);font-size:9.5px;line-height:1.45;letter-spacing:.02em;color:var(--faint);text-transform:none}
   .tile .big{font-family:var(--mono);font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
   .tile .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:2px}
-  .big.ok{color:var(--okd)} .big.warn{color:var(--warnd)} .big.bad{color:var(--badd)}
+  .big.ok{color:var(--live)} .big.warn{color:var(--cost)} .big.bad{color:var(--cost)}
+  /* provenance line under every section heading — a number with no source is an opinion */
+  .prov{display:flex;gap:8px;align-items:flex-start;margin:12px 0 0;padding:9px 11px;border-radius:8px;
+    background:var(--info-w);border:1px solid var(--info-b);font-size:12.5px;line-height:1.5;color:var(--ink2)}
+  .prov b{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--info);flex:none;padding-top:1px}
+  .stackgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:12px}
+  .layer{border:1px solid var(--line);border-radius:10px;padding:13px 15px;background:var(--raise)}
+  .layer .lname{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+  .layer .lval{font-size:16px;font-weight:600;margin-top:3px;letter-spacing:-.01em}
+  .layer .ldesc{font-size:13px;color:var(--mute);margin-top:5px}
 
   /* sections */
-  section{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh);overflow:hidden}
+  section{margin-top:26px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh);overflow:hidden}
   .head{display:flex;gap:12px;align-items:center;padding:14px 16px;cursor:pointer;user-select:none}
-  .head:hover{background:var(--wash2)}
+  .head:hover{background:var(--raise)}
   .head h2{margin:0;font-size:15px;letter-spacing:-.01em;flex:1}
-  .head .count{font-family:var(--mono);font-size:11px;color:var(--mute);background:var(--wash);border:1px solid var(--line);padding:2px 8px;border-radius:99px}
+  .head .count{font-family:var(--mono);font-size:11px;color:var(--mute);background:var(--raise);border:1px solid var(--line);padding:2px 8px;border-radius:99px}
   .chev{transition:transform .18s ease;color:var(--faint);font-size:12px}
   section.open .chev{transform:rotate(90deg)}
   .body{display:none;padding:0 16px 16px;border-top:1px solid var(--line)}
@@ -52,21 +73,21 @@
   .scroll{overflow-x:auto}
   table{width:100%;border-collapse:collapse;font-size:13.5px}
   th,td{text-align:left;padding:7px 12px 7px 0;border-bottom:1px solid var(--line);vertical-align:top}
-  th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:500;position:sticky;top:0;background:var(--card)}
+  th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:500;position:sticky;top:0;background:var(--surface)}
   td.n,th.n{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;padding-right:0}
-  tbody tr:hover{background:var(--wash2)}
+  tbody tr:hover{background:var(--raise)}
   .hcell{font-family:var(--mono);font-size:12.5px}
 
   /* chips */
-  .chip{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:99px;border:1px solid var(--line2);color:var(--mute);background:var(--wash)}
-  .chip.ok{background:var(--okw);border-color:#6EE7B7;color:var(--okd)}
-  .chip.warn{background:var(--warnw);border-color:#FCD34D;color:var(--warnd)}
-  .chip.bad{background:var(--badw);border-color:#FCA5A5;color:var(--badd)}
-  .chip.info{background:var(--infow);border-color:#93C5FD;color:var(--info)}
+  .chip{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:99px;border:1px solid var(--line2);color:var(--mute);background:var(--raise)}
+  .chip.ok{background:var(--live-w);border-color:var(--live-b);color:var(--live)}
+  .chip.warn{background:var(--cost-w);border-color:var(--cost-b);color:var(--cost)}
+  .chip.bad{background:var(--cost-w);border-color:var(--cost-b);color:var(--cost)}
+  .chip.info{background:var(--info-w);border-color:var(--info-b);color:var(--info)}
 
   /* vendor grid */
   .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(56px,1fr));gap:8px;margin-top:12px}
-  .vend{position:relative;display:grid;place-items:center;aspect-ratio:1;background:var(--wash);border:1px solid var(--line);border-radius:10px;cursor:default;transition:transform .12s ease,box-shadow .12s ease}
+  .vend{position:relative;display:grid;place-items:center;aspect-ratio:1;background:var(--raise);border:1px solid var(--line);border-radius:10px;cursor:default;transition:transform .12s ease,box-shadow .12s ease}
   .vend:hover{transform:translateY(-2px);box-shadow:var(--sh);border-color:var(--line2);z-index:5}
   .vend img{width:26px;height:26px;object-fit:contain}
   .vend .fallback{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--mute)}
@@ -90,13 +111,13 @@
   .nodeinfo .job{border-top:1px solid #334155;padding-top:6px;margin-top:6px;font-size:11.5px}
 
   .filters{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
-  .fchip{font-family:var(--mono);font-size:11px;padding:5px 11px;border-radius:99px;border:1px solid var(--line2);background:var(--card);color:var(--ink2);cursor:pointer}
+  .fchip{font-family:var(--mono);font-size:11px;padding:5px 11px;border-radius:99px;border:1px solid var(--line2);background:var(--surface);color:var(--ink2);cursor:pointer}
   .fchip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
-  input[type=search]{font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:99px;border:1px solid var(--line2);background:var(--card);color:var(--ink);min-width:180px}
+  input[type=search]{font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:99px;border:1px solid var(--line2);background:var(--surface);color:var(--ink);min-width:180px}
 
-  .bar{height:6px;border-radius:99px;background:var(--wash);overflow:hidden;min-width:70px}
-  .bar i{display:block;height:100%;background:var(--info2)}
-  .bar.warn i{background:var(--warn)} .bar.ok i{background:var(--ok)}
+  .bar{height:6px;border-radius:99px;background:var(--raise);overflow:hidden;min-width:70px}
+  .bar i{display:block;height:100%;background:var(--info)}
+  .bar.warn i{background:var(--cost)} .bar.ok i{background:var(--live)}
   footer{margin-top:34px;color:var(--mute);font-size:12.5px;line-height:1.6}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -113,6 +134,16 @@
   </div>
 
   <div class="metrics" id="metrics"></div>
+
+  <section class="open" id="s-stackinfo">
+    <div class="head"><span class="chev">▶</span><h2>What they are actually running</h2><span class="count">platform</span></div>
+    <div class="body">
+      <div class="stackgrid" id="stacklayers"></div>
+      <div class="prov"><b>source</b><span>Every value read straight out of the live page's own
+        <code>Shopify.theme</code> object and the script fingerprints on it — not from a vendor
+        directory or a guess.</span></div>
+    </div>
+  </section>
 
   <section class="open" id="s-map">
     <div class="head"><span class="chev">▶</span><h2>The estate, as a map</h2><span class="count" id="mapcount"></span></div>
@@ -137,7 +168,8 @@
         <div class="nodeinfo" id="ni"></div>
       </div>
     </div>
-  </section>
+        <div class="prov"><b>source</b><span>44 landing pages fetched once each from firstday.com on 2 Aug 2026, 7s apart, and parsed for section IDs, script tags and byte weight. Build type is decided by whether the HTML contains Shopify template sections at all.</span></div>
+    </section>
 
   <section id="s-ads">
     <div class="head"><span class="chev">▶</span><h2>Where the ads actually send people</h2><span class="count" id="adcount"></span></div>
@@ -145,7 +177,8 @@
       <p class="note">Counts are how often each destination appeared in the loaded ad-library
         results — not spend, not impressions. Presence is strong evidence; absence is weak.</p>
     </div>
-  </section>
+        <div class="prov"><b>source</b><span>Meta’s public Ad Library, filtered to active + United States, queried on four keywords. Outbound links are unwrapped from the l.facebook.com redirect and counted where they appear in the loaded results.</span></div>
+    </section>
 
   <section id="s-stack">
     <div class="head"><span class="chev">▶</span><h2>Every tool loading on the storefront</h2><span class="count" id="vcount"></span></div>
@@ -155,7 +188,8 @@
       <div id="vcats"></div>
       <div class="scroll" style="margin-top:16px"><table id="tvend"></table></div>
     </div>
-  </section>
+        <div class="prov"><b>source</b><span>Script and markup fingerprints across the same 44 pages plus the supplied page snapshot. A match proves the script is present on that page; it does not prove the feature is switched on.</span></div>
+    </section>
 
   <section id="s-pages">
     <div class="head"><span class="chev">▶</span><h2>Every landing page measured</h2><span class="count" id="pcount"></span></div>
@@ -167,7 +201,8 @@
       </div>
       <div class="scroll"><table id="tpages"></table></div>
     </div>
-  </section>
+        <div class="prov"><b>source</b><span>Same crawl as the map. Weight is the HTML document only — images, fonts and video are on top of it.</span></div>
+    </section>
 
   <section id="s-prod">
     <div class="head"><span class="chev">▶</span><h2>The catalogue, including its shadow copy</h2><span class="count" id="prcount"></span></div>
@@ -179,12 +214,14 @@
       </div>
       <div class="scroll"><table id="tprod"></table></div>
     </div>
-  </section>
+        <div class="prov"><b>source</b><span>Shopify’s own products.json, which the store serves publicly. Prices, types, variants and publish dates are the store’s own fields, unmodified.</span></div>
+    </section>
 
   <section id="s-site">
     <div class="head"><span class="chev">▶</span><h2>Sitemap shape and staleness</h2><span class="count" id="scount"></span></div>
     <div class="body"><div class="scroll"><table id="tsite"></table></div></div>
-  </section>
+        <div class="prov"><b>source</b><span>The sitemap workbook supplied with the assignment brief: 383 rows with type, handle and lastmod.</span></div>
+    </section>
 
   <footer id="foot"></footer>
 </div>
@@ -198,19 +235,44 @@ $('#stamp').innerHTML = 'generated ' + esc((D.generated || '').slice(0, 16).repl
 
 /* ---------- metric tiles ---------- */
 const TILES = [
-  ['urls in sitemap', S.urls, '', null],
-  ['landing pages', S.pages, '', null],
-  ['page-builder pages', S.replo + '/' + S.pages, 'warn', 'replo'],
-  ['html shipped', S.mb + ' MB', 'warn', null],
-  ['tools per page', S.vendors, 'warn', null],
-  ['pages with ads', S.advertised, 'ok', 'advertised'],
-  ['products', S.products, '', null],
-  ['typed “Test”', S.tests, 'warn', 'test'],
-  ['untouched since 2024', S.stale, '', null],
-  ['jobs queued', S.backlog, '', null],
+  ['urls in sitemap', S.urls, '', null, 's-site', 'sitemap workbook supplied with the brief'],
+  ['landing pages', S.pages, '', null, 's-pages', 'the -lp handles in that sitemap, each fetched once'],
+  ['page-builder pages', S.replo + '/' + S.pages, 'warn', 'replo', 's-pages', 'pages whose HTML contains no Shopify section at all'],
+  ['html shipped', S.mb + ' MB', 'warn', null, 's-pages', 'sum of the HTML documents, images and video excluded'],
+  ['tools per page', S.vendors, 'warn', null, 's-stack', 'script fingerprints found on every page measured'],
+  ['pages with ads', S.advertised, 'ok', 'advertised', 's-ads', 'Meta Ad Library, active + US'],
+  ['products', S.products, '', null, 's-prod', "Shopify's public products.json"],
+  ['typed “Test”', S.tests, 'warn', 'test', 's-prod', "the store's own product_type field"],
+  ['untouched since 2024', S.stale, '', null, 's-site', 'lastmod dates in the sitemap'],
+  ['jobs queued', S.backlog, '', null, 's-map', 'derived only where a measured number justifies one'],
 ];
-$('#metrics').innerHTML = TILES.map(([l, v, c, f], i) =>
-  `<div class="tile" data-tile="${i}" ${f ? `data-jump="${f}"` : ''}><div class="big ${c}">${esc(v)}</div><div class="lbl">${esc(l)}</div></div>`).join('');
+const metricsEl = $('#metrics');
+metricsEl.innerHTML = TILES.map(([l, v, c, f, sec, src], i) =>
+  `<button class="tile" type="button" data-tile="${i}" data-sec="${sec}" ${f ? `data-jump="${f}"` : ''}
+     aria-pressed="false"><div class="big ${c}">${esc(v)}</div><div class="lbl">${esc(l)}</div>
+     <span class="src">${esc(src)}</span></button>`).join('');
+
+/* Picking a tile greys out the rest and takes you to what it measures. Clicking it again
+   releases the focus — a selection you cannot undo is a trap. */
+let picked = null;
+metricsEl.querySelectorAll('.tile').forEach(t => t.addEventListener('click', () => {
+  const i = t.dataset.tile;
+  const release = picked === i;
+  picked = release ? null : i;
+  metricsEl.classList.toggle('focused', !release);
+  metricsEl.querySelectorAll('.tile').forEach(x => {
+    const on = !release && x.dataset.tile === i;
+    x.classList.toggle('on', on);
+    x.setAttribute('aria-pressed', String(on));
+  });
+  if (release) return;
+  const [, , , jump, sec] = TILES[Number(i)];
+  if (sec) openSection('#' + sec);
+  if (jump === 'test') { rFilter = 'test'; syncChips('[data-rf]', rFilter); renderProds(); }
+  else if (jump) { pFilter = jump; syncChips('[data-pf]', pFilter); renderPages(); mFilter = jump; syncChips('[data-f]', mFilter); applyMap(); }
+}));
+const syncChips = (sel, val) => document.querySelectorAll(sel).forEach(x =>
+  x.setAttribute('aria-pressed', String((x.dataset.pf || x.dataset.rf || x.dataset.f) === val)));
 
 /* ---------- collapsibles ---------- */
 document.querySelectorAll('section .head').forEach(h => {
@@ -356,17 +418,21 @@ document.querySelectorAll('[data-f]').forEach(b=>b.addEventListener('click',()=>
 }));
 $('#q').addEventListener('input',e=>{mQuery=e.target.value.trim().toLowerCase();applyMap();});
 
-/* tiles jump to the relevant section */
-document.querySelectorAll('[data-jump]').forEach(t=>t.addEventListener('click',()=>{
-  const j=t.dataset.jump;
-  if(j==='test'){openSection('#s-prod');rFilter='test';document.querySelectorAll('[data-rf]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.rf==='test')));renderProds();}
-  else {openSection('#s-pages');pFilter=j;document.querySelectorAll('[data-pf]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.pf===j)));renderPages();}
-}));
-
 addEventListener('resize',()=>{resize();});
 resize();seed();
 if(reduce){for(let i=0;i<300;i++)step();alpha=0;}
 loop();
+
+const STACK = [
+  ['platform', 'Shopify', 'first-day-inc.myshopify.com'],
+  ['theme', 'Be Yours 6.9.1', 'A commercial theme, heavily modified. No theme_store_id, so it is a detached copy.'],
+  ['deploy', 'GitHub sync', 'The live theme is named firstday-shopify-theme-sync/production — they already deploy from a repository.'],
+  ['landing pages', 'Replo', 'Page-builder exports on ' + S.replo + ' of ' + S.pages + ' landing pages measured.'],
+  ['app layer', S.vendors + ' third-party tools', 'Every one found on every page measured, including pages that do not use the feature.'],
+  ['catalogue', S.products + ' products', S.tests + ' of them typed “Test”, publicly listed alongside the real SKUs.'],
+];
+$('#stacklayers').innerHTML = STACK.map(([n, v, d]) =>
+  `<div class="layer"><div class="lname">${esc(n)}</div><div class="lval">${esc(v)}</div><div class="ldesc">${esc(d)}</div></div>`).join('');
 
 $('#foot').innerHTML = `<strong>Method and limits.</strong> Sources: Shopify's public products.json
   and collections.json, the sitemap supplied with the brief, the HTML of ${S.pages} landing pages
