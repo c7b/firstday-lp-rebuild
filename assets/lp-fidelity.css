@@ -1,0 +1,10 @@
+/* Post-debrief fidelity corrections — loaded ONLY by the v2 template.
+ *
+ * The panel's one substantive criticism was visual fidelity: font weights and image crops,
+ * and whether the differences were purposeful. This file is the answer, and it is deliberately
+ * the only place the answer lives — the delivered page loads none of it, so it stays exactly
+ * as reviewed while every correction stays auditable in one diff.
+ *
+ * Each block cites the measured original value it is matching. Nothing here is a judgement
+ * call about what looks better; it is the number the reference actually computes to.
+ */
