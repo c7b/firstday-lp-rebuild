@@ -5,6 +5,8 @@ The page IS this ordered list — a new LP variant is a new order + new fragment
 Run: python3 tools/build_template.py
 """
 import json
+import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -52,7 +54,35 @@ def variant(template, overrides):
     return out
 
 
+def semantic_diff(path, produced):
+    """Compare a committed template with freshly generated output AS DATA.
+
+    The file has two writers: this generator and Shopify's GitHub sync, which rewrites it with
+    its own key order whenever anyone touches the theme editor. Byte comparison flags that
+    reordering as drift, which is noise. What must never differ is the content.
+    """
+    if not path.exists():
+        return f"{path.name}: missing"
+    committed = json.loads(re.sub(r"^/\*.*?\*/\s*", "", path.read_text(encoding="utf-8"), flags=re.S))
+    fresh = json.loads(re.sub(r"^/\*.*?\*/\s*", "", produced, flags=re.S))
+    if committed == fresh:
+        return None
+    diffs = []
+    if committed.get("order") != fresh.get("order"):
+        diffs.append("section order differs")
+    cs, fs = committed.get("sections", {}), fresh.get("sections", {})
+    for key in sorted(set(cs) | set(fs)):
+        if key not in cs:
+            diffs.append(f"{key}: only in generated output")
+        elif key not in fs:
+            diffs.append(f"{key}: only in the committed file")
+        elif cs[key] != fs[key]:
+            diffs.append(f"{key}: settings or blocks differ")
+    return f"{path.name}: " + "; ".join(diffs or ["content differs"])
+
+
 def main():
+    check_only = "--check" in sys.argv
     sections, order, missing = {}, [], []
     for key, fname in ORDER:
         path = FRAGMENTS / fname
@@ -68,9 +98,14 @@ def main():
         order.append(key)
 
     template = {"sections": sections, "order": order}
+    problems = []
     out = ROOT / "templates" / "page.tdk-behind-the-science.json"
-    out.write_text(GENERATED_HEADER + json.dumps(template, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"wrote {out.relative_to(ROOT)} with {len(order)} sections")
+    body = GENERATED_HEADER + json.dumps(template, indent=2, ensure_ascii=False) + "\n"
+    if check_only:
+        problems.append(semantic_diff(out, body))
+    else:
+        out.write_text(body, encoding="utf-8")
+        print(f"wrote {out.relative_to(ROOT)} with {len(order)} sections")
 
     # --- variant demos: the Kids and Toddlers funnels. No new Liquid, no new CSS — a
     # different product, whose own metafields carry its facts. Everything else is the same
@@ -81,10 +116,23 @@ def main():
     ]:
         v = variant(template, {"buy_box": {"settings": {"product": product_handle}}})
         vout = ROOT / "templates" / filename
-        vout.write_text(GENERATED_HEADER + json.dumps(v, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        print(f"wrote {vout.relative_to(ROOT)} (variant: {product_handle})")
+        vbody = GENERATED_HEADER + json.dumps(v, indent=2, ensure_ascii=False) + "\n"
+        if check_only:
+            problems.append(semantic_diff(vout, vbody))
+        else:
+            vout.write_text(vbody, encoding="utf-8")
+            print(f"wrote {vout.relative_to(ROOT)} (variant: {product_handle})")
     if missing:
         print(f"MISSING fragments (not included): {', '.join(missing)}")
+
+    if check_only:
+        real = [p for p in problems if p]
+        if real:
+            print("Committed templates differ from what the fragments produce:")
+            for r in real:
+                print("  -", r)
+            sys.exit(1)
+        print("templates match their fragments (compared as data, not as text)")
 
 
 if __name__ == "__main__":

@@ -34,10 +34,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Rebuild templates
-        run: python3 tools/build_template.py
-      - name: Require committed templates to match the generator
-        run: git diff --exit-code templates/
+      # Compared as data, not as text. This file has two writers: the generator and Shopify's
+      # GitHub sync, which rewrites it with its own key order whenever the theme editor is
+      # touched. Byte comparison flags that reordering as drift; only content drift matters.
+      - name: Require committed templates to match their fragments
+        run: python3 tools/build_template.py --check
 
   copy-fidelity:
     name: Copy fidelity and warnings
