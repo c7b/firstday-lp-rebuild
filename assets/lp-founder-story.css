@@ -1,36 +1,40 @@
-/* Founder story — layout and frame values sampled from firstday.com/pages/about-us, where the
-   same block lives inside a custom-liquid section with its rules inlined in a <style> tag.
-   Kept as tokens here so the frame colour and heading colour stay editor-driven. */
+/* Founder story — the frame signature (blue border, hard offset shadow, 20px radius) is
+   sampled from firstday.com/pages/about-us, where this block lives inside a custom-liquid
+   section with its rules inlined in a <style> tag. The spacing is not theirs: on the About
+   page this sits alone between wide margins, and dropped into an LP at that density it read
+   as one solid slab. Colours stay tokens so the editor keeps control. */
 
 .lp-founder-story {
   --lp-founder-frame: #486ced;
   --lp-founder-heading: #65daa1;
-  padding-inline: 1.5rem;
+  padding-inline: 2.4rem;
   text-align: center;
 }
 
+/* The section title has to out-rank the pull quote under it — at the About page's size the
+   quote won on sheer weight and the heading read as a caption. */
 .lp-founder-story__heading {
-  margin: 0 0 2rem;
-  font-size: calc(var(--font-heading-scale, 1) * 4rem);
-  line-height: 1.1;
-  letter-spacing: 0.02em;
+  margin: 0 0 4rem;
+  font-size: clamp(3.6rem, 5.2vw, 5.6rem);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
   text-wrap: balance;
   color: var(--lp-founder-heading);
 }
 
 .lp-founder-story__container {
-  max-width: 110rem;
+  max-width: 112rem;
   margin-inline: auto;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .lp-founder-story__portrait {
-  margin: 0 auto 1.6rem;
-  max-width: 32rem;
+  /* The offset shadow lives outside the image box, so the column reserves room for it. */
+  margin: 0 auto 2.4rem;
+  padding: 0 1rem 1rem 0;
+  max-width: 30rem;
 }
 
-/* The offset shadow is the About page's signature: a hard blue block behind a blue-bordered
-   photo. transform:scale(.95) is theirs too — it leaves room for the shadow inside the box. */
 .lp-founder-story__photo {
   display: block;
   margin: 0 auto;
@@ -39,56 +43,75 @@
   border: 2px solid var(--lp-founder-frame);
   border-radius: 20px;
   box-shadow: 10px 10px 0 0 var(--lp-founder-frame);
-  transform: scale(0.95);
 }
 
 .lp-founder-story__caption {
-  margin-top: 1.2rem;
+  margin-top: 1.6rem;
   font-size: 1.4rem;
-  line-height: 1.2;
+  line-height: 1.35;
+  color: rgb(var(--color-foreground));
 }
 
 .lp-founder-story__caption strong {
   display: block;
+  font-size: 1.6rem;
 }
 
 .lp-founder-story__lede p {
-  margin: 0 0 2.2rem;
-  font-size: 2.4rem;
-  line-height: 1.25;
+  margin: 0 0 3.2rem;
+  font-size: 2.2rem;
+  line-height: 1.3;
   font-weight: 700;
   text-wrap: balance;
-}
-
-.lp-founder-story__para + .lp-founder-story__para {
-  margin-top: 1.2rem;
+  color: rgb(var(--color-foreground));
 }
 
 .lp-founder-story__para p {
   margin: 0;
   font-size: 1.6rem;
+  line-height: 1.65;
+  color: rgb(var(--color-foreground));
+}
+
+.lp-founder-story__para + .lp-founder-story__para {
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 762px) {
   .lp-founder-story__container {
     display: flex;
     align-items: center;
-    column-gap: 20px;
-    padding: 20px;
+    column-gap: 6rem;
   }
 
   .lp-founder-story__portrait {
-    flex: 0 0 30%;
-    max-width: 30%;
+    flex: 0 0 30rem;
     margin-bottom: 0;
   }
 
+  /* Capped by character count, not by a share of the row: at 60% of a wide viewport the
+     paragraphs ran long enough that centred text lost its left edge line to line. */
   .lp-founder-story__text {
-    max-width: 60%;
+    flex: 1 1 auto;
+    max-width: 62rem;
     margin-inline: auto;
   }
 
   .lp-founder-story__lede p {
-    font-size: 3rem;
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 761px) {
+  .lp-founder-story__heading {
+    margin-bottom: 2.8rem;
+  }
+
+  .lp-founder-story__portrait {
+    max-width: 24rem;
+  }
+
+  .lp-founder-story__lede p {
+    margin-bottom: 2.4rem;
   }
 }

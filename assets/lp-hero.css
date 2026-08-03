@@ -98,6 +98,15 @@
   outline-offset: .3rem;
 }
 
+/* The closing hero is the last thing before the founder story, so its CTA reads as the seam
+   between the two rather than as a left-aligned tail on the paragraph above it. */
+.lp-hero__section--founder .lp-hero__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.2rem;
+}
+
 .lp-hero__guarantee {
   margin: 1.2rem 0 0;
   font-size: 1.25rem;
