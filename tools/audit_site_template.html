@@ -136,10 +136,22 @@
   .vend .tip b{display:block;font-size:12.5px}
   .vend .tip span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
   .vend:hover .tip{opacity:1;transform:translateX(-50%) translateY(0)}
+  /* Legend definitions: what each colour on the map actually means, in words. */
+  .keydefs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;margin:14px 0 0}
+  .keydefs>div{border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:var(--raise)}
+  .keydefs dt{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--ink);font-weight:600}
+  .keydefs dd{margin:6px 0 0;font-size:12.5px;line-height:1.55;color:var(--ink2)}
+  .keydefs dd b{color:var(--ink);font-variant-numeric:tabular-nums}
+  .keydefs .dot{flex:none;border:1px solid var(--line2)}
+  .keydefs .ring{flex:none;width:9px;height:9px;border-radius:50%;background:transparent;box-shadow:0 0 0 2px #7C9CFF}
+
   /* A number you cannot re-derive is a number they have to take on faith. */
   .replay{margin-top:14px;padding:12px 14px;border:1px dashed var(--hue,var(--fd-blue));border-radius:10px;background:var(--surface)}
   .replay b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--hue,var(--fd-blue))}
-  .replay p{margin:6px 0 0;font-size:12.5px;color:var(--mute);line-height:1.5}
+  .replay p{margin:6px 0 0;font-size:12.5px;color:var(--ink2);line-height:1.55}
+  .replay p b{color:var(--ink)}
+  .replay code{font-family:var(--mono);font-size:11.5px;background:var(--raise);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
   .qlinks{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
   .qlink{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;padding:5px 11px;border-radius:99px;
     border:1px solid var(--line2);background:var(--raise);color:var(--ink2);text-decoration:none;transition:border-color .14s ease,color .14s ease}
@@ -215,10 +227,31 @@
           <span class="lg"><i class="dot" style="background:#F59E0B"></i>page builder</span>
           <span class="lg"><i class="dot" style="background:#10B981"></i>sections</span>
           <span class="lg"><i class="dot" style="background:#fff"></i>rebuilt</span>
-          <span class="lg">ring = active ads</span>
+          <span class="lg"><i class="dot" style="background:transparent;box-shadow:0 0 0 2px #7C9CFF"></i>ring = active ads</span>
         </div>
         <div class="nodeinfo" id="ni"></div>
       </div>
+
+      <!-- A three-word legend is only a legend to whoever wrote it. -->
+      <dl class="keydefs">
+        <div><dt><i class="dot" style="background:#F59E0B"></i>page builder</dt>
+          <dd>The page's HTML contains no Shopify section at all — it was exported by Replo, a
+            drag-and-drop builder that ships one frozen block of markup. Nothing on it is
+            editable from the theme editor and nothing on it can be reused by another page.
+            <b>32 of the 44.</b></dd></div>
+        <div><dt><i class="dot" style="background:#10B981"></i>sections</dt>
+          <dd>The page is built from Shopify template sections, so a merchant can reorder and
+            edit it in the theme editor and the same section can serve other pages.
+            <b>12 of the 44.</b></dd></div>
+        <div><dt><i class="dot" style="background:#fff"></i>rebuilt</dt>
+          <dd>Not a measurement and not a recommendation — these are the two pages rebuilt for
+            this assignment, marked so you can tell the work from the survey. Everything else
+            on this page is First Day's, untouched.</dd></div>
+        <div><dt><i class="ring"></i>ring = active ads</dt>
+          <dd>Meta's public Ad Library currently shows at least one live US ad pointing here.
+            Three pages out of 44. This is the ordering that matters: rebuilding a page nobody
+            is sending traffic to buys nothing.</dd></div>
+      </dl>
     </div>
         <div class="prov"><b>source</b><span>44 landing pages fetched once each from firstday.com on 2 Aug 2026, 7s apart, and parsed for section IDs, script tags and byte weight. Build type is decided by whether the HTML contains Shopify template sections at all.</span></div>
     </section>
@@ -234,6 +267,25 @@
           public Ad Library on the same query, country and status filter — no login, no ad
           account. The Ad Library is live, so numbers drift as campaigns change.</p>
         <div class="qlinks" id="adqueries"></div>
+      </div>
+
+      <div class="replay">
+        <b>nine destinations here, three rings on the map — where the other six went</b>
+        <p>The map covers the 44 landing pages, which this audit defined as sitemap handles
+          ending in <code>-lp</code>. Six advertised destinations fall outside that net, and
+          each one is worth naming:</p>
+        <p><b>Two are product pages.</b> <code>teens-kickstart-vitamin</code> carries 10 ad
+          links — more than any landing page. The biggest paid destination on the whole store
+          is a PDP, not an LP.<br>
+          <b>Three are pages whose handle has no <code>-lp</code> suffix</b> — including
+          <code>5-reasons-pediatricians-recommend-first-day</code>, which is in the sitemap and
+          is plainly a landing page. The suffix is a naming convention, not a definition, and
+          this is where that shortcut costs coverage.<br>
+          <b>One is on another host.</b> <code>reviews.firstday.com</code> is a separate
+          property outside this crawl entirely.</p>
+        <p>And one advertised page, <code>kde-bfcm-behind-the-science-lp</code>, does not
+          appear in the supplied sitemap at all — live paid traffic pointing at a page their own
+          sitemap does not list.</p>
       </div>
     </div>
         <div class="prov"><b>source</b><span>Meta’s public Ad Library, filtered to active + United States, queried on four keywords. Outbound links are unwrapped from the l.facebook.com redirect and counted where they appear in the loaded results.</span></div>
@@ -272,6 +324,21 @@
         <input type="search" id="pq" placeholder="filter products" aria-label="Filter products">
       </div>
       <div class="scroll"><table id="tprod"></table></div>
+      <div class="replay">
+        <b>why “Test” is not a guess</b>
+        <p><code>Test</code> is a value in First Day's own <code>product_type</code> field — one
+          of twelve they use, alongside Full Price, Retail, Refill Pouch, Bundle, Gift, Sample
+          and Discontinued. It is read verbatim from <code>products.json</code>; no keyword
+          matching, no inference from titles.</p>
+        <p>Three things corroborate it. Every one duplicates a live SKU. Every price is
+          <b>exactly 1.19&times;</b> its live twin — $39.00&nbsp;&rarr;&nbsp;$46.42 and
+          $49.00&nbsp;&rarr;&nbsp;$58.32, the same multiplier across all 21. And one is titled
+          “Kids' Daily Focus <b>(Test Copy)</b>”. A uniform multiplier over a duplicated
+          catalogue is a price test.</p>
+        <p>What this does <b>not</b> establish: whether the test is still running, or whether
+          these are meant to be publicly listed. They are reachable today on the public
+          <code>products.json</code>, which is the only claim made here.</p>
+      </div>
     </div>
         <div class="prov"><b>source</b><span>Shopify’s own products.json, which the store serves publicly. Prices, types, variants and publish dates are the store’s own fields, unmodified.</span></div>
     </section>
@@ -453,7 +520,10 @@ function draw(){
     ctx.globalAlpha=n.dim?.14:1;
     ctx.fillStyle=n.migrated?'#fff':(COLOR[n.build_type]||'#64748B');
     ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fill();
-    if(n.advertised){ctx.strokeStyle='#10B981';ctx.lineWidth=2.4;ctx.stroke();}
+    /* The ring sits outside the node in a hue no build type uses. Drawn in green it was
+       invisible on the green nodes — the three pages that matter most were the three you
+       could not see. */
+    if(n.advertised){ctx.strokeStyle='#7C9CFF';ctx.lineWidth=2.6;ctx.beginPath();ctx.arc(n.x,n.y,n.r+3.5,0,Math.PI*2);ctx.stroke();}
     if(n===hover){ctx.strokeStyle='#fff';ctx.lineWidth=1.6;ctx.beginPath();ctx.arc(n.x,n.y,n.r+4,0,Math.PI*2);ctx.stroke();}
     ctx.globalAlpha=1;
   }
