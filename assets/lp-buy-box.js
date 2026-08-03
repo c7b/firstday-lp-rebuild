@@ -179,6 +179,40 @@ class LpBuyBox extends HTMLElement {
   }
 
   /**
+   * Upsells add the real product through the Cart AJAX API — the same call Dawn makes. The
+   * button confirms with a check for a moment rather than a toast, because the gift bar above
+   * it is already the feedback that matters here: adding an upsell can be what unlocks it.
+   */
+  bindUpsells() {
+    this.querySelectorAll('[data-upsell-add]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const id = button.dataset.variantId;
+        if (!id || button.dataset.busy) return;
+
+        button.dataset.busy = '1';
+        button.classList.add('is-busy');
+        try {
+          const response = await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({ items: [{ id: Number(id), quantity: 1 }] }),
+          });
+          if (!response.ok) throw new Error(String(response.status));
+          button.classList.add('is-added');
+          document.dispatchEvent(new CustomEvent('lp:cart:changed'));
+          window.setTimeout(() => button.classList.remove('is-added'), 2200);
+        } catch {
+          button.classList.add('is-error');
+          window.setTimeout(() => button.classList.remove('is-error'), 2200);
+        } finally {
+          delete button.dataset.busy;
+          button.classList.remove('is-busy');
+        }
+      });
+    });
+  }
+
+  /**
    * The free-gift bar tracks the real cart. Server-rendered copy is the no-JS truth; this
    * corrects it from /cart.js on load and whenever anything is added, so the page never
    * claims a distance it hasn't measured. Reading the cart is not touching it.

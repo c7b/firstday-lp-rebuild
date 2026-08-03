@@ -136,7 +136,8 @@
         "title": "Teens' Daily Focus Brain Support",
         "subtitle": "Support for focus, learning, and memory recall.",
         "compare_price": "$49.00",
-        "price": "$29.40"
+        "price": "$29.40",
+        "product": "teens-daily-focus-brain-support"
       }
     },
     "upsell_magnesium": {
@@ -147,7 +148,8 @@
         "title": "Teens’ Nighttime Reset Magnesium",
         "subtitle": "Melatonin-free support for relaxation & sleep.",
         "compare_price": "$39.00",
-        "price": "$23.40"
+        "price": "$23.40",
+        "product": "teens-nighttime-reset-magnesium"
       }
     },
     "upsell_probiotic": {
@@ -158,7 +160,8 @@
         "title": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
         "subtitle": "To support immunity, digestion, and skin health.",
         "compare_price": "$49.00",
-        "price": "$29.40"
+        "price": "$29.40",
+        "product": "teens-3-in-1-probiotic"
       }
     },
     "stamp_guarantee": {

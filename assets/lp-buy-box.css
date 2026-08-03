@@ -1004,3 +1004,20 @@
 @media (prefers-reduced-motion: reduce) {
   .lp-buy-box__progress-fill { transition: none; }
 }
+
+/* upsell add button: plus turns into a check while the cart confirms */
+.lp-buy-box__upsell-plus,
+.lp-buy-box__upsell-check { grid-area: 1 / 1; width: 2rem; height: 2rem; }
+
+.lp-buy-box__upsell-button { display: grid; place-items: center; }
+
+.lp-buy-box__upsell-check { display: none; }
+
+.lp-buy-box__upsell-button.is-added { background: var(--lp-green); }
+.lp-buy-box__upsell-button.is-added .lp-buy-box__upsell-plus { display: none; }
+.lp-buy-box__upsell-button.is-added .lp-buy-box__upsell-check { display: block; }
+
+.lp-buy-box__upsell-button.is-busy { opacity: .6; pointer-events: none; }
+.lp-buy-box__upsell-button.is-error { background: var(--lp-critical); }
+
+.lp-buy-box__upsell-button[aria-disabled='true'] { opacity: .45; cursor: default; }

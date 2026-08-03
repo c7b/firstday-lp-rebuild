@@ -536,19 +536,39 @@
                       <p class="lp-buy-box__upsell-subtitle">{{ block.settings.subtitle | escape }}</p>
                     </div>
                   </div>
+                  {%- liquid
+                    assign up_product = block.settings.product
+                    assign up_variant = up_product.selected_or_first_available_variant
+                  -%}
                   <div class="lp-buy-box__upsell-controls">
                     <span class="lp-buy-box__upsell-prices">
-                      <s>{{ block.settings.compare_price | escape }}</s>
-                      <strong>{{ block.settings.price | escape }}</strong>
+                      {%- if up_variant != blank -%}
+                        {%- if up_variant.compare_at_price > up_variant.price -%}
+                          <s>{{ up_variant.compare_at_price | money }}</s>
+                        {%- endif -%}
+                        <strong>{{ up_variant.price | money }}</strong>
+                      {%- else -%}
+                        <s>{{ block.settings.compare_price | escape }}</s>
+                        <strong>{{ block.settings.price | escape }}</strong>
+                      {%- endif -%}
                     </span>
                     <button
                       class="lp-buy-box__upsell-button"
                       type="button"
-                      aria-label="{{ block.settings.title | escape }}"
-                      aria-disabled="true"
+                      {% if up_variant != blank %}
+                        data-upsell-add
+                        data-variant-id="{{ up_variant.id }}"
+                        aria-label="Add {{ up_product.title | escape }} to cart"
+                      {% else %}
+                        aria-label="{{ block.settings.title | escape }}"
+                        aria-disabled="true"
+                      {% endif %}
                     >
-                      <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                      <svg class="lp-buy-box__upsell-plus" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
                         <path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+                      </svg>
+                      <svg class="lp-buy-box__upsell-check" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                        <path d="m4 10.5 4 4 8-9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                       </svg>
                     </button>
                   </div>
@@ -1003,6 +1023,12 @@
       "name": "Upsell",
       "limit": 4,
       "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product",
+          "info": "Makes the + button add this product to the cart. Price comes from the product; the text fields below are only a fallback."
+        },
         {
           "type": "image_picker",
           "id": "image",
