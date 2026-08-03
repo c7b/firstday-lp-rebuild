@@ -1,19 +1,35 @@
 # PLAN.md — what didn't fit the timebox, and where this architecture goes
 
-The brief asks for a detailed strategy for anything that ran out of time. Two kinds of items
-below: things cut by the timebox (with effort estimates), and the roadmap this architecture
-was actually designed for.
+The brief asks for a detailed strategy for anything that ran out of time. Three kinds of items
+below: what was cut at the timebox and then delivered afterwards, what is still genuinely open
+(with strategy, estimate and a sequence), and the roadmap this architecture was designed for.
 
-## Cut by the timebox — strategy + estimate for each
+## Cut at the timebox, delivered after it
+
+These were on the cut list when the `timebox` tag was placed. They are in the build now, so
+the list is corrected rather than left flattering. `git diff timebox..main` is the evidence.
+
+| Item | What shipped |
+|---|---|
+| **Real subscriptions (selling plans)** | Real `sellingPlanGroup` on the products; the buy box renders `product.selling_plan_groups`, and Monthly resolves to $23.40 from a 40%-off plan rather than a typed number. Adding the plan to the cart is the real selling-plan id. |
+| **Image migration to Files** | Zero hotlinks left: 52 images, 4 videos and their posters are served from this store's own CDN via the Files API. Sections take `image_picker` values, so the operator gets a picker instead of a URL field. |
+| **Gift progress + upsell add-ons (live cart math)** | Built against the real cart — the progress bar reads `/cart.js` and updates after every add, and upsells post to `/cart/add.js`. Then **switched off deliberately**: on the original both are app-driven, and a gift you cannot claim is theatre. The Liquid still renders them when their settings are filled, so restoring is content, not a deploy. See `ASSUMPTIONS.md`. |
+
+## Still open — strategy, estimate, sequence
 
 | Item | Why it's not in | How I'd do it | Est. |
 |---|---|---|---|
-| **Real subscriptions (selling plans)** | The original's Monthly/One-Time cards run on a subscription app; wiring real selling plans means installing and configuring one — app choice is a business decision, not mine to make in a take-home | Install the subscriptions app of record, define the monthly plan (40% off first order per the original), swap the static delivery cards for `product.selling_plan_groups` rendering — the section's markup is already shaped for it | ~2h |
-| **Review app integration** | Reviews are Judge.me content; the rebuild renders the same UI natively from real extracted data | Either install Judge.me and drop their app block into `lp-reviews` (it accepts app blocks), or keep the native section and feed it from a metafield the app writes | ~1h |
-| **Gift progress + upsell add-ons (live cart math)** | Cart-drawer logic and gift thresholds are app/checkout territory — explicitly out of scope | Cart AJAX for the progress bar; upsells as real `product_list` setting + add-to-cart forms | ~2h |
-| **Overlay dialogs (sale/OTP/upsell)** | Marketing-app overlays, not theme funnel content | Rebuild only if the funnel data says they earn their weight; otherwise leave to the app that owns them | ~1-2h |
-| **Image migration to Files** | CDN hotlinks give byte-exact parity today; migration is mechanical | Script: download → upload via Files API → swap `image_url` settings for `image_picker` values (every section already supports both) | ~1h scripted |
-| **FAQ content** | The original's FAQ section renders empty on the live page (verified in rendered DOM) — nothing to transplant | The third `lp-media-accordion` instance is a ready fragment; paste real Q&A into blocks when it exists | ~15min |
+| **Review app integration** | Reviews are Judge.me content; the rebuild renders the same UI natively from real extracted data. `lp-reviews` already accepts `@app` blocks, so the socket exists and the app does not | Install Judge.me and drop their app block into the section, or keep the native section and feed it from a metafield the app writes. The choice is theirs: native is faster and app-owned is truthful | ~1h |
+| **Overlay dialogs (sale/OTP/upsell)** | Marketing-app overlays, not theme funnel content | Rebuild only if the funnel data says they earn their weight; otherwise leave them to the app that owns them | ~1–2h |
+| **FAQ content** | The original's FAQ renders empty on the live page (verified in the rendered DOM) — there is nothing to transplant | `template-fragments/faq.json` is a ready third `lp-media-accordion`; paste real Q&A into blocks when the content exists | ~15min |
+| **Video deferral** | The four science videos are the remaining page weight, and they load with the page | Swap the `<video>` sources for `data-src` and attach an `IntersectionObserver` on the tabs; the tab component already knows which panel is active | ~1h |
+| **Two ad-carrying pages not in the 44** | The estate crawl defined a landing page as a sitemap handle ending in `-lp`. Two advertised pages do not match that pattern and one is not in the sitemap at all | Widen the crawl to any `/pages/` handle plus the ad-library destinations, and reconcile the two lists. Named in the appendix rather than hidden | ~2h |
+
+**If I had one more day, in this order.** Video deferral first — it is the largest remaining
+number on the page and it is an hour. Then the review app decision, because it is a
+conversation with them, not a task. Then widen the estate crawl, since it changes what the
+migration plan is ranked against. Overlays and FAQ are last: both wait on someone else's
+answer, and building them before that answer arrives is how you get work that gets thrown away.
 
 ## Two things the brief names that this page deliberately does not do
 
@@ -60,8 +76,23 @@ product line". Half a day, and it's the prerequisite for the quiz work rather th
 
 ## The real roadmap: the variant factory (why the architecture looks like this)
 
-The sitemap has **60 `-lp` pages, 18 of them behind-the-science variants** — today each one is
-a hand-cloned page. With this architecture, a new variant is:
+Two counts appear in this repo and both are correct, so here is the difference before anyone
+finds it. **44** handles end in exactly `-lp`; that is the set the estate crawl measured and
+every number in the appendix refers to. **60** handles contain `-lp` anywhere, and **18** of
+those are behind-the-science variants.
+
+The 16 in the gap are the argument for this whole architecture, because of what they are named:
+
+```
+kde-behind-the-science-lp-40-off          kde-behind-the-science-lp-mystery
+kde-behind-the-science-lp-gift-for-life   kde-behind-the-science-lp-one-month-free
+kde-behind-the-science-lp-tt              kde-behind-the-science-lp-one-month-free-sub
+```
+
+Those are not different pages. They are **one page with a different offer**, hand-cloned six
+times — and each clone is a Replo export that has to be rebuilt by hand when the brand, the
+claims or the compliance line changes. With this architecture each is a template JSON with one
+or two overrides. A new variant is:
 
 1. **New template JSON** (`page.kde-behind-the-science-40-off.json`) — assembled by
    `tools/build_template.py` from fragments; no Liquid is written.
