@@ -1,0 +1,352 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First Day — storefront audit</title>
+
+<style>
+  :root {
+    color-scheme: light dark;
+    --paper: #fcfcfb;
+    --card: #ffffff;
+    --ink: #16191c;
+    --ink-soft: #4a555a;
+    --ink-faint: #7e8b8e;
+    --rule: #e3e7e6;
+    --accent: #0f6e5c;
+    --accent-bg: #e6f1ee;
+    --alert: #9a4a1f;
+    --alert-bg: #f7ede6;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0e1113; --card: #161a1d; --ink: #e7ecea; --ink-soft: #a6b2b1;
+      --ink-faint: #74827f; --rule: #262d30; --accent: #6cc9ad; --accent-bg: #14312a;
+      --alert: #d9945f; --alert-bg: #33241a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0e1113; --card: #161a1d; --ink: #e7ecea; --ink-soft: #a6b2b1;
+    --ink-faint: #74827f; --rule: #262d30; --accent: #6cc9ad; --accent-bg: #14312a;
+    --alert: #d9945f; --alert-bg: #33241a;
+  }
+  :root[data-theme="light"] {
+    --paper: #fcfcfb; --card: #ffffff; --ink: #16191c; --ink-soft: #4a555a;
+    --ink-faint: #7e8b8e; --rule: #e3e7e6; --accent: #0f6e5c; --accent-bg: #e6f1ee;
+    --alert: #9a4a1f; --alert-bg: #f7ede6;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--sans); font-size: 16px; line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 44px 22px 110px; }
+
+  .masthead { border-bottom: 2px solid var(--ink); padding-bottom: 22px; }
+  .kicker {
+    margin: 0 0 10px; font-family: var(--mono); font-size: 11px;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--accent);
+  }
+  h1 {
+    margin: 0; font-size: clamp(30px, 5vw, 46px); font-weight: 700;
+    letter-spacing: -.028em; line-height: 1.06; text-wrap: balance; max-width: 20ch;
+  }
+  .standfirst {
+    margin: 16px 0 0; max-width: 68ch; font-size: 18px; color: var(--ink-soft);
+  }
+  .provenance {
+    margin: 18px 0 0; padding: 12px 14px; border-left: 3px solid var(--accent);
+    background: var(--accent-bg); font-size: 14px; max-width: 74ch; border-radius: 0 6px 6px 0;
+  }
+
+  h2 {
+    margin: 56px 0 6px; font-size: 13px; font-family: var(--mono);
+    letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint);
+    border-top: 1px solid var(--rule); padding-top: 14px;
+  }
+  h3 { margin: 0 0 6px; font-size: 17px; letter-spacing: -.012em; }
+  p { margin: 0 0 12px; max-width: 70ch; }
+  p:last-child { margin-bottom: 0; }
+
+  .panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; margin-top: 18px; }
+  .panel {
+    background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px;
+  }
+  .panel .label {
+    font-family: var(--mono); font-size: 10px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+  .panel .figure {
+    font-family: var(--mono); font-size: 30px; font-variant-numeric: tabular-nums;
+    font-weight: 600; line-height: 1.15; margin: 6px 0 2px; letter-spacing: -.02em;
+  }
+  .panel .figure.alert { color: var(--alert); }
+  .panel .figure.good { color: var(--accent); }
+  .panel .note { font-size: 13.5px; color: var(--ink-soft); }
+
+  .finding {
+    background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
+    padding: 18px 20px; margin-top: 14px;
+  }
+  .finding.alert { border-left: 3px solid var(--alert); }
+  .finding.good { border-left: 3px solid var(--accent); }
+  .finding .tagline {
+    font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 6px;
+  }
+
+  .scroller { overflow-x: auto; margin-top: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; padding: 9px 14px 9px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th {
+    font-family: var(--mono); font-size: 10px; font-weight: 500;
+    letter-spacing: .11em; text-transform: uppercase; color: var(--ink-faint);
+  }
+  td.n, th.n { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; padding-right: 0; }
+  tr.hi td { background: var(--accent-bg); }
+
+  .quote {
+    font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.5;
+    margin: 22px 0; padding-left: 18px; border-left: 2px solid var(--rule); max-width: 62ch;
+  }
+
+  code { font-family: var(--mono); font-size: .88em; background: var(--accent-bg); color: var(--accent); padding: 1px 5px; border-radius: 4px; }
+  ul { margin: 0 0 12px; padding-left: 20px; max-width: 70ch; }
+  li { margin-bottom: 6px; }
+  .muted { color: var(--ink-faint); font-size: 13.5px; }
+  a { color: var(--accent); }
+  footer { margin-top: 60px; border-top: 1px solid var(--rule); padding-top: 18px; }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker">Independent storefront audit · August 2026</p>
+    <h1>What the storefront looks like from outside it</h1>
+    <p class="standfirst">Everything below was measured from sources First Day already publishes
+      to anyone — the Shopify JSON routes the store serves, its own sitemap, the HTML of its live
+      pages, and Meta's public ad library. No account access, no credentials, nothing a
+      competitor could not also see.</p>
+    <p class="provenance"><strong>Why this exists.</strong> The brief asked for one landing page
+      rebuilt. Before proposing where a rebuild should go next, it seemed more useful to measure
+      what is actually there — and a few of the findings turned out to be things worth knowing
+      regardless of who does the work.</p>
+  </header>
+
+  <h2>The estate at a glance</h2>
+  <div class="panels">
+    <div class="panel">
+      <div class="label">URLs in the sitemap</div>
+      <div class="figure">383</div>
+      <div class="note">172 pages · 99 blog posts · 71 products · 40 collections</div>
+    </div>
+    <div class="panel">
+      <div class="label">Landing pages measured</div>
+      <div class="figure">44</div>
+      <div class="note">Each fetched once and inventoried</div>
+    </div>
+    <div class="panel">
+      <div class="label">HTML those 44 pages ship</div>
+      <div class="figure alert">92 MB</div>
+      <div class="note">Median page: 2.1 MB before a single image</div>
+    </div>
+    <div class="panel">
+      <div class="label">Third-party tools per page</div>
+      <div class="figure alert">26</div>
+      <div class="note">Same 26 on every page measured</div>
+    </div>
+    <div class="panel">
+      <div class="label">Landing pages with active ads</div>
+      <div class="figure good">3</div>
+      <div class="note">Of the 44. The rest carry no paid traffic</div>
+    </div>
+    <div class="panel">
+      <div class="label">URLs untouched since 2025</div>
+      <div class="figure">87</div>
+      <div class="note">Still published, still crawled</div>
+    </div>
+  </div>
+
+  <h2>Finding 01 — Most landing pages are locked inside a page builder</h2>
+
+  <div class="finding alert">
+    <div class="tagline">Measured across 44 landing pages</div>
+    <h3>32 of 44 have no Shopify sections at all</h3>
+    <p>They are Replo exports: the entire page body is markup produced by an external page
+      builder and pasted in. Only 12 are built from Shopify sections. The practical consequence
+      is that for roughly three quarters of the landing pages, <strong>nobody on the team can
+      change a headline without going through the page builder</strong> — not in the theme
+      editor, not in Shopify at all.</p>
+    <p>This also explains the weight. The median landing page ships 2.1 MB of HTML and loads 45
+      scripts before anyone sees a product.</p>
+  </div>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Build type</th><th class="n">Pages</th><th>What it means for the team</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Page builder export</strong></td><td class="n">32</td><td>Editable only inside the builder; locked to that vendor</td></tr>
+        <tr><td><strong>Shopify sections</strong></td><td class="n">12</td><td>Editable in the theme editor, if the sections are clean</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Finding 02 — The pages that carry money are a very short list</h2>
+
+  <div class="finding good">
+    <div class="tagline">Meta Ad Library · active · United States</div>
+    <h3>Three landing pages appear as ad destinations. Not thirty.</h3>
+    <p>Sixty landing pages exist. The public ad library shows where active ads actually send
+      people, and only a handful of those pages appear at all.</p>
+  </div>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Destination</th><th class="n">Ad links found</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td><code>/products/teens-kickstart-vitamin</code></td><td class="n">10</td><td>Product page</td></tr>
+        <tr class="hi"><td><code>/pages/tdk-behind-the-science-lp</code></td><td class="n">7</td><td>Landing page</td></tr>
+        <tr class="hi"><td><code>/pages/kde-behind-the-science-lp</code></td><td class="n">6</td><td>Landing page</td></tr>
+        <tr><td><code>/products/kids-enrichment-vitamin</code></td><td class="n">4</td><td>Product page</td></tr>
+        <tr><td><code>/pages/5-reasons-pediatricians-recommend…</code></td><td class="n">3</td><td>Advertorial</td></tr>
+        <tr><td><code>/pages/tdk-sales-behavior-hiddenhunger-lp</code></td><td class="n">3</td><td>Landing page</td></tr>
+        <tr><td><code>reviews.firstday.com/…/4-Vitamins-I-Wish…</code></td><td class="n">2</td><td>Off-domain advertorial</td></tr>
+        <tr><td><code>/pages/kde-bfcm-behind-the-science-lp</code></td><td class="n">2</td><td>Not in the sitemap</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="muted" style="margin-top:12px">Counts are how often each destination appeared in the
+    loaded results, not spend or impressions. Presence is strong evidence; absence is weak — an
+    ad that did not load into view is not proof of nothing. Two destinations do not appear in the
+    supplied sitemap at all, which suggests the live estate is larger than 60.</p>
+
+  <p class="quote">The page handed over in the brief is the single most-advertised landing page
+    on the domain. It scored 26 out of 100 on mobile.</p>
+
+  <h2>Finding 03 — Twenty-six tools load on every page</h2>
+
+  <div class="finding alert">
+    <div class="tagline">Fingerprinted across 45 pages</div>
+    <h3>Reviews, clinician reviews, email, SMS, price testing, attribution, support, subscriptions, a page builder, translation, identity resolution, server-side tracking, session replay, tag management, affiliates, donations, consent, package protection, post-purchase upsell — plus three ad pixels.</h3>
+    <p>Every one of them was found on <strong>100% of the pages measured</strong>, including
+      pages where the feature is not used. Two roles have two vendors doing the same job.</p>
+  </div>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Job</th><th>Tools doing it</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>SMS</td><td>Attentive · Postscript</td><td>Two platforms fingerprinted</td></tr>
+        <tr><td>Ad pixels</td><td>Meta · TikTok · Pinterest</td><td>Expected, but each is weight on every page</td></tr>
+        <tr><td>Reviews</td><td>Judge.me · FrontRow MD</td><td>Different jobs — customer vs clinician</td></tr>
+        <tr><td>Tracking</td><td>GTM · Northbeam · Blotout · Clarity · Opensend</td><td>Five layers of measurement</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="margin-top:14px">Not one of these is wrong on its own. The number that matters is the
+    one at the top of the page: <strong>26 on every page, 45 scripts on a median landing
+    page.</strong> An audit of which ones still earn their slot is the cheapest performance work
+    available, and it needs a business decision rather than an engineer.</p>
+
+  <h2>Finding 04 — The catalogue has a shadow copy</h2>
+
+  <div class="finding">
+    <div class="tagline">Shopify products.json · public</div>
+    <h3>100 published products, 138 variants — and 22 of them are typed “Test”</h3>
+    <p>Those 22 look like price-test SKUs, which is consistent with the store running Intelligems
+      for price testing, so they are almost certainly deliberate. Worth knowing anyway:
+      <strong>they are publicly reachable and publicly listed</strong>, priced differently from
+      the products they duplicate ($46.42 against $39.00 on the equivalent SKU). Duplicate,
+      indexable product pages are a search-visibility question more than an engineering one.</p>
+  </div>
+
+  <div class="panels" style="margin-top:14px">
+    <div class="panel"><div class="label">Products published</div><div class="figure">100</div><div class="note">138 variants · first published Jan 2021</div></div>
+    <div class="panel"><div class="label">Median price</div><div class="figure">$49</div><div class="note">Range $1 – $280</div></div>
+    <div class="panel"><div class="label">Bundles &amp; multipacks</div><div class="figure">22</div><div class="note">By title pattern</div></div>
+    <div class="panel"><div class="label">Typed “Test”</div><div class="figure alert">22</div><div class="note">Publicly listed and reachable</div></div>
+  </div>
+
+  <h2>Finding 05 — Content is published faster than it is retired</h2>
+
+  <div class="finding">
+    <div class="tagline">Sitemap lastmod</div>
+    <h3>87 of 383 URLs have not been touched since 2024</h3>
+    <p>Meanwhile five landing pages were modified in the last ten days — including the one the
+      brief handed over (23 July) and its Kids sibling (29 July). <strong>The estate is
+      simultaneously very active at the front and very stale at the back.</strong> Both ends cost
+      something: the stale end is crawl budget and search dilution, the active end is where the
+      duplication multiplies.</p>
+  </div>
+
+  <h2>Finding 06 — The site is already positioning for AI agents</h2>
+
+  <div class="finding good">
+    <div class="tagline">Sitemap · agentic discovery</div>
+    <h3>firstday.com publishes an <code>agents.md</code></h3>
+    <p>The sitemap carries an agentic-discovery entry — the store is declaring itself to AI
+      agents. That is ahead of most DTC brands, and it makes one thing worth checking: an agent
+      reading that file needs the funnel URLs and product data to be accurate and current. Right
+      now the landing-page estate has pages the sitemap does not list, and product duplicates
+      that a machine reader cannot tell apart from the real thing.</p>
+  </div>
+
+  <h2>What this suggests, in order</h2>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th class="n">#</th><th>Move</th><th>Why it is first</th><th>Evidence</th></tr></thead>
+      <tbody>
+        <tr><td class="n">1</td><td>Rebuild the funnels that carry ads, not the ones that are heaviest</td><td>Three pages hold the paid traffic; the rest can wait without costing a click</td><td>Ad library, above</td></tr>
+        <tr><td class="n">2</td><td>Get the advertised funnels out of the page builder</td><td>Editable by the team, and the weight drops with it</td><td>32/44 are builder exports</td></tr>
+        <tr><td class="n">3</td><td>Audit the 26 tools against what each still earns</td><td>Cheapest measurable speed win, needs no rebuild</td><td>26 on every page, 45 scripts median</td></tr>
+        <tr><td class="n">4</td><td>Decide what happens to the 22 test SKUs and 87 stale URLs</td><td>Search visibility and machine readability, not engineering</td><td>products.json, sitemap</td></tr>
+        <tr><td class="n">5</td><td>Then the long tail, sequenced by traffic and revenue</td><td>The one input this audit cannot see from outside</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="margin-top:18px">The one number missing from every table here is <strong>traffic and
+    revenue per page</strong>. It lives in their analytics, and it should reorder all of this
+    before anyone writes a line of code. Everything above is what could be established without
+    it.</p>
+
+  <h2>What was rebuilt, as a reference point</h2>
+
+  <div class="finding good">
+    <div class="tagline">The funnel from the brief · measured before and after</div>
+    <div class="scroller">
+      <table>
+        <thead><tr><th>Metric (mobile)</th><th class="n">Live page</th><th class="n">Rebuild</th></tr></thead>
+        <tbody>
+          <tr><td>Lighthouse performance</td><td class="n">26</td><td class="n">73</td></tr>
+          <tr><td>Total blocking time</td><td class="n">20,860 ms</td><td class="n">570 ms</td></tr>
+          <tr><td>Speed Index</td><td class="n">37.5 s</td><td class="n">3.1 s</td></tr>
+          <tr><td>Largest contentful paint</td><td class="n">8.4 s</td><td class="n">3.8 s</td></tr>
+          <tr><td>Page weight</td><td class="n">32 MB</td><td class="n">15.4 MB</td></tr>
+          <tr><td>Sections to maintain</td><td class="n">19</td><td class="n">11</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px">Same tool, same machine, same throttling profile on both. Seven of
+      the nineteen original sections render nothing at all — verified twice, in the saved HTML
+      and again with JavaScript executed.</p>
+  </div>
+
+  <footer>
+    <p class="muted"><strong>Method and limits.</strong> Sources: Shopify's public
+      <code>products.json</code> and <code>collections.json</code>, the sitemap supplied with the
+      brief, the HTML of 44 landing pages fetched once each with a delay between requests, and
+      Meta's public Ad Library (active, United States). Lighthouse figures are local runs with
+      mobile emulation, identical settings on both pages. Vendor detection is fingerprint-based:
+      it proves a script is present, not that a feature is switched on. Ad counts are link
+      occurrences, not spend. Product typing is read from the store's own fields. Nothing here
+      used privileged access, and everything is reproducible from the tools in the repository
+      this report ships with.</p>
+  </footer>
+</div>

@@ -1,0 +1,828 @@
+{
+ "generated": "2026-08-03T03:17:38+00:00",
+ "source": "public endpoints only: Shopify's products.json/collections.json, the supplied sitemap, HTML already cached by the LP audit, and public social profiles",
+ "catalogue": {
+  "count": 100,
+  "variant_count": 138,
+  "price_min": 1.0,
+  "price_max": 280.0,
+  "price_median": 49.0,
+  "product_types": [
+   [
+    "Test",
+    22
+   ],
+   [
+    "Full Price",
+    19
+   ],
+   [
+    "Refill Pouch",
+    14
+   ],
+   [
+    "Online Exclusive",
+    12
+   ],
+   [
+    "Bundle",
+    10
+   ],
+   [
+    "Retail",
+    9
+   ],
+   [
+    "Gift",
+    5
+   ],
+   [
+    "Other",
+    5
+   ],
+   [
+    "Google-Hybrid-PLP-PDP",
+    1
+   ],
+   [
+    "GWP",
+    1
+   ],
+   [
+    "Discontinued",
+    1
+   ],
+   [
+    "Sample",
+    1
+   ]
+  ],
+  "top_tags": [
+   [
+    "TryNowAutomated",
+    100
+   ],
+   [
+    "ShopMyExcl",
+    83
+   ],
+   [
+    "carthook_checkout",
+    49
+   ],
+   [
+    "carthook_one_qty_upsell",
+    47
+   ],
+   [
+    "target sku",
+    24
+   ],
+   [
+    "higher_msrp",
+    21
+   ],
+   [
+    "magnesium",
+    13
+   ],
+   [
+    "checkout-addon",
+    12
+   ],
+   [
+    "pouches",
+    11
+   ],
+   [
+    "carthook",
+    9
+   ],
+   [
+    "checkout",
+    9
+   ],
+   [
+    "one",
+    9
+   ],
+   [
+    "qty",
+    9
+   ],
+   [
+    "upsell",
+    9
+   ],
+   [
+    "packs",
+    9
+   ],
+   [
+    "Health & Beauty > Health Care > Fitness & Nutrition > Vitamins & Supplements > Multivitamin Suppleme",
+    9
+   ],
+   [
+    "full",
+    8
+   ],
+   [
+    "Full Price",
+    8
+   ],
+   [
+    "price",
+    8
+   ],
+   [
+    "TryNowAutomated Full Price",
+    7
+   ],
+   [
+    "carthook_checkout Full Price",
+    6
+   ],
+   [
+    "GWP",
+    6
+   ],
+   [
+    "carthook_one_qty_upsell Full Price",
+    5
+   ],
+   [
+    "dream team",
+    5
+   ],
+   [
+    "pouch",
+    5
+   ]
+  ],
+  "bundles": [
+   "Gummy Kids’ Nighttime Reset Magnesium",
+   "Gummy Men's Nighttime Reset Magnesium",
+   "Gummy Teens’ Nighttime Reset Magnesium",
+   "Gummy Women’s Nighttime Reset Magnesium",
+   "Kids' Dream Team Starter Pack",
+   "Kids' Nighttime Reset Sample",
+   "Kids' TLC Starter Pack",
+   "Kids' Welcome Kit",
+   "Kids’ Nighttime Reset Calming Magnesium - Free For Life",
+   "Kids’ Nighttime Reset Magnesium",
+   "Kids’ Nighttime Reset Magnesium - Limited Edition Kiwi Flavor",
+   "Men's Dream Team Starter Pack",
+   "Men's Power-Up Starter Pack",
+   "Men’s Nighttime Reset Magnesium",
+   "Online Exclusive for Kids’ Nighttime Reset Magnesium",
+   "Online Exclusive for Teens’ Nighttime Reset Magnesium",
+   "Teens' Defense Starter Pack",
+   "Teens' Dream Team Starter Pack",
+   "Teens’ Nighttime Reset Magnesium",
+   "Women's Dream Team Starter Pack",
+   "Women's Wellness Starter Pack",
+   "Women’s Nighttime Reset Magnesium"
+  ],
+  "bundle_count": 22,
+  "subscription_tagged": 0,
+  "published_range": [
+   "2021-01-10",
+   "2026-07-28"
+  ],
+  "titles": [
+   "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
+   "First Day - Women's 3-in-1 Pre+ Post+ Probiotic",
+   "First Day - Kids' 3-in-1 Pre+ Post+ Probiotic",
+   "The \"No Junk\"™ Kids’ Multi - Retail",
+   "Kids' 3-in-1 Pre+ Post+ Probiotic - Retail",
+   "Teens' 3-in-1 Pre+ Post+ Probiotic - Retail",
+   "Women's 3-in-1 Pre+ Post+ Probiotic - Retail",
+   "Kids’ Nighttime Reset Magnesium - Limited Edition Kiwi Flavor",
+   "Toddlers' Tribiotic Bottle - RETAIL",
+   "Toddlers' Brain Focus Bottle - RETAIL",
+   "Teens' Brain Focus Bottle - RETAIL",
+   "Kids' Brain Focus Bottle - RETAIL",
+   "The \"No Junk\"™ Teens' Multivitamin Gummies",
+   "The \"No Junk\"™ Toddler's Multivitamin Gummies",
+   "The \"No Junk\"™ Kids’ Multivitamin Gummies",
+   "Kids' TLC Starter Pack",
+   "Gummy Toddlers' 3-in-1 Pre+ Post+ Probiotic",
+   "The \"No Junk\"™ Kids’ Multi Gummies",
+   "Gummy Kids' 3-in-1 Pre+ Post+ Probiotic",
+   "The \"No Junk\"™ Toddler's Multi Gummies",
+   "The \"No Junk\"™ Teens' Multi Gummies",
+   "The \"No Junk\"™ Women’s Multi Gummies",
+   "Gummy Teens’ Nighttime Reset Magnesium",
+   "Gummy Kids’ Nighttime Reset Magnesium",
+   "Gummy Women's 3-in-1 Pre+ Post+ Probiotic",
+   "Gummy Teens' 3-in-1 Pre+ Post+ Probiotic",
+   "Gummy Women's Daily Focus Brain Support",
+   "Gummy Teens' Daily Focus Brain Support",
+   "Gummy Kids' Daily Focus Brain Support",
+   "Gummy Women’s Nighttime Reset Magnesium",
+   "Gummy Men's Daily Focus Brain Support",
+   "Gummy Men's Nighttime Reset Magnesium",
+   "Gummy Men's 3-in-1 Pre+ Post+ Probiotic",
+   "The \"No Junk\"™ Men's Multi Gummies",
+   "The \"No Junk\"™ Multivitamin",
+   "Online Exclusive for The \"No Junk\"™ Men’s Multi",
+   "Online Exclusive for The \"No Junk\"™ Women’s Multi",
+   "Online Exclusive for Teens’ Nighttime Reset Magnesium",
+   "Online Exclusive for Kids’ Nighttime Reset Magnesium",
+   "Online Exclusive for Toddlers' 3-in-1 Pre+ Post+ Probiotic",
+   "Online Exclusive for Teens' 3-in-1 Pre+ Post+ Probiotic",
+   "Online Exclusive for Kids' 3-in-1 Pre+ Post+ Probiotic",
+   "Online Exclusive for Teens' Daily Focus Brain Support",
+   "Online Exclusive for Kids' Daily Focus Brain Support",
+   "Online Exclusive Offer for  The \"No Junk\"™ Teens’ Multi",
+   "Online Exclusive Offer for The \"No Junk\"™ Toddlers' Multi",
+   "Online Exclusive Offer for The \"No Junk\"™ Kids’ Multi",
+   "Calm Kids Welcome Offer",
+   "Clean Towels® Blemish Control Travel (10 count) - Free Gift",
+   "Eyemask",
+   "Bonus Gifts",
+   "Toddlers' 3-in-1 Pre+ Post+ Probiotic",
+   "Teens' Daily Focus Brain Support",
+   "Rapid Hydration Electrolyte Support - Gift",
+   "Rapid Hydration Electrolyte Support",
+   "Teens’ Nighttime Reset Magnesium",
+   "Men’s Nighttime Reset Magnesium",
+   "Kids' Daily Focus (Test Copy)",
+   "Teens' Brain Focus Refill Pouch",
+   "Women's Brain Focus Refill Pouch",
+   "Men's Brain Focus Refill Pouch",
+   "Men's Daily Focus Brain Support",
+   "Kids' Daily Focus Brain Support",
+   "Kids' Brain Focus Refill Pouch",
+   "Free Eye Mask, Travel Jar, Digital Download",
+   "Upgrade To Quarterly On Next Order",
+   "Kids Enrichment - Refill Pouch",
+   "Kids Enrichment",
+   "Kids' Nighttime Reset Sample",
+   "Women's Daily Focus Brain Support",
+   "Women’s Nighttime Reset Magnesium",
+   "Kids’ Nighttime Reset Magnesium",
+   "Women's Wellness Starter Pack",
+   "Men's Dream Team Starter Pack",
+   "Women's Dream Team Starter Pack",
+   "Teens' Dream Team Starter Pack",
+   "Kids' Dream Team Starter Pack",
+   "Men's Power-Up Starter Pack",
+   "Teens' Defense Starter Pack",
+   "Healthy Eating Meal Planner",
+   "Shipping Protection",
+   "Kids' Welcome Kit",
+   "Men's 3-in-1 Pre+ Post+ Probiotic",
+   "Free Trial Authorization",
+   "The \"No Junk\"™ Toddler Multi - Refill Pouch",
+   "The \"No Junk\"™ Toddlers' Multi",
+   "Kids’ Nighttime Reset Calming Magnesium - Free For Life",
+   "The \"No Junk\"™ Men’s Multi",
+   "Men's  3-in-1 Pre+ Post+ Probiotic Pouch Refills",
+   "Teens' 3-in-1 Pre+ Post+ Probiotic Pouch Refills",
+   "Women's 3-in-1 Pre+ Post+ Probiotic Refill Pouches",
+   "Kids' 3-in-1 Pre+ Post+ Probiotic Pouch Refills",
+   "Reflection Tote",
+   "The \"No Junk\"™ Kids’ Multi",
+   "The \"No Junk\"™ Teens’ Multi",
+   "The \"No Junk\"™ Teens’ Multi - Refill Pouch",
+   "Mens Daily Provisions - Refill Pouch",
+   "The \"No Junk\"™ Women’s Multi",
+   "Womens Daily Supercharge - Refill Pouch",
+   "The \"No Junk\"™ Kids’ Multi - Refill Pouch"
+  ]
+ },
+ "collections": {
+  "count": 40,
+  "items": [
+   {
+    "title": "18 and Under Multivitamins",
+    "handle": "18-and-under-multivitamins",
+    "products": 3
+   },
+   {
+    "title": "18 and Under Multivitamins - Higher Price",
+    "handle": "18-and-under-multivitamins-higher-price",
+    "products": 3
+   },
+   {
+    "title": "ALL DISCOUNTABLE",
+    "handle": "all-discountable",
+    "products": 62
+   },
+   {
+    "title": "Available at Target",
+    "handle": "available-at-target",
+    "products": 14
+   },
+   {
+    "title": "Best Selling Products",
+    "handle": "best-selling-products",
+    "products": 46
+   },
+   {
+    "title": "Bundle Page",
+    "handle": "bundle-page",
+    "products": 11
+   },
+   {
+    "title": "Buy One Get One",
+    "handle": "buy-one-get-one",
+    "products": 0
+   },
+   {
+    "title": "Calming Magnesium",
+    "handle": "calming-magnesium",
+    "products": 4
+   },
+   {
+    "title": "Canal Products",
+    "handle": "canal-products",
+    "products": 0
+   },
+   {
+    "title": "Core DTC Offering",
+    "handle": "core-dtc-offering",
+    "products": 25
+   },
+   {
+    "title": "Core DTC Offering + Packs",
+    "handle": "core-dtc-offering-copy",
+    "products": 34
+   },
+   {
+    "title": "Daily Brain Focus Support",
+    "handle": "daily-brain-focus-support",
+    "products": 11
+   },
+   {
+    "title": "Daily Essential Multivitamins",
+    "handle": "essentials",
+    "products": 6
+   },
+   {
+    "title": "Daily Multivitamin Gummies For Everyone",
+    "handle": "daily-gummy-multivitamins-for-everyone",
+    "products": 6
+   },
+   {
+    "title": "Eligible Products",
+    "handle": "eligible-products",
+    "products": 223
+   },
+   {
+    "title": "Exclude from Search",
+    "handle": "exclude-from-search",
+    "products": 54
+   },
+   {
+    "title": "For Subscription Portal",
+    "handle": "for-subscription-portal",
+    "products": 204
+   },
+   {
+    "title": "Friends And Family",
+    "handle": "friends-and-family",
+    "products": 0
+   },
+   {
+    "title": "Functional",
+    "handle": "functional",
+    "products": 3
+   },
+   {
+    "title": "Global Product Collection",
+    "handle": "global-product-collection",
+    "products": 98
+   },
+   {
+    "title": "Home page",
+    "handle": "frontpage",
+    "products": 0
+   },
+   {
+    "title": "Kids Gummy Vitamins & Supplements",
+    "handle": "kids",
+    "products": 25
+   },
+   {
+    "title": "Magnesium Higher MSRP",
+    "handle": "magnesium-higher-msrp",
+    "products": 4
+   },
+   {
+    "title": "Men",
+    "handle": "men",
+    "products": 11
+   },
+   {
+    "title": "minicart",
+    "handle": "minicart",
+    "products": 226
+   },
+   {
+    "title": "Multivitamins",
+    "handle": "first-day-multis",
+    "products": 5
+   },
+   {
+    "title": "Newest Products",
+    "handle": "newest-products",
+    "products": 108
+   },
+   {
+    "title": "Online Exclusive Multis < 18",
+    "handle": "online-exclusive-multis-18",
+    "products": 4
+   },
+   {
+    "title": "Pinterest Data Source",
+    "handle": "pinterest-data-source",
+    "products": 32
+   },
+   {
+    "title": "Prime Health",
+    "handle": "prime-health",
+    "products": 40
+   },
+   {
+    "title": "Ready For School Bundles",
+    "handle": "ready-for-school-bundles",
+    "products": 2
+   },
+   {
+    "title": "Shop All Supplements",
+    "handle": "all",
+    "products": 35
+   },
+   {
+    "title": "Simplified Discount Core",
+    "handle": "simplified-discount-core",
+    "products": 21
+   },
+   {
+    "title": "Starter Packs",
+    "handle": "starter-packs",
+    "products": 12
+   },
+   {
+    "title": "Subscription Portal Carousel",
+    "handle": "subscription-portal-carousel",
+    "products": 44
+   },
+   {
+    "title": "Teens",
+    "handle": "teens",
+    "products": 17
+   },
+   {
+    "title": "The World's First Pre+ Post+ Probiotics",
+    "handle": "tribiotics",
+    "products": 24
+   },
+   {
+    "title": "Toddlers",
+    "handle": "toddler",
+    "products": 2
+   },
+   {
+    "title": "Welcome Kit Offer",
+    "handle": "welcome-kit-offer",
+    "products": 7
+   },
+   {
+    "title": "Women",
+    "handle": "women",
+    "products": 19
+   }
+  ]
+ },
+ "tech_stack": {
+  "pages_scanned": 45,
+  "vendors": [
+   {
+    "vendor": "Judge.me",
+    "role": "reviews",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "FrontRow MD",
+    "role": "clinician reviews",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Klaviyo",
+    "role": "email",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Attentive",
+    "role": "SMS",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Intelligems",
+    "role": "A/B + price testing",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Northbeam",
+    "role": "attribution",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Gorgias",
+    "role": "support",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Stay AI",
+    "role": "subscriptions",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Replo",
+    "role": "page builder",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Weglot",
+    "role": "translation",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Opensend",
+    "role": "identity resolution",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Blotout EdgeTag",
+    "role": "server-side tracking",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Microsoft Clarity",
+    "role": "session replay",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Google Tag Manager",
+    "role": "tag management",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Impact.com",
+    "role": "affiliates",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Beam",
+    "role": "donations",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Pandectes",
+    "role": "cookie consent",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "SavedBy",
+    "role": "package protection",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "CartHook",
+    "role": "post-purchase upsell",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Rebuy",
+    "role": "recommendations",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "TikTok pixel",
+    "role": "ads",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Meta pixel",
+    "role": "ads",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Pinterest tag",
+    "role": "ads",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Shopify native",
+    "role": "platform",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Loop",
+    "role": "returns",
+    "pages": 45,
+    "coverage_pct": 100
+   },
+   {
+    "vendor": "Postscript",
+    "role": "SMS",
+    "pages": 45,
+    "coverage_pct": 100
+   }
+  ],
+  "vendors_per_page_avg": 26.0,
+  "overlapping_roles": {
+   "SMS": [
+    "Attentive",
+    "Postscript"
+   ],
+   "ads": [
+    "TikTok pixel",
+    "Meta pixel",
+    "Pinterest tag"
+   ]
+  }
+ },
+ "sitemap": {
+  "total_urls": 383,
+  "by_kind": [
+   [
+    "pages",
+    172
+   ],
+   [
+    "blogs",
+    99
+   ],
+   [
+    "products",
+    71
+   ],
+   [
+    "collections",
+    40
+   ],
+   [
+    "agentic_discovery",
+    1
+   ]
+  ],
+  "landing_pages": 44,
+  "lastmod_by_month": [
+   [
+    "?",
+    2
+   ],
+   [
+    "2026-07",
+    130
+   ],
+   [
+    "2026-06",
+    23
+   ],
+   [
+    "2026-05",
+    3
+   ],
+   [
+    "2026-04",
+    19
+   ],
+   [
+    "2026-03",
+    6
+   ],
+   [
+    "2026-02",
+    9
+   ],
+   [
+    "2026-01",
+    4
+   ],
+   [
+    "2025-11",
+    1
+   ],
+   [
+    "2025-10",
+    3
+   ],
+   [
+    "2025-09",
+    2
+   ],
+   [
+    "2025-08",
+    2
+   ],
+   [
+    "2025-06",
+    54
+   ],
+   [
+    "2025-05",
+    24
+   ]
+  ],
+  "not_touched_since_2025": 87,
+  "lp_recent": [
+   [
+    "2026-07-29",
+    "kde-behind-the-science-lp"
+   ],
+   [
+    "2026-07-29",
+    "kcm-sale-producthero-lp"
+   ],
+   [
+    "2026-07-27",
+    "tdk-behind-the-science-mthfr-lp"
+   ],
+   [
+    "2026-07-24",
+    "wds-3-red-flags-lander-lp"
+   ],
+   [
+    "2026-07-23",
+    "tdk-behind-the-science-lp"
+   ],
+   [
+    "2026-06-29",
+    "tdk-5-reasons-why-listicle-lp"
+   ],
+   [
+    "2026-06-19",
+    "trmv-behind-the-science-lp"
+   ],
+   [
+    "2026-06-19",
+    "kde-dr-lp"
+   ]
+  ]
+ },
+ "social": {
+  "instagram": {
+   "url": "https://www.instagram.com/firstday/",
+   "status": 429
+  },
+  "facebook": {
+   "url": "https://www.facebook.com/firstday/",
+   "status": 400
+  },
+  "tiktok": {
+   "url": "https://www.tiktok.com/@firstday",
+   "status": 200,
+   "followers": 13
+  },
+  "youtube": {
+   "url": "https://www.youtube.com/@firstday",
+   "status": 404
+  },
+  "x": {
+   "url": "https://x.com/firstday",
+   "status": 200,
+   "og_description": "4 followers · 0 following. Joined Apr 2009. See the latest conversations with @FIRSTDAY"
+  }
+ },
+ "marketplaces": {
+  "amazon_search": {
+   "url": "https://www.amazon.com/s?k=first+day+vitamins",
+   "status": 503,
+   "note": "storefronts block automated fetches; presence confirmed from the brief and packaging claims"
+  },
+  "target_search": {
+   "url": "https://www.target.com/s?searchTerm=first+day+vitamins",
+   "status": 200,
+   "note": "storefronts block automated fetches; presence confirmed from the brief and packaging claims"
+  }
+ }
+}
