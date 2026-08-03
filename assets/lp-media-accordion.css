@@ -164,10 +164,20 @@
 }
 
 .lp-media-accordion__guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
   color: rgb(var(--color-foreground));
   font-size: 1.2rem;
   margin: 1rem 0 0;
   text-align: center;
+}
+
+.lp-media-accordion__guarantee-icon {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
 }
 
 @media screen and (min-width: 750px) {
