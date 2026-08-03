@@ -13,6 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 GRAPH = ROOT / "docs" / "receipts" / "lp-estate-graph.json"
+ADS = ROOT / "docs" / "receipts" / "ad-destinations.json"
 OUT = ROOT / "docs" / "receipts" / "estate.html"
 
 # funnels already rebuilt on the dev store — these are the "done" nodes
@@ -25,8 +26,20 @@ def main():
 
     graph = json.loads(GRAPH.read_text())
     nodes = graph["nodes"]
+
+    # Which pages actually carry paid traffic. The sitemap says what exists; the Ad Library
+    # says what is being spent on. That is the ordering a migration should follow, and it is
+    # knowable from outside before anyone hands over an ad account.
+    ads = {}
+    if ADS.exists():
+        for d in json.loads(ADS.read_text()).get("destinations", []):
+            if d.get("handle"):
+                ads[d["handle"]] = ads.get(d["handle"], 0) + d["occurrences"]
+
     for n in nodes:
         n["migrated"] = n["handle"] in MIGRATED
+        n["ad_occurrences"] = ads.get(n["handle"], 0)
+        n["advertised"] = n["ad_occurrences"] > 0
 
     total_mb = sum(n["weight_kb"] for n in nodes) / 1024
     backlog = [i for n in nodes for i in n.get("backlog", [])]
@@ -37,7 +50,9 @@ def main():
     payload = json.dumps({"nodes": nodes, "edges": graph.get("edges", []),
                           "generated": graph.get("generated", "")}, separators=(",", ":"))
 
+    advertised = [n for n in nodes if n["advertised"]]
     stats = {
+        "advertised": len(advertised),
         "pages": len(nodes),
         "mb": f"{total_mb:.0f}",
         "backlog": len(backlog),
@@ -113,6 +128,7 @@ TEMPLATE = r"""<!doctype html>
          text-transform: uppercase; padding: 2px 7px; border-radius: 4px; }
   .tag.replo { background: rgb(224 161 113 / 18%); color: var(--warn); }
   .tag.sections { background: rgb(95 201 165 / 16%); color: var(--accent); }
+  .tag.ads { background: rgb(126 224 192 / 20%); color: var(--done); }
   .tag.page-body, .tag.unknown { background: rgb(111 135 146 / 18%); color: var(--neutral); }
   h3.sec { margin: 20px 0 8px; font-family: var(--mono); font-size: 10px; letter-spacing: .12em;
            text-transform: uppercase; color: var(--ink-faint); }
@@ -136,8 +152,9 @@ TEMPLATE = r"""<!doctype html>
 
 <header>
   <h1>The landing page estate</h1>
-  <p class="claim">These are not 60 separate problems. They are a handful of funnels cloned many
-    times — and every job below came from a measured number on that page, not an opinion.</p>
+  <p class="claim">Not 60 separate problems: a handful of funnels cloned many times. Only the ringed nodes
+    carry active paid traffic — that is where a migration should start, and every job below came
+    from a measured number, not an opinion.</p>
 </header>
 
 <div class="stats" id="stats"></div>
@@ -149,6 +166,7 @@ TEMPLATE = r"""<!doctype html>
       <button class="chip" data-filter="sections" aria-pressed="false">sections</button>
       <button class="chip warn" data-filter="replo" aria-pressed="false">page builder</button>
       <button class="chip" data-filter="migrated" aria-pressed="false">rebuilt</button>
+      <button class="chip" data-filter="advertised" aria-pressed="false">has active ads</button>
       <input type="search" id="q" placeholder="filter by handle" aria-label="Filter pages by handle">
     </div>
   </div>
@@ -164,6 +182,7 @@ document.getElementById('stats').innerHTML = [
   ['html shipped', STATS.mb + ' MB', 'warn'],
   ['stuck in a page builder', STATS.replo + '/' + STATS.pages, 'warn'],
   ['already rebuilt', STATS.migrated, 'ok'],
+  ['carrying paid traffic', STATS.advertised + '/' + STATS.pages, 'ok'],
   ['jobs queued', STATS.backlog, ''],
   ['distinct funnels', STATS.families, ''],
 ].map(([l, n, cls]) => `<div class="stat"><div class="n ${cls}">${n}</div><div class="l">${l}</div></div>`).join('');
@@ -268,6 +287,7 @@ function draw() {
     ctx.fillStyle = n.migrated ? '#7ee0c0' : (COLOR[n.build_type] || '#6f8792');
     ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill();
     if (n.migrated) { ctx.strokeStyle = '#e8eeec'; ctx.lineWidth = 1.6; ctx.stroke(); }
+    else if (n.advertised) { ctx.strokeStyle = '#7ee0c0'; ctx.lineWidth = 2; ctx.stroke(); }
     if (n === selected) { ctx.strokeStyle = '#fff'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(n.x, n.y, n.r + 4, 0, Math.PI * 2); ctx.stroke(); }
     if (!faded && (n.r > 13 || n === focus)) {
       ctx.globalAlpha = faded ? 0.16 : 0.72;
@@ -317,7 +337,7 @@ function select(n) {
   panel.innerHTML = `
     <h2>${esc(n.handle)}</h2>
     <p class="meta">${esc(n.family)} · ${esc(n.funnel)}${n.offer_flags && n.offer_flags.length ? ' · ' + esc(n.offer_flags.join(', ')) : ''}</p>
-    <p style="margin:10px 0 0"><span class="tag ${esc(n.build_type)}">${esc(n.build_type)}</span>${n.migrated ? ' <span class="tag sections">rebuilt</span>' : ''}</p>
+    <p style="margin:10px 0 0"><span class="tag ${esc(n.build_type)}">${esc(n.build_type)}</span>${n.migrated ? ' <span class="tag sections">rebuilt</span>' : ''}${n.advertised ? ' <span class="tag ads">' + n.ad_occurrences + ' ad links</span>' : ''}</p>
     <dl class="kv">
       <dt>weight</dt><dd>${n.weight_kb} KB</dd>
       <dt>sections</dt><dd>${n.template_sections}${n.empty_sections ? ' (' + n.empty_sections + ' empty)' : ''}</dd>
@@ -333,9 +353,9 @@ function select(n) {
 }
 
 function showList() {
-  const rows = nodes.filter(n => !n.dim).sort((a, b) => b.weight_kb - a.weight_kb).map((n, i) =>
-    `<button data-i="${nodes.indexOf(n)}"><span>${esc(n.handle.replace(/-lp$/, ''))}</span><span class="w">${Math.round(n.weight_kb)}KB · ${(n.backlog || []).length}</span></button>`).join('');
-  panel.innerHTML = `<h2>Every page</h2><p class="meta">Heaviest first. Click a row or a node.</p>
+  const rows = nodes.filter(n => !n.dim).sort((a, b) => (b.ad_occurrences - a.ad_occurrences) || (b.weight_kb - a.weight_kb)).map((n, i) =>
+    `<button data-i="${nodes.indexOf(n)}"><span>${esc(n.handle.replace(/-lp$/, ''))}</span><span class="w">${n.advertised ? '● ' : ''}${Math.round(n.weight_kb)}KB · ${(n.backlog || []).length}</span></button>`).join('');
+  panel.innerHTML = `<h2>Every page</h2><p class="meta">Pages with active ads first, then heaviest. Click a row or a node.</p>
     <h3 class="sec">${nodes.filter(n => !n.dim).length} shown</h3><div class="list">${rows}</div>`;
   panel.querySelectorAll('button[data-i]').forEach(b =>
     b.addEventListener('click', () => select(nodes[Number(b.dataset.i)])));

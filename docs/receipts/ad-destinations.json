@@ -1,0 +1,103 @@
+{
+ "generated": "2026-08-03T03:10:21.289Z",
+ "method": "Public Meta Ad Library, active + US, several keyword queries, outbound links decoded from l.facebook.com wrappers and counted by occurrence in the loaded results.",
+ "limits": "Occurrences are link appearances in the loaded portion of results — not impressions, spend or ad count. Presence is strong evidence; absence is weak.",
+ "queries": [
+  "firstday.com",
+  "\"First Day\"",
+  "\"No Junk\"",
+  "multivitamin gummies kids"
+ ],
+ "perQuery": {
+  "firstday.com": {
+   "counts": {
+    "https://www.facebook.com/ads/library": 2,
+    "https://firstday.com/pages/tdk-behind-the-science-lp": 5,
+    "https://firstday.com/pages/5-reasons-pediatricians-recommend-first-day": 1,
+    "https://firstday.com/products/teens-kickstart-vitamin": 8,
+    "https://firstday.com/products/kids-enrichment-vitamin": 4,
+    "https://firstday.com/pages/kde-behind-the-science-lp": 3,
+    "https://reviews.firstday.com/pages/4-Vitamins-I-Wish-I-Never-Bought": 2,
+    "https://firstday.com/pages/kde-bfcm-behind-the-science-lp": 2,
+    "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-lp": 1
+   },
+   "results": "~3,500 results"
+  },
+  "\"First Day\"": {
+   "counts": {},
+   "results": "50,000 results"
+  },
+  "\"No Junk\"": {
+   "counts": {
+    "https://firstday.com/pages/tdk-behind-the-science-lp": 2
+   },
+   "results": "50,000 results"
+  },
+  "multivitamin gummies kids": {
+   "counts": {
+    "https://firstday.com/pages/kde-behind-the-science-lp": 3,
+    "https://firstday.com/pages/5-reasons-pediatricians-recommend-first-day": 2,
+    "https://firstday.com/products/teens-kickstart-vitamin": 2,
+    "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-lp": 2,
+    "https://firstday.com/pages/brain-bts-kids-teens": 1
+   },
+   "results": "~710 results"
+  }
+ },
+ "destinations": [
+  {
+   "url": "https://firstday.com/products/teens-kickstart-vitamin",
+   "occurrences": 10,
+   "type": "product",
+   "handle": null
+  },
+  {
+   "url": "https://firstday.com/pages/tdk-behind-the-science-lp",
+   "occurrences": 7,
+   "type": "landing-page",
+   "handle": "tdk-behind-the-science-lp"
+  },
+  {
+   "url": "https://firstday.com/pages/kde-behind-the-science-lp",
+   "occurrences": 6,
+   "type": "landing-page",
+   "handle": "kde-behind-the-science-lp"
+  },
+  {
+   "url": "https://firstday.com/products/kids-enrichment-vitamin",
+   "occurrences": 4,
+   "type": "product",
+   "handle": null
+  },
+  {
+   "url": "https://firstday.com/pages/5-reasons-pediatricians-recommend-first-day",
+   "occurrences": 3,
+   "type": "landing-page",
+   "handle": "5-reasons-pediatricians-recommend-first-day"
+  },
+  {
+   "url": "https://firstday.com/pages/tdk-sales-behavior-hiddenhunger-lp",
+   "occurrences": 3,
+   "type": "landing-page",
+   "handle": "tdk-sales-behavior-hiddenhunger-lp"
+  },
+  {
+   "url": "https://reviews.firstday.com/pages/4-Vitamins-I-Wish-I-Never-Bought",
+   "occurrences": 2,
+   "type": "landing-page",
+   "handle": "4-Vitamins-I-Wish-I-Never-Bought"
+  },
+  {
+   "url": "https://firstday.com/pages/kde-bfcm-behind-the-science-lp",
+   "occurrences": 2,
+   "type": "landing-page",
+   "handle": "kde-bfcm-behind-the-science-lp"
+  },
+  {
+   "url": "https://firstday.com/pages/brain-bts-kids-teens",
+   "occurrences": 1,
+   "type": "landing-page",
+   "handle": "brain-bts-kids-teens"
+  }
+ ]
+}
