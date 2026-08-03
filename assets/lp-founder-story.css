@@ -57,8 +57,10 @@
   font-size: 1.6rem;
 }
 
+/* The gap under the pull quote has to beat the gap between paragraphs, or the quote reads as
+   the first line of the story instead of as the thing the story hangs off. */
 .lp-founder-story__lede p {
-  margin: 0 0 3.2rem;
+  margin: 0 0 4rem;
   font-size: 2.2rem;
   line-height: 1.3;
   font-weight: 700;
@@ -112,6 +114,14 @@
   }
 
   .lp-founder-story__lede p {
-    margin-bottom: 2.4rem;
+    margin-bottom: 3rem;
+    font-size: 1.9rem;
+  }
+
+  /* Heading, quote and caption stay centred — that is the About page's voice. The story
+     paragraphs do not: eight centred lines on a 390px screen give the eye no left edge to
+     return to, and this section is long-form. Centred short, ranged-left long. */
+  .lp-founder-story__para p {
+    text-align: left;
   }
 }
