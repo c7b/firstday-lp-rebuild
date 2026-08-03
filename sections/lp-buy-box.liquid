@@ -237,9 +237,16 @@
         {% endif %}
 
         <div class="lp-buy-box__heading-group">
-          <h2 class="lp-buy-box__title">{{ buy_product.title | escape }}</h2>
+          {% assign formatted_product_title = buy_product.title | escape | replace: '™', '<sup class="lp-buy-box__tm">™</sup>' %}
+          <h2 class="lp-buy-box__title">{{ formatted_product_title }}</h2>
           {% if fact_subtitle != blank %}
-            <p class="lp-buy-box__subtitle">{{ fact_subtitle | escape }}</p>
+            <p class="lp-buy-box__subtitle">
+              {%- if section.settings.subtitle != blank -%}
+                {{- section.settings.subtitle -}}
+              {%- else -%}
+                {{- fact_subtitle | escape -}}
+              {%- endif -%}
+            </p>
           {% endif %}
         </div>
 
@@ -377,10 +384,10 @@
                   <span class="lp-buy-box__delivery-prices">
                     {%- if plan_variant != blank -%}
                       <s class="lp-buy-box__compare-price">{{ plan_variant.compare_at_price | default: current_variant.price | money }}</s>
-                      <strong class="lp-buy-box__price">{{ plan_variant.price | money }}</strong>
+                      <strong class="lp-buy-box__price lp-buy-box__price--subscription">{{ plan_variant.price | money }}</strong>
                     {%- else -%}
                       <s class="lp-buy-box__compare-price">{{ section.settings.sub_compare | escape }}</s>
-                      <strong class="lp-buy-box__price">{{ section.settings.sub_price | escape }}</strong>
+                      <strong class="lp-buy-box__price lp-buy-box__price--subscription">{{ section.settings.sub_price | escape }}</strong>
                     {%- endif -%}
                   </span>
                 </span>
@@ -628,7 +635,21 @@
             {% if block.type == 'info_item' %}
               <details class="lp-buy-box__info-item" {{ block.shopify_attributes }}>
                 <summary class="lp-buy-box__info-summary">
-                  <span>{{ block.settings.title | escape }}</span>
+                  <span class="lp-buy-box__info-heading">
+                    {% if block.settings.icon != blank %}
+                      {{
+                        block.settings.icon
+                        | image_url: width: 40
+                        | image_tag:
+                          widths: '20, 40',
+                          sizes: '20px',
+                          class: 'lp-buy-box__info-icon',
+                          loading: 'lazy',
+                          alt: ''
+                      }}
+                    {% endif %}
+                    <span>{{ block.settings.title | escape }}</span>
+                  </span>
                   <svg class="lp-buy-box__info-chevron" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
                     <path d="m5 7.5 5 5 5-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
                   </svg>
@@ -697,7 +718,7 @@
       "info": "Lets other sections link here, e.g. a CTA pointing at #standalone-product-section. Leave empty unless something links to this section."
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "subtitle",
       "label": "Subtitle",
       "default": "Daily Gummies For Improved Motivation & Mood",
@@ -1104,6 +1125,11 @@
           "id": "title",
           "label": "Title",
           "default": "Ingredients"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
         },
         {
           "type": "richtext",

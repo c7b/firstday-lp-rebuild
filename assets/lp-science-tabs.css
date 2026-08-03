@@ -70,7 +70,7 @@
   align-items: center;
   max-width: 88rem;
   margin: 0 auto;
-  padding: 1.6rem;
+  padding: 2rem;
   background: var(--lp-bg);
   border-radius: 1.6rem;
 }
@@ -149,7 +149,7 @@
     grid-template-columns: minmax(0, 1fr) minmax(24rem, 30rem);
     gap: 3.2rem;
     max-width: 88rem;
-    padding: 2rem;
+    padding: 3.2rem;
   }
 
   .lp-science-tabs__media {

@@ -143,12 +143,23 @@
   letter-spacing: -0.03em;
 }
 
+.lp-buy-box__tm {
+  font-size: 0.5em;
+  font-weight: 400;
+  vertical-align: super;
+}
+
 .lp-buy-box__subtitle {
   max-width: 48rem;
   margin: 0.8rem 0 0;
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.3;
+}
+
+.lp-buy-box__subtitle em {
+  color: var(--lp-blue);
+  font-style: italic;
 }
 
 .lp-buy-box__rating {
@@ -263,8 +274,15 @@
 }
 
 .lp-buy-box__benefit-stat {
-  font-size: 2.4rem;
+  min-width: 6.4rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  background: var(--lp-bg-alt);
+  color: var(--lp-blue);
+  font-size: 2.2rem;
+  font-weight: 700;
   line-height: 1.3;
+  text-align: center;
 }
 
 .lp-buy-box__benefit-text {
@@ -373,6 +391,9 @@
   display: grid;
   grid-template-columns: auto auto;
   align-items: baseline;
+  justify-content: end;
+  justify-items: end;
+  justify-self: end;
   gap: 0.5rem;
   text-align: right;
 }
@@ -387,14 +408,19 @@
   line-height: 1.3;
 }
 
+.lp-buy-box__price--subscription {
+  color: var(--lp-green);
+}
+
 .lp-buy-box__price-note {
   grid-column: 1 / -1;
+  justify-self: end;
   font-size: 1.2rem;
   line-height: 1.3;
 }
 
 .lp-buy-box__delivery-copy {
-  display: block;
+  display: none;
   margin: 1.2rem 0 0 3rem;
   color: rgba(var(--color-foreground), 0.75);
   font-size: 1.25rem;
@@ -432,7 +458,7 @@
 }
 
 .lp-buy-box__delivery-badge {
-  display: inline-flex;
+  display: none;
   margin: 1.2rem 0 0 3rem;
   padding: 0.45rem 0.8rem;
   border-radius: 999rem;
@@ -441,6 +467,14 @@
   font-size: 1.2rem;
   font-weight: 800;
   line-height: 1.3;
+}
+
+.lp-buy-box__choice-input:checked + .lp-buy-box__delivery-card .lp-buy-box__delivery-copy {
+  display: block;
+}
+
+.lp-buy-box__choice-input:checked + .lp-buy-box__delivery-card .lp-buy-box__delivery-badge {
+  display: inline-flex;
 }
 
 .lp-buy-box__quantity {
@@ -784,9 +818,10 @@
 }
 
 .lp-buy-box__info-summary {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.8rem;
   min-height: 5.6rem;
   padding: 0.8rem 0;
   color: var(--lp-navy);
@@ -794,6 +829,21 @@
   font-weight: 800;
   cursor: pointer;
   list-style: none;
+}
+
+.lp-buy-box__info-heading {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.lp-buy-box__info-icon {
+  display: block;
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
 }
 
 .lp-buy-box__info-summary::-webkit-details-marker {

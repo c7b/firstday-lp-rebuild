@@ -1,25 +1,35 @@
 {{ 'lp-urgency-banner.css' | asset_url | stylesheet_tag }}
 
-{% comment %}
-  One rich-text field instead of the three-part before/highlight/after split it used to be:
-  the operator writes the sentence the way they'd say it and bolds what should stand out,
-  rather than reverse-engineering which of three boxes holds which words. The month is
-  literal text, as in the original — PLAN.md notes the dynamic-month option that was
-  deliberately not implemented, since copy changes are out of scope.
-{% endcomment %}
-
 <section
   id="{{ section.settings.anchor_id | default: section.id }}"
-  class="lp-urgency-banner__section color-{{ section.settings.color_scheme }} gradient"
+  class="lp-urgency-banner__section"
   style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
 >
   <div class="lp-urgency-banner__content">
-    <div class="lp-urgency-banner__text rte">{{ section.settings.text }}</div>
-    {% if section.settings.cta_label != blank and section.settings.cta_link != blank %}
-      <a class="lp-urgency-banner__cta" href="{{ section.settings.cta_link }}" data-lp-cta>
-        {{- section.settings.cta_label | escape -}}
-      </a>
-    {% endif %}
+    <div class="lp-urgency-banner__media">
+      {% if section.settings.video_url != blank %}
+        <video
+          class="lp-urgency-banner__video"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="metadata"
+          {% if section.settings.poster_url != blank %}poster="{{ section.settings.poster_url | escape }}"{% endif %}
+        >
+          <source src="{{ section.settings.video_url | escape }}" type="video/mp4">
+        </video>
+      {% endif %}
+    </div>
+
+    <div class="lp-urgency-banner__panel">
+      <div class="lp-urgency-banner__text rte">{{ section.settings.text }}</div>
+      {% if section.settings.cta_label != blank and section.settings.cta_link != blank %}
+        <a class="lp-urgency-banner__cta" href="{{ section.settings.cta_link }}" data-lp-cta>
+          {{- section.settings.cta_label | escape -}}
+        </a>
+      {% endif %}
+    </div>
   </div>
 </section>
 
@@ -33,8 +43,8 @@
       "type": "richtext",
       "id": "text",
       "label": "Notice",
-      "info": "Bold the words that should stand out — the month, a deadline.",
-      "default": "<p>🚨 Due to the high demand, <strong>July</strong> has a very high risk of selling out!</p>"
+      "info": "The notice is always displayed in bold.",
+      "default": "<p><strong>🚨 Due to the high demand, August has a very high risk of selling out!</strong></p>"
     },
     {
       "type": "text",
@@ -50,10 +60,16 @@
       "info": "In-page anchor to the buy box by default"
     },
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "Color scheme",
-      "default": "scheme-1"
+      "type": "text",
+      "id": "video_url",
+      "label": "Video URL",
+      "default": "https://cdn.shopify.com/videos/c/vp/2e7dd77535bb4f0d8a3ff1e42b3dcbe6/2e7dd77535bb4f0d8a3ff1e42b3dcbe6.HD-720p-4.5Mbps-90596307.mp4"
+    },
+    {
+      "type": "text",
+      "id": "poster_url",
+      "label": "Video poster URL",
+      "default": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/preview_images/2e7dd77535bb4f0d8a3ff1e42b3dcbe6.thumbnail.0000000000.jpg?v=1785730422"
     },
     {
       "type": "range",
@@ -63,7 +79,7 @@
       "step": 4,
       "unit": "px",
       "label": "Top padding",
-      "default": 12
+      "default": 44
     },
     {
       "type": "range",
@@ -73,7 +89,7 @@
       "step": 4,
       "unit": "px",
       "label": "Bottom padding",
-      "default": 12
+      "default": 20
     },
     {
       "type": "text",

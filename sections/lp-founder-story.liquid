@@ -1,0 +1,179 @@
+{% comment %}
+  Founder story, transplanted from firstday.com/pages/about-us where it is a rich-text heading
+  plus a custom-liquid block with the layout hardcoded in a <style> tag. Rebuilt here as one
+  section so the portrait, the frame colour and every paragraph are editable, and so the block
+  can be dropped on any LP from the theme editor.
+{% endcomment %}
+
+{{ 'lp-founder-story.css' | asset_url | stylesheet_tag }}
+
+<section
+  id="{{ section.settings.anchor_id | default: section.id }}"
+  class="lp-founder-story color-{{ section.settings.color_scheme }} gradient"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;{% if section.settings.frame_color != blank %} --lp-founder-frame: {{ section.settings.frame_color }};{% endif %}{% if section.settings.heading_color != blank %} --lp-founder-heading: {{ section.settings.heading_color }};{% endif %}"
+>
+  {%- if section.settings.heading != blank -%}
+    <h2 class="lp-founder-story__heading">{{ section.settings.heading | escape }}</h2>
+  {%- endif -%}
+
+  <div class="lp-founder-story__container">
+    <figure class="lp-founder-story__portrait">
+      {%- if section.settings.photo != blank -%}
+        {{
+          section.settings.photo
+          | image_url: width: 720
+          | image_tag:
+            class: 'lp-founder-story__photo',
+            widths: '300, 480, 720',
+            sizes: '(min-width: 762px) 30vw, 90vw',
+            loading: 'lazy',
+            alt: section.settings.photo_alt
+        }}
+      {%- endif -%}
+      {%- if section.settings.name != blank or section.settings.role != blank -%}
+        <figcaption class="lp-founder-story__caption">
+          {%- if section.settings.name != blank -%}
+            <strong>{{ section.settings.name | escape }}</strong>
+          {%- endif -%}
+          {%- if section.settings.role != blank -%}
+            <span>{{ section.settings.role | escape }}</span>
+          {%- endif -%}
+        </figcaption>
+      {%- endif -%}
+    </figure>
+
+    <div class="lp-founder-story__text">
+      {%- if section.settings.lede != blank -%}
+        <p class="lp-founder-story__lede">{{ section.settings.lede }}</p>
+      {%- endif -%}
+      {%- for block in section.blocks -%}
+        <div class="lp-founder-story__para rte" {{ block.shopify_attributes }}>
+          {{ block.settings.text }}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LP founder story",
+  "tag": "section",
+  "class": "section-lp-founder-story",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Meet Our Founder"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading colour",
+      "info": "The mint the About page uses for this heading. Leave empty to inherit the colour scheme.",
+      "default": "#65daa1"
+    },
+    {
+      "type": "image_picker",
+      "id": "photo",
+      "label": "Founder photo"
+    },
+    {
+      "type": "text",
+      "id": "photo_alt",
+      "label": "Photo alt text",
+      "default": "Alice, founder of First Day"
+    },
+    {
+      "type": "text",
+      "id": "name",
+      "label": "Name",
+      "default": "Alice"
+    },
+    {
+      "type": "text",
+      "id": "role",
+      "label": "Role",
+      "default": "Founder of First Day"
+    },
+    {
+      "type": "color",
+      "id": "frame_color",
+      "label": "Photo frame colour",
+      "info": "Border and offset shadow around the portrait.",
+      "default": "#486ced"
+    },
+    {
+      "type": "richtext",
+      "id": "lede",
+      "label": "Lede",
+      "default": "<p>I started First Day because of the promise that comes from fresh beginnings. The first day has the potential to be your best day, every day.</p>"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Colour scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "info": "Lets a CTA elsewhere on the page link straight here. Leave empty unless something links to this section."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP founder story",
+      "blocks": [
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "paragraph"
+        }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["page", "index", "product"]
+  }
+}
+{% endschema %}

@@ -1,0 +1,94 @@
+/* Founder story — layout and frame values sampled from firstday.com/pages/about-us, where the
+   same block lives inside a custom-liquid section with its rules inlined in a <style> tag.
+   Kept as tokens here so the frame colour and heading colour stay editor-driven. */
+
+.lp-founder-story {
+  --lp-founder-frame: #486ced;
+  --lp-founder-heading: #65daa1;
+  padding-inline: 1.5rem;
+  text-align: center;
+}
+
+.lp-founder-story__heading {
+  margin: 0 0 2rem;
+  font-size: calc(var(--font-heading-scale, 1) * 4rem);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+  color: var(--lp-founder-heading);
+}
+
+.lp-founder-story__container {
+  max-width: 110rem;
+  margin-inline: auto;
+  line-height: 1.4;
+}
+
+.lp-founder-story__portrait {
+  margin: 0 auto 1.6rem;
+  max-width: 32rem;
+}
+
+/* The offset shadow is the About page's signature: a hard blue block behind a blue-bordered
+   photo. transform:scale(.95) is theirs too — it leaves room for the shadow inside the box. */
+.lp-founder-story__photo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--lp-founder-frame);
+  border-radius: 20px;
+  box-shadow: 10px 10px 0 0 var(--lp-founder-frame);
+  transform: scale(0.95);
+}
+
+.lp-founder-story__caption {
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.lp-founder-story__caption strong {
+  display: block;
+}
+
+.lp-founder-story__lede {
+  margin: 0 0 1.4rem;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.lp-founder-story__para + .lp-founder-story__para {
+  margin-top: 1.2rem;
+}
+
+.lp-founder-story__para p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 762px) {
+  .lp-founder-story__container {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 20px;
+  }
+
+  .lp-founder-story__portrait {
+    flex: 0 0 30%;
+    max-width: 30%;
+    margin-bottom: 0;
+  }
+
+  .lp-founder-story__text {
+    max-width: 60%;
+    margin-inline: auto;
+  }
+
+  .lp-founder-story__lede {
+    font-size: 3rem;
+  }
+}

@@ -142,6 +142,9 @@
 }
 
 .lp-media-accordion__cta-block {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   margin-top: 2.4rem;
   text-align: center;
 }
@@ -161,6 +164,7 @@
 }
 
 .lp-media-accordion__guarantee {
+  color: rgb(var(--color-foreground));
   font-size: 1.2rem;
   margin: 1rem 0 0;
   text-align: center;
