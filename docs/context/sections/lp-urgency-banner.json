@@ -1,47 +1,51 @@
 {
- "target_section": "lp-urgency-banner",
- "source_snapshot": "fd-lp.html",
- "originals": [
-  {
-   "original_id": "temp_sellout_notice_WQzDBM",
-   "raw_bytes": 6118,
-   "nodes": [
+  "target_section": "lp-urgency-banner",
+  "source_snapshot": "fd-lp.html",
+  "originals": [
     {
-     "type": "text",
-     "text": "id=\"shopify-section-template--19023949758562__temp_sellout_notice_WQzDBM\" class=\"shopify-section section\">",
-     "path": "",
-     "seq": 0
-    },
-    {
-     "type": "text",
-     "text": "🚨 Due to the high demand,",
-     "path": "div.sas-wrap>div.sas-content>div.sas-text>p",
-     "seq": 11
-    },
-    {
-     "type": "text",
-     "text": "July",
-     "path": "div.sas-content>div.sas-text>p>strong",
-     "seq": 12
-    },
-    {
-     "type": "text",
-     "text": "has a very high risk of selling out!",
-     "path": "div.sas-wrap>div.sas-content>div.sas-text>p",
-     "seq": 13
-    },
-    {
-     "type": "a-open",
-     "href": "#standalone-product-section",
-     "path": "div.page-width>div.sas-wrap>div.sas-content>a.sas-button"
-    },
-    {
-     "type": "text",
-     "text": "Claim Yours Now!",
-     "path": "div.page-width>div.sas-wrap>div.sas-content>a.sas-button",
-     "seq": 16
+      "original_id": "temp_sellout_notice_WQzDBM",
+      "raw_bytes": 6118,
+      "nodes": [
+        {
+          "type": "text",
+          "text": "id=\"shopify-section-template--19023949758562__temp_sellout_notice_WQzDBM\" class=\"shopify-section section\">",
+          "path": "",
+          "seq": 0
+        },
+        {
+          "type": "text",
+          "text": "🚨 Due to the high demand,",
+          "path": "div.sas-wrap>div.sas-content>div.sas-text>p",
+          "seq": 11
+        },
+        {
+          "type": "text",
+          "text": "July",
+          "path": "div.sas-content>div.sas-text>p>strong",
+          "seq": 12
+        },
+        {
+          "type": "text",
+          "text": "has a very high risk of selling out!",
+          "path": "div.sas-wrap>div.sas-content>div.sas-text>p",
+          "seq": 13
+        },
+        {
+          "type": "a-open",
+          "href": "#standalone-product-section",
+          "path": "div.page-width>div.sas-wrap>div.sas-content>a.sas-button"
+        },
+        {
+          "type": "text",
+          "text": "Claim Yours Now!",
+          "path": "div.page-width>div.sas-wrap>div.sas-content>a.sas-button",
+          "seq": 16
+        }
+      ]
     }
-   ]
-  }
- ]
+  ],
+  "text_lines": [
+    "🚨 Due to the high demand, August has a very high risk of selling out!"
+  ],
+  "month_rolled_forward": "The original ran this line with 'July'. The month is the only changed word — the page is being reviewed in August, and a banner naming last month reads as a broken page rather than as fidelity."
 }

@@ -127,3 +127,32 @@ locked brand look (noted in PLAN.md territory: not built, on purpose).
 New features, visual "improvements", app installs, quiz, header/footer chrome rebuild (Dawn
 stock serves them; the exercise is the funnel template), overlay dialogs (sale/OTP/upsell),
 and anything touching checkout. Each has a PLAN.md line instead of a half-built version.
+
+## Deliberate departures from the original page
+
+The brief puts copy and visual redesign out of scope, so every departure below is listed
+with the reason it earns its place. Everything else on the page is the original, verified
+string by string by `tools/verify_build.py`.
+
+- **Closing hero portrait → family photo.** The original runs the founder's headshot beside
+  copy about diet, microplastics and nutrient loss. A portrait next to that text reads as a
+  bylined article, not as the families the copy is about. The photo is First Day's own
+  (`/cdn/shop/files/1_3c7f014e…png`, from their site), re-hosted on this store like every
+  other asset here.
+- **New "Meet Our Founder" section.** The founder now has her own block, transplanted from
+  firstday.com/pages/about-us where it exists as a rich-text heading plus a custom-liquid
+  blob with its CSS inlined in a `<style>` tag. Rebuilt as `lp-founder-story` with the
+  portrait, frame colour, background and every paragraph as settings, so it can be dropped on
+  any LP from the editor. Copy is theirs verbatim; only the heading changes, from "Our
+  Founder's Story" to "Meet Our Founder" — an introduction rather than a chapter title, since
+  on an LP this is the first time the reader meets her. Verified against
+  `docs/context/sections/lp-founder-story.json`, extracted from the About page.
+- **Free-gift bar, cross-sell upsells and the flash-sale strip: off.** All three are
+  app-driven on the original. The rebuilt gift bar does read the real cart and the upsells do
+  add through the Cart AJAX API, but a gift you cannot actually claim and a countdown that
+  counts down to nothing are theatre. They are switched off by emptying their settings; the
+  Liquid still renders all three when those settings are filled, so turning them back on is a
+  content change, not a deploy.
+- **Urgency banner month.** The original says July. This says August — the month is the only
+  changed word. A banner naming last month reads as an abandoned page, which is the opposite
+  of what the section is for.

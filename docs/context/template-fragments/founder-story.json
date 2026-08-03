@@ -1,0 +1,44 @@
+{
+  "type": "lp-founder-story",
+  "settings": {
+    "heading": "Meet Our Founder",
+    "heading_color": "#65daa1",
+    "photo": "shopify://shop_images/founder-alice.png",
+    "photo_alt": "Alice, founder of First Day",
+    "name": "Alice",
+    "role": "Founder of First Day",
+    "frame_color": "#486ced",
+    "lede": "<p>I started First Day because of the promise that comes from fresh beginnings. The first day has the potential to be your best day, every day.</p>",
+    "background_color": "#f2fbff",
+    "color_scheme": "scheme-2",
+    "padding_top": 36,
+    "padding_bottom": 36,
+    "anchor_id": ""
+  },
+  "blocks": {
+    "para_1950s": {
+      "type": "paragraph",
+      "settings": {
+        "text": "<p>During the 1950’s, my family lived a challenging life. Food was scarce, and my grandparents experienced constant hunger pangs, sacrificing their health, to give their children a better life.</p>"
+      }
+    },
+    "para_trauma": {
+      "type": "paragraph",
+      "settings": {
+        "text": "<p>But the body doesn’t forget hard times. It reminds you with aches, pains – and even chronic illness – that you can’t always escape. I started First Day so that no other family has to pass nutritional trauma to the next generation. To ensure that every person has the opportunity to live every day like it’s their First Day.</p>"
+      }
+    },
+    "para_homage": {
+      "type": "paragraph",
+      "settings": {
+        "text": "<p>First Day is an homage to families. To all parents and grandparents out there who have given everything to their children at the expense of themselves. You are seen. You are appreciated. And you are loved more than you can ever imagine.</p>"
+      }
+    }
+  },
+  "block_order": [
+    "para_1950s",
+    "para_trauma",
+    "para_homage"
+  ],
+  "_note": "Copy and layout come from firstday.com/pages/about-us. Only the heading changes: 'Our Founder's Story' -> 'Meet Our Founder'."
+}

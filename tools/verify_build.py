@@ -22,6 +22,7 @@ EXEMPT_KEYS = {"cta_link", "color_scheme", "anchor_id", "url", "video_url", "pos
                "media_position", "image_position", "style", "product", "claims",
                "highlight_color", "video_label", "footer_brand"}
 URLISH = re.compile(r"^(gid://|https?:|//|/)|\.(png|jpg|jpeg|gif|webp|avif|svg|mp4|css|js)(\?|$)")
+HEXISH = re.compile(r"^#[0-9a-fA-F]{3,8}$")  # a colour value is not copy
 
 
 def norm(s):
@@ -136,7 +137,7 @@ def main():
             continue
         for path, val in iter_strings(frag.get("settings", {})):
             key = path.rsplit(".", 1)[-1].split("[")[0]
-            if key in EXEMPT_KEYS or URLISH.search(val) or len(norm(val)) < 4:
+            if key in EXEMPT_KEYS or URLISH.search(val) or HEXISH.match(val.strip()) or len(norm(val)) < 4:
                 continue
             missing = [c for c in rich_chunks(val) if c not in haystack and squash(c) not in squash(haystack)]
             if missing:
@@ -146,7 +147,7 @@ def main():
                 continue
             for path, val in iter_strings(block.get("settings", {})):
                 key = path.rsplit(".", 1)[-1].split("[")[0]
-                if key in EXEMPT_KEYS or URLISH.search(val) or len(norm(val)) < 4:
+                if key in EXEMPT_KEYS or URLISH.search(val) or HEXISH.match(val.strip()) or len(norm(val)) < 4:
                     continue
                 missing = [c for c in rich_chunks(val) if c not in haystack and squash(c) not in squash(haystack)]
                 if missing:

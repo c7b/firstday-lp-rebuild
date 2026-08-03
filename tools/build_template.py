@@ -36,6 +36,7 @@ ORDER = [
     ("clinician_reviews", "clinician-reviews.json"),
     ("reviews", "reviews.json"),
     ("hero_closer", "hero-closer.json"),
+    ("founder_story", "founder-story.json"),
 ]
 
 

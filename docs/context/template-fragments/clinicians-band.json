@@ -7,6 +7,22 @@
     "more_label": "Learn more",
     "anchor_id": ""
   },
-  "blocks": {},
-  "block_order": []
+  "blocks": {
+    "avatar_1": {
+      "type": "avatar",
+      "settings": {
+        "photo": "shopify://shop_images/qp5jngl05tsjlwbi65fhg1swj8os.png"
+      }
+    },
+    "avatar_2": {
+      "type": "avatar",
+      "settings": {
+        "photo": "shopify://shop_images/5xb6ex7x00p07wwhzprtmp018055.png"
+      }
+    }
+  },
+  "block_order": [
+    "avatar_1",
+    "avatar_2"
+  ]
 }

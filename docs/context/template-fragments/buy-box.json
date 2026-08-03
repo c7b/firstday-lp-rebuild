@@ -21,16 +21,16 @@
     "ot_warning": "<p>You're missing out on free shipping!</p><p>You're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!</p>",
     "quantity_heading": "Quantity",
     "qty_note": "",
-    "gift_heading": "Unlock Your Free Gift",
-    "gift_sub": "12 Servings of Electrolyte Drink Mix For The Whole Family.",
-    "gift_image": "shopify://shop_images/hydration-12-pack.png",
-    "gift_compare": "$25.00",
-    "gift_price": "FREE",
-    "gift_progress_text": "You are $75 away, keep going!",
+    "gift_heading": "",
+    "gift_sub": "",
+    "gift_image": "",
+    "gift_compare": "",
+    "gift_price": "",
+    "gift_progress_text": "",
     "gift_threshold": "$75",
-    "urgency_eyebrow": "🔥 Limited-Time Offer 🔥",
-    "urgency_headline": "Flash Sale Ending Soon",
-    "urgency_offer": "Get Up To 52% Off",
+    "urgency_eyebrow": "",
+    "urgency_headline": "",
+    "urgency_offer": "",
     "guarantee_text": "45 Day Money Back Guarantee",
     "cta_label": "Add To Cart & View Gift",
     "ages_note": "",
@@ -38,7 +38,7 @@
     "padding_top": 32,
     "padding_bottom": 32,
     "gift_threshold_amount": 75,
-    "gift_away_template": "You are [amount] away, keep going!",
+    "gift_away_template": "",
     "gift_unlocked_text": ""
   },
   "blocks": {
@@ -128,42 +128,6 @@
         "selected": false
       }
     },
-    "upsell_brain": {
-      "type": "upsell",
-      "settings": {
-        "image": "shopify://shop_images/Product_Over_White.jpg",
-        "alt": "The Teens' Daily Focus Brain Support dietary supplement features blue and teal packaging with 60 gummies per container and two yellow gummies in front, providing focus support designed specifically for teens.",
-        "title": "Teens' Daily Focus Brain Support",
-        "subtitle": "Support for focus, learning, and memory recall.",
-        "compare_price": "$49.00",
-        "price": "$29.40",
-        "product": "teens-daily-focus-brain-support"
-      }
-    },
-    "upsell_magnesium": {
-      "type": "upsell",
-      "settings": {
-        "image": "shopify://shop_images/TeensMagnesiumPrimary.jpg",
-        "alt": "A container labeled Teens’ Nighttime Reset Magnesium sits upright, with two berry-shaped red gummies beside it. The label states No Junk and the calming supplement for teens includes 60 magnesium gummies.",
-        "title": "Teens’ Nighttime Reset Magnesium",
-        "subtitle": "Melatonin-free support for relaxation & sleep.",
-        "compare_price": "$39.00",
-        "price": "$23.40",
-        "product": "teens-nighttime-reset-magnesium"
-      }
-    },
-    "upsell_probiotic": {
-      "type": "upsell",
-      "settings": {
-        "image": "shopify://shop_images/GUEST_9c904f2b-66b3-4c5c-8a4e-454f8e3bbd90.jpg",
-        "alt": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
-        "title": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
-        "subtitle": "To support immunity, digestion, and skin health.",
-        "compare_price": "$49.00",
-        "price": "$29.40",
-        "product": "teens-3-in-1-probiotic"
-      }
-    },
     "stamp_guarantee": {
       "type": "stamp",
       "settings": {
@@ -194,6 +158,7 @@
     "info_ingredients": {
       "type": "info_item",
       "settings": {
+        "icon": "shopify://shop_images/icon-list-ingredients-sourcing.png",
         "title": "Ingredients",
         "body": "<p>We are thoughtful about the ingredients we select, use REAL organic fruits & vegetables, and keep out long lists of ingredients that can't even be pronounced.</p><p><strong>Organic Superfood Blend:</strong> Apple, Kale, Broccoli, Spinach, Carrot, Parsley, Beet, Green Cabbage, Raspberry, Blueberry, Strawberry, Tomato, Aronia Berry, Chlorella, Maca, Moringa, Reishi Mushroom, Cordyceps Mushroom, Lion's Mane Mushroom, Turmeric, Ginger</p><p><strong>Other Ingredients:</strong> Tapioca Syrup‡, Cane Sugar‡, Water, Pectin, Citric Acid, Natural Flavors, Superfood Powdered Blend‡ (Apple‡, Kale‡, Broccoli‡, Spinach‡, Carrot‡, Parsley‡, Beet‡, Green Cabbage‡, Raspberry‡, Blueberry‡, Strawberry‡, Tomato‡, Aronia Berry‡, Chlorella‡, Maca‡, Moringa‡, Reishi Mushroom‡, Cordyceps Mushroom‡, Lion's Mane Mushroom‡, Turmeric‡, Ginger‡), Carrot and Blackcurrant and Red Bell Pepper Juice for Color.</p><p>‡Organic</p><p><strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, shellfish-free, and sesame-free.</p>"
       }
@@ -201,6 +166,7 @@
     "info_supplement_facts": {
       "type": "info_item",
       "settings": {
+        "icon": "shopify://shop_images/old-icon-microscope.png",
         "title": "Supplement Facts",
         "body": "",
         "image": "shopify://shop_images/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg"
@@ -209,6 +175,7 @@
     "info_subscription": {
       "type": "info_item",
       "settings": {
+        "icon": "shopify://shop_images/Rivo-Icon-Checkmark.svg",
         "title": "Subscription Details",
         "body": "<p>You'll receive a stylish refillable bottle on your first order, then receive our eco-friendly refill pouches every 30 days on a physician-recommended schedule.</p><p>Plus, you'll receive these benefits:</p><ul><li>Savings every single month.</li><li>Free shipping on your first order.</li><li>Easy management - skip or pause whenever you need.</li><li>VIP access to sales, gifts, early access & more.</li><li>Cancel anytime.</li></ul>"
       }
@@ -318,9 +285,6 @@
     "quantity_2",
     "quantity_3",
     "quantity_4",
-    "upsell_brain",
-    "upsell_magnesium",
-    "upsell_probiotic",
     "stamp_guarantee",
     "stamp_families",
     "stamp_checkout",
@@ -341,5 +305,5 @@
     "carousel_10",
     "carousel_11"
   ],
-  "_note": "subtitle/description/flavor_text/qty_note/ages_note are intentionally empty: they resolve from product metafields (custom.*), seeded by tools/seed_metafields.py. Fill a setting only to override the product for one specific LP variant."
+  "_note": "Free-gift bar, cross-sell upsells and the flash-sale strip are switched off in this build. On the original they are app-driven; shipping them as partial behaviour was worse than not shipping them. The section still renders all three when the settings are filled, so bringing them back is a content change, not a code change."
 }

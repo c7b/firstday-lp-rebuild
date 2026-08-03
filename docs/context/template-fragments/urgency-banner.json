@@ -3,11 +3,12 @@
   "settings": {
     "cta_label": "Claim Yours Now!",
     "cta_link": "#standalone-product-section",
-    "color_scheme": "scheme-1",
-    "padding_top": 12,
-    "padding_bottom": 12,
+    "padding_top": 44,
+    "padding_bottom": 20,
     "anchor_id": "",
-    "text": "<p>🚨 Due to the high demand, <strong>July</strong> has a very high risk of selling out!</p>"
+    "text": "<p><strong>🚨 Due to the high demand, August has a very high risk of selling out!</strong></p>",
+    "video_url": "https://cdn.shopify.com/videos/c/vp/2e7dd77535bb4f0d8a3ff1e42b3dcbe6/2e7dd77535bb4f0d8a3ff1e42b3dcbe6.HD-720p-4.5Mbps-90596307.mp4",
+    "poster_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/preview_images/2e7dd77535bb4f0d8a3ff1e42b3dcbe6.thumbnail.0000000000.jpg?v=1785730422"
   },
   "blocks": {},
   "block_order": []
