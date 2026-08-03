@@ -154,6 +154,7 @@ def main():
         "vendors": vendors,
         "products": prods,
         "ads": ads.get("destinations", []),
+        "ad_queries": ads.get("queries", []),
         "sitemap": intel.get("sitemap", {}),
         "collections": intel.get("collections", {}).get("items", []),
         "generated": intel.get("generated", ""),
