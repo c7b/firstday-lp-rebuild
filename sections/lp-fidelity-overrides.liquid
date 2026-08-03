@@ -1,0 +1,32 @@
+{% comment %}
+  Loads the post-debrief fidelity corrections.
+
+  Every lp-* stylesheet is shared by all three funnels, so editing one to close a visual gap
+  would also edit the page the panel reviewed. That page is the "before" and must stay byte
+  identical. So the corrections live in one stylesheet that only this section loads, and this
+  section only appears in the v2 template. Two consequences worth the arrangement:
+
+  - The delivered page is provably untouched — nothing it loads changed.
+  - Every fidelity fix is in a single file, so the diff IS the audit trail.
+
+  It renders nothing. Placed last in the template so its stylesheet wins ties on equal
+  specificity through document order rather than through !important.
+{% endcomment %}
+
+{{ 'lp-fidelity.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+  "name": "LP fidelity overrides",
+  "class": "lp-fidelity-overrides",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Loads lp-fidelity.css, the post-debrief pixel-parity corrections. Renders nothing. Present only on the v2 template so the reviewed page keeps loading exactly what it loaded on the day."
+    }
+  ],
+  "enabled_on": {
+    "templates": ["page"]
+  }
+}
+{% endschema %}

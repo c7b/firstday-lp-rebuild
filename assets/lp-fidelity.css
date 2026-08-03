@@ -8,3 +8,6 @@
  * Each block cites the measured original value it is matching. Nothing here is a judgement
  * call about what looks better; it is the number the reference actually computes to.
  */
+
+/* The override section still emits a section wrapper; keep it from occupying any space. */
+.lp-fidelity-overrides { display: none; }
