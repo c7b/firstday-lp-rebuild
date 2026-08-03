@@ -11,13 +11,9 @@
       <div class="lp-comparison-table__subheading rte">{{ section.settings.subheading }}</div>
     </div>
 
-    {% if section.settings.image_mobile != blank or section.settings.image_mobile_url != blank %}
+    {% if section.settings.image_mobile != blank %}
       <div class="lp-comparison-table__mobile-image" aria-hidden="true">
-        {% if section.settings.image_mobile != blank %}
-          {{ section.settings.image_mobile | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300, 450, 600', sizes: '100vw', alt: '' }}
-        {% else %}
-          <img src="{{ section.settings.image_mobile_url | escape }}" alt="" loading="lazy">
-        {% endif %}
+        {{ section.settings.image_mobile | image_url: width: 600 | image_tag: loading: 'lazy', widths: '300, 450, 600', sizes: '100vw', alt: section.settings.image_mobile.alt }}
       </div>
     {% endif %}
 
@@ -31,9 +27,7 @@
             <th class="lp-comparison-table__brand-header" scope="col">
               <span class="lp-comparison-table__brand-title">
                 {% if section.settings.brand_logo != blank %}
-                  {{ section.settings.brand_logo | image_url: width: 100 | image_tag: loading: 'lazy', widths: '50, 75, 100', sizes: '50px', alt: 'Logo', class: 'lp-comparison-table__brand-logo' }}
-                {% elsif section.settings.brand_logo_url != blank %}
-                  <img class="lp-comparison-table__brand-logo" src="{{ section.settings.brand_logo_url | escape }}" alt="Logo" loading="lazy">
+                  {{ section.settings.brand_logo | image_url: width: 100 | image_tag: loading: 'lazy', widths: '50, 75, 100', sizes: '50px', alt: section.settings.brand_logo.alt, class: 'lp-comparison-table__brand-logo' }}
                 {% endif %}
                 <span>{{ section.settings.brand_label | escape }}</span>
               </span>
@@ -63,13 +57,9 @@
       </table>
     </div>
 
-    {% if section.settings.image_desktop != blank or section.settings.image_desktop_url != blank %}
+    {% if section.settings.image_desktop != blank %}
       <div class="lp-comparison-table__desktop-image" aria-hidden="true">
-        {% if section.settings.image_desktop != blank %}
-          {{ section.settings.image_desktop | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '352, 832, 1200', sizes: '(min-width: 990px) 30vw, 0px', alt: '' }}
-        {% else %}
-          <img src="{{ section.settings.image_desktop_url | escape }}" alt="" loading="lazy">
-        {% endif %}
+        {{ section.settings.image_desktop | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '352, 832, 1200', sizes: '(min-width: 990px) 30vw, 0px', alt: section.settings.image_desktop.alt }}
       </div>
     {% endif %}
   </div>
@@ -106,12 +96,6 @@
     },
     {
       "type": "text",
-      "id": "brand_logo_url",
-      "label": "Brand logo URL",
-      "default": "//firstday.com/cdn/shop/files/round_logo.png?v=1720622822&width=100"
-    },
-    {
-      "type": "text",
       "id": "competitor_label",
       "label": "Competitor label",
       "default": "Other Multis"
@@ -122,21 +106,9 @@
       "label": "Desktop decorative image"
     },
     {
-      "type": "text",
-      "id": "image_desktop_url",
-      "label": "Desktop decorative image URL",
-      "default": "//firstday.com/cdn/shop/files/desk_720.png?v=1763396549&width=1200"
-    },
-    {
       "type": "image_picker",
       "id": "image_mobile",
       "label": "Mobile decorative image"
-    },
-    {
-      "type": "text",
-      "id": "image_mobile_url",
-      "label": "Mobile decorative image URL",
-      "default": "//firstday.com/cdn/shop/files/mob-left_360.png?v=1763396560&width=300"
     },
     {
       "type": "color_scheme",
@@ -167,7 +139,8 @@
     {
       "type": "text",
       "id": "anchor_id",
-      "label": "Anchor ID"
+      "label": "Anchor ID",
+      "info": "Lets other sections link here, e.g. a CTA pointing at #standalone-product-section. Leave empty unless something links to this section."
     }
   ],
   "blocks": [

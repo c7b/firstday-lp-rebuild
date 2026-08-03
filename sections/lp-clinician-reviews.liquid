@@ -39,10 +39,8 @@
                       sizes: '64px',
                       class: 'lp-clinician-reviews__avatar',
                       loading: 'lazy',
-                      alt: block.settings.name
+                      alt: block.settings.avatar.alt
                   }}
-                {% elsif block.settings.avatar_url != blank %}
-                  <img class="lp-clinician-reviews__avatar" src="{{ block.settings.avatar_url | escape }}" alt="{{ block.settings.name | escape }}" width="64" height="64" loading="lazy">
                 {% else %}
                   <span class="lp-clinician-reviews__avatar lp-clinician-reviews__avatar--placeholder" aria-hidden="true">MD</span>
                 {% endif %}
@@ -210,7 +208,8 @@
     {
       "type": "text",
       "id": "anchor_id",
-      "label": "Anchor ID"
+      "label": "Anchor ID",
+      "info": "Lets other sections link here, e.g. a CTA pointing at #standalone-product-section. Leave empty unless something links to this section."
     }
   ],
   "blocks": [
@@ -223,11 +222,6 @@
           "type": "image_picker",
           "id": "avatar",
           "label": "Clinician photo"
-        },
-        {
-          "type": "text",
-          "id": "avatar_url",
-          "label": "Clinician photo URL"
         },
         {
           "type": "text",

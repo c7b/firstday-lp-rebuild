@@ -8,10 +8,15 @@
   id="{{ section.settings.anchor_id | default: section.id }}"
   class="lp-clinicians-band"
 >
-  <p class="lp-clinicians-band__title">{{ section.settings.title | escape }}</p>
+  <p class="lp-clinicians-band__title">
+    {% render 'lp-laurel', side: 'left' %}
+    {% render 'lp-laurel', side: 'caduceus' %}
+    <span>{{ section.settings.title | escape }}</span>
+    {% render 'lp-laurel', side: 'right' %}
+  </p>
   <p class="lp-clinicians-band__text">
     <strong>{{ section.settings.text_bold | escape }}</strong>{{ section.settings.text | escape }}
-    <span class="lp-clinicians-band__more">{{ section.settings.more_label | escape }}</span>
+    <a class="lp-clinicians-band__more" href="{{ section.settings.more_link | default: '#clinician-reviews' }}">{{ section.settings.more_label | escape }}</a>
   </p>
 </section>
 
@@ -69,6 +74,13 @@
     },
     {
       "type": "text",
+      "id": "more_link",
+      "label": "Learn more link",
+      "info": "The original opens the review app's modal; here it anchors to the clinician evaluations on this page",
+      "default": "#clinician-reviews"
+    },
+    {
+      "type": "text",
       "id": "more_label",
       "label": "More label (stub)",
       "default": "Learn more"
@@ -76,7 +88,8 @@
     {
       "type": "text",
       "id": "anchor_id",
-      "label": "Anchor ID"
+      "label": "Anchor ID",
+      "info": "Lets other sections link here, e.g. a CTA pointing at #standalone-product-section. Leave empty unless something links to this section."
     }
   ],
   "presets": [

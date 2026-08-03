@@ -26,9 +26,7 @@
             {%- when 'doctor_card' -%}
               <div class="lp-trust-wall__person">
                 {%- if block.settings.photo != blank -%}
-                  {{ block.settings.photo | image_url: width: 320 | image_tag: class: 'lp-trust-wall__avatar', widths: '80, 160, 240, 320', sizes: '80px', loading: 'lazy', alt: block.settings.name }}
-                {%- elsif block.settings.photo_url != blank -%}
-                  <img class="lp-trust-wall__avatar" src="{{ block.settings.photo_url }}" alt="{{ block.settings.name | escape }}" loading="lazy">
+                  {{ block.settings.photo | image_url: width: 320 | image_tag: class: 'lp-trust-wall__avatar', widths: '80, 160, 240, 320', sizes: '80px', loading: 'lazy', alt: block.settings.photo.alt }}
                 {%- endif -%}
                 <div class="lp-trust-wall__person-copy">
                   {%- if block.settings.quote != blank -%}<div class="lp-trust-wall__quote rte">{{ block.settings.quote }}</div>{%- endif -%}
@@ -40,7 +38,7 @@
             {%- when 'media_card' -%}
               <div class="lp-trust-wall__media">
                 {%- liquid
-                  assign media_poster = block.settings.image_url
+                  assign media_poster = blank
                   if block.settings.image != blank
                     assign media_poster = block.settings.image | image_url: width: 1120
                   endif
@@ -65,18 +63,14 @@
                     <svg class="lp-trust-wall__pause-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5h3v14H8zM13 5h3v14h-3z" fill="currentColor"/></svg>
                   </button>
                 {%- elsif block.settings.image != blank -%}
-                  {{ block.settings.image | image_url: width: 1120 | image_tag: class: 'lp-trust-wall__media-image', widths: '352, 560, 750, 1120', sizes: '(min-width: 750px) 33vw, 100vw', loading: 'lazy', alt: block.settings.alt }}
-                {%- elsif block.settings.image_url != blank -%}
-                  <img class="lp-trust-wall__media-image" src="{{ block.settings.image_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy">
+                  {{ block.settings.image | image_url: width: 1120 | image_tag: class: 'lp-trust-wall__media-image', widths: '352, 560, 750, 1120', sizes: '(min-width: 750px) 33vw, 100vw', loading: 'lazy', alt: block.settings.image.alt }}
                 {%- endif -%}
               </div>
 
             {%- when 'customer_card' -%}
               <div class="lp-trust-wall__person">
                 {%- if block.settings.avatar != blank -%}
-                  {{ block.settings.avatar | image_url: width: 320 | image_tag: class: 'lp-trust-wall__avatar', widths: '80, 160, 240, 320', sizes: '80px', loading: 'lazy', alt: block.settings.name }}
-                {%- elsif block.settings.avatar_url != blank -%}
-                  <img class="lp-trust-wall__avatar" src="{{ block.settings.avatar_url }}" alt="{{ block.settings.name | escape }}" loading="lazy">
+                  {{ block.settings.avatar | image_url: width: 320 | image_tag: class: 'lp-trust-wall__avatar', widths: '80, 160, 240, 320', sizes: '80px', loading: 'lazy', alt: block.settings.avatar.alt }}
                 {%- endif -%}
                 <div class="lp-trust-wall__person-copy">
                   {%- if block.settings.quote != blank -%}<div class="lp-trust-wall__quote rte">{{ block.settings.quote }}</div>{%- endif -%}
@@ -90,9 +84,7 @@
               <div class="lp-trust-wall__press-footer">
                 {%- if block.settings.label != blank -%}<p class="lp-trust-wall__press-label">{{ block.settings.label }}</p>{%- endif -%}
                 {%- if block.settings.logo != blank -%}
-                  {{ block.settings.logo | image_url: width: 240 | image_tag: class: 'lp-trust-wall__logo', widths: '120, 240', sizes: '120px', loading: 'lazy', alt: '' }}
-                {%- elsif block.settings.logo_url != blank -%}
-                  <img class="lp-trust-wall__logo" src="{{ block.settings.logo_url }}" alt="" loading="lazy">
+                  {{ block.settings.logo | image_url: width: 240 | image_tag: class: 'lp-trust-wall__logo', widths: '120, 240', sizes: '120px', loading: 'lazy', alt: block.settings.logo.alt }}
                 {%- endif -%}
               </div>
 
@@ -137,7 +129,8 @@
     {
       "type": "text",
       "id": "anchor_id",
-      "label": "Anchor ID"
+      "label": "Anchor ID",
+      "info": "Lets other sections link here, e.g. a CTA pointing at #standalone-product-section. Leave empty unless something links to this section."
     },
     {
       "type": "range",
@@ -171,12 +164,6 @@
           "label": "Photo"
         },
         {
-          "type": "text",
-          "id": "photo_url",
-          "label": "Photo URL",
-          "default": "//firstday.com/cdn/shop/files/der-lei-chen-medical-board.jpg?v=1775176611&width=160"
-        },
-        {
           "type": "richtext",
           "id": "quote",
           "label": "Quote"
@@ -201,12 +188,6 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
-        },
-        {
-          "type": "text",
-          "id": "image_url",
-          "label": "Image URL",
-          "default": "//firstday.com/cdn/shop/files/blue-bubble-social-grid.jpg?v=1781563733&width=560"
         },
         {
           "type": "text",
@@ -240,12 +221,6 @@
           "type": "image_picker",
           "id": "avatar",
           "label": "Avatar"
-        },
-        {
-          "type": "text",
-          "id": "avatar_url",
-          "label": "Avatar URL",
-          "default": "//firstday.com/cdn/shop/files/ugc-4.png?v=1691706683&width=160"
         },
         {
           "type": "richtext",
@@ -282,12 +257,6 @@
           "type": "image_picker",
           "id": "logo",
           "label": "Logo"
-        },
-        {
-          "type": "text",
-          "id": "logo_url",
-          "label": "Logo URL",
-          "default": "//firstday.com/cdn/shop/files/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png?v=1771298020&width=240"
         }
       ]
     },

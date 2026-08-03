@@ -77,12 +77,12 @@
           {% if section.settings.stat_badge_text != blank %}
             <div class="lp-hero__stat-badge">
               {% if section.settings.stat_gif != blank %}
-                {{ section.settings.stat_gif | image_url: width: 48 | image_tag: class: 'lp-hero__stat-gif', widths: '24, 48', sizes: '24px', loading: 'lazy', alt: '' }}
+                {{ section.settings.stat_gif | image_url: width: 48 | image_tag: class: 'lp-hero__stat-gif', widths: '24, 48', sizes: '24px', loading: 'lazy', alt: section.settings.stat_gif.alt }}
               {% endif %}
               <span>{{ section.settings.stat_badge_text | escape }}</span>
               <span class="lp-hero__stat-icons" aria-hidden="true">
-                {% if section.settings.stat_icon_1 != blank %}{{ section.settings.stat_icon_1 | image_url: width: 52 | image_tag: widths: '26, 52', sizes: '26px', loading: 'lazy', alt: '' }}{% endif %}
-                {% if section.settings.stat_icon_2 != blank %}{{ section.settings.stat_icon_2 | image_url: width: 52 | image_tag: widths: '26, 52', sizes: '26px', loading: 'lazy', alt: '' }}{% endif %}
+                {% if section.settings.stat_icon_1 != blank %}{{ section.settings.stat_icon_1 | image_url: width: 52 | image_tag: widths: '26, 52', sizes: '26px', loading: 'lazy', alt: section.settings.stat_icon_1.alt }}{% endif %}
+                {% if section.settings.stat_icon_2 != blank %}{{ section.settings.stat_icon_2 | image_url: width: 52 | image_tag: widths: '26, 52', sizes: '26px', loading: 'lazy', alt: section.settings.stat_icon_2.alt }}{% endif %}
               </span>
             </div>
           {% endif %}
@@ -91,7 +91,7 @@
             {% if block.type == 'testimonial' %}
               <figure class="lp-hero__testimonial" {{ block.shopify_attributes }}>
                 {% if block.settings.avatar != blank %}
-                  {{ block.settings.avatar | image_url: width: 192 | image_tag: class: 'lp-hero__avatar', widths: '96, 192', sizes: '48px', loading: 'lazy', alt: block.settings.author }}
+                  {{ block.settings.avatar | image_url: width: 192 | image_tag: class: 'lp-hero__avatar', widths: '96, 192', sizes: '48px', loading: 'lazy', alt: block.settings.avatar.alt }}
                 {% endif %}
                 <blockquote class="rte">{{ block.settings.quote }}</blockquote>
                 {% if block.settings.author != blank %}<figcaption>{{ block.settings.author | escape }}</figcaption>{% endif %}
@@ -108,7 +108,7 @@
           <source media="(max-width: 749px)" srcset="{{ section.settings.image_mobile | image_url: width: 1000 }}">
         {% endif %}
         {% if section.settings.image != blank %}
-          {{ section.settings.image | image_url: width: 1600 | image_tag: class: 'lp-hero__image', widths: '375, 550, 750, 1000, 1600', sizes: '(min-width: 750px) 50vw, 100vw', loading: media_loading, alt: section.settings.image_alt }}
+          {{ section.settings.image | image_url: width: 1600 | image_tag: class: 'lp-hero__image', widths: '375, 550, 750, 1000, 1600', sizes: '(min-width: 750px) 50vw, 100vw', loading: media_loading, alt: section.settings.image.alt }}
         {% endif %}
       </picture>
 
@@ -194,21 +194,9 @@
       "label": "Desktop image"
     },
     {
-      "type": "text",
-      "id": "image_alt",
-      "label": "Desktop image alt text",
-      "default": "Hero image"
-    },
-    {
       "type": "image_picker",
       "id": "image_mobile",
       "label": "Mobile image"
-    },
-    {
-      "type": "text",
-      "id": "image_mobile_alt",
-      "label": "Mobile image alt text",
-      "default": "Hero image"
     },
     {
       "type": "select",
@@ -287,7 +275,8 @@
     {
       "type": "text",
       "id": "anchor_id",
-      "label": "Anchor ID"
+      "label": "Anchor ID",
+      "info": "Lets other sections link here, e.g. a CTA pointing at #standalone-product-section. Leave empty unless something links to this section."
     }
   ],
   "blocks": [

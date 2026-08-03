@@ -21,20 +21,9 @@
           >
             <summary class="lp-media-accordion__summary">
               <span class="lp-media-accordion__item-header">
-                {% if block.settings.icon != blank or block.settings.icon_url != blank %}
+                {% if block.settings.icon != blank %}
                   <span class="lp-media-accordion__icon-chip">
-                    {% if block.settings.icon != blank %}
-                      {{ block.settings.icon | image_url: width: 144 | image_tag: class: 'lp-media-accordion__icon', widths: '40, 56, 72, 144', sizes: '40px', loading: 'lazy', alt: block.settings.icon_alt }}
-                    {% elsif block.settings.icon_url != blank %}
-                      <img
-                        class="lp-media-accordion__icon"
-                        src="{{ block.settings.icon_url }}"
-                        alt="{{ block.settings.icon_alt | escape }}"
-                        width="72"
-                        height="72"
-                        loading="lazy"
-                      >
-                    {% endif %}
+                    {{ block.settings.icon | image_url: width: 144 | image_tag: class: 'lp-media-accordion__icon', widths: '40, 56, 72, 144', sizes: '40px', loading: 'lazy', alt: block.settings.icon.alt }}
                   </span>
                 {% endif %}
                 <span class="lp-media-accordion__title">{{ block.settings.title | escape }}</span>
@@ -61,17 +50,7 @@
     {% if section.settings.show_media %}
       <div class="lp-media-accordion__media">
         {% if section.settings.image != blank %}
-          {{ section.settings.image | image_url: width: 1500 | image_tag: class: 'lp-media-accordion__image', widths: '360, 535, 750, 1100, 1500', sizes: '(min-width: 990px) 50vw, 100vw', loading: 'lazy', alt: '' }}
-        {% elsif section.settings.image_url != blank %}
-          <img
-            class="lp-media-accordion__image"
-            src="{{ section.settings.image_url }}"
-            alt=""
-            width="1500"
-            height="1500"
-            loading="lazy"
-            aria-hidden="true"
-          >
+          {{ section.settings.image | image_url: width: 1500 | image_tag: class: 'lp-media-accordion__image', widths: '360, 535, 750, 1100, 1500', sizes: '(min-width: 990px) 50vw, 100vw', loading: 'lazy', alt: section.settings.image.alt }}
         {% endif %}
       </div>
     {% endif %}
@@ -100,13 +79,6 @@
       "type": "image_picker",
       "id": "image",
       "label": "Image",
-      "visible_if": "{{ section.settings.show_media }}"
-    },
-    {
-      "type": "text",
-      "id": "image_url",
-      "label": "Image URL",
-      "default": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1500",
       "visible_if": "{{ section.settings.show_media }}"
     },
     {
@@ -185,7 +157,8 @@
     {
       "type": "text",
       "id": "anchor_id",
-      "label": "Anchor ID"
+      "label": "Anchor ID",
+      "info": "Lets other sections link here, e.g. a CTA pointing at #standalone-product-section. Leave empty unless something links to this section."
     }
   ],
   "blocks": [
@@ -198,16 +171,6 @@
           "type": "image_picker",
           "id": "icon",
           "label": "Icon"
-        },
-        {
-          "type": "text",
-          "id": "icon_url",
-          "label": "Icon URL"
-        },
-        {
-          "type": "text",
-          "id": "icon_alt",
-          "label": "Icon alt text"
         },
         {
           "type": "text",
