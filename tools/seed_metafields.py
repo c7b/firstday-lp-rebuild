@@ -25,7 +25,7 @@ DEFS = [
     ("servings_per_bottle", "Servings per bottle", "single_line_text_field", "30 Servings Per Bottle"),
     ("age_range", "Age range note", "single_line_text_field", "This Product is For Teens Ages 13 - 17"),
     ("flavor", "Flavor", "single_line_text_field", "Flavor: 🍊 Orange"),
-    ("subtitle", "Funnel subtitle", "single_line_text_field", "Daily Gummies For Improved Motivation & Mood"),
+    ("subtitle", "Funnel subtitle", "single_line_text_field", "Daily Gummies For <em>Improved Motivation & Mood</em>"),
     ("short_description", "Short description", "multi_line_text_field",
      "A unique organic fruit and veggie blend, plus 12 key nutrients."),
 ]

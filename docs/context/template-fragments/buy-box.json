@@ -47,7 +47,6 @@
       "settings": {
         "label": "Toddlers'",
         "url": "/pages/toddlers-behind-the-science-lp",
-        "active": false,
         "product": "toddlers-multivitamin"
       }
     },
@@ -56,7 +55,6 @@
       "settings": {
         "label": "Kids'",
         "url": "/pages/kde-behind-the-science-lp",
-        "active": false,
         "product": "kids-multivitamin"
       }
     },
@@ -65,7 +63,6 @@
       "settings": {
         "label": "Teens'",
         "url": "",
-        "active": true,
         "product": "teens-multivitamin"
       }
     },
