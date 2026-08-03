@@ -58,9 +58,15 @@
 }
 
 /* The gap under the pull quote has to beat the gap between paragraphs, or the quote reads as
-   the first line of the story instead of as the thing the story hangs off. */
+   the first line of the story instead of as the thing the story hangs off. It goes on the
+   wrapper, not the <p>: richtext output carries Dawn's .rte, whose `> p:last-child` zeroes
+   bottom margins and outranks a class-plus-element selector. */
+.lp-founder-story__lede {
+  margin-bottom: 4rem;
+}
+
 .lp-founder-story__lede p {
-  margin: 0 0 4rem;
+  margin: 0;
   font-size: 2.2rem;
   line-height: 1.3;
   font-weight: 700;
@@ -113,8 +119,11 @@
     max-width: 24rem;
   }
 
+  .lp-founder-story__lede {
+    margin-bottom: 3.2rem;
+  }
+
   .lp-founder-story__lede p {
-    margin-bottom: 3rem;
     font-size: 1.9rem;
   }
 
