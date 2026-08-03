@@ -10,14 +10,13 @@
     "color_scheme": "scheme-1",
     "padding_top": 48,
     "padding_bottom": 48,
-    "anchor_id": "",
+    "anchor_id": "clinician-reviews",
     "footer_brand": "frontrowMD"
   },
   "blocks": {
     "clinician_enza_caputo": {
       "type": "clinician_card",
       "settings": {
-        "avatar_url": "https://assets.app.thefrontrowhealth.com/qp5jngl05tsjlwbi65fhg1swj8os",
         "name": "Dr. Enza Caputo, MD",
         "verified_label": "Verified clinician",
         "specialty": "Pediatrics",
@@ -25,13 +24,13 @@
         "title": "Kids daily multivitamin made with easily absorbable nutrients",
         "body": "<p>What stands out to me about First Day's Kids' Multivitamin gummies is the attention to ingredient form. For example, B12 is included as methylcobalamin, the naturally occurring form of this vitamin found in food. Then folate is provided as methylfolate, the active form that can be used without conversion, which may be particularly relevant for children with common variants of the MTHFR gene that can affect how standard folic acid is processed. Lastly, Vitamin D3 is sourced from lichen, making it a fully plant-based form of cholecalciferol, the same form the body produces from sunlight. Research consistently indicates that D3 may be better than D2 for maintaining healthy vitamin D levels in children. For parents seeking a daily children's multivitamin, these ingredient choices are why I recommend this particular formula.</p>",
         "sources_note": "<p>2 Sources</p><p>Folic acid and L-5-methyltetrahydrofolate: comparison of clinical pharmacokinetics and pharmacodynamics<br>Clinical Pharmacokinetics, 2010</p><p>Association between variants of MTHFR genes and psychiatric disorders: A meta-analysis<br>Frontiers in Psychiatry, 2022</p>",
-        "highlights": "<p>Highlights:</p><ul><li>Bioavailable forms</li><li>Developmental support</li><li>Child friendly</li></ul>"
+        "highlights": "<p>Highlights:</p><ul><li>Bioavailable forms</li><li>Developmental support</li><li>Child friendly</li></ul>",
+        "avatar": "shopify://shop_images/qp5jngl05tsjlwbi65fhg1swj8os.png"
       }
     },
     "clinician_andreas_nikolaidis": {
       "type": "clinician_card",
       "settings": {
-        "avatar_url": "https://assets.app.thefrontrowhealth.com/5xb6ex7x00p07wwhzprtmp018055",
         "name": "Dr. Andreas Nikolaidis, MD",
         "verified_label": "Verified clinician",
         "specialty": "Pediatrics",
@@ -39,7 +38,8 @@
         "title": "Superfood blend supports nutrient intake for healthy growth and development",
         "body": "<p>This First Day multivitamin is one I’d recommend for parents who want extra peace of mind around daily nutrition. Recent CDC data show that nearly half of young children in the U.S. fall short on daily vegetables, which are key to healthy growth and development. What sets this product apart is the organic superfood blend included in each gummy. This blend brings together ingredients like kale, broccoli, spinach, and berries alongside the core vitamins. I'm also glad to see methylfolate on the label, since folate is a nutrient that can support healthy growth, brain development, and the body's ability to make new cells during these early years. As far as kids' multivitamins go, I think this is a solid option.</p>",
         "sources_note": "<p>2 Sources</p><p>Fruit, Vegetable, and Sugar-Sweetened Beverage Intake Among Young Children, by State — United States, 2021<br>MMWR Morbidity and Mortality Weekly Report, 2023</p><p>The Critical Role of Folate in Prenatal Health and a Proposed Shift from Folic Acid to 5-Methyltetrahydrofolate Supplementation<br>Georgetown Medical Review, 2024</p>",
-        "highlights": "<p>Highlights:</p><ul><li>Provides superfoods</li><li>Active folate</li><li>Nutritional blend</li></ul>"
+        "highlights": "<p>Highlights:</p><ul><li>Provides superfoods</li><li>Active folate</li><li>Nutritional blend</li></ul>",
+        "avatar": "shopify://shop_images/5xb6ex7x00p07wwhzprtmp018055.png"
       }
     }
   },

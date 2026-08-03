@@ -11,7 +11,6 @@
     "media_blue_bubble": {
       "type": "media_card",
       "settings": {
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/blue-bubble-social-grid.jpg?v=1785622065",
         "alt": "",
         "is_video": false,
         "image": "shopify://shop_images/blue-bubble-social-grid.jpg"
@@ -20,7 +19,6 @@
     "doctor_lei_chen": {
       "type": "doctor_card",
       "settings": {
-        "photo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/der-lei-chen-medical-board.jpg?v=1785622066",
         "quote": "<p>\"These vitamins are exactly what I recommend to parents looking for quality nutrition.\"</p>",
         "name": "Dr. Lei Chen",
         "credentials": "MD, MHS at Yale University",
@@ -30,7 +28,6 @@
     "media_phils_my_pharmacist": {
       "type": "media_card",
       "settings": {
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/phils-my-pharmacist.png?v=1785622067",
         "alt": "Video thumbnail",
         "is_video": true,
         "video_url": "https://cdn.shopify.com/videos/c/o/v/aecd515a10d444158c4daf44fa5763f6.mov",
@@ -41,7 +38,6 @@
     "media_womens_reviews": {
       "type": "media_card",
       "settings": {
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Womens_daily_supercharge_ugc.png?v=1785622067",
         "alt": "Collage of Women Reviews",
         "is_video": false,
         "image": "shopify://shop_images/Womens_daily_supercharge_ugc.png"
@@ -50,7 +46,6 @@
     "customer_diana": {
       "type": "customer_card",
       "settings": {
-        "avatar_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/ugc-4.png?v=1785622068",
         "quote": "<p>\"These are the best tasting vitamins I ever purchased. It feels like I am having a treat. These are the only ones so far that my kids like too.\"</p>",
         "name": "Diana V.",
         "caption": "Verified Purchaser",
@@ -60,7 +55,6 @@
     "media_review_woman": {
       "type": "media_card",
       "settings": {
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/review-woman.png?v=1785622068",
         "alt": "Video thumbnail",
         "is_video": true,
         "video_url": "https://cdn.shopify.com/videos/c/o/v/37827354069a403e9ad7a5b203afe326.mp4",
@@ -73,14 +67,12 @@
       "settings": {
         "quote": "\"A revolutionary approach to children's health.\"",
         "label": "As seen on",
-        "logo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png?v=1785622068",
         "logo": "shopify://shop_images/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png"
       }
     },
     "doctor_ed_giovannucci": {
       "type": "doctor_card",
       "settings": {
-        "photo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/dr-harvard-ed-medical-board.jpg?v=1785622069",
         "quote": "<p>\"We choose partners carefully, and First Day’s dedication to research, formulation integrity, and transparent quality practices makes them a brand we’re proud to align with.\"</p>",
         "name": "Dr. Ed Giovannucci",
         "credentials": "MD, MPH, ScD at Harvard University",
@@ -90,7 +82,6 @@
     "media_review_woman_2": {
       "type": "media_card",
       "settings": {
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/review-woman-2.png?v=1785622070",
         "alt": "Video thumbnail",
         "is_video": true,
         "video_url": "https://cdn.shopify.com/videos/c/o/v/254cebfaf76545bbaf344675fd8c13bc.mp4",

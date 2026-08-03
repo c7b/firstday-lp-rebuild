@@ -18,23 +18,20 @@ class LpBuyBox extends HTMLElement {
       if (this.nextButton) this.nextButton.hidden = true;
     }
 
-    if (this.prevButton) this.prevButton.addEventListener('click', () => this.step(-1));
-    if (this.nextButton) this.nextButton.addEventListener('click', () => this.step(1));
+    if (this.prevButton) this.prevButton.addEventListener('click', () => { this.hasInteracted = true; this.step(-1); });
+    if (this.nextButton) this.nextButton.addEventListener('click', () => { this.hasInteracted = true; this.step(1); });
 
     this.bindProductTabs();
 
     this.mediaThumbs.forEach((thumb) => {
       thumb.addEventListener('click', () => {
+        this.hasInteracted = true;
         const index = Number(thumb.dataset.mediaIndex);
         const slide = this.mediaSlides[index];
 
         if (!slide) return;
 
-        slide.scrollIntoView({
-          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-          block: 'nearest',
-          inline: 'start',
-        });
+        this.scrollTrackTo(this.mediaTrack, slide);
         this.setCurrentMedia(index);
       });
     });
@@ -146,6 +143,18 @@ class LpBuyBox extends HTMLElement {
     }
   }
 
+  /**
+   * scrollIntoView scrolls every scrollable ancestor, including the document — which on first
+   * paint yanked the whole page down to the buy box. These carousels must only ever move
+   * their own track, so the scrolling is done by hand on the container.
+   */
+  scrollTrackTo(container, child, smooth = true) {
+    if (!container || !child) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const left = child.offsetLeft - (container.clientWidth - child.clientWidth) / 2;
+    container.scrollTo({ left: Math.max(0, left), behavior: smooth && !reduce ? 'smooth' : 'auto' });
+  }
+
   step(delta) {
     const count = this.mediaSlides.length;
     if (!count) return;
@@ -154,11 +163,7 @@ class LpBuyBox extends HTMLElement {
     const slide = this.mediaSlides[next];
     if (!slide) return;
 
-    slide.scrollIntoView({
-      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-      block: 'nearest',
-      inline: 'start',
-    });
+    this.scrollTrackTo(this.mediaTrack, slide);
     this.setCurrentMedia(next);
   }
 
@@ -169,7 +174,8 @@ class LpBuyBox extends HTMLElement {
     });
 
     const currentThumb = this.mediaThumbs[index];
-    if (currentThumb) currentThumb.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    const strip = this.querySelector('[data-media-thumbnails]');
+    this.scrollTrackTo(strip, currentThumb, this.initialized === true && this.hasInteracted === true);
   }
 
   updateQuantitySavings() {

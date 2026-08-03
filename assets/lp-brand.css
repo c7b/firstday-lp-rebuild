@@ -69,3 +69,13 @@
   font-size: 1.9rem;
   line-height: 1.2;
 }
+
+/* laurel + caduceus marks, from the review widget's own SVG */
+.lp-laurel,
+.lp-caduceus {
+  display: inline-block;
+  vertical-align: -0.25em;
+  color: currentColor;
+}
+
+.lp-caduceus { margin: 0 .2rem; }

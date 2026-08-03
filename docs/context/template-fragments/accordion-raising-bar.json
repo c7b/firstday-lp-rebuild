@@ -3,7 +3,6 @@
   "settings": {
     "heading": "Raising the Bar on Your Child's Nutrition",
     "show_media": true,
-    "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/teens-multi-holding-tdk.jpg?v=1785622048",
     "media_position": "left",
     "first_open": true,
     "exclusive": true,
@@ -13,15 +12,13 @@
     "color_scheme": "scheme-1",
     "padding_top": 48,
     "padding_bottom": 48,
-    "anchor_id": "accordion_block_QpghhN",
+    "anchor_id": "",
     "image": "shopify://shop_images/teens-multi-holding-tdk.jpg"
   },
   "blocks": {
     "fights_hidden_hunger": {
       "type": "item",
       "settings": {
-        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-broccoli.png?v=1785622047",
-        "icon_alt": "",
         "title": "Fights Hidden Hunger",
         "body": "<p>80% of children don't eat enough fruits and veggies, contributing to a nutrient deficiency known as hidden hunger. Our gummies fight hidden hunger with essential nutrients critical to development.</p>",
         "icon": "shopify://shop_images/icon-broccoli.png"
@@ -30,8 +27,6 @@
     "harvard_yale_scientists": {
       "type": "item",
       "settings": {
-        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/old-icon-microscope.png?v=1785622049",
-        "icon_alt": "",
         "title": "Developed Alongside Harvard & Yale Scientists",
         "body": "<p>Our product was crafted with input from leading scientists at Harvard and Yale, combining the latest research with high-quality ingredients to deliver a multivitamin parents can trust.</p>",
         "icon": "shopify://shop_images/old-icon-microscope.png"
@@ -40,8 +35,6 @@
     "modern_science": {
       "type": "item",
       "settings": {
-        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/old-icon-atom-chemistry.png?v=1785622049",
-        "icon_alt": "",
         "title": "Backed by Modern Science",
         "body": "<p>Vitamin B6 supports natural energy regulation, promoting healthier sleep patterns and making it easier for kids to get restful sleep.*</p>",
         "icon": "shopify://shop_images/old-icon-atom-chemistry.png"
@@ -50,8 +43,6 @@
     "pediatrician_approved": {
       "type": "item",
       "settings": {
-        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/old-icon-stethoscope.png?v=1785622050",
-        "icon_alt": "",
         "title": "Pediatrician-Approved",
         "body": "<p>Recommended by pediatricians, our multivitamin is designed to meet the unique needs of your family ensuring they get the support they need from a trusted source.</p>",
         "icon": "shopify://shop_images/old-icon-stethoscope.png"
@@ -60,8 +51,6 @@
     "clean_label": {
       "type": "item",
       "settings": {
-        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Rivo-Icon-Checkmark.svg?v=1785622050",
-        "icon_alt": "A blue circle with a white check mark in the center, surrounded by a scalloped edge, resembling a verification badge.",
         "title": "Clean Label Project® Purity Award",
         "body": "<p>Our products were independently tested by Clean Label Project® for harmful chemicals like heavy metals, pesticides, and plasticizers, exceeding typical industry practices.</p>",
         "icon": "shopify://shop_images/Rivo-Icon-Checkmark.svg"
@@ -70,8 +59,6 @@
     "ingredients_sourcing": {
       "type": "item",
       "settings": {
-        "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-list-ingredients-sourcing.png?v=1785622051",
-        "icon_alt": "",
         "title": "Ingredients Sourcing and Dosage",
         "body": "<p>We source each ingredient with care, choosing only the highest quality vitamins and minerals. Our dosage is tailored for teens, providing safe and effective support without risking overuse or unwanted additives.</p>",
         "icon": "shopify://shop_images/icon-list-ingredients-sourcing.png"

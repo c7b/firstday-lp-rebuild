@@ -19,8 +19,6 @@
         "cta_label": "Unlock Better Nutrition 🍊💊",
         "cta_link": "#standalone-product-section",
         "guarantee_text": "Exclusive First Day 45 Day Money Back Guarantee**",
-        "image_alt": "Hero image",
-        "image_mobile_alt": "Hero image",
         "image_position": "right",
         "stat_badge_text": "6,646 Gummies Sold Every 24h",
         "stat_gif": "shopify://shop_images/ebce1fea9a768a63cc6c95d28e1efa8e9818e9db.gif",
@@ -63,7 +61,6 @@
       "settings": {
         "heading": "Most Kids Are <span>Missing Key Nutrients</span>. Get Help in Just 2 Gummies.",
         "show_media": true,
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/wheel-teens-multi-tdk.jpg?v=1785622045",
         "media_position": "left",
         "first_open": true,
         "exclusive": true,
@@ -73,15 +70,13 @@
         "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 48,
-        "anchor_id": "accordion_block_driBft",
+        "anchor_id": "",
         "image": "shopify://shop_images/wheel-teens-multi-tdk.jpg"
       },
       "blocks": {
         "stress_mood_swings": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-stress-moody.png?v=1785622045",
-            "icon_alt": "Stressed Face Icon",
             "title": "Stress & Mood Swings",
             "body": "<p>With Vitamin B6 for mood regulation and Vitamin B12 for energy balance, these gummies help support emotional stability.*</p>",
             "icon": "shopify://shop_images/icon-stress-moody.png"
@@ -90,8 +85,6 @@
         "lack_motivation": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-pencil.png?v=1785622046",
-            "icon_alt": "",
             "title": "Lack of Motivation",
             "body": "<p>Packed with Vitamin B1 for brain health and Vitamin B2 for cognitive support - to help your teen stay on track while they balance school, sports, and everything in between.*</p>",
             "icon": "shopify://shop_images/icon-pencil.png"
@@ -100,8 +93,6 @@
         "bad_skin": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-bad-skin.png?v=1785622046",
-            "icon_alt": "Skin with Pimple Icon.",
             "title": "Bad Skin",
             "body": "<p>Vitamin A and Vitamin E support skin health, helping teens maintain a clear and balanced complexion.</p>",
             "icon": "shopify://shop_images/icon-bad-skin.png"
@@ -110,8 +101,6 @@
         "weakened_immunity": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-immunity.png?v=1785622047",
-            "icon_alt": "",
             "title": "Weakened Immunity",
             "body": "<p>With immune-supporting Vitamin C and D3, plus key B vitamins that help keep their systems running smoothly. Our formula helps build a strong foundation to tackle whatever the day throws at them.</p>",
             "icon": "shopify://shop_images/icon-immunity.png"
@@ -120,8 +109,6 @@
         "trouble_sleeping": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-moon.png?v=1785622047",
-            "icon_alt": "",
             "title": "Trouble Sleeping",
             "body": "<p>Vitamin D3 helps regulate melatonin, the hormone that controls sleep cycles. Combined with B6, it supports calmer bedtimes and better rest for growing toddlers.*</p>",
             "icon": "shopify://shop_images/icon-moon.png"
@@ -130,8 +117,6 @@
         "poor_sleep_habits": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-moon.png?v=1785622047",
-            "icon_alt": "",
             "title": "Poor Sleep Habits",
             "body": "<p>Vitamin D3 and Magnesium work together to encourage restful sleep, so kids wake up refreshed and ready to conquer their goals.*</p>",
             "icon": "shopify://shop_images/icon-moon.png"
@@ -140,8 +125,6 @@
         "picky_eating": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-broccoli.png?v=1785622047",
-            "icon_alt": "",
             "title": "Picky Eating",
             "body": "<p>Vitamin A and Vitamin B9 support cell growth and development, helping to fill in nutritional gaps that teens may have when they only want junk food or continue to skip meals.*</p>",
             "icon": "shopify://shop_images/icon-broccoli.png"
@@ -197,8 +180,6 @@
         "gift_heading": "Unlock Your Free Gift",
         "gift_sub": "12 Servings of Electrolyte Drink Mix For The Whole Family.",
         "gift_image": "shopify://shop_images/hydration-12-pack.png",
-        "gift_image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/hydration-12-pack.png?v=1785622051",
-        "gift_image_alt": "Rapid Hydration Electrolyte Support - Gift",
         "gift_compare": "$25.00",
         "gift_price": "FREE",
         "gift_progress_text": "You are $75 away, keep going!",
@@ -245,7 +226,6 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png?v=1785622052",
             "title": "Improve Overall Health & Nutrition",
             "stat": "98%",
             "text": "of parents say First Day vitamins support their teen's overall health & nutrition.†"
@@ -255,7 +235,6 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/Vector_6.png",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Vector_6.png?v=1785622052",
             "title": "Boost Mood & Motivation",
             "stat": "83%",
             "text": "of customers say First Day vitamins support their teens' overall mood & behavior, and saw improved motivation for school.†"
@@ -265,7 +244,6 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png?v=1785622053",
             "title": "Promote Clear Skin",
             "stat": "75%",
             "text": "said they saw an improvement to skin health, including reduced acne.†"
@@ -307,7 +285,6 @@
           "type": "upsell",
           "settings": {
             "image": "shopify://shop_images/Product_Over_White.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Product_Over_White.jpg?v=1785622053",
             "alt": "The Teens' Daily Focus Brain Support dietary supplement features blue and teal packaging with 60 gummies per container and two yellow gummies in front, providing focus support designed specifically for teens.",
             "title": "Teens' Daily Focus Brain Support",
             "subtitle": "Support for focus, learning, and memory recall.",
@@ -319,7 +296,6 @@
           "type": "upsell",
           "settings": {
             "image": "shopify://shop_images/TeensMagnesiumPrimary.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/TeensMagnesiumPrimary.jpg?v=1785622054",
             "alt": "A container labeled Teens’ Nighttime Reset Magnesium sits upright, with two berry-shaped red gummies beside it. The label states No Junk and the calming supplement for teens includes 60 magnesium gummies.",
             "title": "Teens’ Nighttime Reset Magnesium",
             "subtitle": "Melatonin-free support for relaxation & sleep.",
@@ -331,7 +307,6 @@
           "type": "upsell",
           "settings": {
             "image": "shopify://shop_images/GUEST_9c904f2b-66b3-4c5c-8a4e-454f8e3bbd90.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/GUEST_9c904f2b-66b3-4c5c-8a4e-454f8e3bbd90.jpg?v=1785622054",
             "alt": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
             "title": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
             "subtitle": "To support immunity, digestion, and skin health.",
@@ -342,36 +317,35 @@
         "stamp_guarantee": {
           "type": "stamp",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/image_17.png?v=1785627107",
             "alt": "money back guarantee",
             "line_1": "MONEY BACK",
-            "line_2": "GUARANTEE"
+            "line_2": "GUARANTEE",
+            "image": "shopify://shop_images/image_17_fa167dc7-7f96-4204-aab6-b96d9c7e5980.png"
           }
         },
         "stamp_families": {
           "type": "stamp",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/image_18_23f2a83f-a228-4c73-be70-3ac38b5837dd.png?v=1785627108",
             "alt": "1 million customers",
             "line_1": "1 million",
-            "line_2": "customers"
+            "line_2": "customers",
+            "image": "shopify://shop_images/image_18_13255bc8-7904-4672-a617-679ae221abd4.png"
           }
         },
         "stamp_checkout": {
           "type": "stamp",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/image_23.png?v=1785627108",
             "alt": "secure checkout",
             "line_1": "SECURE",
-            "line_2": "CHECKOUT"
+            "line_2": "CHECKOUT",
+            "image": "shopify://shop_images/image_23_b0377e59-fa28-47bb-971b-edb438628906.png"
           }
         },
         "info_ingredients": {
           "type": "info_item",
           "settings": {
             "title": "Ingredients",
-            "body": "<p>We are thoughtful about the ingredients we select, use REAL organic fruits & vegetables, and keep out long lists of ingredients that can't even be pronounced.</p><p><strong>Organic Superfood Blend:</strong> Apple, Kale, Broccoli, Spinach, Carrot, Parsley, Beet, Green Cabbage, Raspberry, Blueberry, Strawberry, Tomato, Aronia Berry, Chlorella, Maca, Moringa, Reishi Mushroom, Cordyceps Mushroom, Lion's Mane Mushroom, Turmeric, Ginger</p><p><strong>Other Ingredients:</strong> Tapioca Syrup‡, Cane Sugar‡, Water, Pectin, Citric Acid, Natural Flavors, Superfood Powdered Blend‡ (Apple‡, Kale‡, Broccoli‡, Spinach‡, Carrot‡, Parsley‡, Beet‡, Green Cabbage‡, Raspberry‡, Blueberry‡, Strawberry‡, Tomato‡, Aronia Berry‡, Chlorella‡, Maca‡, Moringa‡, Reishi Mushroom‡, Cordyceps Mushroom‡, Lion's Mane Mushroom‡, Turmeric‡, Ginger‡), Carrot and Blackcurrant and Red Bell Pepper Juice for Color.</p><p>‡Organic</p><p><strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, shellfish-free, and sesame-free.</p>",
-            "image_url": ""
+            "body": "<p>We are thoughtful about the ingredients we select, use REAL organic fruits & vegetables, and keep out long lists of ingredients that can't even be pronounced.</p><p><strong>Organic Superfood Blend:</strong> Apple, Kale, Broccoli, Spinach, Carrot, Parsley, Beet, Green Cabbage, Raspberry, Blueberry, Strawberry, Tomato, Aronia Berry, Chlorella, Maca, Moringa, Reishi Mushroom, Cordyceps Mushroom, Lion's Mane Mushroom, Turmeric, Ginger</p><p><strong>Other Ingredients:</strong> Tapioca Syrup‡, Cane Sugar‡, Water, Pectin, Citric Acid, Natural Flavors, Superfood Powdered Blend‡ (Apple‡, Kale‡, Broccoli‡, Spinach‡, Carrot‡, Parsley‡, Beet‡, Green Cabbage‡, Raspberry‡, Blueberry‡, Strawberry‡, Tomato‡, Aronia Berry‡, Chlorella‡, Maca‡, Moringa‡, Reishi Mushroom‡, Cordyceps Mushroom‡, Lion's Mane Mushroom‡, Turmeric‡, Ginger‡), Carrot and Blackcurrant and Red Bell Pepper Juice for Color.</p><p>‡Organic</p><p><strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, shellfish-free, and sesame-free.</p>"
           }
         },
         "info_supplement_facts": {
@@ -379,15 +353,14 @@
           "settings": {
             "title": "Supplement Facts",
             "body": "",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1785622055"
+            "image": "shopify://shop_images/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg"
           }
         },
         "info_subscription": {
           "type": "info_item",
           "settings": {
             "title": "Subscription Details",
-            "body": "<p>You'll receive a stylish refillable bottle on your first order, then receive our eco-friendly refill pouches every 30 days on a physician-recommended schedule.</p><p>Plus, you'll receive these benefits:</p><ul><li>Savings every single month.</li><li>Free shipping on your first order.</li><li>Easy management - skip or pause whenever you need.</li><li>VIP access to sales, gifts, early access & more.</li><li>Cancel anytime.</li></ul>",
-            "image_url": ""
+            "body": "<p>You'll receive a stylish refillable bottle on your first order, then receive our eco-friendly refill pouches every 30 days on a physician-recommended schedule.</p><p>Plus, you'll receive these benefits:</p><ul><li>Savings every single month.</li><li>Free shipping on your first order.</li><li>Easy management - skip or pause whenever you need.</li><li>VIP access to sales, gifts, early access & more.</li><li>Cancel anytime.</li></ul>"
           }
         },
         "age_toddlers": {
@@ -410,7 +383,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1785622055",
             "alt": "The \"No Junk\"™ Teens’ Multi"
           }
         },
@@ -418,7 +390,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/Rebrand_Broad_Images_16.png",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Rebrand_Broad_Images_16.png?v=1785622056",
             "alt": "First Day Teens Multi + Superfoods dietary supplement packaging with a gummy on a white background"
           }
         },
@@ -426,7 +397,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg?v=1785622056",
             "alt": "Product packaging with text about &"
           }
         },
@@ -434,7 +404,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg?v=1785622057",
             "alt": "Gummy vitamins with health benefits listed on a blue background. Free of artificial dyes."
           }
         },
@@ -442,7 +411,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg?v=1785622057",
             "alt": "93% of kids don&"
           }
         },
@@ -450,7 +418,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg?v=1785622058",
             "alt": "Better health for the whole family. pictures of happy customers"
           }
         },
@@ -458,7 +425,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg?v=1785622058",
             "alt": "55 million gummies sold in 2024"
           }
         },
@@ -466,7 +432,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg?v=1785622059",
             "alt": "image of product packaging showing packaging has a new look"
           }
         },
@@ -474,7 +439,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg?v=1785622059",
             "alt": "Blue container with gummies and superfoods on a light blue background, featuring text about nutrition and product features."
           }
         },
@@ -482,7 +446,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg?v=1785622060",
             "alt": "97% of customers prefer first day"
           }
         },
@@ -490,7 +453,6 @@
           "type": "carousel_image",
           "settings": {
             "image": "shopify://shop_images/Supplement_facts_ingredients_8e36b0a4-5c9e-409f-a072-589746e75f50.jpg",
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Supplement_facts_ingredients_8e36b0a4-5c9e-409f-a072-589746e75f50.jpg?v=1785622060",
             "alt": "Supplement facts label with clean label project logo on a blue background"
           }
         }
@@ -557,7 +519,6 @@
         "media_blue_bubble": {
           "type": "media_card",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/blue-bubble-social-grid.jpg?v=1785622065",
             "alt": "",
             "is_video": false,
             "image": "shopify://shop_images/blue-bubble-social-grid.jpg"
@@ -566,7 +527,6 @@
         "doctor_lei_chen": {
           "type": "doctor_card",
           "settings": {
-            "photo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/der-lei-chen-medical-board.jpg?v=1785622066",
             "quote": "<p>\"These vitamins are exactly what I recommend to parents looking for quality nutrition.\"</p>",
             "name": "Dr. Lei Chen",
             "credentials": "MD, MHS at Yale University",
@@ -576,7 +536,6 @@
         "media_phils_my_pharmacist": {
           "type": "media_card",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/phils-my-pharmacist.png?v=1785622067",
             "alt": "Video thumbnail",
             "is_video": true,
             "video_url": "https://cdn.shopify.com/videos/c/o/v/aecd515a10d444158c4daf44fa5763f6.mov",
@@ -587,7 +546,6 @@
         "media_womens_reviews": {
           "type": "media_card",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Womens_daily_supercharge_ugc.png?v=1785622067",
             "alt": "Collage of Women Reviews",
             "is_video": false,
             "image": "shopify://shop_images/Womens_daily_supercharge_ugc.png"
@@ -596,7 +554,6 @@
         "customer_diana": {
           "type": "customer_card",
           "settings": {
-            "avatar_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/ugc-4.png?v=1785622068",
             "quote": "<p>\"These are the best tasting vitamins I ever purchased. It feels like I am having a treat. These are the only ones so far that my kids like too.\"</p>",
             "name": "Diana V.",
             "caption": "Verified Purchaser",
@@ -606,7 +563,6 @@
         "media_review_woman": {
           "type": "media_card",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/review-woman.png?v=1785622068",
             "alt": "Video thumbnail",
             "is_video": true,
             "video_url": "https://cdn.shopify.com/videos/c/o/v/37827354069a403e9ad7a5b203afe326.mp4",
@@ -619,14 +575,12 @@
           "settings": {
             "quote": "\"A revolutionary approach to children's health.\"",
             "label": "As seen on",
-            "logo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png?v=1785622068",
             "logo": "shopify://shop_images/yahoo-finance_9236f476-f945-44ed-9d3a-3162562687f4.png"
           }
         },
         "doctor_ed_giovannucci": {
           "type": "doctor_card",
           "settings": {
-            "photo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/dr-harvard-ed-medical-board.jpg?v=1785622069",
             "quote": "<p>\"We choose partners carefully, and First Day’s dedication to research, formulation integrity, and transparent quality practices makes them a brand we’re proud to align with.\"</p>",
             "name": "Dr. Ed Giovannucci",
             "credentials": "MD, MPH, ScD at Harvard University",
@@ -636,7 +590,6 @@
         "media_review_woman_2": {
           "type": "media_card",
           "settings": {
-            "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/review-woman-2.png?v=1785622070",
             "alt": "Video thumbnail",
             "is_video": true,
             "video_url": "https://cdn.shopify.com/videos/c/o/v/254cebfaf76545bbaf344675fd8c13bc.mp4",
@@ -686,7 +639,6 @@
       "settings": {
         "heading": "Raising the Bar on Your Child's Nutrition",
         "show_media": true,
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/teens-multi-holding-tdk.jpg?v=1785622048",
         "media_position": "left",
         "first_open": true,
         "exclusive": true,
@@ -696,15 +648,13 @@
         "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 48,
-        "anchor_id": "accordion_block_QpghhN",
+        "anchor_id": "",
         "image": "shopify://shop_images/teens-multi-holding-tdk.jpg"
       },
       "blocks": {
         "fights_hidden_hunger": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-broccoli.png?v=1785622047",
-            "icon_alt": "",
             "title": "Fights Hidden Hunger",
             "body": "<p>80% of children don't eat enough fruits and veggies, contributing to a nutrient deficiency known as hidden hunger. Our gummies fight hidden hunger with essential nutrients critical to development.</p>",
             "icon": "shopify://shop_images/icon-broccoli.png"
@@ -713,8 +663,6 @@
         "harvard_yale_scientists": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/old-icon-microscope.png?v=1785622049",
-            "icon_alt": "",
             "title": "Developed Alongside Harvard & Yale Scientists",
             "body": "<p>Our product was crafted with input from leading scientists at Harvard and Yale, combining the latest research with high-quality ingredients to deliver a multivitamin parents can trust.</p>",
             "icon": "shopify://shop_images/old-icon-microscope.png"
@@ -723,8 +671,6 @@
         "modern_science": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/old-icon-atom-chemistry.png?v=1785622049",
-            "icon_alt": "",
             "title": "Backed by Modern Science",
             "body": "<p>Vitamin B6 supports natural energy regulation, promoting healthier sleep patterns and making it easier for kids to get restful sleep.*</p>",
             "icon": "shopify://shop_images/old-icon-atom-chemistry.png"
@@ -733,8 +679,6 @@
         "pediatrician_approved": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/old-icon-stethoscope.png?v=1785622050",
-            "icon_alt": "",
             "title": "Pediatrician-Approved",
             "body": "<p>Recommended by pediatricians, our multivitamin is designed to meet the unique needs of your family ensuring they get the support they need from a trusted source.</p>",
             "icon": "shopify://shop_images/old-icon-stethoscope.png"
@@ -743,8 +687,6 @@
         "clean_label": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Rivo-Icon-Checkmark.svg?v=1785622050",
-            "icon_alt": "A blue circle with a white check mark in the center, surrounded by a scalloped edge, resembling a verification badge.",
             "title": "Clean Label Project® Purity Award",
             "body": "<p>Our products were independently tested by Clean Label Project® for harmful chemicals like heavy metals, pesticides, and plasticizers, exceeding typical industry practices.</p>",
             "icon": "shopify://shop_images/Rivo-Icon-Checkmark.svg"
@@ -753,8 +695,6 @@
         "ingredients_sourcing": {
           "type": "item",
           "settings": {
-            "icon_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/icon-list-ingredients-sourcing.png?v=1785622051",
-            "icon_alt": "",
             "title": "Ingredients Sourcing and Dosage",
             "body": "<p>We source each ingredient with care, choosing only the highest quality vitamins and minerals. Our dosage is tailored for teens, providing safe and effective support without risking overuse or unwanted additives.</p>",
             "icon": "shopify://shop_images/icon-list-ingredients-sourcing.png"
@@ -777,12 +717,9 @@
         "subheading": "<p>Made for modern families living on modern diets, we’re here to fill the nutrition gaps that today’s food often leaves behind.</p>",
         "brand_label": "First Day",
         "brand_logo": "shopify://shop_images/round_logo.png",
-        "brand_logo_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/round_logo.png?v=1785622060",
         "competitor_label": "Other Multis",
         "image_desktop": "shopify://shop_images/desk_720.png",
-        "image_desktop_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/desk_720.png?v=1785622061",
         "image_mobile": "shopify://shop_images/mob-left_360.png",
-        "image_mobile_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/mob-left_360.png?v=1785622061",
         "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 48,
@@ -850,14 +787,13 @@
         "color_scheme": "scheme-1",
         "padding_top": 48,
         "padding_bottom": 48,
-        "anchor_id": "",
+        "anchor_id": "clinician-reviews",
         "footer_brand": "frontrowMD"
       },
       "blocks": {
         "clinician_enza_caputo": {
           "type": "clinician_card",
           "settings": {
-            "avatar_url": "https://assets.app.thefrontrowhealth.com/qp5jngl05tsjlwbi65fhg1swj8os",
             "name": "Dr. Enza Caputo, MD",
             "verified_label": "Verified clinician",
             "specialty": "Pediatrics",
@@ -865,13 +801,13 @@
             "title": "Kids daily multivitamin made with easily absorbable nutrients",
             "body": "<p>What stands out to me about First Day's Kids' Multivitamin gummies is the attention to ingredient form. For example, B12 is included as methylcobalamin, the naturally occurring form of this vitamin found in food. Then folate is provided as methylfolate, the active form that can be used without conversion, which may be particularly relevant for children with common variants of the MTHFR gene that can affect how standard folic acid is processed. Lastly, Vitamin D3 is sourced from lichen, making it a fully plant-based form of cholecalciferol, the same form the body produces from sunlight. Research consistently indicates that D3 may be better than D2 for maintaining healthy vitamin D levels in children. For parents seeking a daily children's multivitamin, these ingredient choices are why I recommend this particular formula.</p>",
             "sources_note": "<p>2 Sources</p><p>Folic acid and L-5-methyltetrahydrofolate: comparison of clinical pharmacokinetics and pharmacodynamics<br>Clinical Pharmacokinetics, 2010</p><p>Association between variants of MTHFR genes and psychiatric disorders: A meta-analysis<br>Frontiers in Psychiatry, 2022</p>",
-            "highlights": "<p>Highlights:</p><ul><li>Bioavailable forms</li><li>Developmental support</li><li>Child friendly</li></ul>"
+            "highlights": "<p>Highlights:</p><ul><li>Bioavailable forms</li><li>Developmental support</li><li>Child friendly</li></ul>",
+            "avatar": "shopify://shop_images/qp5jngl05tsjlwbi65fhg1swj8os.png"
           }
         },
         "clinician_andreas_nikolaidis": {
           "type": "clinician_card",
           "settings": {
-            "avatar_url": "https://assets.app.thefrontrowhealth.com/5xb6ex7x00p07wwhzprtmp018055",
             "name": "Dr. Andreas Nikolaidis, MD",
             "verified_label": "Verified clinician",
             "specialty": "Pediatrics",
@@ -879,7 +815,8 @@
             "title": "Superfood blend supports nutrient intake for healthy growth and development",
             "body": "<p>This First Day multivitamin is one I’d recommend for parents who want extra peace of mind around daily nutrition. Recent CDC data show that nearly half of young children in the U.S. fall short on daily vegetables, which are key to healthy growth and development. What sets this product apart is the organic superfood blend included in each gummy. This blend brings together ingredients like kale, broccoli, spinach, and berries alongside the core vitamins. I'm also glad to see methylfolate on the label, since folate is a nutrient that can support healthy growth, brain development, and the body's ability to make new cells during these early years. As far as kids' multivitamins go, I think this is a solid option.</p>",
             "sources_note": "<p>2 Sources</p><p>Fruit, Vegetable, and Sugar-Sweetened Beverage Intake Among Young Children, by State — United States, 2021<br>MMWR Morbidity and Mortality Weekly Report, 2023</p><p>The Critical Role of Folate in Prenatal Health and a Proposed Shift from Folic Acid to 5-Methyltetrahydrofolate Supplementation<br>Georgetown Medical Review, 2024</p>",
-            "highlights": "<p>Highlights:</p><ul><li>Provides superfoods</li><li>Active folate</li><li>Nutritional blend</li></ul>"
+            "highlights": "<p>Highlights:</p><ul><li>Provides superfoods</li><li>Active folate</li><li>Nutritional blend</li></ul>",
+            "avatar": "shopify://shop_images/5xb6ex7x00p07wwhzprtmp018055.png"
           }
         }
       },
@@ -974,8 +911,6 @@
         "closing_text_2": "<p>That's why we’re so confident First Day will help you get the results you want. If within the first 45 days you find yourself not completely satisfied, we’ll give you your money back - no questions asked.</p>",
         "cta_label": "Try Now",
         "cta_link": "#standalone-product-section",
-        "image_alt": "Hero image",
-        "image_mobile_alt": "Hero image",
         "image_position": "right",
         "color_scheme": "scheme-1",
         "padding_top": 32,

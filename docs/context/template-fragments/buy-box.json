@@ -24,8 +24,6 @@
     "gift_heading": "Unlock Your Free Gift",
     "gift_sub": "12 Servings of Electrolyte Drink Mix For The Whole Family.",
     "gift_image": "shopify://shop_images/hydration-12-pack.png",
-    "gift_image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/hydration-12-pack.png?v=1785622051",
-    "gift_image_alt": "Rapid Hydration Electrolyte Support - Gift",
     "gift_compare": "$25.00",
     "gift_price": "FREE",
     "gift_progress_text": "You are $75 away, keep going!",
@@ -72,7 +70,6 @@
       "type": "benefit",
       "settings": {
         "image": "shopify://shop_images/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png?v=1785622052",
         "title": "Improve Overall Health & Nutrition",
         "stat": "98%",
         "text": "of parents say First Day vitamins support their teen's overall health & nutrition.†"
@@ -82,7 +79,6 @@
       "type": "benefit",
       "settings": {
         "image": "shopify://shop_images/Vector_6.png",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Vector_6.png?v=1785622052",
         "title": "Boost Mood & Motivation",
         "stat": "83%",
         "text": "of customers say First Day vitamins support their teens' overall mood & behavior, and saw improved motivation for school.†"
@@ -92,7 +88,6 @@
       "type": "benefit",
       "settings": {
         "image": "shopify://shop_images/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png?v=1785622053",
         "title": "Promote Clear Skin",
         "stat": "75%",
         "text": "said they saw an improvement to skin health, including reduced acne.†"
@@ -134,7 +129,6 @@
       "type": "upsell",
       "settings": {
         "image": "shopify://shop_images/Product_Over_White.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Product_Over_White.jpg?v=1785622053",
         "alt": "The Teens' Daily Focus Brain Support dietary supplement features blue and teal packaging with 60 gummies per container and two yellow gummies in front, providing focus support designed specifically for teens.",
         "title": "Teens' Daily Focus Brain Support",
         "subtitle": "Support for focus, learning, and memory recall.",
@@ -146,7 +140,6 @@
       "type": "upsell",
       "settings": {
         "image": "shopify://shop_images/TeensMagnesiumPrimary.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/TeensMagnesiumPrimary.jpg?v=1785622054",
         "alt": "A container labeled Teens’ Nighttime Reset Magnesium sits upright, with two berry-shaped red gummies beside it. The label states No Junk and the calming supplement for teens includes 60 magnesium gummies.",
         "title": "Teens’ Nighttime Reset Magnesium",
         "subtitle": "Melatonin-free support for relaxation & sleep.",
@@ -158,7 +151,6 @@
       "type": "upsell",
       "settings": {
         "image": "shopify://shop_images/GUEST_9c904f2b-66b3-4c5c-8a4e-454f8e3bbd90.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/GUEST_9c904f2b-66b3-4c5c-8a4e-454f8e3bbd90.jpg?v=1785622054",
         "alt": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
         "title": "First Day - Teens' 3-in-1 Pre+ Post+ Probiotic",
         "subtitle": "To support immunity, digestion, and skin health.",
@@ -169,36 +161,35 @@
     "stamp_guarantee": {
       "type": "stamp",
       "settings": {
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/image_17.png?v=1785627107",
         "alt": "money back guarantee",
         "line_1": "MONEY BACK",
-        "line_2": "GUARANTEE"
+        "line_2": "GUARANTEE",
+        "image": "shopify://shop_images/image_17_fa167dc7-7f96-4204-aab6-b96d9c7e5980.png"
       }
     },
     "stamp_families": {
       "type": "stamp",
       "settings": {
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/image_18_23f2a83f-a228-4c73-be70-3ac38b5837dd.png?v=1785627108",
         "alt": "1 million customers",
         "line_1": "1 million",
-        "line_2": "customers"
+        "line_2": "customers",
+        "image": "shopify://shop_images/image_18_13255bc8-7904-4672-a617-679ae221abd4.png"
       }
     },
     "stamp_checkout": {
       "type": "stamp",
       "settings": {
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/image_23.png?v=1785627108",
         "alt": "secure checkout",
         "line_1": "SECURE",
-        "line_2": "CHECKOUT"
+        "line_2": "CHECKOUT",
+        "image": "shopify://shop_images/image_23_b0377e59-fa28-47bb-971b-edb438628906.png"
       }
     },
     "info_ingredients": {
       "type": "info_item",
       "settings": {
         "title": "Ingredients",
-        "body": "<p>We are thoughtful about the ingredients we select, use REAL organic fruits & vegetables, and keep out long lists of ingredients that can't even be pronounced.</p><p><strong>Organic Superfood Blend:</strong> Apple, Kale, Broccoli, Spinach, Carrot, Parsley, Beet, Green Cabbage, Raspberry, Blueberry, Strawberry, Tomato, Aronia Berry, Chlorella, Maca, Moringa, Reishi Mushroom, Cordyceps Mushroom, Lion's Mane Mushroom, Turmeric, Ginger</p><p><strong>Other Ingredients:</strong> Tapioca Syrup‡, Cane Sugar‡, Water, Pectin, Citric Acid, Natural Flavors, Superfood Powdered Blend‡ (Apple‡, Kale‡, Broccoli‡, Spinach‡, Carrot‡, Parsley‡, Beet‡, Green Cabbage‡, Raspberry‡, Blueberry‡, Strawberry‡, Tomato‡, Aronia Berry‡, Chlorella‡, Maca‡, Moringa‡, Reishi Mushroom‡, Cordyceps Mushroom‡, Lion's Mane Mushroom‡, Turmeric‡, Ginger‡), Carrot and Blackcurrant and Red Bell Pepper Juice for Color.</p><p>‡Organic</p><p><strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, shellfish-free, and sesame-free.</p>",
-        "image_url": ""
+        "body": "<p>We are thoughtful about the ingredients we select, use REAL organic fruits & vegetables, and keep out long lists of ingredients that can't even be pronounced.</p><p><strong>Organic Superfood Blend:</strong> Apple, Kale, Broccoli, Spinach, Carrot, Parsley, Beet, Green Cabbage, Raspberry, Blueberry, Strawberry, Tomato, Aronia Berry, Chlorella, Maca, Moringa, Reishi Mushroom, Cordyceps Mushroom, Lion's Mane Mushroom, Turmeric, Ginger</p><p><strong>Other Ingredients:</strong> Tapioca Syrup‡, Cane Sugar‡, Water, Pectin, Citric Acid, Natural Flavors, Superfood Powdered Blend‡ (Apple‡, Kale‡, Broccoli‡, Spinach‡, Carrot‡, Parsley‡, Beet‡, Green Cabbage‡, Raspberry‡, Blueberry‡, Strawberry‡, Tomato‡, Aronia Berry‡, Chlorella‡, Maca‡, Moringa‡, Reishi Mushroom‡, Cordyceps Mushroom‡, Lion's Mane Mushroom‡, Turmeric‡, Ginger‡), Carrot and Blackcurrant and Red Bell Pepper Juice for Color.</p><p>‡Organic</p><p><strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, shellfish-free, and sesame-free.</p>"
       }
     },
     "info_supplement_facts": {
@@ -206,15 +197,14 @@
       "settings": {
         "title": "Supplement Facts",
         "body": "",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg?v=1785622055"
+        "image": "shopify://shop_images/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg"
       }
     },
     "info_subscription": {
       "type": "info_item",
       "settings": {
         "title": "Subscription Details",
-        "body": "<p>You'll receive a stylish refillable bottle on your first order, then receive our eco-friendly refill pouches every 30 days on a physician-recommended schedule.</p><p>Plus, you'll receive these benefits:</p><ul><li>Savings every single month.</li><li>Free shipping on your first order.</li><li>Easy management - skip or pause whenever you need.</li><li>VIP access to sales, gifts, early access & more.</li><li>Cancel anytime.</li></ul>",
-        "image_url": ""
+        "body": "<p>You'll receive a stylish refillable bottle on your first order, then receive our eco-friendly refill pouches every 30 days on a physician-recommended schedule.</p><p>Plus, you'll receive these benefits:</p><ul><li>Savings every single month.</li><li>Free shipping on your first order.</li><li>Easy management - skip or pause whenever you need.</li><li>VIP access to sales, gifts, early access & more.</li><li>Cancel anytime.</li></ul>"
       }
     },
     "age_toddlers": {
@@ -237,7 +227,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg?v=1785622055",
         "alt": "The \"No Junk\"™ Teens’ Multi"
       }
     },
@@ -245,7 +234,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/Rebrand_Broad_Images_16.png",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Rebrand_Broad_Images_16.png?v=1785622056",
         "alt": "First Day Teens Multi + Superfoods dietary supplement packaging with a gummy on a white background"
       }
     },
@@ -253,7 +241,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg?v=1785622056",
         "alt": "Product packaging with text about &"
       }
     },
@@ -261,7 +248,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg?v=1785622057",
         "alt": "Gummy vitamins with health benefits listed on a blue background. Free of artificial dyes."
       }
     },
@@ -269,7 +255,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg?v=1785622057",
         "alt": "93% of kids don&"
       }
     },
@@ -277,7 +262,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg?v=1785622058",
         "alt": "Better health for the whole family. pictures of happy customers"
       }
     },
@@ -285,7 +269,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg?v=1785622058",
         "alt": "55 million gummies sold in 2024"
       }
     },
@@ -293,7 +276,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg?v=1785622059",
         "alt": "image of product packaging showing packaging has a new look"
       }
     },
@@ -301,7 +283,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg?v=1785622059",
         "alt": "Blue container with gummies and superfoods on a light blue background, featuring text about nutrition and product features."
       }
     },
@@ -309,7 +290,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg?v=1785622060",
         "alt": "97% of customers prefer first day"
       }
     },
@@ -317,7 +297,6 @@
       "type": "carousel_image",
       "settings": {
         "image": "shopify://shop_images/Supplement_facts_ingredients_8e36b0a4-5c9e-409f-a072-589746e75f50.jpg",
-        "image_url": "https://cdn.shopify.com/s/files/1/0773/6511/7120/files/Supplement_facts_ingredients_8e36b0a4-5c9e-409f-a072-589746e75f50.jpg?v=1785622060",
         "alt": "Supplement facts label with clean label project logo on a blue background"
       }
     }
