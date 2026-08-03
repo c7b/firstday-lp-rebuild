@@ -36,7 +36,10 @@
     "ages_note": "",
     "color_scheme": "scheme-2",
     "padding_top": 32,
-    "padding_bottom": 32
+    "padding_bottom": 32,
+    "gift_threshold_amount": 75,
+    "gift_away_template": "You are [amount] away, keep going!",
+    "gift_unlocked_text": ""
   },
   "blocks": {
     "tab_toddlers": {

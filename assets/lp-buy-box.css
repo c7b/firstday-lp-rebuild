@@ -995,3 +995,12 @@
   background: var(--lp-navy);
   color: #fff;
 }
+
+/* gift progress reflects the real cart */
+.lp-buy-box__progress-fill { transition: width 260ms ease; }
+
+.lp-buy-box__progress.is-unlocked .lp-buy-box__progress-fill { background: var(--lp-green); }
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-buy-box__progress-fill { transition: none; }
+}

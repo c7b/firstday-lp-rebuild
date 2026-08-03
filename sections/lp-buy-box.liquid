@@ -490,14 +490,24 @@
                 </span>
               </div>
             </div>
-            <p class="lp-buy-box__gift-progress-text">{{ section.settings.gift_progress_text | escape }}</p>
+            {%- comment -%}
+              Live against the real cart: the copy and the bar are rendered from the setting so
+              the page is correct with JS off, then updated from /cart.js on load and after any
+              add-to-cart. A progress bar that shows a number it does not know is worse than no
+              bar at all.
+            {%- endcomment -%}
+            <p class="lp-buy-box__gift-progress-text" data-gift-text>{{ section.settings.gift_progress_text | escape }}</p>
             <div
               class="lp-buy-box__progress"
               role="progressbar"
               aria-label="{{ section.settings.gift_progress_text | escape }}"
               aria-valuemin="0"
-              aria-valuemax="75"
+              aria-valuemax="{{ section.settings.gift_threshold_amount }}"
               aria-valuenow="0"
+              data-gift-progress
+              data-gift-threshold="{{ section.settings.gift_threshold_amount }}"
+              data-gift-away-template="{{ section.settings.gift_away_template | escape }}"
+              data-gift-unlocked-text="{{ section.settings.gift_unlocked_text | escape }}"
             >
               <span class="lp-buy-box__progress-fill"></span>
               <span class="lp-buy-box__progress-threshold">{{ section.settings.gift_threshold | escape }}</span>
@@ -817,6 +827,27 @@
       "id": "gift_threshold",
       "label": "Gift threshold",
       "default": "$75"
+    },
+    {
+      "type": "number",
+      "id": "gift_threshold_amount",
+      "label": "Gift threshold amount",
+      "info": "Cart total that unlocks the gift, in your store currency. Drives the live progress bar.",
+      "default": 75
+    },
+    {
+      "type": "text",
+      "id": "gift_away_template",
+      "label": "Still-to-go text",
+      "info": "Use [amount] where the remaining total should appear.",
+      "default": "You are [amount] away, keep going!"
+    },
+    {
+      "type": "text",
+      "id": "gift_unlocked_text",
+      "label": "Unlocked text",
+      "default": "",
+      "info": "Optional. The original page has no copy for the unlocked state, so nothing is invented here — leave empty and the line hides once the bar fills."
     },
     {
       "type": "text",

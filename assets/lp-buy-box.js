@@ -178,6 +178,85 @@ class LpBuyBox extends HTMLElement {
     this.scrollTrackTo(strip, currentThumb, this.initialized === true && this.hasInteracted === true);
   }
 
+  /**
+   * The free-gift bar tracks the real cart. Server-rendered copy is the no-JS truth; this
+   * corrects it from /cart.js on load and whenever anything is added, so the page never
+   * claims a distance it hasn't measured. Reading the cart is not touching it.
+   */
+  bindGiftProgress() {
+    this.giftBar = this.querySelector('[data-gift-progress]');
+    this.giftText = this.querySelector('[data-gift-text]');
+    if (!this.giftBar) return;
+
+    this.refreshGiftProgress();
+
+    if (!LpBuyBox.cartListenerBound) {
+      LpBuyBox.cartListenerBound = true;
+      // any add-to-cart on the page, ours or Dawn's, goes through fetch to /cart/add
+      const origFetch = window.fetch;
+      window.fetch = function (...args) {
+        const request = args[0];
+        const url = typeof request === 'string' ? request : request && request.url;
+        return origFetch.apply(this, args).then((response) => {
+          if (url && /\/cart\/(add|change|update)/.test(url)) {
+            document.dispatchEvent(new CustomEvent('lp:cart:changed'));
+          }
+          return response;
+        });
+      };
+    }
+    document.addEventListener('lp:cart:changed', () => this.refreshGiftProgress());
+  }
+
+  async refreshGiftProgress() {
+    const bar = this.giftBar;
+    if (!bar) return;
+
+    const threshold = Number(bar.dataset.giftThreshold || 0);
+    if (!threshold) return;
+
+    let cart;
+    try {
+      cart = await (await fetch('/cart.js', { headers: { Accept: 'application/json' } })).json();
+    } catch {
+      return; // leave the server-rendered copy alone rather than show a wrong number
+    }
+
+    const total = (cart.total_price || 0) / 100;
+    const remaining = Math.max(0, threshold - total);
+    const pct = Math.min(100, threshold ? (total / threshold) * 100 : 0);
+
+    const fill = bar.querySelector('.lp-buy-box__progress-fill');
+    if (fill) fill.style.width = `${pct}%`;
+    bar.setAttribute('aria-valuenow', String(Math.min(total, threshold).toFixed(2)));
+    bar.classList.toggle('is-unlocked', remaining === 0);
+
+    if (this.giftText) {
+      const money = new Intl.NumberFormat(document.documentElement.lang || 'en', {
+        style: 'currency',
+        currency: (cart.currency || 'USD'),
+        maximumFractionDigits: remaining % 1 === 0 ? 0 : 2,
+      }).format(remaining);
+      if (remaining === 0) {
+        // the original has no copy for the unlocked state, so none is invented: the filled
+        // green bar carries it unless the operator supplied their own line
+        const unlocked = bar.dataset.giftUnlockedText;
+        this.giftText.hidden = !unlocked;
+        if (unlocked) {
+          this.giftText.textContent = unlocked;
+          bar.setAttribute('aria-label', unlocked);
+        }
+      } else {
+        const copy = (bar.dataset.giftAwayTemplate || '').replace('[amount]', money);
+        if (copy) {
+          this.giftText.hidden = false;
+          this.giftText.textContent = copy;
+          bar.setAttribute('aria-label', copy);
+        }
+      }
+    }
+  }
+
   updateQuantitySavings() {
     // Intentionally a no-op. The savings figures are transplanted from the original page,
     // which shows them for the subscription offer. A one-time equivalent would have to be

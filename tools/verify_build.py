@@ -57,6 +57,9 @@ def corpus_for(section_type):
     return norm(" ".join(parts))
 
 
+PLACEHOLDER = re.compile(r"\[[a-z_]+\]")
+
+
 def squash(s):
     """Whitespace-free form: the original's text arrives as separate DOM nodes, so a string
     that spans two of them differs only in the space we inserted when joining."""
