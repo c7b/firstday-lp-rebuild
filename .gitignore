@@ -20,3 +20,8 @@ dist/
 # Netlify CLI local state — carries an absolute local path, not repo content
 .netlify/
 __pycache__
+
+# scratch probes
+.diag.mjs
+.shot.mjs
+.adpage.mjs
