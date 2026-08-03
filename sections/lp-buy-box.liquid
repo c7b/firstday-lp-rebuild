@@ -208,28 +208,38 @@
         {% endfor %}
         {% if product_tab_count > 0 %}
           <nav class="lp-buy-box__product-tabs" aria-label="{{ buy_product.title | escape }}">
+            {%- comment -%}
+              Which tab is current is derived from the product this instance is showing, never
+              stored on the block. A variant template overrides one setting — the product — and
+              the tabs follow. Storing it meant every variant highlighted whatever the base
+              template highlighted.
+            {%- endcomment -%}
             {% for block in section.blocks %}
               {% if block.type == 'product_tab' %}
+                {% assign tab_handle = block.settings.product.handle %}
+                {% assign tab_is_current = false %}
+                {% if tab_handle != blank and tab_handle == buy_product.handle %}
+                  {% assign tab_is_current = true %}
+                {% endif %}
                 {% assign product_tab_url = block.settings.url | default: block.settings.product.url %}
-                {% if product_tab_url != blank %}
-                  <a
-                    class="lp-buy-box__product-tab"
-                    href="{{ product_tab_url }}"
-                    {% if block.settings.product != blank %}data-product-handle="{{ block.settings.product.handle }}"{% endif %}
-                    {% if block.settings.active %}aria-current="page"{% endif %}
-                    {{ block.shopify_attributes }}
-                  >
-                    {{- block.settings.label | escape -}}
-                  </a>
-                {% else %}
+                {% if tab_is_current or product_tab_url == blank %}
                   <span
                     class="lp-buy-box__product-tab"
-                    {% if block.settings.product != blank %}data-product-handle="{{ block.settings.product.handle }}"{% endif %}
-                    {% if block.settings.active %}aria-current="page"{% endif %}
+                    {% if block.settings.product != blank %}data-product-handle="{{ tab_handle }}"{% endif %}
+                    {% if tab_is_current %}aria-current="page"{% endif %}
                     {{ block.shopify_attributes }}
                   >
                     {{- block.settings.label | escape -}}
                   </span>
+                {% else %}
+                  <a
+                    class="lp-buy-box__product-tab"
+                    href="{{ product_tab_url }}"
+                    {% if block.settings.product != blank %}data-product-handle="{{ tab_handle }}"{% endif %}
+                    {{ block.shopify_attributes }}
+                  >
+                    {{- block.settings.label | escape -}}
+                  </a>
                 {% endif %}
               {% endif %}
             {% endfor %}
@@ -241,10 +251,16 @@
           <h2 class="lp-buy-box__title">{{ formatted_product_title }}</h2>
           {% if fact_subtitle != blank %}
             <p class="lp-buy-box__subtitle">
+              {%- comment -%}
+                The original sets the benefit half of this line in blue italic. The emphasis is
+                authored per product in the metafield rather than guessed from the wording, so a
+                new product carries its own. Escaped first and then only <em> is handed back —
+                the tag takes no attributes, so nothing else can ride in on a metafield value.
+              {%- endcomment -%}
               {%- if section.settings.subtitle != blank -%}
                 {{- section.settings.subtitle -}}
               {%- else -%}
-                {{- fact_subtitle | escape -}}
+                {{- fact_subtitle | escape | replace: '&lt;em&gt;', '<em>' | replace: '&lt;/em&gt;', '</em>' -}}
               {%- endif -%}
             </p>
           {% endif %}
@@ -992,13 +1008,8 @@
         {
           "type": "url",
           "id": "url",
-          "label": "Link"
-        },
-        {
-          "type": "checkbox",
-          "id": "active",
-          "label": "Active",
-          "default": false
+          "label": "Link",
+          "info": "Where this tab goes. Leave empty to use the product's own page. The tab for the product this section is showing renders as plain text — no link back to where you already are."
         }
       ]
     },
