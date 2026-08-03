@@ -97,6 +97,11 @@
   line-height: 3.8rem;
   text-transform: capitalize;
   text-align: center;
+}
+
+/* Prefixed for the same reason the heading weights are: a bare class loses to the
+   colour-scheme rule that sets --color-foreground. */
+.shopify-section[class*='lp-'] .lp-media-accordion__heading {
   color: #2c3e50;
 }
 
