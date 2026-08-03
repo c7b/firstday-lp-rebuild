@@ -5,38 +5,64 @@
 <title>First Day — storefront audit</title>
 <style>
   :root{
-    /* Four hues, deliberately far apart so a glance separates them:
-       violet = interface state, orange = what it costs, green = where value is,
-       blue = neutral measurement. Nothing carries two meanings. */
-    --bg:#F4F6F8; --surface:#fff; --raise:#FBFCFD;
-    --ink:#0B0F14; --ink2:#3D4752; --mute:#6B7785; --faint:#98A3AF;
-    --line:#E1E6EB; --line2:#CBD3DB;
+    /* The report is dressed in First Day's own palette — their blue, mint, amber and navy,
+       sampled from firstday.com. A document about a brand that ignores the brand reads as a
+       generic export; wearing their colours says it was made for them.
 
-    --sel:#5B34D6; --sel-w:#EEE9FE; --sel-b:#C4B5FD;
-    --cost:#C2410C; --cost-w:#FDEDE4; --cost-b:#F5B896;
-    --live:#047857; --live-w:#DCF2EA; --live-b:#7FCBB0;
-    --info:#1E4E8C; --info-w:#E4EDF8; --info-b:#9FC0E4;
+       Meaning is still fixed, one hue per idea, nothing doubling up:
+       blue = neutral measurement · amber = what it costs · mint = where value already is ·
+       coral = the thing to fix · violet = interface state, never data. */
+    --fd-blue:#486CED; --fd-mint:#2FA97A; --fd-amber:#B5730A; --fd-navy:#24364D;
+    --fd-coral:#D6452F;
+
+    --bg:#EEF2FA; --surface:#fff; --raise:#F6F8FD;
+    --ink:#141F30; --ink2:#3B4A5F; --mute:#67748A; --faint:#93A0B4;
+    --line:#DDE4F0; --line2:#C2CDE0;
+
+    --sel:#5B34D6; --sel-w:#EDE9FE; --sel-b:#BFA9FC;
+    --cost:var(--fd-amber); --cost-w:#FDF2DC; --cost-b:#EFC77C;
+    --live:var(--fd-mint); --live-w:#DAF3E8; --live-b:#7CD3AF;
+    --info:var(--fd-blue); --info-w:#E5EAFD; --info-b:#A8B9F6;
+    --bad:var(--fd-coral); --bad-w:#FDE6E1; --bad-b:#F3A695;
 
     --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    --sh:0 1px 2px rgba(11,15,20,.04),0 4px 14px rgba(11,15,20,.05);
-    --sh-lift:0 2px 6px rgba(11,15,20,.07),0 14px 34px rgba(11,15,20,.09);
+    --sh:0 1px 2px rgba(20,31,48,.05),0 4px 14px rgba(36,54,77,.07);
+    --sh-lift:0 2px 6px rgba(20,31,48,.09),0 14px 34px rgba(36,54,77,.13);
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  body{margin:0;color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;
+    background:var(--bg);
+    background-image:
+      radial-gradient(1100px 460px at 12% -8%, rgba(72,108,237,.20), transparent 62%),
+      radial-gradient(900px 420px at 92% -4%, rgba(101,218,161,.20), transparent 60%);
+    background-repeat:no-repeat;background-attachment:fixed}
   .wrap{max-width:1240px;margin:0 auto;padding:26px 18px 90px}
-  a{color:var(--info)}
+  a{color:var(--fd-blue)}
 
   /* header */
-  .top{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;justify-content:space-between;padding-bottom:16px;border-bottom:2px solid var(--ink)}
-  h1{margin:0;font-size:26px;letter-spacing:-.02em}
+  .top{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;justify-content:space-between;padding-bottom:16px;border-bottom:none;position:relative}
+  /* The rule under the masthead carries all four data hues in the order the page uses them,
+     so the legend is the first thing you see without being a legend. */
+  .top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;border-radius:99px;
+    background:linear-gradient(90deg,var(--fd-blue) 0 28%,var(--fd-mint) 28% 52%,var(--fd-amber) 52% 76%,var(--fd-coral) 76% 100%)}
+  h1{margin:0;font-size:26px;letter-spacing:-.02em;color:var(--fd-navy)}
   .sub{margin:4px 0 0;color:var(--mute);font-size:14px;max-width:70ch}
   .stamp{font-family:var(--mono);font-size:11px;color:var(--faint);text-align:right}
 
   /* metric tiles */
   .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:18px 0 8px}
-  .tile{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--sh);cursor:pointer;text-align:left;font:inherit;color:inherit;
+  .tile{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 14px 12px;box-shadow:var(--sh);cursor:pointer;text-align:left;font:inherit;color:inherit;
     transition:transform .16s ease,border-color .16s ease,filter .22s ease,opacity .22s ease,box-shadow .16s ease}
+  /* Each tile wears the hue of what it measures, so the wall of numbers sorts itself before
+     you have read a single label. */
+  .tile::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--fd-blue)}
+  .tile.t-warn::before{background:var(--cost)}
+  .tile.t-bad::before{background:var(--bad)}
+  .tile.t-ok::before{background:var(--live)}
+  .tile.t-warn{background:linear-gradient(180deg,#FFFBF2,#fff 58%)}
+  .tile.t-bad{background:linear-gradient(180deg,#FFF4F1,#fff 58%)}
+  .tile.t-ok{background:linear-gradient(180deg,#F1FBF6,#fff 58%)}
   .tile:hover{transform:translateY(-2px);border-color:var(--line2);box-shadow:var(--sh-lift)}
   .tile:focus-visible{outline:2px solid var(--sel);outline-offset:2px}
   /* focus mode: picking one tile pushes every other one back so the selection is unmistakable */
@@ -45,11 +71,15 @@
   .tile .src{display:block;margin-top:8px;padding-top:7px;border-top:1px dashed var(--line);font-family:var(--mono);font-size:9.5px;line-height:1.45;letter-spacing:.02em;color:var(--faint);text-transform:none}
   .tile .big{font-family:var(--mono);font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
   .tile .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:2px}
-  .big.ok{color:var(--live)} .big.warn{color:var(--cost)} .big.bad{color:var(--cost)}
+  .tile .big{color:var(--fd-navy)}
+  .big.ok{color:var(--live)} .big.warn{color:var(--cost)} .big.bad{color:var(--bad)}
   /* provenance line under every section heading — a number with no source is an opinion */
+  /* Provenance takes its section's hue rather than a fixed blue — otherwise every section ends
+     in the same blue strip and the wayfinding colour stops meaning anything. */
   .prov{display:flex;gap:8px;align-items:flex-start;margin:12px 0 0;padding:9px 11px;border-radius:8px;
-    background:var(--info-w);border:1px solid var(--info-b);font-size:12.5px;line-height:1.5;color:var(--ink2)}
-  .prov b{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--info);flex:none;padding-top:1px}
+    background:var(--hue-w,var(--info-w));border:1px solid var(--hue,var(--info));border-left-width:3px;
+    font-size:12.5px;line-height:1.5;color:var(--ink2)}
+  .prov b{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--hue,var(--info));flex:none;padding-top:1px}
   .stackgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:12px}
   .layer{border:1px solid var(--line);border-radius:10px;padding:13px 15px;background:var(--raise)}
   .layer .lname{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
@@ -57,12 +87,21 @@
   .layer .ldesc{font-size:13px;color:var(--mute);margin-top:5px}
 
   /* sections */
-  section{margin-top:26px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh);overflow:hidden}
-  .head{display:flex;gap:12px;align-items:center;padding:14px 16px;cursor:pointer;user-select:none}
-  .head:hover{background:var(--raise)}
-  .head h2{margin:0;font-size:15px;letter-spacing:-.01em;flex:1}
-  .head .count{font-family:var(--mono);font-size:11px;color:var(--mute);background:var(--raise);border:1px solid var(--line);padding:2px 8px;border-radius:99px}
-  .chev{transition:transform .18s ease;color:var(--faint);font-size:12px}
+  /* Every section carries its own hue on a left rail and in its header wash. It is wayfinding,
+     not decoration: once you have scrolled past a section, the colour is how you find it again. */
+  section{--hue:var(--fd-blue);--hue-w:var(--info-w);
+    margin-top:26px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--hue);
+    border-radius:12px;box-shadow:var(--sh);overflow:hidden}
+  section:nth-of-type(5n+2){--hue:var(--fd-mint);--hue-w:var(--live-w)}
+  section:nth-of-type(5n+3){--hue:var(--fd-amber);--hue-w:var(--cost-w)}
+  section:nth-of-type(5n+4){--hue:var(--fd-coral);--hue-w:var(--bad-w)}
+  section:nth-of-type(5n+5){--hue:var(--sel);--hue-w:var(--sel-w)}
+  .head{display:flex;gap:12px;align-items:center;padding:14px 16px;cursor:pointer;user-select:none;
+    background:linear-gradient(90deg,var(--hue-w),transparent 72%)}
+  .head:hover{background:linear-gradient(90deg,var(--hue-w),var(--raise) 82%)}
+  .head h2{margin:0;font-size:15px;letter-spacing:-.01em;flex:1;color:var(--fd-navy)}
+  .head .count{font-family:var(--mono);font-size:11px;color:var(--hue);background:var(--surface);border:1px solid var(--hue);padding:2px 8px;border-radius:99px}
+  .chev{transition:transform .18s ease;color:var(--hue);font-size:12px}
   section.open .chev{transform:rotate(90deg)}
   .body{display:none;padding:0 16px 16px;border-top:1px solid var(--line)}
   section.open .body{display:block;animation:fade .18s ease}
@@ -82,7 +121,7 @@
   .chip{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:99px;border:1px solid var(--line2);color:var(--mute);background:var(--raise)}
   .chip.ok{background:var(--live-w);border-color:var(--live-b);color:var(--live)}
   .chip.warn{background:var(--cost-w);border-color:var(--cost-b);color:var(--cost)}
-  .chip.bad{background:var(--cost-w);border-color:var(--cost-b);color:var(--cost)}
+  .chip.bad{background:var(--bad-w);border-color:var(--bad-b);color:var(--bad)}
   .chip.info{background:var(--info-w);border-color:var(--info-b);color:var(--info)}
 
   /* vendor grid */
@@ -111,14 +150,16 @@
   .nodeinfo .job{border-top:1px solid #334155;padding-top:6px;margin-top:6px;font-size:11.5px}
 
   .filters{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
-  .fchip{font-family:var(--mono);font-size:11px;padding:5px 11px;border-radius:99px;border:1px solid var(--line2);background:var(--surface);color:var(--ink2);cursor:pointer}
-  .fchip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+  .fchip{font-family:var(--mono);font-size:11px;padding:5px 11px;border-radius:99px;border:1px solid var(--line2);background:var(--surface);color:var(--ink2);cursor:pointer;transition:background .14s ease,color .14s ease,border-color .14s ease}
+  .fchip:hover{border-color:var(--fd-blue);color:var(--fd-blue)}
+  .fchip[aria-pressed="true"]{background:var(--fd-blue);border-color:var(--fd-blue);color:#fff}
   input[type=search]{font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:99px;border:1px solid var(--line2);background:var(--surface);color:var(--ink);min-width:180px}
+  input[type=search]:focus{outline:none;border-color:var(--fd-blue);box-shadow:0 0 0 3px var(--info-w)}
 
-  .bar{height:6px;border-radius:99px;background:var(--raise);overflow:hidden;min-width:70px}
+  .bar{height:6px;border-radius:99px;background:#E7ECF7;overflow:hidden;min-width:70px}
   .bar i{display:block;height:100%;background:var(--info)}
   .bar.warn i{background:var(--cost)} .bar.ok i{background:var(--live)}
-  footer{margin-top:34px;color:var(--mute);font-size:12.5px;line-height:1.6}
+  footer{margin-top:34px;color:var(--mute);font-size:12.5px;line-height:1.6;border-top:3px solid var(--fd-navy);padding-top:16px}
   @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 
@@ -248,7 +289,7 @@ const TILES = [
 ];
 const metricsEl = $('#metrics');
 metricsEl.innerHTML = TILES.map(([l, v, c, f, sec, src], i) =>
-  `<button class="tile" type="button" data-tile="${i}" data-sec="${sec}" ${f ? `data-jump="${f}"` : ''}
+  `<button class="tile${c ? ` t-${c}` : ''}" type="button" data-tile="${i}" data-sec="${sec}" ${f ? `data-jump="${f}"` : ''}
      aria-pressed="false"><div class="big ${c}">${esc(v)}</div><div class="lbl">${esc(l)}</div>
      <span class="src">${esc(src)}</span></button>`).join('');
 
