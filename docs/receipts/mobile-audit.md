@@ -1,3 +1,34 @@
+# Mobile audit at 390px — findings and what happened to them
+
+An adversarial pass over the rebuild at a 390px viewport, run against the build as it stood on
+2 Aug 2026. It is kept in the repo because the findings were acted on, not because they are
+still true. Line numbers below refer to the code **as audited**; several files have moved since.
+
+**All 6 MAJOR findings are closed.** Verified against the current tree on 3 Aug 2026:
+
+| # | Finding | Resolution |
+|---|---|---|
+| 1 | `.lp-comparison-table__table` forced horizontal scroll at 390px | `min-width: 510px` → `min-width: 0` |
+| 2 | `.lp-buy-box__quantity-note` negative margin collided with the Quantity legend | `margin: -4rem 0 1.2rem auto` → `margin: 0 0 1.2rem auto` |
+| 3 | "Write a review" was a non-interactive `<span role="none">` | now a real `<a href>` to the review app anchor |
+| 4 | "Learn more" was a non-interactive `<span>` | now a real `<a href>` to the disclaimer anchor |
+| 5 | Footer link tap target below 44px | `min-height` added |
+| 6 | Urgency CTA 42px tall, below 44px | `min-height` added |
+
+**MINOR findings: most closed, some open on purpose.** Spot-checked as closed: hero H1
+line-height `.98` → `1.06`, accordion title `1.25` → `1.3`, trust-wall heading `1.05` → `1.12`.
+
+Two groups stay open deliberately, and the reason matters more than the count:
+
+- **The emoji rows.** Every 🍊 💊 🔥 🚨 🧠 🪄 🧬 flagged here is copy transplanted verbatim from
+  the live page. Swapping them for SVG would be a copy change, which the brief puts out of
+  scope and which `tools/verify_build.py` would reject. The finding is correct as a rendering
+  observation and is the right call to raise with the client — it is not ours to make.
+- **The gift-bar and upsell rows** (`__gift-price`, `__upsell-*`) are moot: those blocks are
+  switched off in this build, so the type never renders. See `docs/ASSUMPTIONS.md`.
+
+The original table follows, unedited, so the fixes above can be checked against what was found.
+
 | severity | file:line | selector/element | defect | suggested fix |
 |---|---|---|---|---|
 | MAJOR | assets/lp-comparison-table.css:70 | `.lp-comparison-table__table` | `min-width: 510px` exceeds the 350px content width at a 390px viewport (`20px` container padding on each side), forcing horizontal table scrolling. | Use a mobile single-column/card layout, or remove the fixed minimum and let columns wrap/condense. |

@@ -1,399 +1,403 @@
 {
- "target_section": "lp-media-accordion",
- "source_snapshot": "fd-lp.html",
- "originals": [
-  {
-   "original_id": "accordion_block_driBft",
-   "raw_bytes": 26946,
-   "nodes": [
+  "target_section": "lp-media-accordion",
+  "source_snapshot": "fd-lp.html",
+  "originals": [
     {
-     "type": "text",
-     "text": "id=\"shopify-section-template--19023949758562__accordion_block_driBft\" class=\"shopify-section section\">",
-     "path": "",
-     "seq": 0
+      "original_id": "accordion_block_driBft",
+      "raw_bytes": 26946,
+      "nodes": [
+        {
+          "type": "text",
+          "text": "id=\"shopify-section-template--19023949758562__accordion_block_driBft\" class=\"shopify-section section\">",
+          "path": "",
+          "seq": 0
+        },
+        {
+          "type": "text",
+          "text": "Most Kids Are",
+          "path": "div.section--padding>div.page-width>div.accordion-block__heading-wrapper>h2.title",
+          "seq": 6
+        },
+        {
+          "type": "text",
+          "text": "Missing Key Nutrients",
+          "path": "div.page-width>div.accordion-block__heading-wrapper>h2.title>span.accordion-block__highlight",
+          "seq": 7
+        },
+        {
+          "type": "text",
+          "text": ". Get Help in Just 2 Gummies.",
+          "path": "div.section--padding>div.page-width>div.accordion-block__heading-wrapper>h2.title",
+          "seq": 8
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1500",
+          "srcset": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=165 165w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=360 360w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=535 535w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=750 750w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1100 1100w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=177265821",
+          "alt": "",
+          "path": "div.accordion-block__container>div.accordion-block__grid>div.accordion-block__media>div.accordion-block__image-wrapper"
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1500",
+          "srcset": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=165 165w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=360 360w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=535 535w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=750 750w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1100 1100w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=177265821",
+          "alt": "",
+          "path": "div.accordion-block__container>div.accordion-block__grid>div.accordion-block__media>div.accordion-block__image-wrapper"
+        },
+        {
+          "type": "text",
+          "text": "Most Kids Are",
+          "path": "div.accordion-block__grid>div.accordion-block__content>div.accordion-block__heading>h2.title",
+          "seq": 21
+        },
+        {
+          "type": "text",
+          "text": "Missing Key Nutrients",
+          "path": "div.accordion-block__content>div.accordion-block__heading>h2.title>span.accordion-block__highlight",
+          "seq": 22
+        },
+        {
+          "type": "text",
+          "text": ". Get Help in Just 2 Gummies.",
+          "path": "div.accordion-block__grid>div.accordion-block__content>div.accordion-block__heading>h2.title",
+          "seq": 23
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/icon-stress-moody.webp?v=1772658265&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/icon-stress-moody.webp?v=1772658265&width=72 72w",
+          "alt": "Stressed Face Icon",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Stress & Mood Swings",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 35
+        },
+        {
+          "type": "text",
+          "text": "With Vitamin B6 for mood regulation and Vitamin B12 for energy balance, these gummies help support emotional stability.*",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 48
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/icon-pencil.png?v=1772577796&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/icon-pencil.png?v=1772577796&width=72 72w",
+          "alt": "",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Lack of Motivation",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 62
+        },
+        {
+          "type": "text",
+          "text": "Packed with Vitamin B1 for brain health and Vitamin B2 for cognitive support - to help your teen stay on track while they balance school, sports, and everything in between.*",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 75
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/icon-bad-skin.avif?v=1772658393&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/icon-bad-skin.avif?v=1772658393&width=72 72w",
+          "alt": "Skin with Pimple Icon.",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Bad Skin",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 89
+        },
+        {
+          "type": "text",
+          "text": "Vitamin A and Vitamin E support skin health, helping teens maintain a clear and balanced complexion.",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 102
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/icon-immunity.avif?v=1772577642&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/icon-immunity.avif?v=1772577642&width=72 72w",
+          "alt": "",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Weakened Immunity",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 116
+        },
+        {
+          "type": "text",
+          "text": "With immune-supporting Vitamin C and D3, plus key B vitamins that help keep their systems running smoothly. Our formula helps build a strong foundation to tackle whatever the day throws at them.",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 129
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72 72w",
+          "alt": "",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Trouble Sleeping",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 143
+        },
+        {
+          "type": "text",
+          "text": "Vitamin D3 helps regulate melatonin, the hormone that controls sleep cycles. Combined with B6, it supports calmer bedtimes and better rest for growing toddlers.*",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 156
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72 72w",
+          "alt": "",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Poor Sleep Habits",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 170
+        },
+        {
+          "type": "text",
+          "text": "Vitamin D3 and Magnesium work together to encourage restful sleep, so kids wake up refreshed and ready to conquer their goals.*",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 183
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72 72w",
+          "alt": "",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Picky Eating",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 197
+        },
+        {
+          "type": "text",
+          "text": "Vitamin A and Vitamin B9 support cell growth and development, helping to fill in nutritional gaps that teens may have when they only want junk food or continue to skip meals.*",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 210
+        },
+        {
+          "type": "a-open",
+          "href": "#standalone-product-section",
+          "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__cta>a.button"
+        },
+        {
+          "type": "text",
+          "text": "Shop Now",
+          "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__cta>a.button",
+          "seq": 221
+        },
+        {
+          "type": "text",
+          "text": "45-Day Money Back Guarantee",
+          "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__guarantee>span.accordion-block__guarantee-text",
+          "seq": 231
+        }
+      ]
     },
     {
-     "type": "text",
-     "text": "Most Kids Are",
-     "path": "div.section--padding>div.page-width>div.accordion-block__heading-wrapper>h2.title",
-     "seq": 6
+      "original_id": "accordion_block_QpghhN",
+      "raw_bytes": 25985,
+      "nodes": [
+        {
+          "type": "text",
+          "text": "id=\"shopify-section-template--19023949758562__accordion_block_QpghhN\" class=\"shopify-section section\">",
+          "path": "",
+          "seq": 0
+        },
+        {
+          "type": "text",
+          "text": "Raising the Bar on Your Child's Nutrition",
+          "path": "div.section--padding>div.page-width>div.accordion-block__heading-wrapper>h2.title",
+          "seq": 6
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=1500",
+          "srcset": "//firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=165 165w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=360 360w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=535 535w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=750 750w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=1100 1100w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif",
+          "alt": "",
+          "path": "div.accordion-block__container>div.accordion-block__grid>div.accordion-block__media>div.accordion-block__image-wrapper"
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=1500",
+          "srcset": "//firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=165 165w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=360 360w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=535 535w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=750 750w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=1100 1100w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif",
+          "alt": "",
+          "path": "div.accordion-block__container>div.accordion-block__grid>div.accordion-block__media>div.accordion-block__image-wrapper"
+        },
+        {
+          "type": "text",
+          "text": "Raising the Bar on Your Child's Nutrition",
+          "path": "div.accordion-block__grid>div.accordion-block__content>div.accordion-block__heading>h2.title",
+          "seq": 19
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72 72w",
+          "alt": "",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Fights Hidden Hunger",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 31
+        },
+        {
+          "type": "text",
+          "text": "80% of children don't eat enough fruits and veggies, contributing to a nutrient deficiency known as hidden hunger. Our gummies fight hidden hunger with essential nutrients critical to development.",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 44
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/old-icon-microscope.avif?v=1771541426&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/old-icon-microscope.avif?v=1771541426&width=72 72w",
+          "alt": "",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Developed Alongside Harvard & Yale Scientists",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 58
+        },
+        {
+          "type": "text",
+          "text": "Our product was crafted with input from leading scientists at Harvard and Yale, combining the latest research with high-quality ingredients to deliver a multivitamin parents can trust.",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 71
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/old-icon-atom-chemistry.avif?v=1771541426&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/old-icon-atom-chemistry.avif?v=1771541426&width=72 72w",
+          "alt": "",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Backed by Modern Science",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 85
+        },
+        {
+          "type": "text",
+          "text": "Vitamin B6 supports natural energy regulation, promoting healthier sleep patterns and making it easier for kids to get restful sleep.*",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 98
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/old-icon-stethoscope.avif?v=1771541426&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/old-icon-stethoscope.avif?v=1771541426&width=72 72w",
+          "alt": "",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Pediatrician-Approved",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 112
+        },
+        {
+          "type": "text",
+          "text": "Recommended by pediatricians, our multivitamin is designed to meet the unique needs of your family ensuring they get the support they need from a trusted source.",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 125
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/Rivo-Icon-Checkmark.svg?v=1762862239&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/Rivo-Icon-Checkmark.svg?v=1762862239&width=72 72w",
+          "alt": "A blue circle with a white check mark in the center, surrounded by a scalloped edge, resembling a verification badge.",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Clean Label Project® Purity Award",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 139
+        },
+        {
+          "type": "text",
+          "text": "Our products were independently tested by Clean Label Project® for harmful chemicals like heavy metals, pesticides, and plasticizers, exceeding typical industry practices.",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 152
+        },
+        {
+          "type": "img",
+          "src": "//firstday.com/cdn/shop/files/icon-list-ingredients-sourcing.avif?v=1772658974&width=72",
+          "srcset": "//firstday.com/cdn/shop/files/icon-list-ingredients-sourcing.avif?v=1772658974&width=72 72w",
+          "alt": "",
+          "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
+        },
+        {
+          "type": "text",
+          "text": "Ingredients Sourcing and Dosage",
+          "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
+          "seq": 166
+        },
+        {
+          "type": "text",
+          "text": "We source each ingredient with care, choosing only the highest quality vitamins and minerals. Our dosage is tailored for teens, providing safe and effective support without risking overuse or unwanted additives.",
+          "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
+          "seq": 179
+        },
+        {
+          "type": "a-open",
+          "href": "#standalone-product-section",
+          "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__cta>a.button"
+        },
+        {
+          "type": "text",
+          "text": "Start Today",
+          "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__cta>a.button",
+          "seq": 190
+        },
+        {
+          "type": "text",
+          "text": "45-Day Money Back Guarantee",
+          "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__guarantee>span.accordion-block__guarantee-text",
+          "seq": 200
+        }
+      ]
     },
     {
-     "type": "text",
-     "text": "Missing Key Nutrients",
-     "path": "div.page-width>div.accordion-block__heading-wrapper>h2.title>span.accordion-block__highlight",
-     "seq": 7
-    },
-    {
-     "type": "text",
-     "text": ". Get Help in Just 2 Gummies.",
-     "path": "div.section--padding>div.page-width>div.accordion-block__heading-wrapper>h2.title",
-     "seq": 8
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1500",
-     "srcset": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=165 165w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=360 360w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=535 535w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=750 750w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1100 1100w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=177265821",
-     "alt": "",
-     "path": "div.accordion-block__container>div.accordion-block__grid>div.accordion-block__media>div.accordion-block__image-wrapper"
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1500",
-     "srcset": "//firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=165 165w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=360 360w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=535 535w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=750 750w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=1772658217&width=1100 1100w, //firstday.com/cdn/shop/files/wheel-teens-multi-tdk.avif?v=177265821",
-     "alt": "",
-     "path": "div.accordion-block__container>div.accordion-block__grid>div.accordion-block__media>div.accordion-block__image-wrapper"
-    },
-    {
-     "type": "text",
-     "text": "Most Kids Are",
-     "path": "div.accordion-block__grid>div.accordion-block__content>div.accordion-block__heading>h2.title",
-     "seq": 21
-    },
-    {
-     "type": "text",
-     "text": "Missing Key Nutrients",
-     "path": "div.accordion-block__content>div.accordion-block__heading>h2.title>span.accordion-block__highlight",
-     "seq": 22
-    },
-    {
-     "type": "text",
-     "text": ". Get Help in Just 2 Gummies.",
-     "path": "div.accordion-block__grid>div.accordion-block__content>div.accordion-block__heading>h2.title",
-     "seq": 23
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/icon-stress-moody.webp?v=1772658265&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/icon-stress-moody.webp?v=1772658265&width=72 72w",
-     "alt": "Stressed Face Icon",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Stress & Mood Swings",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 35
-    },
-    {
-     "type": "text",
-     "text": "With Vitamin B6 for mood regulation and Vitamin B12 for energy balance, these gummies help support emotional stability.*",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 48
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/icon-pencil.png?v=1772577796&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/icon-pencil.png?v=1772577796&width=72 72w",
-     "alt": "",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Lack of Motivation",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 62
-    },
-    {
-     "type": "text",
-     "text": "Packed with Vitamin B1 for brain health and Vitamin B2 for cognitive support - to help your teen stay on track while they balance school, sports, and everything in between.*",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 75
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/icon-bad-skin.avif?v=1772658393&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/icon-bad-skin.avif?v=1772658393&width=72 72w",
-     "alt": "Skin with Pimple Icon.",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Bad Skin",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 89
-    },
-    {
-     "type": "text",
-     "text": "Vitamin A and Vitamin E support skin health, helping teens maintain a clear and balanced complexion.",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 102
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/icon-immunity.avif?v=1772577642&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/icon-immunity.avif?v=1772577642&width=72 72w",
-     "alt": "",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Weakened Immunity",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 116
-    },
-    {
-     "type": "text",
-     "text": "With immune-supporting Vitamin C and D3, plus key B vitamins that help keep their systems running smoothly. Our formula helps build a strong foundation to tackle whatever the day throws at them.",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 129
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72 72w",
-     "alt": "",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Trouble Sleeping",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 143
-    },
-    {
-     "type": "text",
-     "text": "Vitamin D3 helps regulate melatonin, the hormone that controls sleep cycles. Combined with B6, it supports calmer bedtimes and better rest for growing toddlers.*",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 156
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/icon-moon.avif?v=1772577642&width=72 72w",
-     "alt": "",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Poor Sleep Habits",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 170
-    },
-    {
-     "type": "text",
-     "text": "Vitamin D3 and Magnesium work together to encourage restful sleep, so kids wake up refreshed and ready to conquer their goals.*",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 183
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72 72w",
-     "alt": "",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Picky Eating",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 197
-    },
-    {
-     "type": "text",
-     "text": "Vitamin A and Vitamin B9 support cell growth and development, helping to fill in nutritional gaps that teens may have when they only want junk food or continue to skip meals.*",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 210
-    },
-    {
-     "type": "a-open",
-     "href": "#standalone-product-section",
-     "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__cta>a.button"
-    },
-    {
-     "type": "text",
-     "text": "Shop Now",
-     "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__cta>a.button",
-     "seq": 221
-    },
-    {
-     "type": "text",
-     "text": "45-Day Money Back Guarantee",
-     "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__guarantee>span.accordion-block__guarantee-text",
-     "seq": 231
+      "original_id": "faq_yFdkhp",
+      "raw_bytes": 227,
+      "nodes": [
+        {
+          "type": "text",
+          "text": "id=\"shopify-section-template--19023949758562__faq_yFdkhp\" class=\"shopify-section section\">",
+          "path": "",
+          "seq": 0
+        }
+      ]
     }
-   ]
-  },
-  {
-   "original_id": "accordion_block_QpghhN",
-   "raw_bytes": 25985,
-   "nodes": [
-    {
-     "type": "text",
-     "text": "id=\"shopify-section-template--19023949758562__accordion_block_QpghhN\" class=\"shopify-section section\">",
-     "path": "",
-     "seq": 0
-    },
-    {
-     "type": "text",
-     "text": "Raising the Bar on Your Child's Nutrition",
-     "path": "div.section--padding>div.page-width>div.accordion-block__heading-wrapper>h2.title",
-     "seq": 6
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=1500",
-     "srcset": "//firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=165 165w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=360 360w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=535 535w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=750 750w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=1100 1100w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif",
-     "alt": "",
-     "path": "div.accordion-block__container>div.accordion-block__grid>div.accordion-block__media>div.accordion-block__image-wrapper"
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=1500",
-     "srcset": "//firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=165 165w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=360 360w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=535 535w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=750 750w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif?v=1772658651&width=1100 1100w, //firstday.com/cdn/shop/files/teens-multi-holding-tdk.avif",
-     "alt": "",
-     "path": "div.accordion-block__container>div.accordion-block__grid>div.accordion-block__media>div.accordion-block__image-wrapper"
-    },
-    {
-     "type": "text",
-     "text": "Raising the Bar on Your Child's Nutrition",
-     "path": "div.accordion-block__grid>div.accordion-block__content>div.accordion-block__heading>h2.title",
-     "seq": 19
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/icon-broccoli.avif?v=1772574778&width=72 72w",
-     "alt": "",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Fights Hidden Hunger",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 31
-    },
-    {
-     "type": "text",
-     "text": "80% of children don't eat enough fruits and veggies, contributing to a nutrient deficiency known as hidden hunger. Our gummies fight hidden hunger with essential nutrients critical to development.",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 44
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/old-icon-microscope.avif?v=1771541426&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/old-icon-microscope.avif?v=1771541426&width=72 72w",
-     "alt": "",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Developed Alongside Harvard & Yale Scientists",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 58
-    },
-    {
-     "type": "text",
-     "text": "Our product was crafted with input from leading scientists at Harvard and Yale, combining the latest research with high-quality ingredients to deliver a multivitamin parents can trust.",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 71
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/old-icon-atom-chemistry.avif?v=1771541426&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/old-icon-atom-chemistry.avif?v=1771541426&width=72 72w",
-     "alt": "",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Backed by Modern Science",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 85
-    },
-    {
-     "type": "text",
-     "text": "Vitamin B6 supports natural energy regulation, promoting healthier sleep patterns and making it easier for kids to get restful sleep.*",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 98
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/old-icon-stethoscope.avif?v=1771541426&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/old-icon-stethoscope.avif?v=1771541426&width=72 72w",
-     "alt": "",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Pediatrician-Approved",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 112
-    },
-    {
-     "type": "text",
-     "text": "Recommended by pediatricians, our multivitamin is designed to meet the unique needs of your family ensuring they get the support they need from a trusted source.",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 125
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/Rivo-Icon-Checkmark.svg?v=1762862239&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/Rivo-Icon-Checkmark.svg?v=1762862239&width=72 72w",
-     "alt": "A blue circle with a white check mark in the center, surrounded by a scalloped edge, resembling a verification badge.",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Clean Label Project® Purity Award",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 139
-    },
-    {
-     "type": "text",
-     "text": "Our products were independently tested by Clean Label Project® for harmful chemicals like heavy metals, pesticides, and plasticizers, exceeding typical industry practices.",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 152
-    },
-    {
-     "type": "img",
-     "src": "//firstday.com/cdn/shop/files/icon-list-ingredients-sourcing.avif?v=1772658974&width=72",
-     "srcset": "//firstday.com/cdn/shop/files/icon-list-ingredients-sourcing.avif?v=1772658974&width=72 72w",
-     "alt": "",
-     "path": "details>summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__icon-badge"
-    },
-    {
-     "type": "text",
-     "text": "Ingredients Sourcing and Dosage",
-     "path": "summary.accordion-block__summary>div.accordion-block__header>div.accordion-block__header-text>h3.accordion-block__title",
-     "seq": 166
-    },
-    {
-     "type": "text",
-     "text": "We source each ingredient with care, choosing only the highest quality vitamins and minerals. Our dosage is tailored for teens, providing safe and effective support without risking overuse or unwanted additives.",
-     "path": "details>div.accordion-block__body>div.metafield-rich_text_field>p",
-     "seq": 179
-    },
-    {
-     "type": "a-open",
-     "href": "#standalone-product-section",
-     "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__cta>a.button"
-    },
-    {
-     "type": "text",
-     "text": "Start Today",
-     "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__cta>a.button",
-     "seq": 190
-    },
-    {
-     "type": "text",
-     "text": "45-Day Money Back Guarantee",
-     "path": "div.accordion-block__container>div.accordion-block__cta-block>div.accordion-block__guarantee>span.accordion-block__guarantee-text",
-     "seq": 200
-    }
-   ]
-  },
-  {
-   "original_id": "faq_yFdkhp",
-   "raw_bytes": 227,
-   "nodes": [
-    {
-     "type": "text",
-     "text": "id=\"shopify-section-template--19023949758562__faq_yFdkhp\" class=\"shopify-section section\">",
-     "path": "",
-     "seq": 0
-    }
-   ]
-  }
- ]
+  ],
+  "text_lines": [
+    "Frequently Asked Questions"
+  ],
+  "faq_note": "The original page's third media-accordion is its FAQ and it renders empty, so this build ships no FAQ either (ASSUMPTIONS #3). The heading lives here rather than in the extraction because there was no rendered FAQ to extract it from — template-fragments/faq.json stays ready for when content exists."
 }

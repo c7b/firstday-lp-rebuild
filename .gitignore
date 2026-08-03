@@ -16,3 +16,7 @@ node_modules
 
 # build output — deployed to Netlify, not served from the theme
 dist/
+
+# Netlify CLI local state — carries an absolute local path, not repo content
+.netlify/
+__pycache__

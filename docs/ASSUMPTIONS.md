@@ -156,6 +156,12 @@ string by string by `tools/verify_build.py`.
 - **Urgency banner month.** The original says July. This says August — the month is the only
   changed word. A banner naming last month reads as an abandoned page, which is the opposite
   of what the section is for.
+- **One pronoun in the closing hero.** The original opens that block "I created First Day";
+  this build says "We created". It follows directly from the photo swap above it: with the
+  founder's portrait moved into its own section and a family photo in its place, a first-person
+  singular voice standing next to a picture of a family no longer parses. One word, one
+  section, and the variant is recorded in `docs/context/sections/lp-hero.json` so the fidelity
+  gate checks it rather than ignoring it.
 
 ## Known limit of the variant demo
 

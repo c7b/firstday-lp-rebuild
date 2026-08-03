@@ -180,6 +180,14 @@ def main():
     html = html.replace("__STATS__", json.dumps(stats))
     DIST.mkdir(exist_ok=True)
     (DIST / "index.html").write_text(html, encoding="utf-8")
+
+    # Keep this out of search results. The meta tag in the template covers a rendered page;
+    # these two cover everything else — a crawler that never renders, and one that only reads
+    # robots.txt. The page is public because a link is the simplest way to hand it over, not
+    # because it should be findable by someone who was not handed one.
+    (DIST / "_headers").write_text(
+        "/*\n  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet\n", encoding="utf-8")
+    (DIST / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
     print(f"wrote dist/index.html — {stats['pages']} pages, {stats['vendors']} vendors, "
           f"{stats['products']} products, {len(payload['ads'])} ad destinations")
     print(f"  size: {(DIST / 'index.html').stat().st_size // 1024} KB")
