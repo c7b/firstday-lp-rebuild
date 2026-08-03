@@ -33,10 +33,6 @@
   fill: currentColor;
 }
 
-.lp-laurel--right {
-  transform: scaleX(-1);
-}
-
 .lp-clinician-reviews__heading {
   max-width: 70rem;
   margin: 1rem auto 0;

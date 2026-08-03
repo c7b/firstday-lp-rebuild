@@ -1,15 +1,13 @@
 {
   "type": "lp-urgency-banner",
   "settings": {
-    "text_before": "🚨 Due to the high demand,",
-    "text_highlight": "July",
-    "text_after": "has a very high risk of selling out!",
     "cta_label": "Claim Yours Now!",
     "cta_link": "#standalone-product-section",
     "color_scheme": "scheme-1",
     "padding_top": 12,
     "padding_bottom": 12,
-    "anchor_id": ""
+    "anchor_id": "",
+    "text": "<p>🚨 Due to the high demand, <strong>July</strong> has a very high risk of selling out!</p>"
   },
   "blocks": {},
   "block_order": []

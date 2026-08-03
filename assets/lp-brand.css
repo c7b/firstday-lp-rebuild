@@ -48,10 +48,6 @@
   fill: currentColor;
 }
 
-.lp-laurel--right {
-  transform: scaleX(-1);
-}
-
 /* per-instance highlight colour: the original uses brand blue on the opening hero and red on
    the founder-story hero, so it's a setting rather than a hardcoded value */
 .lp-hero__heading em,
@@ -79,3 +75,20 @@
 }
 
 .lp-caduceus { margin: 0 .2rem; }
+
+/* on the navy band the link must read as a link against a dark ground, not as brand blue */
+.lp-clinicians-band a,
+.lp-clinicians-band__more {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+.lp-clinicians-band a:hover { text-decoration-thickness: 0.14em; }
+
+.lp-clinicians-band a:focus-visible {
+  outline: 0.2rem solid #fff;
+  outline-offset: 0.3rem;
+  border-radius: 2px;
+}
