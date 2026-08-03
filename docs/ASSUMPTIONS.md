@@ -156,3 +156,17 @@ string by string by `tools/verify_build.py`.
 - **Urgency banner month.** The original says July. This says August — the month is the only
   changed word. A banner naming last month reads as an abandoned page, which is the opposite
   of what the section is for.
+
+## Known limit of the variant demo
+
+The Kids and Toddlers funnels override one setting — the product — and everything
+product-shaped follows from that product's own metafields: title, benefit line, age range,
+flavour, servings, price, selling plan. What does *not* follow is the science tabs, whose
+claims are a section-level metaobject list. So the Toddlers page still argues "Focus in
+Class", which is a teen claim.
+
+Fixing it is one more line in `variant()` pointing at a toddler claim set — the mechanism is
+already there. What is missing is the content: First Day has no live Toddlers LP to extract
+those claims from, and writing them here would mean inventing clinical copy for a children's
+supplement. That is the one thing this build will not do, so the tabs stay teen-flavoured and
+the gap is written down instead.
