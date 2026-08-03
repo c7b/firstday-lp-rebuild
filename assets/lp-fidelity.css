@@ -51,7 +51,10 @@
 .shopify-section[class*='lp-'] .lp-hero__heading,
 .shopify-section[class*='lp-'] .lp-media-accordion__heading,
 .shopify-section[class*='lp-'] .lp-science-tabs__heading,
-
+.shopify-section[class*='lp-'] .lp-science-tabs__panel-heading {
+  font-weight: 600;
+  letter-spacing: normal;
+}
 
 /* Hero h1 — measured 28px, 28px line-height, capitalize. Ours ran 42px at desktop. */
 .lp-hero__heading {
