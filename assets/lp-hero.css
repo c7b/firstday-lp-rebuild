@@ -9,7 +9,7 @@
 
 .lp-hero__container {
   display: grid;
-  gap: 1.6rem;
+  gap: 2.6rem;
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -93,7 +93,7 @@
 }
 
 .lp-hero__guarantee {
-  margin: .8rem 0 0;
+  margin: 1.2rem 0 0;
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -118,12 +118,12 @@
   aspect-ratio: 1 / 1;
 }
 
+/* Flat grey pill, no shadow — sampled from the original: #e9eaeb on white, fully rounded. */
 .lp-hero__stat-badge {
   max-width: 100%;
-  padding: .8rem 1rem;
-  border-radius: 1.2rem;
-  background: #fff;
-  box-shadow: 0 .4rem 1.6rem rgb(0 0 0 / 15%);
+  padding: .9rem 1.6rem;
+  border-radius: 999px;
+  background: #e9eaeb;
   color: #262626;
 }
 
@@ -135,25 +135,26 @@
 
 .lp-hero__stat-icons {
   display: inline-flex;
-  margin-left: -.3rem;
+  align-items: center;
+  gap: .5rem;
+  margin-left: .4rem;
 }
 
 .lp-hero__stat-icons img {
   width: 2.6rem;
   height: 2.6rem;
-  margin-left: -.8rem;
   object-fit: contain;
 }
 
+/* Same treatment as the badge: the original uses flat #f1f1ef panels, never a drop shadow. */
 .lp-hero__testimonial {
   display: grid;
-  grid-template-columns: 4rem 1fr;
-  gap: .8rem 1.2rem;
-  margin: .8rem 0 0;
-  padding: 1.2rem;
+  grid-template-columns: 4.4rem 1fr;
+  gap: 1rem 1.4rem;
+  margin: 0;
+  padding: 1.8rem 2rem;
   border-radius: 1.2rem;
-  background: #fff;
-  box-shadow: 0 .4rem 1.6rem rgb(0 0 0 / 10%);
+  background: #f1f1ef;
   color: #262626;
 }
 
