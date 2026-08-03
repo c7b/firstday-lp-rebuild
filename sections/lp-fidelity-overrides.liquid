@@ -86,12 +86,18 @@
 
 /* The two section h2s look like one role and are not. Measured at 1440: the accordion's is
    38px on a 38px line and capitalized; the tabs' is 38px on a 53.2px line with no transform.
-   Grouping them cost a line-height and a text-transform in the previous pass. */
+   Grouping them cost a line-height and a text-transform in the previous pass.
+
+   The accordion heading is also the one element on the page that keeps #2C3E50 while
+   everything around it is #2C3D50 — the scheme-level correction above is right for the page
+   and wrong here, so it is put back by hand rather than by weakening the rule that fixed
+   forty other elements. */
 .lp-media-accordion__heading {
   font-size: 3.8rem;
   line-height: 3.8rem;
   text-transform: capitalize;
   text-align: center;
+  color: #2c3e50;
 }
 
 .lp-science-tabs__heading {

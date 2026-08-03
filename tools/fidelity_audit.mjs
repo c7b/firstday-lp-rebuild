@@ -119,10 +119,10 @@ for (const width of VIEWPORTS) {
   /* No userAgent override. Shopify's edge varies its page cache by UA, and a spoofed one was
      reliably served a render from before the last deploy — which made two real CSS changes
      look like no change at all. The default Chromium UA gets the current render. */
-  const ctx = await browser.newContext({
-    viewport: { width, height: 1000 },
-    isMobile: width < 700,
-  });
+  /* Width only. isMobile swaps in a mobile UA, and Shopify's edge keys its page cache on UA —
+     the mobile pass kept being served a render from before the deploy. Media queries answer to
+     viewport width, so nothing about the measurement needs the UA to change. */
+  const ctx = await browser.newContext({ viewport: { width, height: 1000 } });
   const a = await ctx.newPage();          // original
   const b = await ctx.newPage();          // rebuild
 
@@ -143,14 +143,31 @@ for (const width of VIEWPORTS) {
   await b.goto(bust, { waitUntil: 'domcontentloaded', timeout: 90000 });
   await b.waitForTimeout(4500);
 
-  /* State check before any measurement: a harness that silently measured the password screen
-     would report the rebuild as wildly different and be believed. */
-  const state = await b.evaluate(() => ({
-    url: location.href,
-    css: ([...document.querySelectorAll('link')].map((l) => l.href).find((h) => h.includes('lp-fidelity')) || 'NONE').split('/').pop(),
-    heading: getComputedStyle(document.querySelector('.lp-hero__heading') || document.body).fontFamily.split(',')[0],
-  }));
-  console.log(`  [${width}px] rebuild at ${state.url.slice(-46)} | ${state.css.slice(0, 40)} | h1 ${state.heading}`);
+  /* Refuse to measure a stale render.
+     Shopify's edge serves this page from a cache it keys on more than the path, and reloads
+     flap between the current render and one from before the last deploy. Numbers taken from
+     the stale one are wrong and look exactly like real numbers, which is the worst kind.
+     The sentinel is exact: the fidelity CSS is inline now and the old asset was deleted, so
+     any render still linking lp-fidelity.css is provably out of date. Reload until it is
+     gone, and fail loudly rather than report a figure that cannot be reproduced. */
+  let state;
+  for (let attempt = 1; attempt <= 12; attempt += 1) {
+    state = await b.evaluate(() => ({
+      url: location.href,
+      stale: [...document.querySelectorAll('link')].some((l) => l.href.includes('lp-fidelity.css')),
+      inline: [...document.querySelectorAll('style')].some((s) => s.textContent.includes('sofia-pro')),
+      heading: getComputedStyle(document.querySelector('.lp-hero__heading') || document.body).fontFamily.split(',')[0],
+    }));
+    if (!state.stale && state.inline) break;
+    if (attempt === 12) {
+      console.error(`  [${width}px] ABORT: still serving a pre-deploy render after 12 reloads.`);
+      process.exit(2);
+    }
+    await b.waitForTimeout(8000);
+    await b.goto(`${REBUILD}?_fid=${Date.now()}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+    await b.waitForTimeout(4000);
+  }
+  console.log(`  [${width}px] fresh render confirmed | h1 ${state.heading}`);
 
   const rows = [];
   for (const [role, origSel, ourSel, group] of PAIRS) {

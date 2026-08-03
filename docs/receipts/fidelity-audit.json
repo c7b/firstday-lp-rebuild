@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T23:33:11.485Z",
+ "generated": "2026-08-03T23:49:06.212Z",
  "original": "http://127.0.0.1:8777/fd-lp.html",
  "rebuild": "https://firstday-lp-rebuild.myshopify.com/pages/tdk-behind-the-science-lp-v2",
  "viewports": {
@@ -8,37 +8,19 @@
     "role": "hero / h1",
     "origText": "The \nScience-Backed Vitamin for Grumpy, Tired, o",
     "ourText": "The Science-Backed Vitamin for Grumpy, Tired, or",
-    "diffs": [
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "hero / cta label",
     "origText": "Unlock Better Nutrition  🍊💊",
     "ourText": "Unlock Better Nutrition 🍊💊",
-    "diffs": [
-     {
-      "property": "text-align",
-      "original": "start",
-      "rebuild": "center"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "hero / review line",
     "origText": "4.8 stars from 12,322+ reviewers",
     "ourText": "4.8 stars from 12,322+ reviewers",
-    "diffs": [
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / heading",
@@ -46,14 +28,9 @@
     "ourText": "Most Kids Are Missing Key Nutrients. Get Help in",
     "diffs": [
      {
-      "property": "font-size",
-      "original": "24px",
-      "rebuild": "38px"
-     },
-     {
-      "property": "line-height",
-      "original": "24px",
-      "rebuild": "38px"
+      "property": "color",
+      "original": "rgb(44, 62, 80)",
+      "rebuild": "rgb(44, 61, 80)"
      }
     ]
    },
@@ -61,30 +38,13 @@
     "role": "accordion / item title",
     "origText": "Stress & Mood Swings",
     "ourText": "Stress & Mood Swings",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "16px",
-      "rebuild": "18px"
-     },
-     {
-      "property": "line-height",
-      "original": "16px",
-      "rebuild": "18px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / cta label",
     "origText": "Shop Now",
     "ourText": "Shop Now",
-    "diffs": [
-     {
-      "property": "line-height",
-      "original": "18px",
-      "rebuild": "19.2px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / cta box",
@@ -102,131 +62,31 @@
     "role": "tabs / heading",
     "origText": "The Science Behind Our Multivitamin",
     "ourText": "The Science Behind Our Multivitamin",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "24px",
-      "rebuild": "38px"
-     },
-     {
-      "property": "line-height",
-      "original": "33.6px",
-      "rebuild": "38px"
-     },
-     {
-      "property": "text-transform",
-      "original": "none",
-      "rebuild": "capitalize"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "tabs / tab label",
     "origText": "Focus in Class",
     "ourText": "Focus in Class",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "16px",
-      "rebuild": "14px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "tabs / tab box",
     "origText": "Focus in Class",
     "ourText": "Focus in Class",
-    "diffs": [
-     {
-      "property": "background-color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     },
-     {
-      "property": "padding-top",
-      "original": "18px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "padding-bottom",
-      "original": "18px",
-      "rebuild": "12px"
-     },
-     {
-      "property": "border-top-width",
-      "original": "1px",
-      "rebuild": "0px"
-     },
-     {
-      "property": "border-bottom-width",
-      "original": "1px",
-      "rebuild": "0px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "tabs / panel title",
     "origText": "How This Helps*",
     "ourText": "How This Helps*",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "22px",
-      "rebuild": "24px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "30.8px",
-      "rebuild": "26.4px"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "0.6px"
-     },
-     {
-      "property": "text-align",
-      "original": "center",
-      "rebuild": "start"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "tabs / panel body",
     "origText": "Low levels of certain B vitamins can affect brai",
     "ourText": "🧠 Vitamin B1 supports brain signaling and memor",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "16px",
-      "rebuild": "18px"
-     },
-     {
-      "property": "line-height",
-      "original": "22.4px",
-      "rebuild": "25.2px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / gallery image",
@@ -243,11 +103,6 @@
       "property": "font-weight",
       "original": "708",
       "rebuild": "700"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
      }
     ]
    },
@@ -260,11 +115,6 @@
       "property": "font-weight",
       "original": "708",
       "rebuild": "700"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
      }
     ]
    },
@@ -334,24 +184,9 @@
     "ourText": "1‎ Bottle",
     "diffs": [
      {
-      "property": "font-size",
-      "original": "14px",
-      "rebuild": "16px"
-     },
-     {
       "property": "font-weight",
       "original": "708",
       "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "19.6px",
-      "rebuild": "22.4px"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
      }
     ]
    },
@@ -365,13 +200,7 @@
     "role": "buy box / qty savings box",
     "origText": "Save $15.80",
     "ourText": "Save $15.80",
-    "diffs": [
-     {
-      "property": "border-radius",
-      "original": "0px",
-      "rebuild": "4px"
-     }
-    ]
+    "diffs": []
    }
   ],
   "1440": [
@@ -379,43 +208,31 @@
     "role": "hero / h1",
     "origText": "The \nScience-Backed Vitamin for Grumpy, Tired, o",
     "ourText": "The Science-Backed Vitamin for Grumpy, Tired, or",
-    "diffs": [
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "hero / cta label",
     "origText": "Unlock Better Nutrition  🍊💊",
     "ourText": "Unlock Better Nutrition 🍊💊",
-    "diffs": [
-     {
-      "property": "text-align",
-      "original": "start",
-      "rebuild": "center"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "hero / review line",
     "origText": "4.8 stars from 12,322+ reviewers",
     "ourText": "4.8 stars from 12,322+ reviewers",
-    "diffs": [
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / heading",
     "origText": "Most Kids Are \nMissing Key Nutrients. Get Help i",
     "ourText": "Most Kids Are Missing Key Nutrients. Get Help in",
-    "diffs": []
+    "diffs": [
+     {
+      "property": "color",
+      "original": "rgb(44, 62, 80)",
+      "rebuild": "rgb(44, 61, 80)"
+     }
+    ]
    },
    {
     "role": "accordion / item title",
@@ -445,23 +262,7 @@
     "role": "tabs / heading",
     "origText": "The Science Behind Our Multivitamin",
     "ourText": "The Science Behind Our Multivitamin",
-    "diffs": [
-     {
-      "property": "line-height",
-      "original": "53.2px",
-      "rebuild": "38px"
-     },
-     {
-      "property": "text-transform",
-      "original": "none",
-      "rebuild": "capitalize"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "tabs / tab label",
@@ -473,62 +274,19 @@
     "role": "tabs / tab box",
     "origText": "Focus in Class",
     "ourText": "Focus in Class",
-    "diffs": [
-     {
-      "property": "background-color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "tabs / panel title",
     "origText": "How This Helps*",
     "ourText": "How This Helps*",
-    "diffs": [
-     {
-      "property": "font-size",
-      "original": "24px",
-      "rebuild": "36px"
-     },
-     {
-      "property": "font-weight",
-      "original": "600",
-      "rebuild": "700"
-     },
-     {
-      "property": "line-height",
-      "original": "33.6px",
-      "rebuild": "39.6px"
-     },
-     {
-      "property": "letter-spacing",
-      "original": "normal",
-      "rebuild": "0.6px"
-     },
-     {
-      "property": "text-align",
-      "original": "center",
-      "rebuild": "start"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "tabs / panel body",
     "origText": "Low levels of certain B vitamins can affect brai",
     "ourText": "🧠 Vitamin B1 supports brain signaling and memor",
-    "diffs": [
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / gallery image",
@@ -545,11 +303,6 @@
       "property": "font-weight",
       "original": "708",
       "rebuild": "700"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
      }
     ]
    },
@@ -562,11 +315,6 @@
       "property": "font-weight",
       "original": "708",
       "rebuild": "700"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
      }
     ]
    },
@@ -639,11 +387,6 @@
       "property": "font-weight",
       "original": "708",
       "rebuild": "700"
-     },
-     {
-      "property": "color",
-      "original": "rgb(44, 61, 80)",
-      "rebuild": "rgb(44, 62, 80)"
      }
     ]
    },
@@ -657,13 +400,7 @@
     "role": "buy box / qty savings box",
     "origText": "Save $15.80",
     "ourText": "Save $15.80",
-    "diffs": [
-     {
-      "property": "border-radius",
-      "original": "0px",
-      "rebuild": "4px"
-     }
-    ]
+    "diffs": []
    }
   ]
  }
