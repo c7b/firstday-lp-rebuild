@@ -123,6 +123,23 @@ def main():
         else:
             vout.write_text(vbody, encoding="utf-8")
             print(f"wrote {vout.relative_to(ROOT)} (variant: {product_handle})")
+    # --- post-debrief fidelity pass. Same sections, same settings, same copy as the delivered
+    # page; the only addition is a section that loads lp-fidelity.css. Every lp-*.css file is
+    # shared across the three funnels, so correcting one in place would also edit the page the
+    # panel reviewed. This keeps that page loading exactly what it loaded, and puts every
+    # correction in one stylesheet whose diff is the audit trail.
+    import copy as _copy
+    v2 = _copy.deepcopy(template)
+    v2["sections"]["fidelity_overrides"] = {"type": "lp-fidelity-overrides", "settings": {}}
+    v2["order"] = v2["order"] + ["fidelity_overrides"]
+    v2out = ROOT / "templates" / "page.tdk-behind-the-science-v2.json"
+    v2body = GENERATED_HEADER + json.dumps(v2, indent=2, ensure_ascii=False) + "\n"
+    if check_only:
+        problems.append(semantic_diff(v2out, v2body))
+    else:
+        v2out.write_text(v2body, encoding="utf-8")
+        print(f"wrote {v2out.relative_to(ROOT)} (fidelity pass: base + override stylesheet)")
+
     if missing:
         print(f"MISSING fragments (not included): {', '.join(missing)}")
 
