@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First Day — storefront audit</title>
+<style>
+  :root{
+    --ink:#0F172A; --ink2:#475569; --mute:#64748B; --faint:#94A3B8;
+    --line:#E2E8F0; --line2:#CBD5E1; --wash:#F1F5F9; --wash2:#EDF2F7; --card:#fff; --bg:#F8FAFC;
+    --ok:#10B981; --okd:#065F46; --okw:#D1FAE5;
+    --warn:#F59E0B; --warnd:#78350F; --warnw:#FEF3C7;
+    --bad:#EF4444; --badd:#B91C1C; --badw:#FEE2E2;
+    --info:#1D4ED8; --info2:#3B82F6; --infow:#DBEAFE;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --sh:0 1px 2px rgba(15,23,42,.05),0 6px 18px rgba(15,23,42,.04);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1240px;margin:0 auto;padding:26px 18px 90px}
+  a{color:var(--info)}
+
+  /* header */
+  .top{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;justify-content:space-between;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+  h1{margin:0;font-size:26px;letter-spacing:-.02em}
+  .sub{margin:4px 0 0;color:var(--mute);font-size:14px;max-width:70ch}
+  .stamp{font-family:var(--mono);font-size:11px;color:var(--faint);text-align:right}
+
+  /* metric tiles */
+  .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:18px 0 8px}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;box-shadow:var(--sh);cursor:pointer;transition:transform .12s ease,border-color .12s ease}
+  .tile:hover{transform:translateY(-1px);border-color:var(--line2)}
+  .tile.on{border-color:var(--info);box-shadow:0 0 0 2px var(--infow)}
+  .tile .big{font-family:var(--mono);font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+  .tile .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-top:2px}
+  .big.ok{color:var(--okd)} .big.warn{color:var(--warnd)} .big.bad{color:var(--badd)}
+
+  /* sections */
+  section{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--sh);overflow:hidden}
+  .head{display:flex;gap:12px;align-items:center;padding:14px 16px;cursor:pointer;user-select:none}
+  .head:hover{background:var(--wash2)}
+  .head h2{margin:0;font-size:15px;letter-spacing:-.01em;flex:1}
+  .head .count{font-family:var(--mono);font-size:11px;color:var(--mute);background:var(--wash);border:1px solid var(--line);padding:2px 8px;border-radius:99px}
+  .chev{transition:transform .18s ease;color:var(--faint);font-size:12px}
+  section.open .chev{transform:rotate(90deg)}
+  .body{display:none;padding:0 16px 16px;border-top:1px solid var(--line)}
+  section.open .body{display:block;animation:fade .18s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+  .note{color:var(--mute);font-size:13.5px;margin:12px 0}
+
+  /* tables */
+  .scroll{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:7px 12px 7px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:500;position:sticky;top:0;background:var(--card)}
+  td.n,th.n{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;padding-right:0}
+  tbody tr:hover{background:var(--wash2)}
+  .hcell{font-family:var(--mono);font-size:12.5px}
+
+  /* chips */
+  .chip{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:99px;border:1px solid var(--line2);color:var(--mute);background:var(--wash)}
+  .chip.ok{background:var(--okw);border-color:#6EE7B7;color:var(--okd)}
+  .chip.warn{background:var(--warnw);border-color:#FCD34D;color:var(--warnd)}
+  .chip.bad{background:var(--badw);border-color:#FCA5A5;color:var(--badd)}
+  .chip.info{background:var(--infow);border-color:#93C5FD;color:var(--info)}
+
+  /* vendor grid */
+  .vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(56px,1fr));gap:8px;margin-top:12px}
+  .vend{position:relative;display:grid;place-items:center;aspect-ratio:1;background:var(--wash);border:1px solid var(--line);border-radius:10px;cursor:default;transition:transform .12s ease,box-shadow .12s ease}
+  .vend:hover{transform:translateY(-2px);box-shadow:var(--sh);border-color:var(--line2);z-index:5}
+  .vend img{width:26px;height:26px;object-fit:contain}
+  .vend .fallback{font-family:var(--mono);font-size:14px;font-weight:600;color:var(--mute)}
+  .vend .tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(4px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:7px 10px;border-radius:8px;font-size:12px;white-space:nowrap;transition:opacity .14s ease,transform .14s ease;z-index:10;box-shadow:0 6px 20px rgba(15,23,42,.22)}
+  .vend .tip b{display:block;font-size:12.5px}
+  .vend .tip span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+  .vend:hover .tip{opacity:1;transform:translateX(-50%) translateY(0)}
+  .catrow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:14px}
+  .catlbl{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);width:110px;flex:none}
+
+  /* node map */
+  .stage{position:relative;height:520px;background:var(--ink);border-radius:10px;overflow:hidden;margin-top:12px}
+  .stage canvas{display:block;width:100%;height:100%}
+  .legend{position:absolute;top:10px;left:12px;display:flex;gap:6px;flex-wrap:wrap}
+  .lg{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#CBD5E1;background:rgba(15,23,42,.72);border:1px solid #334155;padding:3px 8px;border-radius:99px}
+  .dot{width:8px;height:8px;border-radius:50%}
+  .nodeinfo{position:absolute;right:12px;top:12px;width:250px;background:rgba(15,23,42,.94);border:1px solid #334155;border-radius:10px;padding:12px;color:#E2E8F0;font-size:12.5px;display:none}
+  .nodeinfo.on{display:block}
+  .nodeinfo h4{margin:0 0 6px;font-size:13px;font-family:var(--mono);overflow-wrap:anywhere}
+  .nodeinfo .kv{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:#94A3B8;padding:2px 0}
+  .nodeinfo .job{border-top:1px solid #334155;padding-top:6px;margin-top:6px;font-size:11.5px}
+
+  .filters{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+  .fchip{font-family:var(--mono);font-size:11px;padding:5px 11px;border-radius:99px;border:1px solid var(--line2);background:var(--card);color:var(--ink2);cursor:pointer}
+  .fchip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+  input[type=search]{font-family:var(--mono);font-size:12px;padding:6px 11px;border-radius:99px;border:1px solid var(--line2);background:var(--card);color:var(--ink);min-width:180px}
+
+  .bar{height:6px;border-radius:99px;background:var(--wash);overflow:hidden;min-width:70px}
+  .bar i{display:block;height:100%;background:var(--info2)}
+  .bar.warn i{background:var(--warn)} .bar.ok i{background:var(--ok)}
+  footer{margin-top:34px;color:var(--mute);font-size:12.5px;line-height:1.6}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>First Day — storefront audit</h1>
+      <p class="sub">Measured entirely from what the store publishes to anyone: Shopify's own JSON
+        routes, the sitemap, the HTML of every landing page, and Meta's public ad library. No
+        account access. Click any tile to filter, any row to open the real page.</p>
+    </div>
+    <div class="stamp" id="stamp"></div>
+  </div>
+
+  <div class="metrics" id="metrics"></div>
+
+  <section class="open" id="s-map">
+    <div class="head"><span class="chev">▶</span><h2>The estate, as a map</h2><span class="count" id="mapcount"></span></div>
+    <div class="body">
+      <p class="note">One node per landing page. Size is page weight, colour is how it is built,
+        edges join pages of the same funnel. Ringed nodes carry active ads — that is where a
+        migration starts. Hover a node for detail.</p>
+      <div class="filters">
+        <button class="fchip" data-f="replo" aria-pressed="false">page builder</button>
+        <button class="fchip" data-f="sections" aria-pressed="false">shopify sections</button>
+        <button class="fchip" data-f="advertised" aria-pressed="false">has active ads</button>
+        <input type="search" id="q" placeholder="filter by handle" aria-label="Filter by handle">
+      </div>
+      <div class="stage">
+        <canvas id="cv"></canvas>
+        <div class="legend">
+          <span class="lg"><i class="dot" style="background:#F59E0B"></i>page builder</span>
+          <span class="lg"><i class="dot" style="background:#10B981"></i>sections</span>
+          <span class="lg"><i class="dot" style="background:#fff"></i>rebuilt</span>
+          <span class="lg">ring = active ads</span>
+        </div>
+        <div class="nodeinfo" id="ni"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="s-ads">
+    <div class="head"><span class="chev">▶</span><h2>Where the ads actually send people</h2><span class="count" id="adcount"></span></div>
+    <div class="body"><div class="scroll"><table id="tads"></table></div>
+      <p class="note">Counts are how often each destination appeared in the loaded ad-library
+        results — not spend, not impressions. Presence is strong evidence; absence is weak.</p>
+    </div>
+  </section>
+
+  <section id="s-stack">
+    <div class="head"><span class="chev">▶</span><h2>Every tool loading on the storefront</h2><span class="count" id="vcount"></span></div>
+    <div class="body">
+      <p class="note">Hover any icon for the app and what it does. Grouped by job — a row with
+        more than one icon is more than one vendor doing the same thing.</p>
+      <div id="vcats"></div>
+      <div class="scroll" style="margin-top:16px"><table id="tvend"></table></div>
+    </div>
+  </section>
+
+  <section id="s-pages">
+    <div class="head"><span class="chev">▶</span><h2>Every landing page measured</h2><span class="count" id="pcount"></span></div>
+    <div class="body">
+      <div class="filters">
+        <button class="fchip" data-pf="replo" aria-pressed="false">page builder only</button>
+        <button class="fchip" data-pf="sections" aria-pressed="false">sections only</button>
+        <button class="fchip" data-pf="advertised" aria-pressed="false">advertised only</button>
+      </div>
+      <div class="scroll"><table id="tpages"></table></div>
+    </div>
+  </section>
+
+  <section id="s-prod">
+    <div class="head"><span class="chev">▶</span><h2>The catalogue, including its shadow copy</h2><span class="count" id="prcount"></span></div>
+    <div class="body">
+      <div class="filters">
+        <button class="fchip" data-rf="test" aria-pressed="false">typed “Test”</button>
+        <button class="fchip" data-rf="bundle" aria-pressed="false">bundles &amp; packs</button>
+        <input type="search" id="pq" placeholder="filter products" aria-label="Filter products">
+      </div>
+      <div class="scroll"><table id="tprod"></table></div>
+    </div>
+  </section>
+
+  <section id="s-site">
+    <div class="head"><span class="chev">▶</span><h2>Sitemap shape and staleness</h2><span class="count" id="scount"></span></div>
+    <div class="body"><div class="scroll"><table id="tsite"></table></div></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const D = __DATA__, S = __STATS__;
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+$('#stamp').innerHTML = 'generated ' + esc((D.generated || '').slice(0, 16).replace('T', ' ')) + ' UTC<br>sources: shopify json · sitemap · live html · meta ad library';
+
+/* ---------- metric tiles ---------- */
+const TILES = [
+  ['urls in sitemap', S.urls, '', null],
+  ['landing pages', S.pages, '', null],
+  ['page-builder pages', S.replo + '/' + S.pages, 'warn', 'replo'],
+  ['html shipped', S.mb + ' MB', 'warn', null],
+  ['tools per page', S.vendors, 'warn', null],
+  ['pages with ads', S.advertised, 'ok', 'advertised'],
+  ['products', S.products, '', null],
+  ['typed “Test”', S.tests, 'warn', 'test'],
+  ['untouched since 2024', S.stale, '', null],
+  ['jobs queued', S.backlog, '', null],
+];
+$('#metrics').innerHTML = TILES.map(([l, v, c, f], i) =>
+  `<div class="tile" data-tile="${i}" ${f ? `data-jump="${f}"` : ''}><div class="big ${c}">${esc(v)}</div><div class="lbl">${esc(l)}</div></div>`).join('');
+
+/* ---------- collapsibles ---------- */
+document.querySelectorAll('section .head').forEach(h => {
+  h.addEventListener('click', () => h.parentElement.classList.toggle('open'));
+});
+const openSection = (id) => { const s = $(id); s.classList.add('open'); s.scrollIntoView({behavior:'smooth', block:'start'}); };
+
+/* ---------- ads ---------- */
+const ads = (D.ads || []).slice().sort((a,b)=>b.occurrences-a.occurrences);
+$('#adcount').textContent = ads.length + ' destinations';
+$('#tads').innerHTML = `<thead><tr><th>Destination</th><th>Type</th><th class="n">Ad links</th><th>Share</th></tr></thead><tbody>` +
+  ads.map(a => {
+    const max = ads[0].occurrences || 1;
+    return `<tr><td class="hcell"><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.url.replace('https://',''))}</a></td>
+      <td><span class="chip ${a.type==='landing-page'?'info':''}">${esc(a.type)}</span></td>
+      <td class="n">${a.occurrences}</td>
+      <td><span class="bar ok" style="display:inline-block;width:110px"><i style="width:${Math.round(100*a.occurrences/max)}%"></i></span></td></tr>`;
+  }).join('') + '</tbody>';
+
+/* ---------- vendors ---------- */
+const vends = D.vendors || [];
+$('#vcount').textContent = vends.length + ' tools';
+const byCat = {};
+vends.forEach(v => { (byCat[v.category] = byCat[v.category] || []).push(v); });
+$('#vcats').innerHTML = Object.entries(byCat).sort((a,b)=>b[1].length-a[1].length).map(([cat, list]) =>
+  `<div class="catrow"><span class="catlbl">${esc(cat)}${list.length>1?' ×'+list.length:''}</span>
+    ${list.map(v => `<span class="vend">${v.icon ? `<img src="${v.icon}" alt="">` : `<span class="fallback">${esc(v.vendor[0])}</span>`}
+      <span class="tip"><b>${esc(v.vendor)}</b><span>${esc(v.category)} · on ${v.coverage_pct}% of pages</span></span></span>`).join('')}
+  </div>`).join('');
+$('#tvend').innerHTML = `<thead><tr><th>App</th><th>Job</th><th class="n">Pages</th><th>Coverage</th></tr></thead><tbody>` +
+  vends.map(v => `<tr><td>${v.icon?`<img src="${v.icon}" style="width:16px;height:16px;vertical-align:-3px;margin-right:7px" alt="">`:''}${esc(v.vendor)}</td>
+    <td><span class="chip">${esc(v.category)}</span></td><td class="n">${v.pages}</td>
+    <td><span class="bar" style="display:inline-block;width:110px"><i style="width:${v.coverage_pct}%"></i></span></td></tr>`).join('') + '</tbody>';
+
+/* ---------- pages table ---------- */
+const nodes = D.nodes || [];
+let pFilter = null;
+function renderPages() {
+  const rows = nodes.filter(n => !pFilter || (pFilter==='advertised' ? n.advertised : n.build_type===pFilter))
+    .sort((a,b)=> (b.ad_occurrences-a.ad_occurrences) || (b.weight_kb-a.weight_kb));
+  $('#pcount').textContent = rows.length + ' of ' + nodes.length;
+  $('#tpages').innerHTML = `<thead><tr><th>Landing page</th><th>Built with</th><th class="n">Weight</th><th class="n">Scripts</th><th class="n">Ads</th><th class="n">Jobs</th></tr></thead><tbody>` +
+    rows.map(n => `<tr>
+      <td class="hcell"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.handle)}</a>${n.migrated?' <span class="chip ok">rebuilt</span>':''}</td>
+      <td><span class="chip ${n.build_type==='replo'?'warn':'ok'}">${n.build_type==='replo'?'page builder':'sections'}</span></td>
+      <td class="n">${Math.round(n.weight_kb)} KB</td><td class="n">${n.scripts}</td>
+      <td class="n">${n.ad_occurrences||'—'}</td><td class="n">${(n.backlog||[]).length}</td></tr>`).join('') + '</tbody>';
+}
+document.querySelectorAll('[data-pf]').forEach(b => b.addEventListener('click', () => {
+  const f = b.dataset.pf; const on = pFilter === f; pFilter = on ? null : f;
+  document.querySelectorAll('[data-pf]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.pf === pFilter)));
+  renderPages();
+}));
+renderPages();
+
+/* ---------- products ---------- */
+const prods = D.products || [];
+let rFilter = null, pQuery = '';
+function renderProds() {
+  const rows = prods.filter(p =>
+      (!rFilter || (rFilter==='test' ? p.is_test : p.is_bundle)) &&
+      (!pQuery || p.title.toLowerCase().includes(pQuery)))
+    .sort((a,b)=> (b.is_test - a.is_test) || a.title.localeCompare(b.title));
+  $('#prcount').textContent = rows.length + ' of ' + prods.length;
+  $('#tprod').innerHTML = `<thead><tr><th>Product</th><th>Type</th><th class="n">Price</th><th class="n">Was</th><th class="n">Variants</th><th class="n">Published</th></tr></thead><tbody>` +
+    rows.map(p => `<tr>
+      <td><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>${p.is_test?' <span class="chip warn">test</span>':''}${p.is_bundle?' <span class="chip info">bundle</span>':''}</td>
+      <td><span class="chip">${esc(p.type)}</span></td>
+      <td class="n">$${esc(p.price)}</td><td class="n">${p.compare?'$'+esc(p.compare):'—'}</td>
+      <td class="n">${p.variants}</td><td class="n">${esc(p.published)}</td></tr>`).join('') + '</tbody>';
+}
+document.querySelectorAll('[data-rf]').forEach(b => b.addEventListener('click', () => {
+  const f = b.dataset.rf; rFilter = rFilter === f ? null : f;
+  document.querySelectorAll('[data-rf]').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.rf === rFilter)));
+  renderProds();
+}));
+$('#pq').addEventListener('input', e => { pQuery = e.target.value.trim().toLowerCase(); renderProds(); });
+renderProds();
+
+/* ---------- sitemap ---------- */
+const sm = D.sitemap || {};
+$('#scount').textContent = (sm.total_urls || 0) + ' urls';
+$('#tsite').innerHTML = `<thead><tr><th>Kind</th><th class="n">URLs</th><th>Share</th></tr></thead><tbody>` +
+  (sm.by_kind||[]).map(([k,n]) => `<tr><td>${esc(k)}</td><td class="n">${n}</td>
+    <td><span class="bar" style="display:inline-block;width:160px"><i style="width:${Math.round(100*n/(sm.total_urls||1))}%"></i></span></td></tr>`).join('')
+  + `<tr><td><strong>untouched since 2024</strong></td><td class="n">${sm.not_touched_since_2025||0}</td>
+     <td><span class="bar warn" style="display:inline-block;width:160px"><i style="width:${Math.round(100*(sm.not_touched_since_2025||0)/(sm.total_urls||1))}%"></i></span></td></tr>`
+  + '</tbody>';
+
+/* ---------- node map ---------- */
+const cv = $('#cv'), ctx = cv.getContext('2d');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const COLOR = {sections:'#10B981', replo:'#F59E0B', 'page-body':'#64748B', unknown:'#64748B'};
+const N = nodes.map(n => ({...n, r: Math.max(5, Math.min(18, Math.sqrt(n.weight_kb)/5)), x:0,y:0,vx:0,vy:0,dim:false}));
+const idx = new Map(N.map((n,i)=>[n.handle,i]));
+const E = (D.edges||[]).map(e=>({a:idx.get(e.from),b:idx.get(e.to)})).filter(e=>e.a!=null&&e.b!=null);
+$('#mapcount').textContent = N.length + ' pages · ' + E.length + ' links';
+let W=0,H=0,alpha=1,hover=null;
+function resize(){const r=cv.parentElement.getBoundingClientRect();const d=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);}
+function seed(){N.forEach((n,i)=>{if(n.migrated){n.x=W/2+(i%2?24:-24);n.y=H/2;return;}const a=(i/N.length)*Math.PI*2,rad=Math.min(W,H)*0.36;n.x=W/2+Math.cos(a)*rad;n.y=H/2+Math.sin(a)*rad;});}
+function step(){
+  for(const n of N){n.vx+=(W/2-n.x)*0.0016;n.vy+=(H/2-n.y)*0.0016;}
+  for(let i=0;i<N.length;i++)for(let j=i+1;j<N.length;j++){const a=N[i],b=N[j];let dx=b.x-a.x,dy=b.y-a.y,d2=dx*dx+dy*dy||.01,d=Math.sqrt(d2);const f=850/d2,ux=dx/d,uy=dy/d;a.vx-=ux*f;a.vy-=uy*f;b.vx+=ux*f;b.vy+=uy*f;const min=a.r+b.r+12;if(d<min){const p=(min-d)*.5;a.vx-=ux*p;a.vy-=uy*p;b.vx+=ux*p;b.vy+=uy*p;}}
+  for(const e of E){const a=N[e.a],b=N[e.b];const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||.01;const k=(d-110)*.0022,ux=dx/d,uy=dy/d;a.vx+=ux*k*d*.02;a.vy+=uy*k*d*.02;b.vx-=ux*k*d*.02;b.vy-=uy*k*d*.02;}
+  for(const n of N){if(n.migrated){n.vx*=.2;n.vy*=.2;}n.vx*=.86;n.vy*=.86;n.x=Math.max(n.r+6,Math.min(W-n.r-6,n.x+n.vx*alpha));n.y=Math.max(n.r+6,Math.min(H-n.r-6,n.y+n.vy*alpha));}
+  alpha*=.994;
+}
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  for(const e of E){const a=N[e.a],b=N[e.b];if(a.dim||b.dim)continue;const lit=hover&&(a===hover||b===hover);ctx.strokeStyle=lit?'rgba(59,130,246,.65)':'rgba(148,163,184,.13)';ctx.lineWidth=lit?1.3:.6;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
+  for(const n of N){
+    ctx.globalAlpha=n.dim?.14:1;
+    ctx.fillStyle=n.migrated?'#fff':(COLOR[n.build_type]||'#64748B');
+    ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fill();
+    if(n.advertised){ctx.strokeStyle='#10B981';ctx.lineWidth=2.4;ctx.stroke();}
+    if(n===hover){ctx.strokeStyle='#fff';ctx.lineWidth=1.6;ctx.beginPath();ctx.arc(n.x,n.y,n.r+4,0,Math.PI*2);ctx.stroke();}
+    ctx.globalAlpha=1;
+  }
+}
+function loop(){if(alpha>.02)step();draw();requestAnimationFrame(loop);}
+cv.addEventListener('mousemove',ev=>{
+  const r=cv.getBoundingClientRect(),mx=ev.clientX-r.left,my=ev.clientY-r.top;
+  hover=N.find(n=>!n.dim&&Math.hypot(n.x-mx,n.y-my)<=n.r+4)||null;
+  cv.style.cursor=hover?'pointer':'default';
+  const box=$('#ni');
+  if(!hover){box.classList.remove('on');return;}
+  box.classList.add('on');
+  box.innerHTML=`<h4>${esc(hover.handle)}</h4>
+    <div class="kv"><span>built with</span><span>${hover.build_type==='replo'?'page builder':'sections'}</span></div>
+    <div class="kv"><span>weight</span><span>${Math.round(hover.weight_kb)} KB</span></div>
+    <div class="kv"><span>scripts</span><span>${hover.scripts}</span></div>
+    <div class="kv"><span>ad links</span><span>${hover.ad_occurrences||'none'}</span></div>
+    ${(hover.backlog||[]).map(j=>`<div class="job">${esc(j.title)} · <span style="opacity:.7">${esc(j.impact)} / ${esc(j.effort)}</span></div>`).join('')}`;
+});
+cv.addEventListener('mouseleave',()=>{hover=null;$('#ni').classList.remove('on');});
+cv.addEventListener('click',()=>{ if(hover) window.open(hover.url,'_blank','noopener'); });
+let mFilter=null,mQuery='';
+function applyMap(){N.forEach(n=>{const t=!mFilter||(mFilter==='advertised'?n.advertised:n.build_type===mFilter);const q=!mQuery||n.handle.includes(mQuery);n.dim=!(t&&q);});alpha=Math.max(alpha,.25);}
+document.querySelectorAll('[data-f]').forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;mFilter=mFilter===f?null:f;
+  document.querySelectorAll('[data-f]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.f===mFilter)));
+  applyMap();
+}));
+$('#q').addEventListener('input',e=>{mQuery=e.target.value.trim().toLowerCase();applyMap();});
+
+/* tiles jump to the relevant section */
+document.querySelectorAll('[data-jump]').forEach(t=>t.addEventListener('click',()=>{
+  const j=t.dataset.jump;
+  if(j==='test'){openSection('#s-prod');rFilter='test';document.querySelectorAll('[data-rf]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.rf==='test')));renderProds();}
+  else {openSection('#s-pages');pFilter=j;document.querySelectorAll('[data-pf]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.pf===j)));renderPages();}
+}));
+
+addEventListener('resize',()=>{resize();});
+resize();seed();
+if(reduce){for(let i=0;i<300;i++)step();alpha=0;}
+loop();
+
+$('#foot').innerHTML = `<strong>Method and limits.</strong> Sources: Shopify's public products.json
+  and collections.json, the sitemap supplied with the brief, the HTML of ${S.pages} landing pages
+  fetched once each with a delay between requests, and Meta's public Ad Library (active, United
+  States). Vendor detection is fingerprint-based — it proves a script is present, not that the
+  feature is switched on. Ad counts are link occurrences in the loaded results, not spend or
+  impressions. Products typed “Test” are read from the store's own product_type field and are
+  most likely price-test SKUs. Nothing here used privileged access; everything is reproducible
+  from the tools in the repository this page ships with.`;
+</script>
+</html>
