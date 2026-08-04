@@ -1,0 +1,164 @@
+/* Hero and media-accordion, given the reference's own design tokens.
+ *
+ * Same finding as the science tabs, at a larger scale: the reference declares this hero as 112
+ * custom properties on the section root and lets its rules read from them. The section's whole
+ * specification is that list — so porting it is copying values, not inferring them from a
+ * screenshot, and it carries the properties nobody thought to measure along with the ones they
+ * did.
+ *
+ * The variables are namespaced onto our own section roots. What consumes them is a small set of
+ * rules below, because our markup and theirs do not share class names — but every VALUE is
+ * theirs, unrounded.
+ */
+
+.lp-hero__section {
+  --section-margin-top-desktop: 0px;
+  --section-margin-right-desktop: 0px;
+  --section-margin-bottom-desktop: 0px;
+  --section-margin-left-desktop: 0px;
+  --section-padding-top-desktop: 32px;
+  --section-padding-right-desktop: 32px;
+  --section-padding-bottom-desktop: 32px;
+  --section-padding-left-desktop: 32px;
+  --section-margin-top-mobile: 0px;
+  --section-margin-right-mobile: 0px;
+  --section-margin-bottom-mobile: 0px;
+  --section-margin-left-mobile: 0px;
+  --section-padding-top-mobile: 20px;
+  --section-padding-right-mobile: 16px;
+  --section-padding-bottom-mobile: 20px;
+  --section-padding-left-mobile: 16px;
+  --section-bg-color: #ffffff;
+  --section-border-radius: 0px;
+  --container-gap-desktop: 44px;
+  --container-gap-mobile: 20px;
+  --container-max-width-desktop: 1344px;
+  --content-gap-desktop: 8px;
+  --content-gap-mobile: 12px;
+  --stars-font-family: 'sofia-pro', sans-serif;
+  --stars-font-size-desktop: 14px;
+  --stars-font-size-mobile: 14px;
+  --stars-font-weight: 400;
+  --stars-font-color: #ffb511;
+  --stars-size-desktop: 24px;
+  --stars-size-mobile: 18px;
+  --headline-font-family: 'gelica', serif;
+  --headline-font-size-desktop: 28px;
+  --headline-font-size-mobile: 28px;
+  --headline-font-weight: 600;
+  --headline-font-color: #2c3d50;
+  --headline-line-height: 1.4;
+  --headline-highlight-color: #486ced;
+  --top-badge-bg: #f8e2a0;
+  --top-badge-text-color: #2c3d50;
+  --top-badge-font-family: 'sofia-pro', sans-serif;
+  --top-badge-font-size-desktop: 18px;
+  --top-badge-font-size-mobile: 15px;
+  --top-badge-font-weight: 800;
+  --top-badge-radius: 10px;
+  --description-font-family: 'sofia-pro', sans-serif;
+  --description-font-size-desktop: 16px;
+  --description-font-size-mobile: 14px;
+  --description-font-weight: 400;
+  --description-font-color: #2c3d50;
+  --cta-font-family: sofia-pro, sans-serif;
+  --cta-font-size-desktop: 18px;
+  --cta-font-size-mobile: 18px;
+  --cta-font-weight: 600;
+  --cta-font-color: #ffffff;
+  --cta-bg-color: #476ded;
+  --cta-shadow-color: #2c3d50;
+  --cta-margin-bottom-desktop: 0px;
+  --cta-margin-bottom-mobile: 0px;
+  --cta-margin-top-desktop: 0px;
+  --cta-margin-top-mobile: 0px;
+  --divider-color: #d7effa;
+  --list-font-family: 'sofia-pro', sans-serif;
+  --list-font-size-desktop: 12px;
+  --list-font-size-mobile: 12px;
+  --list-font-weight: 400;
+  --list-font-color: #2c3d50;
+  --list-icon-color: #2c3d50;
+  --list-row-gap-desktop: 4px;
+  --list-row-gap-mobile: 4px;
+  --testimonial-font-family: 'sofia-pro', sans-serif;
+  --testimonial-font-size-desktop: 14px;
+  --testimonial-font-size-mobile: 14px;
+  --testimonial-font-weight: 300;
+  --testimonial-font-color: #2c3d50;
+  --testimonial-border-color: #d7effa;
+  --left-content-width-desktop: 560px;
+  --hero-image-max-width-desktop: 500px;
+  --offer-badge-bg: #87adf5;
+  --offer-badge-text-color: #f2fbff;
+  --offer-badge-icon-color: #d4e157;
+  --center-badge-bg: #1a1a2e;
+  --center-badge-text-color: #ffffff;
+  --coupon-bg: #eef3ff;
+  --coupon-icon-bg: ;
+  --coupon-icon-color: #ffffff;
+  --coupon-title-color: #2c3d50;
+  --coupon-code-color: #486ced;
+  --coupon-label-color: #2c3d50;
+  --coupon-margin-top-desktop: 0px;
+  --coupon-margin-bottom-desktop: 0px;
+  --coupon-margin-top-mobile: 0px;
+  --coupon-margin-bottom-mobile: 0px;
+  --creator-quote-border-color: #486ced;
+  --creator-quote-font-family: 'sofia-pro', sans-serif;
+  --creator-quote-font-size-desktop: 15px;
+  --creator-quote-font-size-mobile: 14px;
+  --creator-quote-font-weight: 400;
+  --creator-quote-font-color: #2c3d50;
+  --creator-quote-margin-top-desktop: 0px;
+  --creator-quote-margin-bottom-desktop: 0px;
+  --creator-quote-margin-top-mobile: 0px;
+  --creator-quote-margin-bottom-mobile: 0px;
+  --creator-handle-bg: #f0f0f0;
+  --creator-handle-font-family: 'sofia-pro', sans-serif;
+  --creator-handle-font-size-desktop: 14px;
+  --creator-handle-font-size-mobile: 14px;
+  --creator-handle-font-weight: 400;
+  --creator-handle-font-color: #2c3d50;
+  --creator-handle-margin-top-desktop: 0px;
+  --creator-handle-margin-bottom-desktop: 0px;
+  --creator-handle-margin-top-mobile: 0px;
+  --creator-handle-margin-bottom-mobile: 0px;
+}
+
+.lp-media-accordion {
+  --section-padding-top: 36px;
+  --section-padding-bottom: 36px;
+  --image-border-radius: 0px;
+  --accordion-max-width: 720px;
+  --section-max-width: 1200px;
+}
+
+/* ---------------------------------------------------------------------------
+   Rules that consume the tokens. Only the mapping is ours; the numbers are not.
+   --------------------------------------------------------------------------- */
+
+.lp-hero__section--product {
+  padding-top: var(--section-padding-top-desktop);
+  padding-bottom: var(--section-padding-bottom-desktop);
+  padding-left: var(--section-padding-left-desktop);
+  padding-right: var(--section-padding-right-desktop);
+}
+
+.lp-media-accordion__inner {
+  max-width: var(--section-max-width);
+}
+
+.lp-media-accordion__cta-block {
+  max-width: var(--accordion-max-width);
+}
+
+.lp-media-accordion {
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+}
+
+/* The reference squares its accordion media — ours had inherited a radius. */
+.lp-media-accordion__media img {
+  border-radius: var(--image-border-radius);
+}

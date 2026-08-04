@@ -19,6 +19,7 @@
 {% endcomment %}
 
 {{ 'lp-science-tabs-ref.css' | asset_url | stylesheet_tag }}
+{{ 'lp-hero-ref.css' | asset_url | stylesheet_tag }}
 
 {% style %}
 
@@ -26,7 +27,7 @@
   /* build stamp — the only string in this file guaranteed to change every commit. Capture and
      audit verify against it, because every earlier marker (class names, rem values) also
      existed in previous commits and quietly certified stale renders as current. */
-  --lp-fidelity-build: "round20";
+  --lp-fidelity-build: "round21";
 }
 /* Post-debrief fidelity corrections — loaded ONLY by the v2 template.
  *
