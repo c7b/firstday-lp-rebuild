@@ -356,6 +356,90 @@
     line-height: 1.96rem;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   8. Layout. The first pass of this file corrected type and left the page visibly wrong,
+   because a heading can carry the right family, size and weight and still wrap where the
+   reference does not — and everything below it then shifts. These are measured boxes:
+   reference rect vs ours, at 1440 and 390.
+   --------------------------------------------------------------------------- */
+
+/* The reference runs its content at ~1184px inside ~120px gutters at 1440. Ours ran 880,
+   which is the single cause of most of the wrapping differences below it. */
+.lp-science-tabs__component,
+.lp-science-tabs__panels,
+.lp-science-tabs__tab-list {
+  max-width: 118.4rem;
+}
+
+/* Measured x=121 w=1184, ranged left with a 12px gap. Ours centred at 880 with 8px. */
+.lp-science-tabs__tab-list {
+  justify-content: flex-start;
+  gap: 1.2rem;
+}
+
+/* The reference panel is a flex row that lets the copy take the space it needs; ours pinned
+   the text to a 484px track and the media to 300px, which squeezed both. */
+.lp-science-tabs__panel {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  max-width: 118.4rem;
+}
+
+/* Hero h1 measured 560px wide on one 56px line. `max-width: 17ch` resolved to 310px, so it
+   wrapped to two lines and pushed every following block down. */
+.lp-hero__heading {
+  max-width: 56rem;
+}
+
+/* Accordion heading measured 1168px — full container width, one line. Ours was capped at the
+   text column and ran to three. */
+.lp-media-accordion__heading {
+  max-width: none;
+}
+
+/* The accordion CTA block is a centred 720px column in the reference, not a flex stack. */
+.lp-media-accordion__cta-block {
+  display: block;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+/* Quantity tiers are a 2x2 grid in the reference at desktop — 334px per column with a 12px
+   gutter. Ours switched to four across at the same breakpoint, which is why the tier cards
+   read as a strip rather than a block. */
+.lp-buy-box__quantity-grid {
+  gap: 1.2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .lp-buy-box__quantity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Delivery options stack in the reference rather than sharing a grid gutter. */
+.lp-buy-box__delivery {
+  row-gap: 1.2rem;
+}
+
+@media screen and (max-width: 749px) {
+  /* At 390 the reference gives the hero copy the full 343px content width. */
+  .lp-hero__heading {
+    max-width: none;
+  }
+
+  /* Panel is a column on mobile; ours stayed a row and squeezed the media. */
+  .lp-science-tabs__panel {
+    flex-direction: column;
+  }
+
+  .lp-science-tabs__tab-list {
+    max-width: none;
+  }
+}
+
 {% endstyle %}
 
 {% schema %}

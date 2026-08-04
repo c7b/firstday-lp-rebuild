@@ -45,6 +45,12 @@ const BOX = ['background-color', 'margin-top', 'margin-bottom', 'padding-top', '
   'padding-left', 'padding-right', 'border-radius', 'border-top-width', 'border-bottom-width',
   'box-shadow', 'gap'];
 const MEDIA = ['object-fit', 'object-position', 'aspect-ratio', 'border-radius'];
+/* Geometry, because the first version of this audit measured only type and reported a page as
+   nearly closed while it visibly was not. A heading can carry the right family, size and weight
+   and still be wrong if its container is half the width — it wraps where the reference does
+   not, and every rhythm below it shifts. These are read from the box, not from the cascade. */
+const LAYOUT = ['_x', '_w', '_h', 'display', 'grid-template-columns', 'column-gap', 'row-gap',
+  'max-width', 'justify-content', 'align-items', 'flex-direction'];
 const PROPS = [...new Set([...TYPO, ...BOX, ...MEDIA])];
 
 /* role → [selectors on the original, selectors on the rebuild]. First match wins on each
@@ -79,6 +85,20 @@ const PAIRS = [
   ['buy box / qty savings box',    ['.PBFCM-PDP-quantity-selector__savings-badge'], ['.lp-buy-box__savings'], BOX],
 ];
 
+
+/* Containers, measured as boxes. Paired by the section they own rather than by the element
+   that happens to carry a class, because what went wrong is the frame, not the contents. */
+const LAYOUT_PAIRS = [
+  ['layout / hero text column',   ['.v1-hero-headline'], ['.lp-hero__heading'], LAYOUT],
+  ['layout / hero media',         ['.v1-hero-media', '.v1-hero-right', '.v1-hero-image-grid'], ['.lp-hero__media'], LAYOUT],
+  ['layout / accordion heading',  ['.title-font-size'], ['.lp-media-accordion__heading'], LAYOUT],
+  ['layout / accordion row',      ['.accordion-block__cta-block'], ['.lp-media-accordion__cta-block'], LAYOUT],
+  ['layout / tabs bar',           ['.science-tabs__tab-bar'], ['.lp-science-tabs__tab-list'], LAYOUT],
+  ['layout / tabs panel',         ['.science-tabs__panel'], ['.lp-science-tabs__panel'], LAYOUT],
+  ['layout / buy box column',     ['.PBFCM-PDP-frequency-selector'], ['.lp-buy-box__delivery'], LAYOUT],
+  ['layout / quantity grid',      ['.PBFCM-PDP-quantity-selector__grid'], ['.lp-buy-box__quantity-grid'], LAYOUT],
+];
+
 const read = (page, selectors, props) => page.evaluate(([sels, props]) => {
   const pick = () => {
     for (const s of sels) {
@@ -92,10 +112,16 @@ const read = (page, selectors, props) => page.evaluate(([sels, props]) => {
   const el = pick();
   if (!el) return null;
   const cs = getComputedStyle(el);
-  const out = { _tag: el.tagName.toLowerCase(), _text: (el.textContent || '').trim().slice(0, 48) };
-  for (const p of props) out[p] = cs.getPropertyValue(p);
   const r = el.getBoundingClientRect();
-  out._w = Math.round(r.width); out._h = Math.round(r.height);
+  const out = { _tag: el.tagName.toLowerCase(), _text: (el.textContent || '').trim().slice(0, 48) };
+  for (const p of props) {
+    /* Geometry lives on the rect, not in the computed style — computed width is often "auto"
+       on exactly the containers whose real width is the finding. */
+    if (p === '_x') out._x = String(Math.round(r.x));
+    else if (p === '_w') out._w = String(Math.round(r.width));
+    else if (p === '_h') out._h = String(Math.round(r.height));
+    else out[p] = cs.getPropertyValue(p);
+  }
   return out;
 }, [selectors, props]);
 
@@ -105,12 +131,14 @@ const read = (page, selectors, props) => page.evaluate(([sels, props]) => {
    is different. */
 const firstFamily = (v) => (v || '').split(',')[0].trim().replace(/^["']|["']$/g, '').toLowerCase();
 
-/* px values that differ by less than a pixel are rounding, not a decision. */
-const near = (a, b) => {
+/* px values that differ by less than a pixel are rounding, not a decision. Geometry gets a
+   wider band: a container four pixels off is a scrollbar or a subpixel, not a design gap. */
+const near = (a, b, tolerance = 1) => {
   const na = parseFloat(a), nb = parseFloat(b);
-  return Number.isFinite(na) && Number.isFinite(nb) && Math.abs(na - nb) < 1
-    && a.replace(/[\d.]+/g, '') === b.replace(/[\d.]+/g, '');
+  return Number.isFinite(na) && Number.isFinite(nb) && Math.abs(na - nb) < tolerance
+    && String(a).replace(/[\d.]+/g, '') === String(b).replace(/[\d.]+/g, '');
 };
+const GEOM = new Set(['_x', '_w', '_h']);
 
 const browser = await chromium.launch({ executablePath: CHROME, args: ['--no-sandbox'] });
 const report = { generated: new Date().toISOString(), original: ORIGINAL, rebuild: REBUILD, viewports: {} };
@@ -170,13 +198,13 @@ for (const width of VIEWPORTS) {
   console.log(`  [${width}px] fresh render confirmed | h1 ${state.heading}`);
 
   const rows = [];
-  for (const [role, origSel, ourSel, group] of PAIRS) {
+  for (const [role, origSel, ourSel, group] of [...PAIRS, ...LAYOUT_PAIRS]) {
     const ask = group || PROPS;
     const [o, r] = await Promise.all([read(a, origSel, ask), read(b, ourSel, ask)]);
     if (!o || !r) { rows.push({ role, unmatched: !o ? 'original' : 'rebuild' }); continue; }
     const diffs = [];
     for (const p of ask) {
-      if (o[p] === r[p] || near(o[p], r[p])) continue;
+      if (o[p] === r[p] || near(o[p], r[p], GEOM.has(p) ? 5 : 1)) continue;
       if (p === 'font-family' && firstFamily(o[p]) === firstFamily(r[p])) continue;
       diffs.push({ property: p, original: o[p], rebuild: r[p] });
     }
