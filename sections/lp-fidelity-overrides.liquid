@@ -509,6 +509,49 @@
   }
 }
 
+
+/* ---------------------------------------------------------------------------
+   10. Science tabs — two causes, neither of them the one the property list implied.
+
+   The earlier `display: flex` on the panel DID win; ties go to document order and this block
+   renders after the linked stylesheet. But `grid-template-columns` is a separate declaration
+   and nothing overrode it, so the element kept resolving tracks from a rule it no longer had
+   any business obeying. "Still computing as a grid" was a leftover property, not a lost fight.
+
+   And the 118.4rem cap already set on the children was inert: their containing block,
+   .lp-science-tabs__content, only ever offered 1136px, and a child's max-width cannot exceed
+   what its parent hands it. Narrowing the parent's padding is what actually unlocks the width.
+   --------------------------------------------------------------------------- */
+
+/* Reference content track measured 1184px wide at 1440 on both the tab bar and the panel:
+   120rem minus 2x0.8rem. */
+.lp-science-tabs__content {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+/* The reference panel is never a grid — computes grid-template-columns: none. */
+.lp-science-tabs__panel {
+  grid-template-columns: none;
+}
+
+@media screen and (max-width: 749px) {
+  /* Reference measured 343px at 390: viewport minus 2x2.35rem. */
+  .lp-science-tabs__content {
+    padding-left: 2.35rem;
+    padding-right: 2.35rem;
+  }
+
+  /* The reference keeps the tabs on one horizontally scrollable row (measured h=86). Ours
+     carried flex-wrap: wrap from a non-media-gated base rule, so it broke to two rows and
+     measured 137. */
+  .lp-science-tabs__tab-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+}
+
 {% endstyle %}
 
 {% schema %}
