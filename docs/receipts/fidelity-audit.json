@@ -1,7 +1,7 @@
 {
- "generated": "2026-08-04T00:31:56.809Z",
+ "generated": "2026-08-04T13:41:25.738Z",
  "original": "http://127.0.0.1:8777/fd-lp.html",
- "rebuild": "https://firstday-lp-rebuild.myshopify.com/pages/tdk-behind-the-science-lp-v2",
+ "rebuild": "http://127.0.0.1:8777/v2-live.html",
  "viewports": {
   "390": [
    {
@@ -26,13 +26,7 @@
     "role": "accordion / heading",
     "origText": "Most Kids Are \nMissing Key Nutrients. Get Help i",
     "ourText": "Most Kids Are Missing Key Nutrients. Get Help in",
-    "diffs": [
-     {
-      "property": "color",
-      "original": "rgb(44, 62, 80)",
-      "rebuild": "rgb(44, 61, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / item title",
@@ -210,17 +204,12 @@
      {
       "property": "_w",
       "original": "343",
-      "rebuild": "310"
+      "rebuild": "360"
      },
      {
       "property": "_h",
       "original": "84",
       "rebuild": "112"
-     },
-     {
-      "property": "max-width",
-      "original": "none",
-      "rebuild": "310.353px"
      }
     ]
    },
@@ -256,16 +245,6 @@
       "rebuild": "78"
      },
      {
-      "property": "display",
-      "original": "block",
-      "rebuild": "flex"
-     },
-     {
-      "property": "max-width",
-      "original": "720px",
-      "rebuild": "none"
-     },
-     {
       "property": "align-items",
       "original": "normal",
       "rebuild": "center"
@@ -285,27 +264,7 @@
      {
       "property": "_h",
       "original": "86",
-      "rebuild": "133"
-     },
-     {
-      "property": "column-gap",
-      "original": "12px",
-      "rebuild": "8px"
-     },
-     {
-      "property": "row-gap",
-      "original": "12px",
-      "rebuild": "8px"
-     },
-     {
-      "property": "max-width",
-      "original": "none",
-      "rebuild": "880px"
-     },
-     {
-      "property": "justify-content",
-      "original": "flex-start",
-      "rebuild": "center"
+      "rebuild": "137"
      }
     ]
    },
@@ -321,43 +280,23 @@
      },
      {
       "property": "_h",
-      "original": "577",
-      "rebuild": "657"
-     },
-     {
-      "property": "display",
-      "original": "flex",
-      "rebuild": "grid"
-     },
-     {
-      "property": "grid-template-columns",
-      "original": "none",
-      "rebuild": "320px"
+      "original": "580",
+      "rebuild": "641"
      },
      {
       "property": "column-gap",
       "original": "normal",
-      "rebuild": "16px"
+      "rebuild": "0px"
      },
      {
       "property": "row-gap",
       "original": "normal",
-      "rebuild": "16px"
+      "rebuild": "0px"
      },
      {
       "property": "max-width",
       "original": "none",
-      "rebuild": "880px"
-     },
-     {
-      "property": "align-items",
-      "original": "stretch",
-      "rebuild": "center"
-     },
-     {
-      "property": "flex-direction",
-      "original": "column",
-      "rebuild": "row"
+      "rebuild": "1184px"
      }
     ]
    },
@@ -404,24 +343,9 @@
       "rebuild": "358"
      },
      {
-      "property": "_h",
-      "original": "158",
-      "rebuild": "153"
-     },
-     {
       "property": "grid-template-columns",
       "original": "165.5px 165.5px",
-      "rebuild": "175px 175px"
-     },
-     {
-      "property": "column-gap",
-      "original": "12px",
-      "rebuild": "8px"
-     },
-     {
-      "property": "row-gap",
-      "original": "12px",
-      "rebuild": "8px"
+      "rebuild": "173px 173px"
      }
     ]
    }
@@ -449,13 +373,7 @@
     "role": "accordion / heading",
     "origText": "Most Kids Are \nMissing Key Nutrients. Get Help i",
     "ourText": "Most Kids Are Missing Key Nutrients. Get Help in",
-    "diffs": [
-     {
-      "property": "color",
-      "original": "rgb(44, 62, 80)",
-      "rebuild": "rgb(44, 61, 80)"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "accordion / item title",
@@ -638,17 +556,12 @@
      {
       "property": "_w",
       "original": "560",
-      "rebuild": "310"
-     },
-     {
-      "property": "_h",
-      "original": "56",
-      "rebuild": "112"
+      "rebuild": "530"
      },
      {
       "property": "max-width",
       "original": "none",
-      "rebuild": "310.353px"
+      "rebuild": "560px"
      }
     ]
    },
@@ -699,16 +612,6 @@
       "rebuild": "78"
      },
      {
-      "property": "display",
-      "original": "block",
-      "rebuild": "flex"
-     },
-     {
-      "property": "max-width",
-      "original": "720px",
-      "rebuild": "none"
-     },
-     {
       "property": "align-items",
       "original": "normal",
       "rebuild": "center"
@@ -728,12 +631,12 @@
      {
       "property": "_x",
       "original": "121",
-      "rebuild": "280"
+      "rebuild": "152"
      },
      {
       "property": "_w",
       "original": "1184",
-      "rebuild": "880"
+      "rebuild": "1136"
      },
      {
       "property": "_h",
@@ -741,24 +644,14 @@
       "rebuild": "50"
      },
      {
-      "property": "column-gap",
-      "original": "12px",
-      "rebuild": "8px"
-     },
-     {
-      "property": "row-gap",
-      "original": "12px",
-      "rebuild": "8px"
-     },
-     {
       "property": "max-width",
       "original": "none",
-      "rebuild": "880px"
+      "rebuild": "1184px"
      },
      {
       "property": "justify-content",
       "original": "normal",
-      "rebuild": "center"
+      "rebuild": "flex-start"
      }
     ]
    },
@@ -770,47 +663,37 @@
      {
       "property": "_x",
       "original": "121",
-      "rebuild": "280"
+      "rebuild": "152"
      },
      {
       "property": "_w",
       "original": "1184",
-      "rebuild": "880"
+      "rebuild": "1136"
      },
      {
       "property": "_h",
       "original": "412",
-      "rebuild": "377"
-     },
-     {
-      "property": "display",
-      "original": "flex",
-      "rebuild": "grid"
+      "rebuild": "364"
      },
      {
       "property": "grid-template-columns",
       "original": "none",
-      "rebuild": "484px 300px"
+      "rebuild": "minmax(0px, 1fr) minmax(240px, 300px)"
      },
      {
       "property": "column-gap",
       "original": "normal",
-      "rebuild": "32px"
+      "rebuild": "0px"
      },
      {
       "property": "row-gap",
       "original": "normal",
-      "rebuild": "32px"
+      "rebuild": "0px"
      },
      {
       "property": "max-width",
       "original": "none",
-      "rebuild": "880px"
-     },
-     {
-      "property": "align-items",
-      "original": "stretch",
-      "rebuild": "center"
+      "rebuild": "1184px"
      }
     ]
    },
@@ -867,24 +750,9 @@
       "rebuild": "559"
      },
      {
-      "property": "_h",
-      "original": "164",
-      "rebuild": "76"
-     },
-     {
       "property": "grid-template-columns",
       "original": "334px 334px",
-      "rebuild": "133.641px 133.656px 133.641px 133.656px"
-     },
-     {
-      "property": "column-gap",
-      "original": "12px",
-      "rebuild": "8px"
-     },
-     {
-      "property": "row-gap",
-      "original": "12px",
-      "rebuild": "8px"
+      "rebuild": "273.297px 273.297px"
      }
     ]
    }

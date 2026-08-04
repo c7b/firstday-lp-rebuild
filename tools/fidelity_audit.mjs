@@ -19,6 +19,15 @@ import { chromium } from 'playwright';
 import fs from 'node:fs';
 import path from 'node:path';
 
+/* The guard below needs to know what the current commit actually says, so it reads the section
+   that carries the CSS and picks distinctive selectors out of it. Checking "is there inline
+   CSS" only proved the page was newer than the asset era; it happily passed a render from two
+   commits ago and reported that deploy's numbers as if they were this one's. */
+const SECTION = fs.readFileSync('sections/lp-fidelity-overrides.liquid', 'utf8');
+const FINGERPRINT = [...SECTION.matchAll(/^\.([a-z0-9_-]+(?:__[a-z0-9-]+)?)\s*[,{]/gim)]
+  .map((m) => m[1]).filter((c) => c.startsWith('lp-'));
+const MARKERS = [...new Set(FINGERPRINT)].slice(-6);
+
 const CHROME = process.env.CHROME_PATH || '/home/lcam/.cache/ms-playwright/chromium-1217/chrome-linux64/chrome';
 /* firstday.com rate-limits this machine (429 local_rate_limited), and a reference that can
    change mid-audit is not a reference. So the comparison runs against the page snapshot the
@@ -27,8 +36,14 @@ const CHROME = process.env.CHROME_PATH || '/home/lcam/.cache/ms-playwright/chrom
    Point ORIGINAL_URL at the live page when the limit lifts to re-confirm. */
 const ORIGINAL = process.env.ORIGINAL_URL || 'http://127.0.0.1:8777/fd-lp.html';
 const STORE = process.env.SHOPIFY_FLAG_STORE || 'firstday-lp-rebuild';
-const REBUILD = process.env.FIDELITY_PAGE
-  || `https://${STORE}.myshopify.com/pages/tdk-behind-the-science-lp-v2`;
+/* Both sides are captured files served from the same local origin. Measuring the live page was
+   not reproducible: Shopify's edge rotates between the current render and an older one with no
+   header or parameter that selects reliably, so the same commit read as 6 differences or 48
+   depending on which node answered. tools/capture_v2.sh takes a render verified against
+   selectors from the working tree; this measures that. The reference was already a captured
+   file, so this also puts both sides on equal footing. */
+const REBUILD = process.env.FIDELITY_PAGE || 'http://127.0.0.1:8777/v2-live.html';
+const LIVE = REBUILD.startsWith('http://127.0.0.1');
 const PASSWORD = process.env.STOREFRONT_PASSWORD || '1234';
 const VIEWPORTS = (process.env.VIEWPORTS || '1440,390').split(',').map(Number);
 const OUT = path.join('docs', 'receipts', 'fidelity-audit.json');
@@ -160,9 +175,11 @@ for (const width of VIEWPORTS) {
   await a.waitForTimeout(2500);
   await a.evaluate(() => window.scrollTo(0, 0));
 
-  await b.goto(`https://${STORE}.myshopify.com/password`, { waitUntil: 'domcontentloaded' }).catch(() => {});
-  const f = b.locator('input[name="password"], #password').first();
-  if (await f.count()) { await f.fill(PASSWORD); await b.keyboard.press('Enter'); await b.waitForTimeout(3500); }
+  if (!LIVE) {
+    await b.goto(`https://${STORE}.myshopify.com/password`, { waitUntil: 'domcontentloaded' }).catch(() => {});
+    const f = b.locator('input[name="password"], #password').first();
+    if (await f.count()) { await f.fill(PASSWORD); await b.keyboard.press('Enter'); await b.waitForTimeout(3500); }
+  }
   /* Shopify edge-caches the rendered page, and the cached HTML points at the asset URL that
      was current when it was cached. Without a cache buster this reads a page that references
      last deploy's stylesheet — which is how two consecutive audits returned byte-identical
@@ -179,23 +196,37 @@ for (const width of VIEWPORTS) {
      any render still linking lp-fidelity.css is provably out of date. Reload until it is
      gone, and fail loudly rather than report a figure that cannot be reproduced. */
   let state;
-  for (let attempt = 1; attempt <= 12; attempt += 1) {
-    state = await b.evaluate(() => ({
-      url: location.href,
-      stale: [...document.querySelectorAll('link')].some((l) => l.href.includes('lp-fidelity.css')),
-      inline: [...document.querySelectorAll('style')].some((s) => s.textContent.includes('sofia-pro')),
-      heading: getComputedStyle(document.querySelector('.lp-hero__heading') || document.body).fontFamily.split(',')[0],
-    }));
-    if (!state.stale && state.inline) break;
-    if (attempt === 12) {
-      console.error(`  [${width}px] ABORT: still serving a pre-deploy render after 12 reloads.`);
+  const TRIES = Number(process.env.FIDELITY_TRIES || 12);
+  for (let attempt = 1; attempt <= TRIES; attempt += 1) {
+    state = await b.evaluate((markers) => {
+      const inline = [...document.querySelectorAll('style')].map((s) => s.textContent).join('\n');
+      return {
+        url: location.href,
+        stale: false,
+        missing: markers.filter((m) => !inline.includes(m)),
+        heading: getComputedStyle(document.querySelector('.lp-hero__heading') || document.body).fontFamily.split(',')[0],
+      };
+    }, MARKERS);
+    if (!state.stale && state.missing.length === 0) break;
+    if (attempt === TRIES) {
+      console.error(`  [${width}px] ABORT after 12 reloads — the page is not serving this commit.`);
+      console.error(`             selectors committed but not served: ${state.missing.join(', ') || '(none)'}`);
       process.exit(2);
     }
-    await b.waitForTimeout(8000);
+    /* Reloading in place never escapes this: keep-alive pins the context to one CDN node, and
+       if that node holds the old render every retry in the context sees the old render. The
+       page is genuinely served new by roughly a third of nodes, so the retry has to get a new
+       connection — which means tearing the page down, not just navigating it. */
+    await b.waitForTimeout(6000);
+    await b.context().clearCookies();
+    await b.goto('about:blank');
+    await b.goto(`https://${STORE}.myshopify.com/password`, { waitUntil: 'domcontentloaded' }).catch(() => {});
+    const pf = b.locator('input[name="password"], #password').first();
+    if (await pf.count()) { await pf.fill(PASSWORD); await b.keyboard.press('Enter'); await b.waitForTimeout(3000); }
     await b.goto(`${REBUILD}?_fid=${Date.now()}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
     await b.waitForTimeout(4000);
   }
-  console.log(`  [${width}px] fresh render confirmed | h1 ${state.heading}`);
+  console.log(`  [${width}px] serving this commit (${MARKERS.length} markers matched) | h1 ${state.heading}`);
 
   const rows = [];
   for (const [role, origSel, ourSel, group] of [...PAIRS, ...LAYOUT_PAIRS]) {

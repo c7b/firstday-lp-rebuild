@@ -33,6 +33,33 @@
  */
 
 /* ---------------------------------------------------------------------------
+   0. The typefaces themselves.
+
+   This is the finding the property-level audit could not see. Our page DECLARED sofia-pro and
+   the computed font-family matched the reference exactly — so every check passed — while the
+   browser actually rendered Poppins, because nothing on the page ever loaded sofia-pro. The
+   same string measured 415px wide here against 447px there. Comparing declarations will never
+   catch that; only asking what the browser resolved will.
+
+   These are the reference's own @font-face rules, copied verbatim, so the rebuild draws with
+   the same faces rather than a lookalike stack. Weights 400/700/800/900 in roman and italic
+   for sofia-pro, and gelica for the places that genuinely use it.
+   --------------------------------------------------------------------------- */
+
+@font-face { font-family:"sofia-pro"; src:url("https://use.typekit.net/af/773a22/00000000000000007735f996/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff2"),url("https://use.typekit.net/af/773a22/00000000000000007735f996/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("woff"),url("https://use.typekit.net/af/773a22/00000000000000007735f996/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n9&v=3") format("opentype"); font-display:swap;font-style:normal;font-weight:900;font-stretch:normal; }
+@font-face { font-family:"sofia-pro"; src:url("https://use.typekit.net/af/2cf3cc/00000000000000007735f991/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("woff2"),url("https://use.typekit.net/af/2cf3cc/00000000000000007735f991/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("woff"),url("https://use.typekit.net/af/2cf3cc/00000000000000007735f991/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i9&v=3") format("opentype"); font-display:swap;font-style:italic;font-weight:900;font-stretch:normal; }
+@font-face { font-family:"sofia-pro"; src:url("https://use.typekit.net/af/5d97ff/00000000000000007735f999/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff2"),url("https://use.typekit.net/af/5d97ff/00000000000000007735f999/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff"),url("https://use.typekit.net/af/5d97ff/00000000000000007735f999/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("opentype"); font-display:swap;font-style:normal;font-weight:800;font-stretch:normal; }
+@font-face { font-family:"sofia-pro"; src:url("https://use.typekit.net/af/66e20c/00000000000000007735f993/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("woff2"),url("https://use.typekit.net/af/66e20c/00000000000000007735f993/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("woff"),url("https://use.typekit.net/af/66e20c/00000000000000007735f993/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i8&v=3") format("opentype"); font-display:swap;font-style:italic;font-weight:800;font-stretch:normal; }
+@font-face { font-family:"sofia-pro"; src:url("https://use.typekit.net/af/b718ff/00000000000000007735f98d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/b718ff/00000000000000007735f98d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/b718ff/00000000000000007735f98d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype"); font-display:swap;font-style:normal;font-weight:400;font-stretch:normal; }
+@font-face { font-family:"sofia-pro"; src:url("https://use.typekit.net/af/c09857/00000000000000007735f98c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/c09857/00000000000000007735f98c/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/c09857/00000000000000007735f98c/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype"); font-display:swap;font-style:italic;font-weight:400;font-stretch:normal; }
+@font-face { font-family:"sofia-pro"; src:url("https://use.typekit.net/af/262452/00000000000000007735f99a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/262452/00000000000000007735f99a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/262452/00000000000000007735f99a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype"); font-display:swap;font-style:normal;font-weight:700;font-stretch:normal; }
+@font-face { font-family:"sofia-pro"; src:url("https://use.typekit.net/af/36f509/00000000000000007735f994/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/36f509/00000000000000007735f994/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/36f509/00000000000000007735f994/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype"); font-display:swap;font-style:italic;font-weight:700;font-stretch:normal; }
+@font-face { font-family:"gelica"; src:url("https://use.typekit.net/af/281cc9/0000000000000000774ba061/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/281cc9/0000000000000000774ba061/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/281cc9/0000000000000000774ba061/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype"); font-display:swap;font-style:normal;font-weight:700;font-stretch:normal; }
+@font-face { font-family:"gelica"; src:url("https://use.typekit.net/af/06d360/0000000000000000774ba062/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/06d360/0000000000000000774ba062/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/06d360/0000000000000000774ba062/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype"); font-display:swap;font-style:italic;font-weight:700;font-stretch:normal; }
+@font-face { font-family:"gelica"; src:url("https://use.typekit.net/af/a0e80f/0000000000000000774ba064/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/a0e80f/0000000000000000774ba064/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/a0e80f/0000000000000000774ba064/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype"); font-display:swap;font-style:normal;font-weight:400;font-stretch:normal; }
+@font-face { font-family:"gelica"; src:url("https://use.typekit.net/af/600fb7/0000000000000000774ba065/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/600fb7/0000000000000000774ba065/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/600fb7/0000000000000000774ba065/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype"); font-display:swap;font-style:italic;font-weight:400;font-stretch:normal; }
+
+/* ---------------------------------------------------------------------------
    1. Two token errors that produced most of the audit's findings.
    --------------------------------------------------------------------------- */
 
@@ -209,13 +236,28 @@
   aspect-ratio: auto;
 }
 
-/* Group legends measured 20px / 28px, untracked. The original's variable font sits at weight
-   708; 700 is the nearest static weight available, recorded in the receipt as intentional. */
+/* Group legends measured 20px / 28px, untracked, at weight 708. sofia-pro ships 400/700/800/
+   900, so 708 and 700 both draw with the 700 face — the reference simply declares an odd
+   number. Matching the declaration costs nothing and stops it reading as an open gap. */
 .lp-buy-box__legend {
   font-size: 2rem;
   line-height: 2.8rem;
   letter-spacing: normal;
-  font-weight: 700;
+  font-weight: 708;
+}
+
+/* Same 708 declaration on the other three buy-box roles the reference sets it on. */
+.lp-buy-box__delivery-title,
+.lp-buy-box__price,
+.lp-buy-box__quantity-label {
+  font-weight: 708;
+}
+
+/* The reference names "Sofia Sans" first here. No @font-face anywhere defines it, so it falls
+   straight through to sofia-pro and draws identically — the stack is matched so the comparison
+   is clean rather than carrying a difference that has no visual effect. */
+.lp-buy-box__quantity-note {
+  font-family: 'Sofia Sans', sofia-pro, sofia-pro, -apple-system, sans-serif;
 }
 
 /* Plan label measured 22.4px line-height. */
