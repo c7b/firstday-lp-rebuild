@@ -25,3 +25,6 @@ __pycache__
 .diag.mjs
 .shot.mjs
 .adpage.mjs
+
+# agent scratch probes
+_tmp_*.mjs
