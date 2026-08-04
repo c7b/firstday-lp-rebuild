@@ -132,6 +132,14 @@ def main():
     v2 = _copy.deepcopy(template)
     v2["sections"]["fidelity_overrides"] = {"type": "lp-fidelity-overrides", "settings": {}}
     v2["order"] = v2["order"] + ["fidelity_overrides"]
+
+    # The PDP selector is swapped for the rebuilt one. This is what a second section buys: the
+    # exchange is one key in one file, and v1 keeps rendering everywhere else untouched.
+    v2_buy_box = FRAGMENTS / "buy-box-v2.json"
+    if v2_buy_box.exists():
+        frag = json.loads(v2_buy_box.read_text(encoding="utf-8"))
+        frag.pop("_note", None)
+        v2["sections"]["buy_box"] = frag
     v2out = ROOT / "templates" / "page.tdk-behind-the-science-v2.json"
     v2body = GENERATED_HEADER + json.dumps(v2, indent=2, ensure_ascii=False) + "\n"
     if check_only:

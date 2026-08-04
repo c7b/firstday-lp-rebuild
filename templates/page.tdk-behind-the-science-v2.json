@@ -174,308 +174,107 @@
       }
     },
     "buy_box": {
-      "type": "lp-buy-box",
+      "type": "lp-buy-box-v2",
       "settings": {
         "product": "teens-multivitamin",
-        "anchor_id": "standalone-product-section",
         "subtitle": "",
-        "rating_text": "1394 reviews",
-        "rating_stars": "4.7",
-        "description": "",
-        "flavor_text": "",
         "frequency_heading": "Delivery Frequency",
-        "sub_title": "Monthly",
-        "sub_compare": "$39",
-        "sub_price": "$23.40",
-        "sub_perks": "<p>FREE Gift on orders +$75</p><p>FREE Shipping on first order</p><p>Cancel anytime, no questions asked</p>",
-        "sub_badge": "Lowest Price Anywhere!",
-        "ot_title": "One-Time",
-        "ot_compare": "$39",
-        "ot_price": "$27.30",
-        "ot_note": "with code FIREWORKS",
-        "ot_warning": "<p>You're missing out on free shipping!</p><p>You're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!</p>",
         "quantity_heading": "Quantity",
-        "qty_note": "",
-        "gift_heading": "",
-        "gift_sub": "",
-        "gift_image": "",
-        "gift_compare": "",
-        "gift_price": "",
-        "gift_progress_text": "",
-        "gift_threshold": "$75",
-        "urgency_eyebrow": "",
-        "urgency_headline": "",
-        "urgency_offer": "",
-        "guarantee_text": "45 Day Money Back Guarantee",
-        "cta_label": "Add To Cart & View Gift",
-        "ages_note": "",
-        "color_scheme": "scheme-2",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "gift_threshold_amount": 75,
-        "gift_away_template": "",
-        "gift_unlocked_text": ""
+        "quantity_note": "",
+        "cta_label": "Add To Cart",
+        "color_scheme": "scheme-1",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "anchor_id": ""
       },
       "blocks": {
-        "tab_toddlers": {
-          "type": "product_tab",
+        "plan_monthly": {
+          "type": "plan",
           "settings": {
-            "label": "Toddlers'",
-            "url": "/pages/toddlers-behind-the-science-lp",
-            "product": "toddlers-multivitamin"
+            "label": "Monthly",
+            "compare_price": "$39",
+            "price": "$23.40",
+            "benefits": "FREE Gift on orders +$75\nFREE Shipping on first order\nCancel anytime, no questions asked",
+            "benefit_tone": "positive",
+            "badge": "Lowest Price <strong>Anywhere!</strong>",
+            "selected": true
           }
         },
-        "tab_kids": {
-          "type": "product_tab",
+        "plan_onetime": {
+          "type": "plan",
           "settings": {
-            "label": "Kids'",
-            "url": "/pages/kde-behind-the-science-lp",
-            "product": "kids-multivitamin"
+            "label": "One-Time",
+            "compare_price": "$39",
+            "price": "$27.30",
+            "price_note": "with code FIREWORKS",
+            "benefits": "You're missing out on free shipping!\nYou're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!",
+            "benefit_tone": "negative",
+            "badge": "Higher Cost",
+            "selected": false
           }
         },
-        "tab_teens": {
-          "type": "product_tab",
-          "settings": {
-            "label": "Teens'",
-            "url": "",
-            "product": "teens-multivitamin"
-          }
-        },
-        "benefit_health": {
-          "type": "benefit",
-          "settings": {
-            "image": "shopify://shop_images/Untitled_design_4_59d76314-c0d8-4be6-83d3-5fa1ebbee62c.png",
-            "title": "Improve Overall Health & Nutrition",
-            "stat": "98%",
-            "text": "of parents say First Day vitamins support their teen's overall health & nutrition.†"
-          }
-        },
-        "benefit_mood": {
-          "type": "benefit",
-          "settings": {
-            "image": "shopify://shop_images/Vector_6.png",
-            "title": "Boost Mood & Motivation",
-            "stat": "83%",
-            "text": "of customers say First Day vitamins support their teens' overall mood & behavior, and saw improved motivation for school.†"
-          }
-        },
-        "benefit_skin": {
-          "type": "benefit",
-          "settings": {
-            "image": "shopify://shop_images/Untitled_design_7_33850f18-3aa5-4e9f-bed6-6e1dab795659.png",
-            "title": "Promote Clear Skin",
-            "stat": "75%",
-            "text": "said they saw an improvement to skin health, including reduced acne.†"
-          }
-        },
-        "quantity_1": {
-          "type": "qty_tier",
+        "tier_1": {
+          "type": "tier",
           "settings": {
             "label": "1‎ Bottle",
             "savings": "Save $15.80",
             "selected": false
           }
         },
-        "quantity_2": {
-          "type": "qty_tier",
+        "tier_2": {
+          "type": "tier",
           "settings": {
             "label": "2‎ Bottles",
             "savings": "Save $31.59",
             "selected": true
           }
         },
-        "quantity_3": {
-          "type": "qty_tier",
+        "tier_3": {
+          "type": "tier",
           "settings": {
             "label": "3‎ Bottles",
             "savings": "Save $47.39",
             "selected": false
           }
         },
-        "quantity_4": {
-          "type": "qty_tier",
+        "tier_4": {
+          "type": "tier",
           "settings": {
             "label": "4‎ Bottles",
             "savings": "Save $63.18",
             "selected": false
           }
         },
-        "stamp_guarantee": {
-          "type": "stamp",
+        "line_subtotal": {
+          "type": "summary_line",
           "settings": {
-            "alt": "money back guarantee",
-            "line_1": "MONEY BACK",
-            "line_2": "GUARANTEE",
-            "image": "shopify://shop_images/image_17_fa167dc7-7f96-4204-aab6-b96d9c7e5980.png"
+            "label": "Subtotal",
+            "compare": "$78.00",
+            "final": "$46.80",
+            "final_colour": "#078942",
+            "emphasise": true
           }
         },
-        "stamp_families": {
-          "type": "stamp",
+        "line_shipping": {
+          "type": "summary_line",
           "settings": {
-            "alt": "1 million customers",
-            "line_1": "1 million",
-            "line_2": "customers",
-            "image": "shopify://shop_images/image_18_13255bc8-7904-4672-a617-679ae221abd4.png"
-          }
-        },
-        "stamp_checkout": {
-          "type": "stamp",
-          "settings": {
-            "alt": "secure checkout",
-            "line_1": "SECURE",
-            "line_2": "CHECKOUT",
-            "image": "shopify://shop_images/image_23_b0377e59-fa28-47bb-971b-edb438628906.png"
-          }
-        },
-        "info_ingredients": {
-          "type": "info_item",
-          "settings": {
-            "icon": "shopify://shop_images/icon-list-ingredients-sourcing.png",
-            "title": "Ingredients",
-            "body": "<p>We are thoughtful about the ingredients we select, use REAL organic fruits & vegetables, and keep out long lists of ingredients that can't even be pronounced.</p><p><strong>Organic Superfood Blend:</strong> Apple, Kale, Broccoli, Spinach, Carrot, Parsley, Beet, Green Cabbage, Raspberry, Blueberry, Strawberry, Tomato, Aronia Berry, Chlorella, Maca, Moringa, Reishi Mushroom, Cordyceps Mushroom, Lion's Mane Mushroom, Turmeric, Ginger</p><p><strong>Other Ingredients:</strong> Tapioca Syrup‡, Cane Sugar‡, Water, Pectin, Citric Acid, Natural Flavors, Superfood Powdered Blend‡ (Apple‡, Kale‡, Broccoli‡, Spinach‡, Carrot‡, Parsley‡, Beet‡, Green Cabbage‡, Raspberry‡, Blueberry‡, Strawberry‡, Tomato‡, Aronia Berry‡, Chlorella‡, Maca‡, Moringa‡, Reishi Mushroom‡, Cordyceps Mushroom‡, Lion's Mane Mushroom‡, Turmeric‡, Ginger‡), Carrot and Blackcurrant and Red Bell Pepper Juice for Color.</p><p>‡Organic</p><p><strong>Free From The Top 9 Allergens:</strong> We are dairy-free, soy-free, egg-free, gluten-free, peanut-free, tree nut-free, fish-free, shellfish-free, and sesame-free.</p>"
-          }
-        },
-        "info_supplement_facts": {
-          "type": "info_item",
-          "settings": {
-            "icon": "shopify://shop_images/old-icon-microscope.png",
-            "title": "Supplement Facts",
-            "body": "",
-            "image": "shopify://shop_images/Supplement_facts_ingredients_cfc43de9-f359-4acd-811a-dbd60ecf129f.jpg"
-          }
-        },
-        "info_subscription": {
-          "type": "info_item",
-          "settings": {
-            "icon": "shopify://shop_images/Rivo-Icon-Checkmark.svg",
-            "title": "Subscription Details",
-            "body": "<p>You'll receive a stylish refillable bottle on your first order, then receive our eco-friendly refill pouches every 30 days on a physician-recommended schedule.</p><p>Plus, you'll receive these benefits:</p><ul><li>Savings every single month.</li><li>Free shipping on your first order.</li><li>Easy management - skip or pause whenever you need.</li><li>VIP access to sales, gifts, early access & more.</li><li>Cancel anytime.</li></ul>"
-          }
-        },
-        "age_toddlers": {
-          "type": "age_card",
-          "settings": {
-            "label": "Toddlers",
-            "sub": "Ages 2 - 3",
-            "url": "/pages/kde-behind-the-science-lp"
-          }
-        },
-        "age_kids": {
-          "type": "age_card",
-          "settings": {
-            "label": "Kids",
-            "sub": "Ages 4 - 12",
-            "url": "/pages/kde-behind-the-science-lp"
-          }
-        },
-        "carousel_01": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/Teens_-_Multi_4963136b-8099-4d15-b592-15a9eb50d0b6.jpg",
-            "alt": "The \"No Junk\"™ Teens’ Multi"
-          }
-        },
-        "carousel_02": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/Rebrand_Broad_Images_16.png",
-            "alt": "First Day Teens Multi + Superfoods dietary supplement packaging with a gummy on a white background"
-          }
-        },
-        "carousel_03": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/Directions_with_product-in-use_image_cd32a596-def2-4e61-81d6-5b07fe8f8dbf.jpg",
-            "alt": "Product packaging with text about &"
-          }
-        },
-        "carousel_04": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/Nutrients_over_gummy_macro_de37d2db-1e2e-44e9-94b9-1c3f1693b9dc.jpg",
-            "alt": "Gummy vitamins with health benefits listed on a blue background. Free of artificial dyes."
-          }
-        },
-        "carousel_05": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/Product_UVP_26ec3181-c450-4f70-be3b-29d2af6c41da.jpg",
-            "alt": "93% of kids don&"
-          }
-        },
-        "carousel_06": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/Testimonials_6f95a7e3-d8e5-4d9b-bc4c-de094ac97c9d.jpg",
-            "alt": "Better health for the whole family. pictures of happy customers"
-          }
-        },
-        "carousel_07": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/Us_vs_them_table_-_V2_a95448c7-b1b2-4908-a7b1-820ed5feccd3.jpg",
-            "alt": "55 million gummies sold in 2024"
-          }
-        },
-        "carousel_08": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/FD_Rebrand_ProductCarousels_NewLook_3a49d1c2-8f32-402e-a696-94d8b77f6935.jpg",
-            "alt": "image of product packaging showing packaging has a new look"
-          }
-        },
-        "carousel_09": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/Product_3_core_features_f64a0200-24a9-44a2-8322-dd237ca944a4.jpg",
-            "alt": "Blue container with gummies and superfoods on a light blue background, featuring text about nutrition and product features."
-          }
-        },
-        "carousel_10": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/Social_mission_890153d4-4dd9-4d9d-892a-d9981ef7b7e2.jpg",
-            "alt": "97% of customers prefer first day"
-          }
-        },
-        "carousel_11": {
-          "type": "carousel_image",
-          "settings": {
-            "image": "shopify://shop_images/Supplement_facts_ingredients_8e36b0a4-5c9e-409f-a072-589746e75f50.jpg",
-            "alt": "Supplement facts label with clean label project logo on a blue background"
+            "label": "Shipping",
+            "compare": "$5.00",
+            "final": "FREE",
+            "final_colour": "#078942",
+            "emphasise": false
           }
         }
       },
       "block_order": [
-        "tab_toddlers",
-        "tab_kids",
-        "tab_teens",
-        "benefit_health",
-        "benefit_mood",
-        "benefit_skin",
-        "quantity_1",
-        "quantity_2",
-        "quantity_3",
-        "quantity_4",
-        "stamp_guarantee",
-        "stamp_families",
-        "stamp_checkout",
-        "info_ingredients",
-        "info_supplement_facts",
-        "info_subscription",
-        "age_toddlers",
-        "age_kids",
-        "carousel_01",
-        "carousel_02",
-        "carousel_03",
-        "carousel_04",
-        "carousel_05",
-        "carousel_06",
-        "carousel_07",
-        "carousel_08",
-        "carousel_09",
-        "carousel_10",
-        "carousel_11"
+        "plan_monthly",
+        "plan_onetime",
+        "tier_1",
+        "tier_2",
+        "tier_3",
+        "tier_4",
+        "line_subtotal",
+        "line_shipping"
       ]
     },
     "urgency_banner": {

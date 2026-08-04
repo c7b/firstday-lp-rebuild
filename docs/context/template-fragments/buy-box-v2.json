@@ -1,0 +1,105 @@
+{
+  "type": "lp-buy-box-v2",
+  "settings": {
+    "product": "teens-multivitamin",
+    "subtitle": "",
+    "frequency_heading": "Delivery Frequency",
+    "quantity_heading": "Quantity",
+    "quantity_note": "",
+    "cta_label": "Add To Cart",
+    "color_scheme": "scheme-1",
+    "padding_top": 40,
+    "padding_bottom": 40,
+    "anchor_id": ""
+  },
+  "blocks": {
+    "plan_monthly": {
+      "type": "plan",
+      "settings": {
+        "label": "Monthly",
+        "compare_price": "$39",
+        "price": "$23.40",
+        "benefits": "FREE Gift on orders +$75\nFREE Shipping on first order\nCancel anytime, no questions asked",
+        "benefit_tone": "positive",
+        "badge": "Lowest Price <strong>Anywhere!</strong>",
+        "selected": true
+      }
+    },
+    "plan_onetime": {
+      "type": "plan",
+      "settings": {
+        "label": "One-Time",
+        "compare_price": "$39",
+        "price": "$27.30",
+        "price_note": "with code FIREWORKS",
+        "benefits": "You're missing out on free shipping!\nYou're 87% less likely to build a healthy habit without subscribing. You can cancel anytime!",
+        "benefit_tone": "negative",
+        "badge": "Higher Cost",
+        "selected": false
+      }
+    },
+    "tier_1": {
+      "type": "tier",
+      "settings": {
+        "label": "1‎ Bottle",
+        "savings": "Save $15.80",
+        "selected": false
+      }
+    },
+    "tier_2": {
+      "type": "tier",
+      "settings": {
+        "label": "2‎ Bottles",
+        "savings": "Save $31.59",
+        "selected": true
+      }
+    },
+    "tier_3": {
+      "type": "tier",
+      "settings": {
+        "label": "3‎ Bottles",
+        "savings": "Save $47.39",
+        "selected": false
+      }
+    },
+    "tier_4": {
+      "type": "tier",
+      "settings": {
+        "label": "4‎ Bottles",
+        "savings": "Save $63.18",
+        "selected": false
+      }
+    },
+    "line_subtotal": {
+      "type": "summary_line",
+      "settings": {
+        "label": "Subtotal",
+        "compare": "$78.00",
+        "final": "$46.80",
+        "final_colour": "#078942",
+        "emphasise": true
+      }
+    },
+    "line_shipping": {
+      "type": "summary_line",
+      "settings": {
+        "label": "Shipping",
+        "compare": "$5.00",
+        "final": "FREE",
+        "final_colour": "#078942",
+        "emphasise": false
+      }
+    }
+  },
+  "block_order": [
+    "plan_monthly",
+    "plan_onetime",
+    "tier_1",
+    "tier_2",
+    "tier_3",
+    "tier_4",
+    "line_subtotal",
+    "line_shipping"
+  ],
+  "_note": "Content mirrors the v1 fragment, which already passes the copy gate, so this section changes presentation only. Prices and labels are the reference's own."
+}
