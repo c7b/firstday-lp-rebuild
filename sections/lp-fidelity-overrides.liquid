@@ -24,7 +24,7 @@
   /* build stamp — the only string in this file guaranteed to change every commit. Capture and
      audit verify against it, because every earlier marker (class names, rem values) also
      existed in previous commits and quietly certified stale renders as current. */
-  --lp-fidelity-build: "round18";
+  --lp-fidelity-build: "round19";
 }
 /* Post-debrief fidelity corrections — loaded ONLY by the v2 template.
  *
@@ -972,6 +972,65 @@
 /* The guarantee row now carries the reference's card icon. */
 .lp-hero__guarantee-icon {
   flex: none;
+}
+
+
+/* ---------------------------------------------------------------------------
+   19. Measured against the reference's own boxes, one element at a time.
+   --------------------------------------------------------------------------- */
+
+/* Reference CTA: 48px tall on 16px vertical padding, with a hard offset shadow in the page
+   navy — no blur, 5px down and right. Ours was 45px on 10px padding and flat, which is the
+   "shorter and lacks the shadow depth" objection. */
+.shopify-section[class*='lp-'] .lp-hero__cta {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  margin-top: 0;
+  box-shadow: 5px 5px 0 0 #2c3d50;
+}
+
+/* Reference testimonial: 560 wide, 24px padding, 16px gap, and a 64px avatar. Ours ran 460 on
+   18px padding with a 40px avatar, which is why the review took an extra line. */
+.shopify-section[class*='lp-'] .lp-hero__testimonial {
+  max-width: 56rem;
+  width: 100%;
+  padding: 2.4rem;
+  gap: 1.6rem;
+  grid-template-columns: 6.4rem 1fr;
+}
+
+.shopify-section[class*='lp-'] .lp-hero__avatar {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+/* Reference keeps the name and the rating together toward the left rather than pushing the
+   stars to the far edge. */
+.lp-hero__testimonial figcaption {
+  justify-content: flex-start;
+  gap: 1.6rem;
+}
+
+.lp-hero__testimonial-stars {
+  gap: 0.1rem;
+}
+
+/* Reference clinicians band: 157px tall on 50px vertical padding; ours was 123 on 32. */
+.lp-clinicians-band {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Reference clinician avatars read larger against that taller band. */
+.lp-clinicians-band__avatar {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+/* Reference accordion heading is 1168 wide inside its 1182 track. */
+.lp-media-accordion__heading {
+  max-width: 116.8rem;
+  margin-inline: auto;
 }
 
 {% endstyle %}
