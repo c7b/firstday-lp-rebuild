@@ -18,13 +18,15 @@
   - Every fidelity fix is in one file, so the diff IS the audit trail.
 {% endcomment %}
 
+{{ 'lp-science-tabs-ref.css' | asset_url | stylesheet_tag }}
+
 {% style %}
 
 :root {
   /* build stamp — the only string in this file guaranteed to change every commit. Capture and
      audit verify against it, because every earlier marker (class names, rem values) also
      existed in previous commits and quietly certified stale renders as current. */
-  --lp-fidelity-build: "round19";
+  --lp-fidelity-build: "round20";
 }
 /* Post-debrief fidelity corrections — loaded ONLY by the v2 template.
  *

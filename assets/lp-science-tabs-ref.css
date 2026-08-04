@@ -1,0 +1,130 @@
+/* The science-tabs section, given the reference's own design tokens.
+ *
+ * The reference does not hardcode this section's look — it declares it as forty-odd custom
+ * properties on the section root and the rules read from those. Which means the section's whole
+ * specification is a list of values, and porting it is copying that list rather than inferring
+ * anything from a screenshot.
+ *
+ * This is where the visible differences were: the tab BAR carries a 1px #758390 border (the tab
+ * itself has none), the panel has its own #d7effa border on an 8px radius, and the container
+ * sits on a 12px radius with 48px of padding. Reading only the tab would have found none of it.
+ *
+ * The two font variables the reference declares here are deliberately dropped: they point at
+ * its own theme's font families, which are not ours to inherit.
+ */
+
+.lp-science-tabs {
+  --padding-top: 32px;
+  --padding-bottom: 32px;
+  --padding-left: 32px;
+  --padding-right: 32px;
+  --padding-top-mobile: 24px;
+  --padding-bottom-mobile: 24px;
+  --padding-left-mobile: 16px;
+  --padding-right-mobile: 16px;
+  --section-bg: #ffffff;
+  --heading-color: #2c3d50;
+  --container-bg: #ffffff;
+  --container-radius: 12px;
+  --container-padding: 48px;
+  --tab-bar-border-color: #758390;
+  --tab-bg: #f2fbff;
+  --tab-color: #2c3d50;
+  --tab-active-bg: #2c3d50;
+  --tab-active-color: #ffffff;
+  --panel-border-color: #d7effa;
+  --panel-radius: 8px;
+  --content-title-color: #2c3d50;
+  --content-desc-color: #2c3d50;
+  --benefits-heading-color: #2c3d50;
+  --benefits-text-color: #2c3d50;
+  --heading-size: 38px;
+  --heading-size-mobile: 24px;
+  --tab-font-size: 16px;
+  --tab-font-size-mobile: 16px;
+  --content-title-size: 24px;
+  --content-title-size-mobile: 22px;
+  --content-desc-size: 18px;
+  --content-desc-size-mobile: 16px;
+  --benefits-heading-size: 20px;
+  --benefits-heading-size-mobile: 18px;
+  --benefits-text-size: 16px;
+  --image-width: 410px;
+  --image-height-mobile: 200px;
+  --heading-gap: 0px;
+  --heading-gap-mobile: 16px;
+  --tab-padding-v: 12px;
+  --tab-padding-h: 20px;
+  --tab-padding-v-mobile: 18px;
+  --tab-padding-h-mobile: 8px;
+}
+
+/* The tab bar's border and the panel's border are the two the eye actually reads. */
+.lp-science-tabs__tab-list {
+  border: 1px solid var(--tab-bar-border-color);
+  border-radius: 1000px;
+  padding: 0.4rem;
+}
+
+.lp-science-tabs__tab {
+  border: none;
+  border-radius: 1000px;
+  padding: var(--tab-padding-v) var(--tab-padding-h);
+  background-color: var(--tab-bg);
+  color: var(--tab-color);
+  font-size: var(--tab-font-size);
+}
+
+.lp-science-tabs__tab--active {
+  background-color: var(--tab-active-bg);
+  color: var(--tab-active-color);
+}
+
+.lp-science-tabs__panel {
+  border: 1px solid var(--panel-border-color);
+  border-radius: var(--panel-radius);
+}
+
+.lp-science-tabs__component {
+  background: var(--container-bg);
+  border-radius: var(--container-radius);
+  padding: var(--container-padding);
+}
+
+.lp-science-tabs__heading {
+  font-size: var(--heading-size);
+  color: var(--heading-color);
+}
+
+.lp-science-tabs__panel-heading {
+  font-size: var(--content-title-size);
+  color: var(--content-title-color);
+}
+
+.lp-science-tabs__panel-content p {
+  font-size: var(--content-desc-size);
+  color: var(--content-desc-color);
+}
+
+@media screen and (max-width: 749px) {
+  .lp-science-tabs__tab {
+    padding: var(--tab-padding-v-mobile) var(--tab-padding-h-mobile);
+    font-size: var(--tab-font-size-mobile);
+  }
+
+  .lp-science-tabs__heading {
+    font-size: var(--heading-size-mobile);
+  }
+
+  .lp-science-tabs__panel-heading {
+    font-size: var(--content-title-size-mobile);
+  }
+
+  .lp-science-tabs__panel-content p {
+    font-size: var(--content-desc-size-mobile);
+  }
+
+  .lp-science-tabs__component {
+    padding: var(--padding-top-mobile) var(--padding-left-mobile);
+  }
+}
