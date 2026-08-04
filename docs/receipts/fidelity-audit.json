@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-04T14:15:03.400Z",
+ "generated": "2026-08-04T14:19:23.296Z",
  "original": "http://127.0.0.1:8777/fd-lp.html",
  "rebuild": "http://127.0.0.1:8777/v2-live.html",
  "viewports": {
@@ -172,9 +172,9 @@
     "ourText": "The Science-Backed Vitamin for Grumpy, Tired, or",
     "diffs": [
      {
-      "property": "_x",
-      "original": "16",
-      "rebuild": "24"
+      "property": "_w",
+      "original": "343",
+      "rebuild": "360"
      }
     ]
    },
@@ -188,9 +188,9 @@
     "ourText": "Most Kids Are Missing Key Nutrients. Get Help in",
     "diffs": [
      {
-      "property": "_x",
-      "original": "16",
-      "rebuild": "24"
+      "property": "_w",
+      "original": "343",
+      "rebuild": "360"
      }
     ]
    },
@@ -200,9 +200,9 @@
     "ourText": "Shop Now\n          \n\n              \n            ",
     "diffs": [
      {
-      "property": "_x",
-      "original": "16",
-      "rebuild": "24"
+      "property": "_w",
+      "original": "343",
+      "rebuild": "360"
      },
      {
       "property": "_h",
@@ -227,9 +227,19 @@
     "ourText": "Focus in Class\n            \n          \n         ",
     "diffs": [
      {
+      "property": "_x",
+      "original": "16",
+      "rebuild": "24"
+     },
+     {
+      "property": "_w",
+      "original": "359",
+      "rebuild": "343"
+     },
+     {
       "property": "_h",
       "original": "86",
-      "rebuild": "78"
+      "rebuild": "64"
      }
     ]
    },
@@ -239,14 +249,29 @@
     "ourText": "How This Helps*\n                \n               ",
     "diffs": [
      {
-      "property": "_w",
-      "original": "343",
-      "rebuild": "358"
+      "property": "_x",
+      "original": "16",
+      "rebuild": "24"
      },
      {
       "property": "_h",
       "original": "577",
       "rebuild": "641"
+     },
+     {
+      "property": "column-gap",
+      "original": "normal",
+      "rebuild": "0px"
+     },
+     {
+      "property": "row-gap",
+      "original": "normal",
+      "rebuild": "0px"
+     },
+     {
+      "property": "max-width",
+      "original": "none",
+      "rebuild": "1184px"
      }
     ]
    },
@@ -258,7 +283,22 @@
      {
       "property": "_h",
       "original": "346",
-      "rebuild": "297"
+      "rebuild": "309"
+     },
+     {
+      "property": "display",
+      "original": "block",
+      "rebuild": "grid"
+     },
+     {
+      "property": "column-gap",
+      "original": "normal",
+      "rebuild": "12px"
+     },
+     {
+      "property": "row-gap",
+      "original": "normal",
+      "rebuild": "12px"
      }
     ]
    },
@@ -476,6 +516,11 @@
       "rebuild": "78"
      },
      {
+      "property": "align-items",
+      "original": "normal",
+      "rebuild": "center"
+     },
+     {
       "property": "flex-direction",
       "original": "row",
       "rebuild": "column"
@@ -491,6 +536,16 @@
       "property": "_x",
       "original": "121",
       "rebuild": "128"
+     },
+     {
+      "property": "_h",
+      "original": "64",
+      "rebuild": "50"
+     },
+     {
+      "property": "max-width",
+      "original": "none",
+      "rebuild": "1184px"
      },
      {
       "property": "justify-content",
@@ -513,6 +568,21 @@
       "property": "_h",
       "original": "412",
       "rebuild": "364"
+     },
+     {
+      "property": "column-gap",
+      "original": "normal",
+      "rebuild": "0px"
+     },
+     {
+      "property": "row-gap",
+      "original": "normal",
+      "rebuild": "0px"
+     },
+     {
+      "property": "max-width",
+      "original": "none",
+      "rebuild": "1184px"
      }
     ]
    },
@@ -529,7 +599,22 @@
      {
       "property": "_h",
       "original": "346",
-      "rebuild": "298"
+      "rebuild": "310"
+     },
+     {
+      "property": "display",
+      "original": "block",
+      "rebuild": "grid"
+     },
+     {
+      "property": "column-gap",
+      "original": "normal",
+      "rebuild": "12px"
+     },
+     {
+      "property": "row-gap",
+      "original": "normal",
+      "rebuild": "12px"
      }
     ]
    },
