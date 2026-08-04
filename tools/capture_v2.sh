@@ -15,8 +15,12 @@ JAR="$(mktemp)"
 curl -s -c "$JAR" -d "form_type=storefront_password&utf8=%E2%9C%93&password=${STOREFRONT_PASSWORD:-1234}" \
   -o /dev/null "https://${STORE}.myshopify.com/password"
 
-# Markers come from the working tree, so this can never pass on a stale render.
-MARKERS=$(grep -oE '^\.lp-[a-z0-9_-]+' sections/lp-fidelity-overrides.liquid | sort -u | tail -5 | tr -d '.')
+# The marker has to be something only the CURRENT commit contains. Class names sorted
+# alphabetically do not change between commits, so an early version of this script happily
+# "verified" a render from three commits back. Pass one explicitly, or fall back to the last
+# declaration value in the file, which does move whenever the CSS does.
+MARKER="${FIDELITY_MARKER:-$(grep -oE '[0-9]+\.[0-9]+rem' sections/lp-fidelity-overrides.liquid | tail -1)}"
+MARKERS="$MARKER"
 for i in $(seq 1 "${CAPTURE_TRIES:-60}"); do
   curl -s -b "$JAR" "${PAGE}?_cap=${i}$(date +%s%N)" -o "$OUT"
   ok=1

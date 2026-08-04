@@ -691,6 +691,46 @@
   }
 }
 
+
+/* ---------------------------------------------------------------------------
+   13. Specificity, because document order is not reliable here.
+
+   The page loads lp-media-accordion.css TWICE — the second <link> sits after this section's
+   <style>, so an equal-specificity rule here loses on order no matter that the file "comes
+   last". Every rule below therefore carries the section prefix and wins at 0,3,0 rather than
+   relying on where it happens to be parsed. This is why display:block on the CTA row kept
+   resolving to flex/column across three rounds.
+   --------------------------------------------------------------------------- */
+
+.shopify-section[class*='lp-'] .lp-media-accordion__cta-block {
+  display: block;
+  align-items: normal;
+  flex-direction: row;
+}
+
+/* Reference CTA row measured 92px tall at 1440 and 88 at 390 against our 78 — the button and
+   the guarantee line sit further apart than ours did. */
+.shopify-section[class*='lp-'] .lp-media-accordion__guarantee {
+  margin-top: 1.2rem;
+}
+
+@media screen and (max-width: 749px) {
+  /* Reference hero and accordion start at x=16 on mobile, not the 24 our gutter produced. */
+  .lp-hero__container,
+  .lp-media-accordion__inner {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  /* With a 16px gutter the track is 358; the reference holds its text to 343, so the copy
+     column carries the remainder as its own cap. */
+  .lp-hero__content,
+  .lp-media-accordion__heading,
+  .lp-science-tabs__panel {
+    max-width: 34.3rem;
+  }
+}
+
 {% endstyle %}
 
 {% schema %}
