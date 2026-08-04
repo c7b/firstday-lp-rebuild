@@ -1,0 +1,452 @@
+{% comment %}
+  The PDP selector, rebuilt against the reference node for node.
+
+  This exists alongside lp-buy-box rather than replacing it. lp-buy-box is on the delivered
+  page, both variant funnels, and the page the panel reviewed; chasing pixel parity inside it
+  would have changed all four. Swapping between them is a `type` change in one template file.
+
+  The styles are not written here — assets/lp-buy-box-v2-ported.css is the reference's own
+  stylesheet, namespaced by tools/port_pdp_styles.py and otherwise unmodified. So the markup's
+  job is to produce the DOM shape that stylesheet expects. Class names, nesting and element
+  types therefore follow the reference exactly, including the places where that is not how one
+  would write it from scratch.
+
+  What this does NOT do: add to cart. The brief for this section was presentation, and building
+  half a cart flow would be worse than building none — the controls select state and nothing
+  else, and say so.
+{% endcomment %}
+
+{{ 'lp-buy-box-v2-ported.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign buy_product = section.settings.product
+  assign mf = buy_product.metafields.custom
+  assign fact_subtitle = section.settings.subtitle | default: mf.subtitle.value
+  assign fact_qty_note = section.settings.quantity_note | default: mf.servings_per_bottle.value
+%}
+
+<section
+  id="{{ section.settings.anchor_id | default: section.id }}"
+  class="lp-buy-box-v2 color-{{ section.settings.color_scheme }} gradient"
+  style="padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="lp-buy-box-v2__page-width">
+    <div class="lp-buy-box-v2__layout">
+      {%- comment -%} ---------------------------------------------- gallery {%- endcomment -%}
+      <div class="lp-buy-box-v2__product-gallery" data-component="product-gallery">
+        <div class="lp-buy-box-v2__product-gallery__main">
+          <div class="lp-buy-box-v2__product-gallery__main-wrapper">
+            {%- assign hero_media = buy_product.media | where: 'media_type', 'image' | first -%}
+            {%- if hero_media -%}
+              {{
+                hero_media
+                | image_url: width: 1200
+                | image_tag:
+                  class: 'lp-buy-box-v2__product-gallery__main-image',
+                  id: 'lp-bbv2-main-image',
+                  widths: '400, 600, 800, 1200',
+                  sizes: '(min-width: 1024px) 646px, 100vw',
+                  loading: 'eager',
+                  alt: buy_product.title
+              }}
+            {%- endif -%}
+          </div>
+        </div>
+
+        <div class="lp-buy-box-v2__product-gallery__thumbnails">
+          <button
+            class="lp-buy-box-v2__product-gallery__arrow lp-buy-box-v2__product-gallery__arrow--prev"
+            type="button"
+            aria-label="{{ 'general.slider.previous_slide' | t | default: 'Previous image' }}"
+            data-thumb-prev
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="lp-buy-box-v2__product-gallery__thumbnail-container">
+            <div class="lp-buy-box-v2__product-gallery__thumbnail-track" data-thumb-track>
+              {%- for media in buy_product.media -%}
+                {%- if media.media_type == 'image' -%}
+                  <button
+                    class="lp-buy-box-v2__product-gallery__thumbnail{% if forloop.first %} lp-buy-box-v2__product-gallery__thumbnail--active{% endif %}"
+                    type="button"
+                    data-image-index="{{ forloop.index0 }}"
+                    data-image-url="{{ media | image_url: width: 1200 }}"
+                    aria-label="View image {{ forloop.index }}"
+                  >
+                    {{
+                      media
+                      | image_url: width: 150
+                      | image_tag:
+                        class: 'lp-buy-box-v2__product-gallery__thumbnail-image',
+                        width: 72,
+                        height: 72,
+                        loading: 'lazy',
+                        alt: ''
+                    }}
+                  </button>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+
+          <button
+            class="lp-buy-box-v2__product-gallery__arrow lp-buy-box-v2__product-gallery__arrow--next"
+            type="button"
+            aria-label="{{ 'general.slider.next_slide' | t | default: 'Next image' }}"
+            data-thumb-next
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {%- comment -%} ------------------------------------------ buy column {%- endcomment -%}
+      <div class="lp-buy-box-v2__content">
+        {%- if buy_product.title != blank -%}
+          <h2 class="lp-buy-box-v2__title">{{ buy_product.title | escape }}</h2>
+        {%- endif -%}
+        {%- if fact_subtitle != blank -%}
+          <p class="lp-buy-box-v2__subtitle">{{ fact_subtitle | escape | replace: '&lt;em&gt;', '<em>' | replace: '&lt;/em&gt;', '</em>' }}</p>
+        {%- endif -%}
+
+        {%- comment -%} ------------------------------------ frequency {%- endcomment -%}
+        <div class="lp-buy-box-v2__frequency-selector">
+          <div class="lp-buy-box-v2__quantity-selector__header lp-buy-box-v2__frequency-selector__header">
+            <h2 class="lp-buy-box-v2__frequency-selector__title">{{ section.settings.frequency_heading | escape }}</h2>
+          </div>
+
+          <div class="lp-buy-box-v2__frequency-selector__container" role="radiogroup" aria-label="{{ section.settings.frequency_heading | escape }}">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'plan' -%}
+                <div
+                  class="lp-buy-box-v2__frequency-selector__option{% if block.settings.selected %} lp-buy-box-v2__frequency-selector__option--selected{% endif %}"
+                  data-plan="{{ block.id }}"
+                  {{ block.shopify_attributes }}
+                >
+                  <div class="lp-buy-box-v2__frequency-selector__top">
+                    <div class="lp-buy-box-v2__frequency-selector__left">
+                      <div class="lp-buy-box-v2__frequency-selector__radio-container">
+                        {%- comment -%}
+                          The tick is a separate absolutely-centred SVG over the input rather
+                          than a pseudo-element — the reference does it this way so the mark can
+                          be toggled without repainting the control.
+                        {%- endcomment -%}
+                        <svg class="lp-buy-box-v2__frequency-selector__radio-check" width="16" height="16" viewBox="0 0 90 90" aria-hidden="true" focusable="false">
+                          <circle cx="45" cy="45" r="45" fill="#486ced"/>
+                          <path d="M38.478 64.5c-.01 0-.02 0-.029 0-1.3-.009-2.533-.579-3.381-1.563L21.59 47.284c-1.622-1.883-1.41-4.725.474-6.347 1.884-1.621 4.725-1.409 6.347.474l10.112 11.744L61.629 27.02c1.645-1.862 4.489-2.037 6.352-.391 1.862 1.646 2.037 4.49.391 6.352l-26.521 30C40.995 63.947 39.767 64.5 38.478 64.5z" fill="#fff"/>
+                        </svg>
+                        <input
+                          class="lp-buy-box-v2__frequency-selector__radio"
+                          type="radio"
+                          name="lp-bbv2-frequency-{{ section.id }}"
+                          value="{{ block.id }}"
+                          id="lp-bbv2-radio-{{ block.id }}"
+                          {% if block.settings.selected %}checked{% endif %}
+                        >
+                      </div>
+                      <label class="lp-buy-box-v2__frequency-selector__label" for="lp-bbv2-radio-{{ block.id }}">
+                        {{- block.settings.label | escape -}}
+                      </label>
+                    </div>
+
+                    <div class="lp-buy-box-v2__frequency-selector__price-box">
+                      <div class="lp-buy-box-v2__frequency-selector__price-row">
+                        {%- if block.settings.compare_price != blank -%}
+                          <span class="lp-buy-box-v2__frequency-selector__price-compare">{{ block.settings.compare_price | escape }}</span>
+                        {%- endif -%}
+                        <span
+                          class="lp-buy-box-v2__frequency-selector__price-final"
+                          style="color: {% if block.settings.selected %}#078942{% else %}#2c3d50{% endif %};"
+                        >{{ block.settings.price | escape }}</span>
+                      </div>
+                      {%- if block.settings.price_note != blank -%}
+                        <span class="lp-buy-box-v2__frequency-selector__price-note">{{ block.settings.price_note | escape }}</span>
+                      {%- endif -%}
+                    </div>
+                  </div>
+
+                  {%- if block.settings.benefits != blank -%}
+                    <div class="lp-buy-box-v2__frequency-selector__benefits{% unless block.settings.selected %} lp-buy-box-v2__frequency-selector__benefits--hidden{% endunless %}">
+                      {%- assign benefit_lines = block.settings.benefits | newline_to_br | split: '<br />' -%}
+                      {%- for line in benefit_lines -%}
+                        {%- assign trimmed = line | strip -%}
+                        {%- if trimmed != blank -%}
+                          <div class="lp-buy-box-v2__frequency-selector__benefit">
+                            {%- if block.settings.benefit_tone == 'negative' -%}
+                              <svg class="lp-buy-box-v2__frequency-selector__benefit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M10 1.667A8.333 8.333 0 1 1 10 18.333 8.333 8.333 0 0 1 10 1.667Zm3.136 5.195a.75.75 0 0 0-1.06 0L10 9.057 7.805 6.864a.75.75 0 1 0-1.06 1.06L8.94 10l-2.194 2.195a.75.75 0 1 0 1.06 1.06L10 10.943l2.195 2.193a.75.75 0 0 0 1.06-1.06L11.06 10l2.076-2.195a.75.75 0 0 0 0-1.06Z" fill="#2c3e50"/>
+                              </svg>
+                            {%- else -%}
+                              <svg class="lp-buy-box-v2__frequency-selector__benefit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M10 1.667A8.333 8.333 0 1 1 10 18.333 8.333 8.333 0 0 1 10 1.667Zm3.638 4.961a.75.75 0 0 0-.544.216l-3.638 4.61-2.181-2.18a.75.75 0 1 0-1.058 1.062l2.756 2.756a.75.75 0 0 0 1.111-.052l4.158-5.199a.75.75 0 0 0-.604-1.213Z" fill="#2c3e50"/>
+                              </svg>
+                            {%- endif -%}
+                            <p class="lp-buy-box-v2__frequency-selector__benefit-text">{{ trimmed }}</p>
+                          </div>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+                  {%- endif -%}
+
+                  {%- if block.settings.badge != blank -%}
+                    <div
+                      class="lp-buy-box-v2__frequency-selector__badge{% if block.settings.benefit_tone == 'negative' %} lp-buy-box-v2__frequency-selector__badge--negative{% endif %}{% unless block.settings.selected %} lp-buy-box-v2__frequency-selector__badge--hidden{% endunless %}"
+                      style="background-color: {% if block.settings.benefit_tone == 'negative' %}#2c3e50{% else %}#078942{% endif %};"
+                    >
+                      <p class="lp-buy-box-v2__frequency-selector__badge-text">{{ block.settings.badge }}</p>
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        {%- comment -%} -------------------------------------- quantity {%- endcomment -%}
+        <div class="lp-buy-box-v2__quantity-selector">
+          <div class="lp-buy-box-v2__quantity-selector__header">
+            <h2 class="lp-buy-box-v2__quantity-selector__title">{{ section.settings.quantity_heading | escape }}</h2>
+            {%- if fact_qty_note != blank -%}
+              <div class="lp-buy-box-v2__quantity-selector__servings-badge">
+                <p class="lp-buy-box-v2__quantity-selector__servings-text">{{ fact_qty_note | escape }}</p>
+              </div>
+            {%- endif -%}
+          </div>
+
+          <div class="lp-buy-box-v2__quantity-selector__grid" role="radiogroup" aria-label="{{ section.settings.quantity_heading | escape }}">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'tier' -%}
+                <div
+                  class="lp-buy-box-v2__quantity-selector__item{% if block.settings.selected %} lp-buy-box-v2__quantity-selector__item--selected{% endif %}"
+                  role="radio"
+                  aria-checked="{{ block.settings.selected }}"
+                  tabindex="{% if block.settings.selected %}0{% else %}-1{% endif %}"
+                  aria-label="{{ block.settings.label | escape }}"
+                  {{ block.shopify_attributes }}
+                >
+                  <div class="lp-buy-box-v2__quantity-selector__item-content">
+                    <p class="lp-buy-box-v2__quantity-selector__item-label">{{ block.settings.label | escape }}</p>
+                    {%- if block.settings.savings != blank -%}
+                      <div class="lp-buy-box-v2__quantity-selector__savings-badge{% if block.settings.selected %} lp-buy-box-v2__quantity-selector__savings-badge--selected{% endif %}">
+                        <p class="lp-buy-box-v2__quantity-selector__savings-text">{{ block.settings.savings | escape }}</p>
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+
+        {%- comment -%} ------------------------------------------ cart {%- endcomment -%}
+        <div class="lp-buy-box-v2__cart-summary">
+          <div class="lp-buy-box-v2__cart-summary__breakdown">
+            {%- comment -%}
+              A button, not a form. This section reproduces the selector's presentation; the
+              cart flow lives in lp-buy-box, which is still the section that sells.
+            {%- endcomment -%}
+            <button class="lp-buy-box-v2__cart-summary__button" type="button" data-lp-cta>
+              <svg class="lp-buy-box-v2__cart-summary__button-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <strong class="lp-buy-box-v2__cart-summary__button-text">{{ section.settings.cta_label | escape }}</strong>
+            </button>
+
+            <div class="lp-buy-box-v2__cart-summary_container_breakdown">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'summary_line' -%}
+                  <div class="lp-buy-box-v2__cart-summary__line" {{ block.shopify_attributes }}>
+                    <span class="lp-buy-box-v2__cart-summary__line-label{% unless block.settings.emphasise %} lp-buy-box-v2__cart-summary__line-label--product{% endunless %}"
+                      {% if block.settings.emphasise %}style="font-weight: 700;"{% endif %}
+                    >{{ block.settings.label | escape }}</span>
+                    <div class="lp-buy-box-v2__cart-summary__line-price">
+                      {%- if block.settings.compare != blank -%}
+                        <span class="lp-buy-box-v2__cart-summary__line-compare">{{ block.settings.compare | escape }}</span>
+                      {%- endif -%}
+                      <span class="lp-buy-box-v2__cart-summary__line-final" style="color: {{ block.settings.final_colour | default: '#078942' }};">{{ block.settings.final | escape }}</span>
+                    </div>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Only the frame. Everything inside is the reference's own ported stylesheet. */
+  .lp-buy-box-v2__page-width {
+    max-width: 132rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .lp-buy-box-v2__layout {
+    display: grid;
+    gap: 4rem;
+  }
+
+  .lp-buy-box-v2__title {
+    margin: 0;
+    font-size: 3.2rem;
+    line-height: 1.1;
+  }
+
+  .lp-buy-box-v2__subtitle {
+    margin: 0.8rem 0 2.4rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .lp-buy-box-v2__subtitle em {
+    color: var(--lp-blue, #486ced);
+    font-style: italic;
+  }
+
+  @media screen and (min-width: 990px) {
+    .lp-buy-box-v2__layout {
+      grid-template-columns: minmax(0, 1fr) 68rem;
+      align-items: start;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "LP buy box v2",
+  "tag": "section",
+  "class": "section-lp-buy-box-v2",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Benefit line",
+      "info": "Falls back to the product's custom.subtitle metafield. Wrap the emphasised half in <em> tags."
+    },
+    {
+      "type": "text",
+      "id": "frequency_heading",
+      "label": "Frequency heading",
+      "default": "Delivery Frequency"
+    },
+    {
+      "type": "text",
+      "id": "quantity_heading",
+      "label": "Quantity heading",
+      "default": "Quantity"
+    },
+    {
+      "type": "text",
+      "id": "quantity_note",
+      "label": "Servings chip",
+      "info": "Falls back to the product's custom.servings_per_bottle metafield."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label",
+      "default": "Add To Cart"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Colour scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "plan",
+      "name": "Delivery option",
+      "limit": 4,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Monthly" },
+        { "type": "text", "id": "compare_price", "label": "Compare-at price" },
+        { "type": "text", "id": "price", "label": "Price" },
+        { "type": "text", "id": "price_note", "label": "Price note" },
+        { "type": "textarea", "id": "benefits", "label": "Benefits", "info": "One per line." },
+        {
+          "type": "select",
+          "id": "benefit_tone",
+          "label": "Benefit tone",
+          "options": [
+            { "value": "positive", "label": "Positive (tick)" },
+            { "value": "negative", "label": "Negative (cross)" }
+          ],
+          "default": "positive"
+        },
+        { "type": "text", "id": "badge", "label": "Badge" },
+        { "type": "checkbox", "id": "selected", "label": "Selected", "default": false }
+      ]
+    },
+    {
+      "type": "tier",
+      "name": "Quantity tier",
+      "limit": 6,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "1 Bottle" },
+        { "type": "text", "id": "savings", "label": "Savings badge" },
+        { "type": "checkbox", "id": "selected", "label": "Selected", "default": false }
+      ]
+    },
+    {
+      "type": "summary_line",
+      "name": "Summary line",
+      "limit": 6,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label" },
+        { "type": "text", "id": "compare", "label": "Compare-at" },
+        { "type": "text", "id": "final", "label": "Final" },
+        { "type": "color", "id": "final_colour", "label": "Final colour", "default": "#078942" },
+        { "type": "checkbox", "id": "emphasise", "label": "Bold the label", "default": false }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP buy box v2"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["page", "index", "product"]
+  }
+}
+{% endschema %}
