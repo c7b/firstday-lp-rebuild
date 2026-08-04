@@ -621,6 +621,76 @@
   }
 }
 
+
+/* ---------------------------------------------------------------------------
+   12. The remainder, once the parent tracks stopped hiding it.
+   --------------------------------------------------------------------------- */
+
+/* The CTA row is still resolving flex/column from a media-gated rule. The earlier
+   `display: block` sits outside any query, so the gated one wins on cascade order regardless
+   of file position — it has to be restated inside a query of its own. Reference: block,
+   align-items normal, measured 92px tall against our 78. */
+@media screen and (min-width: 750px) {
+  .lp-media-accordion__cta-block {
+    display: block;
+    align-items: normal;
+  }
+}
+
+/* Now that the parent hands over exactly the reference's 1184px, the caps on these are
+   redundant — and the reference itself declares none. Dropping them closes the declaration
+   difference without changing a rendered pixel. */
+.lp-science-tabs__tab-list,
+.lp-science-tabs__panel,
+.lp-science-tabs__panels {
+  max-width: none;
+}
+
+/* Reference panel is a plain flex row with no gap; ours declared 0px, which computes
+   differently even though it lays out the same. */
+.lp-science-tabs__panel {
+  column-gap: normal;
+  row-gap: normal;
+}
+
+/* Reference tab bar measured 64px tall at 1440 and 86px at 390; ours 50 and 64. The
+   difference is vertical padding on the bar itself, not on the tabs. */
+.lp-science-tabs__tab-list {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+/* Reference delivery block is a plain block with no gaps — the 12px grid gutters were ours.
+   Its measured height of 346 against our 310 follows from that spacing being row margins
+   rather than a grid gap. */
+.lp-buy-box__delivery {
+  display: block;
+  column-gap: normal;
+  row-gap: normal;
+}
+
+.lp-buy-box__delivery-card + .lp-buy-box__delivery-card {
+  margin-top: 1.2rem;
+}
+
+@media screen and (max-width: 749px) {
+  /* Reference content width at 390 is 343px across hero, accordion and buy box — ours ran 360
+     because the page gutter is 15px where the reference uses 23.5px. */
+  .lp-hero__container,
+  .lp-media-accordion__inner {
+    padding-left: 2.35rem;
+    padding-right: 2.35rem;
+  }
+
+  /* The tab bar is the one element the reference lets run wider than the text column: measured
+     359px starting at 16px, i.e. it breaks out of the 23.5px gutter to keep the scrollable row
+     reaching the edge. */
+  .lp-science-tabs__content {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+}
+
 {% endstyle %}
 
 {% schema %}

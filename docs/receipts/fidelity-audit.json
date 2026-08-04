@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-04T13:41:25.738Z",
+ "generated": "2026-08-04T14:11:03.856Z",
  "original": "http://127.0.0.1:8777/fd-lp.html",
  "rebuild": "http://127.0.0.1:8777/v2-live.html",
  "viewports": {
@@ -92,37 +92,19 @@
     "role": "buy box / group legend",
     "origText": "Delivery Frequency",
     "ourText": "Delivery Frequency",
-    "diffs": [
-     {
-      "property": "font-weight",
-      "original": "708",
-      "rebuild": "700"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / plan label",
     "origText": "Monthly",
     "ourText": "Monthly",
-    "diffs": [
-     {
-      "property": "font-weight",
-      "original": "708",
-      "rebuild": "700"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / price",
     "origText": "Sale price $23.40\n              $23.40",
     "ourText": "$23.40",
-    "diffs": [
-     {
-      "property": "font-weight",
-      "original": "708",
-      "rebuild": "700"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / price compare",
@@ -158,13 +140,7 @@
     "role": "buy box / servings text",
     "origText": "30 Servings Per Bottle",
     "ourText": "30 Servings Per Bottle",
-    "diffs": [
-     {
-      "property": "font-family",
-      "original": "\"Sofia Sans\", sofia-pro, sofia-pro, -apple-system, sans-serif",
-      "rebuild": "sofia-pro, Poppins, sans-serif, system-ui, sans-serif"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / servings box",
@@ -176,13 +152,7 @@
     "role": "buy box / qty label",
     "origText": "1‎ Bottle",
     "ourText": "1‎ Bottle",
-    "diffs": [
-     {
-      "property": "font-weight",
-      "original": "708",
-      "rebuild": "700"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / qty savings text",
@@ -205,11 +175,6 @@
       "property": "_w",
       "original": "343",
       "rebuild": "360"
-     },
-     {
-      "property": "_h",
-      "original": "84",
-      "rebuild": "112"
      }
     ]
    },
@@ -262,9 +227,19 @@
     "ourText": "Focus in Class\n            \n          \n         ",
     "diffs": [
      {
+      "property": "_x",
+      "original": "16",
+      "rebuild": "24"
+     },
+     {
+      "property": "_w",
+      "original": "359",
+      "rebuild": "343"
+     },
+     {
       "property": "_h",
       "original": "86",
-      "rebuild": "137"
+      "rebuild": "64"
      }
     ]
    },
@@ -274,13 +249,13 @@
     "ourText": "How This Helps*\n                \n               ",
     "diffs": [
      {
-      "property": "_w",
-      "original": "343",
-      "rebuild": "360"
+      "property": "_x",
+      "original": "16",
+      "rebuild": "24"
      },
      {
       "property": "_h",
-      "original": "580",
+      "original": "577",
       "rebuild": "641"
      },
      {
@@ -305,11 +280,6 @@
     "origText": "Delivery Frequency\n    \n    \n      \n      \n     ",
     "ourText": "Delivery Frequency\n\n            \n              \n",
     "diffs": [
-     {
-      "property": "_w",
-      "original": "343",
-      "rebuild": "358"
-     },
      {
       "property": "_h",
       "original": "346",
@@ -336,18 +306,7 @@
     "role": "layout / quantity grid",
     "origText": "1‎ Bottle\n\n          \n            \n             ",
     "ourText": "1‎ Bottle\n                      \n               ",
-    "diffs": [
-     {
-      "property": "_w",
-      "original": "343",
-      "rebuild": "358"
-     },
-     {
-      "property": "grid-template-columns",
-      "original": "165.5px 165.5px",
-      "rebuild": "173px 173px"
-     }
-    ]
+    "diffs": []
    }
   ],
   "1440": [
@@ -439,37 +398,19 @@
     "role": "buy box / group legend",
     "origText": "Delivery Frequency",
     "ourText": "Delivery Frequency",
-    "diffs": [
-     {
-      "property": "font-weight",
-      "original": "708",
-      "rebuild": "700"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / plan label",
     "origText": "Monthly",
     "ourText": "Monthly",
-    "diffs": [
-     {
-      "property": "font-weight",
-      "original": "708",
-      "rebuild": "700"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / price",
     "origText": "Sale price $23.40\n              $23.40",
     "ourText": "$23.40",
-    "diffs": [
-     {
-      "property": "font-weight",
-      "original": "708",
-      "rebuild": "700"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / price compare",
@@ -505,13 +446,7 @@
     "role": "buy box / servings text",
     "origText": "30 Servings Per Bottle",
     "ourText": "30 Servings Per Bottle",
-    "diffs": [
-     {
-      "property": "font-family",
-      "original": "\"Sofia Sans\", sofia-pro, sofia-pro, -apple-system, sans-serif",
-      "rebuild": "sofia-pro, Poppins, sans-serif, system-ui, sans-serif"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / servings box",
@@ -523,13 +458,7 @@
     "role": "buy box / qty label",
     "origText": "1‎ Bottle",
     "ourText": "1‎ Bottle",
-    "diffs": [
-     {
-      "property": "font-weight",
-      "original": "708",
-      "rebuild": "700"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "buy box / qty savings text",
@@ -549,16 +478,6 @@
     "ourText": "The Science-Backed Vitamin for Grumpy, Tired, or",
     "diffs": [
      {
-      "property": "_x",
-      "original": "41",
-      "rebuild": "170"
-     },
-     {
-      "property": "_w",
-      "original": "560",
-      "rebuild": "530"
-     },
-     {
       "property": "max-width",
       "original": "none",
       "rebuild": "560px"
@@ -577,17 +496,7 @@
      {
       "property": "_x",
       "original": "129",
-      "rebuild": "170"
-     },
-     {
-      "property": "_w",
-      "original": "1168",
-      "rebuild": "500"
-     },
-     {
-      "property": "_h",
-      "original": "38",
-      "rebuild": "114"
+      "rebuild": "136"
      }
     ]
    },
@@ -599,12 +508,7 @@
      {
       "property": "_x",
       "original": "353",
-      "rebuild": "170"
-     },
-     {
-      "property": "_w",
-      "original": "720",
-      "rebuild": "500"
+      "rebuild": "360"
      },
      {
       "property": "_h",
@@ -631,12 +535,7 @@
      {
       "property": "_x",
       "original": "121",
-      "rebuild": "152"
-     },
-     {
-      "property": "_w",
-      "original": "1184",
-      "rebuild": "1136"
+      "rebuild": "128"
      },
      {
       "property": "_h",
@@ -663,22 +562,12 @@
      {
       "property": "_x",
       "original": "121",
-      "rebuild": "152"
-     },
-     {
-      "property": "_w",
-      "original": "1184",
-      "rebuild": "1136"
+      "rebuild": "128"
      },
      {
       "property": "_h",
       "original": "412",
       "rebuild": "364"
-     },
-     {
-      "property": "grid-template-columns",
-      "original": "none",
-      "rebuild": "minmax(0px, 1fr) minmax(240px, 300px)"
      },
      {
       "property": "column-gap",
@@ -705,17 +594,12 @@
      {
       "property": "_x",
       "original": "629",
-      "rebuild": "789"
-     },
-     {
-      "property": "_w",
-      "original": "680",
-      "rebuild": "559"
+      "rebuild": "668"
      },
      {
       "property": "_h",
       "original": "346",
-      "rebuild": "309"
+      "rebuild": "310"
      },
      {
       "property": "display",
@@ -742,17 +626,7 @@
      {
       "property": "_x",
       "original": "629",
-      "rebuild": "789"
-     },
-     {
-      "property": "_w",
-      "original": "680",
-      "rebuild": "559"
-     },
-     {
-      "property": "grid-template-columns",
-      "original": "334px 334px",
-      "rebuild": "273.297px 273.297px"
+      "rebuild": "668"
      }
     ]
    }
