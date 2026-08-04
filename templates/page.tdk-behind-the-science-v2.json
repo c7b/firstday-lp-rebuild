@@ -244,26 +244,6 @@
             "savings": "Save $63.18",
             "selected": false
           }
-        },
-        "line_subtotal": {
-          "type": "summary_line",
-          "settings": {
-            "label": "Subtotal",
-            "compare": "$78.00",
-            "final": "$46.80",
-            "final_colour": "#078942",
-            "emphasise": true
-          }
-        },
-        "line_shipping": {
-          "type": "summary_line",
-          "settings": {
-            "label": "Shipping",
-            "compare": "$5.00",
-            "final": "FREE",
-            "final_colour": "#078942",
-            "emphasise": false
-          }
         }
       },
       "block_order": [
@@ -272,9 +252,7 @@
         "tier_1",
         "tier_2",
         "tier_3",
-        "tier_4",
-        "line_subtotal",
-        "line_shipping"
+        "tier_4"
       ]
     },
     "urgency_banner": {

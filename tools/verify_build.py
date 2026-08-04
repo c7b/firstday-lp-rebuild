@@ -20,7 +20,7 @@ CTX = ROOT / "docs" / "context" / "sections"
 
 EXEMPT_KEYS = {"cta_link", "color_scheme", "anchor_id", "url", "video_url", "poster_url",
                "media_position", "image_position", "style", "product", "claims",
-               "highlight_color", "video_label", "footer_brand"}
+               "highlight_color", "video_label", "footer_brand", "benefit_tone", "final_colour"}
 URLISH = re.compile(r"^(gid://|https?:|//|/)|\.(png|jpg|jpeg|gif|webp|avif|svg|mp4|css|js)(\?|$)")
 HEXISH = re.compile(r"^#[0-9a-fA-F]{3,8}$")  # a colour value is not copy
 

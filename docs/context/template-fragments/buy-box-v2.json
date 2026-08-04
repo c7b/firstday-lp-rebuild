@@ -69,26 +69,6 @@
         "savings": "Save $63.18",
         "selected": false
       }
-    },
-    "line_subtotal": {
-      "type": "summary_line",
-      "settings": {
-        "label": "Subtotal",
-        "compare": "$78.00",
-        "final": "$46.80",
-        "final_colour": "#078942",
-        "emphasise": true
-      }
-    },
-    "line_shipping": {
-      "type": "summary_line",
-      "settings": {
-        "label": "Shipping",
-        "compare": "$5.00",
-        "final": "FREE",
-        "final_colour": "#078942",
-        "emphasise": false
-      }
     }
   },
   "block_order": [
@@ -97,9 +77,7 @@
     "tier_1",
     "tier_2",
     "tier_3",
-    "tier_4",
-    "line_subtotal",
-    "line_shipping"
+    "tier_4"
   ],
-  "_note": "Content mirrors the v1 fragment, which already passes the copy gate, so this section changes presentation only. Prices and labels are the reference's own."
+  "_note": "Content mirrors the v1 fragment, which already passes the copy gate, so this section changes presentation only.\n\nThe cart summary lines are deliberately absent. The reference's own snapshot contains no $78.00 or $46.80 anywhere — its app computes those live from the selected quantity. Shipping them as static copy would put prices on the page that correspond to nothing, which is the one failure this build already caught once. The section still renders the block when someone fills it."
 }
