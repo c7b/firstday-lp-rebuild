@@ -94,7 +94,31 @@
                   {{ block.settings.avatar | image_url: width: 192 | image_tag: class: 'lp-hero__avatar', widths: '96, 192', sizes: '48px', loading: 'lazy', alt: block.settings.avatar.alt }}
                 {% endif %}
                 <blockquote class="rte">{{ block.settings.quote }}</blockquote>
-                {% if block.settings.author != blank %}<figcaption>{{ block.settings.author | escape }}</figcaption>{% endif %}
+                {%- comment -%}
+                  The reference closes this card with one footer row: the name and its verified
+                  mark on the left, the rating on the right. Ours put the name on its own line
+                  and carried no rating at all, which read as a different component rather than
+                  the same one styled differently.
+                {%- endcomment -%}
+                {% if block.settings.author != blank %}
+                  {%- assign star_count = block.settings.rating | default: 5 -%}
+                  <figcaption>
+                    <span class="lp-hero__testimonial-author">
+                      {{- block.settings.author | escape -}}
+                      <svg class="lp-hero__testimonial-verified" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true" focusable="false">
+                        <circle cx="10" cy="10" r="10" fill="#486ced"/>
+                        <path d="m5.6 10.2 2.9 2.9 5.9-6.2" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <span class="lp-hero__testimonial-stars" role="img" aria-label="{{ star_count }} out of 5">
+                      {%- for i in (1..5) -%}
+                        <svg viewBox="0 0 20 19" width="12" height="12" aria-hidden="true" focusable="false">
+                          <path d="M10 0l2.6 6.2 6.7.5-5.1 4.4 1.6 6.5L10 14.2 4.2 17.6l1.6-6.5L.7 6.7l6.7-.5z" fill="{% if i <= star_count %}#1a1a1a{% else %}#c9c9c9{% endif %}"/>
+                        </svg>
+                      {%- endfor -%}
+                    </span>
+                  </figcaption>
+                {% endif %}
               </figure>
             {% endif %}
           {% endfor %}
@@ -299,6 +323,16 @@
           "type": "image_picker",
           "id": "avatar",
           "label": "Avatar"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5,
+          "info": "Drawn as filled stars on the card's bottom row, next to the name."
         }
       ]
     },
