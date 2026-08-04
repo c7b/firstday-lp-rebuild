@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-04T14:29:59.692Z",
+ "generated": "2026-08-04T14:48:37.763Z",
  "original": "http://127.0.0.1:8777/fd-lp.html",
  "rebuild": "http://127.0.0.1:8777/v2-live.html",
  "viewports": {
@@ -172,9 +172,9 @@
     "ourText": "The Science-Backed Vitamin for Grumpy, Tired, or",
     "diffs": [
      {
-      "property": "_w",
-      "original": "343",
-      "rebuild": "358"
+      "property": "max-width",
+      "original": "none",
+      "rebuild": "343px"
      }
     ]
    },
@@ -188,9 +188,9 @@
     "ourText": "Most Kids Are Missing Key Nutrients. Get Help in",
     "diffs": [
      {
-      "property": "max-width",
-      "original": "none",
-      "rebuild": "343px"
+      "property": "_w",
+      "original": "343",
+      "rebuild": "358"
      }
     ]
    },
@@ -200,14 +200,19 @@
     "ourText": "Shop Now\n          \n\n              \n            ",
     "diffs": [
      {
-      "property": "_w",
-      "original": "343",
-      "rebuild": "358"
+      "property": "_x",
+      "original": "16",
+      "rebuild": "24"
      },
      {
       "property": "_h",
       "original": "88",
       "rebuild": "80"
+     },
+     {
+      "property": "max-width",
+      "original": "720px",
+      "rebuild": "343px"
      }
     ]
    },
@@ -229,19 +234,14 @@
     "ourText": "How This Helps*\n                \n               ",
     "diffs": [
      {
-      "property": "_x",
-      "original": "16",
-      "rebuild": "24"
+      "property": "_w",
+      "original": "343",
+      "rebuild": "358"
      },
      {
       "property": "_h",
       "original": "577",
       "rebuild": "641"
-     },
-     {
-      "property": "max-width",
-      "original": "none",
-      "rebuild": "343px"
      }
     ]
    },
@@ -431,13 +431,7 @@
     "role": "layout / hero text column",
     "origText": "The \nScience-Backed Vitamin for Grumpy, Tired, o",
     "ourText": "The Science-Backed Vitamin for Grumpy, Tired, or",
-    "diffs": [
-     {
-      "property": "max-width",
-      "original": "none",
-      "rebuild": "560px"
-     }
-    ]
+    "diffs": []
    },
    {
     "role": "layout / hero media",
@@ -449,9 +443,9 @@
     "ourText": "Most Kids Are Missing Key Nutrients. Get Help in",
     "diffs": [
      {
-      "property": "_x",
-      "original": "129",
-      "rebuild": "136"
+      "property": "_w",
+      "original": "1168",
+      "rebuild": "1182"
      }
     ]
    },
@@ -480,7 +474,7 @@
      {
       "property": "_x",
       "original": "121",
-      "rebuild": "128"
+      "rebuild": "129"
      },
      {
       "property": "justify-content",
@@ -497,7 +491,7 @@
      {
       "property": "_x",
       "original": "121",
-      "rebuild": "128"
+      "rebuild": "129"
      },
      {
       "property": "_h",
