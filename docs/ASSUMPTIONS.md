@@ -176,3 +176,22 @@ already there. What is missing is the content: First Day has no live Toddlers LP
 those claims from, and writing them here would mean inventing clinical copy for a children's
 supplement. That is the one thing this build will not do, so the tabs stay teen-flavoured and
 the gap is written down instead.
+
+## The fidelity pass, and one place it deliberately diverges
+
+Everything in the post-debrief fidelity pass matches the reference's rendered output. One item
+matches its output while rejecting its implementation, and that is a decision rather than an
+oversight.
+
+**Mobile reading order.** On a phone the reference runs heading → description → image → CTA →
+guarantee → proof → testimonial. It achieves that by shipping a second copy of the hero markup
+and hiding the desktop one with `display: none`. This build gets the same order with `order` on
+a single DOM.
+
+The rendered result is identical. What differs is everything around it: a screen reader meets
+one hero rather than two, there is no second copy of the headline to keep in sync when
+marketing edits it, and the page does not ship markup it never shows. Duplicating a hero to
+reorder it is a workaround for not having flexbox; we have flexbox.
+
+Recorded here because "1:1 with the original" was the goal, and this is the one place the
+answer is "1:1 with what it renders, on purpose not with how it renders it".
