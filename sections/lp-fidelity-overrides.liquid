@@ -24,7 +24,7 @@
   /* build stamp — the only string in this file guaranteed to change every commit. Capture and
      audit verify against it, because every earlier marker (class names, rem values) also
      existed in previous commits and quietly certified stale renders as current. */
-  --lp-fidelity-build: "round14";
+  --lp-fidelity-build: "round15";
 }
 /* Post-debrief fidelity corrections — loaded ONLY by the v2 template.
  *
@@ -779,6 +779,82 @@
     padding-left: 1.6rem;
     padding-right: 1.6rem;
   }
+}
+
+
+/* ---------------------------------------------------------------------------
+   15. What the independent visual check found that the property audit could not.
+
+   A second model compared rendered screenshots against the reference and returned thirteen
+   objections. Most of them sit on elements the pair list never named — which is the point: a
+   measurement only ever finds what it was pointed at. These are its CSS-addressable findings.
+   --------------------------------------------------------------------------- */
+
+@media screen and (min-width: 990px) {
+  /* The columns were the wrong way round. The reference puts the nutrient wheel on the left
+     and the accordion on the right; ours had it reversed. Nothing in the property audit
+     compared these two containers to each other, so it read as no difference at all. */
+  .lp-media-accordion__media {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .lp-media-accordion__items {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+/* Reference CTA spans nearly the full text column; ours sat at roughly half. */
+.lp-hero__actions {
+  align-items: stretch;
+}
+
+.lp-hero__section--product .lp-hero__cta {
+  width: 100%;
+}
+
+/* Reference guarantee row is regular weight at a larger size with a leading icon and more
+   room above it. Ours was smaller, bold, and tight against the button. */
+.lp-hero__guarantee {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Reference sales badge carries roomier horizontal padding. */
+.lp-hero__stat-badge {
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+/* Reference testimonial: no divider, body copy upright rather than italic, attribution and
+   rating on one bottom row. Ours italicised the quote and dropped the attribution below it. */
+.lp-hero__testimonial blockquote,
+.lp-hero__testimonial blockquote p {
+  font-style: normal;
+  border-left: 0;
+  padding-left: 0;
+}
+
+.lp-hero__testimonial figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Reference hero media is a square 2x2 of equal tiles with sharp corners; ours rounded the
+   frame and ran it as a wide rectangle. */
+.lp-hero__media img,
+.lp-hero__media picture {
+  border-radius: 0;
+}
+
+.lp-hero__section--product .lp-hero__media {
+  aspect-ratio: 1 / 1;
 }
 
 {% endstyle %}
