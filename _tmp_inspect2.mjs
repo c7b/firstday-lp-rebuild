@@ -3,13 +3,31 @@ import { chromium } from 'playwright';
 const EXE = '/home/lcam/.cache/ms-playwright/chromium-1217/chrome-linux64/chrome';
 
 const targets = [
-  { label: 'REF hero heading', url: 'http://127.0.0.1:8777/fd-lp.html', sel: '.v1-hero-headline' },
-  { label: 'OURS hero heading', url: 'http://127.0.0.1:8777/v2-live.html', sel: '.lp-hero__heading' },
-  { label: 'REF accordion heading', url: 'http://127.0.0.1:8777/fd-lp.html', sel: '.title-font-size' },
-  { label: 'OURS accordion heading', url: 'http://127.0.0.1:8777/v2-live.html', sel: '.lp-media-accordion__heading' },
   { label: 'REF cta block', url: 'http://127.0.0.1:8777/fd-lp.html', sel: '.accordion-block__cta-block' },
   { label: 'OURS cta block', url: 'http://127.0.0.1:8777/v2-live.html', sel: '.lp-media-accordion__cta-block' },
 ];
+
+function ancestorChain(el) {
+  const chain = [];
+  let node = el;
+  let depth = 0;
+  while (node && node.tagName && depth < 8) {
+    const cs = getComputedStyle(node);
+    const rect = node.getBoundingClientRect();
+    chain.push({
+      tag: node.tagName,
+      class: node.className,
+      display: cs.display,
+      flexDirection: cs.flexDirection,
+      gridTemplateColumns: cs.gridTemplateColumns,
+      maxWidth: cs.maxWidth,
+      width: rect.width,
+    });
+    node = node.parentElement;
+    depth++;
+  }
+  return chain;
+}
 
 async function getWinningRules(page, sel) {
   return await page.evaluate((sel) => {
@@ -17,17 +35,12 @@ async function getWinningRules(page, sel) {
     if (!el) return { error: 'not found' };
 
     function specificity(selectorText) {
-      // rough specificity calc: [a(id), b(class/attr/pseudo-class), c(type/pseudo-element)]
-      // strip pseudo-elements first
       let s = selectorText;
       let a = 0, b = 0, c = 0;
-      // ids
       a += (s.match(/#[-\w]+/g) || []).length;
-      // classes, attribute selectors, pseudo-classes (not pseudo-elements)
       b += (s.match(/\.[-\w]+/g) || []).length;
       b += (s.match(/\[[^\]]+\]/g) || []).length;
       b += (s.match(/:(?!:)[-\w]+(\([^)]*\))?/g) || []).length;
-      // remove ids/classes/attrs/pseudo to count remaining bare type selectors
       let stripped = s
         .replace(/#[-\w]+/g, '')
         .replace(/\.[-\w]+/g, '')
@@ -54,21 +67,18 @@ async function getWinningRules(page, sel) {
             continue;
           }
           if (rule.selectorText) {
-            // split multi-selectors and test each
             const parts = rule.selectorText.split(',').map(x => x.trim());
             for (const part of parts) {
               try {
                 if (el.matches(part)) {
                   results.push({
-                    href,
-                    media: mediaText || null,
-                    selector: part,
+                    href, media: mediaText || null, selector: part,
                     fullSelector: rule.selectorText,
                     specificity: specificity(part),
                     cssText: rule.style.cssText,
                   });
                 }
-              } catch (e) { /* invalid selector, skip */ }
+              } catch (e) {}
             }
           }
         }
@@ -78,22 +88,35 @@ async function getWinningRules(page, sel) {
 
     const cs = getComputedStyle(el);
     const rect = el.getBoundingClientRect();
+
+    function ancestorChain(el) {
+      const chain = [];
+      let node = el;
+      let depth = 0;
+      while (node && node.tagName && depth < 8) {
+        const cs2 = getComputedStyle(node);
+        const r2 = node.getBoundingClientRect();
+        chain.push({
+          tag: node.tagName, class: node.className, display: cs2.display,
+          flexDirection: cs2.flexDirection, gridTemplateColumns: cs2.gridTemplateColumns,
+          maxWidth: cs2.maxWidth, width: r2.width,
+        });
+        node = node.parentElement;
+        depth++;
+      }
+      return chain;
+    }
+
     return {
       rect: { x: rect.x, y: rect.y, w: rect.width, h: rect.height },
       computed: {
         width: cs.width, maxWidth: cs.maxWidth, display: cs.display,
         flexDirection: cs.flexDirection, alignItems: cs.alignItems,
-        fontSize: cs.fontSize, lineHeight: cs.lineHeight, textAlign: cs.textAlign,
-        marginInline: cs.marginLeft + ' / ' + cs.marginRight,
+        textAlign: cs.textAlign, marginLeft: cs.marginLeft, marginRight: cs.marginRight,
       },
       matchingRules: results,
-      outerHTMLsnippet: el.outerHTML.slice(0, 200),
-      parentInfo: (() => {
-        const p = el.parentElement;
-        const pcs = getComputedStyle(p);
-        const prect = p.getBoundingClientRect();
-        return { class: p.className, display: pcs.display, gridTemplateColumns: pcs.gridTemplateColumns, width: prect.width };
-      })(),
+      outerHTMLsnippet: el.outerHTML.slice(0, 300),
+      ancestors: ancestorChain(el),
     };
   }, sel);
 }
@@ -105,7 +128,8 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 390, height: 100
   const context = await browser.newContext({ viewport });
   const page = await context.newPage();
   for (const t of targets) {
-    await page.goto(t.url, { waitUntil: 'networkidle' });
+    await page.goto(t.url, { waitUntil: 'domcontentloaded', timeout: 20000 });
+    await page.waitForTimeout(500);
     const data = await getWinningRules(page, t.sel);
     console.log('\n----', t.label, t.sel, '----');
     console.log(JSON.stringify(data, null, 2));

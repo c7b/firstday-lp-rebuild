@@ -482,6 +482,33 @@
   }
 }
 
+
+/* ---------------------------------------------------------------------------
+   9. Buy box column width — the root cause, found by walking the ancestor chain
+   rather than the element itself.
+
+   Our .lp-buy-box__layout splits the row with fr-based tracks, so the buy column scales with
+   the viewport and lands at 559px. The reference's wrapper carries a FIXED 740px max-width
+   with 60px going to padding, netting a constant 680px content column at any width above its
+   breakpoint. Locking the second track to that measured width reproduces it, and the quantity
+   grid inside then resolves to the reference's exact "334px 334px".
+   --------------------------------------------------------------------------- */
+
+@media screen and (min-width: 990px) {
+  .lp-buy-box__layout {
+    grid-template-columns: minmax(0, 1fr) 68rem;
+  }
+}
+
+/* At 390 the reference's buy column is 343px — narrower than the 358px our page padding alone
+   leaves. Below 990 the layout is a single column, so this is a cap rather than a track, and
+   it is scoped to the buy column so the media column is unaffected. */
+@media screen and (max-width: 749px) {
+  .lp-buy-box__buy-column {
+    max-width: 34.3rem;
+  }
+}
+
 {% endstyle %}
 
 {% schema %}
