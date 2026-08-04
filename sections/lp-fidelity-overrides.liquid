@@ -24,7 +24,7 @@
   /* build stamp — the only string in this file guaranteed to change every commit. Capture and
      audit verify against it, because every earlier marker (class names, rem values) also
      existed in previous commits and quietly certified stale renders as current. */
-  --lp-fidelity-build: "round15";
+  --lp-fidelity-build: "round16";
 }
 /* Post-debrief fidelity corrections — loaded ONLY by the v2 template.
  *
@@ -855,6 +855,33 @@
 
 .lp-hero__section--product .lp-hero__media {
   aspect-ratio: 1 / 1;
+}
+
+
+/* Testimonial footer: the reference keeps the name and the rating on one row, name left and
+   stars right, with the verified mark inline after the name. */
+.lp-hero__testimonial figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.lp-hero__testimonial-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lp-hero__testimonial-verified {
+  flex: none;
+}
+
+.lp-hero__testimonial-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 {% endstyle %}
