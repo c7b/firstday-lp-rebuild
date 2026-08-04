@@ -24,7 +24,7 @@
   /* build stamp — the only string in this file guaranteed to change every commit. Capture and
      audit verify against it, because every earlier marker (class names, rem values) also
      existed in previous commits and quietly certified stale renders as current. */
-  --lp-fidelity-build: "round17";
+  --lp-fidelity-build: "round18";
 }
 /* Post-debrief fidelity corrections — loaded ONLY by the v2 template.
  *
@@ -941,6 +941,37 @@
   .lp-hero__actions {
     margin-top: 1.2rem;
   }
+}
+
+
+/* ---------------------------------------------------------------------------
+   18. The remaining visual objections, measured.
+   --------------------------------------------------------------------------- */
+
+/* Reference hero image is a 500x500 square; ours carried aspect-ratio 4/3 and rendered
+   520x390, so the 2x2 baked into the picture came out squashed. */
+.lp-hero__section--product .lp-hero__image {
+  width: 50rem;
+  height: 50rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.lp-hero__section--product .lp-hero__media {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Reference testimonial card is 560 wide and wraps its review to three lines; ours ran 460 and
+   took four, which made the card taller and denser than the reference's. */
+.lp-hero__testimonial {
+  max-width: 56rem;
+}
+
+/* The guarantee row now carries the reference's card icon. */
+.lp-hero__guarantee-icon {
+  flex: none;
 }
 
 {% endstyle %}

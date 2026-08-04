@@ -64,7 +64,13 @@
           <a class="lp-hero__cta" href="{{ section.settings.cta_link }}" data-lp-cta>{{ section.settings.cta_label | escape }}</a>
         {% endif %}
         {% if section.settings.style == 'product' and section.settings.guarantee_text != blank %}
-          <p class="lp-hero__guarantee">{{ section.settings.guarantee_text | escape }}</p>
+          {%- comment -%} Card outline, traced from the reference's own guarantee row. {%- endcomment -%}
+          <p class="lp-hero__guarantee">
+            <svg class="lp-hero__guarantee-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+            </svg>
+            <span>{{ section.settings.guarantee_text | escape }}</span>
+          </p>
         {% endif %}
       </div>
 
