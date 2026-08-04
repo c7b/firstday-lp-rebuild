@@ -24,7 +24,7 @@
   /* build stamp — the only string in this file guaranteed to change every commit. Capture and
      audit verify against it, because every earlier marker (class names, rem values) also
      existed in previous commits and quietly certified stale renders as current. */
-  --lp-fidelity-build: "round16";
+  --lp-fidelity-build: "round17";
 }
 /* Post-debrief fidelity corrections — loaded ONLY by the v2 template.
  *
@@ -882,6 +882,65 @@
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
+}
+
+
+/* ---------------------------------------------------------------------------
+   17. Mobile reading order.
+
+   The reference runs heading -> description -> image -> CTA -> guarantee -> proof ->
+   testimonial on a phone. Ours ran the proof and the testimonial before the media, so the
+   card and the badge arrived before the thing they are vouching for.
+
+   The reference gets there by shipping a second copy of the hero markup and hiding the
+   desktop one. This does it with order on a single DOM instead: same result on screen, one
+   set of content for a screen reader, and nothing to keep in sync when the copy changes.
+   --------------------------------------------------------------------------- */
+
+@media screen and (max-width: 749px) {
+  .lp-hero__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Promote copy, actions and proof to siblings of the media so all four can be ordered
+     against each other. */
+  .lp-hero__content {
+    display: contents;
+  }
+
+  .lp-hero__copy {
+    order: 1;
+  }
+
+  .lp-hero__media {
+    order: 2;
+  }
+
+  .lp-hero__actions {
+    order: 3;
+  }
+
+  .lp-hero__proof {
+    order: 4;
+  }
+
+  /* Reference sets the hero description at 16px; ours ran larger and took an extra line. */
+  .lp-hero__subheading,
+  .lp-hero__subheading p {
+    font-size: 1.6rem;
+    line-height: 2.24rem;
+  }
+
+  /* Reference keeps the media tight under the description and the CTA tight under the media;
+     ours left a visible gap at both seams. */
+  .lp-hero__media {
+    margin-top: 1.2rem;
+  }
+
+  .lp-hero__actions {
+    margin-top: 1.2rem;
+  }
 }
 
 {% endstyle %}
