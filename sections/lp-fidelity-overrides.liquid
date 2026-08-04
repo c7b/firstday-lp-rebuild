@@ -552,6 +552,75 @@
   }
 }
 
+
+/* ---------------------------------------------------------------------------
+   11. Hero and accordion — the same shape of mistake as the tabs, found the same way.
+
+   The three layout rules already above (56rem on the hero heading, none on the accordion
+   heading, block + 72rem on the CTA row) all WIN their cascade. They just never got to bind:
+   each is a block child of a grid track narrower than its own max-width, and width:auto
+   simply fills the track. Fixing the child a second time could not have worked; the parent
+   track is the constraint.
+
+   The reference also nests these differently — its heading and CTA row are siblings of the
+   two-column grid, not children of one of its tracks.
+   --------------------------------------------------------------------------- */
+
+@media screen and (min-width: 750px) {
+  /* Reference hero row: no max-width, text column pinned to 560px with the image taking the
+     rest, measured x=41 w=560. Ours split the row into two equal 530px tracks inside a
+     1200px cap, so a 56rem max-width had nowhere to expand into. */
+  .lp-hero__container {
+    max-width: none;
+    padding: 0 4.1rem;
+    grid-template-columns: 56rem minmax(0, 1fr);
+  }
+
+  /* Reference accordion container: 1200px cap with 16px padding = the measured 1168px content
+     track. Ours used the same cap with 50px padding, which is why max-width:none on the
+     heading still rendered at 500 — the track, not the cap, was the constraint. */
+  .lp-media-accordion__inner {
+    padding: 0 1.6rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  /* The reference puts the heading and the CTA row OUTSIDE its two-column grid, each full
+     width in its own right. Ours nests both inside one track. display:contents promotes the
+     wrapper's children to items of the outer grid without touching the template, so they can
+     be placed across both columns. */
+  .lp-media-accordion__content {
+    display: contents;
+  }
+
+  .lp-media-accordion__heading {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    max-width: none;
+  }
+
+  /* Items and media keep the positions they had before the wrapper was unwrapped; with
+     display:contents they need placing explicitly rather than by auto-flow. */
+  .lp-media-accordion__items {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .lp-media-accordion__media {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  /* Reference CTA row measured x=353 w=720, centred. An explicit width is needed rather than
+     max-width alone: a grid item's auto width stretches to its area, so max-width clamps from
+     above but never pulls it up to 720 from below. */
+  .lp-media-accordion__cta-block {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 72rem;
+  }
+}
+
 {% endstyle %}
 
 {% schema %}
