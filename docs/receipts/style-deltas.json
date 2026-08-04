@@ -1,0 +1,1454 @@
+{
+ "generated": "2026-08-04T17:11:46.643Z",
+ "reference": "http://127.0.0.1:8777/fd-lp.html",
+ "rebuild": "http://127.0.0.1:8777/v2-live.html",
+ "viewports": {
+  "1440": {
+   "paired": 87,
+   "unpaired_reference": 12,
+   "images": {
+    "reference": 32,
+    "rebuild": 40
+   },
+   "deltas": [
+    {
+     "element": "p",
+     "text": "the only bio-matched multivitamin with 12 nu",
+     "property": "font-size",
+     "reference": "16px",
+     "rebuild": "17px"
+    },
+    {
+     "element": "p",
+     "text": "the only bio-matched multivitamin with 12 nu",
+     "property": "line-height",
+     "reference": "22.4px",
+     "rebuild": "24.65px"
+    },
+    {
+     "element": "strong",
+     "text": "formulated specifically for teenagers",
+     "property": "font-size",
+     "reference": "16px",
+     "rebuild": "17px"
+    },
+    {
+     "element": "strong",
+     "text": "formulated specifically for teenagers",
+     "property": "font-weight",
+     "reference": "400",
+     "rebuild": "700"
+    },
+    {
+     "element": "strong",
+     "text": "formulated specifically for teenagers",
+     "property": "line-height",
+     "reference": "22.4px",
+     "rebuild": "24.65px"
+    },
+    {
+     "element": "span",
+     "text": "exclusive first day 45 day money back guaran",
+     "property": "font-size",
+     "reference": "16px",
+     "rebuild": "15px"
+    },
+    {
+     "element": "span",
+     "text": "exclusive first day 45 day money back guaran",
+     "property": "line-height",
+     "reference": "22.4px",
+     "rebuild": "27px"
+    },
+    {
+     "element": "p",
+     "text": "my son is very picky but gets so excited to ",
+     "property": "font-size",
+     "reference": "12px",
+     "rebuild": "13px"
+    },
+    {
+     "element": "span.lp-hero__testimonial-author",
+     "text": "alyssa blossom",
+     "property": "line-height",
+     "reference": "15.6px",
+     "rebuild": "22.5px"
+    },
+    {
+     "element": "p",
+     "text": "with vitamin b6 for mood regulation and vita",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "with vitamin b6 for mood regulation and vita",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "packed with vitamin b1 for brain health and ",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "packed with vitamin b1 for brain health and ",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "vitamin a and vitamin e support skin health,",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "vitamin a and vitamin e support skin health,",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "with immune-supporting vitamin c and d3, plu",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "with immune-supporting vitamin c and d3, plu",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "vitamin d3 helps regulate melatonin, the hor",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "vitamin d3 helps regulate melatonin, the hor",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "vitamin d3 and magnesium work together to en",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "vitamin d3 and magnesium work together to en",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "vitamin a and vitamin b9 support cell growth",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "vitamin a and vitamin b9 support cell growth",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "div.lp-science-tabs__intro",
+     "text": "low levels of certain b vitamins can affect ",
+     "property": "font-size",
+     "reference": "18px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "div.lp-science-tabs__intro",
+     "text": "low levels of certain b vitamins can affect ",
+     "property": "line-height",
+     "reference": "25.2px",
+     "rebuild": "24px"
+    },
+    {
+     "element": "p",
+     "text": "🧠 supports brain signaling and memory.",
+     "property": "font-size",
+     "reference": "16px",
+     "rebuild": "18px"
+    },
+    {
+     "element": "p",
+     "text": "🧠 supports brain signaling and memory.",
+     "property": "line-height",
+     "reference": "22.4px",
+     "rebuild": "25.2px"
+    },
+    {
+     "element": "strong",
+     "text": "vitamin b1",
+     "property": "font-size",
+     "reference": "16px",
+     "rebuild": "18px"
+    },
+    {
+     "element": "strong",
+     "text": "vitamin b1",
+     "property": "line-height",
+     "reference": "22.4px",
+     "rebuild": "25.2px"
+    },
+    {
+     "element": "p",
+     "text": "🪄 helps maintain healthy nerve function.",
+     "property": "font-size",
+     "reference": "16px",
+     "rebuild": "18px"
+    },
+    {
+     "element": "p",
+     "text": "🪄 helps maintain healthy nerve function.",
+     "property": "line-height",
+     "reference": "22.4px",
+     "rebuild": "25.2px"
+    },
+    {
+     "element": "strong",
+     "text": "vitamin b2",
+     "property": "font-size",
+     "reference": "16px",
+     "rebuild": "18px"
+    },
+    {
+     "element": "strong",
+     "text": "vitamin b2",
+     "property": "line-height",
+     "reference": "22.4px",
+     "rebuild": "25.2px"
+    },
+    {
+     "element": "p",
+     "text": "🧬 plays a role in neurotransmitter producti",
+     "property": "font-size",
+     "reference": "16px",
+     "rebuild": "18px"
+    },
+    {
+     "element": "p",
+     "text": "🧬 plays a role in neurotransmitter producti",
+     "property": "line-height",
+     "reference": "22.4px",
+     "rebuild": "25.2px"
+    },
+    {
+     "element": "strong",
+     "text": "vitamin b6",
+     "property": "font-size",
+     "reference": "16px",
+     "rebuild": "18px"
+    },
+    {
+     "element": "strong",
+     "text": "vitamin b6",
+     "property": "line-height",
+     "reference": "22.4px",
+     "rebuild": "25.2px"
+    },
+    {
+     "element": "h2.lp-buy-box-v2__frequency-selector__title",
+     "text": "delivery frequency",
+     "property": "font-weight",
+     "reference": "708",
+     "rebuild": "700"
+    },
+    {
+     "element": "h2.lp-buy-box-v2__frequency-selector__title",
+     "text": "delivery frequency",
+     "property": "letter-spacing",
+     "reference": "normal",
+     "rebuild": "0.6px"
+    },
+    {
+     "element": "h2.lp-buy-box-v2__quantity-selector__title",
+     "text": "quantity",
+     "property": "font-family",
+     "reference": "\"Sofia Sans\", sofia-pro, sofia-pro, -apple-system, sans-serif",
+     "rebuild": "sofia-pro, Poppins, sans-serif, system-ui, sans-serif"
+    },
+    {
+     "element": "h2.lp-buy-box-v2__quantity-selector__title",
+     "text": "quantity",
+     "property": "font-weight",
+     "reference": "708",
+     "rebuild": "700"
+    },
+    {
+     "element": "h2.lp-buy-box-v2__quantity-selector__title",
+     "text": "quantity",
+     "property": "letter-spacing",
+     "reference": "normal",
+     "rebuild": "0.6px"
+    },
+    {
+     "element": "p",
+     "text": "80% of children don't eat enough fruits and ",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "80% of children don't eat enough fruits and ",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "our product was crafted with input from lead",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "our product was crafted with input from lead",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "vitamin b6 supports natural energy regulatio",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "vitamin b6 supports natural energy regulatio",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "recommended by pediatricians, our multivitam",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "recommended by pediatricians, our multivitam",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "our products were independently tested by cl",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "our products were independently tested by cl",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "p",
+     "text": "we source each ingredient with care, choosin",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "16px"
+    },
+    {
+     "element": "p",
+     "text": "we source each ingredient with care, choosin",
+     "property": "line-height",
+     "reference": "18.2px",
+     "rebuild": "28.8px"
+    },
+    {
+     "element": "h2.lp-hero__heading",
+     "text": "1 in 3 families have a nutrient deficiency.",
+     "property": "font-weight",
+     "reference": "700",
+     "rebuild": "600"
+    },
+    {
+     "element": "li",
+     "text": "the average person consumes worth of every y",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "15px"
+    },
+    {
+     "element": "li",
+     "text": "the average person consumes worth of every y",
+     "property": "line-height",
+     "reference": "19.6px",
+     "rebuild": "21.75px"
+    },
+    {
+     "element": "strong",
+     "text": "52 credit cards’",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "15px"
+    },
+    {
+     "element": "strong",
+     "text": "52 credit cards’",
+     "property": "font-weight",
+     "reference": "400",
+     "rebuild": "700"
+    },
+    {
+     "element": "strong",
+     "text": "52 credit cards’",
+     "property": "line-height",
+     "reference": "19.6px",
+     "rebuild": "21.75px"
+    },
+    {
+     "element": "strong",
+     "text": "microplastics",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "15px"
+    },
+    {
+     "element": "strong",
+     "text": "microplastics",
+     "property": "font-weight",
+     "reference": "400",
+     "rebuild": "700"
+    },
+    {
+     "element": "strong",
+     "text": "microplastics",
+     "property": "line-height",
+     "reference": "19.6px",
+     "rebuild": "21.75px"
+    },
+    {
+     "element": "li",
+     "text": "are found in of foods today",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "15px"
+    },
+    {
+     "element": "li",
+     "text": "are found in of foods today",
+     "property": "line-height",
+     "reference": "19.6px",
+     "rebuild": "21.75px"
+    },
+    {
+     "element": "strong",
+     "text": "artificial food additives",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "15px"
+    },
+    {
+     "element": "strong",
+     "text": "artificial food additives",
+     "property": "font-weight",
+     "reference": "400",
+     "rebuild": "700"
+    },
+    {
+     "element": "strong",
+     "text": "artificial food additives",
+     "property": "line-height",
+     "reference": "19.6px",
+     "rebuild": "21.75px"
+    },
+    {
+     "element": "li",
+     "text": "fresh fruits & veggies have of their",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "15px"
+    },
+    {
+     "element": "li",
+     "text": "fresh fruits & veggies have of their",
+     "property": "line-height",
+     "reference": "19.6px",
+     "rebuild": "21.75px"
+    },
+    {
+     "element": "strong",
+     "text": "lost up to 73%",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "15px"
+    },
+    {
+     "element": "strong",
+     "text": "lost up to 73%",
+     "property": "font-weight",
+     "reference": "400",
+     "rebuild": "700"
+    },
+    {
+     "element": "strong",
+     "text": "lost up to 73%",
+     "property": "line-height",
+     "reference": "19.6px",
+     "rebuild": "21.75px"
+    },
+    {
+     "element": "strong",
+     "text": "nutrients",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "15px"
+    },
+    {
+     "element": "strong",
+     "text": "nutrients",
+     "property": "font-weight",
+     "reference": "400",
+     "rebuild": "700"
+    },
+    {
+     "element": "strong",
+     "text": "nutrients",
+     "property": "line-height",
+     "reference": "19.6px",
+     "rebuild": "21.75px"
+    },
+    {
+     "element": "p",
+     "text": "after learning about the massive amounts of ",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "17px"
+    },
+    {
+     "element": "p",
+     "text": "after learning about the massive amounts of ",
+     "property": "line-height",
+     "reference": "19.6px",
+     "rebuild": "24.65px"
+    },
+    {
+     "element": "p",
+     "text": "that's why we’re so confident first day will",
+     "property": "font-size",
+     "reference": "14px",
+     "rebuild": "17px"
+    },
+    {
+     "element": "p",
+     "text": "that's why we’re so confident first day will",
+     "property": "line-height",
+     "reference": "19.6px",
+     "rebuild": "24.65px"
+    },
+    {
+     "element": "img[0] img.lp-hero__stat-gif",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "48x48",
+     "rebuild": "24x24"
+    },
+    {
+     "element": "img[0] img.lp-hero__stat-gif",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 24 / 24",
+     "rebuild": "auto 48 / 48"
+    },
+    {
+     "element": "img[1] img",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "100x103",
+     "rebuild": "26x27"
+    },
+    {
+     "element": "img[1] img",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 50 / 50",
+     "rebuild": "auto 52 / 54"
+    },
+    {
+     "element": "img[2] img",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "100x74",
+     "rebuild": "26x19"
+    },
+    {
+     "element": "img[2] img",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 50 / 50",
+     "rebuild": "auto 52 / 38"
+    },
+    {
+     "element": "img[3] img.lp-hero__avatar",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "192x192",
+     "rebuild": "48x48"
+    },
+    {
+     "element": "img[3] img.lp-hero__avatar",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 64 / 64",
+     "rebuild": "auto 192 / 192"
+    },
+    {
+     "element": "img[4] img.lp-hero__image",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "1000x1000",
+     "rebuild": "720x720"
+    },
+    {
+     "element": "img[5] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "564x564",
+     "rebuild": "32x32"
+    },
+    {
+     "element": "img[5] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "640x640",
+     "rebuild": "26x26"
+    },
+    {
+     "element": "img[5] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "50.293% 48.926%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[5] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "border-radius",
+     "reference": "0px",
+     "rebuild": "50%"
+    },
+    {
+     "element": "img[5] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 1500 / 1500",
+     "rebuild": "auto 96 / 96"
+    },
+    {
+     "element": "img[6] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "32x32"
+    },
+    {
+     "element": "img[6] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "1000x1000",
+     "rebuild": "26x26"
+    },
+    {
+     "element": "img[6] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "object-fit",
+     "reference": "contain",
+     "rebuild": "cover"
+    },
+    {
+     "element": "img[6] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "49.121% 52.148%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[6] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "border-radius",
+     "reference": "0px",
+     "rebuild": "50%"
+    },
+    {
+     "element": "img[6] img.lp-clinicians-band__avatar",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 96 / 96"
+    },
+    {
+     "element": "img[7] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "28x28"
+    },
+    {
+     "element": "img[7] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "1000x1000",
+     "rebuild": "40x40"
+    },
+    {
+     "element": "img[7] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "2.93% 95.605%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[7] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 144 / 144"
+    },
+    {
+     "element": "img[8] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "28x28"
+    },
+    {
+     "element": "img[8] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "1440x1440",
+     "rebuild": "40x40"
+    },
+    {
+     "element": "img[8] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "50% 47.754%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[8] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 144 / 144"
+    },
+    {
+     "element": "img[9] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "28x28"
+    },
+    {
+     "element": "img[9] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "1440x1440",
+     "rebuild": "40x40"
+    },
+    {
+     "element": "img[9] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "50.098% 47.656%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[9] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 144 / 144"
+    },
+    {
+     "element": "img[10] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "28x28"
+    },
+    {
+     "element": "img[10] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "1440x1440",
+     "rebuild": "40x40"
+    },
+    {
+     "element": "img[10] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "37.012% 18.164%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[10] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 144 / 144"
+    },
+    {
+     "element": "img[11] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "28x28"
+    },
+    {
+     "element": "img[11] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "1440x1440",
+     "rebuild": "40x40"
+    },
+    {
+     "element": "img[11] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "37.012% 18.164%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[11] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 144 / 144"
+    },
+    {
+     "element": "img[12] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "28x28"
+    },
+    {
+     "element": "img[12] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "1440x1440",
+     "rebuild": "40x40"
+    },
+    {
+     "element": "img[12] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "49.121% 56.445%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[12] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 144 / 144"
+    },
+    {
+     "element": "img[13] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "500x500",
+     "rebuild": "28x28"
+    },
+    {
+     "element": "img[13] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "646x646",
+     "rebuild": "40x40"
+    },
+    {
+     "element": "img[13] img.lp-media-accordion__icon",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto",
+     "rebuild": "auto 144 / 144"
+    },
+    {
+     "element": "img[14] img.lp-media-accordion__image",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "68x68",
+     "rebuild": "661x661"
+    },
+    {
+     "element": "img[14] img.lp-media-accordion__image",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "0x0",
+     "rebuild": "720x720"
+    },
+    {
+     "element": "img[14] img.lp-media-accordion__image",
+     "text": "(image)",
+     "property": "object-fit",
+     "reference": "cover",
+     "rebuild": "fill"
+    },
+    {
+     "element": "img[14] img.lp-media-accordion__image",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 1500 / 1500"
+    },
+    {
+     "element": "img[15] img.lp-buy-box-v2__product-gallery__main-image",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "68x68",
+     "rebuild": "500x500"
+    },
+    {
+     "element": "img[15] img.lp-buy-box-v2__product-gallery__main-image",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "0x0",
+     "rebuild": "646x646"
+    },
+    {
+     "element": "img[15] img.lp-buy-box-v2__product-gallery__main-image",
+     "text": "(image)",
+     "property": "object-fit",
+     "reference": "cover",
+     "rebuild": "contain"
+    },
+    {
+     "element": "img[15] img.lp-buy-box-v2__product-gallery__main-image",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 1200 / 1200"
+    },
+    {
+     "element": "img[24] img.lp-buy-box-v2__product-gallery__thumbnail-image",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "564x564",
+     "rebuild": "68x68"
+    },
+    {
+     "element": "img[24] img.lp-buy-box-v2__product-gallery__thumbnail-image",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "50% 48.926%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[24] img.lp-buy-box-v2__product-gallery__thumbnail-image",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 1500 / 1500",
+     "rebuild": "auto 72 / 72"
+    },
+    {
+     "element": "img[25] img.lp-buy-box-v2__product-gallery__thumbnail-image",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "68x68"
+    },
+    {
+     "element": "img[25] img.lp-buy-box-v2__product-gallery__thumbnail-image",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "1440x1440",
+     "rebuild": "0x0"
+    },
+    {
+     "element": "img[25] img.lp-buy-box-v2__product-gallery__thumbnail-image",
+     "text": "(image)",
+     "property": "object-fit",
+     "reference": "contain",
+     "rebuild": "cover"
+    },
+    {
+     "element": "img[25] img.lp-buy-box-v2__product-gallery__thumbnail-image",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "49.121% 56.445%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[26] img.lp-trust-wall__media-image",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "433x433"
+    },
+    {
+     "element": "img[26] img.lp-trust-wall__media-image",
+     "text": "(image)",
+     "property": "object-fit",
+     "reference": "contain",
+     "rebuild": "fill"
+    },
+    {
+     "element": "img[26] img.lp-trust-wall__media-image",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "49.121% 49.121%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[26] img.lp-trust-wall__media-image",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 1120 / 1120"
+    },
+    {
+     "element": "img[27] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "64x64"
+    },
+    {
+     "element": "img[27] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "object-fit",
+     "reference": "contain",
+     "rebuild": "cover"
+    },
+    {
+     "element": "img[27] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "50.684% 51.66%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[27] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "border-radius",
+     "reference": "0px",
+     "rebuild": "50%"
+    },
+    {
+     "element": "img[27] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 320 / 192"
+    },
+    {
+     "element": "img[28] img.lp-trust-wall__media-image",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "433x542"
+    },
+    {
+     "element": "img[28] img.lp-trust-wall__media-image",
+     "text": "(image)",
+     "property": "object-fit",
+     "reference": "contain",
+     "rebuild": "fill"
+    },
+    {
+     "element": "img[28] img.lp-trust-wall__media-image",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "49.121% 49.121%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[28] img.lp-trust-wall__media-image",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 1120 / 1401"
+    },
+    {
+     "element": "img[29] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "64x64"
+    },
+    {
+     "element": "img[29] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "object-fit",
+     "reference": "contain",
+     "rebuild": "cover"
+    },
+    {
+     "element": "img[29] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "border-radius",
+     "reference": "0px",
+     "rebuild": "50%"
+    },
+    {
+     "element": "img[29] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 320 / 320"
+    },
+    {
+     "element": "img[30] img.lp-trust-wall__logo",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "24x24",
+     "rebuild": "32x32"
+    },
+    {
+     "element": "img[30] img.lp-trust-wall__logo",
+     "text": "(image)",
+     "property": "object-fit",
+     "reference": "contain",
+     "rebuild": "fill"
+    },
+    {
+     "element": "img[30] img.lp-trust-wall__logo",
+     "text": "(image)",
+     "property": "object-position",
+     "reference": "6.152% 70.605%",
+     "rebuild": "50% 50%"
+    },
+    {
+     "element": "img[30] img.lp-trust-wall__logo",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "auto 72 / 72",
+     "rebuild": "auto 240 / 240"
+    },
+    {
+     "element": "img[31] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "rect",
+     "reference": "580x580",
+     "rebuild": "64x64"
+    },
+    {
+     "element": "img[31] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "natural",
+     "reference": "350x359",
+     "rebuild": "0x0"
+    },
+    {
+     "element": "img[31] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "border-radius",
+     "reference": "0px",
+     "rebuild": "50%"
+    },
+    {
+     "element": "img[31] img.lp-trust-wall__avatar",
+     "text": "(image)",
+     "property": "aspect-ratio",
+     "reference": "1 / 1",
+     "rebuild": "auto 320 / 192"
+    }
+   ],
+   "state_deltas": [
+    {
+     "element": "summary (after click)",
+     "text": "stress & mood swings",
+     "property": "color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "stress & mood swings",
+     "property": "border-top-color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "lack of motivation",
+     "property": "color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "lack of motivation",
+     "property": "border-top-color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "bad skin",
+     "property": "color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "bad skin",
+     "property": "border-top-color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "weakened immunity",
+     "property": "color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "weakened immunity",
+     "property": "border-top-color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "trouble sleeping",
+     "property": "color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "trouble sleeping",
+     "property": "border-top-color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "poor sleep habits",
+     "property": "color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "poor sleep habits",
+     "property": "border-top-color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "picky eating",
+     "property": "color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "summary (after click)",
+     "text": "picky eating",
+     "property": "border-top-color",
+     "reference": "rgb(44, 62, 80)",
+     "rebuild": "rgba(44, 61, 80, 0.75)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "focus in class",
+     "property": "border-top-color",
+     "reference": "rgb(255, 255, 255)",
+     "rebuild": "rgb(44, 61, 80)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "focus in class",
+     "property": "transition-property",
+     "reference": "background-color, color",
+     "rebuild": "all"
+    },
+    {
+     "element": "button (after click)",
+     "text": "focus in class",
+     "property": "transition-duration",
+     "reference": "0.25s, 0.25s",
+     "rebuild": "0s"
+    },
+    {
+     "element": "button (after click)",
+     "text": "focus in class",
+     "property": "transition-timing-function",
+     "reference": "ease, ease",
+     "rebuild": "ease"
+    },
+    {
+     "element": "button (after click)",
+     "text": "boosted energy",
+     "property": "color",
+     "reference": "rgb(44, 61, 80)",
+     "rebuild": "rgb(255, 255, 255)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "boosted energy",
+     "property": "background-color",
+     "reference": "rgb(242, 251, 255)",
+     "rebuild": "rgb(44, 61, 80)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "boosted energy",
+     "property": "transition-property",
+     "reference": "background-color, color",
+     "rebuild": "all"
+    },
+    {
+     "element": "button (after click)",
+     "text": "boosted energy",
+     "property": "transition-duration",
+     "reference": "0.25s, 0.25s",
+     "rebuild": "0s"
+    },
+    {
+     "element": "button (after click)",
+     "text": "boosted energy",
+     "property": "transition-timing-function",
+     "reference": "ease, ease",
+     "rebuild": "ease"
+    },
+    {
+     "element": "button (after click)",
+     "text": "balanced moods",
+     "property": "color",
+     "reference": "rgb(44, 61, 80)",
+     "rebuild": "rgb(255, 255, 255)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "balanced moods",
+     "property": "background-color",
+     "reference": "rgb(242, 251, 255)",
+     "rebuild": "rgb(44, 61, 80)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "balanced moods",
+     "property": "transition-property",
+     "reference": "background-color, color",
+     "rebuild": "all"
+    },
+    {
+     "element": "button (after click)",
+     "text": "balanced moods",
+     "property": "transition-duration",
+     "reference": "0.25s, 0.25s",
+     "rebuild": "0s"
+    },
+    {
+     "element": "button (after click)",
+     "text": "balanced moods",
+     "property": "transition-timing-function",
+     "reference": "ease, ease",
+     "rebuild": "ease"
+    },
+    {
+     "element": "button (after click)",
+     "text": "clear skin",
+     "property": "color",
+     "reference": "rgb(106, 118, 132)",
+     "rebuild": "rgb(255, 255, 255)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "clear skin",
+     "property": "background-color",
+     "reference": "rgb(184, 195, 203)",
+     "rebuild": "rgb(44, 61, 80)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "clear skin",
+     "property": "border-top-color",
+     "reference": "rgb(106, 118, 132)",
+     "rebuild": "rgb(44, 61, 80)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "clear skin",
+     "property": "transition-property",
+     "reference": "background-color, color",
+     "rebuild": "all"
+    },
+    {
+     "element": "button (after click)",
+     "text": "clear skin",
+     "property": "transition-duration",
+     "reference": "0.25s, 0.25s",
+     "rebuild": "0s"
+    },
+    {
+     "element": "button (after click)",
+     "text": "clear skin",
+     "property": "transition-timing-function",
+     "reference": "ease, ease",
+     "rebuild": "ease"
+    },
+    {
+     "element": "button (after click)",
+     "text": "view image 3",
+     "property": "border-top-color",
+     "reference": "rgba(71, 109, 237, 0.22)",
+     "rebuild": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "view image 4",
+     "property": "border-top-color",
+     "reference": "rgb(71, 109, 237)",
+     "rebuild": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "view image 8",
+     "property": "border-top-color",
+     "reference": "rgb(71, 109, 237)",
+     "rebuild": "rgba(0, 0, 0, 0)"
+    },
+    {
+     "element": "button (after click)",
+     "text": "view image 9",
+     "property": "border-top-color",
+     "reference": "rgb(71, 109, 237)",
+     "rebuild": "rgba(0, 0, 0, 0)"
+    }
+   ]
+  }
+ }
+}

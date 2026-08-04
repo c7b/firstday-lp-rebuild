@@ -27,7 +27,7 @@
   /* build stamp — the only string in this file guaranteed to change every commit. Capture and
      audit verify against it, because every earlier marker (class names, rem values) also
      existed in previous commits and quietly certified stale renders as current. */
-  --lp-fidelity-build: "round21";
+  --lp-fidelity-build: "round22";
 }
 /* Post-debrief fidelity corrections — loaded ONLY by the v2 template.
  *
@@ -1034,6 +1034,113 @@
 .lp-media-accordion__heading {
   max-width: 116.8rem;
   margin-inline: auto;
+}
+
+
+/* ---------------------------------------------------------------------------
+   22. Worked mechanically from the computed-style delta table, not from looking.
+
+   Each rule below closes rows that the table reported as `property · reference · ours`. The
+   text in the comment is the string the two pages were joined on, so any of these can be
+   re-checked by finding that row again.
+   --------------------------------------------------------------------------- */
+
+/* "the only bio-matched multivitamin…" — 16px/22.4 against our 17/24.65. */
+.lp-hero__subheading,
+.lp-hero__subheading p,
+.lp-hero__subheading strong {
+  font-size: 1.6rem;
+  line-height: 2.24rem;
+}
+
+/* "exclusive first day 45 day money back guarantee" — 16px/22.4 against our 15/27. */
+.lp-hero__guarantee,
+.lp-hero__guarantee span {
+  font-size: 1.6rem;
+  line-height: 2.24rem;
+}
+
+/* "the average person consumes…", "52 credit cards’", "microplastics" and the rest of the
+   closing hero's highlight list — 14px/19.6 against our 15/21.75. The <strong> runs inside
+   these are 400 in the reference, not bold. */
+.lp-hero__highlights li,
+.lp-hero__highlights li strong {
+  font-size: 1.4rem;
+  line-height: 1.96rem;
+}
+
+.lp-hero__highlights li strong {
+  font-weight: 400;
+}
+
+/* "after learning about the massive amounts of sugar…" and "that's why we're so confident…"
+   — 14px/19.6 against our 17/24.65. */
+.lp-hero__closing,
+.lp-hero__closing p {
+  font-size: 1.4rem;
+  line-height: 1.96rem;
+}
+
+/* "my son is very picky…" — the testimonial quote is 12px in the reference. */
+.lp-hero__testimonial blockquote,
+.lp-hero__testimonial blockquote p {
+  font-size: 1.2rem;
+  line-height: 1.68rem;
+}
+
+/* "alyssa blossom" — 15.6px line, against our 22.5. */
+.lp-hero__testimonial figcaption,
+.lp-hero__testimonial-author {
+  line-height: 1.56rem;
+}
+
+/* The closing hero's own h2 is 700, not the 600 the rest of the headings take. Grouping every
+   heading into one weight rule was wrong for this one. */
+.shopify-section[class*='lp-'] .lp-hero__section--founder .lp-hero__heading {
+  font-weight: 700;
+}
+
+/* Accordion item bodies — "with vitamin b6 for mood regulation…" and six more — are 14px/18.2
+   in the reference against our 16/28.8. The line-height gap is the larger of the two. */
+.lp-media-accordion__body,
+.lp-media-accordion__body p,
+.lp-media-accordion__body li {
+  font-size: 1.4rem;
+  line-height: 1.82rem;
+}
+
+/* Science-tabs benefit rows — "🧠 supports brain signaling and memory." and the nutrient names
+   beside them — are 16px/22.4 against our 18/25.2. */
+.lp-science-tabs__benefits,
+.lp-science-tabs__benefits p,
+.lp-science-tabs__benefits b,
+.lp-science-tabs__benefits strong {
+  font-size: 1.6rem;
+  line-height: 2.24rem;
+}
+
+/* The tab panel's intro paragraph is 18px/25.2 — ours had shrunk it to 16. */
+.lp-science-tabs__intro {
+  font-size: 1.8rem;
+  line-height: 2.52rem;
+}
+
+/* Trust-wall and comparison copy — "80% of children don't eat enough…", "our product was
+   crafted with input from leading…" and four more — are 14px/19.6 against our 16px. */
+.lp-trust-wall__card p,
+.lp-trust-wall__quote,
+.lp-comparison-table__note,
+.lp-clinician-reviews__quote {
+  font-size: 1.4rem;
+  line-height: 1.96rem;
+}
+
+/* The v2 buy box titles inherit 0.6px of tracking from an ancestor; the reference resets them
+   to normal and declares 708, which draws with the same 700 face. */
+.lp-buy-box-v2__quantity-selector__title,
+.lp-buy-box-v2__frequency-selector__title {
+  letter-spacing: normal;
+  font-weight: 708;
 }
 
 {% endstyle %}
