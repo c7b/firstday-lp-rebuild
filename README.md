@@ -123,6 +123,17 @@ the template.
 
 ---
 
+## Post-debrief: the fidelity pass
+
+The panel's one substantive criticism was visual fidelity. It is answered on a **separate
+page** — `/pages/tdk-behind-the-science-lp-v2` — so the deliverable stays exactly as reviewed;
+`git checkout timebox` is still the brief as scoped, and the reviewed page is byte-identical to
+what was submitted. Every correction lives in one section, `lp-fidelity-overrides`, that only
+the v2 template loads, so the diff of that one file is the whole audit trail.
+
+`docs/receipts/fidelity-pass.md` has the numbers, the method, and — as much to the point — the
+five ways the measurement itself was wrong before it was right.
+
 ## About the timebox — read this before the commit history
 
 The brief says ~3–4 hours. The history spans three evenings, so here is exactly what is in it.
