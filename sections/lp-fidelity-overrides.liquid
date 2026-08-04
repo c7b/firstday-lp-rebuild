@@ -24,7 +24,7 @@
   /* build stamp — the only string in this file guaranteed to change every commit. Capture and
      audit verify against it, because every earlier marker (class names, rem values) also
      existed in previous commits and quietly certified stale renders as current. */
-  --lp-fidelity-build: "455883c";
+  --lp-fidelity-build: "round14";
 }
 /* Post-debrief fidelity corrections — loaded ONLY by the v2 template.
  *
@@ -735,6 +735,49 @@
   .lp-media-accordion__heading,
   .lp-science-tabs__panel {
     max-width: 34.3rem;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------
+   14. Last accountable pass.
+   --------------------------------------------------------------------------- */
+
+/* Reference content starts 7px further out than ours at every section: 129 against 136 on the
+   accordion, 121 against 128 on the tabs, 353 against 360 on the CTA row. Same offset each
+   time, so it is one gutter, not four bugs. */
+@media screen and (min-width: 750px) {
+  .lp-media-accordion__inner,
+  .lp-science-tabs__content {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+}
+
+/* The reference declares no cap on these — their width comes from the parent. Ours carried
+   caps that now agree with the parent anyway, so removing them closes a declaration
+   difference without moving anything. */
+.lp-hero__heading {
+  max-width: none;
+}
+
+@media screen and (max-width: 749px) {
+  /* The 343px cap belongs on the elements the audit actually measures, not on their wrappers —
+     capping .lp-hero__content left the h1 itself at the full 358. */
+  .lp-hero__heading,
+  .lp-media-accordion__cta-block {
+    max-width: 34.3rem;
+  }
+
+  .lp-media-accordion__heading,
+  .lp-science-tabs__panel {
+    max-width: none;
+  }
+
+  /* Reference tab row starts at x=16; ours at 24. */
+  .lp-science-tabs__content {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
 }
 
